@@ -1,0 +1,461 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercicis voluntaris Tema 2. &#8212; Programacio-I</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Composició d’instruccions" href="Tema2_Estructures_de_control.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Programacio-I</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   Introduccio
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 current active collapsible-parent">
+  <a class="reference internal" href="Tema2_Intro.html">
+   Tema 2
+  </a>
+  <ul class="current collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="Tema2.html">
+     Dades
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Tema2.html#declaracions-de-variables">
+     Declaracions de variables
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Tema2.html#operadors-i-operands">
+     Operadors i operands
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Tema2.html#comentaris-en-el-codi">
+     Comentaris en el codi
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Tema2.html#entrada-sortida-d-informacio">
+     Entrada / Sortida d’informació
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Tema2_Estructures_de_control.html">
+     Composició d’instruccions
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Exercicis voluntaris Tema 2.
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/chapters/Tema2_Exercicis.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/chapters/Tema2_Exercicis.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercicis-basics">
+   Exercicis bàsics
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#basics-amb-entrada-sortida">
+   Bàsics amb entrada/sortida
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bucles">
+   Bucles
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mes-practica">
+   Més pràctica
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="exercicis-voluntaris-tema-2">
+<h1>Exercicis voluntaris Tema 2.<a class="headerlink" href="#exercicis-voluntaris-tema-2" title="Permalink to this headline">¶</a></h1>
+<p><em>Actualitzat 28/01/2020</em></p>
+<p>Aquests exercicis s’han de realitzar mitjançant aquests 3 passos:</p>
+<ul class="simple">
+<li><p><strong>Pensar</strong>: Abans de programar cal tenir clar quina solució aplicarem, intentar relacionar el problema amb aquells
+continguts que hem vist a classe.</p></li>
+<li><p><strong>Programar</strong>: Aquesta és la part que per ens portarà més temps, ja que encara no coneixem tot el lèxic del
+llenguatge
+ni les seves característiques. En aquestes primeres setmanes és normal programar de forma lenta i amb molts errors.</p></li>
+<li><p><strong>Avaluar</strong>: Un cop hem acabat de realitzar el programa, hem de poder assegurar que el codi funciona tal com esperem,
+per a això realitzarem proves amb diferents valors d’entrada per assegurar-nos que el codi funciona.</p></li>
+</ul>
+<div class="section" id="exercicis-basics">
+<h2>Exercicis bàsics<a class="headerlink" href="#exercicis-basics" title="Permalink to this headline">¶</a></h2>
+<p>En aquests exercicis no es realitza lectura de teclat, els valors s’assignen dins del programa</p>
+<ol class="simple">
+<li><p>Mostra per pantalla el valor que tendrà la variable x després d’haver-li assignat l’expressió 5 + 4.</p></li>
+<li><p>Definir dues variables anomenades x i y a les quals els assignarem un valor enter i un valor decimal
+respectivament. El programa ha de mostrar el resultat de sumar, restar, multiplicar i dividir-los (divisió sencera i decimal).</p></li>
+<li><p>Creau dues variables booleanes anomenades b1 i b2, assignau el valor True a b1 i el valor False a b2. Mostrau el
+resultat de les següents expressions per pantalla:
+a. b1 and b2
+b. b1 or b2
+c. (b1 and b2) or (b1 or b2)
+d. not b1</p></li>
+<li><p>Escriure una expressió que creï una variable, representant una temperatura en graus Celsius i la transformi a
+graus Fahrenheit. Escriu una segona expressió que transformi metres en milles.</p></li>
+</ol>
+</div>
+<div class="section" id="basics-amb-entrada-sortida">
+<h2>Bàsics amb entrada/sortida<a class="headerlink" href="#basics-amb-entrada-sortida" title="Permalink to this headline">¶</a></h2>
+<p>Introduïm sentències de control: if/ else. Aquests exercicis fan entrada per  teclat i mostren la sortida per pantalla.</p>
+<ol class="simple">
+<li><p>Implementar un programa que llegeix dos nombres enters i mostra el quocient de la divisió i la resta.</p></li>
+<li><p>Implementar un programa que sigui capaç de resoldre una equació de primer grau. Ha de llegir 2 nombres del teclat
+i mostrar la solució per pantalla.</p></li>
+<li><p>Implementar un programa que llegeix un nombre real mostra si el aquest és positiu.</p></li>
+<li><p>Implementar un programa que llegeix un nombre real i mostra si el nombre està en el rang (-1.0, 1.0).</p></li>
+<li><p>Escriu un programa que llegeixi les coordenades d’un punt (2 valors) i indiqui en el quadrant (del sistema
+cartesià) en el qual es troba aquest punt.</p></li>
+<li><p>Escriu un programa que rebi tres valors d’entrada que corresponen a hores, minuts i segons. El programa ha
+d’indicar si es tracta d’un rellotge amb una hora vàlida.
+p.e:
+Si rebem els nombres 9, 56, 33 és correcte,
+Si rebem els nombres 9, 64, 22 no és correcte ja que no existeixen els 64 minuts.
+Si rebem els nombres 25, 44, 22 no és correcte ja que no existeix l’hora 25.</p></li>
+<li><p>Escriu una expressió que ens permeti determinar si un valor de tipus enter positiu pot correspondre a un any de
+traspàs. Es considera traspàs un any el nombre és divisible per quatre excepte els anys que són múltiples de cent llevat que ho siguin de 400.</p></li>
+<li><p>Escriure un programa per comprovar si tres valors decimals es corresponen amb un triangle, a més ha de dir si
+aquest és equilàter, isòsceles o escalè.</p></li>
+<li><p>Implementar un programa que llegeixi la nota d’un alumne, és a dir, un valor entre 0.0 i 10.0, i tot seguit
+mostri la qualificació: Suspès, Aprovat, Notable, Excel·lent, Matrícula d’Honor. Utilitzar els següents intervals 0,0-5, 5.0-7.0, 7.0-8.5, 8.5-9.5, 9.5-10.0</p></li>
+<li><p>Escriu un programa per calcular l’edat d’un gos en anys canins.Durant els dos primers anys, un any caní és igual
+a 10.5 anys humans. Després d’això, cada any caní equival a 4 anys humans. 12 anys humans corresponen a 61 anys canins.</p></li>
+<li><p>Implementar un programa que determini si un nombre sencer és múltiple de 2.</p></li>
+<li><p>Implementar un programa que demani dos nombres enters i determini si el primer nombre és múltiple de el segon.</p></li>
+<li><p>Implementar un programa que demani l’any de naixement a l’usuari i li mostri el seu horòscop xinès. L’usuari ha
+de poder introduir qualsevol any.</p></li>
+</ol>
+<p>Rata:	1924, 1936, 1948….
+Buey:	1925, 1937, 1949….
+Tigre:	1926, 1938, 1950….
+Conejo:	1927, 1939, 1951….
+Dragón:	1928, 1940, 1952….
+Serpiente:	1929, 1941, 1953….
+Caballo:	1930, 1942, 1954….
+Cabra:	1931, 1943, 1955….
+Mono:	1932, 1944, 1956….
+Gallo:	1933, 1945, 1957….
+Perro:	1934, 1946, 1958….
+Cerdo:	1935, 1947, 1959….
+l’usuari ha de poder introduir qualsevol any. p.e. si l’usuari introdueix l’any 15895, i el programa ha d’indicar
+Conill; o si introdueix 1024 ha de mostrar Rata.</p>
+</div>
+<div class="section" id="bucles">
+<h2>Bucles<a class="headerlink" href="#bucles" title="Permalink to this headline">¶</a></h2>
+<p>Important: Abans d’implementar els exercicis esbossar la solució sobre paper
+Introduïm sentències de control: MENTRE i PER</p>
+<ol>
+<li><p>Escriu un programa per esbrinar si un nombre natural m és un quadrat perfecte, és a dir, si és de la forma m = n2 per algún natural n.</p></li>
+<li><p>Escriure un programa, que llegit un nombre per teclat (1 a 9), et mostri per pantalla la seva taula. p.e:
+2←┘
+La taula del 2 és:</p>
+<ul class="simple">
+<li><p>2 x 0 = 0</p></li>
+<li><p>2 x 1 = 2</p></li>
+<li><p>2 x 2 = 4</p></li>
+<li><p>2 x 3 = 6</p></li>
+<li><p>2 x 4 = 8</p></li>
+<li><p>2 x 5 = 10</p></li>
+<li><p>2 x 6 = 12</p></li>
+<li><p>2 x 7 = 14</p></li>
+<li><p>2 x 8 = 16</p></li>
+<li><p>2 x 9 =18</p></li>
+<li><p>2 x 10 = 20</p></li>
+</ul>
+</li>
+<li><p>Implementar un programa on l’usuari va introduint nombres enters. El programa ha d’anar imprimint per pantalla si
+el nombre és parell o imparell per a cada valor introduït. Si introdueix el valor 0 el programa ha de finalitzar sense indicar-li si és parell / senar.</p></li>
+<li><p>Millorar el programa anterior perquè a l’acabar, imprimeixi per pantalla el nombre de vegades que ha l’usuari ha
+posat nombres parells i el nombre de vegades que ha posat números senars. p.e:
+2←┘ parell 3←┘ senar 8←┘ parell 122←┘ senar 0←┘
+Total de nombres parells: 3 Total de nombres senars: 1</p></li>
+<li><p>Implementar un programa que calculi tots els divisors d’un nombre, per exemple: Els divisors de 18 són; 18, 9, 6, 3, 2 i 1</p></li>
+<li><p>Escriu un programa que calculi la mitjana d’un conjunt de nombres. El programa demanarà a l’usuari quants nombres es faran servir. L’usuari ha d’introduir aquest número de nombres. El programa en calcularà i mostrarà la mitjana.</p></li>
+<li><p>Escriu un programa que llegeix un nombre de l’usuari i que indiqui si és un nombre primer o no.
+8←┘
+No es primer</p></li>
+<li><p>Escriure un programa que mostri per pantalla tots els nombres que són divisibles per 7, però no són múltiple de 5 i es troben en el rang (2000, 3000).</p></li>
+<li><p>Donat un nombre enter N, si la suma dels seus divisors (sense comptar el propi nombre) és igual a N es diu que aquest nombre és perfecte. Si aquesta suma és inferior es diu que és deficient, i si és superior es diu que és abundant.</p>
+<p>6 té com a divisors l’1, 2, 3. La seva suma és 6, per tant és perfecte. 8 té com a divisors l’1, 2, 4. La seva suma és 7, pel que és deficient</p>
+<p>24 té com a divisors l’1, 2, 3, 4, 6, 8, 12. La seva suma és 36, per tant és abundant.</p>
+</li>
+</ol>
+</div>
+<div class="section" id="mes-practica">
+<h2>Més pràctica<a class="headerlink" href="#mes-practica" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p>Equació de segon grau Ax2 + Bx + C = 0 i calculi les seves dues solucions. Se suposa que l’equació té solucions
+reals. Òbviament, les dades de el programa són els coeficients de l’equació: A, B i C.
+Per trobar l’arrel quadrada d’un nombre es fa amb la funció sqrt:
+import math # S’ha de posar aquesta línia, abans de començar el codi. f = math.sqrt(x) # x es una variable sencera.</p></li>
+<li><p>Dibuixos de asteriscs
+a.	Escriu un programa que demani a l’usuari ingressar l’altura i l’amplada d’un rectangle i el dibuixi utilitzant asteriscs.
+b.	Escriu un programa que dibuixi el triangle de la mida indicat per l’usuari.
+Exemple:
+Alçada: 5</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="o">*</span>
+    <span class="o">**</span>
+    <span class="o">***</span>
+    <span class="o">****</span>
+    <span class="o">*****</span>
+</pre></div>
+</div>
+<ol>
+<li><p>La seqüència de Collatz d’un nombre enter es construeix de la següent manera:</p>
+<ol class="simple">
+<li><p>Si el nombre és parell, es el divideix per dos.</p></li>
+<li><p>Si és imparell, se li multiplica tres i se li suma un;</p></li>
+<li><p>La successió acaba al arribar a un.</p></li>
+</ol>
+<p>Feu un programa que demani un sencer a l’usuari i calculi la seva seqüència de Collatz.</p>
+</li>
+</ol>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./chapters"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="Tema2_Estructures_de_control.html" title="previous page">Composició d’instruccions</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Gabriel Moya<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+  </body>
+</html>
