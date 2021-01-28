@@ -1,7 +1,9 @@
 # Table of contents
 # Learn more at https://jupyterbook.org/customize/toc.html
 - file: intro
-- file: content
+
+- file: chapters/Tema2_Intro
   sections:
-    - file: markdown
-    - file: notebooks
+    - file: chapters/Tema2
+    - file: chapters/Tema2_Estructures_de_control
+    - file: chapters/Tema2_Exercicis
