@@ -7,3 +7,7 @@
     - file: chapters/Tema2
     - file: chapters/Tema2_Estructures_de_control
     - file: chapters/Tema2_Exercicis
+
+- file: chapters/Tema3_
+  sections:
+    - file: chapters/Tema3_Exercicis
