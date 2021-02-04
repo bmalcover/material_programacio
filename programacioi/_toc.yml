@@ -1,13 +1,23 @@
 # Table of contents
 # Learn more at https://jupyterbook.org/customize/toc.html
 - file: intro
+- file: chapters/Tema1
 
-- file: chapters/Tema2_Intro
+- file: chapters/Tema2/Tema2_Intro
   sections:
-    - file: chapters/Tema2
-    - file: chapters/Tema2_Estructures_de_control
-    - file: chapters/Tema2_Exercicis
+    - file: chapters/Tema2/Tema2
+    - file: chapters/Tema2/Tema2_Estructures_de_control
+    - file: chapters/Tema2/Tema2_Exercicis
 
 - file: chapters/Tema3_
   sections:
     - file: chapters/Tema3_Exercicis
+
+
+- file: chapters/Tema4/Tema4_
+  sections:
+    - file: chapters/Tema4/Tema4_Esquemes
+    - file: chapters/Tema4/Tema4_Subprogrames
+    - file: chapters/Tema4/Tema4_Aplicacio_esquemes_subprogrames
+    - file: chapters/Tema4/Tema4_Exercicis_subprogrames
+
