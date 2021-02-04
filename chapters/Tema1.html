@@ -1,0 +1,771 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tema 1 &#8212; Programacio-I</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Tema 2" href="Tema2/Tema2_Intro.html" />
+    <link rel="prev" title="Introduccio" href="../intro.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Programacio-I</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   Introduccio
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Tema 1
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="Tema2/Tema2_Intro.html">
+   Tema 2
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="Tema2/Tema2.html">
+     Dades
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Tema2/Tema2.html#declaracions-de-variables">
+     Declaracions de variables
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Tema2/Tema2.html#operadors-i-operands">
+     Operadors i operands
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Tema2/Tema2.html#comentaris-en-el-codi">
+     Comentaris en el codi
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Tema2/Tema2.html#entrada-sortida-d-informacio">
+     Entrada / Sortida d’informació
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Tema2/Tema2_Estructures_de_control.html">
+     Composició d’instruccions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Tema2/Tema2_Exercicis.html">
+     Exercicis Tema 2
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="Tema3_.html">
+   Tema 3
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="Tema3_Exercicis.html">
+     Exercicis del Tema 3
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="Tema4/Tema4_.html">
+   Tema 4
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="Tema4/Tema4_Esquemes.html">
+     Aplicació dels esquemes bàsics per a la resolució de problemes més complexes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Tema4/Tema4_Subprogrames.html">
+     Subprogrames i paràmetres
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Tema4/Tema4_Aplicacio_esquemes_subprogrames.html">
+     Resolució de problemes amb esquemes bàsics i subprogrames
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Tema4/Tema4_Exercicis_subprogrames.html">
+     Exercicis del Tema 4
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/chapters/Tema1.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/chapters/Tema1.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conceptes-basics">
+   Conceptes bàsics
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#algorismes-i-programes">
+     Algorismes i Programes
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#historia-dels-algorismes">
+       Història dels algorismes
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#programes">
+       Programes
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#estructura-i-funcionament-d-un-ordinador">
+     Estructura i funcionament d’un ordinador
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#la-memoria">
+       La memòria
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#la-unitat-central-de-proces-o-cpu">
+       La Unitat Central de Procés o CPU
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#els-bussos-de-comunicacions">
+       Els bussos de comunicacions
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#unitats-d-informacio">
+     Unitats d’informació
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#historia-dels-llenguatges-de-programacio">
+     Història dels llenguatges de programació
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#primera-generacio">
+       Primera generació
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#segona-generacio">
+       Segona generació
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#tercera-generacio">
+       Tercera generació
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#quarta-generacio">
+       Quarta generació
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#cinquena-generacio">
+       Cinquena generació
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#interprets-i-compiladors">
+     Interprets i Compiladors
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#sistemes-operatius">
+       Sistemes Operatius
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#proces-de-fer-un-programa">
+     Procés de fer un programa
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#el-proces-de-compilacio">
+     El procés de compilació
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#el-proces-de-python">
+     El procés de Python
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#inconvenients-dels-llenguatges-interpretats">
+       Inconvenients dels llenguatges interpretats
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="tema-1">
+<h1>Tema 1<a class="headerlink" href="#tema-1" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="conceptes-basics">
+<h2>Conceptes bàsics<a class="headerlink" href="#conceptes-basics" title="Permalink to this headline">¶</a></h2>
+<p>Per poder entendre bé el que representa la programació, és interessant entendre una sèrie
+de conceptes bàsics relacionats amb el món de la computació, des de la seva estructura
+bàsica fins aspectes relacionats indirectament amb la programació, com pot ser el
+concepte de sistema operatiu o de les eines informàtiques necessàries per poder
+desenvolupar programes<a class="footnote-reference brackets" href="#f1" id="id1">1</a>.</p>
+<div class="section" id="algorismes-i-programes">
+<h3>Algorismes i Programes<a class="headerlink" href="#algorismes-i-programes" title="Permalink to this headline">¶</a></h3>
+<p>Un algorisme, en termes generals, és un conjunt d’instruccions que s’han de seguir per
+fer una tasca. Per exemple, hi ha algorismes per cuinar (receptes), algorismes per rentar
+roba (normalment als manuals de la rentadora), algorismes per solucionar problemes
+matemàtics (trobar el m.c.d. i el m.c.m.), etc.</p>
+<div class="section" id="historia-dels-algorismes">
+<h4>Història dels algorismes<a class="headerlink" href="#historia-dels-algorismes" title="Permalink to this headline">¶</a></h4>
+<p>Per situar l’assignatura dins el seu marc històric cal remuntar-se a molt de temps enrera,
+entre els anys 3.000 i 1.500 aC. quan pareix ser que els babilonis ja empraven mètodes
+algorísmics per solucionar equacions algebraiques. Els arqueòlegs varen trobar a
+Mesopotàmia (Iraq) devora l’antiga ciutat de Babilònia unes taules d’argila que tenien
+gravades una sèrie de passes a seguir per arribar a la solució de les equacions.
+Tampoc ens podem oblidar que Euclides (300 a.c.) va proposar un algorisme pel càlcul
+del màxim comú divisor de dos números enters (Elements d’Euclides, llibre 7,
+proposicions 1 i 2). Es tracta de l’algorisme més antic que s’utilitza a l’actualitat.</p>
+<p>S’ha parlat molt dels orígens de la paraula algorisme, que en un principi es va pensar
+que procedia del grec <em>álgiros</em> + <em>arithmos</em> = algorismes ? (dolor + números). També hi va
+haver qui deia que la paraula venia del Rey Algor de Castilla. Finalment els historiadors
+matemàtics varen trobar l’origen autèntic de la paraula: el nom de l’autor d’un famós
+llibre de text persa (<em>Kitab al jabr w’al-muqabala</em> – regles de restauració i reducció –).
+Aquest escriptor fou <em>Abu Ja’far Mohammed Ibn Mûsâ al-Khowârizmî</em> (Pare de Jafar,
+Mohamed, fill de Moisès, natural de Khowârizmî –petita ciutat de Khiva a l’antiga unió
+soviètica–) que va viure a Bagdad, al segle VIII (825). Posteriorment la paraula que
+originàriament era algorisme es va convertir en algoritme per “confusió apresa” amb la
+paraula aritmètica.</p>
+<p>Com es pot veure, l’estudi dels algorismes va començar al camp de les matemàtiques,
+molt abans de que existissin els ordinadors. El concepte resulta molt interessant ja que
+una vegada dissenyat un algorisme per una tasca, ja no cal entendre els principis en que
+es bassa l’algorisme, basta amb seguir, pas per pas, les instruccions.
+Una altra definició d’algorisme és aquella que el descriu com el conjunt d’operacions tal
+que partint d’un estat inicial conegut permeten obtenir al cap d’un temps, finit, el
+resultat esperat. Aquesta definició contempla alguns aspectes molt importants, com són
+el fet de considerar l’estat d’inici, és a dir: les condicions que és necessari que es donin
+per poder garantir el resultat. L’altre és el fet que es planteja que el resultat s’obté al cap
+d’un cert temps, que no pot ser infinit, ja que no és raonable que s’hagi d’esperar
+eternament pel resultat.</p>
+</div>
+<div class="section" id="programes">
+<h4>Programes<a class="headerlink" href="#programes" title="Permalink to this headline">¶</a></h4>
+<p>Quan es parla en el camp de la informàtica els algorismes es representen com a
+programes. Un programa es por definir com la descripció d’un algorisme en el repertori
+finit d’instruccions de la màquina. El conjunt de programes del que disposa un equip
+informàtic rep el nom de programari (<em>software</em>) a diferència de l’equip informàtic en sí
+que s’anomena maquinari (<em>hardware</em>). Si volem que un ordinador faci una tasca abans
+hem de trobar un algorisme i després l’hem de programar a l’ordinador.
+Hem de transformar l’algorisme conceptual en un conjunt clar d’instruccions. Els estudis
+que se n’ocupen es basen en els nostres coneixements del llenguatge i de la gramàtica i
+han generat un gran nombre d’esquemes per representar algorismes (llenguatges de
+programació) fonamentats en diferents enfocaments del procés de programació
+(paradigmes de programació).</p>
+</div>
+</div>
+<div class="section" id="estructura-i-funcionament-d-un-ordinador">
+<h3>Estructura i funcionament d’un ordinador<a class="headerlink" href="#estructura-i-funcionament-d-un-ordinador" title="Permalink to this headline">¶</a></h3>
+<p>Un ordinador és una màquina capaç d’acceptar dades a través d’un mitjà d’entrada,
+processar–les automàticament sota el control d’un programa i proporcionar una
+informació resultant a través d’un mitjà de sortida.</p>
+<p>Anem a analitzar en primer lloc els components d’un ordinador des del punt de vista de
+l’execució dels algorismes. Les parts fonamentals d’un ordinador són:</p>
+<ul class="simple">
+<li><p><strong>La memòria principal</strong>, on es guarden tant els programes com les dades que
+utilitzen i els resultats que generen. John von Neumann proposà una arquitectura,
+una organització, dels ordinadors on a la memòria s’hi emmagatzemaven tant les
+dades com les instruccions que les manipulaven aquesta arquitectura és la que
+conforma la pràctica totalitat dels ordinadors actuals.</p></li>
+<li><p><strong>La Unitat Central de Procés (CPU)</strong> que es troba connectada amb la memòria i
+s’encarrega de manipular les dades i de controlar l’ordre d’execució de les
+instruccions. Així, la CPU agafa instruccions de la memòria principal i les
+executa, l’execució fa que la CPU agafi les dades de la memòria principal, les
+processi i en cas necessari deixi els resultats a la memòria per guardar-los.</p></li>
+<li><p><strong>Els dispositius perifèrics</strong> que s’encarreguen de l’entrada (teclat, rata, tauleta, càmera,
+etc.) i la sortida (pantalla, impressora, etc.) de dades i de l’emmagatzematge
+massiu (unitats de disc i cintes magnètiques).</p></li>
+</ul>
+<div class="figure align-center" id="id2">
+<a class="reference internal image-reference" href="../_images/Von_Neumann_Architecture.png"><img alt="Arquitectura Von Neumann" src="../_images/Von_Neumann_Architecture.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text">Esquema de l’arquitectura Von Neumann.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+<div class="section" id="la-memoria">
+<h4>La memòria<a class="headerlink" href="#la-memoria" title="Permalink to this headline">¶</a></h4>
+<p>La memòria es pot considerar organitzada en memòria principal i memòria secundària.
+Hi ha dos tipus de memòria principal: la ROM (memòria només de lectura on el
+fabricant posa les instruccions bàsiques per fer funcionar l’ordinador) i la RAM
+(memòria de lectura i escriptura, en aquesta es on s’hi pot escriure informació). Tota la
+informació que es tractada per la CPU ha de trobar–se necessàriament a la memòria
+principal. Pot considerar–se la memòria principal com si es tractés d’un conjunt de
+caselles on a cada una d’elles s’hi troba informació. Es pot accedir a cada una de les
+caselles de manera individual.
+La memòria secundària, que es situa sobre els sistemes d’emmagatzematge massiu,
+guarda la informació que no es necessita immediatament per poder fer feina.</p>
+</div>
+<div class="section" id="la-unitat-central-de-proces-o-cpu">
+<h4>La Unitat Central de Procés o CPU<a class="headerlink" href="#la-unitat-central-de-proces-o-cpu" title="Permalink to this headline">¶</a></h4>
+<p>La CPU té dues components fonamentals:</p>
+<ul class="simple">
+<li><p><strong>La unitat de control (UC)</strong>: és la unitat que controla les operacions per fer el
+tractament de la informació, interpreta les instruccions del programa emmagatzemat a la memòria i dóna les ordre
+corresponents a la resta dels Components de l’ordinador.</p></li>
+<li><p><strong>La unitat aritmètica i lògica (UAL)</strong>: és la part de la CPU que realitza les
+operacions matemàtiques i lògiques amb les dades que rep de la unitat de
+control. Les operacions que pot realitzar són bastant senzilles, la complexitat
+de les operacions que pot realitzar un ordinador es basa en l’enorme velocitat a
+la que es poden dur a terme aquestes operacions.</p></li>
+</ul>
+<p>A la CPU també es troben els registres, que són llocs on es guarden les dades a tractar
+per cada operació mentre aquesta es realitza. La informació va des de la memòria a
+aquests registres per ser tractada, i després torna una altra vegada a la memòria.</p>
+</div>
+<div class="section" id="els-bussos-de-comunicacions">
+<h4>Els bussos de comunicacions<a class="headerlink" href="#els-bussos-de-comunicacions" title="Permalink to this headline">¶</a></h4>
+<p>Els components estan interconnectats amb línies de comunicacions que es coneixen com
+a bussos. Hi ha el bus d’adreces pel que circulen les adreces que identifiquen de quina
+posició de memòria es vol llegir informació o a quina posició de memòria es vol
+escriure informació i el bus de dades pel que circulen les dades que s’han de llegir o
+s’han d’escriure.</p>
+</div>
+</div>
+<div class="section" id="unitats-d-informacio">
+<h3>Unitats d’informació<a class="headerlink" href="#unitats-d-informacio" title="Permalink to this headline">¶</a></h3>
+<p>Els ordinadors funcionen, bàsicament, amb un sistema de transistors (que venen a ser
+una espècie d’interruptors). Per tant, la informació que poden entendre els ordinadors es
+redueix exclusivament al pas o no de corrent elèctric per cada un d’aquests transistors. A
+aquesta unitat d’informació mínima que poden entendre els ordenadors se l’anomena bit.
+Evidentment, amb un sol bit d’informació es pot dir poca cosa, per això és que
+usualment s’agrupen de manera que es pugui representar més informació. Així, si amb
+un bit només es pot diferenciar entre dos possibles estats (1 – pas de corrent, i 0 – no
+pas de corrent), amb aquestes agrupacions es poden fer combinacions; per exemple: si
+s’agrupen 8 bits aleshores es poden representar 256 possibles combinacions de bits
+( <span class="math notranslate nohighlight">\(C_{2}^{8}\)</span> = <span class="math notranslate nohighlight">\(256\)</span> ), si s’agrupen 16 bits el nombre de combinacions serà de 65.536
+( $<span class="math notranslate nohighlight">\(C_{2}^{16}\)</span><span class="math notranslate nohighlight">\( = \)</span><span class="math notranslate nohighlight">\(65536\)</span>$  ). Anomenam <strong>Byte</strong> les agrupacions de 8 bits. Quan la informació
+va i ve pels bussos, ho fa en grups de bits, la grandària d’aquests grups és la quantitat
+mínima d’informació que pot tractar un ordinador determinat, aquests grups es coneixen
+com paraula o paraula de memòria.
+L’ordinador està preparat per executar operacions de molt baix nivell (codi màquina)
+que tenen el principal inconvenient de que són difícils de comprendre i d’utilitzar. És per
+això que es varen desenvolupar els anomenats llenguatges de programació d’alt nivell.
+L’evolució dels llenguatges de programació, igual que es fa amb els ordinadors, es pot
+descriure en diferents generacions:</p>
+</div>
+<div class="section" id="historia-dels-llenguatges-de-programacio">
+<h3>Història dels llenguatges de programació<a class="headerlink" href="#historia-dels-llenguatges-de-programacio" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="primera-generacio">
+<h4>Primera generació<a class="headerlink" href="#primera-generacio" title="Permalink to this headline">¶</a></h4>
+<p>Llenguatges de màquina o de primera generació, on els programadors havien de
+realitzar els seus programes directament amb zeros i uns. S’utilitzava el sistema
+hexadecimal per assimilar millor les instruccions.</p>
+</div>
+<div class="section" id="segona-generacio">
+<h4>Segona generació<a class="headerlink" href="#segona-generacio" title="Permalink to this headline">¶</a></h4>
+<p>Llenguatges ensambladors o de segona generació en el que les instruccions continuen
+essent les mateixes, únicament canvia la sintaxi utilitzada. S’assignen noms mnemònics
+als diversos codis d’operació i aquests s’utilitzen en lloc dels codis hexadecimals durant
+el procés de disseny. Les instruccions dels programes s’expressen en termes d’una
+màquina específica.</p>
+</div>
+<div class="section" id="tercera-generacio">
+<h4>Tercera generació<a class="headerlink" href="#tercera-generacio" title="Permalink to this headline">¶</a></h4>
+<p>Llenguatges d’alt nivell o de tercera generació on es defineixen una sèrie de primitives
+d’alt nivell dissenyades com a una seqüència de les primitives de baix nivell disponibles
+al llenguatge de màquina. No es fa referència a com ha de fer la tasca directament la
+màquina. Els traductors d’aquests llenguatges havien de reunir (o recopilar o compilar
+!!) varies instruccions de màquina per simular l’activitat demanada per una primitiva
+d’alt nivell. Per això es va començar a anomenar compiladors als programes traductors.
+És en aquest nivell on s’aconsegueix la independència respecte als ordinadors.
+Únicament calia disposar del traductors adequats per a cada màquina. Per la falta de
+consens a l’hora de definir correctament un llenguatge existeixen el American National
+Standards Institute (ANSI) i la International Standards Organization (ISO).</p>
+<p>El llenguatge <code class="docutils literal notranslate"><span class="pre">Python</span></code> que emprarem aquest curs per aprendre a programar pertany a aquesta tercera generació, va ser
+creat per Guido van Rossum l’any 1991.</p>
+</div>
+<div class="section" id="quarta-generacio">
+<h4>Quarta generació<a class="headerlink" href="#quarta-generacio" title="Permalink to this headline">¶</a></h4>
+<p>Llenguatges de quarta generació on s’agrupen tots els paquets de software que
+permeten als usuaris adaptar els programes a les seves aplicacions sense haver de tenir
+coneixements tècnics. S’hi inclouen les fulles de càlcul, els sistemes de bases de dades,
+els paquets gràfics, els processadors de texts, etc. Són aplicacions que es solen agrupar
+en paquets formant sistemes que, per exemple, permeten a una persona controlar
+fàcilment un petit negoci. Es considera una altra generació ja que l’entorn de
+programació que ofereixen és molt més proper al de l’aplicació que els entorns oferts
+pels llenguatges de tercera generació.</p>
+</div>
+<div class="section" id="cinquena-generacio">
+<h4>Cinquena generació<a class="headerlink" href="#cinquena-generacio" title="Permalink to this headline">¶</a></h4>
+<p>Llenguatges de cinquena generació és un terme que s’ha utilitzat molt per descriure el
+concepte de programació declarativa (en concret la programació lògica). Es basa en el
+fet de que un programador s’ha de concentrar únicament en la naturalesa del problema i
+no en la manera de solucionar–ho. S’aprofita el sistema de càlcul de l’ordinador per què
+a partir del nostre plantejament es derivi la solució cercada.</p>
+<p>Molts dels llenguatges d’alt nivell són fonamentalment algebraics ja que aquestes
+notacions són més adequades que el llenguatge natural per a descriure els processos
+computacionals (o programes).</p>
+<p>Les propietats més importants que diferencien aquests llenguatges dels llenguatges
+màquina són:</p>
+<ul class="simple">
+<li><p>No necessiten que l’usuari conegui detalls com l’existència dels registres, les
+representacions internes de les dades, els canals d’entrada/sortida, etc.</p></li>
+<li><p>Ofereixen la possibilitat de moure els programes d’un ordinador a l’altre. Hi ha
+un cert grau d’independència de l’ordinador o del sistema.</p></li>
+<li><p>Permeten escriure els programes d’una manera més concisa.</p></li>
+<li><p>Permeten que els programes s’escriguin en termes orientats a problemes. Per
+exemple, es poden donar noms simbòlics a les dades i es poden incloure
+operadors matemàtics i expressions dins els llenguatges de programació.</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="interprets-i-compiladors">
+<h3>Interprets i Compiladors<a class="headerlink" href="#interprets-i-compiladors" title="Permalink to this headline">¶</a></h3>
+<p>El nivell d’abstracció d’un llenguatge d’alt nivell no es correspon, com és lògic, amb el
+del llenguatge de baix nivell al que vol substituir. Com a conseqüència, no hi ha una
+equivalència una a una entre les instruccions dels dos nivells. Per què l’ordinador pugui
+comprendre el que el llenguatge d’alt nivell representa ens cal una traducció.
+Cadascuna de les instruccions d’alt nivell ha de ser traduïda en un conjunt d’instruccions
+de baix nivell que facin la mateixa tasca que la primera. Aquesta traducció es pot fer de
+manera anàloga a com es traduiria un fragment d’una llengua estrangera al català. Si el
+que es vol és disposar d’una traducció permanent, com ara la traducció d’un llibre que
+ens agradaria llegir en la nostra llengua, es pot fer primer tot el procés complet de
+traducció i després es pot executar el procés –o llegir el llibre traduït. En aquest cas
+tendríem el que es coneix com a una compilació. Si per una altra banda es vol
+simplement conèixer el que es diu en un moment determinat, com la traducció
+simultània d’una conferència d’algú de parla estrangera que ens agradaria escoltar, es pot anar traduint i executant
+–o escoltant– simultàniament. És el que es coneix com a
+interpretació.</p>
+<div class="section" id="sistemes-operatius">
+<h4>Sistemes Operatius<a class="headerlink" href="#sistemes-operatius" title="Permalink to this headline">¶</a></h4>
+<p>Hi ha una unitat de software molt important que és l’anomenat Sistema Operatiu. Quan s’encén l’ordinador s’executa
+automàticament el Sistema Operatiu, que ens permet emprar el teclat i el ratolí per introduir ordres bàsiques
+(execució d’un programa d’aplicació com un processador de texts, formatejar un disc, copiar informació d’un disc a un
+altre, etc.). A més a més de la interacció amb el món exterior, el sistema operatiu també s’encarrega de gestionar
+una utilització òptima dels recursos de que es disposa. Entenem per recursos coses com els dispositius perifèrics,
+l’espai de la memòria principal, la CPU, etc.
+Avui en dia entre els sistemes operatius que és s’utilitzen tenim el sistema Unix (sobretot pels ordinadors grans,
+les estacions de treball i ara amb els dispositius mòbils), el Windows en totes les seves versions (per ordenadors
+personals), el Linux (versió d’Unix per ordinadors personals) i el MacOS X per ordinadors Apple.</p>
+</div>
+</div>
+<div class="section" id="proces-de-fer-un-programa">
+<h3>Procés de fer un programa<a class="headerlink" href="#proces-de-fer-un-programa" title="Permalink to this headline">¶</a></h3>
+<p>Algunes de les eines que habitualment proporciona el sistema operatiu són les necessàries per a l’escriptura, la
+traducció i l’execució dels programes. La primera passa a l’hora d’escriure un programa és l’edició del que s’anomena
+programa font. És necessari disposar del que s’anomena un editor de texts per poder escriure, amb la sintaxi del
+llenguatge de programació adient, el programa. Una vegada que es disposa del programa font, un programa compilador
+s’encarrega de la seva traducció al llenguatge de la màquina.</p>
+</div>
+<div class="section" id="el-proces-de-compilacio">
+<h3>El procés de compilació<a class="headerlink" href="#el-proces-de-compilacio" title="Permalink to this headline">¶</a></h3>
+<p>Si el procés va be i el programa és correcte lèxicament, sintàctica i semàntica, s’obté el que s’anomena programa en
+codi font. En cas contrari, el compilador avisa al programador dels possibles errors que s’han trobat i el procés es
+repeteix: el programa es torna a editar per tal de corregir els errors i després es torna a compilar.</p>
+<p>El programa en codi font encara no és qualque cosa que es pugui utilitzar directament. És necessari afegir–hi totes
+les coses que el compilador ha afegit al codi. Per exemple, és necessari afegir tots els mitjans per poder realitzar
+una operació de lectura del teclat o escriptura a la pantalla. Això és així per què hi ha operacions que no
+necessàriament es fan igual a tots els sistemes, depenen del sistema operatiu. Per tant, és necessari realitzar
+encara una altra etapa, el muntatge, on un programa anomenat linker s’encarregarà d’afegir totes aquestes coses. A
+aquesta fase també és possible que es produeixin errors, en tal cas el programador haurà de tornar a repetir el
+procés d’editar el codi, fer els canvis adients, tornar a compilar i després tornar a muntar. Si no es produeix cap
+error, finalment s’obté el programa executable. A l’actualitat tot el procés es pot desenvolupar des del que es
+coneix com <strong>Entorns Integrats de Desenvolupament</strong> (<em>IDE</em> per les seves sigles en anglé) que són
+aplicacions des de les quals es poden realitzar totes i cada una de les passes esmentades i fins i tot es pot realitzar
+una execució dels programes de manera que si es produeix qualque tipus d’error es mostra la línia de codi que l’ha
+provocat.</p>
+</div>
+<div class="section" id="el-proces-de-python">
+<h3>El procés de Python<a class="headerlink" href="#el-proces-de-python" title="Permalink to this headline">¶</a></h3>
+<p>En aquest curs el llenguatge de programació que usarem és <code class="docutils literal notranslate"><span class="pre">Python</span></code>, que és un llenguatge dissenyat per què les
+aplicacions que s’escriguin amb ell siguin completament independents de la plataforma. Això significa que un programa
+escrit en <code class="docutils literal notranslate"><span class="pre">Python</span></code> s’executarà sense cap tipus de modificació en absolutament qualsevol sistema informàtic, al menys per
+qualsevol sistema que suporti <code class="docutils literal notranslate"><span class="pre">Python</span></code>.</p>
+<p>En la seva major part, <code class="docutils literal notranslate"><span class="pre">Python</span></code> és un llenguatge interpretat i no un compilat, tot i que la compilació és un pas. El
+codi <code class="docutils literal notranslate"><span class="pre">Python</span></code>, escrit en un fitxer .py, es compila primer amb el que s’anomena bytecode (que es descriurà amb més detall)
+que s’emmagatzema amb un format .pyc.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Python</span></code> en primer lloc  compila el codi font escrit en un fitxer <em>.py</em>  en un format conegut com a <em>byte code</em>
+emmagatzemat en fitxer amb format <em>.pyc</em>. La compilació en aquest cas és simplement el pas de realitzar la traducció
+del codi font del llenguatge d’alt nivell (el que aprendrem durant el curs) a una representació de nivell inferior
+independent de la plataforma.</p>
+<p>El <em>byte code</em> (fitxer .pyc) es carrega en el moment que volem executar un programa de <code class="docutils literal notranslate"><span class="pre">Python</span></code> i és interpretat per una
+màquina virtual de <code class="docutils literal notranslate"><span class="pre">Python</span></code> (PVM), que no és mes que un programa que llegeix cada instrucció del <em>byte code</em> i
+executa l’operació que toca a l’ordinador.</p>
+<p>Sempre que realitzam una instal·lació de l’entorn de ´Python´ el PVM s’instal·la com una part seva, ja que és el component
+que realment executa els nostres programes. Tècnicament aquest és només l’últim pas del que s’anomena l’intèrpret de
+‘Python’. A més , durant el procés es duen a terme optimitzacions que queden fora del nostre abast per millorar el
+rendiment del programa.</p>
+<p>Cada vegada que s’executa un programa interpretat, l’intèrpret ha de convertir el codi font en codi de màquina, tal
+com hem descrit anteriorment, però també s’encarrega  d’introduir altres components necessàris per l’execució del
+programa, com poden ser lliberires de codi adiccional.</p>
+<div class="section" id="inconvenients-dels-llenguatges-interpretats">
+<h4>Inconvenients dels llenguatges interpretats<a class="headerlink" href="#inconvenients-dels-llenguatges-interpretats" title="Permalink to this headline">¶</a></h4>
+<p>Aquest procés de conversió fa que un programa interpretat funcioni més lent que un programa similar
+escrit en un llenguatge compilat. Python fa alguna cosa intel·ligent per millorar el seu rendiment, el fet de
+compilar a bytecode (fitxers .pyc) la primera vegada que executa un programa,  millora substancialment les futures
+execucions del mateix programa.</p>
+<hr class="docutils" />
+<dl class="footnote brackets">
+<dt class="label" id="f1"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>Aquest capítol està escrit per en Ramon Mas i en Pere Palmer en un material encara no
+publicat</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./chapters"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="../intro.html" title="previous page">Introduccio</a>
+    <a class='right-next' id="next-link" href="Tema2/Tema2_Intro.html" title="next page">Tema 2</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Gabriel Moya<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+  </body>
+</html>

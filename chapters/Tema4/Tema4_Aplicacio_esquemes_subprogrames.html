@@ -1,0 +1,636 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resolució de problemes amb esquemes bàsics i subprogrames &#8212; Programacio-I</title>
+    
+  <link rel="stylesheet" href="../../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Exercicis del Tema 4" href="Tema4_Exercicis_subprogrames.html" />
+    <link rel="prev" title="Subprogrames i paràmetres" href="Tema4_Subprogrames.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../index.html">
+  
+  <img src="../../_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Programacio-I</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../intro.html">
+   Introduccio
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Tema1.html">
+   Tema 1
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../Tema2/Tema2_Intro.html">
+   Tema 2
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tema2/Tema2.html">
+     Dades
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tema2/Tema2.html#declaracions-de-variables">
+     Declaracions de variables
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tema2/Tema2.html#operadors-i-operands">
+     Operadors i operands
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tema2/Tema2.html#comentaris-en-el-codi">
+     Comentaris en el codi
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tema2/Tema2.html#entrada-sortida-d-informacio">
+     Entrada / Sortida d’informació
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tema2/Tema2_Estructures_de_control.html">
+     Composició d’instruccions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tema2/Tema2_Exercicis.html">
+     Exercicis Tema 2
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../Tema3_.html">
+   Tema 3
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tema3_Exercicis.html">
+     Exercicis del Tema 3
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 current active collapsible-parent">
+  <a class="reference internal" href="Tema4_.html">
+   Tema 4
+  </a>
+  <ul class="current collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="Tema4_Esquemes.html">
+     Aplicació dels esquemes bàsics per a la resolució de problemes més complexes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Tema4_Subprogrames.html">
+     Subprogrames i paràmetres
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Resolució de problemes amb esquemes bàsics i subprogrames
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Tema4_Exercicis_subprogrames.html">
+     Exercicis del Tema 4
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/chapters/Tema4/Tema4_Aplicacio_esquemes_subprogrames.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/chapters/Tema4/Tema4_Aplicacio_esquemes_subprogrames.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#una-passa-mes-enlla-tractament-de-paraules">
+   Una passa més enllà, tractament de paraules
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="resolucio-de-problemes-amb-esquemes-basics-i-subprogrames">
+<h1>Resolució de problemes amb esquemes bàsics i subprogrames<a class="headerlink" href="#resolucio-de-problemes-amb-esquemes-basics-i-subprogrames" title="Permalink to this headline">¶</a></h1>
+<p>Ara que ja sabem com emprar i definir subprogrames, resoldrem el problema de comptar parelles de lletres
+“la” amb el seu ús. De moment, seguirem amb una nova implementació del mateix algorisme que hem presentat anteriorment:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="c1"># Definicio del subprograma</span>
+<span class="k">def</span> <span class="nf">cercar_lletra</span><span class="p">():</span>
+    <span class="k">global</span> <span class="n">lletra</span>  <span class="c1"># la variable lletra es global</span>
+    <span class="k">while</span> <span class="p">(</span><span class="n">lletra</span> <span class="o">!=</span> <span class="s1">&#39;.&#39;</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">lletra</span> <span class="o">!=</span> <span class="s1">&#39;l&#39;</span><span class="p">):</span>
+        <span class="n">lletra</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">stdin</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="n">fiSequencia</span> <span class="o">=</span> <span class="s1">&#39;.&#39;</span>
+<span class="n">nombre</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Escriu un text acabat en &#39;&quot;</span> <span class="o">+</span> <span class="n">fiSequencia</span> <span class="o">+</span>
+      <span class="s2">&quot;&#39; i comptaré les parelles </span><span class="se">\&quot;</span><span class="s2">  la </span><span class="se">\&quot;</span><span class="s2"> que escriuràs&quot;</span><span class="p">)</span>
+
+<span class="c1"># Cercar la primera aparició de la primera lletra</span>
+<span class="n">lletra</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">stdin</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">cercar_lletra</span><span class="p">()</span>
+
+<span class="c1"># Recorregut fins el final</span>
+<span class="k">while</span> <span class="n">lletra</span> <span class="o">!=</span> <span class="s1">&#39;.&#39;</span><span class="p">:</span>
+
+    <span class="c1"># En aquest punt segur que lletra == primeraLletra</span>
+    <span class="n">lletra</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">stdin</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">lletra</span> <span class="o">==</span> <span class="s1">&#39;a&#39;</span><span class="p">:</span>
+        <span class="n">nombre</span> <span class="o">=</span> <span class="n">nombre</span> <span class="o">+</span> <span class="mi">1</span>
+
+    <span class="c1"># Cercar la seguent aparicio de la primera lletra</span>
+    <span class="n">cercar_lletra</span><span class="p">()</span>
+
+<span class="c1"># Donam resultats</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;El nombre de parelles  </span><span class="se">\&quot;</span><span class="s2"> la </span><span class="se">\&quot;</span><span class="s2"> que has escrit és: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">nombre</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Escriu un text acabat en &#39;.&#39; i comptaré les parelles &quot;  la &quot; que escriuràs
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>COMENTAR global!!!!!!!!!!!!!!!!!</strong></p>
+<div class="section" id="una-passa-mes-enlla-tractament-de-paraules">
+<h2>Una passa més enllà, tractament de paraules<a class="headerlink" href="#una-passa-mes-enlla-tractament-de-paraules" title="Permalink to this headline">¶</a></h2>
+<p>Dedicarem el final d’aquest tema a resoldre problemes que ens demanen tractar informació a nivell de paraula. El
+primer exercici que realitzarem, analogament al tractament de lletres, serà el de <strong>comptar quantes paraules hi ha en
+un texte.</strong></p>
+<p>Una primera aproximació que ens pot ajudar a resoldre aquest problema és tractar la paraula cercant
+el seu inici que definirem com un conjunt de dues lletres, un espai i una lletra diferent a l’espai en blanc.
+Començarem amb una aproximació sense usar subprogrames que anirem refinant en successives iteracions.</p>
+<p>Recordem l’algorisme que hem usat en la secció anterior:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">inicialitzacions</span> <span class="n">de</span> <span class="n">les</span> <span class="n">variables</span> <span class="n">necessàries</span><span class="p">:</span> <span class="n">lletra</span><span class="p">,</span> <span class="n">lletrap</span><span class="p">,</span> <span class="n">nombre</span>
+
+<span class="n">llegir_primera_parella</span>
+
+<span class="k">while</span> <span class="n">no</span>  <span class="n">final</span><span class="p">:</span> <span class="c1"># es a dir darrera_parella:</span>
+    <span class="n">tractar_parella_actual</span> <span class="p">(</span><span class="n">si</span> <span class="n">la</span> <span class="n">parella</span> <span class="n">es</span> <span class="n">un</span> <span class="n">espai</span> <span class="n">en</span> <span class="n">blanc</span> <span class="n">i</span> <span class="n">una</span> <span class="n">lletra</span> <span class="n">que</span> <span class="n">no</span> <span class="n">ho</span> <span class="n">és</span><span class="p">,</span> <span class="n">augmentar</span> <span class="n">el</span> <span class="n">contador</span><span class="p">)</span>
+    <span class="n">llegir_següent_parella</span>
+
+<span class="n">mostrar_resultats</span>
+</pre></div>
+</div>
+<p>La seva implementació és la següent:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Aquest algorisme es un recorregut per parelles</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="c1"># Valors inicials de les variables</span>
+<span class="n">final</span> <span class="o">=</span> <span class="s1">&#39;.&#39;</span>
+<span class="n">contador</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">lletra_p</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span>  <span class="c1"># aquestes son les variables per fer el recorregut</span>
+<span class="n">lletra_a</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">stdin</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># Mentre no final, tractam tots els elements</span>
+<span class="k">while</span> <span class="n">lletra_a</span> <span class="o">!=</span> <span class="n">final</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">lletra_p</span> <span class="o">==</span> <span class="s1">&#39; &#39;</span> <span class="ow">and</span> <span class="n">lletra_a</span> <span class="o">!=</span> <span class="s1">&#39; &#39;</span><span class="p">:</span> <span class="c1"># un espai seguit d&#39;un no espai</span>
+        <span class="n">contador</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="c1"># Accedir a l&#39;element seguent</span>
+    <span class="n">lletra_p</span> <span class="o">=</span> <span class="n">lletra_a</span>
+    <span class="n">lletra_a</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">stdin</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;En aquest texte hi ha &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">contador</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; paraules &quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>En aquest cas s’ha solucionat el problema de comptar paraules a un nivell d’abstracció inferior del que seria adient
+fer-ho. Tot i això veureu que si ara volem resoldre el següent problema:</p>
+<p><em>Una companyia telefònica vol cobrar cada paraula que escrivim en el wattsapp a 1 cèntim, fes un programa que donat
+una seqüència de text acabada en punt ens calculi el seu import.</em></p>
+<p>El programa anterior seria molt senzill de modificar, seria suficient amb canviar una única línia de codi:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;El cost d&#39;enviar aquest missatge es de&quot;</span> <span class="o">+</span>  <span class="nb">str</span><span class="p">(</span><span class="n">contador</span> <span class="o">*</span> <span class="mf">0.01</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Però si ara canvia l’enunciat del problema i només ens volguessin cobrar les paraules de més de 4 lletres. Com
+canviaríem el programa anterior per només comptar les paraules de 4 o més lletres?</p>
+<p>Doncs seguint la lògica del programa anterior i adaptant el codi que ja teníem d’abans. Una possible solució seria la
+següent:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="n">caracter</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">stdin</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">caracter_previ</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span>
+<span class="n">lletres</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># nombre de lletres d&#39;una paraula</span>
+<span class="n">paraules_mes_4_lletres</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="c1"># Feim un recorregut de tot el text</span>
+<span class="k">while</span> <span class="n">caracter</span> <span class="o">!=</span> <span class="s1">&#39;.&#39;</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">caracter_previ</span> <span class="o">!=</span> <span class="s1">&#39; &#39;</span><span class="p">:</span>  <span class="c1"># Si el caracter previ no es un espai estam dins una paraula</span>
+        <span class="n">lletres</span> <span class="o">=</span> <span class="n">lletres</span> <span class="o">+</span> <span class="mi">1</span>
+
+    <span class="k">if</span> <span class="n">caracter_previ</span> <span class="o">==</span> <span class="s1">&#39; &#39;</span> <span class="ow">and</span> <span class="n">caracter</span> <span class="o">!=</span> <span class="s1">&#39; &#39;</span><span class="p">:</span>  <span class="c1"># Inici de paraula</span>
+        <span class="k">if</span> <span class="n">lletres</span> <span class="o">&gt;=</span> <span class="mi">4</span><span class="p">:</span>
+            <span class="n">paraules_mes_4_lletres</span> <span class="o">=</span> <span class="n">paraules_mes_4_lletres</span> <span class="o">+</span> <span class="mi">1</span>
+
+        <span class="n">lletres</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># A la paraula nova, tornam a començar a contar</span>
+
+    <span class="c1"># Seguent elemt</span>
+    <span class="n">caracter_previ</span> <span class="o">=</span> <span class="n">caracter</span>
+    <span class="n">caracter</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">stdin</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># Tractam la darrera paraula</span>
+<span class="k">if</span> <span class="n">caracter_previ</span> <span class="o">!=</span> <span class="s1">&#39; &#39;</span><span class="p">:</span>
+    <span class="n">lletres</span> <span class="o">=</span> <span class="n">lletres</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="k">if</span> <span class="n">lletres</span> <span class="o">&gt;=</span> <span class="mi">4</span><span class="p">:</span>
+    <span class="n">paraules_mes_4_lletres</span> <span class="o">=</span> <span class="n">paraules_mes_4_lletres</span> <span class="o">+</span> <span class="mi">1</span>
+
+<span class="c1"># Donam resultats</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;El cost del teu text es: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">paraules_mes_4_lletres</span> <span class="o">*</span> <span class="mf">0.01</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; Euros&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Com podem observar, utilitzar aquest tipus d’aproximació al problema no sembla que sigui la més adient i es
+contradiu amb els principis de <strong>claredat</strong> i <strong>facilitat de modificació</strong> que esperem del nostre codi.</p>
+<p>Tornem una mica enrere i intentarem resoldre el problema de contar el nombre de paraules en una seqüència acabada en
+punt al nivell d’abstracció adequat i veurem que després amb poques modificacions podrem contar el nombre de
+paraules amb un nombre de lletres igual o major a 4.</p>
+<p>Farem un plantejament basat en seqüències de paraules que estan separades per espais en blanc.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
+<span class="c1"># Donam valors inicials a les variables</span>
+<span class="n">nombre</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">lletra</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span> <span class="c1"># La lletra li donam un valor provisional per tenir totes les variables aqui</span>
+<span class="n">final</span> <span class="o">=</span> <span class="s1">&#39;.&#39;</span>
+
+<span class="k">def</span> <span class="nf">botar_blancs</span><span class="p">(</span> <span class="p">):</span>
+    <span class="c1"># procediment que fa una cerca fins la primera lletra que  no sigui espai</span>
+    <span class="k">global</span> <span class="n">lletra</span>
+    <span class="k">while</span> <span class="n">lletra</span> <span class="o">!=</span> <span class="s1">&#39;.&#39;</span> <span class="ow">and</span> <span class="n">lletra</span> <span class="o">==</span> <span class="s1">&#39; &#39;</span><span class="p">:</span>
+        <span class="n">lletra</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">stdin</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">botar_paraula</span><span class="p">(</span> <span class="p">):</span>
+    <span class="c1"># procediment que fa una cerca fins que troba un espai en blanc ( final paraula)</span>
+    <span class="k">global</span> <span class="n">lletra</span>
+    <span class="k">while</span> <span class="n">lletra</span> <span class="o">!=</span> <span class="s1">&#39; &#39;</span> <span class="ow">and</span> <span class="n">lletra</span> <span class="o">!=</span> <span class="s1">&#39;.&#39;</span><span class="p">:</span>
+        <span class="n">lletra</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">stdin</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot; Introdueix in texte acabat en punt i contare les paraules&quot;</span><span class="p">)</span>
+<span class="n">lletra</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">stdin</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="n">botar_blancs</span><span class="p">()</span>  <span class="c1"># Aixo ens assegura estar sobre la primera lletra de la primer paraula</span>
+
+<span class="c1"># Es un recorregut, mentre no final</span>
+<span class="k">while</span> <span class="n">lletra</span> <span class="o">!=</span> <span class="n">final</span><span class="p">:</span>
+    <span class="c1"># Tractament de l&#39;element actual</span>
+    <span class="n">nombre</span> <span class="o">+=</span> <span class="mi">1</span>
+
+    <span class="c1"># Seguent element</span>
+    <span class="n">botar_paraula</span><span class="p">()</span>  <span class="c1"># Com ja l&#39;hem contada l&#39;hem de recorrer</span>
+    <span class="n">botar_blancs</span><span class="p">()</span>  <span class="c1"># Ens situa sobre la seguent paraula</span>
+
+<span class="c1"># Donam resultats</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">nombre</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Ara que ja tenim l’implementació d’un algorisme que treballa a nivell de paraules, anem a modificar-lo per tenir un
+programa que ens dirà quantes paraules amb 4 o més lletres tenim en una seqüència de caracters acabada en punt.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="n">nombre</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">lletra</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span>
+<span class="n">final</span> <span class="o">=</span> <span class="s1">&#39;.&#39;</span>
+
+<span class="k">def</span> <span class="nf">botar_blancs</span><span class="p">(</span> <span class="p">):</span>
+    <span class="c1"># procediment que fa una cerca fins la primera lletra que  no sigui espai</span>
+    <span class="k">global</span> <span class="n">lletra</span>
+    <span class="k">while</span> <span class="n">lletra</span> <span class="o">!=</span> <span class="s1">&#39;.&#39;</span> <span class="ow">and</span> <span class="n">lletra</span> <span class="o">==</span> <span class="s1">&#39; &#39;</span><span class="p">:</span>
+        <span class="n">lletra</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">stdin</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">contar_lletres_paraula</span><span class="p">():</span>
+    <span class="c1"># procediment que fa una cerca fins que troba un espai en blanc ( final paraula)</span>
+    <span class="k">global</span> <span class="n">lletra</span>
+    <span class="n">lletres_paraula</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">while</span> <span class="n">lletra</span> <span class="o">!=</span> <span class="s1">&#39; &#39;</span> <span class="ow">and</span> <span class="n">lletra</span> <span class="o">!=</span> <span class="s1">&#39;.&#39;</span><span class="p">:</span>
+        <span class="n">lletres_paraula</span> <span class="o">=</span> <span class="n">lletres_paraula</span> <span class="o">+</span> <span class="mi">1</span>
+        <span class="n">lletra</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">stdin</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">lletres_paraula</span>
+
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot; Introdueix in texte acabat en punt i contare les paraules&quot;</span><span class="p">)</span>
+<span class="n">lletra</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">stdin</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="n">botar_blancs</span><span class="p">()</span>  <span class="c1"># Aixo ens assegura estar sobre la primera lletra de la primer paraula</span>
+
+<span class="c1"># Es un recorregut, mentre no final</span>
+<span class="k">while</span> <span class="n">lletra</span> <span class="o">!=</span> <span class="n">final</span><span class="p">:</span>
+    <span class="n">nombres_lletres</span> <span class="o">=</span> <span class="n">contar_lletres_paraula</span><span class="p">()</span>  <span class="c1"># Seguent element</span>
+
+    <span class="c1"># Tractament element actual</span>
+    <span class="k">if</span> <span class="n">nombres_lletres</span> <span class="o">&gt;=</span> <span class="mi">4</span><span class="p">:</span>
+        <span class="n">nombre</span> <span class="o">=</span> <span class="n">nombre</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="n">botar_blancs</span><span class="p">()</span>  <span class="c1"># Ens situa sobre la seguent paraula</span>
+
+<span class="c1"># Donam resultats</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;El nombre de lletres igual o major a 4 es: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">nombre</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>El codi entre el programa anterior i aquest no canvia massa, i és que si triam l’algorisme adient amb un nivell
+d’abstracció adient podrem resoldre molts problemes amb programes molt similars.</p>
+<p><strong>Un punt de vista diferent</strong></p>
+<p>Finalment, deixo una proposta de solució on el recorregut és una mica diferent, enlloc de mirar si hem arribat al punt,
+miram si hem arribat a trobar una paraula de longitut 0.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="n">nombre</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">lletra</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span>
+<span class="n">final</span> <span class="o">=</span> <span class="s1">&#39;.&#39;</span>
+
+<span class="k">def</span> <span class="nf">botar_blancs</span><span class="p">(</span> <span class="p">):</span>
+    <span class="c1"># procediment que fa una cerca fins la primera lletra que  no sigui espai</span>
+    <span class="k">global</span> <span class="n">lletra</span>
+    <span class="k">while</span> <span class="n">lletra</span> <span class="o">!=</span> <span class="s1">&#39;.&#39;</span> <span class="ow">and</span> <span class="n">lletra</span> <span class="o">==</span> <span class="s1">&#39; &#39;</span><span class="p">:</span>
+        <span class="n">lletra</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">stdin</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">contar_lletres_paraula</span><span class="p">():</span>
+    <span class="c1"># procediment que fa una cerca fins que troba un espai en blanc ( final paraula)</span>
+    <span class="k">global</span> <span class="n">lletra</span>
+    <span class="n">lletres_paraula</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">while</span> <span class="n">lletra</span> <span class="o">!=</span> <span class="s1">&#39; &#39;</span> <span class="ow">and</span> <span class="n">lletra</span> <span class="o">!=</span> <span class="s1">&#39;.&#39;</span><span class="p">:</span>
+        <span class="n">lletres_paraula</span> <span class="o">=</span> <span class="n">lletres_paraula</span> <span class="o">+</span> <span class="mi">1</span>
+        <span class="n">lletra</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">stdin</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">lletres_paraula</span>
+
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot; Introdueix in texte acabat en punt i contare les paraules&quot;</span><span class="p">)</span>
+<span class="n">lletra</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">stdin</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="n">botar_blancs</span><span class="p">()</span>  <span class="c1"># Aixo ens assegura estar sobre la primera lletra de la primer paraula</span>
+<span class="n">nombres_lletres</span> <span class="o">=</span> <span class="n">contar_lletres_paraula</span><span class="p">()</span>
+<span class="c1"># Es un recorregut, mentre no final, en aquest cas el final es la paraula de longitut 0</span>
+<span class="k">while</span> <span class="n">nombres_lletres</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="c1"># Tractament element actual</span>
+    <span class="k">if</span> <span class="n">nombres_lletres</span> <span class="o">&gt;=</span> <span class="mi">4</span><span class="p">:</span>
+        <span class="n">nombre</span> <span class="o">=</span> <span class="n">nombre</span> <span class="o">+</span> <span class="mi">1</span>
+
+    <span class="c1"># Seguent element</span>
+    <span class="n">botar_blancs</span><span class="p">()</span>
+    <span class="n">nombres_lletres</span> <span class="o">=</span> <span class="n">contar_lletres_paraula</span><span class="p">()</span>
+
+<span class="c1"># Donam resultats</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;El nombre de paraules majors a 4 es: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">nombre</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./chapters\Tema4"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="Tema4_Subprogrames.html" title="previous page">Subprogrames i paràmetres</a>
+    <a class='right-next' id="next-link" href="Tema4_Exercicis_subprogrames.html" title="next page">Exercicis del Tema 4</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Gabriel Moya<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+  </body>
+</html>

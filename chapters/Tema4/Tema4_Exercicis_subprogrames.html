@@ -1,0 +1,450 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercicis del Tema 4 &#8212; Programacio-I</title>
+    
+  <link rel="stylesheet" href="../../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="prev" title="Resolució de problemes amb esquemes bàsics i subprogrames" href="Tema4_Aplicacio_esquemes_subprogrames.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../index.html">
+  
+  <img src="../../_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Programacio-I</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../intro.html">
+   Introduccio
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Tema1.html">
+   Tema 1
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../Tema2/Tema2_Intro.html">
+   Tema 2
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tema2/Tema2.html">
+     Dades
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tema2/Tema2.html#declaracions-de-variables">
+     Declaracions de variables
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tema2/Tema2.html#operadors-i-operands">
+     Operadors i operands
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tema2/Tema2.html#comentaris-en-el-codi">
+     Comentaris en el codi
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tema2/Tema2.html#entrada-sortida-d-informacio">
+     Entrada / Sortida d’informació
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tema2/Tema2_Estructures_de_control.html">
+     Composició d’instruccions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tema2/Tema2_Exercicis.html">
+     Exercicis Tema 2
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../Tema3_.html">
+   Tema 3
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tema3_Exercicis.html">
+     Exercicis del Tema 3
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 current active collapsible-parent">
+  <a class="reference internal" href="Tema4_.html">
+   Tema 4
+  </a>
+  <ul class="current collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="Tema4_Esquemes.html">
+     Aplicació dels esquemes bàsics per a la resolució de problemes més complexes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Tema4_Subprogrames.html">
+     Subprogrames i paràmetres
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Tema4_Aplicacio_esquemes_subprogrames.html">
+     Resolució de problemes amb esquemes bàsics i subprogrames
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Exercicis del Tema 4
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/chapters/Tema4/Tema4_Exercicis_subprogrames.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/chapters/Tema4/Tema4_Exercicis_subprogrames.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#subprogrames">
+   Subprogrames
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sequencies">
+   Seqüències
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sequencies-numeriques">
+   Seqüències numèriques
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="exercicis-del-tema-4">
+<h1>Exercicis del Tema 4<a class="headerlink" href="#exercicis-del-tema-4" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="subprogrames">
+<h2>Subprogrames<a class="headerlink" href="#subprogrames" title="Permalink to this headline">¶</a></h2>
+<p>Es recomanable fer tots els exercicis en el mateix fitxer Python. Un cop heu realitzat la funció o subprograma
+corresponent heu de comprovar el seu correcte funcionament.</p>
+<p>1.Subprograma que rep dos enters, els suma i retorna el resultat.</p>
+<p>2.Procediment que rep dos enters, els suma i mostra el valor resultant.</p>
+<p>3.Subprograma que rep dos nombres i torna el més gran.</p>
+<p>4.Subprograma que rep tres nombres i torna el més gran.</p>
+<p>4.1Realitzar un subprograma que rep tres nombres i torna el gran fent ús del subprograma del punt 3.</p>
+<p>5.Subprograma que rep tres nombres i mostra per pantalla si hi ha almanco dos nombres iguals.</p>
+<p>6.Subprograma que rep un nombre i retorna el seu valor absolut.</p>
+<p>7.Subprograma que rep un caràcter i retorna cert si el caràcter és una vocal.</p>
+<p>8.Subprograma que rep dos sencers i retorna cert si el primer és divisor del segon.</p>
+<p>9.Subprograma anomenat llegir_int que retorna un enter llegit del teclat.</p>
+<p>10.Subprograma que llegeix dos enters del teclat i retorna cert si el primer és divisor del segon.</p>
+<p>11.Subprograma que rep un enter i retorna un valor booleà segons si aquest és un nombre primer o no.</p>
+<p>12.Subprograma que rep un enter i retorna el menor nombre primer major que aquest número.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="n">Per</span> <span class="n">exemple</span>
+    <span class="o">-</span> <span class="n">El</span> <span class="n">nombre</span> <span class="mi">7</span> <span class="n">tornaria</span> <span class="mf">11.</span>
+    <span class="o">-</span> <span class="n">El</span> <span class="n">nombre</span> <span class="mi">14</span> <span class="n">tornaria</span> <span class="mf">17.</span>
+    <span class="o">-</span> <span class="mi">22</span> <span class="n">tornaria</span> <span class="mf">23.</span>
+</pre></div>
+</div>
+<p>13.Subprograma que rep un caràcter de l’abecedari en llengua anglesa o un digit entre el 0 i el 9, i el retorna en
+majúscules.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="n">Per</span> <span class="n">exemple</span>
+     <span class="n">El</span> <span class="n">caràcter</span> <span class="n">a</span> <span class="n">retorna</span> <span class="n">el</span> <span class="n">caràcter</span> <span class="n">A</span><span class="o">.</span>
+     <span class="n">El</span> <span class="n">caràcter</span> <span class="n">B</span> <span class="n">retorna</span> <span class="n">el</span> <span class="n">caràcter</span> <span class="n">B</span><span class="o">.</span>
+     <span class="n">El</span> <span class="n">caràcter</span> <span class="mi">9</span> <span class="n">retorna</span> <span class="n">el</span> <span class="n">caràcter</span> <span class="mf">9.</span>
+</pre></div>
+</div>
+<p>14.Subprograma que rep els dos costats d’un triangle rectangle i torna la hipotenusa.</p>
+<p>15.Realitzar un subprograma que rep dos enters i torna el mcd de tots dos.</p>
+<p>16.Realitzar el subprograma anomenat <em>word2num</em> que llegeix caràcters numèrics ( ‘1’, ‘2’, ‘3’…, ‘0’) com si d’una
+paraula es tractés i ens retorna un nombre enter.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="n">Si</span> <span class="n">llegim</span> <span class="n">la</span> <span class="n">seqüència</span> <span class="n">de</span> <span class="n">caràcters</span> <span class="s1">&#39;1234&#39;</span> <span class="n">ha</span> <span class="n">de</span> <span class="n">tornar</span> <span class="n">el</span> <span class="n">nombre</span> <span class="mf">1234.</span>
+</pre></div>
+</div>
+<p>17.Realitzar un subprograma que rep dos sencers, que representen una fracció. La funció hauria de reduir la fracció
+als termes més petits possibles i després mostrar per pantalla tant el numerador com el denominador de la fracció
+reduïda.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="n">Exemple</span><span class="p">:</span>
+    <span class="n">Si</span> <span class="n">els</span> <span class="n">paràmetres</span> <span class="n">passats</span> <span class="n">a</span> <span class="n">la</span> <span class="n">funció</span> <span class="n">són</span> <span class="mi">6</span> <span class="n">i</span> <span class="mi">63</span><span class="p">,</span> <span class="n">llavors</span> <span class="n">el</span> <span class="n">resultat</span> <span class="n">és</span> <span class="mi">2</span> <span class="n">i</span> <span class="mf">21.</span>
+</pre></div>
+</div>
+<p>18.Realitzar el subprograma anomenat <em>sumaseq</em> que rep un enter en el rang 1, 9 i un nombre de repeticions. El
+programa ha
+de realitzar la següent operació:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="n">Si</span> <span class="n">rep</span> <span class="mi">8</span> <span class="n">i</span> <span class="mi">5</span> <span class="n">repeticions</span> <span class="n">ha</span> <span class="n">de</span> <span class="n">retornar</span> <span class="n">el</span> <span class="n">resultat</span> <span class="n">de</span> <span class="n">la</span> <span class="n">següent</span> <span class="n">suma</span> <span class="mi">8</span> <span class="o">+</span> <span class="mi">88</span> <span class="o">+</span> <span class="mi">888</span> <span class="o">+</span><span class="mi">8888</span> <span class="o">+</span> <span class="mi">88888</span>
+    <span class="n">Si</span> <span class="n">rep</span> <span class="mi">5</span> <span class="n">i</span> <span class="mi">2</span> <span class="n">repeticions</span> <span class="n">ha</span> <span class="n">de</span> <span class="n">retornar</span><span class="p">:</span> <span class="mi">5</span> <span class="o">+</span> <span class="mi">55</span>
+    <span class="n">Si</span> <span class="n">rep</span> <span class="mi">1</span> <span class="n">i</span> <span class="mi">8</span> <span class="n">repeticions</span> <span class="n">ha</span> <span class="n">de</span> <span class="n">retornar</span><span class="p">:</span> <span class="mi">1</span> <span class="o">+</span> <span class="mi">11</span> <span class="o">+</span><span class="mi">111</span><span class="o">+</span> <span class="mi">1111</span> <span class="o">+</span> <span class="mi">11111</span> <span class="o">+</span> <span class="mi">111111</span> <span class="o">+</span> <span class="mi">1111111</span> <span class="o">+</span> <span class="mi">11111111</span>
+</pre></div>
+</div>
+<p>19.Realitzar un programa que rep 3 nombres (d, m, a) que representen una data (dia, mes i any). El programa ha de
+tornar el dia següent a aquesta data. Heu de tenir en compte els dies de cada mes i els anys de traspàs.</p>
+</div>
+<div class="section" id="sequencies">
+<h2>Seqüències<a class="headerlink" href="#sequencies" title="Permalink to this headline">¶</a></h2>
+<p>A continuació teniu una llista de problemes relacionats amb seqüències de text. Abans de fer aquests exercicis s’ha
+d’entendre bé el material del tema 4 i dominar els exercicis de subprogrames. Es recomana crear un document per cada
+un dels problemes.</p>
+<ol class="simple">
+<li><p>Comptar el nombre de paraules parells (nombre de lletres parells) i el nombre de paraules senars(nombre de lletres senars).</p></li>
+<li><p>Comptar les paraules que tenen a almanco una ‘a’.</p></li>
+<li><p>Comptar les paraules que tenen a almanco una vocal.</p></li>
+<li><p>Comptar les paraules que comencen per ‘sa’. p.e:
+savis són els que en saben. 2 paraules comencen per sa</p></li>
+<li><p>Crear un programa que compti les paraules que tenen més vocals que consonants.</p></li>
+<li><p>Crear un programa que ens digui si una seqüència de paraules és un abecegrama. Un abecegrama és una frase les paraules es disposen en ordre alfabètic; és a dir, la primera paraula de la frase comença per a; la segona, per b; la tercera, per c …
+p.e:
+Ahir brollava calor d’emocions Fum gelat hui Immens jardí karma latent malejant nu onades peregrines que restrenyen salobre temps Un venerable wagnerià xiprer zíngar.</p></li>
+<li><p>Fer un programa que ens digui quantes lletres té la paraula més llarga de la seqüència.</p></li>
+<li><p>Quantes paraules contenen la lletra ‘j’ sense que aquesta no sigui ni la primera ni la darrera de les seves lletres?</p></li>
+</ol>
+</div>
+<div class="section" id="sequencies-numeriques">
+<h2>Seqüències numèriques<a class="headerlink" href="#sequencies-numeriques" title="Permalink to this headline">¶</a></h2>
+<p>A continuació teniu un conjunt de problemes relacionats amb seqüències numèriques. Es recomana crear un fitxer per
+cada un dels problemes.</p>
+<p>1.Realitza un programa que genera 50 nombres aleatoris amb valors entre el 0 i el 10 i ens mostra quantes vegades
+tenim 2 nombres consecutius que son iguals. També volem saber quins han estat aquests nombres.</p>
+<p>1.1.Fes una variant del programa anterior que  mostra les vegades on el nombre previ és múltiple del nombre actual i
+quines són aquestes parelles.</p>
+<p>2.En el rang (0, 2223). Quants nombres tenen almanco dues vegades seguides el nombre 2. Per exemple: 22, 221 …</p>
+<p>3.Els nombres primers bessons són aquelles parelles de nombres primers que difereixen en 2. És a dir, dos nombres p i q
+(amb p &lt; q) són primers bessons si q = p + 2. Excepte pel cas del 2 i el 3. Quins són els primers bessons majors al
+valor 150? Solució: (179, 181) Quants primers bessons hi ha entre 100 i 1000? Solució: 27 Quins són?</p>
+<p>4.Quants nombres de cinc dígits comencen per 4, acaben en 5 i les seves xifres sumen 18?</p>
+<p>5.Realitza un programa que genera 100 nombres aleatoris amb valors entre el 100 i el 1000. Ha de mostrar aquells que
+tenen les seves xifres en ordre estrictament decreixent.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./chapters\Tema4"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="Tema4_Aplicacio_esquemes_subprogrames.html" title="previous page">Resolució de problemes amb esquemes bàsics i subprogrames</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Gabriel Moya<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+  </body>
+</html>

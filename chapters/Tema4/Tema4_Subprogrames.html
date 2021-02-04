@@ -1,0 +1,658 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Subprogrames i paràmetres &#8212; Programacio-I</title>
+    
+  <link rel="stylesheet" href="../../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Resolució de problemes amb esquemes bàsics i subprogrames" href="Tema4_Aplicacio_esquemes_subprogrames.html" />
+    <link rel="prev" title="Aplicació dels esquemes bàsics per a la resolució de problemes més complexes" href="Tema4_Esquemes.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../index.html">
+  
+  <img src="../../_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Programacio-I</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../intro.html">
+   Introduccio
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Tema1.html">
+   Tema 1
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../Tema2/Tema2_Intro.html">
+   Tema 2
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tema2/Tema2.html">
+     Dades
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tema2/Tema2.html#declaracions-de-variables">
+     Declaracions de variables
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tema2/Tema2.html#operadors-i-operands">
+     Operadors i operands
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tema2/Tema2.html#comentaris-en-el-codi">
+     Comentaris en el codi
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tema2/Tema2.html#entrada-sortida-d-informacio">
+     Entrada / Sortida d’informació
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tema2/Tema2_Estructures_de_control.html">
+     Composició d’instruccions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tema2/Tema2_Exercicis.html">
+     Exercicis Tema 2
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../Tema3_.html">
+   Tema 3
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tema3_Exercicis.html">
+     Exercicis del Tema 3
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 current active collapsible-parent">
+  <a class="reference internal" href="Tema4_.html">
+   Tema 4
+  </a>
+  <ul class="current collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="Tema4_Esquemes.html">
+     Aplicació dels esquemes bàsics per a la resolució de problemes més complexes
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Subprogrames i paràmetres
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Tema4_Aplicacio_esquemes_subprogrames.html">
+     Resolució de problemes amb esquemes bàsics i subprogrames
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Tema4_Exercicis_subprogrames.html">
+     Exercicis del Tema 4
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/chapters/Tema4/Tema4_Subprogrames.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/chapters/Tema4/Tema4_Subprogrames.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#valor-de-retorn-dels-procediments">
+   Valor de retorn dels procediments
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ambit-de-les-variables">
+   Àmbit de les variables
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ambit-local">
+     Àmbit local
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ambit-global">
+     Àmbit global
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercicis-de-repas">
+   Exercicis de repàs:
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="subprogrames-i-parametres">
+<h1>Subprogrames i paràmetres<a class="headerlink" href="#subprogrames-i-parametres" title="Permalink to this headline">¶</a></h1>
+<p>La definició de subprogrames es realitza per motius de claredat i reusabilitat. Els subprogrames per sí mateixos són
+programes complets, amb les seves declaracions i les seves instruccions, però a més a més, tenen la propietat que es
+poden utilitzar dins d’altres programes.</p>
+<p>Un subprograma es defineix per quatre aspectes:</p>
+<ul class="simple">
+<li><p>El <strong>nom</strong> del subprograma: és la manera de poder identificar cada un dels subprogrames.</p></li>
+<li><p>Els arguments o <strong>paràmetres</strong>: és informació addicional que es pot subministrar als subprogrames per que funcionin
+adequadament. Usualment s’indica com una llista tancada entre parèntesis.</p></li>
+<li><p>El <strong>tipus de valor resultat</strong>: és el tipus d’informació que el subprograma pot subministrar com a resultat de la
+seva execució. <em>Quan un subprograma té un valor resultat se l’anomena funció, quan no és així se l’anomena
+procediment</em>. El valor que retorna el subprograma es genera amb la instrucció <em>return</em>. En el llenguatge <em>Python</em> no
+hem d’especificar quin és el tipus del valor resultat.</p></li>
+<li><p>L’<strong>àmbit</strong> del subprograma: és el context des del qual es pot invocar al subprograma. Els valors que poden
+indicar-se són, en principi, dos: públic i privat.</p></li>
+</ul>
+<p>Cal notar que a <code class="docutils literal notranslate"><span class="pre">Python</span></code> tenim la paraula reservada <code class="docutils literal notranslate"><span class="pre">def</span></code> per determinar que un bloc de codi es correspon a un
+subprograma, ja sigui un procediment o una funció. L’esquema d’un subprograma és el següent:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="o">&lt;</span><span class="n">nom</span><span class="o">&gt;</span><span class="p">(</span><span class="o">&lt;</span><span class="n">parametre_1</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">parametre_2</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">...</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">parametre_n</span><span class="o">&gt;</span><span class="p">):</span>
+    <span class="o">&lt;</span><span class="n">línies</span> <span class="n">de</span> <span class="n">codi</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>El conjunt de línies de codi també és coneix amb el nom de <em>cos del subprograma</em>. Tal com el codi dins un bloc
+condicional o un bloc iteratiu el cos del subprograma ha d’estar identat.</p>
+<p>A continuació tenim un petit subprograma anomenat <em>salutacio</em> que no rep cap argument i que serveix per imprimir el
+missatge <em>Hello World!</em> per pantalla. Aquest subprograma no retorna cap valor</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">salutacio</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello World!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>A la definició de les característiques dels subprogrames hem explicat que aquests poden ser parametritzats. El sentit
+d’utilitzar paràmetres és subministrar informació al subprograma de manera que aquest pugui realitzar la tasca per la
+qual ha estat dissenyat. El que es fa és indicar com una llista d’expressions separades per comes tota la informació
+que es consideren necessària pel seu correcte funcionament.</p>
+<p>El següent <strong>procediment</strong> anomenat <code class="docutils literal notranslate"><span class="pre">missatge</span></code> rep dos paràmetres anomenats <code class="docutils literal notranslate"><span class="pre">a</span></code> i <code class="docutils literal notranslate"><span class="pre">b</span></code>, i mostra per
+pantalla el seu valor. Els paràmetres o arguments, s’expressen mitjançant una llista de noms separats per comes.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">missatge</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;El valor de a es: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;El valor de b es: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">b</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Quan volem usar un subprograma hem de especificar tants de valors com paràmetres hi ha entre parèntesis, per altra
+banda també hem de tenir en compte l’ordre d’aquests paràmetres ja que poden tenir diferent significat o ser de
+diferent tipus.</p>
+<p>A continuació veurem com s’implementa una <strong>funció</strong> que transforma una quantitat de metres a centimetres. Aquesta
+funció que s’anomena <code class="docutils literal notranslate"><span class="pre">m_a_cm</span></code> rep un paràmetre anomenat <code class="docutils literal notranslate"><span class="pre">m</span></code> el qual esperam que contengui un nombre ja sigui
+enter o decimal. Aquesta funció usa el paràmetre en una expressió i posteriorment retorna el valor calculat.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">m_a_cm</span><span class="p">(</span><span class="n">metres</span><span class="p">):</span>
+
+    <span class="n">centimetres</span> <span class="o">=</span> <span class="n">metres</span> <span class="o">*</span> <span class="mi">100</span>
+    <span class="k">return</span> <span class="n">centimetres</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>La paraula reservada <code class="docutils literal notranslate"><span class="pre">return</span></code> ens serveix per explicitar el valor que ha de tornar la funció.</p>
+<p>Vegem exemples d’ús dels procediments i les funcions definides anteriorment. És interessant fixar-se en com actuen
+els arguments dels subprogrames que hem definit.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Us d&#39;un procediment múltiples cops</span>
+<span class="n">salutacio</span><span class="p">()</span>
+<span class="n">salutacio</span><span class="p">()</span>
+
+<span class="c1"># Els paràmetres tant poden ser literals com variables.</span>
+<span class="n">missatge</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+
+<span class="c1"># La variable transformat recull el valor de la funció m_a_cm</span>
+<span class="c1"># podem usar aquest valor per altres tasques en el nostre programa</span>
+<span class="n">m</span> <span class="o">=</span> <span class="mi">33</span>
+<span class="n">transformat</span> <span class="o">=</span> <span class="n">m_a_cm</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">m</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; metres son &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">transformat</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; cm&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hello World!
+Hello World!
+El valor de a es: 4
+El valor de b es: 3
+33 metres son 3300 cm
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="valor-de-retorn-dels-procediments">
+<h2>Valor de retorn dels procediments<a class="headerlink" href="#valor-de-retorn-dels-procediments" title="Permalink to this headline">¶</a></h2>
+<p>Com acabam de comentar el que diferència un procediment d’una funció és que aquesta segona té una clàusula
+<code class="docutils literal notranslate"><span class="pre">return</span></code> que s’encarrega d’explicitar el valor que la funció ha de retornar. Tot i això que hem comentat a
+Python els procediments també tenen un valor de retorn, aquest és el valor especial <code class="docutils literal notranslate"><span class="pre">None</span></code> i és sempre el mateix.</p>
+<p>Vegem-ne un exemple il·lustratiu:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># definim un procediment que rep un valor numèric, suma tres unitats</span>
+<span class="c1"># mostra el valor resultant per pantalla</span>
+<span class="k">def</span> <span class="nf">suma_3</span><span class="p">(</span><span class="n">valor</span><span class="p">):</span>
+
+    <span class="n">valor_mes_3</span> <span class="o">=</span> <span class="n">valor</span> <span class="o">+</span> <span class="mi">3</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hem rebut el valor &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">valor</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; hem sumat 3 unitats i ara tenim el valor &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">valor_mes_3</span><span class="p">))</span>
+
+
+<span class="n">retorn</span> <span class="o">=</span> <span class="n">suma_3</span><span class="p">(</span><span class="mi">33</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;El valor que retornen els procediments a Python es: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">retorn</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hem rebut el valor 33 hem sumat 3 unitats i ara tenim el valor 36
+El valor que retornen els procediments a Python es: None
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="ambit-de-les-variables">
+<h2>Àmbit de les variables<a class="headerlink" href="#ambit-de-les-variables" title="Permalink to this headline">¶</a></h2>
+<p>Així com hem definit l’àmbit dels subprogrames com el context des del qual es poden invocar. Anàlogament podem
+definir l’àmbit de les variables com el context en el qual es poden usar.</p>
+<div class="section" id="ambit-local">
+<h3>Àmbit local<a class="headerlink" href="#ambit-local" title="Permalink to this headline">¶</a></h3>
+<p>Les variables declarades dins d’un subprograma, només poden ser utilitzades per ell, fora de l’àmbit del
+subprograma aquestes no són visibles, d’aquesta característica en diem que les variables tenen un <strong>àmbit
+local</strong>.</p>
+<p>Anem a veure un conjunt d’exemples il·lustratius on mostram dues variables amb el <strong>mateix nom</strong> en <strong>àmbits
+diferents</strong> i estudiarem com interactuen.</p>
+<p>En aquest primer cas, tenim dues variables amb el mateix nom (<code class="docutils literal notranslate"><span class="pre">variable_1</span></code>) en àmbits diferents. Una en l’àmbit
+local dins el subprograma <code class="docutils literal notranslate"><span class="pre">exemple_1</span></code> i una altra en l’àmbit global del programa principal:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Declaram una funcio</span>
+<span class="k">def</span> <span class="nf">exemple_1</span><span class="p">():</span>
+    <span class="n">variable_1</span> <span class="o">=</span> <span class="mi">33</span>
+    
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;El valor de la variable_1 dins el procediment exemple_1 és: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">variable_1</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">variable_1</span>
+
+<span class="c1"># Programa principal</span>
+<span class="n">variable_1</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">exemple_1</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;El valor de la variable_1 al programa principal és: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">variable_1</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>El valor de la variable_1 dins el procediment exemple_1 és: 33
+El valor de la variable_1 al programa principal és: 0
+</pre></div>
+</div>
+</div>
+</div>
+<p>Podem observar com el valor de la <code class="docutils literal notranslate"><span class="pre">variable_1</span></code> és diferent en ambdós ambits. El interpret de <code class="docutils literal notranslate"><span class="pre">Python</span></code> és
+capaç de diferenciar en quin àmbit treballa en cada moment i quin valor ha d’assingar a la <code class="docutils literal notranslate"><span class="pre">variable_1</span></code> en cada
+moment.</p>
+<p>A continuació disposarem d’un segon exemple on complicam una mica més la situació per veure com actuen els
+paràmetres. El que és interessant d’aquest troç de codi és entendre com els noms de les variables
+<code class="docutils literal notranslate"><span class="pre">primer_parametre</span></code> i <code class="docutils literal notranslate"><span class="pre">segon_parametre</span></code> en el context del programa principal no condicionen els valors que els
+paràmetres <code class="docutils literal notranslate"><span class="pre">primer_parametre</span></code> i <code class="docutils literal notranslate"><span class="pre">segon_parametre</span></code> tendran dins el subprograma.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Declaram un procediment amb paràmetres i modificam el valor del parametre a dins.</span>
+
+<span class="k">def</span> <span class="nf">exemple_2</span><span class="p">(</span><span class="n">primer_parametre</span><span class="p">,</span> <span class="n">segon_parametre</span><span class="p">):</span>
+    
+    <span class="n">primer_parametre</span> <span class="o">=</span> <span class="n">primer_parametre</span> <span class="o">+</span> <span class="mi">33</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Valor del primer_parametre dins la funció: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">primer_parametre</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Valor del segon_parametre dins la funció: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">segon_parametre</span><span class="p">))</span>
+
+<span class="n">primer_parametre</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">segon_parametre</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="n">exemple_2</span><span class="p">(</span><span class="n">segon_parametre</span><span class="p">,</span> <span class="n">primer_parametre</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Valor del primer_parametre al programa principal: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">primer_parametre</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Valor del segon_parametre al programa principal: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">segon_parametre</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Valor del primer_parametre dins la funció: 33
+Valor del segon_parametre dins la funció: 0
+ 
+Valor del primer_parametre al programa principal: 0
+Valor del segon_parametre al programa principal: 0
+</pre></div>
+</div>
+</div>
+</div>
+<p>El que succeeix en el codi anterior és el que anomenam <em>pas de paràmetres per valor</em> en el qual el valor de la
+variable en el programa principal es copiat en l’argument del subprograma. En el cas concret de l’exemple anterior la
+variable <code class="docutils literal notranslate"><span class="pre">segon_parametre</span></code> del programa principal copia el seu valor al paràmetre<code class="docutils literal notranslate"><span class="pre">primer_parametre</span></code> del
+subprograma i de la mateixa manera succeeix amb la variable <code class="docutils literal notranslate"><span class="pre">primer_parametre</span></code> del programa principal i
+el paràmetre <code class="docutils literal notranslate"><span class="pre">segon_parametre</span></code> del procediemnt-</p>
+<p>En aquest darrer exemple tenim una funció anomenada <code class="docutils literal notranslate"><span class="pre">exemple_3</span></code> que rep un paràmetre, modificam el seu valor i el
+retornam. Amb aquest exemple evaluam l’efecte del pas de paràmetres i el retorn del seu valor per comprobar que
+allò que succeeix dins un subprograma queda restringit al seu àmbit i no té conseqüències en un àmbit exterior.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Declaram una funció amb paràmetres, modificam el valor del parametre a dins</span>
+<span class="c1"># retornam el resultat. </span>
+
+<span class="k">def</span> <span class="nf">exemple_3</span><span class="p">(</span><span class="n">parametre1</span><span class="p">):</span>
+    
+    <span class="n">parametre1</span> <span class="o">=</span> <span class="n">parametre1</span> <span class="o">+</span> <span class="mi">33</span>
+    
+    <span class="k">return</span> <span class="n">parametre1</span>
+
+<span class="c1">#Programa principal</span>
+
+<span class="n">parametre1</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">valor_resultant</span> <span class="o">=</span> <span class="n">exemple_3</span><span class="p">(</span><span class="n">parametre1</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Valor del parametre1 al programa principal: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">parametre1</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Valor del valor_resultant al programa principal: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">valor_resultant</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Valor del parametre1 al programa principal: 0
+Valor del valor_resultant al programa principal: 33
+</pre></div>
+</div>
+</div>
+</div>
+<p>En el tema següent veurem com aquest funcionament dels paràmetres pot ser diferent per alguns
+tipus de dades que anomenarem com a <strong>tipus mutables</strong>. L’altre tipus de pas de paràmetres que podrem usar es diu
+<strong>pas de paràmetres per referència</strong></p>
+</div>
+<div class="section" id="ambit-global">
+<h3>Àmbit global<a class="headerlink" href="#ambit-global" title="Permalink to this headline">¶</a></h3>
+<p>L’ús de variables locals és la manera aconsellada de procedir en la gran majoria de programes, ja que facilita la
+comprensió del codi (només ens hem de preocupar d’entendre allò que hi ha dins el subprograma) i ens assegura que
+sempre que els paràmetres tinguin els mateixos valors, el subprograma sempre respondrà de la mateixa manera.</p>
+<p>Tot i això, en la programació orientada a procediments que és la que hem realitzat fins ara existeixen alguns casos en
+els quals ens interessa usar la mateixa variable en tot el programa, aquest fet és diu <strong>variable d’àmbit global</strong>.</p>
+<p>Per especificar dins un subprograma que una variable és d’àmbit global ho hem de fer mitjançant l’ús de la
+paraula reservada <code class="docutils literal notranslate"><span class="pre">global</span></code> abans de la definició de la variable.  <strong>Aquesta pràctica no és recomanable en
+la majoria de situacions</strong>, ja que pot dur a resultats inesperats en l’execució dels programes i ens dificulta la
+reutilització del codi. Quan utilitzam aquesta tècnica, ens hem d’assegurar que el problema no es pot resoldre amb
+variables locals.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">procediment_amb_variable_global</span><span class="p">(</span><span class="n">j</span><span class="p">):</span>
+    <span class="k">global</span> <span class="n">x</span> <span class="c1"># indicam que aquesta variable es la mateixa que la de la linia 8</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">j</span>
+    
+
+<span class="n">x</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Valor de x abans de cridar al procediment: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+<span class="n">procediment_amb_variable_global</span><span class="p">(</span><span class="mi">33</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Valor de x despres de cridar al procediment: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Valor de x abans de cridar al procediment: 3
+Valor de x despres de cridar al procediment: 36
+</pre></div>
+</div>
+</div>
+</div>
+<p>Ens hem de fixar que aquest procediment no és pot usar en altre programa si no existeix una variable anomnenada
+````x``` amb tipus numèric en un àmbit extern.</p>
+</div>
+</div>
+<div class="section" id="exercicis-de-repas">
+<h2>Exercicis de repàs:<a class="headerlink" href="#exercicis-de-repas" title="Permalink to this headline">¶</a></h2>
+<p>A resoldre amb l’ús de subprogrames:</p>
+<ol class="simple">
+<li><p>Funció anomenada <em>es_primer</em> que retorna el valor <code class="docutils literal notranslate"><span class="pre">True</span></code> si el valor que rep per parametre és un nombre primer.</p></li>
+<li><p>Procediment anomenat <em>els_divisors_primers</em> que imprimeix els divisors que són primers del nombre que ha rebut per paràmetre.</p></li>
+<li><p>Programa que ens compta el nombre de vegades que apareix la parella ‘la’ en un texte acabat en <code class="docutils literal notranslate"><span class="pre">enter</span></code>.</p></li>
+</ol>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./chapters\Tema4"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="Tema4_Esquemes.html" title="previous page">Aplicació dels esquemes bàsics per a la resolució de problemes més complexes</a>
+    <a class='right-next' id="next-link" href="Tema4_Aplicacio_esquemes_subprogrames.html" title="next page">Resolució de problemes amb esquemes bàsics i subprogrames</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Gabriel Moya<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+  </body>
+</html>
