@@ -21,3 +21,10 @@
     - file: chapters/Tema4/Tema4_Aplicacio_esquemes_subprogrames
     - file: chapters/Tema4/Tema4_Exercicis_subprogrames
 
+- file: chapters/Tema5/Tema5
+  sections:
+    - file: chapters/Tema5/Tema5_Llistes
+    - file: chapters/Tema5/Tema5_Estructures
+    - file: chapters/Tema5/Tema5_Classes
+    - file: chapters/Tema5/Tema5_Exercicis
+
