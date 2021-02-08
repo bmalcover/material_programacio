@@ -9,16 +9,18 @@
     - file: chapters/Tema2/Tema2_Estructures_de_control
     - file: chapters/Tema2/Tema2_Exercicis
 
-- file: chapters/Tema3_
+- file: chapters/Tema3/Tema3_
   sections:
-    - file: chapters/Tema3_Exercicis
+    - file: chapters/Tema3/Tema3_Exercicis
 
 
 - file: chapters/Tema4/Tema4_
   sections:
     - file: chapters/Tema4/Tema4_Esquemes
+      title: Aplicació dels esquemes bàsics
     - file: chapters/Tema4/Tema4_Subprogrames
     - file: chapters/Tema4/Tema4_Aplicacio_esquemes_subprogrames
+      title: Esquemes amb subprogrames
     - file: chapters/Tema4/Tema4_Exercicis_subprogrames
 
 - file: chapters/Tema5/Tema5
@@ -28,8 +30,15 @@
     - file: chapters/Tema5/Tema5_Classes
     - file: chapters/Tema5/Tema5_Exercicis
 
-- file:  chapters/Tema6/Tema6
+- file:  chapters/Tema6/Tema6_Fitxers
+  sections:
+    - file: chapters/Tema6/Tema6_Exercicis
 
-- file:  chapters/Tema6/Tema7
+- file:  chapters/Tema7/Tema7_Algorismes
+  sections:
+    - file: chapters/Tema7/Tema7_Exercicis
+
+
+
 
 
