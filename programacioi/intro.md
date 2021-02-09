@@ -1,10 +1,19 @@
 Introduccio
 ============================
 
-xxXXXXXxxxx
+En aquest document hi ha el contingut teòric i els exercicis de l'assignatura de Programació I per als estudis de 
+GMAT a la Universitat de les Illes Balears. La idea de disposar-los en aquest format és que l'alumne disposi d'un 
+material de consulta al qual accedir en els moments de dubte. També és interessant que l'estudiant tengui un gran 
+conjunt d'exercicis amb els quals pràcticar i consolidar els coneixements adquirits durant les classes teòriques de 
+l'assignatura.
 
-És necessari mencionar que el material que el lector trobarà a continuació és una adaptació del que en 
-Ramon Mas i en Pere Palmer varen preparar l'any XXXX i que actualment no es troba publicat. Els canvis realitzats són 
+És necessàri remarcar que el material es troba en un estat de revisió contínua i que serà amb la vostra ajuda i els 
+vostres comentaris que s'en podrà acabar fent una versió final, amb això vull aprofitar per motivar-vos a comentar 
+tots aquells aspectes que penseu que podríem canviar del que trobareu a continuació i que els farien més útils pels 
+meus futurs alumnes.
+
+És necessari mencionar que el material que trobareu a continuació és una adaptació del que en 
+Ramon Mas i en Pere Palmer varen preparar i que actualment no es troba publicat. Els canvis realitzats són 
 relatius tant al llenguatge de 
 programació usat com als canvis existents en el curriculum docent. El lector també trobarà altres exemples i 
 l'adjunció de llistats d'exercicis al final de cada capitol. 
