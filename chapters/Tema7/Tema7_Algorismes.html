@@ -1,0 +1,957 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tema 7 &#8212; Programacio I</title>
+    
+  <link rel="stylesheet" href="../../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Exercicis Tema 7" href="Tema7_Exercicis.html" />
+    <link rel="prev" title="Exercicis Tema 6" href="../Tema6/Tema6_Exercicis.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../index.html">
+  
+  <img src="../../_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Programacio I</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../intro.html">
+   Introduccio
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Tema1.html">
+   Tema 1
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../Tema2/Tema2_Intro.html">
+   Tema 2
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tema2/Tema2.html">
+     Dades
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tema2/Tema2.html#declaracions-de-variables">
+     Declaracions de variables
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tema2/Tema2.html#operadors-i-operands">
+     Operadors i operands
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tema2/Tema2.html#comentaris-en-el-codi">
+     Comentaris en el codi
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tema2/Tema2.html#entrada-sortida-d-informacio">
+     Entrada / Sortida d’informació
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tema2/Tema2_Estructures_de_control.html">
+     Composició d’instruccions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tema2/Tema2_Exercicis.html">
+     Exercicis Tema 2
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../Tema3/Tema3_.html">
+   Tema 3
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tema3/Tema3_Exercicis.html">
+     Exercicis del Tema 3
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../Tema4/Tema4_.html">
+   Tema 4
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tema4/Tema4_Esquemes.html">
+     Aplicació dels esquemes bàsics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tema4/Tema4_Subprogrames.html">
+     Subprogrames i paràmetres
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tema4/Tema4_Aplicacio_esquemes_subprogrames.html">
+     Esquemes amb subprogrames
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tema4/Tema4_Exercicis_subprogrames.html">
+     Exercicis del Tema 4
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../Tema5/Tema5.html">
+   Tema 5
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tema5/Tema5_Llistes.html">
+     Llistes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tema5/Tema5_Estructures.html">
+     Altres maneres d’estructurar les dades
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tema5/Tema5_Classes.html">
+     Classes i Objectes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tema5/Tema5_Exercicis.html">
+     Exercicis Tema 5
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../Tema6/Tema6_Fitxers.html">
+   Tema 6
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tema6/Tema6_Exercicis.html">
+     Exercicis Tema 6
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 current active collapsible-parent">
+  <a class="current reference internal" href="#">
+   Tema 7
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="Tema7_Exercicis.html">
+     Exercicis Tema 7
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../Annexes/Annexes.html">
+   Annexes
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Annexes/Entorn_Desenvolupament.html">
+     Entorn de desenvolupament
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/chapters/Tema7/Tema7_Algorismes.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/chapters/Tema7/Tema7_Algorismes.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#disseny-algorismic">
+   Disseny algorísmic
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#complexitat-computacional">
+   Complexitat Computacional
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#algorismes-de-cerca">
+   Algorismes de cerca
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#cerca-sequencial">
+     Cerca seqüèncial
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#cerca-binaria-o-dicotomica">
+     Cerca binaria o dicotòmica
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#implementacio-de-les-cerques">
+     Implementacio de les cerques
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ordenacio">
+   Ordenació
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#metode-de-la-bombolla">
+     Mètode de la bombolla
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#explicacio-grafica">
+     Explicació gràfica
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#implementacio-de-l-algorisme">
+     Implementació de l’algorisme
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#millora-de-l-algorisme">
+     Millora de l’algorisme
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#altres-algorismes-d-ordenacio">
+     Altres algorismes d’ordenació
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="tema-7">
+<h1>Tema 7<a class="headerlink" href="#tema-7" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="disseny-algorismic">
+<h2>Disseny algorísmic<a class="headerlink" href="#disseny-algorismic" title="Permalink to this headline">¶</a></h2>
+<p>Hem dedicat tot el curs aprendre a fer programes que funcionin de la manera esperada en tots els casos, que siguin
+fàcils d’entendre i també de modificar.</p>
+<p>Per altra banda, no ens hem preocupat gens del temps que tarden els nostres programes ni de la qualitat dels nostres
+algorismes. Un exemple clar són els exercicis del Tema 4 on hem treballat amb seqüències numèriques on la nostra
+estratègia era la d’usar la força bruta per fer una cerca en tot el rang de valors disponibles.</p>
+<p>En aquest tema realitzarem una introducció al concepte de cost computacional dels algorismes, analitzarem els
+algorismes de cerca i introduirem els algorismes d’ordenació.</p>
+<p>L’ordenació és una aplicació fonamental en computació. La majoria de les dades produïdes per un programa estan
+ordenades d’alguna manera, i molts dels còmputs que ha de realitzar un programa són més eficients si les dades sobre
+els quals operen estan ordenades. Un dels tipus d’operació que més es beneficien d’operar sobre un conjunt de dades
+ordenades és la recerca d’una informació.</p>
+</div>
+<div class="section" id="complexitat-computacional">
+<h2>Complexitat Computacional<a class="headerlink" href="#complexitat-computacional" title="Permalink to this headline">¶</a></h2>
+<p>A classe hem vist que el mateix problema pot tenir diferents solucions, cada una d’aquestes solucions pot tenir
+diferent eficiència (rapidesa d’execució). Així, per exemple, un problema tan fàcil com multiplicar dos nombres
+enters és resolt mitjançant dos algoritmes diferents a Anglaterra i la resta d’Europa. Una altra forma molt més
+curiosa de realitzar la multiplicació dels nombres enters és el mètode rus, un mètode més complex que els anteriors i
+que requereix realitzar un nombre d’operacions matemàtiques bastant superior, tot i que obté el mateix resultat.</p>
+<p><a class="reference external" href="https://es.wikipedia.org/wiki/Multiplicaci%C3%B3n_por_duplicaci%C3%B3n">Més informació de la multiplicació rusa</a></p>
+<p>Quan hem de seleccionar un algorisme per resoldre un determinat problema és important determinar els recursos
+computacionals necessaris: temps de computació i espai d’emmagatzematge en memòria, de moment no ens ocuparem de
+l’espai d’emmagatzematge. <strong>L’eficiència d’un algoritme no pot mesurar-se en unitats de temps, ja que cada ordinador
+té característiques pròpies i el temps pot variar.</strong></p>
+<p><strong>Principi d’invariància</strong></p>
+<p>Per estudiar la complexitat computacional dels algoritmes es pren per cert el principi de invariància: <em>dues
+implementacions diferents del mateix algoritme no difereixen en la seva eficiència més que en una constant
+multiplicativa</em>; és a dir, si dues implementacions del mateix algorisme necessiten t(n)<sub>1</sub> i t(n)
+<sub>2</sub> unitats de temps, on <em>n</em> és la mida de el vector d’entrada, llavors hi ha un c &gt; 0 tal que t(n)
+<sub>1</sub> &lt; c * t(n)<sub>2</sub>.</p>
+<p>Aquest principi permet concloure que un canvi en la màquina on s’executa un algorisme proporciona una millora d’un
+factor constant, mentre que les millores que depenen del nombre de dades que processa l’algoritme hauran de venir
+donades per canvis en el propi algorisme.</p>
+<p><strong>Cost computacional d’un algorisme</strong></p>
+<p>El càlcul de l’eficiència d’un algorisme es basa en comptar el nombre d’operacions elementals que realitza. Per
+operació elemental s’entén una operació el temps d’execució de la qual és constant. En la següent imatge veim les
+funcions dels costs computacionals més usats i el seu increment d’execució en unitats de temps segons l’increment de
+la mida del conjunt de dades a tractar.</p>
+<div class="figure align-center" id="id1">
+<a class="reference internal image-reference" href="../../_images/cost.png"><img alt="Imatge costs" src="../../_images/cost.png" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 3 </span><span class="caption-text">Funcions de cost. TODO: posar referencia.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="algorismes-de-cerca">
+<h2>Algorismes de cerca<a class="headerlink" href="#algorismes-de-cerca" title="Permalink to this headline">¶</a></h2>
+<p>Nosaltres ja hem treballat els algorismes de cerca, de manera general, un problema de cerca es pot enunciar de la
+següent manera: <em>donat un conjunt d’elements, determinar si un element es troba en el conjunt o no</em>.</p>
+<p>Fins ara només hem vist un tipus de cerca però veurem que en tenim certes variacions. L’elecció depèn de la forma en
+què es troben organitzades les dades: si es troben ordenades o si s’ignora la seva disposició o si es sap que estan
+generades a l’atzar.</p>
+<div class="section" id="cerca-sequencial">
+<h3>Cerca seqüèncial<a class="headerlink" href="#cerca-sequencial" title="Permalink to this headline">¶</a></h3>
+<p>És l’algoritme de cerca més simple, menys eficient i que menys precondicions requereix: no requereix coneixements
+sobre el conjunt de recerca ni accés aleatori. Consisteix en comparar cada element del conjunt de recerca amb el
+valor desitjat fins que aquest sigui trobat o fins que trobem el final de la seqüència. El pitjor dels casos
+consisteix en haver de comparar amb tots els elements de la seqüència abans de poder dir si l’element és allà o no,
+direm que el seu cost computacional és lineal, ja que depen linealment del nombre d’elements.</p>
+<p><strong>Algorisme</strong></p>
+<p>Dades necessàries</p>
+<ul class="simple">
+<li><p>vec: llista en la que es vol cercar la dada</p></li>
+<li><p>mida: mida del vector</p></li>
+<li><p>dada: element a cercar</p></li>
+</ul>
+<p>Variables necessàries</p>
+<ul class="simple">
+<li><p>trobat: variable booleana</p></li>
+<li><p>idx: index a consultar</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+<span class="n">trobat</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="n">idx</span> <span class="o">=</span> <span class="mi">0</span> 
+
+<span class="n">mentre</span> <span class="n">idx</span> <span class="o">&lt;</span> <span class="n">mida</span> <span class="n">i</span> <span class="n">no</span> <span class="n">trobat</span><span class="p">:</span>    
+    <span class="n">si</span> <span class="n">vec</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span> <span class="o">==</span>  <span class="n">dada</span><span class="p">:</span>
+        <span class="n">trobat</span> <span class="o">=</span> <span class="kc">True</span>
+        
+    <span class="n">idx</span> <span class="o">=</span> <span class="n">idx</span> <span class="o">+</span> <span class="mi">1</span>
+            
+        
+</pre></div>
+</div>
+</div>
+<div class="section" id="cerca-binaria-o-dicotomica">
+<h3>Cerca binaria o dicotòmica<a class="headerlink" href="#cerca-binaria-o-dicotomica" title="Permalink to this headline">¶</a></h3>
+<p>És un mètode molt eficient, però té diversos prerequisits:</p>
+<ul class="simple">
+<li><p>El conjunt de cerca ha d’estar ordenat.</p></li>
+<li><p>Es pot accedir als diversos elements de la seqüència. Accés aleatòri.</p></li>
+</ul>
+<p>Aquest algoritme compara la dada cercada amb l’element central del conjunt. Segons sigui menor o major es prossegueix
+la recerca amb el subconjunt anterior o posterior, respectivament a l’element central, i així successivament.</p>
+<p><strong>Algorisme</strong></p>
+<p>Dades necessàries</p>
+<ul class="simple">
+<li><p>vec: llista en la qual es vol cercar la dada</p></li>
+<li><p>mida: mida del vector</p></li>
+<li><p>dada: element a cercar</p></li>
+</ul>
+<p>Variables necessàries</p>
+<ul class="simple">
+<li><p>centre: subindex central de l’interval</p></li>
+<li><p>inf: límit inferior de l’interval</p></li>
+<li><p>sup: límit superior de l’interval</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">inf</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">sup</span> <span class="o">=</span> <span class="n">mida</span><span class="o">-</span><span class="mi">1</span>
+<span class="n">trobat</span> <span class="o">=</span> <span class="kc">False</span>
+
+<span class="n">mentre</span> <span class="n">inf</span> <span class="o">&lt;=</span> <span class="n">sup</span> <span class="n">i</span> <span class="n">no</span> <span class="n">trobat</span><span class="p">:</span>
+  <span class="n">centre</span> <span class="o">=</span> <span class="p">((</span><span class="n">sup</span> <span class="o">-</span> <span class="n">inf</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="n">inf</span> 
+  <span class="n">si</span> <span class="n">vec</span><span class="p">[</span><span class="n">centre</span><span class="p">]</span> <span class="o">==</span> <span class="n">dada</span><span class="p">:</span>
+      <span class="n">trobat</span> <span class="o">=</span> <span class="kc">True</span>
+  <span class="n">sino</span> <span class="n">dada</span> <span class="o">&lt;</span> <span class="n">vec</span><span class="p">[</span><span class="n">centre</span><span class="p">]:</span>
+      <span class="n">sup</span> <span class="o">=</span> <span class="n">centre</span> <span class="o">-</span> <span class="mi">1</span>
+  <span class="n">sino</span><span class="p">:</span>
+      <span class="n">inf</span> <span class="o">=</span> <span class="n">centre</span> <span class="o">+</span> <span class="mi">1</span>
+
+</pre></div>
+</div>
+<p>En el millor cas, la dada és l’element que es troba a la meitat, es realitza 1 iteració. En el cas més desfavorable,
+el nombre d’iteracions és el menor enter K que verifica 2<sup>K</sup> = mida del conjunt. El seu ordre de complexitat
+és logarítmic, això implica que quant realitzam una cerca binaria només comparam amb el log<inf>2</inf> del nombre
+d’elements en el conjunt.</p>
+<p>A continuació veureu una taula que compara la cerca binària amb la cerca seqüencial. Es comprova que per a conjunts
+de dades grans la recerca binària segueix sent eficient mentre que la seqüencial es va degradant. La taula mostra el
+nombre d’elements a avaluar per un i altre algorisme per trobar un element en un conjunt de dades.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Mida del conjunt</p></th>
+<th class="head"><p>Cerca seqüèncial</p></th>
+<th class="head"><p>Cerca binaria</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>10</p></td>
+<td><p>10</p></td>
+<td><p>4</p></td>
+</tr>
+<tr class="row-even"><td><p>1000</p></td>
+<td><p>1000</p></td>
+<td><p>11</p></td>
+</tr>
+<tr class="row-odd"><td><p>5000</p></td>
+<td><p>5000</p></td>
+<td><p>14</p></td>
+</tr>
+<tr class="row-even"><td><p>100000</p></td>
+<td><p>100000</p></td>
+<td><p>18</p></td>
+</tr>
+<tr class="row-odd"><td><p>1000000</p></td>
+<td><p>1000000</p></td>
+<td><p>21</p></td>
+</tr>
+</tbody>
+</table>
+<p>A continuació teniu una comparació gràfica dels mètodes de cerca lineal i dicotòmica.</p>
+<div class="figure align-center" id="id2">
+<a class="reference internal image-reference" href="../../_images/linealvsdico.jpg"><img alt="Imatge costs" src="../../_images/linealvsdico.jpg" style="width: 450px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 4 </span><span class="caption-text">Comparació gràfica entre la cerca lineal i la dicotòmica.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+<p>En aquest enllaç teniu una comparació visual dels dos algorismes <a class="reference external" href="https://blog.penjee.com/wp-content/uploads/2015/04/binary-and-linear-search-animations.gif">Aquí</a></p>
+</div>
+<div class="section" id="implementacio-de-les-cerques">
+<h3>Implementacio de les cerques<a class="headerlink" href="#implementacio-de-les-cerques" title="Permalink to this headline">¶</a></h3>
+<p>A continuació teniu l’implementació dels dos tipus de cerques en una funció que retorna un valor booleà que defineix
+si ha trobat o no l’element. Les dues funcions reben 2 paràmetres, el conjunt sobre el qual cercar i el valor a cercar.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+
+<span class="k">def</span> <span class="nf">generar_llista</span><span class="p">(</span><span class="n">n_elements</span><span class="p">,</span> <span class="n">creixent</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+    
+    <span class="n">llista</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n_elements</span><span class="p">):</span>
+        <span class="n">aleatori</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">9</span><span class="p">)</span>
+        <span class="c1"># si es creixent sera ordenada</span>
+        <span class="k">if</span> <span class="n">creixent</span><span class="p">:</span>
+            <span class="n">aleatori</span> <span class="o">+=</span> <span class="n">llista</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+        
+        <span class="n">llista</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">aleatori</span><span class="p">)</span>
+        
+    <span class="k">return</span> <span class="n">llista</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">cerca_sequencial</span><span class="p">(</span><span class="n">llista</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+    
+    <span class="n">trobat</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">llista</span><span class="p">)</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">trobat</span><span class="p">:</span>
+        <span class="k">if</span>  <span class="n">llista</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">x</span><span class="p">:</span>
+            <span class="n">trobat</span> <span class="o">=</span> <span class="kc">True</span>
+        
+        <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>
+    
+    <span class="k">return</span> <span class="n">trobat</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">cerca_binaria</span><span class="p">(</span><span class="n">llista</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+
+    <span class="n">esq</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1"># esq guarda l&#39;index de l&#39;inici del segment</span>
+    <span class="n">dret</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">llista</span><span class="p">)</span> <span class="o">-</span><span class="mi">1</span> <span class="c1"># dret guarda l&#39;index del final del segment</span>
+
+    <span class="n">trobat</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="k">while</span> <span class="n">esq</span> <span class="o">&lt;=</span> <span class="n">dret</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">trobat</span><span class="p">:</span> <span class="c1">#mentre </span>
+
+        <span class="n">mitj</span> <span class="o">=</span> <span class="p">(</span><span class="n">esq</span> <span class="o">+</span> <span class="n">dret</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span>  <span class="c1"># sempre calculam</span>
+
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;DEBUG:&quot;</span><span class="p">,</span> <span class="s2">&quot;esquerra:&quot;</span><span class="p">,</span> <span class="n">esq</span><span class="p">,</span> <span class="s2">&quot;dreta:&quot;</span><span class="p">,</span> <span class="n">dret</span><span class="p">,</span> <span class="s2">&quot;mitj:&quot;</span><span class="p">,</span> <span class="n">mitj</span><span class="p">,</span> <span class="s2">&quot;valor:&quot;</span><span class="p">,</span> <span class="n">llista</span><span class="p">[</span><span class="n">mitj</span><span class="p">])</span>
+
+        <span class="c1"># si el valor d&#39;enmig es el que cercavem ja ho tenim</span>
+        <span class="k">if</span> <span class="n">llista</span><span class="p">[</span><span class="n">mitj</span><span class="p">]</span> <span class="o">==</span> <span class="n">x</span><span class="p">:</span>
+            <span class="n">trobat</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="c1"># si el valor del punt mitj es major que x, cercam en el segment [esq, mitj-1], descartant</span>
+        <span class="c1"># l&#39;altra part del conjunt derecha</span>
+        <span class="k">elif</span> <span class="n">llista</span><span class="p">[</span><span class="n">mitj</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">x</span><span class="p">:</span>
+            <span class="n">dret</span> <span class="o">=</span> <span class="n">mitj</span><span class="o">-</span><span class="mi">1</span>
+
+        <span class="c1"># sino, seguim cercant en l&#39;altre segment</span>
+        <span class="c1"># [mitj+1, dret], descartando la izquierda</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">esq</span> <span class="o">=</span> <span class="n">mitj</span><span class="o">+</span><span class="mi">1</span>
+
+    <span class="c1"># si arribam aqui no hem trobat l&#39;element que cercam</span>
+
+    <span class="k">return</span> <span class="n">trobat</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n_elements</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="n">llista</span> <span class="o">=</span> <span class="n">generar_llista</span><span class="p">(</span><span class="n">n_elements</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%time</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">llista</span><span class="p">)</span>
+<span class="n">cerca_binaria</span><span class="p">(</span><span class="n">llista</span><span class="p">,</span> <span class="mi">64</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 9, 11, 16, 17, 25, 34, 38, 45, 50, 55, 61, 66, 69, 75, 81, 82, 87, 94, 95]
+DEBUG: esquerra: 0 dreta: 19 mitj: 9 valor: 50
+DEBUG: esquerra: 10 dreta: 19 mitj: 14 valor: 75
+DEBUG: esquerra: 10 dreta: 13 mitj: 11 valor: 61
+DEBUG: esquerra: 12 dreta: 13 mitj: 12 valor: 66
+Wall time: 15.5 ms
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">llista</span> <span class="o">=</span> <span class="n">generar_llista</span><span class="p">(</span><span class="n">n_elements</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%time</span>
+
+<span class="n">cerca_sequencial</span><span class="p">(</span><span class="n">llista</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Wall time: 0 ns
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="ordenacio">
+<h2>Ordenació<a class="headerlink" href="#ordenacio" title="Permalink to this headline">¶</a></h2>
+<p>L’ordenació és el procés d’organitzar un conjunt de dades en algun ordre o seqüència específica, pot ser creixent o
+decreixent per dades numèriques o l’ordre alfabètic per caràcters o strings. Els algoritmes d’ordenació permuten els
+elements del conjunt de dades fins aconseguir l’ordre dessitjat.</p>
+<p>Per aconseguir el nostre objectiu usarem dues operacions bàsiques: la comparació i l’intercanvi. Existeixen molts
+algorismes d’ordenació amb diferents avantatges i inconvenients en aquest tema veurem el més bàsic de tots.</p>
+<div class="section" id="metode-de-la-bombolla">
+<h3>Mètode de la bombolla<a class="headerlink" href="#metode-de-la-bombolla" title="Permalink to this headline">¶</a></h3>
+<p>Es basa en recórrer l’array un cert nombre de vegades, comparant parells de valors que ocupen posicions adjacents
+(0-1,1-2, …). Si les dues dades que comparam no estan ordenades, s’intercanvien. Aquesta operació es repeteix <em>n-1</em>
+vegades, sent <em>n</em> la mida del conjunt de dades d’entrada. Al final de la darrera passada l’element més gran estarà
+en darrera posició; en la segona, el segon element arribarà a la penúltima, i així sucesivament.</p>
+<p>El seu nom es deu al fet que l’element de major valor <em>puja</em> a la posició final de l’array, a l’igual que les
+bombolles d’aire en un dipòsit pugen a la part superior. Per això ha de realitzar un recorregut pas a pas des de la
+seva posició inicial fins a la posició final de l’array.</p>
+<p>Aquest algorisme és el més bàsic d’ordenació i és que el seu cost computacional és molt alt, d’aquest tipus
+d’algorismes s’en diuen quadratics. En el millor cas, si tenim la llista ordenada, haurem de fer tantes comparacions
+com el nombre d’elements té la llista i en el pitjor dels casos el nombre de comparacions serà el nombre d’elements
+de la llista al quadrat.</p>
+<p><strong>Algorisme</strong></p>
+<p>Dades necessàries</p>
+<ul class="simple">
+<li><p>vec: llista en la que es vol ordenar</p></li>
+<li><p>mida: mida de la llista</p></li>
+</ul>
+<p>Variables necessàries</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">i</span> <span class="n">pren</span> <span class="n">tots</span> <span class="n">els</span> <span class="n">valors</span> <span class="n">de</span> <span class="mi">1</span> <span class="n">a</span> <span class="n">mida</span><span class="p">:</span>
+    <span class="n">j</span> <span class="n">pren</span> <span class="n">tots</span> <span class="n">els</span> <span class="n">valors</span> <span class="n">de</span> <span class="mi">0</span> <span class="n">a</span> <span class="n">mida</span> <span class="o">-</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">si</span> <span class="n">vec</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">vec</span><span class="p">[</span><span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]:</span>
+            <span class="n">aux</span> <span class="o">=</span> <span class="n">vec</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
+            <span class="n">vec</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">vec</span><span class="p">[</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span>
+            <span class="n">vec</span><span class="p">[</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">aux</span>
+
+
+</pre></div>
+</div>
+</div>
+<div class="section" id="explicacio-grafica">
+<h3>Explicació gràfica<a class="headerlink" href="#explicacio-grafica" title="Permalink to this headline">¶</a></h3>
+<img src="img/bubble.png" alt="drawing" style="width:600px;"/>
+<p><a class="reference external" href="https://www.geeksforgeeks.org/bubble-sort/">Més informació complementaria de l’algorisme</a></p>
+</div>
+<div class="section" id="implementacio-de-l-algorisme">
+<h3>Implementació de l’algorisme<a class="headerlink" href="#implementacio-de-l-algorisme" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">bubbleSort</span><span class="p">(</span><span class="n">llista</span><span class="p">):</span> 
+    <span class="n">mida</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">llista</span><span class="p">)</span> 
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">mida</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">mida</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span> 
+            
+            <span class="k">if</span> <span class="n">llista</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">&gt;</span><span class="n">llista</span><span class="p">[</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">]:</span> 
+                <span class="n">llista</span><span class="p">[</span><span class="n">j</span><span class="p">],</span> <span class="n">llista</span><span class="p">[</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">llista</span><span class="p">[</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">],</span> <span class="n">llista</span><span class="p">[</span><span class="n">j</span><span class="p">])</span>
+                
+        <span class="nb">print</span><span class="p">(</span><span class="n">llista</span><span class="p">)</span>
+                
+    <span class="k">return</span> <span class="n">llista</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">llista</span> <span class="o">=</span> <span class="n">generar_llista</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span> 
+<span class="nb">print</span><span class="p">(</span><span class="n">llista</span><span class="p">)</span>
+<span class="n">llista</span> <span class="o">=</span> <span class="n">bubbleSort</span><span class="p">(</span><span class="n">llista</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 6, 6, 7, 5, 3, 4, 9, 4, 7]
+[1, 6, 6, 5, 3, 4, 7, 4, 7, 9]
+[1, 6, 5, 3, 4, 6, 4, 7, 7, 9]
+[1, 5, 3, 4, 6, 4, 6, 7, 7, 9]
+[1, 3, 4, 5, 4, 6, 6, 7, 7, 9]
+[1, 3, 4, 4, 5, 6, 6, 7, 7, 9]
+[1, 3, 4, 4, 5, 6, 6, 7, 7, 9]
+[1, 3, 4, 4, 5, 6, 6, 7, 7, 9]
+[1, 3, 4, 4, 5, 6, 6, 7, 7, 9]
+[1, 3, 4, 4, 5, 6, 6, 7, 7, 9]
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="millora-de-l-algorisme">
+<h3>Millora de l’algorisme<a class="headerlink" href="#millora-de-l-algorisme" title="Permalink to this headline">¶</a></h3>
+<p>Hi ha un canvi de l’algorisme que permet evitar realitzar totes les iteracions del bucle exterior, si ens adonam que
+la llista ja està ordenada podem aturar d’ordenar.</p>
+<p>Dades necessàries</p>
+<ul class="simple">
+<li><p>vec: llista en la que es vol ordenar</p></li>
+<li><p>mida: mida de la llista</p></li>
+</ul>
+<p>Variables necessàries</p>
+<ul class="simple">
+<li><p>actualitzat: variable booleana</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">actualitzat</span> <span class="o">=</span> <span class="kc">True</span>
+
+<span class="n">mentre</span> <span class="n">actualitzat</span><span class="p">:</span>
+    <span class="n">actualitzat</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="n">j</span> <span class="n">pren</span> <span class="n">tots</span> <span class="n">els</span> <span class="n">valors</span> <span class="n">de</span> <span class="mi">0</span> <span class="n">a</span> <span class="n">mida</span> <span class="o">-</span> <span class="mi">1</span>
+        <span class="n">si</span> <span class="n">vec</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">vec</span><span class="p">[</span><span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]:</span>
+            <span class="n">aux</span> <span class="o">=</span> <span class="n">vec</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
+            <span class="n">vec</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">vec</span><span class="p">[</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span>
+            <span class="n">vec</span><span class="p">[</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">aux</span>
+            <span class="n">actualitzat</span> <span class="o">=</span> <span class="kc">True</span>
+
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">bubbleSort_curt</span><span class="p">(</span><span class="n">llista</span><span class="p">):</span> 
+    <span class="n">actualitzat</span> <span class="o">=</span> <span class="kc">True</span>
+    <span class="n">mida</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">llista</span><span class="p">)</span> 
+    <span class="k">while</span> <span class="n">actualitzat</span><span class="p">:</span> 
+        <span class="n">actualitzat</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">mida</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span> 
+            
+            <span class="k">if</span> <span class="n">llista</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">llista</span><span class="p">[</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="p">:</span> 
+                <span class="n">llista</span><span class="p">[</span><span class="n">j</span><span class="p">],</span> <span class="n">llista</span><span class="p">[</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">llista</span><span class="p">[</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">],</span> <span class="n">llista</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
+                <span class="n">actualitzat</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">llista</span><span class="p">)</span>
+                
+    <span class="k">return</span> <span class="n">llista</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">llista</span> <span class="o">=</span>  <span class="n">generar_llista</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">llista</span><span class="p">)</span>
+<span class="n">llista</span> <span class="o">=</span> <span class="n">bubbleSort_curt</span><span class="p">(</span><span class="n">llista</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 7, 7, 9, 7, 2, 6, 3, 8, 3]
+[1, 7, 7, 7, 2, 6, 3, 8, 3, 9]
+[1, 7, 7, 2, 6, 3, 7, 3, 8, 9]
+[1, 7, 2, 6, 3, 7, 3, 7, 8, 9]
+[1, 2, 6, 3, 7, 3, 7, 7, 8, 9]
+[1, 2, 3, 6, 3, 7, 7, 7, 8, 9]
+[1, 2, 3, 3, 6, 7, 7, 7, 8, 9]
+[1, 2, 3, 3, 6, 7, 7, 7, 8, 9]
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="altres-algorismes-d-ordenacio">
+<h3>Altres algorismes d’ordenació<a class="headerlink" href="#altres-algorismes-d-ordenacio" title="Permalink to this headline">¶</a></h3>
+<p>En aquesta secció hem realitzat una introducció als algorismes d’ordenació i hem vist el funcionament del més bàsic,
+en successives assignatures en veureu d’altres molt més avançats i per tant més complexes però també molt més
+eficients. Alguns dels més coneguts són:</p>
+<ul class="simple">
+<li><p><strong>Algorisme de selecció:</strong> Aquest mètode considera que la llista està formada per 2 parts: una part ordenada que
+estarà buida a el principi i al principi comprèn tot l’array; i una part desordenada  que a principi comprèn tot
+l’array i al final de l’algorisme estarà buida. El seu cost computacional és el mateix que el de l’algorisme de la
+bombolla però requereix de menys operacions.</p></li>
+<li><p><strong>Algorisme d’inserció:</strong> És un mètode molt similar a l’anterior, enlloc de tenir 2 parts es realitza l’ordenació
+inserint els elements en la posició que els hi toca de la llista. Tal com l’algorisme de selecció el seu cost
+computacional és el mateix que el de la bombolla però necessita menys operacions.</p></li>
+<li><p><strong>Quicksort:</strong> El mètode d’ordenació ràpida (Quicksort) per ordenar els elements de l’array es basa en el fet que
+és més ràpid i fàcil ordenar dues llistes petites que una llista gran. Es basa en l’estratègia típica de “divideix i
+venceràs”. La llista a ordenar es divideix en dues parts: una contindrà tots els valors menors o iguals a un cert
+valor (que se sol anomenar pivot) i l’altra amb els valors més grans que aquest valor.</p></li>
+</ul>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./chapters\Tema7"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="../Tema6/Tema6_Exercicis.html" title="previous page">Exercicis Tema 6</a>
+    <a class='right-next' id="next-link" href="Tema7_Exercicis.html" title="next page">Exercicis Tema 7</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Gabriel Moyà Alcover<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+  </body>
+</html>

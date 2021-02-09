@@ -1,0 +1,690 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tema 6 &#8212; Programacio I</title>
+    
+  <link rel="stylesheet" href="../../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Exercicis Tema 6" href="Tema6_Exercicis.html" />
+    <link rel="prev" title="Exercicis Tema 5" href="../Tema5/Tema5_Exercicis.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../index.html">
+  
+  <img src="../../_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Programacio I</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../intro.html">
+   Introduccio
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Tema1.html">
+   Tema 1
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../Tema2/Tema2_Intro.html">
+   Tema 2
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tema2/Tema2.html">
+     Dades
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tema2/Tema2.html#declaracions-de-variables">
+     Declaracions de variables
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tema2/Tema2.html#operadors-i-operands">
+     Operadors i operands
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tema2/Tema2.html#comentaris-en-el-codi">
+     Comentaris en el codi
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tema2/Tema2.html#entrada-sortida-d-informacio">
+     Entrada / Sortida d’informació
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tema2/Tema2_Estructures_de_control.html">
+     Composició d’instruccions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tema2/Tema2_Exercicis.html">
+     Exercicis Tema 2
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../Tema3/Tema3_.html">
+   Tema 3
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tema3/Tema3_Exercicis.html">
+     Exercicis del Tema 3
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../Tema4/Tema4_.html">
+   Tema 4
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tema4/Tema4_Esquemes.html">
+     Aplicació dels esquemes bàsics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tema4/Tema4_Subprogrames.html">
+     Subprogrames i paràmetres
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tema4/Tema4_Aplicacio_esquemes_subprogrames.html">
+     Esquemes amb subprogrames
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tema4/Tema4_Exercicis_subprogrames.html">
+     Exercicis del Tema 4
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../Tema5/Tema5.html">
+   Tema 5
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tema5/Tema5_Llistes.html">
+     Llistes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tema5/Tema5_Estructures.html">
+     Altres maneres d’estructurar les dades
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tema5/Tema5_Classes.html">
+     Classes i Objectes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tema5/Tema5_Exercicis.html">
+     Exercicis Tema 5
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 current active collapsible-parent">
+  <a class="current reference internal" href="#">
+   Tema 6
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="Tema6_Exercicis.html">
+     Exercicis Tema 6
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../Tema7/Tema7_Algorismes.html">
+   Tema 7
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tema7/Tema7_Exercicis.html">
+     Exercicis Tema 7
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../Annexes/Annexes.html">
+   Annexes
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Annexes/Entorn_Desenvolupament.html">
+     Entorn de desenvolupament
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/chapters/Tema6/Tema6_Fitxers.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/chapters/Tema6/Tema6_Fitxers.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fitxers">
+   Fitxers
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#que-es-un-fitxer">
+   Que és un fitxer?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#localitzacio-path">
+   Localització (Path)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#us-de-fitxers-a-python">
+   Us de fitxers a Python
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#el-mode-d-un-fitxer">
+   El mode d’un fitxer
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#llegir-i-escriure-en-fitxers-oberts">
+   Llegir i escriure en fitxers oberts
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="tema-6">
+<h1>Tema 6<a class="headerlink" href="#tema-6" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="fitxers">
+<h2>Fitxers<a class="headerlink" href="#fitxers" title="Permalink to this headline">¶</a></h2>
+<p>Fins ara els nostres programes sempre han rebut la informació d’una única font: el teclat i a l’hora de generar
+l’informació només la sabem mostrar per pantalla.</p>
+<p>Aquest fet ens suposa una limitació per al tipus de programes que podem construir, ja que la informació que produïm
+es perd cada cop que tornam a executar el programa o tancam l’ordinador.</p>
+<p>Podem superar aquestes problemàtiques si sabem fer ús de fitxers.</p>
+</div>
+<div class="section" id="que-es-un-fitxer">
+<h2>Que és un fitxer?<a class="headerlink" href="#que-es-un-fitxer" title="Permalink to this headline">¶</a></h2>
+<p>Abans de poder treballar amb fitxers, és important entendre què són i com els sistemes operatius moderns gestionen
+alguns dels seus aspectes.</p>
+<p>Bàsicament, un fitxer és un conjunt contigu de bytes usats per emmagatzemar dades. Aquestes dades s’organitzen en un
+format específic i poden ser tan simples com una seqüència de text o tan complexes com l’executable d’un programa. Els
+fitxers es poden emmagatzemar en memòria secundaria (disc duur) i per tant la informació que hi guardam perdura més
+enllà del temps que l’ordinador es troba encès.</p>
+<p>Els fitxers de la majoria de sistemes moderns es componen de tres parts:</p>
+<ul class="simple">
+<li><p><strong>Capçalera</strong>: metadades sobre el contingut del fitxer (nom de fitxer, organització interna, tipus, etc.)</p></li>
+<li><p><strong>Dades</strong>: contingut del fitxer escrit pel creador o editor.</p></li>
+<li><p><strong>Final del fitxer</strong> (EOF): caràcter especial que indica el final del fitxer, en el nostre cas aquest caràcter serà
+el caràcter buit “”</p></li>
+</ul>
+</div>
+<div class="section" id="localitzacio-path">
+<h2>Localització (Path)<a class="headerlink" href="#localitzacio-path" title="Permalink to this headline">¶</a></h2>
+<p>Quan accedim a un fitxer del nostre sistema operatiu des d’un programa es necessàri indicar quin camí hem de seguir
+de la localització on es troba programa fins el fitxer. El camí o <em>path</em> del fitxer és representa en el nostre
+programa amb un <em>string</em> a l’hora de construir un objecte de la classe fitxer. La localització d’un fitxer es
+divideix en tres parts principals:</p>
+<ul class="simple">
+<li><p><strong>Ruta de carpetes</strong>: la ubicació de la carpeta al sistema de fitxers on les carpetes posteriors estan separades
+per una barra inclinada <code class="docutils literal notranslate"><span class="pre">/</span></code>. Per accedir a carpetes anteriors usarem el símbol <code class="docutils literal notranslate"><span class="pre">..</span></code>.</p></li>
+<li><p><strong>Nom del fitxer</strong>: el nom real del fitxer. Com a anècdota podem comentar que windows no permetia noms iniciats
+amb punt fins windos 10 ja que era un nom reservat per a fitxers del propi sistema.</p></li>
+<li><p><strong>Extensió</strong>: el final del camí del fitxer marcat amb un símbol (.) ens serveix per indicar el tipus de fitxer.
+En cap cas condiciona el seu contingut.</p></li>
+</ul>
+<p>Els <em>paths</em> poden ser:</p>
+<ul class="simple">
+<li><p><strong>Absoluts</strong>: Respecte a l’arrel del sistema. El que coneixem com C: (Windows) o <code class="docutils literal notranslate"><span class="pre">/</span></code> (UNIX)</p></li>
+<li><p><strong>Relatius</strong>: Respecte a la carpeta on estam situats.</p></li>
+</ul>
+<pre><span></span>/  ← arrel (C: en windows)
+│ 
+├── joan/ 
+│   │
+│   ├── to/ 
+│   │   ├── main.py
+│   │   └── cats.txt
+│   │
+│   ├── main2.py
+│   │
+│   └── dogs.txt 
+│
+└── animals.csv   </pre><p>Si ens trobam a la carpeta <strong>to</strong> i volem accedir al fitxer <strong>cats.txt</strong> ho farem amb els següents <em>strings</em></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>path_relatiu = &quot;cats.txt&quot;
+path_absolut = &quot;/path/to/cats.txt&quot;
+</pre></div>
+</div>
+<p>Si ens trobam a la carpeta <strong>path</strong> i volem accedir al fitxer <strong>cats.txt</strong> ho farem amb els següents <em>strings</em></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>path_relatiu = &quot;to/cats.txt&quot;
+path_absolut = &quot;/path/to/cats.txt&quot;
+</pre></div>
+</div>
+<p>Si ens trobam a la carpeta <strong>to</strong> i volem accedir al fitxer <strong>dogs.txt</strong> ho farem amb els següents strings:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>path_relatiu = &quot;../dogs.txt&quot;
+path_absolut = &quot;/path/dogs.txt&quot;
+</pre></div>
+</div>
+</div>
+<div class="section" id="us-de-fitxers-a-python">
+<h2>Us de fitxers a Python<a class="headerlink" href="#us-de-fitxers-a-python" title="Permalink to this headline">¶</a></h2>
+<p>Quan vulguem treballar amb un fitxer, el primer que hem de fer és obrir-lo. Això es fa invocant la funció integrada
+<code class="docutils literal notranslate"><span class="pre">open</span></code> que té un únic argument obligatori que és el camí (<em>path</em>)  cap al fitxer. <code class="docutils literal notranslate"><span class="pre">open</span></code> <strong>ens retorna un objecte de
+la classe</strong> <em>file</em>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">fitxer</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;harry_potter.txt&quot;</span><span class="p">)</span>  <span class="c1"># el fitxer harry_potter es a la mateixa carpeta que el fitxer amb el codi</span>
+</pre></div>
+</div>
+<p>Després d’obrir un fitxer, el següent a aprendre és com tancar-lo. Ho podem fer amb la sentència <code class="docutils literal notranslate"><span class="pre">close</span></code>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">fitxer</span><span class="o">.</span><span class="n">close</span><span class="p">()</span> <span class="c1"># tancam el fitxer </span>
+</pre></div>
+</div>
+<p><strong>Advertència!!!</strong> Hem d’assegurar-nos que un fitxer obert està tancat correctament.</p>
+<p>És important saber que tancar el fitxer és la nostra responsabilitat. En la majoria dels casos, un cop finalitzat el
+programa o en el mètode en el qual s’ha obert el fitxer, aquest es tancarà. No obstant això, no hi ha cap garantia que
+això succeirà i podem tenir ocupacions de memòria no desitjades.</p>
+<p>Assegurar-nos que el nostre codi es comporta d’una manera ben definida i no es dona qualsevol comportament no
+desitjat és una bona pràctica de programació.</p>
+<p>Una de les maneres recomanades d’assegurar que un fitxer es tanca correctament és usant la següent estructura de codi:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;harry_potter.txt&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fitxer</span><span class="p">:</span>
+    <span class="c1"># Processament del fitxer</span>
+</pre></div>
+</div>
+<p>La sentència <code class="docutils literal notranslate"><span class="pre">with</span></code> s’encarrega de tancar el fitxer automàticament, fins i tot en casos d’error. És recomanable usar
+el bloc <code class="docutils literal notranslate"><span class="pre">with</span></code> sempre que sigui possible, ja que permet un codi més net i facilita el maneig de qualsevol error
+inesperat.</p>
+</div>
+<div class="section" id="el-mode-d-un-fitxer">
+<h2>El mode d’un fitxer<a class="headerlink" href="#el-mode-d-un-fitxer" title="Permalink to this headline">¶</a></h2>
+<p>A l’hora d’obrir un fitxer també necessitarem usar el segon argument del mètode open: <code class="docutils literal notranslate"><span class="pre">mode</span></code>. Aquest argument és un
+<em>string</em> que pot contenir diverses combinacions de caràcters per representar com volem obrir el fitxer. El valor per
+defecte <code class="docutils literal notranslate"><span class="pre">r</span></code>, que representa obrir el fitxer en mode de només lectura, tal com hem fet a l’exemple anterior.</p>
+<table class="table table-hover">
+<thead>
+<tr>
+<th>Caracter</th>
+<th>Significat</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>'r'</code></td>
+<td>Obre per a lectura ( per defecte)</td>
+</tr>
+<tr>
+<td><code>'w'</code></td>
+<td>Obre per a escriptura, sobrescriu el que teniem abans</td>
+</tr>
+<tr>
+<td><code>'a'</code></td>
+<td>Obre el fitxer en mode escriptura i afegeix la informació al final</td>
+</tr>
+<tr>
+<td><code>'r+'</code></td>
+<td>Obre el fitxer en mode lectura i escriptura</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="llegir-i-escriure-en-fitxers-oberts">
+<h2>Llegir i escriure en fitxers oberts<a class="headerlink" href="#llegir-i-escriure-en-fitxers-oberts" title="Permalink to this headline">¶</a></h2>
+<p>Un cop obert un fitxer, hi volem poder llegir o escriure informació. Hi ha diversos mètodes que es poden cridar de la
+classe fitxer per ajudar-nos a realitzar aquesta tasca:</p>
+<table class="table table-hover">
+<thead>
+<tr>
+<th>Mètode</th>
+<th>Funció</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>read(1)</code></td>
+<td>Llegeix des del fitxer en funció del nombre de bytes <code> size </code>. Si no es passa cap argument es llegirà tot el fitxer. **Nosaltres com feim amb el text de teclat, llegirem els fitxers caracter a caracter**.</td>
+</tr>
+<tr>
+<td><code>readline(size=-1)</code></td>
+<td> Llegeix com a màxim el nombre de <code> size </code> de caràcters de la línia. Si no es passa cap argument es llegirà tota la línia (o la resta de la línia).</td>
+</tr>
+<tr>
+<td><code>readlines()</code></td>
+<td> Llegeix les línies restants de l’objecte de fitxer i les retorna com a llista.</td>
+</tr>
+</tbody>
+</table>
+<p>Ara ens centrarem en l’escriptura de fitxers. Igual que amb la lectura de fitxers, els objectes de fitxer tenen
+diversos mètodes útils per escriure en un fitxer:</p>
+<table class="table table-hover">
+<thead>
+<tr>
+<th>Mètode</th>
+<th>Funció</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>write(string)</code></td>
+<td>Escriu el string en el fitxer. **Ens hem d'ocupar de fer el salt de línia pel nostre compte.**</td>
+</tr>
+<tr>
+<td><code>writelines(seq)</code></td>
+<td>Això escriu la seqüència al fitxer. No s'afegeix cap finalització de línia a cada element de la seqüència. Depèn
+de nosaltres afegir les línies apropiades.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Anem a veure alguns exemples</strong></p>
+<p>Lectura de tots els caràcters d’un fitxer.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;harry_potter.txt&quot;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">harry</span><span class="p">:</span>
+  
+  <span class="n">lletra</span> <span class="o">=</span> <span class="n">harry</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+  
+  <span class="k">while</span> <span class="n">lletra</span> <span class="o">!=</span> <span class="s2">&quot;&quot;</span><span class="p">:</span> <span class="c1"># Final de fitxer</span>
+    
+    <span class="nb">print</span><span class="p">(</span><span class="n">lletra</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+    <span class="n">lletra</span> <span class="o">=</span> <span class="n">harry</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="mi">85604876108</span><span class="n">a</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;harry_potter.txt&quot;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">harry</span><span class="p">:</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> 
+<span class="g g-Whitespace">      </span><span class="mi">3</span>   <span class="n">lletra</span> <span class="o">=</span> <span class="n">harry</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> 
+<span class="g g-Whitespace">      </span><span class="mi">5</span>   <span class="k">while</span> <span class="n">lletra</span> <span class="o">!=</span> <span class="s2">&quot;&quot;</span><span class="p">:</span> <span class="c1"># Final de fitxer</span>
+
+<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;harry_potter.txt&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;harry_potter.txt&quot;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fitxer</span><span class="p">:</span>
+  
+ <span class="k">for</span> <span class="n">linia</span> <span class="ow">in</span> <span class="n">fitxer</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">linia</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;-&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Juro solemnemente que esto es una travesura
+-Me voy a la cama antes de que a alguno de los dos se os ocurra otra genial idea y acabemos muertos. O peor: expulsados
+-Dobby no mata, solo mutila o hiere de gravedad
+-Es Leviosa, no leviosa
+-
+</pre></div>
+</div>
+</div>
+</div>
+<p>Anem a veure com escriure</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">text</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;En&quot;</span><span class="p">,</span> <span class="s2">&quot;un&quot;</span> <span class="p">,</span> <span class="s2">&quot;agujero&quot;</span> <span class="p">,</span> <span class="s2">&quot;en&quot;</span> <span class="p">,</span> <span class="s2">&quot;el&quot;</span> <span class="p">,</span> <span class="s2">&quot;suelo&quot;</span> <span class="p">,</span> <span class="s2">&quot;habitaba&quot;</span> <span class="p">,</span> <span class="s2">&quot;un&quot;</span> <span class="p">,</span> <span class="s2">&quot;hobbit&quot;</span><span class="p">]</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;resultat.txt&quot;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">res</span><span class="p">:</span>
+  
+  <span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="n">text</span><span class="p">:</span>
+    <span class="n">res</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">element</span><span class="p">)</span>
+    <span class="n">res</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>  
+</pre></div>
+</div>
+</div>
+</div>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./chapters\Tema6"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="../Tema5/Tema5_Exercicis.html" title="previous page">Exercicis Tema 5</a>
+    <a class='right-next' id="next-link" href="Tema6_Exercicis.html" title="next page">Exercicis Tema 6</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Gabriel Moyà Alcover<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+  </body>
+</html>

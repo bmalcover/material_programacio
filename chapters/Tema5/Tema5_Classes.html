@@ -1,0 +1,1317 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Classes i Objectes &#8212; Programacio I</title>
+    
+  <link rel="stylesheet" href="../../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Exercicis Tema 5" href="Tema5_Exercicis.html" />
+    <link rel="prev" title="Altres maneres d’estructurar les dades" href="Tema5_Estructures.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../index.html">
+  
+  <img src="../../_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Programacio I</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../intro.html">
+   Introduccio
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Tema1.html">
+   Tema 1
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../Tema2/Tema2_Intro.html">
+   Tema 2
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tema2/Tema2.html">
+     Dades
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tema2/Tema2.html#declaracions-de-variables">
+     Declaracions de variables
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tema2/Tema2.html#operadors-i-operands">
+     Operadors i operands
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tema2/Tema2.html#comentaris-en-el-codi">
+     Comentaris en el codi
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tema2/Tema2.html#entrada-sortida-d-informacio">
+     Entrada / Sortida d’informació
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tema2/Tema2_Estructures_de_control.html">
+     Composició d’instruccions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tema2/Tema2_Exercicis.html">
+     Exercicis Tema 2
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../Tema3/Tema3_.html">
+   Tema 3
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tema3/Tema3_Exercicis.html">
+     Exercicis del Tema 3
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../Tema4/Tema4_.html">
+   Tema 4
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tema4/Tema4_Esquemes.html">
+     Aplicació dels esquemes bàsics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tema4/Tema4_Subprogrames.html">
+     Subprogrames i paràmetres
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tema4/Tema4_Aplicacio_esquemes_subprogrames.html">
+     Esquemes amb subprogrames
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tema4/Tema4_Exercicis_subprogrames.html">
+     Exercicis del Tema 4
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 current active collapsible-parent">
+  <a class="reference internal" href="Tema5.html">
+   Tema 5
+  </a>
+  <ul class="current collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="Tema5_Llistes.html">
+     Llistes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Tema5_Estructures.html">
+     Altres maneres d’estructurar les dades
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Classes i Objectes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Tema5_Exercicis.html">
+     Exercicis Tema 5
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../Tema6/Tema6_Fitxers.html">
+   Tema 6
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tema6/Tema6_Exercicis.html">
+     Exercicis Tema 6
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../Tema7/Tema7_Algorismes.html">
+   Tema 7
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tema7/Tema7_Exercicis.html">
+     Exercicis Tema 7
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../Annexes/Annexes.html">
+   Annexes
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Annexes/Entorn_Desenvolupament.html">
+     Entorn de desenvolupament
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/chapters/Tema5/Tema5_Classes.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/chapters/Tema5/Tema5_Classes.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#classes">
+   Classes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#objectes">
+   Objectes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#classe-dels-nombres-complexos">
+   Classe dels nombres complexos
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#encapsulacio">
+   Encapsulació
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#atributs-privats">
+     Atributs privats
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#metodes-privats">
+     Mètodes privats
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#atributs-i-metodes-de-classe">
+   Atributs i mètodes de classe
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sobrecarrega-d-operadors">
+   Sobrecàrrega d’operadors
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="classes-i-objectes">
+<h1>Classes i Objectes<a class="headerlink" href="#classes-i-objectes" title="Permalink to this headline">¶</a></h1>
+<p>El concepte de tipus de dades estructurats s’amplia amb la incorporació dels conceptes propis de l’orientació a objectes,
+les <strong>classes</strong> i les seves instàncies, els <strong>objectes</strong>.</p>
+<p>Per arribar al concepte de classe primer cal parlar del concepte de <strong>Tipus Abstracte de Dades</strong> (TAD).</p>
+<p>Un TAD es defineix com un model matemàtic compost per una col·lecció d’operacions definides sobre un conjunt de dades.</p>
+<p>Un Tipus Abstracte de Dades es caracteritza per:</p>
+<ul class="simple">
+<li><p>Usa un o més tipus de dades, elementals o no.</p></li>
+<li><p>Defineix un conjunt d’operacions sobre aquestes dades. El que es coneix com a interfície.</p></li>
+<li><p>Les operacions de la interfície són les úniques que estan permeses per les dades que hem definit.</p></li>
+<li><p>No existeix cap altre mecanisme d’accés a l’estructura de dades definida.</p></li>
+</ul>
+<p>El fet de definir una interfície com a mecanisme d’actuació sobre els valors del Tipus Abstracte de Dades permet protegir
+els valors enfront d’una utilització incorrecta.  Aquesta tècnica es coneix amb el nom d’<strong>encapsulació</strong>.</p>
+<div class="section" id="classes">
+<h2>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h2>
+<p>Una Classe es pot considerar com l’implementació d’un Tipus Abstracte de Dades en un llenguatge de programació.</p>
+<ul class="simple">
+<li><p>Quan es parla dels <strong>valors</strong> que es representen amb una classe es parla dels <strong>atributs</strong>.</p></li>
+<li><p>Quan es parla de les <strong>operacions</strong> es parla dels <strong>mètodes</strong>.</p></li>
+</ul>
+<p>Existeix un tipus especial de mètodes, els mètodes que serveixen per construir els objectes, són els anomenats
+<strong>constructors</strong>. Un constructor té la característica especial que el valor resultat de la seva invocació (crida) és un
+nou objecte instància de la classe. Una altra característica dels constructors és que no són invocats directament
+sinó que són invocats quan es creen noves instàncies de la classe.</p>
+<p>Per il·lustrar els conceptes plantejats, començarem amb la definició de la nostra primera classe:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Persona</span><span class="p">:</span>
+  
+  <span class="sd">&#39;&#39;&#39; </span>
+<span class="sd">  El metode __init__ es un metode especial de Python que serveix per definir com</span>
+<span class="sd">  es construeix un objecte. Nomes el podem crear dins una classe.</span>
+<span class="sd">  Hi definirem els seus atributs.</span>
+<span class="sd">  &#39;&#39;&#39;</span>
+  
+  <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ed</span><span class="p">,</span> <span class="n">pe</span><span class="p">,</span> <span class="n">al</span><span class="p">):</span> <span class="c1"># notem l&#39;ús del parametre self</span>
+    
+        <span class="bp">self</span><span class="o">.</span><span class="n">edat</span> <span class="o">=</span> <span class="n">ed</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">pes</span> <span class="o">=</span> <span class="n">pe</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">alt</span> <span class="o">=</span> <span class="n">al</span> <span class="c1"># la alcada es en cm</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="objectes">
+<h2>Objectes<a class="headerlink" href="#objectes" title="Permalink to this headline">¶</a></h2>
+<p>Per poder utilitzar les classes, és necessari realitzar una instanciació de manera que es construeix un <strong>Objecte</strong>.
+Les variables s’utilitzen <strong>per fer referència</strong> als objectes creats.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Creació d&#39;un objecte persona amb referencia p1</span>
+<span class="n">p1</span> <span class="o">=</span> <span class="n">Persona</span><span class="p">(</span><span class="mi">32</span><span class="p">,</span> <span class="mi">72</span><span class="p">,</span> <span class="mi">180</span><span class="p">)</span>
+
+<span class="c1"># Creació d&#39;un objecte persona amb referencia p2</span>
+<span class="n">p2</span> <span class="o">=</span> <span class="n">Persona</span><span class="p">(</span><span class="mi">41</span><span class="p">,</span> <span class="mi">134</span><span class="p">,</span> <span class="mi">152</span><span class="p">)</span>
+
+<span class="c1"># p1 i p2 no tenen valor, son referencies</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">p1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">p2</span><span class="p">)</span>
+
+<span class="n">p1</span><span class="o">.</span><span class="n">alt</span> <span class="o">=</span> <span class="mi">199</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">p1</span><span class="o">.</span><span class="n">alt</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;__main__.Persona object at 0x00000284764BE988&gt;
+&lt;__main__.Persona object at 0x00000284764BE948&gt;
+199
+</pre></div>
+</div>
+</div>
+</div>
+<p>Com hen notat en les darreres línies del codi anterior, podem accedir als atributs d’una classe usant el punt després
+del nom de l’objecte.</p>
+<p>Seguint amb l’exemple anterior veurem com mostrar l’informació dels atributs d’un objecte.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Edat &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">p1</span><span class="o">.</span><span class="n">edat</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; - Pes: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">p1</span><span class="o">.</span><span class="n">pes</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Edat &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">p2</span><span class="o">.</span><span class="n">edat</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; - Pes: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">p2</span><span class="o">.</span><span class="n">pes</span><span class="p">))</span>
+
+<span class="n">professor</span> <span class="o">=</span> <span class="n">Persona</span><span class="p">(</span><span class="mi">55</span><span class="p">,</span><span class="mi">32</span><span class="p">,</span> <span class="mi">140</span><span class="p">)</span> <span class="c1"># Cream un nou objecte del tipus persona anomenat professor</span>
+
+<span class="c1"># Mostram l&#39;informacio dels seus atributs</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Edat &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">professor</span><span class="o">.</span><span class="n">edat</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; - Pes: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">professor</span><span class="o">.</span><span class="n">pes</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Edat 32 - Pes: 72
+Edat 41 - Pes: 134
+Edat 55 - Pes: 32
+</pre></div>
+</div>
+</div>
+</div>
+<p>Hem dit que una de les coses que caracteritza un TAD és la capacitat de definir interficies, es a dir operacions
+sobre les nostres dades.</p>
+<p>En definirem algunes per a la classe que estam construïnt i a continuació les implementarem</p>
+<ul class="simple">
+<li><p>Calcular el IMC (index de massa corporal)</p></li>
+<li><p>Saber si una persona és major d’edat</p></li>
+<li><p>Donades dues persones, saber qui és més vell</p></li>
+<li><p>Mostrar per pantalla la informació d’un objecte</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Persona</span><span class="p">:</span>
+    
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ed</span><span class="p">,</span> <span class="n">pe</span><span class="p">,</span> <span class="n">al</span><span class="p">):</span> 
+        <span class="c1"># Atributs de la meva classe</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">edat</span> <span class="o">=</span> <span class="n">ed</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">pes</span> <span class="o">=</span> <span class="n">pe</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">alt</span> <span class="o">=</span> <span class="n">al</span> <span class="c1"># la alcada es en cm</span>
+        
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Metodes de la meva classe</span>
+<span class="sd">        Els metodes que usen la informacio de l&#39;objecte tenen el seu primer parametre</span>
+<span class="sd">        anomenat self</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+    <span class="k">def</span> <span class="nf">IMC</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        
+        <span class="n">alsada_m</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">alt</span> <span class="o">/</span> <span class="mi">100</span>
+        <span class="n">index_massa</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pes</span> <span class="o">/</span> <span class="p">(</span><span class="n">alsada_m</span> <span class="o">*</span> <span class="n">alsada_m</span><span class="p">)</span>
+    
+        <span class="k">return</span> <span class="n">index_massa</span>
+
+    <span class="k">def</span> <span class="nf">es_major_edat</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">edat</span> <span class="o">&gt;=</span> <span class="mi">18</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">True</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">False</span>
+    
+    <span class="k">def</span> <span class="nf">es_major</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">o</span><span class="p">):</span>
+    
+        <span class="n">edat_persona</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">edat</span>
+        <span class="n">edat_a_comparar</span> <span class="o">=</span> <span class="n">o</span><span class="o">.</span><span class="n">edat</span>
+        
+        <span class="nb">print</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">edat</span><span class="p">,</span> <span class="n">o</span><span class="o">.</span><span class="n">edat</span><span class="p">)</span>
+        
+        <span class="k">if</span> <span class="n">edat_persona</span> <span class="o">&gt;</span> <span class="n">edat_a_comparar</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">True</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">False</span>
+    
+    <span class="k">def</span> <span class="nf">son_iguals</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">o</span><span class="p">):</span>
+        
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">edat</span> <span class="o">==</span> <span class="n">o</span><span class="o">.</span><span class="n">edat</span>
+    
+    <span class="k">def</span> <span class="nf">imprimir</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Edat &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">edat</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; - Pes: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">pes</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; - Alsada: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">alt</span><span class="p">))</span> 
+</pre></div>
+</div>
+</div>
+</div>
+<p>I ara veurem com es poden usar:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Programa principal    </span>
+
+<span class="n">p</span> <span class="o">=</span> <span class="n">Persona</span><span class="p">(</span><span class="mi">19</span><span class="p">,</span> <span class="mi">75</span><span class="p">,</span> <span class="mi">175</span><span class="p">)</span>
+
+<span class="n">estudiant</span> <span class="o">=</span> <span class="n">Persona</span><span class="p">(</span><span class="mi">22</span><span class="p">,</span> <span class="mi">90</span><span class="p">,</span> <span class="mi">210</span><span class="p">)</span>
+
+<span class="n">estudiant</span><span class="o">.</span><span class="n">imprimir</span><span class="p">()</span>
+<span class="n">p</span><span class="o">.</span><span class="n">imprimir</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Edat 22 - Pes: 90 - Alsada: 210
+Edat 19 - Pes: 75 - Alsada: 175
+</pre></div>
+</div>
+</div>
+</div>
+<p>A més del mètode <code class="docutils literal notranslate"><span class="pre">__init__</span></code> Python n’ofereix d’altres que ens permetran simplificar la interacció amb els objectes.
+Per acabar aquest primer contacte amb les classes veurem el mètode <code class="docutils literal notranslate"><span class="pre">__str__</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Persona</span><span class="p">:</span>
+    
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ed</span><span class="p">,</span> <span class="n">pe</span><span class="p">,</span> <span class="n">al</span><span class="p">):</span> 
+        <span class="c1"># Atributs de la meva classe</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">edat</span> <span class="o">=</span> <span class="n">ed</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">pes</span> <span class="o">=</span> <span class="n">pe</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">alt</span> <span class="o">=</span> <span class="n">al</span> <span class="c1"># la alcada es en cm</span>
+        
+    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Metodes de la meva classe</span>
+<span class="sd">    Els metodes que usen la informacio de l&#39;objecte tenen el seu primer parametre</span>
+<span class="sd">    anomenat self</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    
+    <span class="k">def</span> <span class="nf">IMC</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">index_massa</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pes</span> <span class="o">/</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">alt</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">alt</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">index_massa</span>
+    
+    <span class="k">def</span> <span class="nf">es_major_edat</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">edat</span> <span class="o">&gt;=</span> <span class="mi">18</span><span class="p">:</span>   
+            <span class="k">return</span> <span class="kc">True</span>
+        <span class="k">return</span> <span class="kc">False</span>
+    
+    <span class="k">def</span> <span class="nf">es_major</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">o</span><span class="p">):</span>
+    
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">edat</span> <span class="o">&gt;</span> <span class="n">o</span><span class="o">.</span><span class="n">edat</span>
+    
+    <span class="c1"># Aquest métode sempre ha de retornar un string</span>
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    
+        <span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;Pes &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">pes</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; Alsada &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">alt</span><span class="p">)</span> 
+        <span class="k">return</span> <span class="n">s</span>
+
+<span class="n">p</span> <span class="o">=</span> <span class="n">Persona</span><span class="p">(</span><span class="mi">22</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">191</span><span class="p">)</span>
+
+<span class="c1"># Això ens permet mostrar la informació d&#39;un objecte de la següent manera:</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>   
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Pes 80 Alsada 191
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="classe-dels-nombres-complexos">
+<h2>Classe dels nombres complexos<a class="headerlink" href="#classe-dels-nombres-complexos" title="Permalink to this headline">¶</a></h2>
+<p>Fins on sabem, els llenguatges de programació no tenen cap tipus elemental que ens permeti treballar amb nombres
+complexos.</p>
+<p>Aprofitarem per crear el nostre propi tipus de dades i definir les operacions de:</p>
+<ul class="simple">
+<li><p>suma</p></li>
+<li><p>resta</p></li>
+<li><p>multiplicació</p></li>
+<li><p>mostrar per pantalla (imprimir)</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Complexe</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">i</span><span class="p">):</span> <span class="c1"># Constructor</span>
+        <span class="c1"># Atributs</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">real</span> <span class="o">=</span> <span class="n">r</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">imaginaria</span> <span class="o">=</span> <span class="n">i</span>
+        
+    <span class="c1"># Metodes</span>
+    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Fixau-vos que aquest metode retorna un objecte del tipus Complexe.</span>
+<span class="sd">    Es a dir, dins el metode suma, es crea un objecte de la classe Complexe</span>
+<span class="sd">    &#39;&#39;&#39;</span> 
+    <span class="k">def</span> <span class="nf">suma</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">o</span><span class="p">):</span> 
+        
+        <span class="n">r</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">real</span> <span class="o">+</span> <span class="n">o</span><span class="o">.</span><span class="n">real</span>
+        <span class="n">i</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">imaginaria</span> <span class="o">+</span> <span class="n">o</span><span class="o">.</span><span class="n">imaginaria</span>
+        <span class="n">c</span> <span class="o">=</span> <span class="n">Complexe</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">c</span>
+      
+    <span class="k">def</span> <span class="nf">resta</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">o</span><span class="p">):</span>
+        <span class="n">real</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">real</span><span class="o">-</span><span class="n">o</span><span class="o">.</span><span class="n">real</span>
+        <span class="n">img</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">imaginaria</span><span class="o">-</span><span class="n">o</span><span class="o">.</span><span class="n">imaginaria</span>
+        
+        <span class="k">return</span> <span class="n">Complexe</span><span class="p">(</span><span class="n">real</span><span class="p">,</span> <span class="n">img</span><span class="p">)</span>
+      
+    <span class="k">def</span> <span class="nf">multiplica</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">o</span><span class="p">):</span>
+        
+        <span class="n">real</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">real</span> <span class="o">*</span> <span class="n">o</span><span class="o">.</span><span class="n">real</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">imaginaria</span> <span class="o">*</span> <span class="n">o</span><span class="o">.</span><span class="n">imaginaria</span>
+        <span class="n">img</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">real</span> <span class="o">*</span> <span class="n">o</span><span class="o">.</span><span class="n">imaginaria</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">imaginaria</span> <span class="o">*</span> <span class="n">o</span><span class="o">.</span><span class="n">real</span>
+        
+        <span class="k">return</span> <span class="n">Complexe</span><span class="p">(</span><span class="n">real</span><span class="p">,</span> <span class="n">img</span><span class="p">)</span>
+      
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        
+        <span class="k">if</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">imaginaria</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">):</span>
+            <span class="k">return</span> <span class="s1">&#39;(&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">real</span><span class="p">)</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">imaginaria</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;i)&#39;</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s1">&#39;(&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">real</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;+&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">imaginaria</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;i)&#39;</span>
+
+<span class="c1"># Programa principal</span>
+<span class="c1"># Programa que defineix dos nombres complexos, els suma i retorna el seu resultat</span>
+          
+<span class="n">c1</span> <span class="o">=</span> <span class="n">Complexe</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="o">-</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">c2</span> <span class="o">=</span> <span class="n">Complexe</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">7</span><span class="p">)</span>
+
+<span class="n">c1</span> <span class="o">=</span> <span class="n">c1</span><span class="o">.</span><span class="n">suma</span><span class="p">(</span><span class="n">c2</span><span class="p">)</span>  <span class="c1"># Aquesta operació genera un nou nombre</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">c1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(6+4i)
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Problema</strong></p>
+<p>Modificau el programa principal anterior, per un que faci el següent:
+Heu de demanar a l’usuari quants nombres complexos vol operar, el vostre programa ha de llegir del teclat aquests
+nombres i realitzar la següent seqüència d’operacions.</p>
+<ul class="simple">
+<li><p>Si la part real del nombre que heu llegit per teclat mòdul 3 dona 0 l’heu de sumar al nombre real que heu obtingut
+de l’operació anterior.</p></li>
+<li><p>Si dona 1 l’heu de restar al nombre real que heu obtingut de la operació anterior.</p></li>
+<li><p>Si dona 2 l’heu de multiplicar al nombre real que heu obtingut de la operació anterior.</p></li>
+</ul>
+<p>Podeu considerar que en la primera iteració el nombre anterior és el nombre complex: 1+1i. A cada iteració heu de
+mostrar el nombre obtingut per pantalla.</p>
+<p><em>Trobareu la solució d’aquest problema a la carpeta d’exemples de classe a uibdigital, fitxers: complexe i
+principal_complexe</em></p>
+</div>
+<div class="section" id="encapsulacio">
+<h2>Encapsulació<a class="headerlink" href="#encapsulacio" title="Permalink to this headline">¶</a></h2>
+<p>Com hem comentat al principi del capítol és necessari que en un <strong>TAD</strong> es doni el següent:</p>
+<ul class="simple">
+<li><p>Les operacions de la interfície són les úniques que estan permeses pel tipus exportat.</p></li>
+<li><p>No existeix cap altre mecanisme d’accés a l’estructura de dades definida.</p></li>
+</ul>
+<p>En les dues classes que hem definit fins ara Persona i Complexe, aquestes dues restriccions no es compleixen. Anem a
+descobrir com podem modificar l’accés als atriubts d’una classe.</p>
+<div class="section" id="atributs-privats">
+<h3>Atributs privats<a class="headerlink" href="#atributs-privats" title="Permalink to this headline">¶</a></h3>
+<p>Tot i que està permès pel llenguatge, <strong>no és recomanable declarar els atributs públics</strong>, ja que això permetria un
+possible ús incorrecte dels mateixos.</p>
+<p>Seguirem treballant amb la classe dels nombres complexes. Deixam aquí un recordatòri:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Complexe</span><span class="p">:</span>
+    
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">i</span><span class="p">):</span> <span class="c1"># Constructor</span>
+        <span class="c1"># Atributs</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">real</span> <span class="o">=</span> <span class="n">r</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">imaginaria</span> <span class="o">=</span> <span class="n">i</span>
+        
+        <span class="c1"># Metode</span>
+    <span class="k">def</span> <span class="nf">suma</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">o</span><span class="p">):</span>    
+        <span class="n">r</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">real</span> <span class="o">+</span> <span class="n">o</span><span class="o">.</span><span class="n">real</span>
+        <span class="n">i</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">imaginaria</span> <span class="o">+</span> <span class="n">o</span><span class="o">.</span><span class="n">imaginaria</span>
+        <span class="k">return</span> <span class="n">Complexe</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
+    
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        
+        <span class="k">if</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">imaginaria</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">):</span>
+            <span class="k">return</span> <span class="s1">&#39;(&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">real</span><span class="p">)</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">imaginaria</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;i)&#39;</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s1">&#39;(&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">real</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;+&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">imaginaria</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;i)&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Veiem com tenir atributs d’acces public ens pot dur problemes:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">c1</span> <span class="o">=</span> <span class="n">Complexe</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">c2</span> <span class="o">=</span> <span class="n">Complexe</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>
+
+<span class="n">c1</span><span class="o">.</span><span class="n">real</span> <span class="o">=</span> <span class="s2">&quot;matematics&quot;</span> <span class="c1"># canviam el tipus d&#39;una variable de enter a string</span>
+
+<span class="n">c3</span> <span class="o">=</span> <span class="n">c1</span><span class="o">.</span><span class="n">suma</span><span class="p">(</span><span class="n">c2</span><span class="p">)</span> <span class="c1"># aixo dona error ja que no pot sumar un string amb un enter</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">9</span><span class="o">-</span><span class="mi">80</span><span class="n">d2d4c383d2</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">c1</span><span class="o">.</span><span class="n">real</span> <span class="o">=</span> <span class="s2">&quot;matematics&quot;</span> <span class="c1"># canviam el tipus d&#39;una variable de enter a string</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> 
+<span class="ne">----&gt; </span><span class="mi">6</span> <span class="n">c3</span> <span class="o">=</span> <span class="n">c1</span><span class="o">.</span><span class="n">suma</span><span class="p">(</span><span class="n">c2</span><span class="p">)</span> <span class="c1"># aixo dona error ja que no pot sumar un string amb un enter</span>
+
+<span class="nn">&lt;ipython-input-8-67fa5146f25b&gt;</span> in <span class="ni">suma</span><span class="nt">(self, o)</span>
+<span class="g g-Whitespace">      </span><span class="mi">8</span>         <span class="c1"># Metode</span>
+<span class="g g-Whitespace">      </span><span class="mi">9</span>     <span class="k">def</span> <span class="nf">suma</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">o</span><span class="p">):</span>
+<span class="ne">---&gt; </span><span class="mi">10</span>         <span class="n">r</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">real</span> <span class="o">+</span> <span class="n">o</span><span class="o">.</span><span class="n">real</span>
+<span class="g g-Whitespace">     </span><span class="mi">11</span>         <span class="n">i</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">imaginaria</span> <span class="o">+</span> <span class="n">o</span><span class="o">.</span><span class="n">imaginaria</span>
+<span class="g g-Whitespace">     </span><span class="mi">12</span>         <span class="k">return</span> <span class="n">Complexe</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
+
+<span class="ne">TypeError</span>: can only concatenate str (not &quot;int&quot;) to str
+</pre></div>
+</div>
+</div>
+</div>
+<p>La pregunta que sorgeix és <strong>Com feim un atribut privat?</strong></p>
+<p>A <code class="docutils literal notranslate"><span class="pre">Python</span></code>, per definir que un atribut és privat ho feim posant <code class="docutils literal notranslate"><span class="pre">__</span></code> (doble guió) davant del seu nom.</p>
+<p>Que un atribut sigui privat implica que no podem consultar ni modificar el seu valor fora de l’àmbit de la classe on
+aquest ha estat definit.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Complexe</span><span class="p">:</span>
+    
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">i</span><span class="p">):</span> <span class="c1"># Constructor</span>
+        <span class="c1"># Atributs, ara privats</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__real</span> <span class="o">=</span> <span class="n">r</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__imaginaria</span> <span class="o">=</span> <span class="n">i</span>
+        
+    <span class="k">def</span> <span class="nf">suma</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">o</span><span class="p">):</span>    
+        <span class="n">r</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__real</span> <span class="o">+</span> <span class="n">o</span><span class="o">.</span><span class="n">__real</span>
+        <span class="n">i</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__imaginaria</span> <span class="o">+</span> <span class="n">o</span><span class="o">.</span><span class="n">__imaginaria</span>
+        <span class="k">return</span> <span class="n">Complexe</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
+    
+    <span class="c1"># Aquests dos mètodes ens permeten modificar els atributs privats (setters)</span>
+    <span class="k">def</span> <span class="nf">set_real</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">real</span><span class="p">):</span>
+    
+      <span class="bp">self</span><span class="o">.</span><span class="n">__real</span> <span class="o">=</span> <span class="n">real</span>
+        
+    <span class="k">def</span> <span class="nf">set_imaginari</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">imaginaria</span><span class="p">):</span>
+    
+        <span class="bp">self</span><span class="o">.</span><span class="n">__imaginaria</span> <span class="o">=</span> <span class="n">imaginaria</span>
+    
+    
+   <span class="c1"># També podem fer mètodes que ens retornen el seu valor (getters)</span>
+
+    <span class="k">def</span> <span class="nf">get_imaginari</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__imaginaria</span>
+    
+    <span class="k">def</span> <span class="nf">get_real</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__real</span>
+
+    
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        
+        <span class="k">if</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__imaginaria</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">):</span>
+            <span class="k">return</span> <span class="s1">&#39;(&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__real</span><span class="p">)</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__imaginaria</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;i)&#39;</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s1">&#39;(&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__real</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;+&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__imaginaria</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;i)&#39;</span>
+      
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Exemple d&#39;us dels mètodes per modificar explicitament els atributs i els seus beneficis.</span>
+
+<span class="n">c1</span> <span class="o">=</span> <span class="n">Complexe</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+
+<span class="n">c2</span> <span class="o">=</span> <span class="n">Complexe</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>
+
+<span class="n">c2</span><span class="o">.</span><span class="n">set_real</span><span class="p">(</span><span class="mi">33</span><span class="p">)</span>
+
+
+<span class="n">c1</span><span class="o">.</span><span class="n">__real</span> <span class="o">=</span> <span class="s2">&quot;patata&quot;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Informacio de l&#39;objecte c1: &quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">c1</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Informacio de l&#39;objecte c2: &quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">c2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">2</span><span class="o">-</span><span class="n">da5f6e748646</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Exemple d&#39;us dels mètodes per modificar explicitament els atributs i els seus beneficis.</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> 
+<span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">c1</span> <span class="o">=</span> <span class="n">Complexe</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> 
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">c2</span> <span class="o">=</span> <span class="n">Complexe</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;Complexe&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<p>Si volem tenir la capacitat per modificar els valors dels atributs d’una classe podem construir mètodes que els
+modifiquin.</p>
+</div>
+<div class="section" id="metodes-privats">
+<h3>Mètodes privats<a class="headerlink" href="#metodes-privats" title="Permalink to this headline">¶</a></h3>
+<p>A més d’atributs privats també podem tenir mètodes privats.</p>
+<p>La diferencia entre els mètodes de la interfície i la resta de mètodes que puguin formar la classe, mètodes necessaris
+pel correcte comportament de la mateixa, és que <strong>els mètodes de la interfície es declaren públics</strong>, mentre que <strong>la
+resta es declaren privats</strong>, de manera que no s’habilita la possibilitat d’accedir-hi des de fora de la
+classe.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Complexe</span><span class="p">:</span>
+    
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">i</span><span class="p">):</span> <span class="c1"># Constructor</span>
+        <span class="c1"># Atributs, ara privats</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__real</span> <span class="o">=</span> <span class="n">r</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__imaginaria</span> <span class="o">=</span> <span class="n">i</span>
+
+    <span class="c1"># Aquest es un metode privat, nomes es visible dins la classe</span>
+    <span class="k">def</span> <span class="nf">__igual_a_zero</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__real</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">__imaginaria</span> <span class="o">==</span> <span class="mi">0</span>
+
+    <span class="c1"># Aquests dos son metodes publics visible tant dins com fora de la classe</span>
+    <span class="k">def</span> <span class="nf">es_zero</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        
+        <span class="k">return</span>  <span class="bp">self</span><span class="o">.</span><span class="n">__igual_a_zero</span><span class="p">()</span>
+
+
+
+<span class="c1"># Programa principal</span>
+<span class="n">c1</span> <span class="o">=</span> <span class="n">Complexe</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+
+
+<span class="k">if</span> <span class="ow">not</span> <span class="n">c1</span><span class="o">.</span><span class="n">es_zero</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Es diferent de zero&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="atributs-i-metodes-de-classe">
+<h2>Atributs i mètodes de classe<a class="headerlink" href="#atributs-i-metodes-de-classe" title="Permalink to this headline">¶</a></h2>
+<p><strong>Mètodes de classe</strong></p>
+<p>Alguns cops necessitam definir mètodes (funcions o procediments) dins la nostra classe que no estàn directament
+relacionats amb els atributs d’un objecte, sino que ens serveixen per complementar la funcionalitat de la classe.
+Anomenam aquests mètodes <strong>mètodes de classe o també estàtics</strong> i s’identifiquen amb el decorador <code class="docutils literal notranslate"><span class="pre">&#64;staticmethod</span></code>
+abans de la definició del propi mètode. Com són mètodes que no operen amb els objectes de la classe no reben el
+paràmetre <code class="docutils literal notranslate"><span class="pre">self</span></code>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@staticmethod</span>
+<span class="k">def</span> <span class="nf">metodeestatic</span><span class="p">(</span><span class="n">parametres</span> <span class="n">opcionals</span><span class="p">):</span>
+    
+    <span class="n">linies</span> <span class="n">de</span> <span class="n">codi</span>
+    <span class="n">necessaries</span> 
+    <span class="k">return</span> <span class="n">valor</span> <span class="c1"># si el que implementam es una funcio</span>
+
+</pre></div>
+</div>
+<p>Una de les seves màximes utilitats és la d’implementar constructors alternatius.</p>
+<p><strong>Atributs de classe</strong></p>
+<p>Fins ara hem vist que els valors dels atributs d’un objecte són indepents dels atributs d’altres objectes de la
+mateixa classe i que podem modificar-los lliurement sense estar preocupats d’afectar a altres objectes.</p>
+<p>Existeixen un tipus d’atributs, coneguts com <strong>atributs de classe</strong> que actuen d’una manera diferent al que coneixem
+fins ara, no es troben associats a un objecte sino a la pròpia classe.</p>
+<p>Una altra de les utilitats dels mètodes estàtics és operar amb els atributs associats a la classe, així, si volem usar
+aquests atributs no depenem d’haver previament creat un objecte. L’ús d’atributs de classe no és molt comú, però en
+alguna ocasió pot ser de gran utilitat.</p>
+<p>Tornam a l’exemple de la classe persona per veure com funciona:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Persona</span><span class="p">:</span>
+    
+    <span class="c1"># Atribut de classe, sempre es creen aqui abans del constructor</span>
+    <span class="c1"># com els atributs d&#39;un objecte poden ser publics o privats</span>
+    <span class="n">__nombre_de_persones</span> <span class="o">=</span> <span class="mi">0</span>
+    
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ed</span><span class="p">,</span> <span class="n">pe</span><span class="p">,</span> <span class="n">al</span><span class="p">):</span>
+        
+        <span class="bp">self</span><span class="o">.</span><span class="n">__edat</span> <span class="o">=</span> <span class="n">ed</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__pes</span> <span class="o">=</span> <span class="n">pe</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__alt</span> <span class="o">=</span> <span class="n">al</span>
+        
+        <span class="c1">#Cada cop que cream un nou objecte del tipus Persona sumam un al contador</span>
+        <span class="n">Persona</span><span class="o">.</span><span class="n">__nombre_de_persones</span> <span class="o">+=</span> <span class="mi">1</span>
+        
+    
+    
+    <span class="c1"># Aquest mètode ens retorna el valor d&#39;una variable estatica, no necessita d&#39;un objecte</span>
+    <span class="c1"># per tant no usa el parametre self.</span>
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">nombre_persones_creades</span><span class="p">():</span>
+        <span class="k">return</span> <span class="n">Persona</span><span class="o">.</span><span class="n">__nombre_de_persones</span> <span class="c1"># sabem quantes persones hem creat</span>
+    
+    
+    <span class="c1"># Exemple de mètode de classe estàtic que serveix per construir un nou objecte</span>
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">bebe</span><span class="p">(</span><span class="n">pes</span><span class="p">,</span> <span class="n">alt</span><span class="p">):</span>
+    
+        <span class="n">persona_petita</span> <span class="o">=</span> <span class="n">Persona</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">pes</span><span class="p">,</span> <span class="n">alt</span><span class="p">)</span>
+        
+        <span class="k">return</span> <span class="n">persona_petita</span>
+    
+    
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    
+        <span class="n">cadena</span> <span class="o">=</span>  <span class="s2">&quot;  o  &quot;</span> <span class="o">+</span> <span class="s2">&quot;Pes:  &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__pes</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="s2">&quot; /|\ &quot;</span> <span class="o">+</span> <span class="s2">&quot;Edat: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__edat</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="s2">&quot;  |  &quot;</span> <span class="o">+</span> <span class="s2">&quot;Alt:  &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__alt</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="s2">&quot; / \ &quot;</span>                                   
+        <span class="k">return</span> <span class="n">cadena</span>
+    
+<span class="c1"># Programa principal</span>
+<span class="n">creades</span> <span class="o">=</span> <span class="n">Persona</span><span class="o">.</span><span class="n">nombre_persones_creades</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;*Inici, persones creades: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">creades</span><span class="p">))</span>
+
+
+<span class="n">p</span> <span class="o">=</span> <span class="n">Persona</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">72</span><span class="p">,</span> <span class="mi">174</span><span class="p">)</span>
+<span class="n">p2</span><span class="o">=</span> <span class="n">Persona</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">163</span><span class="p">)</span>
+<span class="n">p3</span><span class="o">=</span> <span class="n">Persona</span><span class="o">.</span><span class="n">bebe</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
+
+<span class="c1"># Mostrara el valor 3</span>
+<span class="n">creades</span> <span class="o">=</span> <span class="n">Persona</span><span class="o">.</span><span class="n">nombre_persones_creades</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;*Nombre de persones creades &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">creades</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;*Com son? &quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">p2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">p3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="sobrecarrega-d-operadors">
+<h2>Sobrecàrrega d’operadors<a class="headerlink" href="#sobrecarrega-d-operadors" title="Permalink to this headline">¶</a></h2>
+<p>En el tema 2 definiem els <strong>operadors</strong> com a símbols especials que indiquen que cal fer algun tipus de computació.
+Els valors amb els quals actua un operador s’anomenen <strong>operands</strong>.</p>
+<p>Vàrem veure que tenim operadors: aritmètics, de comparació i lògics. Tots aquests operadors es troben definits pels
+tipus de dades del nucli de <code class="docutils literal notranslate"><span class="pre">Python</span></code> (enter, string, llista, float …) . Però si ens fixam bé, el mateix operador es
+comporta de manera diferent amb diferents tipus. Per exemple, l’operador <strong>+</strong> realitzarà una addició aritmètica de
+dos nombres, unirà dues llistes i concatenarà dos <em>strings</em>.</p>
+<p>Aquesta característica de Python que permet que un mateix operador tingui un significat diferent segons el tipus de
+dades amb el qual opera es diu  <strong>sobrecàrrega d’operadors</strong>.</p>
+<p>Si pensam en les classes que hem construit fins ara, quan volem operar dos objectes o comparar-los construim mètodes
+que tenen noms que ens ajuden a reconeixer la operació que volem realitzar, però seria molt més pràctic poder usar
+els operadors que ja coneixem.</p>
+<p><strong>Operadors aritmètics</strong></p>
+<p>Considerem la classe següent, que intenta un punt en el sistema de coordenades 2-D.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Punt</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">0</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__x</span> <span class="o">=</span> <span class="n">x</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__y</span> <span class="o">=</span> <span class="n">y</span>
+    
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+     
+      <span class="k">return</span> <span class="s2">&quot;(&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__x</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;, &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__y</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;)&quot;</span>
+    
+<span class="n">p1</span> <span class="o">=</span> <span class="n">Punt</span><span class="p">()</span>
+<span class="n">p2</span> <span class="o">=</span> <span class="n">Punt</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">p1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">p2</span><span class="p">)</span>
+<span class="n">p3</span> <span class="o">=</span> <span class="n">p1</span> <span class="o">+</span> <span class="n">p2</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Per sobrecarregar el signe +, haurem d’implementar el mètode <code class="docutils literal notranslate"><span class="pre">__add</span> <span class="pre">__</span></code> a la nostra classe. Com podem intuir aquest
+mètode és com el constructor de les classes i el mètode <code class="docutils literal notranslate"><span class="pre">__str__</span></code> propi de Python.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Python</span></code> no avalua que dins aquest mètode sumem dos objectes d’aquella classe, ja que no coneix el significat de
+sumar. Però el que si que ens obliga és que aquest sigui un mètode d’objecte és a dir que rep el paràmetre self i
+un objecte de la classe per paràmetre. També és altament recomanable tornar un objecte de la mateixa classe.</p>
+<p>Ara en veurem un exemple:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Punt</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">0</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__x</span> <span class="o">=</span> <span class="n">x</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__y</span> <span class="o">=</span> <span class="n">y</span>
+        
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+     
+      <span class="k">return</span> <span class="s2">&quot;Punt(&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__x</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;, &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__y</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;)&quot;</span>
+        
+
+    <span class="k">def</span> <span class="fm">__add__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">altra</span><span class="p">):</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__x</span> <span class="o">+</span> <span class="n">altra</span><span class="o">.</span><span class="n">__x</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__y</span> <span class="o">+</span> <span class="n">altra</span><span class="o">.</span><span class="n">__y</span>
+        <span class="k">return</span> <span class="n">Punt</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+    
+    <span class="k">def</span> <span class="fm">__sub__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">p2</span><span class="p">):</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__x</span> <span class="o">-</span> <span class="n">p2</span><span class="o">.</span><span class="n">__x</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__y</span> <span class="o">-</span> <span class="n">p2</span><span class="o">.</span><span class="n">__y</span>
+        <span class="k">return</span> <span class="n">Punt</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+        
+<span class="c1"># Programa principal</span>
+<span class="n">p1</span> <span class="o">=</span> <span class="n">Punt</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">p2</span> <span class="o">=</span> <span class="n">Punt</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
+
+<span class="n">p3</span> <span class="o">=</span> <span class="n">p1</span> <span class="o">+</span> <span class="n">p2</span> <span class="c1"># estam cridan al metode p1.__add__(p2)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">p1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">p2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">p3</span><span class="p">)</span>
+
+<span class="n">p4</span> <span class="o">=</span> <span class="n">p2</span> <span class="o">-</span> <span class="n">p1</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">p4</span><span class="p">)</span>
+      
+</pre></div>
+</div>
+</div>
+</div>
+<p>De la mateixa manera que hem sobrecarregat l’operador suma també podem sobrecarregar altres operadors. Les funcions
+especials que podem implementar es mostren a continuació. Cal recordar que tota funció ja existent a <code class="docutils literal notranslate"><span class="pre">Python</span></code> i que
+volem sobreescriure, ha de començar i acabar amb doble barra baixa: <code class="docutils literal notranslate"><span class="pre">__</span></code>. Per exemple <code class="docutils literal notranslate"><span class="pre">__add__</span></code> o <code class="docutils literal notranslate"><span class="pre">__sub__</span></code>.</p>
+<p>A continuació trobem una taula amb els diferents operadors que podem sobrecarregar:</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:left head"><p>Operador</p></th>
+<th class="text-align:left head"><p>Expressió</p></th>
+<th class="text-align:left head"><p>Mètode</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:left"><p>Suma</p></td>
+<td class="text-align:left"><p>p1 + p2</p></td>
+<td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">p1.__add__(p2)</span></code></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>Resta</p></td>
+<td class="text-align:left"><p>p1 - p2</p></td>
+<td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">p1.__sub__(p2)</span></code></p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>Multiplicació</p></td>
+<td class="text-align:left"><p>p1 * p2</p></td>
+<td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">p1.__mul__(p2)</span></code></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>Potència</p></td>
+<td class="text-align:left"><p>p1 ** p2</p></td>
+<td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">p1.__pow__(p2)</span></code></p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>Divisió</p></td>
+<td class="text-align:left"><p>p1 / p2</p></td>
+<td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">p1.__truediv__(p2)</span></code></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>Divisió sencera</p></td>
+<td class="text-align:left"><p>p1 // p2</p></td>
+<td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">p1.__floordiv__(p2)</span></code></p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>Mòdul</p></td>
+<td class="text-align:left"><p>p1 % p2</p></td>
+<td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">p1.__mod__(p2)</span></code></p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Operadors de comparació</strong></p>
+<p>De la mateixa manera que ho hem fet amb els aritmètics, podem sobrecarregar els operadors de comparació. Uns dels més
+usats és la igualtat <code class="docutils literal notranslate"><span class="pre">==</span></code>. Vegem un exemple del seu ús en la classe <code class="docutils literal notranslate"><span class="pre">Punt</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Punt</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">0</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__x</span> <span class="o">=</span> <span class="n">x</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__y</span> <span class="o">=</span> <span class="n">y</span>
+    
+    
+    <span class="c1"># Els seguents tres metodes fan el mateix, el primer es un metode de classe</span>
+    <span class="c1"># El segon es un metode d&#39;objecte.</span>
+    <span class="c1"># El tercer metode sobrecarrega l&#39;operador d&#39;igualtat</span>
+    
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">son_iguals</span><span class="p">(</span><span class="n">p1</span><span class="p">,</span> <span class="n">p2</span><span class="p">):</span>
+        
+        <span class="k">return</span> <span class="n">p1</span><span class="o">.</span><span class="n">__x</span> <span class="o">==</span> <span class="n">p2</span><span class="o">.</span><span class="n">__x</span> <span class="ow">and</span>  <span class="n">p1</span><span class="o">.</span><span class="n">__y</span> <span class="o">==</span> <span class="n">p2</span><span class="o">.</span><span class="n">__y</span>
+        
+    <span class="k">def</span> <span class="nf">__es_igual_a</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">p2</span><span class="p">):</span>
+        
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__x</span> <span class="o">==</span> <span class="n">p2</span><span class="o">.</span><span class="n">__x</span> <span class="ow">and</span>  <span class="bp">self</span><span class="o">.</span><span class="n">__y</span> <span class="o">==</span> <span class="n">p2</span><span class="o">.</span><span class="n">__y</span>
+    
+    <span class="k">def</span> <span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">p2</span><span class="p">):</span>
+        
+         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__es_igual_a</span><span class="p">(</span><span class="n">p2</span><span class="p">)</span>
+    
+            
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+     
+      <span class="k">return</span> <span class="s2">&quot;(&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__x</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;, &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__y</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;)&quot;</span>
+    
+<span class="c1"># Programa principal</span>
+<span class="n">p1</span> <span class="o">=</span> <span class="n">Punt</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">p2</span> <span class="o">=</span> <span class="n">Punt</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+
+
+<span class="k">if</span> <span class="n">p2</span> <span class="o">==</span> <span class="n">p1</span> <span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Son iguals&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>A continuació tenim una taula amb els diferents operadors que podem sobrecarregar:</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:left head"><p>Operador</p></th>
+<th class="text-align:left head"><p>Expressió</p></th>
+<th class="text-align:left head"><p>Mètode</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:left"><p>Menor</p></td>
+<td class="text-align:left"><p>p1 &lt; p2</p></td>
+<td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">p1.__lt__(p2)</span></code></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>Menor o igual</p></td>
+<td class="text-align:left"><p>p1 &lt;= p2</p></td>
+<td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">p1.__le__(p2)</span></code></p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>Igual</p></td>
+<td class="text-align:left"><p>p1 == p2</p></td>
+<td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">p1.__eq__(p2)</span></code></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>Diferent</p></td>
+<td class="text-align:left"><p>p1 != p2</p></td>
+<td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">p1.__ne__(p2)</span></code></p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>Major</p></td>
+<td class="text-align:left"><p>p1 &gt; p2</p></td>
+<td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">p1.__gt__(p2)</span></code></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>Major o igual</p></td>
+<td class="text-align:left"><p>p1 &gt;= p2</p></td>
+<td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">p1.__ge__(p2)</span></code></p></td>
+</tr>
+</tbody>
+</table>
+<p>En implementar aquests operadors hem de tenir en compteque si n’hem implementat un d’ells, normalment l’usuari
+esperarà que hagem implementat totes les altres comparacions possibles. I per tant si sobrecarregam alguns dels
+operadors, com a bona pràctica de programació, també haurem de sobrecarregar la resta.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Un exemple</span>
+
+<span class="k">class</span> <span class="nc">Punt</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">0</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__x</span> <span class="o">=</span> <span class="n">x</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__y</span> <span class="o">=</span> <span class="n">y</span>
+
+    <span class="k">def</span> <span class="fm">__add__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">altra</span><span class="p">):</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__x</span> <span class="o">+</span> <span class="n">altra</span><span class="o">.</span><span class="n">__x</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__y</span> <span class="o">+</span> <span class="n">altra</span><span class="o">.</span><span class="n">__y</span>
+        <span class="k">return</span> <span class="n">Punt</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+      
+    <span class="k">def</span> <span class="fm">__lt__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">altra</span><span class="p">):</span>
+      
+        <span class="n">self_mag</span> <span class="o">=</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__x</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__y</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+        <span class="n">altra_mag</span> <span class="o">=</span> <span class="p">(</span><span class="n">altra</span><span class="o">.</span><span class="n">__x</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="n">altra</span><span class="o">.</span><span class="n">__y</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+        
+        <span class="k">return</span> <span class="n">self_mag</span> <span class="o">&lt;</span> <span class="n">altra_mag</span>
+    
+            
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+     
+      <span class="k">return</span> <span class="s2">&quot;Punt(&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__x</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;, &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__y</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;)&quot;</span>
+ <span class="o">--</span>
+<span class="c1"># Programa principal</span>
+<span class="n">p1</span> <span class="o">=</span> <span class="n">Punt</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">p2</span> <span class="o">=</span> <span class="n">Punt</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
+
+<span class="n">p3</span> <span class="o">=</span> <span class="n">p1</span> <span class="o">+</span> <span class="n">p2</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">p3</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">p1</span> <span class="o">&lt;</span> <span class="n">p3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Punt(9, 2)
+True
+</pre></div>
+</div>
+</div>
+</div>
+<p>Finalment cal dir que existeixen altres operadors que podríem sobrecarregar per fer més completes les nostres classes
+però degut les limitacions del curs i l’àmbit en el qual ens trobem (el grau de matemàtiques) són els més
+interessants.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./chapters\Tema5"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="Tema5_Estructures.html" title="previous page">Altres maneres d’estructurar les dades</a>
+    <a class='right-next' id="next-link" href="Tema5_Exercicis.html" title="next page">Exercicis Tema 5</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Gabriel Moyà Alcover<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+  </body>
+</html>

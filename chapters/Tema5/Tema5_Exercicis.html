@@ -1,0 +1,757 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercicis Tema 5 &#8212; Programacio I</title>
+    
+  <link rel="stylesheet" href="../../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Tema 6" href="../Tema6/Tema6_Fitxers.html" />
+    <link rel="prev" title="Classes i Objectes" href="Tema5_Classes.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../index.html">
+  
+  <img src="../../_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Programacio I</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../intro.html">
+   Introduccio
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Tema1.html">
+   Tema 1
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../Tema2/Tema2_Intro.html">
+   Tema 2
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tema2/Tema2.html">
+     Dades
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tema2/Tema2.html#declaracions-de-variables">
+     Declaracions de variables
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tema2/Tema2.html#operadors-i-operands">
+     Operadors i operands
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tema2/Tema2.html#comentaris-en-el-codi">
+     Comentaris en el codi
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tema2/Tema2.html#entrada-sortida-d-informacio">
+     Entrada / Sortida d’informació
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tema2/Tema2_Estructures_de_control.html">
+     Composició d’instruccions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tema2/Tema2_Exercicis.html">
+     Exercicis Tema 2
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../Tema3/Tema3_.html">
+   Tema 3
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tema3/Tema3_Exercicis.html">
+     Exercicis del Tema 3
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../Tema4/Tema4_.html">
+   Tema 4
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tema4/Tema4_Esquemes.html">
+     Aplicació dels esquemes bàsics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tema4/Tema4_Subprogrames.html">
+     Subprogrames i paràmetres
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tema4/Tema4_Aplicacio_esquemes_subprogrames.html">
+     Esquemes amb subprogrames
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tema4/Tema4_Exercicis_subprogrames.html">
+     Exercicis del Tema 4
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 current active collapsible-parent">
+  <a class="reference internal" href="Tema5.html">
+   Tema 5
+  </a>
+  <ul class="current collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="Tema5_Llistes.html">
+     Llistes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Tema5_Estructures.html">
+     Altres maneres d’estructurar les dades
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Tema5_Classes.html">
+     Classes i Objectes
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Exercicis Tema 5
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../Tema6/Tema6_Fitxers.html">
+   Tema 6
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tema6/Tema6_Exercicis.html">
+     Exercicis Tema 6
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../Tema7/Tema7_Algorismes.html">
+   Tema 7
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tema7/Tema7_Exercicis.html">
+     Exercicis Tema 7
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../Annexes/Annexes.html">
+   Annexes
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Annexes/Entorn_Desenvolupament.html">
+     Entorn de desenvolupament
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/chapters/Tema5/Tema5_Exercicis.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/chapters/Tema5/Tema5_Exercicis.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#llistes">
+   Llistes
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#introduccio-a-les-llistes">
+     Introducció a les llistes
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#llistes-i-sequencies">
+     Llistes i seqüències
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#orientacio-a-objecte">
+   Orientació a objecte
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#classe-numeroracional">
+     Classe NumeroRacional
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#classe-punt-3d">
+     Classe punt 3D
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#classe-data">
+     Classe Data
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#classe-vector">
+     Classe Vector
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ampliacio-classe-punt">
+     Ampliació Classe Punt
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#classe-compte-corrent">
+     Classe Compte Corrent
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#classe-album-de-cromos">
+     Classe Àlbum de Cromos
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="exercicis-tema-5">
+<h1>Exercicis Tema 5<a class="headerlink" href="#exercicis-tema-5" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="llistes">
+<h2>Llistes<a class="headerlink" href="#llistes" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="introduccio-a-les-llistes">
+<h3>Introducció a les llistes<a class="headerlink" href="#introduccio-a-les-llistes" title="Permalink to this headline">¶</a></h3>
+<p>1.Donada la següent llista, realitza les operacions que hi ha a continuació i verifica  la seva correctessa després
+de l’execució <code class="docutils literal notranslate"><span class="pre">la_meva_llista</span> <span class="pre">=</span> <span class="pre">[1,2,3,4,5,6,7]</span></code></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>1. Cambia el primer valor per 33.
+
+2. Mostra la seva longitud per pantalla.
+
+3. Mostra els 3 últims valors.
+
+4. Cambia el valor central per el valor -5.
+
+5. Afegeix la llista [8, 9, 10] a la_meva_llista.
+
+6. Elimina el valor 3.
+
+7. Verifica que ja no existeix el valor 4.
+
+8. Inserta el valor 10 després del valor 2.
+</pre></div>
+</div>
+<p>2.Crear un programa que guarda en una llista de 10 elements la posició que ocupa cada element, <code class="docutils literal notranslate"><span class="pre">i</span></code> després el mostri per
+pantalla. Es a dir, hem de guardar en l’índex 0, el valor 1 …. en l’índex 9, el valor 10.</p>
+<p>3.Copia el següent codi que crearà una llista amb DNIS, mostra per pantalla aquells que es troben en posicions amb
+índex parell <code class="docutils literal notranslate"><span class="pre">dni</span> <span class="pre">=</span> <span class="pre">[43542311,</span> <span class="pre">43542312,43542313,</span> <span class="pre">43542314,</span> <span class="pre">43542315,</span> <span class="pre">43542316]</span></code>.</p>
+</div>
+<div class="section" id="llistes-i-sequencies">
+<h3>Llistes i seqüències<a class="headerlink" href="#llistes-i-sequencies" title="Permalink to this headline">¶</a></h3>
+<p>4.Crear un programa que deixa una seqüència de caràcters acabada en punt, la guarda en una llista i després
+mostra la seqüència invertida.</p>
+<p>5.Elimina totes les ocurrències del valor 2 en la següent llista: <code class="docutils literal notranslate"><span class="pre">segona_llista</span> <span class="pre">=</span> <span class="pre">[1,2,2,4,5,2,4,2,2]</span></code></p>
+<p>6.Crear un programa que generi 10 nombres aleatoris en l’interval <code class="docutils literal notranslate"><span class="pre">[0,</span> <span class="pre">100]</span></code> i els guardi en una llista. Posteriorment
+ha de crear una nova llista amb els números menors a 50 i mostrar-la per pantalla.</p>
+<p>7.Crear una funció que rebi una llista amb valors numèrics i retorni <strong>una nova</strong> llista on cada posició té la suma
+acumulada dels valors anteriors amb el valor d’aquesta posició.</p>
+<p>8.Crear un programa que llegeix una seqüència acabada en punt i ens digui la freqüència d’aparició de cada vocal. És
+obligatori l’ús de llistes.</p>
+<p>9.Crear un programa que genera 60 nombres aleatoris en l’interval <code class="docutils literal notranslate"><span class="pre">[0,</span> <span class="pre">100]</span></code> i els guarda en una llista. Posteriorment
+heu de generar una nova llista sense duplicats.</p>
+<p>10.Crear un programa que llegeix dues seqüències de la mateixa longitud acabades en punt, i mostra per pantalla el
+resultat d’intercalar les dues seqüències. La introducció de les dues seqüències s’ha de fer en una sola línia.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="n">Per</span> <span class="n">exemple</span><span class="p">:</span>
+
+    <span class="n">hola</span> <span class="n">cargol</span> <span class="n">de</span> <span class="n">mar</span><span class="o">.</span><span class="n">adeu</span> <span class="n">juanito</span><span class="o">.</span>
+
+    <span class="n">combinació</span><span class="p">:</span>
+
+    <span class="n">haodliao</span> <span class="n">sc</span> <span class="n">ajruaacnoiltao</span>
+</pre></div>
+</div>
+<p>Versió més difícil: Realitzar el mateix exercici llegint cada seqüència en diferents línies i permetent que les dues
+seqüències siguin de diferent longitud.</p>
+<p>11.Crear un programa que llegeix una paraula acabada en punt (sense espais), l’emmagatzema en un llista i determina si
+la paraula és un palíndrom (capicua). Vegeu el següent exemple:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="n">avió</span><span class="o">.</span>    <span class="n">no</span> <span class="n">és</span> <span class="n">capicua</span>
+
+    <span class="n">ratllar</span><span class="o">.</span> <span class="n">és</span> <span class="n">capicua</span>
+</pre></div>
+</div>
+<p>12.Crear un programa que genera dues llistes de longitud 10 amb nombres aleatoris en l’interval 0-20, les mostra i
+posteriorment mostra la llista resultat de realitzar l’intersecció. <strong>Pista:</strong> l’operand <code class="docutils literal notranslate"><span class="pre">in</span></code> permet saber si un
+valor està en una llista, tornant un booleà.</p>
+<p>13.Crear un programa que guarda en una llista que només conté valors booleans si el nombre en qüestió és primer o
+no. Ho ha de calcular pels números del 0 al 100. Finalment hem de veure el següent per pantalla:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="mi">0</span> <span class="o">-&gt;</span> <span class="n">fals</span>
+
+    <span class="mi">1</span> <span class="o">-&gt;</span> <span class="n">fals</span>
+
+    <span class="mi">2</span> <span class="o">-&gt;</span> <span class="n">cert</span>
+
+    <span class="mi">3</span> <span class="o">-&gt;</span> <span class="n">cert</span>
+
+    <span class="mi">4</span> <span class="o">-&gt;</span> <span class="n">fals</span>
+
+    <span class="mi">5</span> <span class="o">-&gt;</span> <span class="n">cert</span>
+
+    <span class="mi">6</span> <span class="o">-&gt;</span> <span class="n">fals</span>
+
+    <span class="mi">7</span> <span class="o">-&gt;</span> <span class="n">cert</span>
+    <span class="o">...</span>
+
+    <span class="mi">99</span> <span class="o">-&gt;</span> <span class="n">fals</span>
+    <span class="mi">100</span> <span class="o">-&gt;</span> <span class="n">fals</span>
+</pre></div>
+</div>
+<p>14.Crear un programa que ens mostri els nombres primers menors a 100 usant el mètode del filtre d’Eratòstenes.</p>
+<p>15.Crear un programa que calculi els <code class="docutils literal notranslate"><span class="pre">n</span></code> (el valor <code class="docutils literal notranslate"><span class="pre">n</span></code> ha de demanar-se a l’usuari) primers valors de la sèrie de
+Fibonacci i els guardi en una llista, després ha de recórrer la llista i imprimir els valors.</p>
+<p>La sèrie de Fibonacci es defineix com <span class="math notranslate nohighlight">\(f(n) = f(n-1) + f(n-2)\)</span>. i els primers dos termes són igual a 1.</p>
+<p>16.Modificar el programa perquè també mostri l’aproximacions al nombre auri. El nombre auri es pot aproximar
+mitjançant la relació de dos nombres consecutius de la sèrie de Fibonacci. El programaha de fer l’aproximació amb el
+valor <code class="docutils literal notranslate"><span class="pre">n</span></code> i el valor <code class="docutils literal notranslate"><span class="pre">n-1</span></code></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="mi">3</span><span class="o">/</span><span class="mi">2</span> <span class="o">=</span> <span class="mf">1.5</span>
+    <span class="mi">5</span><span class="o">/</span><span class="mi">3</span> <span class="o">=</span> <span class="mf">1.66666</span>
+    <span class="mi">8</span><span class="o">/</span><span class="mi">5</span> <span class="o">=</span> <span class="mf">1.6</span>
+    <span class="mi">13</span><span class="o">/</span><span class="mi">8</span> <span class="o">=</span> <span class="mf">1.625</span>
+    <span class="mi">21</span><span class="o">/</span><span class="mi">13</span> <span class="o">=</span> <span class="mf">1.61538461</span>
+    <span class="mi">34</span><span class="o">/</span><span class="mi">21</span> <span class="o">=</span> <span class="mf">1.6190476</span>
+    <span class="mi">55</span><span class="o">/</span><span class="mi">34</span> <span class="o">=</span> <span class="mf">1.61764705</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="orientacio-a-objecte">
+<h2>Orientació a objecte<a class="headerlink" href="#orientacio-a-objecte" title="Permalink to this headline">¶</a></h2>
+<p>Exercicis introducció classes i objectes</p>
+<div class="section" id="classe-numeroracional">
+<h3>Classe NumeroRacional<a class="headerlink" href="#classe-numeroracional" title="Permalink to this headline">¶</a></h3>
+<p>Crear una classe anomenada NumeroRacional que ens permet crear programes amb variables de tipus nombre racional. Un
+nombre racional és un nombre que s’expressa com el quocient de 2 nombres sencers, p.e. 5/2.</p>
+<p>Abans de començar a programar, recomano que llegiu tots els punts de l’exercici, ja que us pot permetre entendre
+millor la funcionalitat de la classe.</p>
+<p>Aquesta classe, té dos atributs, un dividend i un divisor.</p>
+<ol class="simple">
+<li><p>Implementar el constructor, que rep els valors que tindran el dividend i el divisor.</p></li>
+<li><p>El mètode <strong>simplificar_quocient</strong>, un procediment que no rep paràmetres i divideix el dividend i el divisor pel <em>mcd</em>
+dels dos. Per exemple, si els valors són 54 i 10, els simplifica a 27 i 5.</p></li>
+<li><p>Un mètode <strong>es_infinit</strong> que retorni un booleà indicant si el nombre és infinit, és a dir si el divisor és zero.</p></li>
+<li><p>Implementar un mètode <strong>obtenir_quocient</strong>, una funció que ens retorna el quocient del nombre racional.</p></li>
+<li><p>Implementar un mètode <strong>suma</strong>, una funció que rep un nombre racional per paràmetre i retorna un nou número racional
+resultat de sumar el nombre racional amb el que rebem per paràmetre: La suma a / b + c / d, és (a * d + c * b) / (b * d).</p></li>
+<li><p>implementar el mètode <strong>str</strong>, d’aquesta forma al fer print d’una variable de tipus nombre racional ho mostri per
+consola.</p></li>
+</ol>
+<p>Les classes que es troben en altres fitxers es poden importar d’igual manera que els subprogrames, tal com hem vist al taller.</p>
+<p>Un cop realitzada la classe NumeroRacional, heu implementar dos programes.</p>
+<ol class="simple">
+<li><p>Programa que construeix un nombre racional a partir de la lectura de dos valors que l’usuari escriu pel teclat. Si
+el nombre racional no és infinit, sumar el nombre 3/4. Finalment heu de simplificar el nombre resultant i mostrar per
+pantalla.</p></li>
+<li><p>Realitzar un programa que calculi la següent aproximació al quadrat del nombre pi amb 1000 termes de la
+seqüència. Heu de fer-ho en termes de nombres racionals i mostrar el resultat final per pantalla, en format decimal.
+6 (1/1 + 1/4 + 1/9 + 1/16 + 1/25 … ..)</p></li>
+</ol>
+<p>En posteriors exercicis ampliarem aquesta classe amb més funcionalitats.</p>
+</div>
+<div class="section" id="classe-punt-3d">
+<h3>Classe punt 3D<a class="headerlink" href="#classe-punt-3d" title="Permalink to this headline">¶</a></h3>
+<p>Crear una classe anomenada Punt que ens permet crear programes amb variables de el tipus punt. Un punt és una
+localització en l’espai 3D que s’expressa com 3 valors referents a les coordenades x, i, z. Per exemple (1, 0, 4).</p>
+<p>Abans de començar a programar, recomano que llegiu tots els punts de l’exercici, ja que us pot permetre entendre
+millor la funcionalitat de la classe.</p>
+<p>Quants atributs ha de tenir aquesta classe?</p>
+<ol class="simple">
+<li><p>El constructor rep un valor per a cada atribut.</p></li>
+<li><p>implementar un mètode <strong>origen</strong>, que retorna <code class="docutils literal notranslate"><span class="pre">True</span></code> si el punt es troba en l’origen de coordenades i <code class="docutils literal notranslate"><span class="pre">False</span></code> en cas
+contrari.</p></li>
+<li><p>implementar un mètode <strong>distancia</strong> que rep un punt per paràmetre i ens retorna la distància entre el nostre punt,
+<code class="docutils literal notranslate"><span class="pre">self</span></code> , i el punt rebut per paràmetre.</p></li>
+<li><p>implementar el mètode <strong>str</strong>.</p></li>
+</ol>
+<p>Implementar un programa principal que generi dos punts de manera aleatòria, les coordenades es poden generar entre
+els valors [-10, 10], mostreu els valors dels dos punts per pantalla. Comproveu que la distància del primer punt al
+segon és la mateixa que la distància del segon punt al primer, mostrar per pantalla.</p>
+<p>En posteriors exercicis ampliarem aquesta classe amb més funcionalitats.</p>
+<p>A continuació tenim tres exercicis dissenyats per practicar l’implementació de classes, en concret els conceptes
+d’encapsulació i mètodes de classe. No tenen cap programa principal associat però s’espera que a mesura que
+implementeu els diferents mètodes els proveu per assegurar-ne un correcte funcionament.</p>
+</div>
+<div class="section" id="classe-data">
+<h3>Classe Data<a class="headerlink" href="#classe-data" title="Permalink to this headline">¶</a></h3>
+<p>Crear un tipus de dades data, mitjançant la implementació d’una classe que guardarà el dia, mes (com un nombre) i any.</p>
+<ol class="simple">
+<li><p>Té un constructor que rep: dia, mes i any.</p></li>
+<li><p>Implementar un mètode de classe, <strong>son_iguals</strong>, que rep dues dates i retorna un booleà indicant si aquestes són
+iguals.</p></li>
+<li><p>Implementar un mètode de classe, <strong>es_major</strong>, que rep dues dates i retorna un booleà indicant si la primera és
+més gran que la segona.</p></li>
+<li><p>Implementar un mètode de classe, <strong>es_menor</strong>, que rep dues dates i retorna un booleà indicant si la primera és
+menor que la segona.</p></li>
+<li><p>Fer un mètode, <strong>dies_mes</strong>, que donat un mes i un any retorna el nombre de dies del mes. Cal recordar que els anys de
+traspàs febrer té 29 dies.</p></li>
+<li><p>Fer un mètode privat, anomenat <strong>es_any_traspas</strong>, que donat un nombre enter i retorni un booleà indicant si és de
+traspàs o no. Un any és de traspàs si és divisible per 4, però no és de traspàs si és divisible per 100 i no per 400. Per
+exemple 1996 és de traspàs, 2000 si (és divisible per 400) i 2100 no (és divisible per 100 i no per 400).</p></li>
+<li><p>Incorporar un mètode, <strong>es_traspas</strong>, que indiqui si la data està en any de traspàs, s’ha de fer ús de el mètode
+anterior.</p></li>
+<li><p>Implementar un mètode anomenat <strong>incrementa</strong> que incrementi en un dia la data, tenint en compte que si sobrepassem
+l’últim dia del mes hem d’incrementar el mes, i hem de fer el mateix raonament per a l’últim mes de l’any.</p></li>
+<li><p>Implementar un mètode de classe anomenat <strong>diferència</strong> que donades dues dates ens digui el nombre de dies entre les
+dues dates (podeu utilitzar aquest mètode per saber quants dies heu viscut ;) ).</p></li>
+</ol>
+</div>
+<div class="section" id="classe-vector">
+<h3>Classe Vector<a class="headerlink" href="#classe-vector" title="Permalink to this headline">¶</a></h3>
+<p>Anem a fer l’exercici classe vector. En aquest cas heu de implementar la classe (definir atributs i mètodes) i
+realitzar un programa principal que permeti comprovar el seu correcte funcionament (no cal fer entrada per teclat).</p>
+<p>Per definir un vector 3 dimensional: són necessaris 3 sencers (x, i, z). Recordeu que els atributs han de ser privats.</p>
+<p>Operacions:</p>
+<ol class="simple">
+<li><p>Crear un vector en una posició determinada (constructor).</p></li>
+<li><p>Implementar el mètode <strong>mòdul</strong> que ens retorna el mòdul del vector en format numèric.</p></li>
+<li><p>Mètode suma: mètode de classe que rep dos vectors per paràmetre realitza l’operació <strong>suma</strong>. Es sumen les
+components, i ens retorna un nou Vector.</p></li>
+<li><p>Mètode resta: mètode de classe que rep dosectors per paràmetre i realitza l’operació <strong>resta</strong>. Retorna un nou
+vector.</p></li>
+<li><p>Mètode que rep un vector i realitza el seu <strong>producte_escalar</strong> retornant el seu valor numèric.</p></li>
+<li><p>Mètode <strong>mult_escalar</strong> que multiplica les tres components del vector per un escalar rebut per paràmetre.</p></li>
+<li><p>Mètode <strong>str</strong> que retorna un string que conté les tres components del vector.</p></li>
+<li><p>Mètode anomenat <strong>son_iguals</strong> que rep un vector per paràmetre i retorna una variable booleana si les
+tres components dels vectors son iguals.</p></li>
+<li><p>Mètode <strong>calcular_angle</strong>: calcula l’angle amb un altre vector que rep per paràmetre i retorna valor de l’angle
+entre ells. Link: Angle de dos vectors</p></li>
+</ol>
+</div>
+<div class="section" id="ampliacio-classe-punt">
+<h3>Ampliació Classe Punt<a class="headerlink" href="#ampliacio-classe-punt" title="Permalink to this headline">¶</a></h3>
+<p>Modificar la classe Punt realitzada anteriorment. En primer lloc, heu de transformar els atributs en atributs privats
+i afegir les següents operacions. Com veureu aquestes necessiten de les operacions de vectors, per tant també necessitem fer el import de la classe Vector a la classe punt:</p>
+<ol class="simple">
+<li><p>Implementar l’operació <strong>resta</strong>, aquest és un mètode de classe que retorna el Vector resultat de la resta de dos
+punts.</p></li>
+<li><p>Implementar l’operació <strong>suma</strong>, a un punt li suma un Vector rebut per paràmetre. Retorna un nou punt.</p></li>
+<li><p>Operació <strong>suma_escalar</strong>, rep un vector i un enter per paràmetre. Suma el Vector que es multiplica per l’escalar
+rebut i retorna un nou Punt: <span class="math notranslate nohighlight">\(P\)</span> = <span class="math notranslate nohighlight">\(P + a ·\vec{v}\)</span></p></li>
+</ol>
+<p>Com podeu observar ens cal fer l’operació suma entre un punt i un vector en dos mètodes diferents. Per poder
+reutilitzar el codi entre aquests dos mètodes es demana que implementar un mètode privat anomenat <strong>suma_interna</strong> que
+realitza aquest procés i que pugui ser usat per les operacions <strong>suma</strong> i <strong>suma_escalar</strong>.</p>
+</div>
+<div class="section" id="classe-compte-corrent">
+<h3>Classe Compte Corrent<a class="headerlink" href="#classe-compte-corrent" title="Permalink to this headline">¶</a></h3>
+<p>En aquest exercici s’ha d’implementar la classe es a dir definir els atributs i implementar els mètodes. També es
+demana realitzar un programa principal on comproveu el seu correcte funcionament. No cal fer entrada per teclat.</p>
+<p>Un compte corrent ha de tenir informació referent a l’saldo i a l’interès aplicat a aquest compte, els dos valors han
+de permetre guardar xifres decimals. A més s’ens sol·licita poder realitzar les següents operacions:</p>
+<p>El constructor ha de permetre crear un compte corrent amb un saldo inicial i un interès definit per l’usuari. Per
+defecte el saldo ha de ser de 100 € i l’interès del 5%.</p>
+<p>S’han d’implementar els següents mètodes:</p>
+<ol class="simple">
+<li><p>Mètode <strong>suma</strong> al que el saldo és incrementat en x €.</p></li>
+<li><p>Mètode <strong>resta</strong> en què el saldo és decrementat en x €, s’ha de tenir en compte que no és possible tenir un saldo
+negatiu. Si en cridar a aquesta operació ens adonam que no és pot aplicar, s’ha de mostrar un  missatge d’error per
+pantalla i evidentment no s’ha de l’operació realitzar.</p></li>
+<li><p>Mètode <strong>abonament_interes</strong> que ha d’incrementar el saldo en funció de l’interès que s’aplica al compte.</p></li>
+<li><p>Funció <strong>obtenir_saldo</strong>, que permet conèixer el saldo actual del compte.</p></li>
+<li><p>Mètode <strong>modificar_interes</strong> que modifica l’interès del compte.</p></li>
+<li><p>Una funció transferència que ha de permetre realitzar una transferència de x€ a un altre compte que rebem per
+paràmetre, sempre que això sigui possible.</p></li>
+</ol>
+</div>
+<div class="section" id="classe-album-de-cromos">
+<h3>Classe Àlbum de Cromos<a class="headerlink" href="#classe-album-de-cromos" title="Permalink to this headline">¶</a></h3>
+<p>Aquesta classe d’emmagatzemar permetre gestionar una col·lecció de cromos. Un objecte d’aquesta classe ha de contenir
+els números de cromos que posseïm i totes les vegades que el tenim repetit. En aquest cas a l’enunciat es  proporcionen les definicions dels mètodes i els seus paràmetres</p>
+<ol class="simple">
+<li><p>Crear un <em>constructor</em> que rep un enter, el nombre cromos de què consta l’àlbum.</p></li>
+<li><p>Crear el mètode <strong>get_maxim_cromos()</strong>, que retorna el màxim nombre de cromos que pot tenir un àlbum.</p></li>
+<li><p>Crear un mètode <strong>rebre_cromo(num_cromo)</strong> indica que hem aconseguit el cromo amb el número rebut.</p></li>
+<li><p>Crear un mètode <strong>donar_cromo(num_cromo)</strong> indica que ens hem desfet d’un cromo amb aquest nombre.</p></li>
+<li><p>Crear un mètode <strong>get_num_cromos()</strong> retorna quants cromos diferents tenim (sense comptar repetits).</p></li>
+<li><p>Crear un mètode <strong>get_num_cromos_repetits()</strong>, retorna el total de cromos que tenim comptant els cromos repetits.</p></li>
+<li><p>Crear un mètode <strong>get_num_cromos_faltants()</strong> retorna quants cromos ens falta per tenir la col·lecció completa.</p></li>
+<li><p>Crear el mètode <strong>mostrar_repetits()</strong>, mostra per pantalla els cromos repetits i el nombre de vegades que el tenim
+repetit.</p></li>
+<li><p>Crear el mètode <strong>mostrar_cromo_mes_repetit()</strong> mostra el o els números dels cromos més repetits</p></li>
+<li><p>Crear els mètodes que permeten comparar 2 àlbums en funció del nombre de cromos que ens falten.</p></li>
+</ol>
+<p><strong>Programa principal</strong></p>
+<p>A continuació teniu un exemple d’un programa principal que fa servir aquesta classe, comprovau el correcte
+funcionament de la classe implementada executant aquest codi.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dragon_ball</span> <span class="o">=</span> <span class="n">AlbumCromos</span> <span class="p">(</span><span class="mi">120</span><span class="p">)</span>
+
+<span class="n">dragon_ball</span><span class="o">.</span><span class="n">rebre_cromo</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="c1">#Consegueixo el cromo número 1 de l&#39;àlbum</span>
+<span class="n">dragon_ball</span><span class="o">.</span><span class="n">rebre_cromo</span><span class="p">(</span><span class="mi">120</span><span class="p">)</span> <span class="c1">#Consegueixo el darrer cromo de l&#39;àlbum</span>
+<span class="n">dragon_ball</span><span class="o">.</span><span class="n">rebre_cromo</span><span class="p">(</span><span class="mi">120</span><span class="p">)</span> <span class="c1">#Cromo repetit</span>
+<span class="n">dragon_ball</span><span class="o">.</span><span class="n">rebre_cromo</span><span class="p">(</span><span class="mi">75</span><span class="p">)</span>
+<span class="n">dragon_ball</span><span class="o">.</span><span class="n">rebre_cromo</span><span class="p">(</span><span class="mi">76</span><span class="p">)</span>
+<span class="n">dragon_ball</span><span class="o">.</span><span class="n">rebre_cromo</span><span class="p">(</span><span class="mi">76</span><span class="p">)</span> <span class="c1">#Consigo el 76</span>
+<span class="n">dragon_ball</span><span class="o">.</span><span class="n">rebre_cromo</span> <span class="p">(</span><span class="mi">75</span><span class="p">)</span> <span class="c1">#Consigo el 75</span>
+<span class="n">dragon_ball</span><span class="o">.</span><span class="n">donar_cromo</span> <span class="p">(</span><span class="mi">120</span><span class="p">)</span> <span class="c1">#Em quedo amb un sol crom nombre 120</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">dragon_ball</span><span class="o">.</span><span class="n">get_num_cromos_faltants</span><span class="p">())</span>
+<span class="n">dragon_ball</span><span class="o">.</span><span class="n">mostrar_repetits</span><span class="p">()</span>
+<span class="n">dragon_ball</span><span class="o">.</span><span class="n">mostrar_cromo_mes_repetit</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./chapters\Tema5"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="Tema5_Classes.html" title="previous page">Classes i Objectes</a>
+    <a class='right-next' id="next-link" href="../Tema6/Tema6_Fitxers.html" title="next page">Tema 6</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Gabriel Moyà Alcover<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+  </body>
+</html>
