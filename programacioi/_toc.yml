@@ -41,6 +41,9 @@
 - file: chapters/Annexes/Annexes
   sections:
     - file: chapters/Annexes/Entorn_Desenvolupament
+    - file: chapters/Annexes/Taula_ASCII
+    - file: chapters/Annexes/Fitxers_Externs
+
 
 
 
