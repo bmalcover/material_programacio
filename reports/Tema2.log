@@ -17,15 +17,15 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply['content'])
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-nombre = input()
-nombre
+entrada = input()
+entrada
 ------------------
 
 [1;31m---------------------------------------------------------------------------[0m
 [1;31mStdinNotImplementedError[0m                  Traceback (most recent call last)
-[1;32m<ipython-input-13-9214270ea291>[0m in [0;36m<module>[1;34m[0m
-[1;32m----> 1[1;33m [0mnombre[0m [1;33m=[0m [0minput[0m[1;33m([0m[1;33m)[0m[1;33m[0m[1;33m[0m[0m
-[0m[0;32m      2[0m [0mnombre[0m[1;33m[0m[1;33m[0m[0m
+[1;32m<ipython-input-14-8470601c98dc>[0m in [0;36m<module>[1;34m[0m
+[1;32m----> 1[1;33m [0mentrada[0m [1;33m=[0m [0minput[0m[1;33m([0m[1;33m)[0m[1;33m[0m[1;33m[0m[0m
+[0m[0;32m      2[0m [0mentrada[0m[1;33m[0m[1;33m[0m[0m
 
 [1;32m~\Anaconda3\envs\book\lib\site-packages\ipykernel\kernelbase.py[0m in [0;36mraw_input[1;34m(self, prompt)[0m
 [0;32m    856[0m         [1;32mif[0m [1;32mnot[0m [0mself[0m[1;33m.[0m[0m_allow_stdin[0m[1;33m:[0m[1;33m[0m[1;33m[0m[0m

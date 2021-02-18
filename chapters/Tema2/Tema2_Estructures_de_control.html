@@ -439,7 +439,7 @@ sola expressió sino que per resoldre problemes una mica complexes en necessitar
 <p>El nostre primer programa que permet resoldre eqüacions de primer grau té el següent codi:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Programa per resoldre una eqüació de primer grau: &quot;</span><span class="p">)</span> <span class="c1"># ax + b =  0</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Programa per resoldre una eqüació de primer grau, de la forma ax + b =  0&quot;</span><span class="p">)</span>  <span class="c1"># ax + b =  0</span>
 
 <span class="c1"># Obtenim la informació de l&#39;usuari</span>
 <span class="n">a</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot; Escriu el valor a: &quot;</span><span class="p">))</span>
@@ -455,12 +455,12 @@ sola expressió sino que per resoldre problemes una mica complexes en necessitar
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Programa per resoldre una eqüació de primer grau: 
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Programa per resoldre una eqüació de primer grau, de la forma ax + b =  0
 </pre></div>
 </div>
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">StdinNotImplementedError</span><span class="g g-Whitespace">                  </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="mi">1</span><span class="n">d549908b6c9</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="mi">6</span><span class="n">b7b2173ef11</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span> 
 <span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="c1"># Obtenim la informació de l&#39;usuari</span>
 <span class="ne">----&gt; </span><span class="mi">4</span> <span class="n">a</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot; Escriu el valor a: &quot;</span><span class="p">))</span>
@@ -507,17 +507,36 @@ o un conjunt d’expressions de  <code class="docutils literal notranslate"><spa
 <p>En el següent exemple usam la composició condicional per obtenir el valor absolut d’un nombre:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="o">-</span><span class="mi">123</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Programa que calcula el valor absolut d&#39;un nombre</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mi">12</span>
 
-<span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span> <span class="c1"># Si el nombre és negatiu</span>
-    <span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">*</span> <span class="o">-</span><span class="mi">1</span>
+<span class="c1">#Bloc condicional</span>
+<span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Entram dins el bloc condicional&quot;</span><span class="p">)</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">*</span> <span class="o">-</span><span class="mi">1</span>  <span class="c1"># x*= -1 o també x = -x</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;El valor absolut de x es:&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Som fora del bloc condicional&quot;</span><span class="p">)</span>
+<span class="c1"># Donam resultats</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;El valor absolut es: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>El valor absolut de x es:123
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Som fora del bloc condicional
+El valor absolut es: 12
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="o">-</span><span class="mi">123</span>  <span class="c1"># int(input(&quot;Introdueix un nombre&quot;))</span>
+
+<span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span> <span class="c1"># Si el nombre és negatiu</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;El programa passa per aquí perquè el nombre és negatiu&quot;</span><span class="p">)</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">*</span> <span class="o">-</span><span class="mi">1</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;El valor absolut de x es: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -542,8 +561,8 @@ ruta alternativa si aquesta ho és. Això s’aconsegueix amb una clàusula <cod
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Avaluam el nombre
-El nombre és positiu
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Insereix un nombre: 0
+El nombre és negatiu
 </pre></div>
 </div>
 </div>
@@ -570,6 +589,13 @@ fer amb la paraula reservada <code class="docutils literal notranslate"><span cl
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;El nombre és negatiu&quot;</span><span class="p">)</span>
     
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Fins la propera vegada&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Insereix un nombre: 0
+El nombre és zero
+Fins la propera vegada
 </pre></div>
 </div>
 </div>
@@ -618,18 +644,19 @@ valor de la variable <code class="docutils literal notranslate"><span class="pre
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">5</span> <span class="c1"># Que passa quant n = 0 ?</span>
-
-<span class="k">while</span> <span class="n">n</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;El valor inicial de la variable &#39;n&#39; es: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
+<span class="k">while</span> <span class="n">n</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
     <span class="n">n</span> <span class="o">=</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">1</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
-   
+
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Valor de n = &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">n</span><span class="p">))</span>  
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Som fora del bucle&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>El valor inicial de la variable &#39;n&#39; es: 5
+4
 3
 2
 1
@@ -640,10 +667,33 @@ Som fora del bucle
 </div>
 </div>
 </div>
-<p>Un altre exemple de programa que usa bucles indefinits és:</p>
+<p>Un altre exemple de programa que usa bucles indefinits és el càlcul de les taules de multiplicació</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># TODO fer programa</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Aquest és un programa pels alumnes de primaria&quot;</span><span class="p">)</span>
+<span class="n">taula</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Quina taula de multiplicació vols que calculi ? &quot;</span><span class="p">))</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">if</span> <span class="n">taula</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span> <span class="c1"># Esquema condicional</span>
+    <span class="k">while</span> <span class="n">x</span> <span class="o">&lt;=</span> <span class="mi">10</span><span class="p">:</span> <span class="c1"># Esquema iteratiu indefinit</span>
+        <span class="n">resultat</span> <span class="o">=</span> <span class="n">taula</span> <span class="o">*</span> <span class="n">x</span>
+        <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">taula</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; x &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; = &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">resultat</span><span class="p">))</span>
+
+        <span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="k">else</span><span class="p">:</span> <span class="c1"># Sino</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;El nombre introduit no és interessant per mi&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Programa acabat&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Aquest és un programa pels alumnes de primaria
+Quina taula de multiplicació vols que calculi ? -33
+El nombre introduit no és interessant per mi
+Programa acabat
 </pre></div>
 </div>
 </div>
@@ -663,14 +713,11 @@ l’explicarem a continuació.</p>
 col·lecció d’objectes sobre la qual iterarem, per exemple, una llista o una tupla. El <code class="docutils literal notranslate"> <span class="pre">&lt;statement</span> <span class="pre">(s)&gt;</span></code> en el cos del bucle es denota amb indentació tal com hem explicat en els condicionals, totes les expressions
 que formen el <code class="docutils literal notranslate"> <span class="pre">&lt;statement(s)&gt;</span></code> s’executa(en) una vegada per cada element de l’<code class="docutils literal notranslate"><span class="pre">&lt;iterable&gt;.</span></code> La variable
 de bucle  <code class="docutils literal notranslate"><span class="pre">&lt;var&gt;</span></code> assumeix el valor del cada element de l<code class="docutils literal notranslate"><span class="pre">&lt;iterable&gt;</span></code>.</p>
-<div class="admonition-nota admonition">
-<p class="admonition-title">Nota</p>
-<p>**Ara per ara, deixarem les llistes i les tuples pel tema 5 ** i ens centrarem en un sol tipus de bucles <code class="docutils literal notranslate"><span class="pre">for</span></code>.</p>
-</div>
+<p><strong>Ara per ara, deixarem les llistes i les tuples pel tema 5</strong> i ens centrarem en un sol tipus de bucles <code class="docutils literal notranslate"><span class="pre">for</span></code>.</p>
 <p>Si volem iterar sobre un rang de valors, podem fer el següent:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">):</span>
     <span class="n">s</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">3</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
 </pre></div>
@@ -678,11 +725,7 @@ de bucle  <code class="docutils literal notranslate"><span class="pre">&lt;var&g
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3
-4
-259
-6
-7
-8
+5
 9
 </pre></div>
 </div>
@@ -694,7 +737,7 @@ Python ens proporciona una manera més elegant de fer-ho.</p>
 <p>La funció <code class="docutils literal notranslate"><span class="pre">range(&lt;final&gt;)</span></code> retorna un iterable que produeix enters, entre 0 i <code class="docutils literal notranslate"><span class="pre">&lt;final&gt;</span></code>-1:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -705,6 +748,11 @@ Python ens proporciona una manera més elegant de fer-ho.</p>
 2
 3
 4
+5
+6
+7
+8
+9
 </pre></div>
 </div>
 </div>
@@ -749,32 +797,32 @@ molts dels nostres programes necessitaran la combinació d’aquests tres esquem
 que s’ens presentaran.</p>
 <p>A continuació resoldrem dos problemes fent ús de les tres estructures de control descrites en el
 capítol:</p>
-<p><strong>Realizar un programa que lea dos entero de teclado: a y b, donde a &lt;= b, y muestre al
-usuario el sumatorio desde a hasta b (ambos incluidos)</strong></p>
+<p><strong>Realitzar un programa que llegeixi dos nombres
+de teclat a i b, on  <em>a</em> &lt;= <em>b</em>, i mostri a l’usuari el sumatori d’<em>a</em> fins <em>b</em> (ambdos inclosos)</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Calculo de la suma del intervalo a ,b&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Calcul de la suma de l&#39;interval a ,b&quot;</span><span class="p">)</span>
 
-<span class="n">num_a</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Escribe a &quot;</span><span class="p">))</span>
-<span class="n">num_b</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Escribe b &quot;</span><span class="p">))</span>
+<span class="n">num_a</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Escriu a &quot;</span><span class="p">))</span>
+<span class="n">num_b</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Escriu b &quot;</span><span class="p">))</span>
 
-<span class="n">sumatorio</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">sumatori</span> <span class="o">=</span> <span class="mi">0</span>
 
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_a</span><span class="p">,</span> <span class="n">num_b</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
-    <span class="n">sumatorio</span> <span class="o">=</span> <span class="n">sumatorio</span> <span class="o">+</span> <span class="n">i</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">sumatorio</span><span class="p">)</span>
+    <span class="n">sumatori</span> <span class="o">=</span> <span class="n">sumatori</span> <span class="o">+</span> <span class="n">i</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">sumatori</span><span class="p">)</span> <span class="c1"># Mostram informació intermitja, això no és necessari per solventar el problema</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;El resultado es: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">sumatorio</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;El resultado es: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">sumatori</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p><strong>Realizar un programa que lea un entero de teclado y calcule su logaritmo en base 2</strong></p>
+<p><strong>Realitzar un programa que llegeix un nombre enter del teclat i calcula la part sencera del seu logaritme en base 2</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Introduce un entero por teclado y calculare la parte entera de su logaritmo en base 2&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Introdueix un nombre enter per teclat i calcularé la part sencera del seu logaritme e¡en base 2&quot;</span><span class="p">)</span>
 
-<span class="n">num</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Sobre que valor quieres que realize el calculo &quot;</span><span class="p">))</span>
+<span class="n">num</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Sobre quin valor vols que realitzi el càlcul? &quot;</span><span class="p">))</span>
 
 <span class="n">calc</span> <span class="o">=</span> <span class="mi">0</span>
 
