@@ -246,12 +246,22 @@
  </li>
  <li class="toctree-l1 collapsible-parent">
   <a class="reference internal" href="../Annexes/Annexes.html">
-   Annexes
+   Annexos
   </a>
   <ul class="collapse-ul">
    <li class="toctree-l2">
     <a class="reference internal" href="../Annexes/Entorn_Desenvolupament.html">
      Entorn de desenvolupament
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Annexes/Taula_ASCII.html">
+     Taula ASCII
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Annexes/Fitxers_Externs.html">
+     Fitxers externs
     </a>
    </li>
   </ul>
@@ -684,12 +694,13 @@ si ha trobat o no l’element. Les dues funcions reben 2 paràmetres, el conjunt
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 9, 11, 16, 17, 25, 34, 38, 45, 50, 55, 61, 66, 69, 75, 81, 82, 87, 94, 95]
-DEBUG: esquerra: 0 dreta: 19 mitj: 9 valor: 50
-DEBUG: esquerra: 10 dreta: 19 mitj: 14 valor: 75
-DEBUG: esquerra: 10 dreta: 13 mitj: 11 valor: 61
-DEBUG: esquerra: 12 dreta: 13 mitj: 12 valor: 66
-Wall time: 15.5 ms
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 5, 14, 19, 21, 23, 30, 33, 38, 41, 50, 54, 60, 67, 76, 78, 83, 92, 95, 101]
+DEBUG: esquerra: 0 dreta: 19 mitj: 9 valor: 41
+DEBUG: esquerra: 10 dreta: 19 mitj: 14 valor: 76
+DEBUG: esquerra: 10 dreta: 13 mitj: 11 valor: 54
+DEBUG: esquerra: 12 dreta: 13 mitj: 12 valor: 60
+DEBUG: esquerra: 13 dreta: 13 mitj: 13 valor: 67
+Wall time: 0 ns
 </pre></div>
 </div>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
@@ -763,7 +774,10 @@ de la llista al quadrat.</p>
 </div>
 <div class="section" id="explicacio-grafica">
 <h3>Explicació gràfica<a class="headerlink" href="#explicacio-grafica" title="Permalink to this headline">¶</a></h3>
-<img src="img/bubble.png" alt="drawing" style="width:600px;"/>
+<div class="figure align-center" id="id3">
+<a class="reference internal image-reference" href="../../_images/bubble.png"><img alt="algorisme bombolla" src="../../_images/bubble.png" style="width: 450px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 5 </span><span class="caption-text">Esquema visual de l’algorisme de la bombolla.</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
 <p><a class="reference external" href="https://www.geeksforgeeks.org/bubble-sort/">Més informació complementaria de l’algorisme</a></p>
 </div>
 <div class="section" id="implementacio-de-l-algorisme">
@@ -794,16 +808,16 @@ de la llista al quadrat.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 6, 6, 7, 5, 3, 4, 9, 4, 7]
-[1, 6, 6, 5, 3, 4, 7, 4, 7, 9]
-[1, 6, 5, 3, 4, 6, 4, 7, 7, 9]
-[1, 5, 3, 4, 6, 4, 6, 7, 7, 9]
-[1, 3, 4, 5, 4, 6, 6, 7, 7, 9]
-[1, 3, 4, 4, 5, 6, 6, 7, 7, 9]
-[1, 3, 4, 4, 5, 6, 6, 7, 7, 9]
-[1, 3, 4, 4, 5, 6, 6, 7, 7, 9]
-[1, 3, 4, 4, 5, 6, 6, 7, 7, 9]
-[1, 3, 4, 4, 5, 6, 6, 7, 7, 9]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 7, 1, 2, 4, 5, 6, 6, 7, 1]
+[1, 1, 2, 4, 5, 6, 6, 7, 1, 7]
+[1, 1, 2, 4, 5, 6, 6, 1, 7, 7]
+[1, 1, 2, 4, 5, 6, 1, 6, 7, 7]
+[1, 1, 2, 4, 5, 1, 6, 6, 7, 7]
+[1, 1, 2, 4, 1, 5, 6, 6, 7, 7]
+[1, 1, 2, 1, 4, 5, 6, 6, 7, 7]
+[1, 1, 1, 2, 4, 5, 6, 6, 7, 7]
+[1, 1, 1, 2, 4, 5, 6, 6, 7, 7]
+[1, 1, 1, 2, 4, 5, 6, 6, 7, 7]
 </pre></div>
 </div>
 </div>
@@ -863,14 +877,14 @@ la llista ja està ordenada podem aturar d’ordenar.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 7, 7, 9, 7, 2, 6, 3, 8, 3]
-[1, 7, 7, 7, 2, 6, 3, 8, 3, 9]
-[1, 7, 7, 2, 6, 3, 7, 3, 8, 9]
-[1, 7, 2, 6, 3, 7, 3, 7, 8, 9]
-[1, 2, 6, 3, 7, 3, 7, 7, 8, 9]
-[1, 2, 3, 6, 3, 7, 7, 7, 8, 9]
-[1, 2, 3, 3, 6, 7, 7, 7, 8, 9]
-[1, 2, 3, 3, 6, 7, 7, 7, 8, 9]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 6, 4, 2, 2, 6, 2, 1, 2, 5]
+[1, 4, 2, 2, 6, 2, 1, 2, 5, 6]
+[1, 2, 2, 4, 2, 1, 2, 5, 6, 6]
+[1, 2, 2, 2, 1, 2, 4, 5, 6, 6]
+[1, 2, 2, 1, 2, 2, 4, 5, 6, 6]
+[1, 2, 1, 2, 2, 2, 4, 5, 6, 6]
+[1, 1, 2, 2, 2, 2, 4, 5, 6, 6]
+[1, 1, 2, 2, 2, 2, 4, 5, 6, 6]
 </pre></div>
 </div>
 </div>

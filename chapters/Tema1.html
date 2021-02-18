@@ -246,12 +246,22 @@
  </li>
  <li class="toctree-l1 collapsible-parent">
   <a class="reference internal" href="Annexes/Annexes.html">
-   Annexes
+   Annexos
   </a>
   <ul class="collapse-ul">
    <li class="toctree-l2">
     <a class="reference internal" href="Annexes/Entorn_Desenvolupament.html">
      Entorn de desenvolupament
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Annexes/Taula_ASCII.html">
+     Taula ASCII
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Annexes/Fitxers_Externs.html">
+     Fitxers externs
     </a>
    </li>
   </ul>
@@ -540,12 +550,19 @@ programació) fonamentats en diferents enfocaments del procés de programació
 <p>Un ordinador és una màquina capaç d’acceptar dades a través d’un mitjà d’entrada,
 processar–les automàticament sota el control d’un programa i proporcionar una
 informació resultant a través d’un mitjà de sortida.</p>
+<p>Com a detall històric consideram l’<em>ENIAC</em> com el primer computador de propòsit general. Va ser construïda l’any 1946
+a la Universitat de Pennsilvània per <em>John Presper Eckert</em> i <em>John William Mauchly</em>, ocupava una superfície de 167 m² i
+permetiea realitzar prop de 5000 sumes i 300 multiplicacions per segon. El primer grup de sis programadors d’aquesta
+màquina estava format per El grupo de programadoras del ENIAC estaba conformado por: <em>Betty Snyder Holberton, Jean
+Jennings Bartik, Kathleen McNulty Mauchly Antonelli, Marlyn Wescoff Meltzer, Ruth Lichterman Teitelbaum i Frances
+Bilas Spence</em>. Va ser principalment utilitzada per a càlculs de trajectòria balística i equacions diferencials,
+contribuint al desenvolupament de la programació d’ordinador .</p>
 <p>Anem a analitzar en primer lloc els components d’un ordinador des del punt de vista de
 l’execució dels algorismes. Les parts fonamentals d’un ordinador són:</p>
 <ul class="simple">
 <li><p><strong>La memòria principal</strong>, on es guarden tant els programes com les dades que
 utilitzen i els resultats que generen. John von Neumann proposà una arquitectura,
-una organització, dels ordinadors on a la memòria s’hi emmagatzemaven tant les
+es dir, una organització dels ordinadors on a la memòria s’hi emmagatzemaven tant les
 dades com les instruccions que les manipulaven aquesta arquitectura és la que
 conforma la pràctica totalitat dels ordinadors actuals.</p></li>
 <li><p><strong>La Unitat Central de Procés (CPU)</strong> que es troba connectada amb la memòria i
@@ -559,7 +576,7 @@ massiu (unitats de disc i cintes magnètiques).</p></li>
 </ul>
 <div class="figure align-center" id="id2">
 <a class="reference internal image-reference" href="../_images/Von_Neumann_Architecture.png"><img alt="Arquitectura Von Neumann" src="../_images/Von_Neumann_Architecture.png" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text">Esquema de l’arquitectura Von Neumann TODO: posar referencia.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text">Esquema de l’arquitectura Von Neumann.<a class="reference external" href="https://en.wikipedia.org/wiki/Von_Neumann_architecture#/media/File:Von_Neumann_Architecture.svg">font original</a></span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
 </div>
 <div class="section" id="la-memoria">
 <h4>La memòria<a class="headerlink" href="#la-memoria" title="Permalink to this headline">¶</a></h4>
@@ -570,8 +587,13 @@ fabricant posa les instruccions bàsiques per fer funcionar l’ordinador) i la 
 informació que es tractada per la CPU ha de trobar–se necessàriament a la memòria
 principal. Pot considerar–se la memòria principal com si es tractés d’un conjunt de
 caselles on a cada una d’elles s’hi troba informació. Es pot accedir a cada una de les
-caselles de manera individual.
-La memòria secundària, que es situa sobre els sistemes d’emmagatzematge massiu,
+caselles de manera individual. La limitació que presenta l’arquitectura Von Neumann (coneguda com a <em>coll de
+botella</em>) és degut a que l’únic canal de transmissió de les dades compartit entre la CPU i la memòria genera un
+rendiment limitat  entre la CPU i la memòria en comparació amb la quantitat de memòria
+disponible. En la majoria de computadores modernes, la velocitat de comunicació entre la memòria i la CPU és més
+baixa que la velocitat a la que pot treballar aquesta última. La CPU es veu forçada a esperar contínuament al fet que
+arribin les dades necessàries des de o cap a la memòria</p>
+<p>La memòria secundària, que es situa sobre els sistemes d’emmagatzematge massiu,
 guarda la informació que no es necessita immediatament per poder fer feina.</p>
 </div>
 <div class="section" id="la-unitat-central-de-proces-o-cpu">
@@ -627,8 +649,8 @@ descriure en diferents generacions:</p>
 <div class="section" id="primera-generacio">
 <h4>Primera generació<a class="headerlink" href="#primera-generacio" title="Permalink to this headline">¶</a></h4>
 <p>Llenguatges de màquina o de primera generació, on els programadors havien de
-realitzar els seus programes directament amb zeros i uns. S’utilitzava el sistema
-hexadecimal per assimilar millor les instruccions.</p>
+realitzar els seus programes directament amb zeros i uns per la màquina específica sobre la qual s’havia d’executar
+el programa. S’utilitzava el sistema hexadecimal per assimilar millor les instruccions.</p>
 </div>
 <div class="section" id="segona-generacio">
 <h4>Segona generació<a class="headerlink" href="#segona-generacio" title="Permalink to this headline">¶</a></h4>
@@ -700,7 +722,7 @@ manera anàloga a com es traduiria un fragment d’una llengua estrangera al cat
 que es vol és disposar d’una traducció permanent, com ara la traducció d’un llibre que
 ens agradaria llegir en la nostra llengua, es pot fer primer tot el procés complet de
 traducció i després es pot executar el procés –o llegir el llibre traduït. En aquest cas
-tendríem el que es coneix com a una compilació. Si per una altra banda es vol
+tendrem el que es coneix com a una compilació. Si per una altra banda es vol
 simplement conèixer el que es diu en un moment determinat, com la traducció
 simultània d’una conferència d’algú de parla estrangera que ens agradaria escoltar, es pot anar traduint i executant
 –o escoltant– simultàniament. És el que es coneix com a

@@ -246,12 +246,22 @@
  </li>
  <li class="toctree-l1 collapsible-parent">
   <a class="reference internal" href="../Annexes/Annexes.html">
-   Annexes
+   Annexos
   </a>
   <ul class="collapse-ul">
    <li class="toctree-l2">
     <a class="reference internal" href="../Annexes/Entorn_Desenvolupament.html">
      Entorn de desenvolupament
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Annexes/Taula_ASCII.html">
+     Taula ASCII
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Annexes/Fitxers_Externs.html">
+     Fitxers externs
     </a>
    </li>
   </ul>
@@ -346,9 +356,38 @@
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#valor-de-retorn-dels-procediments">
-   Valor de retorn dels procediments
+  <a class="reference internal nav-link" href="#subprogrames">
+   Subprogrames
   </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#parametres">
+   Paràmetres
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#arguments-especificant-el-seu-nom">
+     Arguments especificant el seu nom
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#valor-per-defecte-en-els-parametres">
+     Valor per defecte en els paràmetres
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#funcions">
+   Funcions
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#valor-de-retorn-dels-procediments">
+     Valor de retorn dels procediments
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#ambit-de-les-variables">
@@ -385,9 +424,22 @@
                 
   <div class="section" id="subprogrames-i-parametres">
 <h1>Subprogrames i paràmetres<a class="headerlink" href="#subprogrames-i-parametres" title="Permalink to this headline">¶</a></h1>
-<p>La definició de subprogrames es realitza per motius de claredat i reusabilitat. Els subprogrames per sí mateixos són
-programes complets, amb les seves declaracions i les seves instruccions, però a més a més, tenen la propietat que es
-poden utilitzar dins d’altres programes.</p>
+<p>Els subprogrames per sí mateixos són programes complets, amb les seves declaracions i les seves instruccions, però a
+més a més, tenen la propietat de poder-se utilitzar dins d’altres programes.</p>
+<p>El fet de dividir el codi per resoldre un problema en subprogrames es coneix amb el nom de modularització. Hi ha
+diversos avantatges en modularitzar el nostre codi:</p>
+<p><strong>Simplicitat</strong>: en lloc de centrar-se en tot el problema, un mòdul sol centrar-se en una porció relativament petita
+del problema. Això fa que el desenvolupament sigui més fàcil i menys propens als errors.</p>
+<p><strong>Manteniment</strong>: si dividim de forma correcta el problema en subproblemes més senzills minimitzant la seva
+interdependència, hi ha poca probabilitat que les modificacions d’un sol mòdul tinguin
+un impacte en altres parts del programa. Això fa que sigui més viable que un equip de varis programadors pugui
+treballar col·laborativament en una aplicació de gran tamany.</p>
+<p><strong>Reusabilitat</strong>: la funcionalitat definida en un sol mòdul pot ser reutilitzada fàcilment en altres parts de
+l’aplicació o en futurs programes, això elimina la necessitat de duplicar el codi.</p>
+<p><strong>Abast</strong>: els mòduls normalment defineixen un espai pels identificadors, que ajuda a evitar col·lisions entre
+identificadors en diferents àrees d’un programa.</p>
+<div class="section" id="subprogrames">
+<h2>Subprogrames<a class="headerlink" href="#subprogrames" title="Permalink to this headline">¶</a></h2>
 <p>Un subprograma es defineix per quatre aspectes:</p>
 <ul class="simple">
 <li><p>El <strong>nom</strong> del subprograma: és la manera de poder identificar cada un dels subprogrames.</p></li>
@@ -408,36 +460,208 @@ subprograma, ja sigui un procediment o una funció. L’esquema d’un subprogra
 </div>
 <p>El conjunt de línies de codi també és coneix amb el nom de <em>cos del subprograma</em>. Tal com el codi dins un bloc
 condicional o un bloc iteratiu el cos del subprograma ha d’estar identat.</p>
-<p>A continuació tenim un petit subprograma anomenat <em>salutacio</em> que no rep cap argument i que serveix per imprimir el
-missatge <em>Hello World!</em> per pantalla. Aquest subprograma no retorna cap valor</p>
+<p>A continuació tenim la definició i crida d’un petit subprograma anomenat <em>salutacio</em> que no rep cap argument i que
+serveix per imprimir el missatge <em>Hello World!</em> per pantalla, com és un subprograma no retorna cap valor.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">salutacio</span><span class="p">():</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Definició d&#39;un procediment (subprograma)</span>
+<span class="k">def</span> <span class="nf">salutacio</span><span class="p">():</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello World!&quot;</span><span class="p">)</span>
+
+
+<span class="c1"># Crida al procediment</span>
+<span class="n">salutacio</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hello World!
 </pre></div>
 </div>
 </div>
 </div>
+</div>
+<div class="section" id="parametres">
+<h2>Paràmetres<a class="headerlink" href="#parametres" title="Permalink to this headline">¶</a></h2>
 <p>A la definició de les característiques dels subprogrames hem explicat que aquests poden ser parametritzats. El sentit
 d’utilitzar paràmetres és subministrar informació al subprograma de manera que aquest pugui realitzar la tasca per la
 qual ha estat dissenyat. El que es fa és indicar com una llista d’expressions separades per comes tota la informació
 que es consideren necessària pel seu correcte funcionament.</p>
-<p>El següent <strong>procediment</strong> anomenat <code class="docutils literal notranslate"><span class="pre">missatge</span></code> rep dos paràmetres anomenats <code class="docutils literal notranslate"><span class="pre">a</span></code> i <code class="docutils literal notranslate"><span class="pre">b</span></code>, i mostra per
-pantalla el seu valor. Els paràmetres o arguments, s’expressen mitjançant una llista de noms separats per comes.</p>
+<p>El següent <strong>procediment</strong> anomenat <code class="docutils literal notranslate"><span class="pre">fruiteria</span></code> rep tres paràmetres anomenats <code class="docutils literal notranslate"><span class="pre">quantitat</span></code>, <code class="docutils literal notranslate"><span class="pre">element</span></code> i <code class="docutils literal notranslate"><span class="pre">preu</span></code>.
+calcula i mostra per pantalla el valor de la comanda.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">missatge</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;El valor de a es: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;El valor de b es: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">b</span><span class="p">))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fruiteria</span><span class="p">(</span><span class="n">quantitat</span><span class="p">,</span> <span class="n">element</span><span class="p">,</span> <span class="n">preu</span><span class="p">):</span>
+
+    <span class="n">total</span> <span class="o">=</span> <span class="n">quantitat</span> <span class="o">*</span> <span class="n">preu</span>
+    <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">quantitat</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span> <span class="o">+</span> <span class="n">element</span> <span class="o">+</span> <span class="s2">&quot; costen: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">total</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p>Quan volem usar un subprograma hem de especificar tants de valors com paràmetres hi ha entre parèntesis, per altra
-banda també hem de tenir en compte l’ordre d’aquests paràmetres ja que poden tenir diferent significat o ser de
-diferent tipus.</p>
+<p>Els paràmetres o arguments, s’expressen mitjançant una llista de noms separats per comes. Quan volem usar un
+subprograma hem d’especificar tants de valors com paràmetres hi ha entre parèntesis, per altra banda també hem de
+tenir en compte l’ordre i el nombre d’aquests paràmetres.</p>
+<p>Si cridam el procediment amb 3 paràmetres obtindrem els resultats esperats:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fruiteria</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="s2">&quot;prunes&quot;</span><span class="p">,</span> <span class="mf">2.5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5 prunes costen: 12.5
+</pre></div>
+</div>
+</div>
+</div>
+<p>Si usam menys o més paràmetres dels necessàris obtindrem errors indicant que falten o sobren paràmetres</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fruiteria</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="s2">&quot;prunes&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">4</span><span class="o">-</span><span class="n">c547e8b8e45b</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">fruiteria</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="s2">&quot;prunes&quot;</span><span class="p">)</span>
+
+<span class="ne">TypeError</span>: fruiteria() missing 1 required positional argument: &#39;preu&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fruiteria</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="s2">&quot;prunes&quot;</span><span class="p">,</span> <span class="mf">2.5</span><span class="p">,</span> <span class="mf">2.4</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">17</span><span class="o">-</span><span class="n">f05e1b503364</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">fruiteria</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="s2">&quot;prunes&quot;</span><span class="p">,</span> <span class="mf">2.5</span><span class="p">,</span> <span class="mf">2.4</span><span class="p">)</span>
+
+<span class="ne">TypeError</span>: fruiteria() takes 3 positional arguments but 4 were given
+</pre></div>
+</div>
+</div>
+</div>
+<p>Si no respectam l’ordre del paràmetres i no es corresponen amb el tipus esperat també tendrem resultats inesperats:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fruiteria</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;prunes&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">21</span><span class="o">-</span><span class="n">cf8c7a52c83a</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">fruiteria</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;prunes&quot;</span><span class="p">)</span>
+
+<span class="nn">&lt;ipython-input-14-0eac5cbf0700&gt;</span> in <span class="ni">fruiteria</span><span class="nt">(quantitat, element, preu)</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> 
+<span class="g g-Whitespace">      </span><span class="mi">3</span>     <span class="n">total</span> <span class="o">=</span> <span class="n">quantitat</span> <span class="o">*</span> <span class="n">preu</span>
+<span class="ne">----&gt; </span><span class="mi">4</span>     <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">quantitat</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span> <span class="o">+</span> <span class="n">element</span> <span class="o">+</span> <span class="s2">&quot; costen: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">total</span><span class="p">))</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> 
+
+<span class="ne">TypeError</span>: can only concatenate str (not &quot;int&quot;) to str
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="arguments-especificant-el-seu-nom">
+<h3>Arguments especificant el seu nom<a class="headerlink" href="#arguments-especificant-el-seu-nom" title="Permalink to this headline">¶</a></h3>
+<p>Quan cridem a un subprograma, podem especificar arguments de la forma <nom argument> = <valor>. En aquest cas, cada
+<nom argument> ha de coincidir amb un paràmetre de la definició del subprograma <code class="docutils literal notranslate"><span class="pre">Python</span></code>.</p>
+<p>Si especificam els arguments pel seu nom no és necessari especificar l’ordre.</p>
+<p>També podem combinar l’especificació d’arguments segons el seu ordre i el seu nom. El que és important saber és que
+primer
+posarem els arguments de posició i llavors els arguments els quals especificarem el seu nom, un cop hem especificat
+un argument amb els seu nom, no hi pot haver arguments posicionals a la seva dreta.</p>
+<p>Anem a veure diversos exemples, podem cridar de manera correcta a la funció <code class="docutils literal notranslate"><span class="pre">fruiteria</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fruiteria</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="n">preu</span><span class="o">=</span><span class="mf">1.74</span><span class="p">,</span> <span class="n">element</span><span class="o">=</span><span class="s2">&quot;maduixes&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fruiteria</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="s2">&quot;maduixes&quot;</span><span class="p">,</span> <span class="n">preu</span><span class="o">=</span><span class="mf">3.4</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Però no de la següent manera:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fruiteria</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="n">element</span><span class="o">=</span><span class="s2">&quot;maduixes&quot;</span><span class="p">,</span> <span class="mf">3.4</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;&lt;ipython-input-22-72b0243eaca9&gt;&quot;</span><span class="gt">, line </span><span class="mi">1</span>
+    <span class="n">fruiteria</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="n">element</span><span class="o">=</span><span class="s2">&quot;maduixes&quot;</span><span class="p">,</span> <span class="mf">3.4</span><span class="p">)</span>
+                                     <span class="o">^</span>
+<span class="ne">SyntaxError</span>: positional argument follows keyword argument
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="valor-per-defecte-en-els-parametres">
+<h3>Valor per defecte en els paràmetres<a class="headerlink" href="#valor-per-defecte-en-els-parametres" title="Permalink to this headline">¶</a></h3>
+<p>Si un paràmetre definit en una definició d’un subprograma <code class="docutils literal notranslate"><span class="pre">Python</span></code> té la forma <nom> = <valor>, llavors <valor> es
+converteix en un <strong>valor per defecte</strong> d’aquest paràmetre. Els paràmetres definits d’aquesta manera es coneixen com
+a predeterminats o opcionals. A continuació tornarem a definir el nostre procediment ``fruiteria:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fruiteria</span><span class="p">(</span><span class="n">quantitat</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">element</span><span class="o">=</span><span class="s2">&quot;pinyes&quot;</span><span class="p">,</span> <span class="n">preu</span><span class="o">=</span><span class="mf">3.25</span><span class="p">):</span>
+
+    <span class="n">total</span> <span class="o">=</span> <span class="n">quantitat</span> <span class="o">*</span> <span class="n">preu</span>
+    <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">quantitat</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span> <span class="o">+</span> <span class="n">element</span> <span class="o">+</span> <span class="s2">&quot; costen: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">total</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>En cridar al procediment <code class="docutils literal notranslate"><span class="pre">fruiteria</span></code> podem trobar els següents casos:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># No explícitam cap valor</span>
+<span class="n">fruiteria</span><span class="p">()</span>
+ <span class="c1"># Explicitam el valor dels dos primers paràmetres el tercer queda tal com l&#39;hem definit</span>
+<span class="n">fruiteria</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;platans&quot;</span><span class="p">)</span>
+<span class="c1"># Explicitam el valor del primer paràmetre</span>
+<span class="n">fruiteria</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="c1"># Explicitam els valors del segon i tercer paràmetre</span>
+<span class="n">fruiteria</span><span class="p">(</span><span class="n">element</span><span class="o">=</span><span class="s2">&quot;melicotons&quot;</span><span class="p">,</span> <span class="n">preu</span><span class="o">=</span><span class="mf">1.23</span><span class="p">)</span>
+<span class="c1"># Només explicitam el valor del tercer paràmetre</span>
+<span class="n">fruiteria</span><span class="p">(</span><span class="n">preu</span><span class="o">=</span><span class="mf">5.0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2 pinyes costen: 6.5
+1 platans costen: 3.25
+4 pinyes costen: 13.0
+2 melicotons costen: 2.46
+2 pinyes costen: 10.0
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="funcions">
+<h2>Funcions<a class="headerlink" href="#funcions" title="Permalink to this headline">¶</a></h2>
 <p>A continuació veurem com s’implementa una <strong>funció</strong> que transforma una quantitat de metres a centimetres. Aquesta
-funció que s’anomena <code class="docutils literal notranslate"><span class="pre">m_a_cm</span></code> rep un paràmetre anomenat <code class="docutils literal notranslate"><span class="pre">m</span></code> el qual esperam que contengui un nombre ja sigui
+funció que s’anomena <code class="docutils literal notranslate"><span class="pre">m_a_cm</span></code> rep un paràmetre anomenat <code class="docutils literal notranslate"><span class="pre">m</span></code> el qual esperem que contengui un nombre sigui
 enter o decimal. Aquesta funció usa el paràmetre en una expressió i posteriorment retorna el valor calculat.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -450,18 +674,11 @@ enter o decimal. Aquesta funció usa el paràmetre en una expressió i posterior
 </div>
 </div>
 <p>La paraula reservada <code class="docutils literal notranslate"><span class="pre">return</span></code> ens serveix per explicitar el valor que ha de tornar la funció.</p>
-<p>Vegem exemples d’ús dels procediments i les funcions definides anteriorment. És interessant fixar-se en com actuen
-els arguments dels subprogrames que hem definit.</p>
+<p>Vegem exemples d’ús de la funció definida anteriorment. És interessant fixar-se en com usam el valor retornat per la
+funció i el guardam en la variable <code class="docutils literal notranslate"><span class="pre">transformat</span></code>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Us d&#39;un procediment múltiples cops</span>
-<span class="n">salutacio</span><span class="p">()</span>
-<span class="n">salutacio</span><span class="p">()</span>
-
-<span class="c1"># Els paràmetres tant poden ser literals com variables.</span>
-<span class="n">missatge</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
-
-<span class="c1"># La variable transformat recull el valor de la funció m_a_cm</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># La variable transformat recull el valor de la funció m_a_cm</span>
 <span class="c1"># podem usar aquest valor per altres tasques en el nostre programa</span>
 <span class="n">m</span> <span class="o">=</span> <span class="mi">33</span>
 <span class="n">transformat</span> <span class="o">=</span> <span class="n">m_a_cm</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
@@ -481,31 +698,24 @@ El valor de b es: 3
 </div>
 </div>
 <div class="section" id="valor-de-retorn-dels-procediments">
-<h2>Valor de retorn dels procediments<a class="headerlink" href="#valor-de-retorn-dels-procediments" title="Permalink to this headline">¶</a></h2>
+<h3>Valor de retorn dels procediments<a class="headerlink" href="#valor-de-retorn-dels-procediments" title="Permalink to this headline">¶</a></h3>
 <p>Com acabam de comentar el que diferència un procediment d’una funció és que aquesta segona té una clàusula
 <code class="docutils literal notranslate"><span class="pre">return</span></code> que s’encarrega d’explicitar el valor que la funció ha de retornar. Tot i això que hem comentat a
 Python els procediments també tenen un valor de retorn, aquest és el valor especial <code class="docutils literal notranslate"><span class="pre">None</span></code> i és sempre el mateix.</p>
 <p>Vegem-ne un exemple il·lustratiu:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># definim un procediment que rep un valor numèric, suma tres unitats</span>
-<span class="c1"># mostra el valor resultant per pantalla</span>
-<span class="k">def</span> <span class="nf">suma_3</span><span class="p">(</span><span class="n">valor</span><span class="p">):</span>
-
-    <span class="n">valor_mes_3</span> <span class="o">=</span> <span class="n">valor</span> <span class="o">+</span> <span class="mi">3</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hem rebut el valor &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">valor</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; hem sumat 3 unitats i ara tenim el valor &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">valor_mes_3</span><span class="p">))</span>
-
-
-<span class="n">retorn</span> <span class="o">=</span> <span class="n">suma_3</span><span class="p">(</span><span class="mi">33</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">retorn</span> <span class="o">=</span> <span class="n">fruiteria</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="s2">&quot;pomes&quot;</span><span class="p">,</span> <span class="mf">2.12</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;El valor que retornen els procediments a Python es: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">retorn</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hem rebut el valor 33 hem sumat 3 unitats i ara tenim el valor 36
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5 pomes costen: 10.600000000000001
 El valor que retornen els procediments a Python es: None
 </pre></div>
+</div>
 </div>
 </div>
 </div>
@@ -540,8 +750,8 @@ local dins el subprograma <code class="docutils literal notranslate"><span class
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>El valor de la variable_1 dins el procediment exemple_1 és: 33
-El valor de la variable_1 al programa principal és: 0
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>El valor de la variable_1 dins el procediment prova es: 33
+El valor de la variable_1 al programa principal es: 0
 </pre></div>
 </div>
 </div>

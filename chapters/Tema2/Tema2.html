@@ -246,12 +246,22 @@
  </li>
  <li class="toctree-l1 collapsible-parent">
   <a class="reference internal" href="../Annexes/Annexes.html">
-   Annexes
+   Annexos
   </a>
   <ul class="collapse-ul">
    <li class="toctree-l2">
     <a class="reference internal" href="../Annexes/Entorn_Desenvolupament.html">
      Entorn de desenvolupament
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Annexes/Taula_ASCII.html">
+     Taula ASCII
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Annexes/Fitxers_Externs.html">
+     Fitxers externs
     </a>
    </li>
   </ul>
@@ -538,13 +548,6 @@ científica.</p>
 <p><strong>Booleà</strong>: valors lògics. Poden tenir únicament dos valors: veritat (<em>True</em>) o fals (<em>False</em>).</p>
 <p>El valor màxim i mínim que podem guardar en una variable de tipus enter o real no estan definits, com passa en altres
 llenguatges, depenen de la màquina on executam el codi.</p>
-<div class="admonition-curiositat admonition">
-<p class="admonition-title">Curiositat</p>
-<p>Per la definició pròpia de l’estàndard internacional <em>IEEE 754</em> la representació dels nombres reals es fa amb 64
-bits, això implica que el major nombre real que podem representar és $<span class="math notranslate nohighlight">\(1.8\)</span><span class="math notranslate nohighlight">\(x\)</span><span class="math notranslate nohighlight">\(10^{308}\)</span>$, si volem emprar un nombre
-més gran <code class="docutils literal notranslate"><span class="pre">Python</span></code> ho indicarà com <em>inf</em>.</p>
-</div>
-<p>[//]: &lt;&gt;(Referencia (https://realpython.com/python-data-types/#integers))</p>
 </div>
 </div>
 <div class="section" id="declaracions-de-variables">
@@ -994,26 +997,10 @@ certa dificultat.</p>
 <p>Si volem llegir un sencer o un float haurem de realitzar una transformació explícita (<em>casting</em>)</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">enter</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Escriu un enter&quot;</span><span class="p">))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">enter</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Escriu un enter: &quot;</span><span class="p">))</span>
 <span class="n">enter</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">enter</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Escriu un entera
-</pre></div>
-</div>
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">40</span><span class="o">-</span><span class="n">ceb3be4e838d</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">enter</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Escriu un enter&quot;</span><span class="p">))</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">enter</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> 
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">enter</span><span class="p">))</span>
-
-<span class="ne">ValueError</span>: invalid literal for int() with base 10: &#39;a&#39;
 </pre></div>
 </div>
 </div>
@@ -1023,12 +1010,6 @@ certa dificultat.</p>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">decimal</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Escriu un decimal: &quot;</span><span class="p">))</span>
 <span class="n">decimal</span>
 <span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">decimal</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Escriu un decimal: 3
-&lt;class &#39;float&#39;&gt;
 </pre></div>
 </div>
 </div>
@@ -1067,14 +1048,6 @@ certa dificultat.</p>
 
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Si vull posar cometes dobles en el text (&quot;) puc delimitar el string amb cometes simples&#39;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;&#39;Si vull posar cometes simples en el text (&#39;) puc delimitar el string amb cometes dobles&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Esto es el un texto
-Esto es un texto  concatenado con otro
-Esto es un texto a b
-Texto concatenado con un numero A
 </pre></div>
 </div>
 </div>
