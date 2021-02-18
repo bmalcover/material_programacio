@@ -437,47 +437,19 @@ d’execució del programa.</p>
 literals i relacionat-los mitjançant els diferents operadors. A més podem intuir que un programa no és limitarà a una
 sola expressió sino que per resoldre problemes una mica complexes en necessitarem un conjunt més o manco gran.</p>
 <p>El nostre primer programa que permet resoldre eqüacions de primer grau té el següent codi:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Programa per resoldre una eqüació de primer grau, de la forma ax + b =  0&quot;</span><span class="p">)</span>  <span class="c1"># ax + b =  0</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Programa per resoldre una eqüació de primer grau, de la forma ax + b =  0&quot;</span><span class="p">)</span>  <span class="c1"># ax + b =  0</span>
 
-<span class="c1"># Obtenim la informació de l&#39;usuari</span>
+<span class="c1"># Obtenim informació de l&#39;usuari</span>
 <span class="n">a</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot; Escriu el valor a: &quot;</span><span class="p">))</span>
 
 <span class="n">b</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot; ara escriu el valor de b: &quot;</span><span class="p">))</span>
 
-<span class="c1"># Expressio</span>
+<span class="c1"># Expresio</span>
 <span class="n">x</span> <span class="o">=</span> <span class="o">-</span><span class="n">b</span> <span class="o">/</span> <span class="n">a</span>
 
 <span class="c1"># Resultat</span>
 <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot; El resultat és: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
 </pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Programa per resoldre una eqüació de primer grau, de la forma ax + b =  0
-</pre></div>
-</div>
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">StdinNotImplementedError</span><span class="g g-Whitespace">                  </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="mi">6</span><span class="n">b7b2173ef11</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> 
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="c1"># Obtenim la informació de l&#39;usuari</span>
-<span class="ne">----&gt; </span><span class="mi">4</span> <span class="n">a</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot; Escriu el valor a: &quot;</span><span class="p">))</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> 
-<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="n">b</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot; ara escriu el valor de b: &quot;</span><span class="p">))</span>
-
-<span class="nn">~\Anaconda3\envs\book\lib\site-packages\ipykernel\kernelbase.py</span> in <span class="ni">raw_input</span><span class="nt">(self, prompt)</span>
-<span class="g g-Whitespace">    </span><span class="mi">856</span>         <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_allow_stdin</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">857</span>             <span class="k">raise</span> <span class="n">StdinNotImplementedError</span><span class="p">(</span>
-<span class="ne">--&gt; </span><span class="mi">858</span>                 <span class="s2">&quot;raw_input was called, but this frontend does not support input requests.&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">859</span>             <span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">860</span>         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_input_request</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">prompt</span><span class="p">),</span>
-
-<span class="ne">StdinNotImplementedError</span>: raw_input was called, but this frontend does not support input requests.
-</pre></div>
-</div>
-</div>
 </div>
 <p>Si analitzem aquest programa podem observar com l’execució del codi que hem desenvolupat ha de seguir un
 ordre seqüencial estricte per tenir el resultat correcte. És necessari que l’intèrpret de Python executi les
@@ -540,6 +512,12 @@ El valor absolut es: 12
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>El programa passa per aquí perquè el nombre és negatiu
+El valor absolut de x es: 123
+</pre></div>
+</div>
+</div>
 </div>
 <div class="section" id="les-clausules-else-i-elsif">
 <h3>Les clàusules <code class="docutils literal notranslate"><span class="pre">else</span></code> i <code class="docutils literal notranslate"><span class="pre">elsif</span></code><a class="headerlink" href="#les-clausules-else-i-elsif" title="Permalink to this headline">¶</a></h3>
@@ -548,9 +526,7 @@ diverses afirmacions és hora d’esbrinar què més podem fer.</p>
 <p>Hi ha problemes en els quals volem avaluar una condició i prendre una ruta si és certa però també poder seguir una
 ruta alternativa si aquesta ho és. Això s’aconsegueix amb una clàusula <code class="docutils literal notranslate"><span class="pre">else</span></code>.</p>
 <p>Per exemple si volem fer un codi que ens digui si un nombre és positiu o negatiu ho podem fer de la següent manera:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Insereix un nombre: &quot;</span><span class="p">))</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Insereix un nombre: &quot;</span><span class="p">))</span>
 
 <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Avaluam el nombre&quot;</span><span class="p">)</span>  <span class="c1"># Un bloc amb dues sentències de codi.</span>
@@ -559,20 +535,11 @@ ruta alternativa si aquesta ho és. Això s’aconsegueix amb una clàusula <cod
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;El nombre és negatiu&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Insereix un nombre: 0
-El nombre és negatiu
-</pre></div>
-</div>
-</div>
-</div>
-<p>Realment el codi d’aquí a sobre no fa del tot bé la seva feina, ja que quan <code class="docutils literal notranslate"><span class="pre">x</span></code> pren el valor 0, el programa no
+<p>Realment el codi de sobre no fa del tot bé la seva feina, ja que quan <code class="docutils literal notranslate"><span class="pre">x</span></code> pren el valor 0, el programa no
 contempla cap cas. Per a poder completar i corregir el notre programa, necessitam avaluar una condició més, ho podem
 fer amb la paraula reservada <code class="docutils literal notranslate"><span class="pre">elif</span></code>.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Insereix un nombre: &quot;</span><span class="p">))</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+<span class="n">x</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Insereix un nombre: &quot;</span><span class="p">))</span>
 
 <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Avaluam el nombre&quot;</span><span class="p">)</span>  <span class="c1"># Un bloc amb dues sentències de codi.</span>
@@ -590,15 +557,6 @@ fer amb la paraula reservada <code class="docutils literal notranslate"><span cl
     
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Fins la propera vegada&quot;</span><span class="p">)</span>
 </pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Insereix un nombre: 0
-El nombre és zero
-Fins la propera vegada
-</pre></div>
-</div>
-</div>
 </div>
 <p>En general podem fer tantes condicions com vulguem o necessitem:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="o">&lt;</span><span class="n">expr</span><span class="o">&gt;</span><span class="p">:</span>
@@ -668,9 +626,7 @@ Som fora del bucle
 </div>
 </div>
 <p>Un altre exemple de programa que usa bucles indefinits és el càlcul de les taules de multiplicació</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># TODO fer programa</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># TODO fer programa</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Aquest és un programa pels alumnes de primaria&quot;</span><span class="p">)</span>
 <span class="n">taula</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Quina taula de multiplicació vols que calculi ? &quot;</span><span class="p">))</span>
 
@@ -687,16 +643,6 @@ Som fora del bucle
 
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Programa acabat&quot;</span><span class="p">)</span>
 </pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Aquest és un programa pels alumnes de primaria
-Quina taula de multiplicació vols que calculi ? -33
-El nombre introduit no és interessant per mi
-Programa acabat
-</pre></div>
-</div>
-</div>
 </div>
 </div>
 <div class="section" id="el-bucle-definit">
@@ -725,8 +671,11 @@ de bucle  <code class="docutils literal notranslate"><span class="pre">&lt;var&g
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3
+4
 5
-9
+6
+7
+8
 </pre></div>
 </div>
 </div>
@@ -766,10 +715,20 @@ Si s’especifica, <code class="docutils literal notranslate"><span class="pre">
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[5, 6, 7, 8, 9]
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0, 10, 20, 30, 40, 50, 60, 70, 80, 90]
 </pre></div>
 </div>
 </div>
@@ -780,10 +739,20 @@ Si s’especifica, <code class="docutils literal notranslate"><span class="pre">
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[-5, -4, -3, -2, -1, 0, 1, 2, 3, 4]
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[5, 3, 1, -1, -3]
 </pre></div>
 </div>
 </div>
@@ -798,7 +767,7 @@ que s’ens presentaran.</p>
 <p>A continuació resoldrem dos problemes fent ús de les tres estructures de control descrites en el
 capítol:</p>
 <p><strong>Realitzar un programa que llegeixi dos nombres
-de teclat a i b, on  <em>a</em> &lt;= <em>b</em>, i mostri a l’usuari el sumatori d’<em>a</em> fins <em>b</em> (ambdos inclosos)</strong></p>
+de teclat a i b, on <em>a</em> &lt;= <em>b</em>, i mostri a l’usuari el sumatori d’<em>a</em> fins <em>b</em> (ambdos inclosos)</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Calcul de la suma de l&#39;interval a ,b&quot;</span><span class="p">)</span>
@@ -813,6 +782,30 @@ de teclat a i b, on  <em>a</em> &lt;= <em>b</em>, i mostri a l’usuari el sumat
     <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">sumatori</span><span class="p">)</span> <span class="c1"># Mostram informació intermitja, això no és necessari per solventar el problema</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;El resultado es: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">sumatori</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Calcul de la suma de l&#39;interval a ,b
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">StdinNotImplementedError</span><span class="g g-Whitespace">                  </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">10</span><span class="o">-</span><span class="n">d9e16007e759</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Calcul de la suma de l&#39;interval a ,b&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> 
+<span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">num_a</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Escriu a &quot;</span><span class="p">))</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">num_b</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Escriu b &quot;</span><span class="p">))</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> 
+
+<span class="nn">~\Anaconda3\envs\book\lib\site-packages\ipykernel\kernelbase.py</span> in <span class="ni">raw_input</span><span class="nt">(self, prompt)</span>
+<span class="g g-Whitespace">    </span><span class="mi">856</span>         <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_allow_stdin</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">857</span>             <span class="k">raise</span> <span class="n">StdinNotImplementedError</span><span class="p">(</span>
+<span class="ne">--&gt; </span><span class="mi">858</span>                 <span class="s2">&quot;raw_input was called, but this frontend does not support input requests.&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">859</span>             <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">860</span>         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_input_request</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">prompt</span><span class="p">),</span>
+
+<span class="ne">StdinNotImplementedError</span>: raw_input was called, but this frontend does not support input requests.
 </pre></div>
 </div>
 </div>
