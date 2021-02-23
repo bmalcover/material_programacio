@@ -1,4 +1,4 @@
-Introduccio
+Introducció
 ============================
 
 En aquest document hi ha el contingut teòric i els exercicis de l'assignatura de Programació I per als estudis de 
