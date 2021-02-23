@@ -365,12 +365,12 @@
      El concepte de seqüència.
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#recorregut">
-     Recorregut
-    </a>
-   </li>
   </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#esquema-de-recorregut">
+   Esquema de recorregut
+  </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#esquema-general-de-cerca">
@@ -396,8 +396,7 @@
 d’estudiar algorismes que ens permetin solucionar programes amb major complexitat. Durant tot el curs veurem que, a
 partir d’aquestes composicions bàsiques, aplicades a seqüències de dades, es poden resoldre una ampla varietat de
 problemes.</p>
-<p><strong>TODO:</strong>
-Començarem l’aplicació d’aquests esquemes algorísmics resolent problemes de seqüències de lletres i de nombres, ja que
+<p>Començarem l’aplicació d’aquests esquemes algorísmics resolent problemes de seqüències de lletres i de nombres, ja que
 ens permeten aplicar els conceptes teòrics en i són senzills de programar</p>
 <div class="section" id="el-concepte-de-sequencia">
 <h3>El concepte de seqüència.<a class="headerlink" href="#el-concepte-de-sequencia" title="Permalink to this headline">¶</a></h3>
@@ -408,6 +407,10 @@ ens permeten aplicar els conceptes teòrics en i són senzills de programar</p>
 d’elements que formen la seqüència.</p></li>
 <li><p>Existeix un darrer element i aquest element es pot identificar.</p></li>
 </ul>
+<div class="figure align-center" id="id1">
+<a class="reference internal image-reference" href="../../_images/sequencia.png"><img alt="Seqüència de text" src="../../_images/sequencia.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 2 </span><span class="caption-text">Exemple de seqüència de text. <em>R.Mas i P.Palmer</em>.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
 <p>La primera passa a realitzar quant volem resoldre un problema mitjançant algorismes que tracten seqüències és
 identificar quin és l’element a tractar: lletres, nombres, booleans, paraules, vídeos… No sempre serà una tasca
 senzilla i dependrà de l’experiència i de la capacitat d’anàlisi del programador adoptar la solució més convenient.</p>
@@ -421,8 +424,9 @@ seqüència. En aquest cas el tractament s’acabarà en detectar el final de la
 tractament pot acabar quan l’element s’ha trobat o quan s’ha arribat al final de la seqüència per què l’element no hi era.</p></li>
 </ul>
 </div>
-<div class="section" id="recorregut">
-<h3>Recorregut<a class="headerlink" href="#recorregut" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="esquema-de-recorregut">
+<h2>Esquema de recorregut<a class="headerlink" href="#esquema-de-recorregut" title="Permalink to this headline">¶</a></h2>
 <p>El recorregut és el mecanisme que permet aplicar una determinada operació a tots els elements que formen part
 d’una seqüència. És important tenir present sempre el fet que el tractament s’haurà de començar amb el primer element
 i no acabarà fins que s’hagi aplicat al darrer element de la seqüència.  En determinades circumstàncies és possible
@@ -445,7 +449,7 @@ primera part del curs)</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Introdueix una seqüència de texte acabada en punt.&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Introdueix una seqüència de text acabada en punt.&quot;</span><span class="p">)</span>
 <span class="n">lletra</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">stdin</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">nombre</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="k">while</span> <span class="n">lletra</span> <span class="o">!=</span> <span class="s1">&#39;.&#39;</span><span class="p">:</span>
@@ -460,9 +464,8 @@ primera part del curs)</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Introdueix una seqüència de texte acabada en punt.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Introdueix una seqüència de text acabada en punt.
 </pre></div>
-</div>
 </div>
 </div>
 </div>

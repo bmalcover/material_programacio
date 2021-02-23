@@ -601,11 +601,12 @@ l’execució del programa segueix amb la primera sentència més enllà del cos
 valor de la variable <code class="docutils literal notranslate"><span class="pre">n</span></code> fins arribar a 1:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">5</span> <span class="c1"># Que passa quant n = 0 ?</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">5</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;El valor inicial de la variable &#39;n&#39; es: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
-<span class="k">while</span> <span class="n">n</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
-    <span class="n">n</span> <span class="o">=</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">1</span>
+<span class="k">while</span> <span class="n">n</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span> <span class="c1"># Que passa quant n = 0 ?</span>
+
     <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">1</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Valor de n = &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">n</span><span class="p">))</span>  
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Som fora del bucle&quot;</span><span class="p">)</span>
@@ -614,11 +615,11 @@ valor de la variable <code class="docutils literal notranslate"><span class="pre
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>El valor inicial de la variable &#39;n&#39; es: 5
+5
 4
 3
 2
 1
-0
 Valor de n = 0
 Som fora del bucle
 </pre></div>
@@ -626,20 +627,16 @@ Som fora del bucle
 </div>
 </div>
 <p>Un altre exemple de programa que usa bucles indefinits és el càlcul de les taules de multiplicació</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># TODO fer programa</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Aquest és un programa pels alumnes de primaria&quot;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Aquest és un programa pels alumnes de primaria&quot;</span><span class="p">)</span>
 <span class="n">taula</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Quina taula de multiplicació vols que calculi ? &quot;</span><span class="p">))</span>
 
 <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
 
-<span class="k">if</span> <span class="n">taula</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span> <span class="c1"># Esquema condicional</span>
-    <span class="k">while</span> <span class="n">x</span> <span class="o">&lt;=</span> <span class="mi">10</span><span class="p">:</span> <span class="c1"># Esquema iteratiu indefinit</span>
-        <span class="n">resultat</span> <span class="o">=</span> <span class="n">taula</span> <span class="o">*</span> <span class="n">x</span>
-        <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">taula</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; x &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; = &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">resultat</span><span class="p">))</span>
+<span class="k">while</span> <span class="n">x</span> <span class="o">&lt;=</span> <span class="mi">10</span><span class="p">:</span> <span class="c1"># Esquema iteratiu indefinit</span>
+    <span class="n">resultat</span> <span class="o">=</span> <span class="n">taula</span> <span class="o">*</span> <span class="n">x</span>
+    <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">taula</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; x &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; = &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">resultat</span><span class="p">))</span>
 
-        <span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">1</span>
-<span class="k">else</span><span class="p">:</span> <span class="c1"># Sino</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;El nombre introduit no és interessant per mi&quot;</span><span class="p">)</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">1</span> <span class="c1"># incrementam la variable que controla el bucle</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Programa acabat&quot;</span><span class="p">)</span>
 </pre></div>
@@ -711,7 +708,8 @@ Si s’especifica, <code class="docutils literal notranslate"><span class="pre">
 <p>Vegem els següents exemples:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span> <span class="c1"># el mateix que fer list(range(5, 10))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># La paraula reservada list la veurem més endavant en el tema 5.</span>
+<span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span> <span class="c1"># el mateix que fer list(range(5, 10))</span>
 </pre></div>
 </div>
 </div>
@@ -779,7 +777,7 @@ de teclat a i b, on <em>a</em> &lt;= <em>b</em>, i mostri a l’usuari el sumato
     <span class="n">sumatori</span> <span class="o">=</span> <span class="n">sumatori</span> <span class="o">+</span> <span class="n">i</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">sumatori</span><span class="p">)</span> <span class="c1"># Mostram informació intermitja, això no és necessari per solventar el problema</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;El resultado es: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">sumatori</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;El resultat es: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">sumatori</span><span class="p">))</span>
 
 </pre></div>
 </div>
