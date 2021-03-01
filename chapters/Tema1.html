@@ -57,7 +57,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Tema 2" href="Tema2/Tema2_Intro.html" />
-    <link rel="prev" title="Introduccio" href="../intro.html" />
+    <link rel="prev" title="Introducció" href="../intro.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -90,7 +90,7 @@
     <ul class="nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="../intro.html">
-   Introduccio
+   Introducció
   </a>
  </li>
 </ul>
@@ -388,8 +388,8 @@
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#la-unitat-central-de-proces-o-cpu">
-       La Unitat Central de Procés o CPU
+      <a class="reference internal nav-link" href="#la-unitat-central-de-processament-o-cpu">
+       La Unitat Central de Processament o CPU
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
@@ -438,7 +438,7 @@
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#interprets-i-compiladors">
-     Interprets i Compiladors
+     Intèrprets i Compiladors
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
@@ -500,7 +500,7 @@ roba (normalment als manuals de la rentadora), algorismes per solucionar problem
 matemàtics (trobar el m.c.d. i el m.c.m.), etc.</p>
 <div class="section" id="historia-dels-algorismes">
 <h4>Història dels algorismes<a class="headerlink" href="#historia-dels-algorismes" title="Permalink to this headline">¶</a></h4>
-<p>Per situar l’assignatura dins el seu marc històric cal remuntar-se a molt de temps enrera,
+<p>Per situar l’assignatura dins el seu marc històric cal remuntar-se a molt de temps enrere,
 entre els anys 3.000 i 1.500 aC. quan pareix ser que els babilonis ja empraven mètodes
 algorísmics per solucionar equacions algebraiques. Els arqueòlegs varen trobar a
 Mesopotàmia (Iraq) devora l’antiga ciutat de Babilònia unes taules d’argila que tenien
@@ -520,11 +520,11 @@ originàriament era algorisme es va convertir en algoritme per “confusió apre
 paraula aritmètica.</p>
 <p>Com es pot veure, l’estudi dels algorismes va començar al camp de les matemàtiques,
 molt abans de que existissin els ordinadors. El concepte resulta molt interessant ja que
-una vegada dissenyat un algorisme per una tasca, ja no cal entendre els principis en que
-es bassa l’algorisme, basta amb seguir, pas per pas, les instruccions.
-Una altra definició d’algorisme és aquella que el descriu com el conjunt d’operacions tal
-que partint d’un estat inicial conegut permeten obtenir al cap d’un temps, finit, el
-resultat esperat. Aquesta definició contempla alguns aspectes molt importants, com són
+una vegada dissenyat un algorisme per una tasca, ja no cal entendre els principis en què
+es basa l’algorisme, basta amb seguir, pas per pas, les instruccions.
+Una altra definició d’algorisme és aquella que el descriu com el conjunt d’operacions tals que partint d’un estat
+inicial conegut permeten obtenir al cap d’un temps, finit, el resultat esperat. Aquesta definició contempla alguns
+aspectes molt importants, com són
 el fet de considerar l’estat d’inici, és a dir: les condicions que és necessari que es donin
 per poder garantir el resultat. L’altre és el fet que es planteja que el resultat s’obté al cap
 d’un cert temps, que no pot ser infinit, ja que no és raonable que s’hagi d’esperar
@@ -533,9 +533,9 @@ eternament pel resultat.</p>
 <div class="section" id="programes">
 <h4>Programes<a class="headerlink" href="#programes" title="Permalink to this headline">¶</a></h4>
 <p>Quan es parla en el camp de la informàtica els algorismes es representen com a
-programes. Un programa es por definir com la descripció d’un algorisme en el repertori
+programes. Un programa es pot definir com la descripció d’un algorisme en el repertori
 finit d’instruccions de la màquina. El conjunt de programes del que disposa un equip
-informàtic rep el nom de programari (<em>software</em>) a diferència de l’equip informàtic en sí
+informàtic rep el nom de programari (<em>software</em>) a diferència de l’equip informàtic en si
 que s’anomena maquinari (<em>hardware</em>). Si volem que un ordinador faci una tasca abans
 hem de trobar un algorisme i després l’hem de programar a l’ordinador.
 Hem de transformar l’algorisme conceptual en un conjunt clar d’instruccions. Els estudis
@@ -552,25 +552,25 @@ processar–les automàticament sota el control d’un programa i proporcionar u
 informació resultant a través d’un mitjà de sortida.</p>
 <p>Com a detall històric consideram l’<em>ENIAC</em> com el primer computador de propòsit general. Va ser construïda l’any 1946
 a la Universitat de Pennsilvània per <em>John Presper Eckert</em> i <em>John William Mauchly</em>, ocupava una superfície de 167 m² i
-permetiea realitzar prop de 5000 sumes i 300 multiplicacions per segon. El primer grup de sis programadors d’aquesta
-màquina estava format per El grupo de programadoras del ENIAC estaba conformado por: <em>Betty Snyder Holberton, Jean
+permetia realitzar prop de 5000 sumes i 300 multiplicacions per segon. El primer grup de sis programadors d’aquesta
+màquina estava format per: <em>Betty Snyder Holberton, Jean
 Jennings Bartik, Kathleen McNulty Mauchly Antonelli, Marlyn Wescoff Meltzer, Ruth Lichterman Teitelbaum i Frances
 Bilas Spence</em>. Va ser principalment utilitzada per a càlculs de trajectòria balística i equacions diferencials,
-contribuint al desenvolupament de la programació d’ordinador .</p>
+contribuint al desenvolupament de la programació d’ordinador.</p>
 <p>Anem a analitzar en primer lloc els components d’un ordinador des del punt de vista de
 l’execució dels algorismes. Les parts fonamentals d’un ordinador són:</p>
 <ul class="simple">
 <li><p><strong>La memòria principal</strong>, on es guarden tant els programes com les dades que
 utilitzen i els resultats que generen. John von Neumann proposà una arquitectura,
 es dir, una organització dels ordinadors on a la memòria s’hi emmagatzemaven tant les
-dades com les instruccions que les manipulaven aquesta arquitectura és la que
+dades com les instruccions que les manipulaven. Aquesta arquitectura és la que
 conforma la pràctica totalitat dels ordinadors actuals.</p></li>
 <li><p><strong>La Unitat Central de Procés (CPU)</strong> que es troba connectada amb la memòria i
 s’encarrega de manipular les dades i de controlar l’ordre d’execució de les
 instruccions. Així, la CPU agafa instruccions de la memòria principal i les
 executa, l’execució fa que la CPU agafi les dades de la memòria principal, les
 processi i en cas necessari deixi els resultats a la memòria per guardar-los.</p></li>
-<li><p><strong>Els dispositius perifèrics</strong> que s’encarreguen de l’entrada (teclat, rata, tauleta, càmera,
+<li><p><strong>Els dispositius perifèrics</strong> que s’encarreguen de l’entrada (teclat, ratolí, tauleta, càmera,
 etc.) i la sortida (pantalla, impressora, etc.) de dades i de l’emmagatzematge
 massiu (unitats de disc i cintes magnètiques).</p></li>
 </ul>
@@ -584,20 +584,20 @@ massiu (unitats de disc i cintes magnètiques).</p></li>
 Hi ha dos tipus de memòria principal: la ROM (memòria només de lectura on el
 fabricant posa les instruccions bàsiques per fer funcionar l’ordinador) i la RAM
 (memòria de lectura i escriptura, en aquesta es on s’hi pot escriure informació). Tota la
-informació que es tractada per la CPU ha de trobar–se necessàriament a la memòria
+informació que és tractada per la CPU ha de trobar–se necessàriament a la memòria
 principal. Pot considerar–se la memòria principal com si es tractés d’un conjunt de
 caselles on a cada una d’elles s’hi troba informació. Es pot accedir a cada una de les
 caselles de manera individual. La limitació que presenta l’arquitectura Von Neumann (coneguda com a <em>coll de
-botella</em>) és degut a que l’únic canal de transmissió de les dades compartit entre la CPU i la memòria genera un
+botella</em>) és degut que l’únic canal de transmissió de les dades compartit entre la CPU i la memòria genera un
 rendiment limitat  entre la CPU i la memòria en comparació amb la quantitat de memòria
 disponible. En la majoria de computadores modernes, la velocitat de comunicació entre la memòria i la CPU és més
-baixa que la velocitat a la que pot treballar aquesta última. La CPU es veu forçada a esperar contínuament al fet que
+baixa que la velocitat a la que pot treballar aquesta última. La CPU es veu forçada a esperar contínuament que
 arribin les dades necessàries des de o cap a la memòria</p>
 <p>La memòria secundària, que es situa sobre els sistemes d’emmagatzematge massiu,
 guarda la informació que no es necessita immediatament per poder fer feina.</p>
 </div>
-<div class="section" id="la-unitat-central-de-proces-o-cpu">
-<h4>La Unitat Central de Procés o CPU<a class="headerlink" href="#la-unitat-central-de-proces-o-cpu" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="la-unitat-central-de-processament-o-cpu">
+<h4>La Unitat Central de Processament o CPU<a class="headerlink" href="#la-unitat-central-de-processament-o-cpu" title="Permalink to this headline">¶</a></h4>
 <p>La CPU té dues components fonamentals:</p>
 <ul class="simple">
 <li><p><strong>La unitat de control (UC)</strong>: és la unitat que controla les operacions per fer el
@@ -605,8 +605,8 @@ tractament de la informació, interpreta les instruccions del programa emmagatze
 corresponents a la resta dels Components de l’ordinador.</p></li>
 <li><p><strong>La unitat aritmètica i lògica (UAL)</strong>: és la part de la CPU que realitza les
 operacions matemàtiques i lògiques amb les dades que rep de la unitat de
-control. Les operacions que pot realitzar són bastant senzilles, la complexitat
-de les operacions que pot realitzar un ordinador es basa en l’enorme velocitat a
+control. Les operacions que pot realitzar són bastant senzilles; la complexitat
+de les operacions que pot realitzar un ordinador es basa en l’enorme velocitat amb
 la que es poden dur a terme aquestes operacions.</p></li>
 </ul>
 <p>A la CPU també es troben els registres, que són llocs on es guarden les dades a tractar
@@ -666,7 +666,7 @@ màquina específica.</p>
 d’alt nivell dissenyades com a una seqüència de les primitives de baix nivell disponibles
 al llenguatge de màquina. No es fa referència a com ha de fer la tasca directament la
 màquina. Els traductors d’aquests llenguatges havien de reunir (o recopilar o compilar
-!!) varies instruccions de màquina per simular l’activitat demanada per una primitiva
+!!) vàries instruccions de màquina per simular l’activitat demanada per una primitiva
 d’alt nivell. Per això es va començar a anomenar compiladors als programes traductors.
 És en aquest nivell on s’aconsegueix la independència respecte als ordinadors.
 Únicament calia disposar del traductors adequats per a cada màquina. Per la falta de
@@ -690,10 +690,10 @@ pels llenguatges de tercera generació.</p>
 <h4>Cinquena generació<a class="headerlink" href="#cinquena-generacio" title="Permalink to this headline">¶</a></h4>
 <p>Llenguatges de cinquena generació és un terme que s’ha utilitzat molt per descriure el
 concepte de programació declarativa (en concret la programació lògica). Es basa en el
-fet de que un programador s’ha de concentrar únicament en la naturalesa del problema i
-no en la manera de solucionar–ho. S’aprofita el sistema de càlcul de l’ordinador per què
-a partir del nostre plantejament es derivi la solució cercada.</p>
-<p>Molts dels llenguatges d’alt nivell són fonamentalment algebraics ja que aquestes
+fet que un programador s’ha de concentrar únicament en la naturalesa del problema i
+no en la manera de solucionar–ho. S’aprofita el sistema de càlcul de l’ordinador per derivar la solució cercada a
+partir del nostre plantejament.</p>
+<p>Molts dels llenguatges d’alt nivell són fonamentalment algebraics, ja que aquestes
 notacions són més adequades que el llenguatge natural per a descriure els processos
 computacionals (o programes).</p>
 <p>Les propietats més importants que diferencien aquests llenguatges dels llenguatges
@@ -711,7 +711,7 @@ operadors matemàtics i expressions dins els llenguatges de programació.</p></l
 </div>
 </div>
 <div class="section" id="interprets-i-compiladors">
-<h3>Interprets i Compiladors<a class="headerlink" href="#interprets-i-compiladors" title="Permalink to this headline">¶</a></h3>
+<h3>Intèrprets i Compiladors<a class="headerlink" href="#interprets-i-compiladors" title="Permalink to this headline">¶</a></h3>
 <p>El nivell d’abstracció d’un llenguatge d’alt nivell no es correspon, com és lògic, amb el
 del llenguatge de baix nivell al que vol substituir. Com a conseqüència, no hi ha una
 equivalència una a una entre les instruccions dels dos nivells. Per què l’ordinador pugui
@@ -722,7 +722,7 @@ manera anàloga a com es traduiria un fragment d’una llengua estrangera al cat
 que es vol és disposar d’una traducció permanent, com ara la traducció d’un llibre que
 ens agradaria llegir en la nostra llengua, es pot fer primer tot el procés complet de
 traducció i després es pot executar el procés –o llegir el llibre traduït. En aquest cas
-tendrem el que es coneix com a una compilació. Si per una altra banda es vol
+tindrem el que es coneix com a una compilació. Si per una altra banda es vol
 simplement conèixer el que es diu en un moment determinat, com la traducció
 simultània d’una conferència d’algú de parla estrangera que ens agradaria escoltar, es pot anar traduint i executant
 –o escoltant– simultàniament. És el que es coneix com a
@@ -733,9 +733,9 @@ interpretació.</p>
 automàticament el Sistema Operatiu, que ens permet emprar el teclat i el ratolí per introduir ordres bàsiques
 (execució d’un programa d’aplicació com un processador de texts, formatejar un disc, copiar informació d’un disc a un
 altre, etc.). A més a més de la interacció amb el món exterior, el sistema operatiu també s’encarrega de gestionar
-una utilització òptima dels recursos de que es disposa. Entenem per recursos coses com els dispositius perifèrics,
+una utilització òptima dels recursos que és disposa. Entenem per recursos coses com els dispositius perifèrics,
 l’espai de la memòria principal, la CPU, etc.
-Avui en dia entre els sistemes operatius que és s’utilitzen tenim el sistema Unix (sobretot pels ordinadors grans,
+Avui en dia entre els sistemes operatius que s’utilitzen tenim el sistema Unix (sobretot pels ordinadors grans,
 les estacions de treball i ara amb els dispositius mòbils), el Windows en totes les seves versions (per ordenadors
 personals), el Linux (versió d’Unix per ordinadors personals) i el MacOS X per ordinadors Apple.</p>
 </div>
@@ -750,18 +750,18 @@ s’encarrega de la seva traducció al llenguatge de la màquina.</p>
 </div>
 <div class="section" id="el-proces-de-compilacio">
 <h3>El procés de compilació<a class="headerlink" href="#el-proces-de-compilacio" title="Permalink to this headline">¶</a></h3>
-<p>Si el procés va be i el programa és correcte lèxicament, sintàctica i semàntica, s’obté el que s’anomena programa en
+<p>Si el procés va bé i el programa és correcte lèxicament, sintàctica i semàntica, s’obté el que s’anomena programa en
 codi font. En cas contrari, el compilador avisa al programador dels possibles errors que s’han trobat i el procés es
 repeteix: el programa es torna a editar per tal de corregir els errors i després es torna a compilar.</p>
 <p>El programa en codi font encara no és qualque cosa que es pugui utilitzar directament. És necessari afegir–hi totes
 les coses que el compilador ha afegit al codi. Per exemple, és necessari afegir tots els mitjans per poder realitzar
-una operació de lectura del teclat o escriptura a la pantalla. Això és així per què hi ha operacions que no
+una operació de lectura del teclat o escriptura a la pantalla. Això és així perquè hi ha operacions que no
 necessàriament es fan igual a tots els sistemes, depenen del sistema operatiu. Per tant, és necessari realitzar
 encara una altra etapa, el muntatge, on un programa anomenat linker s’encarregarà d’afegir totes aquestes coses. A
 aquesta fase també és possible que es produeixin errors, en tal cas el programador haurà de tornar a repetir el
 procés d’editar el codi, fer els canvis adients, tornar a compilar i després tornar a muntar. Si no es produeix cap
 error, finalment s’obté el programa executable. A l’actualitat tot el procés es pot desenvolupar des del que es
-coneix com <strong>Entorns Integrats de Desenvolupament</strong> (<em>IDE</em> per les seves sigles en anglé) que són
+coneix com <strong>Entorns Integrats de Desenvolupament</strong> (<em>IDE</em> per les seves sigles en anglés) que són
 aplicacions des de les quals es poden realitzar totes i cada una de les passes esmentades i fins i tot es pot realitzar
 una execució dels programes de manera que si es produeix qualque tipus d’error es mostra la línia de codi que l’ha
 provocat.</p>
@@ -770,7 +770,7 @@ provocat.</p>
 <h3>El procés de Python<a class="headerlink" href="#el-proces-de-python" title="Permalink to this headline">¶</a></h3>
 <p>En aquest curs el llenguatge de programació que usarem és <code class="docutils literal notranslate"><span class="pre">Python</span></code>, que és un llenguatge dissenyat per què les
 aplicacions que s’escriguin amb ell siguin completament independents de la plataforma. Això significa que un programa
-escrit en <code class="docutils literal notranslate"><span class="pre">Python</span></code> s’executarà sense cap tipus de modificació en absolutament qualsevol sistema informàtic, al menys per
+escrit en <code class="docutils literal notranslate"><span class="pre">Python</span></code> s’executarà sense cap tipus de modificació en qualsevol sistema informàtic, almanco en
 qualsevol sistema que suporti <code class="docutils literal notranslate"><span class="pre">Python</span></code>.</p>
 <p>En la seva major part, <code class="docutils literal notranslate"><span class="pre">Python</span></code> és un llenguatge interpretat i no un compilat, tot i que la compilació és un pas. El
 codi <code class="docutils literal notranslate"><span class="pre">Python</span></code>, escrit en un fitxer .py, es compila primer amb el que s’anomena bytecode (que es descriurà amb més detall)
@@ -787,13 +787,13 @@ que realment executa els nostres programes. Tècnicament aquest és només l’�
 ‘Python’. A més , durant el procés es duen a terme optimitzacions que queden fora del nostre abast per millorar el
 rendiment del programa.</p>
 <p>Cada vegada que s’executa un programa interpretat, l’intèrpret ha de convertir el codi font en codi de màquina, tal
-com hem descrit anteriorment, però també s’encarrega  d’introduir altres components necessàris per l’execució del
-programa, com poden ser lliberires de codi adiccional.</p>
+com hem descrit anteriorment, però també s’encarrega d’introduir altres components necessàris per l’execució del
+programa, com poden ser llibreries de codi addicional.</p>
 <div class="section" id="inconvenients-dels-llenguatges-interpretats">
 <h4>Inconvenients dels llenguatges interpretats<a class="headerlink" href="#inconvenients-dels-llenguatges-interpretats" title="Permalink to this headline">¶</a></h4>
-<p>Aquest procés de conversió fa que un programa interpretat funcioni més lent que un programa similar
+<p>Aquest procés de conversió fa que un programa interpretat funcioni més lentament que un programa similar
 escrit en un llenguatge compilat. Python fa alguna cosa intel·ligent per millorar el seu rendiment, el fet de
-compilar a bytecode (fitxers .pyc) la primera vegada que executa un programa,  millora substancialment les futures
+compilar a bytecode (fitxers .pyc) la primera vegada que executa un programa, millora substancialment les futures
 execucions del mateix programa.</p>
 <hr class="docutils" />
 <dl class="footnote brackets">
@@ -835,7 +835,7 @@ publicat</p>
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="../intro.html" title="previous page">Introduccio</a>
+    <a class='left-prev' id="prev-link" href="../intro.html" title="previous page">Introducció</a>
     <a class='right-next' id="next-link" href="Tema2/Tema2_Intro.html" title="next page">Tema 2</a>
 
     </div>
