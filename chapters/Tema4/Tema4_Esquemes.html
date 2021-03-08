@@ -90,7 +90,7 @@
     <ul class="nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="../../intro.html">
-   Introduccio
+   Introducció
   </a>
  </li>
 </ul>
@@ -378,15 +378,15 @@
                 
   <div class="section" id="aplicacio-dels-esquemes-basics-per-a-la-resolucio-de-problemes-mes-complexes">
 <h1>Aplicació dels esquemes bàsics per a la resolució de problemes més complexes<a class="headerlink" href="#aplicacio-dels-esquemes-basics-per-a-la-resolucio-de-problemes-mes-complexes" title="Permalink to this headline">¶</a></h1>
-<p>Començarem el capítol proposant un problema prou conegut que consisteix en comptar grups de lletres. Proposarem
-diverses maneres de resoldre el mateix problema tot argumentant els pros i els contres de cada una.</p>
+<p>Començarem el capítol proposant un problema prou conegut que consisteix a comptar lletres, en concret aquest tema
+passarem de caràcters individuals i començarem a comptar grups de lletres.
+Proposarem diverses maneres de resoldre el mateix problema tot argumentant els pros i els contres de cada una.</p>
 <p><strong>Es desitja saber quantes parelles <em>la</em> s’hi poden trobar.</strong></p>
 <p>El fet d’haver de comptar totes les parelles requereix, per força, recórrer tota la seqüència. Així doncs s’haurà
 d’adaptar l’esquema de recorregut.</p>
 <p>Una primera implementació d’una solució per aquest problema seria la següent:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+<span class="kn">import</span> <span class="nn">sys</span>
 
 <span class="n">fiSequencia</span> <span class="o">=</span> <span class="s1">&#39;.&#39;</span>
 <span class="n">nombre</span> <span class="o">=</span> <span class="mi">0</span>
@@ -405,16 +405,11 @@ d’adaptar l’esquema de recorregut.</p>
     <span class="c1"># Situar-se sobre el següent element</span>
     <span class="n">lletra</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">stdin</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 
+
 <span class="c1"># Donar resultats</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;El nombre de parelles &#39;la&#39; que has escrit és: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">nombre</span><span class="p">))</span>
+
 </pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Escriu un text acabat en &#39;.&#39; i comptaré les parelles &#39;la&#39; que hi escriuràs
-</pre></div>
-</div>
-</div>
 </div>
 <p>Encara que aquest programa implementa l’algorisme d’un recorregut, no funciona de manera correcta. Si
 l’usuari introdueix una seqüència que contengui la subseqüència <code class="docutils literal notranslate"><span class="pre">lla</span></code> el programa llegirà la segona lletra <code class="docutils literal notranslate"><span class="pre">l</span></code>
@@ -423,9 +418,8 @@ programa anterior és que en certes ocasions llegim més lletres del que toca i 
 provoca el seu mal funcionament.</p>
 <p>Una possible solució que ens permet arreglar el programa sense haver de fer massa modificacions al codi anterior
 seria la que tenim a continuació:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+<span class="kn">import</span> <span class="nn">sys</span>
 
 <span class="n">fiSequencia</span> <span class="o">=</span> <span class="s1">&#39;.&#39;</span>
 <span class="n">nombre</span> <span class="o">=</span> <span class="mi">0</span>
@@ -447,8 +441,6 @@ seria la que tenim a continuació:</p>
 <span class="c1"># Donar resultats</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;El nombre de parelles &#39;la&#39; que has escrit és: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">nombre</span><span class="p">))</span>
 </pre></div>
-</div>
-</div>
 </div>
 <p>El problema que presenta aquesta solució es que a més de ser poc generalitzable, un petit canvi al plantejament
 del problema ens farà fer molts de canvis al nostre codi, i pot ser difícil d’entendre per una persona diferent a la
@@ -481,9 +473,8 @@ seqüència per parelles i a cada una d’aquestes parelles se l’ha de compara
 </pre></div>
 </div>
 <p>El codi <code class="docutils literal notranslate"><span class="pre">Python</span></code> que resulta d’implementar l’anterior algorisme és el següent:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+<span class="kn">import</span> <span class="nn">sys</span>
 
 <span class="n">fiSequencia</span> <span class="o">=</span> <span class="s1">&#39;.&#39;</span>
 
@@ -506,8 +497,6 @@ seqüència per parelles i a cada una d’aquestes parelles se l’ha de compara
 <span class="c1"># Proporcionam els resultats</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;El nombre de parelles &#39;la&#39; que has escrit és: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">nombre</span><span class="p">))</span>
 </pre></div>
-</div>
-</div>
 </div>
 <p>Un dels aspectes que cal destacar de l’anterior programa és que només tracta un element de la seqüència (una parella) a
 cada iteració del bucle i això implica que no és possible botar cap de les parelles de paraules.</p>
@@ -536,9 +525,8 @@ l’algorisme com un recorregut de valors ‘l’.</p>
 </pre></div>
 </div>
 <p>El codi <code class="docutils literal notranslate"><span class="pre">Python</span></code> que resulta d’implementar l’anterior algorisme és el següent:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+<span class="kn">import</span> <span class="nn">sys</span>
 
 
 <span class="n">nombre</span> <span class="o">=</span> <span class="mi">0</span>
@@ -568,8 +556,6 @@ l’algorisme com un recorregut de valors ‘l’.</p>
 <span class="c1">#Donam resultats</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;El nombre de parelles  </span><span class="se">\&quot;</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="n">primeraLletra</span> <span class="o">+</span> <span class="n">segonaLletra</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\&quot;</span><span class="s2"> que has escrit es: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">nombre</span><span class="p">))</span>
 </pre></div>
-</div>
-</div>
 </div>
 <p>En el cas de l’exercici anterior es veu que cercar_l es pot considerar per sí mateix com un programa independent. Tot
 i ser molt curt, l’algorisme general s’entén molt més que no introduint directament la cerca. El concepte del que es

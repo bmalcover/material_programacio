@@ -90,7 +90,7 @@
     <ul class="nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="../../intro.html">
-   Introduccio
+   Introducció
   </a>
  </li>
 </ul>
@@ -424,26 +424,26 @@
                 
   <div class="section" id="subprogrames-i-parametres">
 <h1>Subprogrames i paràmetres<a class="headerlink" href="#subprogrames-i-parametres" title="Permalink to this headline">¶</a></h1>
-<p>Els subprogrames per sí mateixos són programes complets, amb les seves declaracions i les seves instruccions, però a
-més a més, tenen la propietat de poder-se utilitzar dins d’altres programes.</p>
+<p>Els subprogrames per si mateixos són programes complets, amb les seves declaracions i les seves instruccions pròpies,
+però a més a més, tenen la propietat de poder-se utilitzar dins d’altres programes.</p>
 <p>El fet de dividir el codi per resoldre un problema en subprogrames es coneix amb el nom de modularització. Hi ha
 diversos avantatges en modularitzar el nostre codi:</p>
 <p><strong>Simplicitat</strong>: en lloc de centrar-se en tot el problema, un mòdul sol centrar-se en una porció relativament petita
 del problema. Això fa que el desenvolupament sigui més fàcil i menys propens als errors.</p>
 <p><strong>Manteniment</strong>: si dividim de forma correcta el problema en subproblemes més senzills minimitzant la seva
 interdependència, hi ha poca probabilitat que les modificacions d’un sol mòdul tinguin
-un impacte en altres parts del programa. Això fa que sigui més viable que un equip de varis programadors pugui
-treballar col·laborativament en una aplicació de gran tamany.</p>
+un impacte en altres parts del programa. Això fa que sigui més viable que un equip de programadors pugui
+treballar col·laborativament en un gran aplicatiu.</p>
 <p><strong>Reusabilitat</strong>: la funcionalitat definida en un sol mòdul pot ser reutilitzada fàcilment en altres parts de
 l’aplicació o en futurs programes, això elimina la necessitat de duplicar el codi.</p>
-<p><strong>Abast</strong>: els mòduls normalment defineixen un espai pels identificadors, que ajuda a evitar col·lisions entre
+<p><strong>Abast</strong>: els mòduls normalment defineixen un espai pels identificadors, això ajuda a evitar col·lisions entre
 identificadors en diferents àrees d’un programa.</p>
 <div class="section" id="subprogrames">
 <h2>Subprogrames<a class="headerlink" href="#subprogrames" title="Permalink to this headline">¶</a></h2>
 <p>Un subprograma es defineix per quatre aspectes:</p>
 <ul class="simple">
 <li><p>El <strong>nom</strong> del subprograma: és la manera de poder identificar cada un dels subprogrames.</p></li>
-<li><p>Els arguments o <strong>paràmetres</strong>: és informació addicional que es pot subministrar als subprogrames per que funcionin
+<li><p>Els arguments o <strong>paràmetres</strong>: és informació addicional que es pot subministrar als subprogrames perquè funcionin
 adequadament. Usualment s’indica com una llista tancada entre parèntesis.</p></li>
 <li><p>El <strong>tipus de valor resultat</strong>: és el tipus d’informació que el subprograma pot subministrar com a resultat de la
 seva execució. <em>Quan un subprograma té un valor resultat se l’anomena funció, quan no és així se l’anomena
@@ -453,15 +453,15 @@ hem d’especificar quin és el tipus del valor resultat.</p></li>
 indicar-se són, en principi, dos: públic i privat.</p></li>
 </ul>
 <p>Cal notar que a <code class="docutils literal notranslate"><span class="pre">Python</span></code> tenim la paraula reservada <code class="docutils literal notranslate"><span class="pre">def</span></code> per determinar que un bloc de codi es correspon a un
-subprograma, ja sigui un procediment o una funció. L’esquema d’un subprograma és el següent:</p>
+subprograma, sigui un procediment o una funció. L’esquema d’un subprograma és el següent:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="o">&lt;</span><span class="n">nom</span><span class="o">&gt;</span><span class="p">(</span><span class="o">&lt;</span><span class="n">parametre_1</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">parametre_2</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">...</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">parametre_n</span><span class="o">&gt;</span><span class="p">):</span>
     <span class="o">&lt;</span><span class="n">línies</span> <span class="n">de</span> <span class="n">codi</span><span class="o">&gt;</span>
 </pre></div>
 </div>
-<p>El conjunt de línies de codi també és coneix amb el nom de <em>cos del subprograma</em>. Tal com el codi dins un bloc
+<p>El conjunt de línies de codi també es coneix amb el nom de <em>cos del subprograma</em>. Tal com el codi dins un bloc
 condicional o un bloc iteratiu el cos del subprograma ha d’estar identat.</p>
 <p>A continuació tenim la definició i crida d’un petit subprograma anomenat <em>salutacio</em> que no rep cap argument i que
-serveix per imprimir el missatge <em>Hello World!</em> per pantalla, com és un subprograma no retorna cap valor.</p>
+serveix per imprimir el missatge <em>Hello World!</em> per pantalla. Com és un subprograma no retorna cap valor.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Definició d&#39;un procediment (subprograma)</span>
@@ -484,11 +484,11 @@ serveix per imprimir el missatge <em>Hello World!</em> per pantalla, com és un 
 <div class="section" id="parametres">
 <h2>Paràmetres<a class="headerlink" href="#parametres" title="Permalink to this headline">¶</a></h2>
 <p>A la definició de les característiques dels subprogrames hem explicat que aquests poden ser parametritzats. El sentit
-d’utilitzar paràmetres és subministrar informació al subprograma de manera que aquest pugui realitzar la tasca per la
+d’utilitzar paràmetres és subministrar informació al subprograma de manera que aquest pugui executar la tasca per la
 qual ha estat dissenyat. El que es fa és indicar com una llista d’expressions separades per comes tota la informació
-que es consideren necessària pel seu correcte funcionament.</p>
+que es consideren necessària per al seu correcte funcionament.</p>
 <p>El següent <strong>procediment</strong> anomenat <code class="docutils literal notranslate"><span class="pre">fruiteria</span></code> rep tres paràmetres anomenats <code class="docutils literal notranslate"><span class="pre">quantitat</span></code>, <code class="docutils literal notranslate"><span class="pre">element</span></code> i <code class="docutils literal notranslate"><span class="pre">preu</span></code>.
-calcula i mostra per pantalla el valor de la comanda.</p>
+Calcula i mostra per pantalla el valor d’una comanda.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fruiteria</span><span class="p">(</span><span class="n">quantitat</span><span class="p">,</span> <span class="n">element</span><span class="p">,</span> <span class="n">preu</span><span class="p">):</span>
@@ -502,7 +502,7 @@ calcula i mostra per pantalla el valor de la comanda.</p>
 <p>Els paràmetres o arguments, s’expressen mitjançant una llista de noms separats per comes. Quan volem usar un
 subprograma hem d’especificar tants de valors com paràmetres hi ha entre parèntesis, per altra banda també hem de
 tenir en compte l’ordre i el nombre d’aquests paràmetres.</p>
-<p>Si cridam el procediment amb 3 paràmetres obtindrem els resultats esperats:</p>
+<p>Si cridam el procediment amb 3 paràmetres, obtindrem els resultats esperats:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fruiteria</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="s2">&quot;prunes&quot;</span><span class="p">,</span> <span class="mf">2.5</span><span class="p">)</span>
@@ -515,7 +515,7 @@ tenir en compte l’ordre i el nombre d’aquests paràmetres.</p>
 </div>
 </div>
 </div>
-<p>Si usam menys o més paràmetres dels necessàris obtindrem errors indicant que falten o sobren paràmetres</p>
+<p>Si usam menys o més paràmetres dels necessaris obtindrem errors indicant que falten o sobren paràmetres:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fruiteria</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="s2">&quot;prunes&quot;</span><span class="p">)</span>
@@ -550,7 +550,7 @@ tenir en compte l’ordre i el nombre d’aquests paràmetres.</p>
 </div>
 </div>
 </div>
-<p>Si no respectam l’ordre del paràmetres i no es corresponen amb el tipus esperat també tendrem resultats inesperats:</p>
+<p>Si no respectam l’ordre dels paràmetres i no es corresponen amb el tipus esperat també tendrem resultats inesperats:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fruiteria</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;prunes&quot;</span><span class="p">)</span>
@@ -580,9 +580,8 @@ tenir en compte l’ordre i el nombre d’aquests paràmetres.</p>
 <nom argument> ha de coincidir amb un paràmetre de la definició del subprograma <code class="docutils literal notranslate"><span class="pre">Python</span></code>.</p>
 <p>Si especificam els arguments pel seu nom no és necessari especificar l’ordre.</p>
 <p>També podem combinar l’especificació d’arguments segons el seu ordre i el seu nom. El que és important saber és que
-primer
-posarem els arguments de posició i llavors els arguments els quals especificarem el seu nom, un cop hem especificat
-un argument amb els seu nom, no hi pot haver arguments posicionals a la seva dreta.</p>
+primer posarem els arguments de posició i llavors els arguments els quals especificarem el seu nom, un cop hem
+especificat un argument amb els seu nom, no hi pot haver arguments posicionals a la seva dreta.</p>
 <p>Anem a veure diversos exemples, podem cridar de manera correcta a la funció <code class="docutils literal notranslate"><span class="pre">fruiteria</span></code>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -617,9 +616,9 @@ un argument amb els seu nom, no hi pot haver arguments posicionals a la seva dre
 </div>
 <div class="section" id="valor-per-defecte-en-els-parametres">
 <h3>Valor per defecte en els paràmetres<a class="headerlink" href="#valor-per-defecte-en-els-parametres" title="Permalink to this headline">¶</a></h3>
-<p>Si un paràmetre definit en una definició d’un subprograma <code class="docutils literal notranslate"><span class="pre">Python</span></code> té la forma <nom> = <valor>, llavors <valor> es
+<p>Si un paràmetre en una <strong>definició</strong> d’un subprograma <code class="docutils literal notranslate"><span class="pre">Python</span></code> té la forma <nom> = <valor>, llavors <valor> es
 converteix en un <strong>valor per defecte</strong> d’aquest paràmetre. Els paràmetres definits d’aquesta manera es coneixen com
-a predeterminats o opcionals. A continuació tornarem a definir el nostre procediment ``fruiteria:</p>
+a predeterminats o opcionals. A continuació tornarem a definir el nostre procediment <code class="docutils literal notranslate"><span class="pre">fruiteria</span></code>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fruiteria</span><span class="p">(</span><span class="n">quantitat</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">element</span><span class="o">=</span><span class="s2">&quot;pinyes&quot;</span><span class="p">,</span> <span class="n">preu</span><span class="o">=</span><span class="mf">3.25</span><span class="p">):</span>
@@ -635,7 +634,7 @@ a predeterminats o opcionals. A continuació tornarem a definir el nostre proced
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># No explícitam cap valor</span>
 <span class="n">fruiteria</span><span class="p">()</span>
- <span class="c1"># Explicitam el valor dels dos primers paràmetres el tercer queda tal com l&#39;hem definit</span>
+<span class="c1"># Explicitam el valor dels dos primers paràmetres el tercer queda tal com l&#39;hem definit</span>
 <span class="n">fruiteria</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;platans&quot;</span><span class="p">)</span>
 <span class="c1"># Explicitam el valor del primer paràmetre</span>
 <span class="n">fruiteria</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
@@ -699,9 +698,9 @@ El valor de b es: 3
 </div>
 <div class="section" id="valor-de-retorn-dels-procediments">
 <h3>Valor de retorn dels procediments<a class="headerlink" href="#valor-de-retorn-dels-procediments" title="Permalink to this headline">¶</a></h3>
-<p>Com acabam de comentar el que diferència un procediment d’una funció és que aquesta segona té una clàusula
-<code class="docutils literal notranslate"><span class="pre">return</span></code> que s’encarrega d’explicitar el valor que la funció ha de retornar. Tot i això que hem comentat a
-Python els procediments també tenen un valor de retorn, aquest és el valor especial <code class="docutils literal notranslate"><span class="pre">None</span></code> i és sempre el mateix.</p>
+<p>Com acabam de comentar allò que diferència un procediment d’una funció és que aquesta segona té una clàusula
+<code class="docutils literal notranslate"><span class="pre">return</span></code> que s’encarrega d’explicitar el valor que retorna la funció. Tot i això que hem comentat, a
+<code class="docutils literal notranslate"><span class="pre">Python</span></code> els procediments també tenen un valor de retorn, aquest és el valor especial <code class="docutils literal notranslate"><span class="pre">None</span></code> i és sempre el mateix.</p>
 <p>Vegem-ne un exemple il·lustratiu:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -722,7 +721,7 @@ El valor que retornen els procediments a Python es: None
 </div>
 <div class="section" id="ambit-de-les-variables">
 <h2>Àmbit de les variables<a class="headerlink" href="#ambit-de-les-variables" title="Permalink to this headline">¶</a></h2>
-<p>Així com hem definit l’àmbit dels subprogrames com el context des del qual es poden invocar. Anàlogament podem
+<p>Així com hem definit l’àmbit dels subprogrames com el context des del qual aquests es poden invocar. Anàlogament podem
 definir l’àmbit de les variables com el context en el qual es poden usar.</p>
 <div class="section" id="ambit-local">
 <h3>Àmbit local<a class="headerlink" href="#ambit-local" title="Permalink to this headline">¶</a></h3>
@@ -735,7 +734,7 @@ diferents</strong> i estudiarem com interactuen.</p>
 local dins el subprograma <code class="docutils literal notranslate"><span class="pre">exemple_1</span></code> i una altra en l’àmbit global del programa principal:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Declaram una funcio</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Declaram una funció</span>
 <span class="k">def</span> <span class="nf">exemple_1</span><span class="p">():</span>
     <span class="n">variable_1</span> <span class="o">=</span> <span class="mi">33</span>
     
@@ -756,11 +755,11 @@ El valor de la variable_1 al programa principal es: 0
 </div>
 </div>
 </div>
-<p>Podem observar com el valor de la <code class="docutils literal notranslate"><span class="pre">variable_1</span></code> és diferent en ambdós ambits. El interpret de <code class="docutils literal notranslate"><span class="pre">Python</span></code> és
-capaç de diferenciar en quin àmbit treballa en cada moment i quin valor ha d’assingar a la <code class="docutils literal notranslate"><span class="pre">variable_1</span></code> en cada
+<p>Podem observar com el valor de la <code class="docutils literal notranslate"><span class="pre">variable_1</span></code> és diferent en ambdós ambits. El intèrpret de <code class="docutils literal notranslate"><span class="pre">Python</span></code> és
+capaç de diferenciar en quin àmbit treballa en cada moment i quin valor ha d’assignar a la <code class="docutils literal notranslate"><span class="pre">variable_1</span></code> en cada
 moment.</p>
 <p>A continuació disposarem d’un segon exemple on complicam una mica més la situació per veure com actuen els
-paràmetres. El que és interessant d’aquest troç de codi és entendre com els noms de les variables
+paràmetres. El que és interessant d’aquest tros de codi és entendre com els noms de les variables
 <code class="docutils literal notranslate"><span class="pre">primer_parametre</span></code> i <code class="docutils literal notranslate"><span class="pre">segon_parametre</span></code> en el context del programa principal no condicionen els valors que els
 paràmetres <code class="docutils literal notranslate"><span class="pre">primer_parametre</span></code> i <code class="docutils literal notranslate"><span class="pre">segon_parametre</span></code> tendran dins el subprograma.</p>
 <div class="cell docutils container">
@@ -795,10 +794,10 @@ Valor del segon_parametre al programa principal: 0
 </div>
 </div>
 <p>El que succeeix en el codi anterior és el que anomenam <em>pas de paràmetres per valor</em> en el qual el valor de la
-variable en el programa principal es copiat en l’argument del subprograma. En el cas concret de l’exemple anterior la
+variable en el programa principal és copiat en l’argument del subprograma. En el cas concret de l’exemple anterior la
 variable <code class="docutils literal notranslate"><span class="pre">segon_parametre</span></code> del programa principal copia el seu valor al paràmetre<code class="docutils literal notranslate"><span class="pre">primer_parametre</span></code> del
 subprograma i de la mateixa manera succeeix amb la variable <code class="docutils literal notranslate"><span class="pre">primer_parametre</span></code> del programa principal i
-el paràmetre <code class="docutils literal notranslate"><span class="pre">segon_parametre</span></code> del procediemnt-</p>
+el paràmetre <code class="docutils literal notranslate"><span class="pre">segon_parametre</span></code> del procediment.</p>
 <p>En aquest darrer exemple tenim una funció anomenada <code class="docutils literal notranslate"><span class="pre">exemple_3</span></code> que rep un paràmetre, modificam el seu valor i el
 retornam. Amb aquest exemple evaluam l’efecte del pas de paràmetres i el retorn del seu valor per comprobar que
 allò que succeeix dins un subprograma queda restringit al seu àmbit i no té conseqüències en un àmbit exterior.</p>
@@ -832,7 +831,7 @@ Valor del valor_resultant al programa principal: 33
 </div>
 <p>En el tema següent veurem com aquest funcionament dels paràmetres pot ser diferent per alguns
 tipus de dades que anomenarem com a <strong>tipus mutables</strong>. L’altre tipus de pas de paràmetres que podrem usar es diu
-<strong>pas de paràmetres per referència</strong></p>
+<strong>pas de paràmetres per referència</strong>.</p>
 </div>
 <div class="section" id="ambit-global">
 <h3>Àmbit global<a class="headerlink" href="#ambit-global" title="Permalink to this headline">¶</a></h3>
@@ -840,8 +839,9 @@ tipus de dades que anomenarem com a <strong>tipus mutables</strong>. L’altre t
 comprensió del codi (només ens hem de preocupar d’entendre allò que hi ha dins el subprograma) i ens assegura que
 sempre que els paràmetres tinguin els mateixos valors, el subprograma sempre respondrà de la mateixa manera.</p>
 <p>Tot i això, en la programació orientada a procediments que és la que hem realitzat fins ara existeixen alguns casos en
-els quals ens interessa usar la mateixa variable en tot el programa, aquest fet és diu <strong>variable d’àmbit global</strong>.</p>
-<p>Per especificar dins un subprograma que una variable és d’àmbit global ho hem de fer mitjançant l’ús de la
+els quals ens interessa usar la mateixa variable en tot el programa, aquest fet es diu ús d’una <strong>variable d’àmbit
+global</strong>.</p>
+<p>Per especificar que una variable és d’àmbit global dins un subprograma ho hem de fer mitjançant l’ús de la
 paraula reservada <code class="docutils literal notranslate"><span class="pre">global</span></code> abans de la definició de la variable.  <strong>Aquesta pràctica no és recomanable en
 la majoria de situacions</strong>, ja que pot dur a resultats inesperats en l’execució dels programes i ens dificulta la
 reutilització del codi. Quan utilitzam aquesta tècnica, ens hem d’assegurar que el problema no es pot resoldre amb
