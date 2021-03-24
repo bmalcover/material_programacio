@@ -89,7 +89,7 @@
     <ul class="nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="../../intro.html">
-   Introduccio
+   Introducció
   </a>
  </li>
 </ul>
@@ -436,8 +436,9 @@ una aplicació més gran. La tècnica de modularització que coneixem fins ara �
 <p>En aquest taller veurem una segona manera de modularitzar els nostres programes mitjançant l’importació de codi que
 es troba en fitxers diferents del qual tenim el nostre programa principal.</p>
 <p>El codi pot provenir d’altres programes que nosaltres hem fet amb anterioritat o per llibreries de codi ja incloses
-en la distribució de <code class="docutils literal notranslate"><span class="pre">Python</span></code> ( com per exemple la llibreria <em>Math</em>) o d’altres que podem descarregar i instal·lar.
-Per usar aquestes dues fonts de codi usarem una paraula reservada que ja coneixem <code class="docutils literal notranslate"><span class="pre">import</span></code>.</p>
+en la distribució de <code class="docutils literal notranslate"><span class="pre">Python</span></code> ( com per exemple la llibreria <em>Math</em> o <em>sys</em>) o d’altres que podem descarregar i
+instal·lar.
+Per usar aquestes dues fonts de codi usarem una paraula reservada que ja coneixem <code class="docutils literal notranslate"><span class="pre">import</span></code> però que potser no entenem.</p>
 <p>Nosaltres ens centrarem en la primera de les fonts de codi, aquelles que ja hem programat amb anterioritat i que es
 troben en un altre fitxer.</p>
 <p>Suposem que tenim el fitxer <em>extern.py</em> que conté el següent codi:</p>
@@ -474,18 +475,18 @@ troben en un altre fitxer.</p>
 </div>
 </div>
 </div>
-<p>En importar un fitxer tal com hem fet abans, ens hem d’assegurar que aquest es trobi en la mateixa carpeta que el
-nostre programa principal. Existeixen altres opcions que ens permeten tenir el codi en altres localitzacions  del
+<p>En importar un fitxer tal com hem fet abans, ens hem d’assegurar que aquest es trobi en la <em>mateixa carpeta</em> que el
+nostre programa principal. Existeixen altres opcions que ens permeten tenir el codi en altres localitzacions del
 nostre ordinador però això queda fora de l’àmbit d’aquesta assignatura. Per a més informació podeu llegir el següent
 <a class="reference external" href="https://realpython.com/python-modules-packages/#the-module-search-path">enllaç</a>.</p>
 <div class="section" id="la-clausula-import">
 <h2>La clausula import<a class="headerlink" href="#la-clausula-import" title="Permalink to this headline">¶</a></h2>
-<p>La clausula <code class="docutils literal notranslate"><span class="pre">import</span></code> és flexible i ens permet usar-la de diferents maneres en funció de l’objectiu que tinguem en cada
-situació.</p>
+<p>La clausula <code class="docutils literal notranslate"><span class="pre">import</span></code> és flexible i ens permet usar-la de diferents maneres en funció de les necessitats que tinguem en
+cada situació.</p>
 <div class="section" id="import-nom">
 <h3><code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">&lt;nom&gt;</span></code><a class="headerlink" href="#import-nom" title="Permalink to this headline">¶</a></h3>
-<p>És la manera més senzilla d’importar codi extern, i la acabam de explicar en l’exemple anterior. El que hem de tenir en
-compte  és que quan usam qualsevol peça de codi definida en el fitxer que importam, aquesta roman privada en aquell
+<p>És la manera més senzilla d’importar codi extern, la que acabam d’explicar en l’exemple anterior. El que hem de tenir
+en compte és que quan usam qualsevol peça de codi definida en el fitxer que importam, aquesta roman privada en aquell
 mòdul de la següent manera:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -543,7 +544,7 @@ directament al nostre programa. D’aquesta manera podem importar directament un
 </div>
 </div>
 </div>
-<p>Degut que estam important el codi al nostre programa principal sense el prefix aquí sí que es possible sobreescriure el
+<p>Degut que estam important el codi al nostre programa principal sense el prefix aquí sí que és possible sobreescriure el
 codi importat, per exemple:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -570,7 +571,7 @@ Ara el sobreescric
 </div>
 </div>
 </div>
-<p>Encara que podeu trobar codi que usa aquesta darrera tècnica, no es recomana gens fer-ho ja que és una font de
+<p>Encara que podeu trobar codi que usa aquesta darrera tècnica, no es recomana gens fer-ho, ja que és una font de
 problemes. <a class="reference external" href="https://www.geeksforgeeks.org/why-import-star-in-python-is-a-bad-idea/?ref=rp">Més informació</a>.</p>
 </div>
 <div class="section" id="import-nom-as-nom-alternatiu">
@@ -597,7 +598,7 @@ codi externes que tenen noms molt llargs, d’aquesta manera aconseguim un nom a
 <div class="section" id="execucio-d-un-modul-com-un-script">
 <h2>Execució d’un modul com un <em>script</em><a class="headerlink" href="#execucio-d-un-modul-com-un-script" title="Permalink to this headline">¶</a></h2>
 <p>El fitxer <code class="docutils literal notranslate"><span class="pre">extern</span></code> que hem usat com a font de codi pel nostre programa principal bàsicament és un fitxer <code class="docutils literal notranslate"><span class="pre">Python</span></code> que
-pot ser executat com qualsevol altra programa. El fitxer que hem usat fins ara no té gaire interés, ja que només
+pot ser executat com qualsevol altra programa. El fitxer que hem usat fins ara no té gaire interès, ja que només
 defineix una variable de tipus <em>string</em> i una funció. Ara en feim un altre que a més de definir una variable i un
 subprograma dugui a terme una tasca concreta anomenat <code class="docutils literal notranslate"><span class="pre">feina_externa</span></code>:</p>
 <div class="cell docutils container">
@@ -613,19 +614,19 @@ subprograma dugui a terme una tasca concreta anomenat <code class="docutils lite
 <span class="n">esvocal</span> <span class="o">=</span> <span class="n">es_vocal</span><span class="p">(</span><span class="n">ll</span><span class="p">)</span>
 
 <span class="k">if</span> <span class="n">esvocal</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;La lletra &quot;</span> <span class="o">+</span> <span class="n">ll</span> <span class="o">+</span> <span class="s2">&quot; es una vocal&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;La lletra &quot;</span> <span class="o">+</span> <span class="n">ll</span> <span class="o">+</span> <span class="s2">&quot; és una vocal&quot;</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;La lletra &quot;</span> <span class="o">+</span> <span class="n">ll</span> <span class="o">+</span> <span class="s2">&quot; no es una vocal&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;La lletra &quot;</span> <span class="o">+</span> <span class="n">ll</span> <span class="o">+</span> <span class="s2">&quot; no és una vocal&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>La lletra e es una vocal
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>La lletra e és una vocal
 </pre></div>
 </div>
 </div>
 </div>
-<p>Si executam aquest fragment de codi el que obtindrem és un missatge per pantalla que indica que <strong>La lletra e es una
+<p>Si executam aquest fragment de codi el que obtindrem és un missatge per pantalla que indica que <strong>La lletra e és una
 vocal</strong>. Malauradament si importam aquest mòdul veurem que el codi s’executa automàticament:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -681,7 +682,7 @@ distingir les dues casuístiques:</p>
 </div>
 </div>
 <p>Normalment ens interessa usar aquesta característica per poder avaluar el codi que tenim en un mòdul sense necessitat
-d’importar-lo en un altre fitxer, d’això s’en diuen <strong>tests unitaris</strong> i és una bona pràctica de programació</p>
+d’importar-lo en un altre fitxer, d’això se’n diuen <strong>tests unitaris</strong> i és una bona pràctica de programació.</p>
 </div>
 </div>
 
