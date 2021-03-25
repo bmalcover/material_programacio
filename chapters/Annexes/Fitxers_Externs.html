@@ -645,20 +645,8 @@ un missatge a la consola quan s’importa. En <code class="docutils literal notr
 mòdul i quan s’executa com a programa independent.</p>
 <p>Quan executam un fitxer com un programa, <code class="docutils literal notranslate"><span class="pre">Python</span></code> li assigna el nom <em>main</em>. El següent codi permet
 distingir les dues casuístiques:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">):</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">):</span>
 </pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;&lt;ipython-input-11-fb2dd0d0cf2b&gt;&quot;</span><span class="gt">, line </span><span class="mi">1</span>
-    <span class="k">if</span> <span class="p">(</span><span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">):</span>
-                                <span class="o">^</span>
-<span class="ne">SyntaxError</span>: unexpected EOF while parsing
-</pre></div>
-</div>
-</div>
 </div>
 <p>Afegint aquesta línia el nostre fitxer <code class="docutils literal notranslate"><span class="pre">feina_externa</span></code> queda de la següent manera:</p>
 <div class="cell docutils container">
@@ -677,6 +665,11 @@ distingir les dues casuístiques:</p>
         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;La lletra &quot;</span> <span class="o">+</span> <span class="n">ll</span> <span class="o">+</span> <span class="s2">&quot; es una vocal&quot;</span><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;La lletra &quot;</span> <span class="o">+</span> <span class="n">ll</span> <span class="o">+</span> <span class="s2">&quot; no es una vocal&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>La lletra e es una vocal
 </pre></div>
 </div>
 </div>
