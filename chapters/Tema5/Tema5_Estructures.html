@@ -90,7 +90,7 @@
     <ul class="nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="../../intro.html">
-   Introduccio
+   Introducció
   </a>
  </li>
 </ul>
@@ -447,7 +447,7 @@ mutable, és a dir una llista.</p>
 <li><p><strong>Tuples</strong>: molt similars a les llistes sense mutabilitat.</p></li>
 <li><p><strong>Diccionaris</strong>: una estructura no lineal que relaciona parells de dades.</p></li>
 <li><p><strong>List comprehensions</strong>: eina que crea una nova llista basada en una altra llista, en una sola línia i de manera llegible.</p></li>
-<li><p><strong>Funcions lambda</strong>: funcions anònimes, es a dir sense nom.</p></li>
+<li><p><strong>Funcions lambda</strong>: funcions anònimes, és a dir sense nom.</p></li>
 <li><p><strong>Map, filter</strong>: funcions de Python que usen les funcions anònimes i actuen sobre les llistes.</p></li>
 <li><p><strong>Yield</strong>: Funcions generadores de seqüències.</p></li>
 </ul>
@@ -456,7 +456,7 @@ mutable, és a dir una llista.</p>
 <p>Python proporciona un altre tipus de col·lecció ordenada d’objectes, anomenada tupla.</p>
 <p>Les tuples són idèntiques a les llistes en tots els aspectes, tret de les propietats següents:</p>
 <ul class="simple">
-<li><p>Les tuples es defineixen especificant els elements entre parèntesis, (), en comptes de claudàtors.</p></li>
+<li><p>Les tuples es defineixen especificant els elements entre parèntesis, en comptes de claudàtors.</p></li>
 <li><p>Les tuples <strong>són immutables</strong>.</p></li>
 </ul>
 <div class="cell docutils container">
@@ -500,7 +500,7 @@ u
 </div>
 </div>
 </div>
-<p>Les tuples es poden desempaquetar, es a dir transformar-les en variables individuals:</p>
+<p>Les tuples es poden desempaquetar, és a dir, transformar-les en variables individuals:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="p">,</span> <span class="n">e</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">o</span><span class="p">,</span> <span class="n">u</span> <span class="o">=</span> <span class="n">vocals</span>
@@ -538,7 +538,8 @@ u
 </div>
 </div>
 </div>
-<p>Això ens és molt pràctic per fer funcions <em>que retornin més d’un valor</em> , no és una pràctica altament recomanable però si molt útil en algunes situacions</p>
+<p>Això ens és molt pràctic per construir funcions <em>que retornen més d’un valor</em> , no és una pràctica altament recomanable
+però si que pot ser molt útil en algunes situacions.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">retorna2</span><span class="p">():</span>
@@ -556,7 +557,8 @@ u
 </div>
 <p><strong>Per què utilitzar una tupla en lloc d’una llista?</strong></p>
 <p>Quan no volem que les dades es puguin modificar. Si es pretén que els valors de la col·lecció es mantinguin constants
-durant tota la vida del programa, cal usar una tupla en lloc d’una llista de protecció contra la modificació accidental.</p>
+durant tota la vida del programa, cal usar una tupla en lloc d’una llista, ja que protegirà les dades contra una possible
+modificació accidental.</p>
 </div>
 <div class="section" id="diccionaris">
 <h2>Diccionaris<a class="headerlink" href="#diccionaris" title="Permalink to this headline">¶</a></h2>
@@ -564,7 +566,7 @@ durant tota la vida del programa, cal usar una tupla en lloc d’una llista de p
 <p>A diferència de les seqüències, indexades per un rang de nombres, els diccionaris són indexats per claus, que poden ser
 de <strong>qualsevol tipus immutable</strong>; els <em>strings</em> i els nombres sempre poden ser claus.</p>
 <p>Les tuples es poden utilitzar com a claus. No podem utilitzar llistes com a claus, ja que les llistes es poden modificar.</p>
-<p>El millor és pensar en les claus del diccionari com un <strong>conjunt</strong>, on a cada element del conjunt hi correspón un valor.</p>
+<p>El millor és pensar en les claus del diccionari com un <strong>conjunt</strong>, on a cada element del conjunt li correspon un valor.</p>
 <p>A continuació teniu les operacions bàsiques:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -583,7 +585,7 @@ de <strong>qualsevol tipus immutable</strong>; els <em>strings</em> i els nombre
 </div>
 <div class="section" id="accedint-als-elements-d-un-diccionari">
 <h3>Accedint als elements d’un diccionari<a class="headerlink" href="#accedint-als-elements-d-un-diccionari" title="Permalink to this headline">¶</a></h3>
-<p>En aquesta estructura no accedim als elements amb un índex, sino que ho feïm amb un valor.</p>
+<p>En aquesta estructura no accedim als elements amb un índex, sinó que es fa amb el valor d’una clau.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Donada una clau obtenció del seu valor:</span>
@@ -606,12 +608,12 @@ de <strong>qualsevol tipus immutable</strong>; els <em>strings</em> i els nombre
 <div class="section" id="mutabilitat">
 <h3>Mutabilitat<a class="headerlink" href="#mutabilitat" title="Permalink to this headline">¶</a></h3>
 <p>Un cop hem creat un diccionari, podem afegir, eliminar, canviar i moure elements a voluntat. <code class="docutils literal notranslate"><span class="pre">Python</span></code> ofereix una àmplia
-gamma de maneres de modificar els diccionaris.</p>
+gamma de maneres d’operar amb els diccionaris.</p>
 </div>
 <div class="section" id="modificacio-d-un-valor">
 <h3>Modificació d’un valor<a class="headerlink" href="#modificacio-d-un-valor" title="Permalink to this headline">¶</a></h3>
-<p>Un únic valor d’un diccionari es pot substituir, de manera molt similar a com modificam una variable, però ara hem
-d’especificar quin dels valors volem modificar, ho feim mitjançant la seva clau.</p>
+<p>Un únic valor d’un diccionari es pot substituir, de manera molt similar a com modifiquem una variable, però ara hem
+d’especificar quin dels valors volem modificar, ho fem mitjançant la seva clau.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Donada una clau podem modificar el seu valor</span>
@@ -645,7 +647,7 @@ d’especificar quin dels valors volem modificar, ho feim mitjançant la seva cl
 <div class="section" id="operadors-funcions-i-metodes">
 <h2>Operadors, funcions i mètodes<a class="headerlink" href="#operadors-funcions-i-metodes" title="Permalink to this headline">¶</a></h2>
 <p><strong>Operadors</strong></p>
-<p>Als diccionaris també podem aplicar el operador de pertanyença <code class="docutils literal notranslate"><span class="pre">in</span></code> i el seu modificador <code class="docutils literal notranslate"><span class="pre">not</span></code></p>
+<p>Als diccionaris també podem aplicar l’operador de pertinença <code class="docutils literal notranslate"><span class="pre">in</span></code> i el seu modificador <code class="docutils literal notranslate"><span class="pre">not</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Consultam pertanyença</span>
@@ -663,7 +665,7 @@ d’especificar quin dels valors volem modificar, ho feim mitjançant la seva cl
 </div>
 <p><strong>Funcions</strong></p>
 <p>Als diccionaris també podem usar la funció <code class="docutils literal notranslate"><span class="pre">len</span></code> que ens diu quants d’elements conté el diccionari.</p>
-<p>També podem usar les funcions <code class="docutils literal notranslate"><span class="pre">max</span></code> i <code class="docutils literal notranslate"><span class="pre">min</span></code> que ens retornen informació de les claus</p>
+<p>També podem usar les funcions <code class="docutils literal notranslate"><span class="pre">max</span></code> i <code class="docutils literal notranslate"><span class="pre">min</span></code> que ens retornen informació de les claus:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">longitud</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">dicc</span><span class="p">)</span>
@@ -714,37 +716,35 @@ les claus, els valors o tuples clau-valor:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"> <span class="pre">keys</span></code>: mètode que ens retorna una llista amb el conjunt de claus que hi ha al diccionari.</p></li>
 <li><p><code class="docutils literal notranslate"> <span class="pre">values</span></code>: mètode que ens retorna una llista amb els valors que hi ha al diccionari.</p></li>
-<li><p><code class="docutils literal notranslate"> <span class="pre">items</span></code>: mètode que ens retorna una llista de tuples. Cada tupla té una clau i els seu corresponent valor.</p></li>
+<li><p><code class="docutils literal notranslate"> <span class="pre">items</span></code>: mètode que ens retorna una llista de tuples. Cada tupla té una clau i el seu valor corresponent.</p></li>
 </ul>
-<p>D’aquí és important destacar 2 coses:</p>
+<p>És important destacar 2 coses:</p>
 <ul class="simple">
-<li><p>Les llistes no poden seguir cap ordre</p></li>
-<li><p>Obtenir llistes ens dona la possibilitat d’iterar sobre elles (usar un <code class="docutils literal notranslate"><span class="pre">for</span></code>)</p></li>
+<li><p>Les llistes que obtenim de les operacions anteriors, poden no seguir cap ordre.</p></li>
+<li><p>Obtenir llistes ens dóna la possibilitat d’iterar sobre elles (usar un <code class="docutils literal notranslate"><span class="pre">for</span></code>).</p></li>
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Del nostre diccionari en podem obtenir les claus amb el metode keys()</span>
-<span class="c1">#print(&quot;Claus&quot;, end= &quot; -&gt; &quot;)</span>
-<span class="c1">#print(dicc.keys())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Claus&quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span> <span class="s2">&quot; -&gt; &quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dicc</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
 
 
-    
 <span class="c1">#Podem tenir tots els valors</span>
-<span class="c1">#print(&quot;Valors&quot;, end= &quot; -&gt; &quot;)</span>
-<span class="c1">#print(dicc.values())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Valors&quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span> <span class="s2">&quot; -&gt; &quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dicc</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
 
 <span class="c1">#Tambe podem obtenir totes les parelles clau - valor en format llista de tuples</span>
-<span class="c1">#print(&quot;Parelles&quot;, end= &quot; -&gt; &quot;)</span>
-<span class="c1">#print(dicc.items())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Parelles&quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span> <span class="s2">&quot; -&gt; &quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dicc</span><span class="o">.</span><span class="n">items</span><span class="p">())</span>
 
-<span class="c1">#print(&quot;Iteracions&quot;)</span>
-<span class="c1">#print(&quot;Iteracio sobre les claus d&#39;un diccionari: &quot;)</span>
-<span class="c1">#for clau in dicc.keys():</span>
-  
-<span class="c1">#  print(clau, end= &quot; &quot;)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Iteracions&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Iteracio sobre les claus d&#39;un diccionari: &quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">clau</span> <span class="ow">in</span> <span class="n">dicc</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">clau</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span> <span class="s2">&quot; &quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
 
-<span class="c1">#print(&quot;&quot;)</span>
-<span class="c1">#print(&quot;Iteracio sobre les claus valors d&#39;un diccionari: &quot;)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Iteracio sobre les claus valors d&#39;un diccionari: &quot;</span><span class="p">)</span>
 
 <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">dicc</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
     <span class="n">clau</span><span class="p">,</span> <span class="n">valor</span> <span class="o">=</span> <span class="n">item</span> <span class="c1"># Desempaquetam els valors d&#39;una tupla</span>
@@ -752,7 +752,6 @@ les claus, els valors o tuples clau-valor:</p>
     
 
 <span class="c1">#NOTA: Aquest for es pot fer d&#39;almanco una altra manera mes: desempaquetar a l&#39;encapçalament</span>
-
 
 <span class="k">for</span> <span class="n">clau</span><span class="p">,</span> <span class="n">valor</span> <span class="ow">in</span> <span class="n">dicc</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">clau</span><span class="p">)</span>
@@ -764,7 +763,7 @@ les claus, els valors o tuples clau-valor:</p>
 <p>Les llistes i els diccionaris són dos dels tipus Python més usats. Com heu vist, tenen diverses similituds, però
 difereixen en com s’accedeix als seus elements. S’accedeix als elements de les llistes mitjançant un índex numèric en
 funció de l’ordre i al diccionari s’hi accedeix mitjançant claus.</p>
-<p>A causa d’aquesta diferència, les llistes i diccionaris acostumen a ser adequats per a circumstàncies diferents.</p>
+<p>A causa d’aquesta diferència, les llistes i diccionaris són adequats per a circumstàncies diferents.</p>
 </div>
 <div class="section" id="list-comprehension">
 <h2>List comprehension<a class="headerlink" href="#list-comprehension" title="Permalink to this headline">¶</a></h2>
@@ -906,10 +905,10 @@ deté quan s’esgota la seqüència més curta.</p>
 </div>
 <p><strong>Exercicis</strong></p>
 <ol class="simple">
-<li><p>Donada una llista amb els nombres de 1 a 100, obtenir una llista amb els senars</p></li>
-<li><p>Donada una llista amb tots els nombres de 1 a 7000 list(range(1,7001), eliminar tots els múltiples de 7.</p></li>
-<li><p>Crea un llista de tuples on tengui els primers 50 nombres parells, juntament amb els 50 primers nombres que no són
-múltiple de 7.</p></li>
+<li><p>Donada una llista amb els nombres d’1 a 100, obtenir una llista amb els senars.</p></li>
+<li><p>Donada una llista amb tots els nombres d’1 a 7000, eliminar tots els múltiples de 7.</p></li>
+<li><p>Crear un llista de tuples que tingui els primers 50 nombres parells, juntament amb els 50 primers nombres que no
+són múltiple de 7.</p></li>
 </ol>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -936,14 +935,14 @@ múltiple de 7.</p></li>
 </div>
 <div class="section" id="funcions-lambda">
 <h2>Funcions lambda<a class="headerlink" href="#funcions-lambda" title="Permalink to this headline">¶</a></h2>
-<p>A Python, utilitzem la paraula clau <code class="docutils literal notranslate"><span class="pre">lambda</span></code> per declarar una funció anònima.</p>
-<p>Una funció anònima fa referència a una funció declarada sense nom.</p>
+<p>A <code class="docutils literal notranslate"><span class="pre">Python</span></code>, utilitzem la paraula clau <code class="docutils literal notranslate"><span class="pre">lambda</span></code> per declarar una funció anònima. Una funció anònima fa referència a
+una funció declarada sense nom.</p>
 <p>Tot i que sintàcticament semblen diferents, les funcions lambda es comporten de la mateixa manera que les funcions
 regulars que es declaren usant la paraula clau <code class="docutils literal notranslate"><span class="pre">def</span></code>.</p>
 <p>Les següents són les característiques de les funcions lambda de Python:</p>
 <ul class="simple">
 <li><p>Una funció lambda pot prendre qualsevol nombre d’arguments.</p></li>
-<li><p>De forma sintàctica, les funcions lambda només es limiten a una sola expressió. Recordar que una expressió és una
+<li><p>De forma sintàctica, les funcions lambda només <strong>es limiten a una sola expressió</strong>. Recordar que una expressió és una
 peça de codi executada per la funció lambda.</p></li>
 </ul>
 <p>La seva sintaxi és:
@@ -957,15 +956,15 @@ peça de codi executada per la funció lambda.</p></li>
 
 <span class="n">f</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">num</span><span class="p">:</span> <span class="n">num</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span>
 
-<span class="c1">#print(f(22))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="mi">22</span><span class="p">))</span>
 
 
 <span class="c1"># no es necessari ni tan sols assignar un identificador</span>
 
-<span class="c1">#print((lambda num: num % 2 == 0)(5))</span>
+<span class="nb">print</span><span class="p">((</span><span class="k">lambda</span> <span class="n">num</span><span class="p">:</span> <span class="n">num</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)(</span><span class="mi">5</span><span class="p">))</span>
 
 
-<span class="c1"># podem tenir el nombre de parametres que volguem</span>
+<span class="c1"># Poden tenir el nombre de paràmetres que volguem</span>
 
 <span class="n">s</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">z</span><span class="p">:</span>  <span class="n">x</span><span class="o">+</span><span class="n">y</span><span class="o">+</span><span class="n">z</span>
 
@@ -974,19 +973,19 @@ peça de codi executada per la funció lambda.</p></li>
 </div>
 </div>
 </div>
-<p>Les funcions anònimes (<code class="docutils literal notranslate"><span class="pre">lambda</span></code>) s’utilitzen quan necessitam una funció durant un període de temps curt.</p>
+<p>Les funcions anònimes (<code class="docutils literal notranslate"><span class="pre">lambda</span></code>) s’utilitzen quan necessitem una funció durant un període curt de temps.</p>
 <p>Normalment s’utilitza quan es vol passar una funció com a argument per a funcions d’ordre superior, és a dir,
-funcions que prenen altres funcions com a arguments tal i com veurem a continuació.</p>
+funcions que prenen altres funcions com a arguments tal com veurem a continuació:</p>
 </div>
 <div class="section" id="map-i-filter">
 <h2>Map i Filter<a class="headerlink" href="#map-i-filter" title="Permalink to this headline">¶</a></h2>
 <p>Aquestes dues funcions ens permeten aplicar funcions a objectes iterables (llistes, tuples, strings o diccionaris)</p>
 <div class="section" id="map">
 <h3>Map<a class="headerlink" href="#map" title="Permalink to this headline">¶</a></h3>
-<p>La funció <code class="docutils literal notranslate"><span class="pre">map</span></code>  és  una funció del nucli de <code class="docutils literal notranslate"><span class="pre">Python</span></code> que com a paràmetres rep una funció i una o més llistes. La
+<p>La funció <code class="docutils literal notranslate"><span class="pre">map</span></code> és una funció del nucli de <code class="docutils literal notranslate"><span class="pre">Python</span></code> que com a paràmetres rep una funció i una o més llistes. La
 sintaxi de la funció map és la següent:</p>
 <p><code class="docutils literal notranslate"><span class="pre">map(funcio,</span> <span class="pre">iterable_1,</span> <span class="pre">iterable_2,</span> <span class="pre">...)</span> </code></p>
-<p><code class="docutils literal notranslate"><span class="pre">map</span> </code> aplica a cada element de l’iterable la funcio que rep com a primer parametre. I ens retorna un iterable que
+<p><code class="docutils literal notranslate"><span class="pre">map</span> </code> aplica a cada element de l’iterable la funció que rep com a primer paràmetre. I ens retorna un iterable que
 podem transformar de manera molt senzilla en una llista (usant la funció<code class="docutils literal notranslate"> <span class="pre">list</span></code>).</p>
 <p>Anem a veure un exemple:</p>
 <div class="cell docutils container">
@@ -1025,10 +1024,10 @@ podem transformar de manera molt senzilla en una llista (usant la funció<code c
 </div>
 <div class="section" id="filter">
 <h3>Filter<a class="headerlink" href="#filter" title="Permalink to this headline">¶</a></h3>
-<p>Aquesta funció també pertany al nucli de <code class="docutils literal notranslate"><span class="pre">Python</span></code> , la seva sintaxi és la següent:</p>
+<p>Aquesta funció també pertany al nucli de <code class="docutils literal notranslate"><span class="pre">Python</span></code>, la seva sintaxi és la següent:</p>
 <p><code class="docutils literal notranslate"><span class="pre">filter(funcio,</span> <span class="pre">iterable)</span> </code></p>
 <p>La funció que passem ha de retornar un valor de tipus booleà. L’objecte serà cridat per a cada ítem de l’iterable per
-fer-ne l’avaluació. Evidentment per cada element tendrem un valor <code class="docutils literal notranslate"><span class="pre">True</span></code> o <code class="docutils literal notranslate"><span class="pre">False</span></code>.  Aquesta funció només pot tenir un
+fer-ne l’avaluació. Evidentment per cada element tindrem un valor <code class="docutils literal notranslate"><span class="pre">True</span></code> o <code class="docutils literal notranslate"><span class="pre">False</span></code>.  Aquesta funció només pot tenir un
 sol paràmetre iterable</p>
 <p>La funció <code class="docutils literal notranslate"><span class="pre">filter</span></code> retorna una llista d’aquells elements que s’avaluen com a certs per la funció.</p>
 <p>Anem a veure un exemple:</p>

@@ -90,7 +90,7 @@
     <ul class="nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="../../intro.html">
-   Introduccio
+   Introducció
   </a>
  </li>
 </ul>
@@ -422,10 +422,10 @@ col·lecció d’elements amb les següents propietats:</p>
 <ul class="simple">
 <li><p><strong>Les llistes són ordenades</strong>: Una llista no és només una col·lecció d’objectes. L’ordre en què especifiquem els
 elements quan construïm una llista és una característica innata d’aquesta llista i es manté durant tota la seva vida.</p></li>
-<li><p><strong>Les llistes poden contenir qualsevol tipus d’element</strong>: També poden tenir elements de diferents tipus.</p></li>
+<li><p><strong>Les llistes poden contenir qualsevol mena d’element</strong>: Inclús una col·lecció d’elements de diferents tipus, encara que no sigui una opció massa recomanable.</p></li>
 <li><p><strong>Es pot accedir als elements de la llista mitjançant un índex</strong>: Es pot accedir als elements individuals d’una
-llista mitjançant un índex que especificarem entre claudàtors. La indexació de la llista comença en el valor zero.</p></li>
-<li><p><strong>Les llistes són mutables</strong>: Un cop creada, s’hi poden afegir, eliminar, canviar i moure elements. Python ofereix una
+llista mitjançant un índex que especificarem entre claudàtors després del nom de la variable. La indexació de la llista comença en el valor zero.</p></li>
+<li><p><strong>Les llistes són mutables</strong>: Un cop creada, s’hi poden afegir, eliminar, canviar i moure elements. <code class="docutils literal notranslate"><span class="pre">Python</span></code> ofereix una
 àmplia gamma d’operacions que permeten de modificar les llistes.</p></li>
 </ul>
 <p>Una llista té la següent forma:</p>
@@ -450,11 +450,11 @@ llista mitjançant un índex que especificarem entre claudàtors. La indexació 
 </div>
 <div class="section" id="creacio-d-una-llista">
 <h2>Creació d’una llista<a class="headerlink" href="#creacio-d-una-llista" title="Permalink to this headline">¶</a></h2>
-<p>Una llista buida és pot crear de dues maneres, usant una funció anomenada <code class="docutils literal notranslate"><span class="pre">list</span></code> que construeix una lista buida:</p>
+<p>Una llista buida es pot crear de dues maneres, usant una funció anomenada <code class="docutils literal notranslate"><span class="pre">list</span></code>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ll</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>La manera explícita que consisteix en posar els dos claudàtors sense cap element:</p>
+<p>La manera explícita que consisteix a posar els dos claudàtors sense cap element:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">llista2</span> <span class="o">=</span> <span class="p">[]</span>
 </pre></div>
 </div>
@@ -481,8 +481,8 @@ o com hem explicat abans no tenir cap element, amb el que aconseguim una llista 
 </div>
 <div class="section" id="accedint-als-elements-d-una-llista">
 <h2>Accedint als elements d’una llista<a class="headerlink" href="#accedint-als-elements-d-una-llista" title="Permalink to this headline">¶</a></h2>
-<p>Es pot accedir a elements individuals d’una llista especificant la seva posició, també anomenada index, entre
-claudàtors.  L’indexació de llistes comença en l’index zero, això vol dir que el primer element es troba en la posició 0
+<p>Es pot accedir a elements individuals d’una llista especificant la seva posició, també anomenada índex, entre
+claudàtors. Com ja hem comentat a la part introductòria, la indexació de llistes comença en l’índex zero, això vol dir que el primer element es troba en la posició 0
 i el darrer en la posició <span class="math notranslate nohighlight">\(n-1\)</span>.</p>
 <p>Vegem un petit exemple:</p>
 <div class="cell docutils container">
@@ -506,17 +506,17 @@ baz
 </div>
 </div>
 </div>
-<p>Per indexar també es poden usar nombres negatius. El significar d’usar un nombre negatiu és que l’indexació és fa
-del final de la llista enlloc del seu principi. D’aquesta manera tenim que:</p>
+<p>Per indexar també es poden usar nombres negatius. El significat d’usar un nombre negatiu és que la indexació es fa
+del final de la llista en lloc del seu principi. D’aquesta manera tenim que:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ll</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>    <span class="c1"># indexa el darrer element de la llista.</span>
 </pre></div>
 </div>
 <div class="section" id="slicing">
 <h3>Slicing<a class="headerlink" href="#slicing" title="Permalink to this headline">¶</a></h3>
-<p><code class="docutils literal notranslate"><span class="pre">Python</span></code> també permet una sintaxi d’indexació avançada que permet extreure subllistes d’una llista. Aquesta
-tècnica és coneguda com a <em>slicing</em>. Sigui <code class="docutils literal notranslate"><span class="pre">ll</span></code> una variable que conté una llista, una expressió de la forma
-<code class="docutils literal notranslate"><span class="pre">ll[inici:final]</span></code> retorna la porció de <code class="docutils literal notranslate"><span class="pre">ll</span></code>  que comença en la posició <code class="docutils literal notranslate"><span class="pre">inici</span></code>, i acaba en <code class="docutils literal notranslate"><span class="pre">final-1</span></code>. Es a dir la
-posició indexada per <code class="docutils literal notranslate"><span class="pre">final</span></code> no és inclosa dins aquesta subllista.</p>
+<p>‘Python’ també permet una sintaxi d’indexació avançada que permet extreure subllistes d’una llista. Aquesta
+tècnica és coneguda com a <em>slicing</em>. Sigui ‘ll’ una variable que identifica una llista, una expressió de la forma
+<code class="docutils literal notranslate"><span class="pre">ll[inici:final]</span></code> retorna la porció de ‘ll’ que comença en la posició ‘inici’, i acaba en la posició ‘final-1’. És a
+dir, la posició indexada per ‘final’ no és inclosa dins aquesta subllista.</p>
 <p>En resum, podem fer les següents seleccions:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="p">[</span><span class="n">inici</span><span class="p">:</span><span class="n">final</span><span class="p">]</span>  <span class="c1"># elements de la llista de la posició inici fins la posició final-1.</span>
 <span class="n">a</span><span class="p">[</span><span class="n">inici</span><span class="p">:]</span>       <span class="c1"># elements de la llista de la posició inici fins al final de la llista.</span>
@@ -524,7 +524,7 @@ posició indexada per <code class="docutils literal notranslate"><span class="pr
 <span class="n">a</span><span class="p">[:]</span>            <span class="c1"># seleccionam tota la llista</span>
 </pre></div>
 </div>
-<p>Vegem un exemple de <em>slicing</em>  en codi <code class="docutils literal notranslate"><span class="pre">Python</span></code>:</p>
+<p>Vegem un exemple de <em>slicing</em> en codi <code class="docutils literal notranslate"><span class="pre">Python</span></code>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Llista sencera&quot;</span><span class="p">)</span>
@@ -545,11 +545,10 @@ La meva subllista
 </div>
 </div>
 </div>
-<p>A partir del coneixement bàsic del <em>slicing</em> , podem realitzar seleccions més complexes afegint un darrer paràmetre
-<code class="docutils literal notranslate"><span class="pre">ll[inici:final:increment]</span></code>, aquest paràmetre <code class="docutils literal notranslate"><span class="pre">increment</span></code> indica l’increment dels indexos a l’hora de fer la selecció
-. Si no indicam cap <code class="docutils literal notranslate"><span class="pre">increment</span></code> el valor per defecte és 1. Com passa amb els índexos  <code class="docutils literal notranslate"><span class="pre">inici</span></code> i  <code class="docutils literal notranslate"><span class="pre">final</span></code>,
-l’<code class="docutils literal notranslate"><span class="pre">increment</span></code> també pot ser un nombre negatiu.</p>
-<p>D’aquesta manera, podrem fer les següents seleccions:</p>
+<p>A partir del coneixement bàsic del <em>slicing</em>, podem realitzar seleccions més complexes afegint un darrer paràmetre
+<code class="docutils literal notranslate"><span class="pre">ll[inici:final:increment]</span></code>, aquest paràmetre ‘increment’ indica l’increment dels índexs a l’hora de fer la selecció.
+Si no indiquem cap ‘increment’ el valor per defecte és 1. Com passa amb els índexs ‘inici’ i ‘final’,
+l’’increment’ també pot ser un nombre negatiu. D’aquesta manera, podrem fer les següents seleccions:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>    <span class="c1"># tots els elements de la llista en ordre invers</span>
 <span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>   <span class="c1"># els primers dos elements, en ordre invers</span>
 <span class="n">a</span><span class="p">[:</span><span class="o">-</span><span class="mi">3</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>  <span class="c1"># els dos darrers elements, en ordre invers</span>
@@ -564,7 +563,7 @@ l’<code class="docutils literal notranslate"><span class="pre">increment</span
 <span class="nb">print</span><span class="p">(</span><span class="n">llista</span><span class="p">[:</span><span class="mi">5</span><span class="p">])</span> <span class="c1"># Agafam del primer fins al 5e element</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">llista</span><span class="p">[</span><span class="mi">5</span><span class="p">:])</span> <span class="c1"># Agafam del 5e fins al darrer element</span>
 
-<span class="c1"># Epecificams pot especificar com és l&#39;increment dels indexos</span>
+<span class="c1"># Es pot especificar com és l&#39;increment dels indexos</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">llista</span><span class="p">[</span><span class="mi">1</span><span class="p">::</span><span class="mi">3</span><span class="p">])</span>
 
@@ -603,8 +602,9 @@ Senars del 3 al 9: [1, 3, 5, 7, 9]
 gamma d’eines que ens permeten modificar les llistes.</p>
 <div class="section" id="modificacio-d-un-valor">
 <h3>Modificació d’un valor<a class="headerlink" href="#modificacio-d-un-valor" title="Permalink to this headline">¶</a></h3>
-<p>Un únic valor d’una llista es pot substituir, de manera molt similar a com modificam una variable, en aquest cas hem
-d’especificar quin dels valors volem modificar, com podem suposar seleccionarem l’element mitjançant el seu índex.</p>
+<p>Un únic valor d’una llista es pot substituir de manera molt similar a com modifiquem una variable. En aquest cas hem
+d’especificar quin dels valors de la llista volem modificar. Com podem suposar, seleccionarem l’element mitjançant el
+seu índex.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">llista</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
@@ -645,9 +645,8 @@ llistes de la mateixa mida.</p>
 </div>
 <div class="section" id="metodes-que-modifiquen-una-llista">
 <h3>Mètodes que modifiquen una llista<a class="headerlink" href="#metodes-que-modifiquen-una-llista" title="Permalink to this headline">¶</a></h3>
-<p>Les operacions que tenim a continuació fan feina d’una manera que no haviem vist fins ara sobre cap element dels
-nostres programes. Aquestes operacions <strong>no són funcions ni subprogramen</strong> ja que modifiquen la llista sobre la qual
-estan actuant.</p>
+<p>Les operacions que tenim a continuació fan feina d’una manera que no havíem vist fins ara sobre cap element dels
+nostres programes. Aquestes operacions <strong>no són funcions ni subprogrames</strong>, ja que modifiquen la llista sobre la qual estan actuant, els coneixem com a <strong>mètodes</strong>. De moment ens és suficient posar-hi nom, però una mica més endavant en tornarem a parlar.</p>
 <p>Aquests mètodes són:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">append</span></code></p></li>
@@ -656,7 +655,7 @@ estan actuant.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">remove</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">pop</span></code></p></li>
 </ul>
-<p><strong>Descripció del mètodes</strong></p>
+<p><strong>Descripció dels mètodes</strong></p>
 <p>Append: Mètode que rep un element per paràmetre i l’afegeix al final de la llista</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -753,7 +752,7 @@ estan actuant.</p>
 </div>
 </div>
 </div>
-<p>Pop: Mètode que rep un enter per paràmetre i elimina el element que està indexat per aquest enter. Si no especificam
+<p>Pop: Mètode que rep un enter per paràmetre i elimina l’element que està indexat per aquest enter. Si no especifiquem
 cap valor per paràmetre, elimina el darrer element.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -804,8 +803,8 @@ True
 </div>
 <p>També tenim l’operador de concatenació <code class="docutils literal notranslate"><span class="pre">+</span></code> i el de multiplicació <code class="docutils literal notranslate"><span class="pre">*</span></code>.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">+</span></code> Ens permet concatenar varies llistes, tal com ho feim amb els Strings.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">*</span></code> Ens permet repetir varies vegades una llista, creant-ne una de nova.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">+</span></code> Ens permet concatenar vàries llistes, tal com ho fem amb els Strings.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">*</span></code> Ens permet repetir vàries vegades una llista, en crea una de nova.</p></li>
 </ul>
 <p>Veurem el seu ús mitjançant exemples:</p>
 <div class="cell docutils container">
@@ -856,9 +855,9 @@ True
 </div>
 </div>
 <p><strong>Exercici</strong></p>
-<p>Anem a tornar a fer el programa que compta la aparició de cada vocal, aquest cop enlloc d’usar 5 variables diferents
+<p>Tornem a fer el programa que compta l’aparició de cada vocal, aquest cop en lloc d’usar 5 variables diferents
 usarem una llista de longitud 5 que conté valors enters, on la primera posició ens indica quantes ‘a’ hem trobat,
-la segona quantes ‘e’ i aixi successivament.</p>
+la segona quantes ‘e’ i així successivament.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
@@ -895,9 +894,9 @@ la segona quantes ‘e’ i aixi successivament.</p>
 </div>
 <div class="section" id="llistes-com-a-parametres-de-subprogrames">
 <h3>Llistes com a paràmetres de subprogrames<a class="headerlink" href="#llistes-com-a-parametres-de-subprogrames" title="Permalink to this headline">¶</a></h3>
-<p>Degut a aquesta mutabilidad, es a dir, la capacitat de ser modificades en temps d’execució, les llistes passades com
-a paràmetre d’un subprograma tenen un comportament diferent al que tenen les variables que hem emprat fins ara.</p>
-<p>Si passam una llista com a paràmetre d’un subprograma, ja sigui un procediment o una funció i hi feim qualsevol
+<p>A causa de aquesta mutabilidad, és a dir, la capacitat de ser modificades en temps d’execució, les llistes passades com
+a paràmetre d’un subprograma tenen un comportament diferent del que tenen les variables que hem emprat fins ara.</p>
+<p>Si passem una llista com a paràmetre d’un subprograma, sigui un procediment o una funció i hi fem qualsevol
 modificació, aquesta es veurà reflectida en la variable de l’àmbit extern que ha estat usada en el pas de paràmetre.</p>
 <p>Anem a veure un exemple:</p>
 <div class="cell docutils container">
@@ -926,8 +925,9 @@ Llista despres de cridar al mètode afegeix_element:  [5]
 </div>
 <div class="section" id="iterant-sobre-llistes">
 <h2>Iterant sobre llistes<a class="headerlink" href="#iterant-sobre-llistes" title="Permalink to this headline">¶</a></h2>
-<p>Nosaltres ja coneixem la operació d’iteració, ara que som conscients de l’existència de llistes veurem com podem usar
-l’operador <code class="docutils literal notranslate"><span class="pre">for</span></code> per recorrer les llistes de manera automàtica. També com ho podem iterar mitjançant l’accés al seu index:</p>
+<p>Nosaltres ja coneixem l’operació d’iteració, ara que som conscients de l’existència de llistes veurem com podem usar
+l’operador <code class="docutils literal notranslate"><span class="pre">for</span></code> per recórrer les llistes de manera automàtica. També com ho podem iterar mitjançant l’accés al seu
+índex:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Recorrer una llista obtenint cada un dels seus elements</span>
@@ -1047,7 +1047,7 @@ acabada en punt:</p>
 
 <span class="n">lletra</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">stdin</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 
-<span class="c1"># Recorregut fins al final de la sequencia</span>
+<span class="c1"># Recorregut fins al final de la seqüència</span>
 <span class="k">while</span> <span class="n">lletra</span> <span class="o">!=</span> <span class="s1">&#39;.&#39;</span><span class="p">:</span>
 
     <span class="n">idx</span> <span class="o">=</span> <span class="mi">0</span>
@@ -1079,7 +1079,7 @@ acabada en punt:</p>
 </div>
 </div>
 <p><strong>Exercici</strong></p>
-<p>Per acabar fàrem un darrer exercici, que uneix el tema anterior amb aquest. Mostrar invertides totes les paraules d’una
+<p>Per acabar farem un darrer exercici, que uneix el tema anterior amb aquest. Mostrar invertides totes les paraules d’una
 seqüència.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
