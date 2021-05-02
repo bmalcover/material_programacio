@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tema 5 &#8212; Programacio I</title>
+    <title>Classe Conjunt &#8212; Programacio I</title>
     
   <link rel="stylesheet" href="../../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
 
@@ -56,8 +56,6 @@
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Llistes" href="Tema5_Llistes.html" />
-    <link rel="prev" title="Exercicis del Tema 4" href="../Tema4/Tema4_Exercicis_subprogrames.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -94,7 +92,7 @@
   </a>
  </li>
 </ul>
-<ul class="current nav sidenav_l1">
+<ul class="nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="../Tema1.html">
    Tema 1
@@ -187,8 +185,8 @@
   <i class="fas fa-chevron-down">
   </i>
  </li>
- <li class="toctree-l1 current active collapsible-parent">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="Tema5.html">
    Tema 5
   </a>
   <ul class="collapse-ul">
@@ -308,7 +306,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/chapters/Tema5/Tema5.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../../_sources/chapters/Tema5/Classe conjunt.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -333,7 +331,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/chapters/Tema5/Tema5.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/chapters/Tema5/Classe conjunt.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../../_static/images/logo_binder.svg"
@@ -356,16 +354,9 @@
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#dades-estructurades">
-   Dades estructurades
+  <a class="reference internal nav-link" href="#exercici">
+   Exercici
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#dades-simples-i-estructurades">
-     Dades simples i estructurades
-    </a>
-   </li>
-  </ul>
  </li>
 </ul>
 
@@ -378,48 +369,115 @@
         
               <div>
                 
-  <div class="section" id="tema-5">
-<h1>Tema 5<a class="headerlink" href="#tema-5" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="dades-estructurades">
-<h2>Dades estructurades<a class="headerlink" href="#dades-estructurades" title="Permalink to this headline">¶</a></h2>
-<p>Amb les eines i tècniques que hem après fins aquest moment hi ha problemes pels quals seríem capaços de construir un
-programa, la seva resolució ens obligaria a crear un nombre molt gran de variables o a usar estratègies que ens
-farien la implementació del programa poc comprensible o poc modificable, pensem en:</p>
+  <div class="section" id="classe-conjunt">
+<h1>Classe Conjunt<a class="headerlink" href="#classe-conjunt" title="Permalink to this headline">¶</a></h1>
+<p>Anem a dissenyar una classe que ens permeti representar el concepte de conjunt. Això implica que hem de pensar amb quins atributs tendrà aquesta classe.</p>
+<p>Per altra banda, sen’s demana que la classe que hem dissenyat tengui les següents operacions:</p>
 <ul class="simple">
-<li><p>Un programa que compta quants cops apareix cada lletra de l’abecedari.</p></li>
-<li><p>Mostrar la vocal que més cops apareix en un text.</p></li>
+<li><p>Un <strong>constructor</strong> que construeix el conjunt buit.</p></li>
+<li><p>Una operació que <strong>afegeix</strong> un element a un conjunt si aquest element no existeix en el conjunt.</p></li>
+<li><p>Una operació que <strong>elimina</strong> un element d’un conjunt.</p></li>
+<li><p>Una funció que ens retorna el <strong>nombre d’elements</strong> d’un conjunt.</p></li>
+<li><p>Les operacions <strong>intersecció</strong> i <strong>unió</strong>. Aquestes reben un conjunt i retornen un nou conjunt resultat d’aquesta operació.</p></li>
+<li><p>La operació <strong>pertany</strong> que rep un element per paràmetre i retorna <em>True</em> si l’element pertany al conjunt i <em>False</em> en cas contrari.</p></li>
+<li><p>Operació <strong>és subcojunt</strong> que rep un conjunt i retorna <em>True</em> si el conjunt de l’objecte <em>self</em> és subconjunt del conjunt rebut per paràmetre.</p></li>
+<li><p>Implementar la funció <em>string</em> de Python.</p></li>
+<li><p>Fer un mètode estàtic anomenat <strong>construeix</strong> que rep una llista i retorna un objecte del tipus Conjunt d’aquesta llista.</p></li>
 </ul>
-<p>D’altres problemes que pareixen senzills de resoldre ni tan sols som capaços de fer la implementació del programa
-corresponent, ja que sembla que ens falten eines per fer-ho. Posem per exemple els següents problemes:</p>
-<ul class="simple">
-<li><p>Donada una seqüència acabada en punt, poder mostrar-la girada per pantalla.</p></li>
-<li><p>Comptar el nombre d’aparicions de la primera paraula en un text.</p></li>
-<li><p>Guardar una relació de notes d’un examen, on tinguem el DNI d’un estudiant i la seva nota associada.</p></li>
-</ul>
-<div class="section" id="dades-simples-i-estructurades">
-<h3>Dades simples i estructurades<a class="headerlink" href="#dades-simples-i-estructurades" title="Permalink to this headline">¶</a></h3>
-<p>Això és pel fet que fins al moment nosaltres hem definit les <strong>variables</strong> com a <strong>dades simples</strong>, cada variable
-guarda un únic valor d’un únic tipus de dades.</p>
-<p>En aquest tema introduirem el concepte de <strong>dades estructurades</strong> o dades compostes que ens permetran agrupar
-conjunts de valors en una única variable, és a dir, en un únic nom.</p>
-<p>Així com no hi ha un únic tipus de dades elemental, tampoc hi ha una única manera de dotar d’estructura a les nostres
-dades. Durant aquest capítol en veurem les més rellevants:</p>
-<ul class="simple">
-<li><p>Llistes</p></li>
-<li><p>Tuples</p></li>
-<li><p>Diccionaris</p></li>
-<li><p>Classes</p></li>
-</ul>
-<p>Derivat del coneixement d’aquestes estructures també descobrirem noves capacitats del llenguatge:</p>
-<ul class="simple">
-<li><p><em>List comprehension</em></p></li>
-<li><p>Funcions <em>lambda</em></p></li>
-<li><p>Funcions <em>map</em> i <em>filter</em></p></li>
-<li><p>Funcions generadores de seqüències</p></li>
-</ul>
-<div class="toctree-wrapper compound">
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Conjunt</span><span class="p">:</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># El nostre conjunt només necessita un atribut, una llista amb els elements que hi formen part.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__elements</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="k">def</span> <span class="nf">afegir</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">e</span><span class="p">):</span>
+        <span class="c1"># Per afegir un element dins el conjunt primer hem de comprovar que encara no hi es</span>
+        <span class="k">if</span> <span class="n">e</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">__elements</span><span class="p">:</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">__elements</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">eliminar</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">e</span><span class="p">):</span>
+        <span class="c1"># Metode que rep un element i si esta dins el conjunt l&#39;elimina.</span>
+        <span class="k">if</span> <span class="n">e</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">__elements</span><span class="p">:</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">__elements</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">nombre_elements</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># metode que ens diu quants d&#39;elements formen part del conjunt</span>
+        <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__elements</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">unio</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">conjunt2</span><span class="p">):</span>
+        <span class="c1"># metode que rep dos conjunts i retorna un nou conjunt que és el resultat de la seva unio</span>
+        <span class="n">s</span> <span class="o">=</span> <span class="n">Conjunt</span><span class="p">()</span>
+
+        <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">__elements</span><span class="p">:</span>
+
+            <span class="n">s</span><span class="o">.</span><span class="n">afegir</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+
+        <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">conjunt2</span><span class="o">.</span><span class="n">__elements</span><span class="p">:</span>
+
+            <span class="n">s</span><span class="o">.</span><span class="n">afegir</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">s</span>
+
+    <span class="k">def</span> <span class="nf">interseccio</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">conjunt2</span><span class="p">):</span>
+        <span class="n">s</span> <span class="o">=</span> <span class="n">Conjunt</span><span class="p">()</span>
+
+        <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">__elements</span><span class="p">:</span>
+
+            <span class="k">if</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">conjunt2</span><span class="o">.</span><span class="n">__elements</span><span class="p">:</span>
+
+                <span class="n">s</span><span class="o">.</span><span class="n">afegir</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">s</span>
+
+    <span class="k">def</span> <span class="nf">pertany</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">element</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">element</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">__elements</span>
+
+    <span class="k">def</span> <span class="nf">es_subconjunt</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">conjunt2</span><span class="p">):</span>
+    <span class="c1"># Metode que retorna True si el subconjunt identificat amb la variable self es subconjunt del conjunt2</span>
+
+        <span class="n">essubconjunt</span> <span class="o">=</span> <span class="kc">True</span>
+
+        <span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">__elements</span><span class="p">:</span>
+
+            <span class="k">if</span> <span class="n">element</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">conjunt2</span><span class="p">:</span>
+
+                <span class="n">essubconjunt</span> <span class="o">=</span> <span class="kc">False</span>
+
+        <span class="k">return</span> <span class="n">essubconjunt</span>
+    
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">construeix</span><span class="p">(</span><span class="n">llista</span><span class="p">):</span>
+        
+        <span class="n">c</span> <span class="o">=</span> <span class="n">Conjunt</span><span class="p">()</span>
+        
+        <span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="n">llista</span><span class="p">:</span>
+            
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">c</span><span class="o">.</span><span class="n">pertany</span><span class="p">(</span><span class="n">element</span><span class="p">):</span>
+                
+                <span class="n">c</span><span class="o">.</span><span class="n">afegir</span><span class="p">(</span><span class="n">element</span><span class="p">)</span>
+                
+        <span class="k">return</span> <span class="n">c</span>
+
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># El metode __str__ es el mateix a totes les classes</span>
+        <span class="n">cadena</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+        
+        <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">__elements</span><span class="p">:</span>
+
+            <span class="n">cadena</span> <span class="o">+=</span> <span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span>
+
+        <span class="k">return</span> <span class="n">cadena</span>
+</pre></div>
 </div>
 </div>
+</div>
+<div class="section" id="exercici">
+<h2>Exercici<a class="headerlink" href="#exercici" title="Permalink to this headline">¶</a></h2>
+<p>Fer un programa que ens digui quines lletres tenen en comú 2 seqüències de lletres llegides del teclat i acabades en punt. No tendrem en compte els espais ni els punts.</p>
 </div>
 </div>
 
@@ -451,8 +509,6 @@ dades. Durant aquest capítol en veurem les més rellevants:</p>
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="../Tema4/Tema4_Exercicis_subprogrames.html" title="previous page">Exercicis del Tema 4</a>
-    <a class='right-next' id="next-link" href="Tema5_Llistes.html" title="next page">Llistes</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
