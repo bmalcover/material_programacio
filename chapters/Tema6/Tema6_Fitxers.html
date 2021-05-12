@@ -400,10 +400,10 @@
 <h1>Tema 6<a class="headerlink" href="#tema-6" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="fitxers">
 <h2>Fitxers<a class="headerlink" href="#fitxers" title="Permalink to this headline">¶</a></h2>
-<p>Fins ara els nostres programes sempre han rebut la informació d’una única font: el teclat i a l’hora de generar
-l’informació només la sabem mostrar per pantalla.</p>
-<p>Aquest fet ens suposa una limitació per al tipus de programes que podem construir, ja que la informació que produïm
-es perd cada cop que tornam a executar el programa o tancam l’ordinador.</p>
+<p>Fins ara els nostres programes sempre han rebut la informació d’una única font: el teclat. Per altra banda a l’hora de
+generar la informació només la sabem mostrar per pantalla.</p>
+<p>Aquest fet suposa una limitació per al tipus de programes que podem construir, ja que la informació que produïm
+es perd cada cop que tornem a executar el programa o tanquem l’ordinador.</p>
 <p>Podem superar aquestes problemàtiques si sabem fer ús de fitxers.</p>
 </div>
 <div class="section" id="que-es-un-fitxer">
@@ -412,38 +412,39 @@ es perd cada cop que tornam a executar el programa o tancam l’ordinador.</p>
 alguns dels seus aspectes.</p>
 <p>Bàsicament, un fitxer és un conjunt contigu de bytes usats per emmagatzemar dades. Aquestes dades s’organitzen en un
 format específic i poden ser tan simples com una seqüència de text o tan complexes com l’executable d’un programa. Els
-fitxers es poden emmagatzemar en memòria secundaria (disc duur) i per tant la informació que hi guardam perdura més
+fitxers es poden emmagatzemar en memòria secundària (disc dur) i per tant la informació que hi guardem perdura més
 enllà del temps que l’ordinador es troba encès.</p>
 <p>Els fitxers de la majoria de sistemes moderns es componen de tres parts:</p>
 <ul class="simple">
-<li><p><strong>Capçalera</strong>: metadades sobre el contingut del fitxer (nom de fitxer, organització interna, tipus, etc.)</p></li>
+<li><p><strong>Capçalera</strong>: metadades sobre el contingut del fitxer (nom de fitxer, organització interna, tipus, etc.).</p></li>
 <li><p><strong>Dades</strong>: contingut del fitxer escrit pel creador o editor.</p></li>
 <li><p><strong>Final del fitxer</strong> (EOF): caràcter especial que indica el final del fitxer, en el nostre cas aquest caràcter serà
-el caràcter buit “”</p></li>
+el caràcter buit “” (no confondre amb l’espai ” “).</p></li>
 </ul>
 </div>
 <div class="section" id="localitzacio-path">
 <h2>Localització (Path)<a class="headerlink" href="#localitzacio-path" title="Permalink to this headline">¶</a></h2>
-<p>Quan accedim a un fitxer del nostre sistema operatiu des d’un programa es necessàri indicar quin camí hem de seguir
-de la localització on es troba programa fins el fitxer. El camí o <em>path</em> del fitxer és representa en el nostre
+<p>Quan accedim a un fitxer del nostre sistema operatiu des d’un programa, és necessari indicar quin camí hem de seguir
+de la localització on es troba el programa fins a arribar al fitxer. El camí o <em>path</em> del fitxer es representa en el nostre
 programa amb un <em>string</em> a l’hora de construir un objecte de la classe fitxer. La localització d’un fitxer es
 divideix en tres parts principals:</p>
 <ul class="simple">
 <li><p><strong>Ruta de carpetes</strong>: la ubicació de la carpeta al sistema de fitxers on les carpetes posteriors estan separades
 per una barra inclinada <code class="docutils literal notranslate"><span class="pre">/</span></code>. Per accedir a carpetes anteriors usarem el símbol <code class="docutils literal notranslate"><span class="pre">..</span></code>.</p></li>
-<li><p><strong>Nom del fitxer</strong>: el nom real del fitxer. Com a anècdota podem comentar que windows no permetia noms iniciats
-amb punt fins windos 10 ja que era un nom reservat per a fitxers del propi sistema.</p></li>
-<li><p><strong>Extensió</strong>: el final del camí del fitxer marcat amb un símbol (.) ens serveix per indicar el tipus de fitxer.
-En cap cas condiciona el seu contingut.</p></li>
+<li><p><strong>Nom del fitxer</strong>: el nom real del fitxer. Com a anècdota podem comentar que Windows no permetia noms iniciats
+amb punt fins la seva versió 10, ja que era un nom reservat per a fitxers del mateix sistema.</p></li>
+<li><p><strong>Extensió</strong>: el final del camí del fitxer marcat amb un símbol (.) ens serveix per indicar el tipus de fitxer. En
+cap cas condiciona el seu contingut, un fitxer amb extensió <code class="docutils literal notranslate"><span class="pre">.txt</span></code> pot tenir informació referent a l’estructura
+d’una imatge.</p></li>
 </ul>
 <p>Els <em>paths</em> poden ser:</p>
 <ul class="simple">
-<li><p><strong>Absoluts</strong>: Respecte a l’arrel del sistema. El que coneixem com C: (Windows) o <code class="docutils literal notranslate"><span class="pre">/</span></code> (UNIX)</p></li>
-<li><p><strong>Relatius</strong>: Respecte a la carpeta on estam situats.</p></li>
+<li><p><strong>Absoluts</strong>: Respecte a l’arrel del sistema. El que coneixem com C: (Windows) o <code class="docutils literal notranslate"><span class="pre">/</span></code> (UNIX).</p></li>
+<li><p><strong>Relatius</strong>: Respecte a la carpeta on estem situats.</p></li>
 </ul>
 <pre><span></span>/  ← arrel (C: en windows)
 │ 
-├── joan/ 
+├── path/ 
 │   │
 │   ├── to/ 
 │   │   ├── main.py
@@ -453,18 +454,18 @@ En cap cas condiciona el seu contingut.</p></li>
 │   │
 │   └── dogs.txt 
 │
-└── animals.csv   </pre><p>Si ens trobam a la carpeta <strong>to</strong> i volem accedir al fitxer <strong>cats.txt</strong> ho farem amb els següents <em>strings</em></p>
+└── animals.csv   </pre><p>Si ens trobem en la carpeta <strong>to</strong> i volem accedir al fitxer <strong>cats.txt</strong> ho farem amb els següents <em>strings</em>:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>path_relatiu = &quot;cats.txt&quot;
 path_absolut = &quot;/path/to/cats.txt&quot;
 </pre></div>
 </div>
-<p>Si ens trobam a la carpeta <strong>path</strong> i volem accedir al fitxer <strong>cats.txt</strong> ho farem amb els següents <em>strings</em></p>
+<p>Si ens trobem a la carpeta <strong>path</strong> i volem accedir al fitxer <strong>cats.txt</strong> ho farem amb els següents <em>strings</em>:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>path_relatiu = &quot;to/cats.txt&quot;
 path_absolut = &quot;/path/to/cats.txt&quot;
 </pre></div>
 </div>
-<p>Si ens trobam a la carpeta <strong>to</strong> i volem accedir al fitxer <strong>dogs.txt</strong> ho farem amb els següents strings:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>path_relatiu = &quot;../dogs.txt&quot;
+<p>Si ens trobem a la carpeta <strong>to</strong> i volem accedir al fitxer <strong>dogs.txt</strong> ho farem amb els següents <em>strings</em>:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>path_relatiu = &quot;../../animals.csv&quot;
 path_absolut = &quot;/path/dogs.txt&quot;
 </pre></div>
 </div>
@@ -472,20 +473,20 @@ path_absolut = &quot;/path/dogs.txt&quot;
 <div class="section" id="us-de-fitxers-a-python">
 <h2>Us de fitxers a Python<a class="headerlink" href="#us-de-fitxers-a-python" title="Permalink to this headline">¶</a></h2>
 <p>Quan vulguem treballar amb un fitxer, el primer que hem de fer és obrir-lo. Això es fa invocant la funció integrada
-<code class="docutils literal notranslate"><span class="pre">open</span></code> que té un únic argument obligatori que és el camí (<em>path</em>)  cap al fitxer. <code class="docutils literal notranslate"><span class="pre">open</span></code> <strong>ens retorna un objecte de
+<code class="docutils literal notranslate"><span class="pre">open</span></code> que té un únic argument obligatori que és el camí (<em>path</em>) cap al fitxer. <code class="docutils literal notranslate"><span class="pre">open</span></code> <strong>ens retorna un objecte de
 la classe</strong> <em>file</em>.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">fitxer</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;harry_potter.txt&quot;</span><span class="p">)</span>  <span class="c1"># el fitxer harry_potter es a la mateixa carpeta que el fitxer amb el codi</span>
 </pre></div>
 </div>
-<p>Després d’obrir un fitxer, el següent a aprendre és com tancar-lo. Ho podem fer amb la sentència <code class="docutils literal notranslate"><span class="pre">close</span></code>.</p>
+<p>Després d’obrir un fitxer, el següent que aprendrem és com tancar-lo. Ho podem fer amb la sentència <code class="docutils literal notranslate"><span class="pre">close</span></code>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">fitxer</span><span class="o">.</span><span class="n">close</span><span class="p">()</span> <span class="c1"># tancam el fitxer </span>
 </pre></div>
 </div>
 <p><strong>Advertència!!!</strong> Hem d’assegurar-nos que un fitxer obert està tancat correctament.</p>
-<p>És important saber que tancar el fitxer és la nostra responsabilitat. En la majoria dels casos, un cop finalitzat el
-programa o en el mètode en el qual s’ha obert el fitxer, aquest es tancarà. No obstant això, no hi ha cap garantia que
-això succeirà i podem tenir ocupacions de memòria no desitjades.</p>
-<p>Assegurar-nos que el nostre codi es comporta d’una manera ben definida i no es dona qualsevol comportament no
+<p>És important saber que tancar el fitxer és la nostra responsabilitat com a programadors. En la majoria dels casos, un
+cop finalitzat el programa o en el mètode en el qual s’ha obert el fitxer, aquest es tancarà. No obstant això, no hi
+ha cap garantia que això succeeixi i podem tenir ocupacions de memòria no desitjades.</p>
+<p>Assegurar-nos que el nostre codi es comporta d’una manera ben definida i no es dóna qualsevol comportament no
 desitjat és una bona pràctica de programació.</p>
 <p>Una de les maneres recomanades d’assegurar que un fitxer es tanca correctament és usant la següent estructura de codi:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;harry_potter.txt&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fitxer</span><span class="p">:</span>
@@ -500,7 +501,7 @@ inesperat.</p>
 <h2>El mode d’un fitxer<a class="headerlink" href="#el-mode-d-un-fitxer" title="Permalink to this headline">¶</a></h2>
 <p>A l’hora d’obrir un fitxer també necessitarem usar el segon argument del mètode open: <code class="docutils literal notranslate"><span class="pre">mode</span></code>. Aquest argument és un
 <em>string</em> que pot contenir diverses combinacions de caràcters per representar com volem obrir el fitxer. El valor per
-defecte <code class="docutils literal notranslate"><span class="pre">r</span></code>, que representa obrir el fitxer en mode de només lectura, tal com hem fet a l’exemple anterior.</p>
+defecte és <code class="docutils literal notranslate"><span class="pre">r</span></code>, que representa obrir el fitxer en mode de només lectura, tal com hem fet a l’exemple anterior.</p>
 <table class="table table-hover">
 <thead>
 <tr>
@@ -530,8 +531,8 @@ defecte <code class="docutils literal notranslate"><span class="pre">r</span></c
 </div>
 <div class="section" id="llegir-i-escriure-en-fitxers-oberts">
 <h2>Llegir i escriure en fitxers oberts<a class="headerlink" href="#llegir-i-escriure-en-fitxers-oberts" title="Permalink to this headline">¶</a></h2>
-<p>Un cop obert un fitxer, hi volem poder llegir o escriure informació. Hi ha diversos mètodes que es poden cridar de la
-classe fitxer per ajudar-nos a realitzar aquesta tasca:</p>
+<p>Un cop obert un fitxer, hi podem llegir o escriure informació. Hi ha diversos mètodes de la classe fitxer que es
+poden usar per acomplir aquesta tasca:</p>
 <table class="table table-hover">
 <thead>
 <tr>
@@ -542,7 +543,7 @@ classe fitxer per ajudar-nos a realitzar aquesta tasca:</p>
 <tbody>
 <tr>
 <td><code>read(1)</code></td>
-<td>Llegeix des del fitxer en funció del nombre de bytes <code> size </code>. Si no es passa cap argument es llegirà tot el fitxer. **Nosaltres com feim amb el text de teclat, llegirem els fitxers caracter a caracter**.</td>
+<td>Llegeix des del fitxer en funció del nombre de bytes <code> size </code>. Si no es passa cap argument es llegirà tot el fitxer. Nosaltres com feim amb el text de teclat, llegirem els fitxers caracter a caracter.</td>
 </tr>
 <tr>
 <td><code>readline(size=-1)</code></td>
@@ -566,7 +567,7 @@ diversos mètodes útils per escriure en un fitxer:</p>
 <tbody>
 <tr>
 <td><code>write(string)</code></td>
-<td>Escriu el string en el fitxer. **Ens hem d'ocupar de fer el salt de línia pel nostre compte.**</td>
+<td>Escriu el string en el fitxer. Ens hem d'ocupar de fer el salt de línia pel nostre compte.</td>
 </tr>
 <tr>
 <td><code>writelines(seq)</code></td>
@@ -591,16 +592,10 @@ de nosaltres afegir les línies apropiades.</td>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="mi">85604876108</span><span class="n">a</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;harry_potter.txt&quot;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">harry</span><span class="p">:</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> 
-<span class="g g-Whitespace">      </span><span class="mi">3</span>   <span class="n">lletra</span> <span class="o">=</span> <span class="n">harry</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> 
-<span class="g g-Whitespace">      </span><span class="mi">5</span>   <span class="k">while</span> <span class="n">lletra</span> <span class="o">!=</span> <span class="s2">&quot;&quot;</span><span class="p">:</span> <span class="c1"># Final de fitxer</span>
-
-<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;harry_potter.txt&#39;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Juro solemnemente que esto es una travesura
+Me voy a la cama antes de que a alguno de los dos se os ocurra otra genial idea y acabemos muertos. O peor: expulsados
+Dobby no mata, solo mutila o hiere de gravedad
+Es Leviosa, no leviosa
 </pre></div>
 </div>
 </div>
@@ -618,8 +613,7 @@ de nosaltres afegir les línies apropiades.</td>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Juro solemnemente que esto es una travesura
 -Me voy a la cama antes de que a alguno de los dos se os ocurra otra genial idea y acabemos muertos. O peor: expulsados
 -Dobby no mata, solo mutila o hiere de gravedad
--Es Leviosa, no leviosa
--
+-Es Leviosa, no leviosa-
 </pre></div>
 </div>
 </div>
