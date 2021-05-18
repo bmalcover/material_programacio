@@ -214,7 +214,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../Tema5/Tema5_Exercicis_altres_estructures.html">
-     Exercicis Tema 5
+     Exercicis Tema 5/2
     </a>
    </li>
   </ul>
@@ -377,17 +377,17 @@
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#cerca-sequencial">
-     Cerca seqüèncial
+     Cerca seqüencial
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#cerca-binaria-o-dicotomica">
-     Cerca binaria o dicotòmica
+     Cerca binària o dicotòmica
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#implementacio-de-les-cerques">
-     Implementacio de les cerques
+     Implementació de les cerques
     </a>
    </li>
   </ul>
@@ -442,71 +442,74 @@
 <p>Hem dedicat tot el curs aprendre a fer programes que funcionin de la manera esperada en tots els casos, que siguin
 fàcils d’entendre i també de modificar.</p>
 <p>Per altra banda, no ens hem preocupat gens del temps que tarden els nostres programes ni de la qualitat dels nostres
-algorismes. Un exemple clar són els exercicis del Tema 4 on hem treballat amb seqüències numèriques on la nostra
+algorismes. Un exemple clar són els exercicis del Tema 4 on hem treballat amb seqüències numèriques i la nostra
 estratègia era la d’usar la força bruta per fer una cerca en tot el rang de valors disponibles.</p>
 <p>En aquest tema realitzarem una introducció al concepte de cost computacional dels algorismes, analitzarem els
 algorismes de cerca i introduirem els algorismes d’ordenació.</p>
 <p>L’ordenació és una aplicació fonamental en computació. La majoria de les dades produïdes per un programa estan
-ordenades d’alguna manera, i molts dels còmputs que ha de realitzar un programa són més eficients si les dades sobre
-els quals operen estan ordenades. Un dels tipus d’operació que més es beneficien d’operar sobre un conjunt de dades
+ordenades d’alguna manera, i molts dels còmputs que un programa ha de realitzar són més eficients si les dades sobre
+els quals operen estan ordenades. Un dels tipus d’operació que més es beneficien de fer feina sobre un conjunt de dades
 ordenades és la recerca d’una informació.</p>
 </div>
 <div class="section" id="complexitat-computacional">
 <h2>Complexitat Computacional<a class="headerlink" href="#complexitat-computacional" title="Permalink to this headline">¶</a></h2>
 <p>A classe hem vist que el mateix problema pot tenir diferents solucions, cada una d’aquestes solucions pot tenir
 diferent eficiència (rapidesa d’execució). Així, per exemple, un problema tan fàcil com multiplicar dos nombres
-enters és resolt mitjançant dos algoritmes diferents a Anglaterra i la resta d’Europa. Una altra forma molt més
-curiosa de realitzar la multiplicació dels nombres enters és el mètode rus, un mètode més complex que els anteriors i
+enters és resolt mitjançant dos algoritmes diferents un a Anglaterra i un altre a la resta d’Europa. Una altra forma
+molt més curiosa de realitzar la multiplicació dels nombres enters és el mètode rus, un mètode més complex que els anteriors i
 que requereix realitzar un nombre d’operacions matemàtiques bastant superior, tot i que obté el mateix resultat.</p>
 <p><a class="reference external" href="https://es.wikipedia.org/wiki/Multiplicaci%C3%B3n_por_duplicaci%C3%B3n">Més informació de la multiplicació rusa</a></p>
-<p>Quan hem de seleccionar un algorisme per resoldre un determinat problema és important determinar els recursos
+<p>Quan hem de seleccionar un algorisme per resoldre un problema concret, és important determinar els recursos
 computacionals necessaris: temps de computació i espai d’emmagatzematge en memòria, de moment no ens ocuparem de
-l’espai d’emmagatzematge. <strong>L’eficiència d’un algoritme no pot mesurar-se en unitats de temps, ja que cada ordinador
-té característiques pròpies i el temps pot variar.</strong></p>
+l’espai d’emmagatzematge. És important remarcar que <strong>l’eficiència d’un algoritme no pot mesurar-se en unitats de
+temps, ja que cada ordinador té característiques pròpies i el temps d’execució del mateix programa en dues màquines
+diferents pot variar.</strong></p>
 <p><strong>Principi d’invariància</strong></p>
-<p>Per estudiar la complexitat computacional dels algoritmes es pren per cert el principi de invariància: <em>dues
+<p>Per estudiar la complexitat computacional dels algoritmes es pren per cert el principi d’invariància: <em>dues
 implementacions diferents del mateix algoritme no difereixen en la seva eficiència més que en una constant
 multiplicativa</em>; és a dir, si dues implementacions del mateix algorisme necessiten t(n)<sub>1</sub> i t(n)
-<sub>2</sub> unitats de temps, on <em>n</em> és la mida de el vector d’entrada, llavors hi ha un c &gt; 0 tal que t(n)
+<sub>2</sub> unitats de temps, on <em>n</em> és la mida del vector d’entrada, llavors hi ha un c &gt; 0 tal que t(n)
 <sub>1</sub> &lt; c * t(n)<sub>2</sub>.</p>
 <p>Aquest principi permet concloure que un canvi en la màquina on s’executa un algorisme proporciona una millora d’un
-factor constant, mentre que les millores que depenen del nombre de dades que processa l’algoritme hauran de venir
-donades per canvis en el propi algorisme.</p>
+factor constant, mentre que les millores que depenen del nombre de dades que processa l’algorisme hauran de ser
+causades per canvis en el mateix algorisme.</p>
 <p><strong>Cost computacional d’un algorisme</strong></p>
-<p>El càlcul de l’eficiència d’un algorisme es basa en comptar el nombre d’operacions elementals que realitza. Per
+<p>El càlcul de l’eficiència d’un algorisme es basa a comptar el nombre d’operacions elementals que realitza. Per
 operació elemental s’entén una operació el temps d’execució de la qual és constant. En la següent imatge veim les
 funcions dels costs computacionals més usats i el seu increment d’execució en unitats de temps segons l’increment de
 la mida del conjunt de dades a tractar.</p>
 <div class="figure align-center" id="id1">
 <a class="reference internal image-reference" href="../../_images/cost.png"><img alt="Imatge costs" src="../../_images/cost.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 4 </span><span class="caption-text">Funcions de cost. TODO: posar referencia.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 4 </span><span class="caption-text">Funcions de cost.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="section" id="algorismes-de-cerca">
 <h2>Algorismes de cerca<a class="headerlink" href="#algorismes-de-cerca" title="Permalink to this headline">¶</a></h2>
 <p>Nosaltres ja hem treballat els algorismes de cerca, de manera general, un problema de cerca es pot enunciar de la
 següent manera: <em>donat un conjunt d’elements, determinar si un element es troba en el conjunt o no</em>.</p>
-<p>Fins ara només hem vist un tipus de cerca però veurem que en tenim certes variacions. L’elecció depèn de la forma en
-què es troben organitzades les dades: si es troben ordenades o si s’ignora la seva disposició o si es sap que estan
+<p>Fins ara només hem vist un tipus de cerca, però veurem que en tenim certes variacions. L’elecció depèn de la forma en
+què es troben organitzades les dades: si es troben ordenades, si s’ignora la seva disposició o si es sap que estan
 generades a l’atzar.</p>
 <div class="section" id="cerca-sequencial">
-<h3>Cerca seqüèncial<a class="headerlink" href="#cerca-sequencial" title="Permalink to this headline">¶</a></h3>
-<p>És l’algoritme de cerca més simple, menys eficient i que menys precondicions requereix: no requereix coneixements
-sobre el conjunt de recerca ni accés aleatori. Consisteix en comparar cada element del conjunt de recerca amb el
+<h3>Cerca seqüencial<a class="headerlink" href="#cerca-sequencial" title="Permalink to this headline">¶</a></h3>
+<p>És l’algorisme de cerca més simple, menys eficient i que menys precondicions requereix: no requereix coneixements
+sobre el conjunt de recerca ni accés aleatori. Consisteix a comparar cada element del conjunt de recerca amb el
 valor desitjat fins que aquest sigui trobat o fins que trobem el final de la seqüència. El pitjor dels casos
-consisteix en haver de comparar amb tots els elements de la seqüència abans de poder dir si l’element és allà o no,
-direm que el seu cost computacional és lineal, ja que depen linealment del nombre d’elements.</p>
+consisteix a haver de comparar amb tots els elements de la seqüència abans de poder dir si l’element és allà o no,
+direm que el seu cost computacional és lineal, ja que depèn linealment del nombre d’elements del conjunt.</p>
+<p>Suposarem que les dades es troben en una llista, l’algorisme de cerca sobre conjunts que obtenim de lectures del
+teclat i de fitxers es troben en altres capítols d’aquests apunts.</p>
 <p><strong>Algorisme</strong></p>
 <p>Dades necessàries</p>
 <ul class="simple">
-<li><p>vec: llista en la que es vol cercar la dada</p></li>
-<li><p>mida: mida del vector</p></li>
-<li><p>dada: element a cercar</p></li>
+<li><p>vec: llista en la que es vol cercar la dada.</p></li>
+<li><p>mida: mida del vector.</p></li>
+<li><p>dada: element a cercar.</p></li>
 </ul>
 <p>Variables necessàries</p>
 <ul class="simple">
-<li><p>trobat: variable booleana</p></li>
-<li><p>idx: index a consultar</p></li>
+<li><p>trobat: variable booleana.</p></li>
+<li><p>idx: index a consultar.</p></li>
 </ul>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
 <span class="n">trobat</span> <span class="o">=</span> <span class="kc">False</span>
@@ -517,13 +520,12 @@ direm que el seu cost computacional és lineal, ja que depen linealment del nomb
         <span class="n">trobat</span> <span class="o">=</span> <span class="kc">True</span>
         
     <span class="n">idx</span> <span class="o">=</span> <span class="n">idx</span> <span class="o">+</span> <span class="mi">1</span>
-            
-        
+
 </pre></div>
 </div>
 </div>
 <div class="section" id="cerca-binaria-o-dicotomica">
-<h3>Cerca binaria o dicotòmica<a class="headerlink" href="#cerca-binaria-o-dicotomica" title="Permalink to this headline">¶</a></h3>
+<h3>Cerca binària o dicotòmica<a class="headerlink" href="#cerca-binaria-o-dicotomica" title="Permalink to this headline">¶</a></h3>
 <p>És un mètode molt eficient, però té diversos prerequisits:</p>
 <ul class="simple">
 <li><p>El conjunt de cerca ha d’estar ordenat.</p></li>
@@ -534,15 +536,15 @@ la recerca amb el subconjunt anterior o posterior, respectivament a l’element 
 <p><strong>Algorisme</strong></p>
 <p>Dades necessàries</p>
 <ul class="simple">
-<li><p>vec: llista en la qual es vol cercar la dada</p></li>
-<li><p>mida: mida del vector</p></li>
-<li><p>dada: element a cercar</p></li>
+<li><p>vec: llista en la qual es vol cercar la dada.</p></li>
+<li><p>mida: mida del vector.</p></li>
+<li><p>dada: element a cercar.</p></li>
 </ul>
 <p>Variables necessàries</p>
 <ul class="simple">
-<li><p>centre: subindex central de l’interval</p></li>
-<li><p>inf: límit inferior de l’interval</p></li>
-<li><p>sup: límit superior de l’interval</p></li>
+<li><p>centre: subindex central de l’interval.</p></li>
+<li><p>inf: límit inferior de l’interval.</p></li>
+<li><p>sup: límit superior de l’interval.</p></li>
 </ul>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">inf</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="n">sup</span> <span class="o">=</span> <span class="n">mida</span><span class="o">-</span><span class="mi">1</span>
@@ -561,16 +563,16 @@ la recerca amb el subconjunt anterior o posterior, respectivament a l’element 
 </div>
 <p>En el millor cas, la dada és l’element que es troba a la meitat, es realitza 1 iteració. En el cas més desfavorable,
 el nombre d’iteracions és el menor enter K que verifica 2<sup>K</sup> = mida del conjunt. El seu ordre de complexitat
-és logarítmic, això implica que quant realitzam una cerca binaria només comparam amb el log<inf>2</inf> del nombre
+és logarítmic, això implica que quan realitzam una cerca binària només comparam amb el log<inf>2</inf> del nombre
 d’elements en el conjunt.</p>
 <p>A continuació veureu una taula que compara la cerca binària amb la cerca seqüencial. Es comprova que per a conjunts
 de dades grans la recerca binària segueix sent eficient mentre que la seqüencial es va degradant. La taula mostra el
-nombre d’elements a avaluar per un i altre algorisme per trobar un element en un conjunt de dades.</p>
+nombre d’elements a avaluar pels dos algorismes per trobar un element en un conjunt de dades.</p>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Mida del conjunt</p></th>
-<th class="head"><p>Cerca seqüèncial</p></th>
-<th class="head"><p>Cerca binaria</p></th>
+<th class="head"><p>Cerca seqüencial</p></th>
+<th class="head"><p>Cerca binària</p></th>
 </tr>
 </thead>
 <tbody>
@@ -600,7 +602,7 @@ nombre d’elements a avaluar per un i altre algorisme per trobar un element en 
 </tr>
 </tbody>
 </table>
-<p>A continuació teniu una comparació gràfica dels mètodes de cerca lineal i dicotòmica.</p>
+<p>A continuació teniu una comparació gràfica dels mètodes de cerca lineal (seqüencial) i dicotòmica.</p>
 <div class="figure align-center" id="id2">
 <a class="reference internal image-reference" href="../../_images/linealvsdico.jpg"><img alt="Imatge costs" src="../../_images/linealvsdico.jpg" style="width: 450px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 5 </span><span class="caption-text">Comparació gràfica entre la cerca lineal i la dicotòmica.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
@@ -608,7 +610,7 @@ nombre d’elements a avaluar per un i altre algorisme per trobar un element en 
 <p>En aquest enllaç teniu una comparació visual dels dos algorismes <a class="reference external" href="https://blog.penjee.com/wp-content/uploads/2015/04/binary-and-linear-search-animations.gif">Aquí</a></p>
 </div>
 <div class="section" id="implementacio-de-les-cerques">
-<h3>Implementacio de les cerques<a class="headerlink" href="#implementacio-de-les-cerques" title="Permalink to this headline">¶</a></h3>
+<h3>Implementació de les cerques<a class="headerlink" href="#implementacio-de-les-cerques" title="Permalink to this headline">¶</a></h3>
 <p>A continuació teniu l’implementació dels dos tipus de cerques en una funció que retorna un valor booleà que defineix
 si ha trobat o no l’element. Les dues funcions reben 2 paràmetres, el conjunt sobre el qual cercar i el valor a cercar.</p>
 <div class="cell docutils container">
@@ -699,12 +701,12 @@ si ha trobat o no l’element. Les dues funcions reben 2 paràmetres, el conjunt
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 10, 12, 20, 23, 27, 33, 37, 46, 51, 58, 59, 65, 70, 72, 75, 77, 78, 82, 84]
-DEBUG: esquerra: 0 dreta: 19 mitj: 9 valor: 51
-DEBUG: esquerra: 10 dreta: 19 mitj: 14 valor: 72
-DEBUG: esquerra: 10 dreta: 13 mitj: 11 valor: 59
-DEBUG: esquerra: 12 dreta: 13 mitj: 12 valor: 65
-Wall time: 2.99 ms
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 7, 14, 20, 26, 34, 42, 50, 51, 56, 63, 72, 80, 88, 90, 92, 95, 101, 108, 115]
+DEBUG: esquerra: 0 dreta: 19 mitj: 9 valor: 56
+DEBUG: esquerra: 10 dreta: 19 mitj: 14 valor: 90
+DEBUG: esquerra: 10 dreta: 13 mitj: 11 valor: 72
+DEBUG: esquerra: 10 dreta: 10 mitj: 10 valor: 63
+Wall time: 8.97 ms
 </pre></div>
 </div>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
@@ -742,27 +744,28 @@ Wall time: 2.99 ms
 <h2>Ordenació<a class="headerlink" href="#ordenacio" title="Permalink to this headline">¶</a></h2>
 <p>L’ordenació és el procés d’organitzar un conjunt de dades en algun ordre o seqüència específica, pot ser creixent o
 decreixent per dades numèriques o l’ordre alfabètic per caràcters o strings. Els algoritmes d’ordenació permuten els
-elements del conjunt de dades fins aconseguir l’ordre dessitjat.</p>
+elements del conjunt de dades fins a aconseguir l’ordre desitjat.</p>
 <p>Per aconseguir el nostre objectiu usarem dues operacions bàsiques: la comparació i l’intercanvi. Existeixen molts
-algorismes d’ordenació amb diferents avantatges i inconvenients en aquest tema veurem el més bàsic de tots.</p>
+algorismes d’ordenació amb diferents avantatges i inconvenients. En aquest tema veurem el més bàsic de tots.</p>
 <div class="section" id="metode-de-la-bombolla">
 <h3>Mètode de la bombolla<a class="headerlink" href="#metode-de-la-bombolla" title="Permalink to this headline">¶</a></h3>
-<p>Es basa en recórrer l’array un cert nombre de vegades, comparant parells de valors que ocupen posicions adjacents
-(0-1,1-2, …). Si les dues dades que comparam no estan ordenades, s’intercanvien. Aquesta operació es repeteix <em>n-1</em>
-vegades, sent <em>n</em> la mida del conjunt de dades d’entrada. Al final de la darrera passada l’element més gran estarà
-en darrera posició; en la segona, el segon element arribarà a la penúltima, i així sucesivament.</p>
+<p>Es basa en recórrer l’estructura de dades (en el nostre cas una llista) un cert nombre de vegades, comparant parells de
+valors que ocupen posicions adjacents (0-1,1-2, …). Si les dues dades que comparam no estan ordenades,
+s’intercanvien. Aquesta operació es repeteix <em>n-1</em>  vegades, sent <em>n</em> la mida del conjunt de dades d’entrada. Al
+final de la darrera passada l’element més gran estarà  en darrera posició; en la segona, el segon element arribarà a
+la penúltima, i així sucesivament.</p>
 <p>El seu nom es deu al fet que l’element de major valor <em>puja</em> a la posició final de l’array, a l’igual que les
 bombolles d’aire en un dipòsit pugen a la part superior. Per això ha de realitzar un recorregut pas a pas des de la
 seva posició inicial fins a la posició final de l’array.</p>
-<p>Aquest algorisme és el més bàsic d’ordenació i és que el seu cost computacional és molt alt, d’aquest tipus
-d’algorismes s’en diuen quadratics. En el millor cas, si tenim la llista ordenada, haurem de fer tantes comparacions
-com el nombre d’elements té la llista i en el pitjor dels casos el nombre de comparacions serà el nombre d’elements
-de la llista al quadrat.</p>
+<p>Com hem comentat anteriorment, aquest algorisme és el més bàsic d’ordenació i és que el seu cost computacional és molt
+alt, d’aquest tipus d’algorismes s’en diuen quadratics. En el millor cas, si tenim la llista ordenada, haurem de fer
+tantes comparacions com el nombre d’elements té la llista i en el pitjor dels casos el nombre de comparacions serà el
+nombre d’elements de la llista al quadrat.</p>
 <p><strong>Algorisme</strong></p>
 <p>Dades necessàries</p>
 <ul class="simple">
-<li><p>vec: llista en la que es vol ordenar</p></li>
-<li><p>mida: mida de la llista</p></li>
+<li><p>vec: llista que es vol ordenar.</p></li>
+<li><p>mida: mida de la llista.</p></li>
 </ul>
 <p>Variables necessàries</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">i</span> <span class="n">pren</span> <span class="n">tots</span> <span class="n">els</span> <span class="n">valors</span> <span class="n">de</span> <span class="mi">1</span> <span class="n">a</span> <span class="n">mida</span><span class="p">:</span>
@@ -812,16 +815,16 @@ de la llista al quadrat.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 1, 4, 7, 9, 4, 7, 2, 5, 3]
-[1, 1, 4, 7, 4, 7, 2, 5, 3, 9]
-[1, 1, 4, 4, 7, 2, 5, 3, 7, 9]
-[1, 1, 4, 4, 2, 5, 3, 7, 7, 9]
-[1, 1, 4, 2, 4, 3, 5, 7, 7, 9]
-[1, 1, 2, 4, 3, 4, 5, 7, 7, 9]
-[1, 1, 2, 3, 4, 4, 5, 7, 7, 9]
-[1, 1, 2, 3, 4, 4, 5, 7, 7, 9]
-[1, 1, 2, 3, 4, 4, 5, 7, 7, 9]
-[1, 1, 2, 3, 4, 4, 5, 7, 7, 9]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 2, 2, 7, 7, 9, 8, 1, 5, 3]
+[1, 2, 2, 7, 7, 8, 1, 5, 3, 9]
+[1, 2, 2, 7, 7, 1, 5, 3, 8, 9]
+[1, 2, 2, 7, 1, 5, 3, 7, 8, 9]
+[1, 2, 2, 1, 5, 3, 7, 7, 8, 9]
+[1, 2, 1, 2, 3, 5, 7, 7, 8, 9]
+[1, 1, 2, 2, 3, 5, 7, 7, 8, 9]
+[1, 1, 2, 2, 3, 5, 7, 7, 8, 9]
+[1, 1, 2, 2, 3, 5, 7, 7, 8, 9]
+[1, 1, 2, 2, 3, 5, 7, 7, 8, 9]
 </pre></div>
 </div>
 </div>
@@ -833,8 +836,8 @@ de la llista al quadrat.</p>
 la llista ja està ordenada podem aturar d’ordenar.</p>
 <p>Dades necessàries</p>
 <ul class="simple">
-<li><p>vec: llista en la que es vol ordenar</p></li>
-<li><p>mida: mida de la llista</p></li>
+<li><p>vec: llista que es vol ordenar.</p></li>
+<li><p>mida: mida de la llista.</p></li>
 </ul>
 <p>Variables necessàries</p>
 <ul class="simple">
@@ -881,12 +884,14 @@ la llista ja està ordenada podem aturar d’ordenar.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 9, 7, 7, 4, 3, 3, 3, 7, 7]
-[1, 7, 7, 4, 3, 3, 3, 7, 7, 9]
-[1, 7, 4, 3, 3, 3, 7, 7, 7, 9]
-[1, 4, 3, 3, 3, 7, 7, 7, 7, 9]
-[1, 3, 3, 3, 4, 7, 7, 7, 7, 9]
-[1, 3, 3, 3, 4, 7, 7, 7, 7, 9]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 8, 1, 8, 9, 2, 6, 6, 7, 2]
+[1, 1, 8, 8, 2, 6, 6, 7, 2, 9]
+[1, 1, 8, 2, 6, 6, 7, 2, 8, 9]
+[1, 1, 2, 6, 6, 7, 2, 8, 8, 9]
+[1, 1, 2, 6, 6, 2, 7, 8, 8, 9]
+[1, 1, 2, 6, 2, 6, 7, 8, 8, 9]
+[1, 1, 2, 2, 6, 6, 7, 8, 8, 9]
+[1, 1, 2, 2, 6, 6, 7, 8, 8, 9]
 </pre></div>
 </div>
 </div>
@@ -898,14 +903,14 @@ la llista ja està ordenada podem aturar d’ordenar.</p>
 en successives assignatures en veureu d’altres molt més avançats i per tant més complexes però també molt més
 eficients. Alguns dels més coneguts són:</p>
 <ul class="simple">
-<li><p><strong>Algorisme de selecció:</strong> Aquest mètode considera que la llista està formada per 2 parts: una part ordenada que
-estarà buida a el principi i al principi comprèn tot l’array; i una part desordenada  que a principi comprèn tot
+<li><p><strong>Algorisme de selecció:</strong> Aquest mètode considera que la llista està formada per 2 parts: una part ordenada que al
+principi estarà buida; i una part desordenada que a principi comprèn tot
 l’array i al final de l’algorisme estarà buida. El seu cost computacional és el mateix que el de l’algorisme de la
-bombolla però requereix de menys operacions.</p></li>
-<li><p><strong>Algorisme d’inserció:</strong> És un mètode molt similar a l’anterior, enlloc de tenir 2 parts es realitza l’ordenació
+bombolla però requereix menys operacions.</p></li>
+<li><p><strong>Algorisme d’inserció:</strong> És un mètode molt similar a l’anterior. Enlloc de tenir 2 parts es realitza l’ordenació
 inserint els elements en la posició que els hi toca de la llista. Tal com l’algorisme de selecció el seu cost
 computacional és el mateix que el de la bombolla però necessita menys operacions.</p></li>
-<li><p><strong>Quicksort:</strong> El mètode d’ordenació ràpida (Quicksort) per ordenar els elements de l’array es basa en el fet que
+<li><p><strong>Quicksort:</strong> El mètode d’ordenació ràpida (Quicksort) per ordenar els elements d’una llista es basa en el fet que
 és més ràpid i fàcil ordenar dues llistes petites que una llista gran. Es basa en l’estratègia típica de “divideix i
 venceràs”. La llista a ordenar es divideix en dues parts: una contindrà tots els valors menors o iguals a un cert
 valor (que se sol anomenar pivot) i l’altra amb els valors més grans que aquest valor.</p></li>
