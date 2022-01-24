@@ -10,9 +10,5 @@ durant les classes teòriques de l'assignatura.
 És necessari remarcar que el material es troba en un estat de revisió contínua i que serà amb la vostra ajuda i els 
 vostres comentaris que se'n podrà acabar fent una versió final. Per aquest motiu vull aprofitar per motivar-vos a 
 comentar tots aquells aspectes que penseu que es poden canviar del material que trobareu a continuació i que els farien 
-més útils pels futurs alumnes.
-
-Vull mencionar que el material que trobareu a continuació és una adaptació del que en Ramon Mas i en Pere Palmer 
-varen preparar i que actualment no es troba publicat. Els canvis realitzats són relatius tant al llenguatge de 
-programació usat com als canvis existents en el curriculum docent. El lector també trobarà altres exemples i 
-l'adjunció de llistats d'exercicis al final de cada capitol. 
+més útils pels futurs alumnes.  El lector també trobarà altres exemples i l'adjunció de llistats d'exercicis al final de
+cada capitol. 
