@@ -478,10 +478,8 @@ causades per canvis en el mateix algorisme.</p>
 operació elemental s’entén una operació el temps d’execució de la qual és constant. En la següent imatge veim les
 funcions dels costs computacionals més usats i el seu increment d’execució en unitats de temps segons l’increment de
 la mida del conjunt de dades a tractar.</p>
-<div class="figure align-center" id="id1">
-<a class="reference internal image-reference" href="../../_images/cost.png"><img alt="Imatge costs" src="../../_images/cost.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 4 </span><span class="caption-text">Funcions de cost.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
-</div>
+<p>Funcions de cost:</p>
+<p><img alt="cost" src="../../_images/cost.png" /></p>
 </div>
 <div class="section" id="algorismes-de-cerca">
 <h2>Algorismes de cerca<a class="headerlink" href="#algorismes-de-cerca" title="Permalink to this headline">¶</a></h2>
@@ -602,11 +600,8 @@ nombre d’elements a avaluar pels dos algorismes per trobar un element en un co
 </tr>
 </tbody>
 </table>
-<p>A continuació teniu una comparació gràfica dels mètodes de cerca lineal (seqüencial) i dicotòmica.</p>
-<div class="figure align-center" id="id2">
-<a class="reference internal image-reference" href="../../_images/linealvsdico.jpg"><img alt="Imatge costs" src="../../_images/linealvsdico.jpg" style="width: 450px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 5 </span><span class="caption-text">Comparació gràfica entre la cerca lineal i la dicotòmica.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
-</div>
+<p>A continuació teniu una comparació gràfica dels mètodes de cerca lineal (seqüencial) i dicotòmica:</p>
+<p><img alt="linealvsdico" src="../../_images/linealvsdico.jpg" /></p>
 <p>En aquest enllaç teniu una comparació visual dels dos algorismes <a class="reference external" href="https://blog.penjee.com/wp-content/uploads/2015/04/binary-and-linear-search-animations.gif">Aquí</a></p>
 </div>
 <div class="section" id="implementacio-de-les-cerques">
@@ -701,12 +696,13 @@ si ha trobat o no l’element. Les dues funcions reben 2 paràmetres, el conjunt
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 7, 14, 20, 26, 34, 42, 50, 51, 56, 63, 72, 80, 88, 90, 92, 95, 101, 108, 115]
-DEBUG: esquerra: 0 dreta: 19 mitj: 9 valor: 56
-DEBUG: esquerra: 10 dreta: 19 mitj: 14 valor: 90
-DEBUG: esquerra: 10 dreta: 13 mitj: 11 valor: 72
-DEBUG: esquerra: 10 dreta: 10 mitj: 10 valor: 63
-Wall time: 8.97 ms
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 4, 11, 18, 21, 27, 33, 37, 41, 49, 53, 59, 60, 66, 74, 79, 82, 85, 91, 94]
+DEBUG: esquerra: 0 dreta: 19 mitj: 9 valor: 49
+DEBUG: esquerra: 10 dreta: 19 mitj: 14 valor: 74
+DEBUG: esquerra: 10 dreta: 13 mitj: 11 valor: 59
+DEBUG: esquerra: 12 dreta: 13 mitj: 12 valor: 60
+DEBUG: esquerra: 13 dreta: 13 mitj: 13 valor: 66
+Wall time: 4.95 ms
 </pre></div>
 </div>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
@@ -781,10 +777,8 @@ nombre d’elements de la llista al quadrat.</p>
 </div>
 <div class="section" id="explicacio-grafica">
 <h3>Explicació gràfica<a class="headerlink" href="#explicacio-grafica" title="Permalink to this headline">¶</a></h3>
-<div class="figure align-center" id="id3">
-<a class="reference internal image-reference" href="../../_images/bubble.png"><img alt="algorisme bombolla" src="../../_images/bubble.png" style="width: 450px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 6 </span><span class="caption-text">Esquema visual de l’algorisme de la bombolla.</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
-</div>
+<p><img alt="Drag Racing" src="../../_images/bubble.png" /></p>
+<p>Esquema visual de l’algorisme de la bombolla.</p>
 <p><a class="reference external" href="https://www.geeksforgeeks.org/bubble-sort/">Més informació complementaria de l’algorisme</a></p>
 </div>
 <div class="section" id="implementacio-de-l-algorisme">
@@ -815,16 +809,16 @@ nombre d’elements de la llista al quadrat.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 2, 2, 7, 7, 9, 8, 1, 5, 3]
-[1, 2, 2, 7, 7, 8, 1, 5, 3, 9]
-[1, 2, 2, 7, 7, 1, 5, 3, 8, 9]
-[1, 2, 2, 7, 1, 5, 3, 7, 8, 9]
-[1, 2, 2, 1, 5, 3, 7, 7, 8, 9]
-[1, 2, 1, 2, 3, 5, 7, 7, 8, 9]
-[1, 1, 2, 2, 3, 5, 7, 7, 8, 9]
-[1, 1, 2, 2, 3, 5, 7, 7, 8, 9]
-[1, 1, 2, 2, 3, 5, 7, 7, 8, 9]
-[1, 1, 2, 2, 3, 5, 7, 7, 8, 9]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 4, 9, 9, 6, 9, 8, 9, 8, 1]
+[1, 4, 9, 6, 9, 8, 9, 8, 1, 9]
+[1, 4, 6, 9, 8, 9, 8, 1, 9, 9]
+[1, 4, 6, 8, 9, 8, 1, 9, 9, 9]
+[1, 4, 6, 8, 8, 1, 9, 9, 9, 9]
+[1, 4, 6, 8, 1, 8, 9, 9, 9, 9]
+[1, 4, 6, 1, 8, 8, 9, 9, 9, 9]
+[1, 4, 1, 6, 8, 8, 9, 9, 9, 9]
+[1, 1, 4, 6, 8, 8, 9, 9, 9, 9]
+[1, 1, 4, 6, 8, 8, 9, 9, 9, 9]
 </pre></div>
 </div>
 </div>
@@ -884,14 +878,12 @@ la llista ja està ordenada podem aturar d’ordenar.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 8, 1, 8, 9, 2, 6, 6, 7, 2]
-[1, 1, 8, 8, 2, 6, 6, 7, 2, 9]
-[1, 1, 8, 2, 6, 6, 7, 2, 8, 9]
-[1, 1, 2, 6, 6, 7, 2, 8, 8, 9]
-[1, 1, 2, 6, 6, 2, 7, 8, 8, 9]
-[1, 1, 2, 6, 2, 6, 7, 8, 8, 9]
-[1, 1, 2, 2, 6, 6, 7, 8, 8, 9]
-[1, 1, 2, 2, 6, 6, 7, 8, 8, 9]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 2, 4, 9, 2, 2, 9, 5, 2, 5]
+[1, 2, 4, 2, 2, 9, 5, 2, 5, 9]
+[1, 2, 2, 2, 4, 5, 2, 5, 9, 9]
+[1, 2, 2, 2, 4, 2, 5, 5, 9, 9]
+[1, 2, 2, 2, 2, 4, 5, 5, 9, 9]
+[1, 2, 2, 2, 2, 4, 5, 5, 9, 9]
 </pre></div>
 </div>
 </div>
