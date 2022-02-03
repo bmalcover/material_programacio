@@ -214,7 +214,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../Tema5/Tema5_Exercicis_altres_estructures.html">
-     Exercicis Tema 5
+     Exercicis Tema 5/2
     </a>
    </li>
   </ul>
@@ -366,8 +366,8 @@
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#nom">
-     Nom
+    <a class="reference internal nav-link" href="#nom-o-identificador">
+     Nom o identificador
     </a>
    </li>
    <li class="toc-h2 nav-item toc-entry">
@@ -395,6 +395,11 @@
    <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#operadors-de-comparacio">
      Operadors de comparació
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#representacio-dels-nombres-en-coma-flotant">
+     Representació dels nombres en coma flotant
     </a>
    </li>
    <li class="toc-h2 nav-item toc-entry">
@@ -444,21 +449,24 @@
                 
   <div class="section" id="dades">
 <h1>Dades<a class="headerlink" href="#dades" title="Permalink to this headline">¶</a></h1>
-<p>Les dades que utilitzen els programes es guarden dins la memòria principal i les identificam mitjançant el
+<p>Les dades que utilitzen els programes es guarden dins la memòria principal mitjançant el
 que anomenem com a <strong>variables</strong>. Com el nom indica, una variable pot canviar de contingut al llarg de l’execució d’un
 programa.</p>
 <p>Tenen tres característiques que les defineixen completament: el seu nom, el seu tipus i el seu valor.</p>
-<div class="section" id="nom">
-<h2>Nom<a class="headerlink" href="#nom" title="Permalink to this headline">¶</a></h2>
-<p>És una combinació de caràcters, dígits i el signe de subratllat que permeten identificar una variable de
+<div class="section" id="nom-o-identificador">
+<h2>Nom o identificador<a class="headerlink" href="#nom-o-identificador" title="Permalink to this headline">¶</a></h2>
+<p>És una combinació de caràcters, dígits i el signe de subratllat (<code class="docutils literal notranslate"><span class="pre">_</span></code>) que permeten identificar una variable de
 manera única. Tot nom ha de començar per un caràcter.</p>
 <ul class="simple">
 <li><p><strong>Exemples de noms vàlids</strong>: x, y, pi, var2, var_2, preu_de_cost</p></li>
 <li><p><strong>Exemples de noms invàlids</strong>: 14_de_maig , 35a , +set, capitol 14</p></li>
 </ul>
-<p>És molt recomanable que les variables comencin amb minúscula.</p>
-<p>Hem de pensar que hi ha una sèrie de noms que <code class="docutils literal notranslate"><span class="pre">Python</span></code> utilitza com a part del llenguatge i per tant no són vàlids
-com a nom de variable, ja que ens poden donar resultats inesperats. A continuació els podeu veure:</p>
+<p>És altament recomanable que els identificadors de les variables comencin amb minúscula i que el seu nom serveixi per
+entrendre el significat de la variable dins el context del programa.</p>
+<p>Hem de pensar que hi ha una sèrie de noms que cada llenguatge de programació utilitza com a part del
+llenguatge i per tant no són vàlids com a nom de variable, es diu que estan reservats i si els usam obtindrem o erros
+o ens poden donar resultats inesperats.</p>
+<p>A la taula que teniu a continuació els podeu veure:</p>
 <div class="table-responsive">
 <table class="table table-hover">
 <thead>
@@ -526,43 +534,49 @@ com a nom de variable, ja que ens poden donar resultats inesperats. A continuaci
 </div>
 <div class="section" id="tipus">
 <h2>Tipus<a class="headerlink" href="#tipus" title="Permalink to this headline">¶</a></h2>
-<p>El tipus defineix la natura dels valors que pot tenir una variable. També limita les operacions que es poden fer amb
-elles.</p>
+<p>El tipus defineix la natura dels valors que pot emmagatzemar una variable. També limita les operacions que es poden fer
+amb elles.</p>
 <p>Els tipus de dades elementals són: caràcter, enter, real i booleà:</p>
 <p><strong>Caràcter</strong> permet representar informació referent a caràcters simples i a seqüències de caràcters, es representen
-entre comes, ja siguin simples ‘ o dobles “. Al món de la programació coneixem una seqüència de caràcters amb el nom de
-<em>String</em> (<em>str</em>). <code class="docutils literal notranslate"><span class="pre">Python</span></code> considera els caràcters com strings de longitud 1.</p>
+entre comes, ja siguin simples <code class="docutils literal notranslate"><span class="pre">'</span></code> o dobles <code class="docutils literal notranslate"><span class="pre">&quot;</span></code>. Al món de la programació coneixem una seqüència de caràcters amb el nom
+de <em>String</em> (<em>str</em>). <code class="docutils literal notranslate"><span class="pre">Python</span></code> considera els caràcters com strings de longitud 1.</p>
 <ul class="simple">
 <li><p>Exemples de caràcters: ‘a’, ‘b’, ‘\n’.</p></li>
 <li><p>Exemples de <em>String</em>: ‘3’, “llonguet”, “Josep”.</p></li>
 </ul>
-<p><strong>Enter</strong> (<em>int</em>) permet representar valors numèrics tant positius com negatius.</p>
+<p><strong>Enter</strong> (<em>int</em>) permet representar valors numèrics enters tant positius com negatius, el valor màxim i mínim
+que podem emprar no està acotat pel llenguatge, dependrà de la memòria disponible en la màquina en la qual executem el
+codi.</p>
 <ul class="simple">
 <li><p>Exemples d’enters: -33, 14, 28 o 8545445.</p></li>
 </ul>
-<p><strong>Real</strong> (<em>float</em>): aquest tipus designa un nombre de coma flotant. Aquests valors s’especifiquen amb un punt
-decimal. Opcionalment, es pot afegir el caràcter e o E seguit d’un enter positiu o negatiu per especificar la notació
-científica.</p>
+<p><strong>Real</strong> (<em>float</em>): aquest tipus designa un nombre de coma flotant. Aquests valors s’especifiquen separant la part
+entera de la part decimal amb un punt. Opcionalment, es pot afegir el caràcter e o E seguit d’un enter positiu o
+negatiu per especificar el nombre emprant la notació científica.</p>
 <ul class="simple">
 <li><p>Exemples de nombres reals: -1.2, 3.1416, -0.26989, 4. , 3e7 (3000000.0), 1.6e-4 (0.00016).</p></li>
 </ul>
-<p><strong>Complex</strong>: valors numèrics en format complex. S’especifiquen com <part real>+<part imaginaria>j.</p>
+<p><strong>Complex</strong>: valors numèrics en format complex. S’especifiquen de la següent manera: <code class="docutils literal notranslate"><span class="pre">&lt;part</span> <span class="pre">real&gt;+&lt;part</span> <span class="pre">imaginaria&gt;j</span></code>.</p>
 <ul class="simple">
 <li><p>Exemples de nombres complexos: 2+3j, 33+0j.</p></li>
 </ul>
-<p><strong>Booleà</strong>: valors lògics. Poden tenir únicament dos valors: veritat (<em>True</em>) o fals (<em>False</em>).</p>
-<p>El valor màxim i mínim que podem guardar en una variable de tipus enter o real no estan definits, com passa en altres
-llenguatges, depenen de la màquina on executam el codi.</p>
+<p><strong>Booleà</strong>: ens permet representar valors lògics. Poden tenir únicament dos valors: veritat (<code class="docutils literal notranslate"><span class="pre">True</span></code>) o fals
+(<code class="docutils literal notranslate"><span class="pre">False</span></code>).</p>
+<p>El valor màxim i mínim que podem guardar en una variable de tipus enter o real, la llargària
+màxima que podem tenir en un <em>String</em> a <code class="docutils literal notranslate"><span class="pre">Python</span></code> no estan definits tal com passa en altres llenguatges, depenen de la
+màquina on executem el codi. Aquest fet implica que hem de construir els nostres programes amb certa cura, pensant
+que si el volem executar en un altre ordinador amb menys capacitat potser aquest no pot fer-ho.</p>
 </div>
 </div>
 <div class="section" id="declaracions-de-variables">
 <h1>Declaracions de variables<a class="headerlink" href="#declaracions-de-variables" title="Permalink to this headline">¶</a></h1>
-<p>Durant el transcurs del programa, el programador ha d’especificar cada una de les variables que necessitarà.</p>
-<p>L’especificació d’aquestes variables s’anomena una declaració.</p>
-<p>Normalment, aquestes declaracions es fan a l’inici del programa. Com a mínim, s’ha de definir el nom i s’ha d’assignar
-un valor inicial. Si no es vol (o no es pot) assignar un valor, a <code class="docutils literal notranslate"><span class="pre">Python</span></code> tenim el valor nul: <strong>None</strong>.</p>
-<p>A continuació teniu la primera mostra de codi, declaram una variable de cada un dels diferents tipus de dades que hem
-descrit en la secció anterior:</p>
+<p>Durant el transcurs del programa, el programador ha d’especificar cada una de les variables que necessitarà.
+L’especificació de cada una d’aquestes variables s’anomena una declaració.</p>
+<p>Normalment, aquestes declaracions es fan a l’inici del programa encara que si és necessari es pot fer en qualsevol
+punt. En fer una declaració és necessari com a mínim: definir el nom i assignar un valor inicial.
+Si no es vol (o no es pot) assignar un valor, a <code class="docutils literal notranslate"><span class="pre">Python</span></code> existeix el valor nul: <strong>None</strong>.</p>
+<p>A continuació teniu la primera mostra de codi en la que declarem una variable de cada un dels diferents tipus de dades
+que hem descrit en la secció anterior:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">caracter</span> <span class="o">=</span> <span class="s1">&#39;a&#39;</span>
@@ -573,7 +587,9 @@ descrit en la secció anterior:</p>
 <span class="n">logic</span> <span class="o">=</span> <span class="kc">False</span>
 
 
-<span class="c1">#Aquest codi ara no es rellevant per a nosaltres.</span>
+<span class="c1"># Aquest codi ara no es rellevant per a nosaltres,</span>
+<span class="c1"># serveix per verificar el tipus de dades de cada variable</span>
+
 <span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">caracter</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">estring</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">enter</span><span class="p">))</span>
@@ -608,21 +624,22 @@ amb els quals actua un operador s’anomenen <strong>operands</strong>.</p>
 <p>En aquest cas, l’operador <strong>+</strong> ens permet sumar els operands <code class="docutils literal notranslate"><span class="pre">x</span></code> i <code class="docutils literal notranslate"><span class="pre">y</span></code> junts i guardar el resultat en la variable
 del mateix nom. Hem de destacar que en aquest codi hem necessitat definir tres variables diferents.</p>
 <p>Un operand pot ser una variable o un literal. Definim els <strong>literals</strong> en un programa com la idea d’expressar un
-valor que no canvia en el codi font, aquests son d’un dels diferents tipus de dades que hem descrit
+valor que no canvia en el codi font, aquests sempre seran d’un dels diferents tipus de dades bàsics que hem descrit
 anteriorment.</p>
-<p>A continuació tenim un altre fragment de codi en el qual usam altres operadors i literals de tipus enter:</p>
+<p>A continuació tenim un altre fragment de codi en el qual combinem diferents operadors, variables i literals de tipus
+enter:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">10</span>
 <span class="n">b</span> <span class="o">=</span> <span class="mi">20</span>
 <span class="n">x</span> <span class="o">=</span> <span class="mi">45</span>
 <span class="n">r</span> <span class="o">=</span> <span class="p">(</span><span class="n">a</span> <span class="o">+</span> <span class="n">b</span> <span class="o">-</span> <span class="mi">5</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="mi">10</span> <span class="o">+</span> <span class="mi">20</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Una seqüència d’operands i operadors, com a + b - 5, s’anomena <strong>expressió</strong>. <code class="docutils literal notranslate"><span class="pre">Python</span></code> admet molts operadors
+<p>Una seqüència d’operands i operadors, com <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">+</span> <span class="pre">b</span> <span class="pre">-</span> <span class="pre">5</span></code>, s’anomena <strong>expressió</strong>. <code class="docutils literal notranslate"><span class="pre">Python</span></code> admet molts operadors
 diferents per combinar operands de diferents tipus, això ens permetrà crear expressions diferents per
-solventar els diferents problemes que sen’s presentin.</p>
+solucionar els diferents problemes que se’ns presentin.</p>
 <div class="section" id="operadors-aritmetics">
 <h2>Operadors aritmètics<a class="headerlink" href="#operadors-aritmetics" title="Permalink to this headline">¶</a></h2>
-<p>La taula següent llista els operadors aritmètics compatibles amb Python:</p>
+<p>La taula següent mostra els operadors aritmètics compatibles amb <code class="docutils literal notranslate"><span class="pre">Python</span></code>:</p>
 <div class="table-responsive">
 <table class="table table-hover">
 <thead>
@@ -721,7 +738,8 @@ solventar els diferents problemes que sen’s presentin.</p>
 <div class="section" id="operadors-de-comparacio">
 <h2>Operadors de comparació<a class="headerlink" href="#operadors-de-comparacio" title="Permalink to this headline">¶</a></h2>
 <p>Els operadors de comparació s’utilitzen normalment en contextos <em>booleans</em> com els que ens serveixen per controlar el
-flux del programa, com veurem més endavant. El resultat d’usar un operador de comparació sempre és del tipus <em>booleà</em>.</p>
+flux del programa, com veurem un poc més endavant. El resultat d’usar un operador de comparació sempre és del tipus
+<em>booleà</em>.</p>
 <div class="table-responsive">
 <table class="table table-hover">
 <thead>
@@ -772,11 +790,6 @@ flux del programa, com veurem més endavant. El resultat d’usar un operador de
 </tbody>
 </table>
 </div>
-<div class="admonition-curiositat admonition">
-<p class="admonition-title">Curiositat</p>
-<p>El valor emmagatzemat internament per a una variable en coma flotant pot no ser el que un pensaria que seria. Per
-aquest motiu, és poc pràctic comparar variables del tipus coma flotant amb l’operador d’igualtat exacta  <code class="docutils literal notranslate"><span class="pre">==</span></code>.</p>
-</div>
 <p>Aquí teniu alguns exemples del seu ús:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -825,6 +838,28 @@ aquest motiu, és poc pràctic comparar variables del tipus coma flotant amb l�
 </div>
 </div>
 </div>
+</div>
+<div class="section" id="representacio-dels-nombres-en-coma-flotant">
+<h2>Representació dels nombres en coma flotant<a class="headerlink" href="#representacio-dels-nombres-en-coma-flotant" title="Permalink to this headline">¶</a></h2>
+<p>Els nombres de coma flotant es representen a l’ordinador com a fraccions en base 2 (fraccions binàries). Per exemple,
+el valor decimal <code class="docutils literal notranslate"><span class="pre">0.125</span></code> es pot representar amb l’expressió: <code class="docutils literal notranslate"><span class="pre">1/10</span> <span class="pre">+</span> <span class="pre">2/100</span> <span class="pre">+</span> <span class="pre">5/1000</span></code> o amb aquesta altra: <code class="docutils literal notranslate"> <span class="pre">0/2</span> <span class="pre">+</span> <span class="pre">0/4</span> <span class="pre">+</span> <span class="pre">1/8</span></code>. L’única diferència entre les dues és que la primera està expressada en base 10 i la segona en base 2.</p>
+<p>El problema que trobem en la representació dels nombres en coma flotant és que la majoria de fraccions decimals no es
+poden representar exactament com a fraccions binàries. Una conseqüència és que, en general, els nombres decimals de coma
+flotant que introduïm en els nostres programes només s’aproximen als nombres binaris de coma flotant que queden
+emmagatzemats a la màquina.</p>
+<p>A la majoria de les màquines actuals, els flotants s’aproximen mitjançant una fracció binària amb el numerador
+utilitzant els primers 53 bits començant pel bit més significatiu i amb el denominador com a potència de dos.
+En el cas d’1/10, la fracció binària és <code class="docutils literal notranslate"><span class="pre">3602879701896397</span> <span class="pre">/</span> <span class="pre">2</span> <span class="pre">**</span> <span class="pre">55</span></code>.</p>
+<p>Quan programem no ens adonem d’aquesta aproximació a causa de la manera com es mostren els valors per pantalla,
+<code class="docutils literal notranslate"><span class="pre">Python</span></code> només imprimeix una aproximació al valor decimal de l’aproximació binària emmagatzemada per la màquina. A la
+majoria de màquines, si Python imprimís el valor decimal veritable de l’aproximació binària emmagatzemada per a <code class="docutils literal notranslate"><span class="pre">0,</span> <span class="pre">1</span></code>, hauria de mostrar: <code class="docutils literal notranslate"><span class="pre">0.1000000000000000055511151231257827021181583404541015625</span></code>.</p>
+<div class="admonition-curiositat admonition">
+<p class="admonition-title">Curiositat</p>
+<p>Curiosament, hi ha diversos nombres decimals diferents que comparteixen la mateixa fracció binària aproximada més
+propera. Per exemple, els nombres <code class="docutils literal notranslate"><span class="pre">0,1</span></code> , <code class="docutils literal notranslate"><span class="pre">0,10000000000000001</span></code> i <code class="docutils literal notranslate"><span class="pre">0,</span> <span class="pre">1000000000000000055511151231257827021181583404541015625</span></code>
+són tots aproximats amb <code class="docutils literal notranslate"><span class="pre">3602879701896397</span> <span class="pre">/</span> <span class="pre">2</span> <span class="pre">**</span> <span class="pre">55</span></code></p>
+</div>
+<p><a class="reference external" href="https://docs.python.org/3/tutorial/floatingpoint.html">Per obtenir més informació podeu el següent document</a></p>
 </div>
 <div class="section" id="operadors-logics">
 <h2>Operadors lògics<a class="headerlink" href="#operadors-logics" title="Permalink to this headline">¶</a></h2>
@@ -969,7 +1004,7 @@ funcionament del nostre propi codi.</p>
 <span class="n">x</span> <span class="o">=</span> <span class="n">y</span> <span class="o">+</span><span class="mi">3</span> <span class="c1"># Aquí també puc posar un comentari per descriure l&#39;expressió</span>
 </pre></div>
 </div>
-<p>Es recomanable comentar el codi que realitzam, en particular aquelles parts més rellevants o que presenten
+<p>És recomanable comentar el codi que realitzae, en particular aquelles parts més rellevants o que presenten
 certa dificultat.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -989,33 +1024,36 @@ certa dificultat.</p>
 </div>
 <div class="section" id="entrada-sortida-d-informacio">
 <h1>Entrada / Sortida d’informació<a class="headerlink" href="#entrada-sortida-d-informacio" title="Permalink to this headline">¶</a></h1>
-<p>Un programa necesita poder rebre i mostrar informació de l’/ al usuari.</p>
+<p>L’entrada i la sortida, o E/S ( <em>input/output</em>, I/O) és la comunicació entre un sistema de processament d’informació,
+com un ordinador, i el món exterior, possiblement un humà o un altre sistema. Les entrades són els senyals o dades
+que rep el sistema i les sortides són els senyals o dades enviades des d’aquest.</p>
 <div class="section" id="entrada">
 <h2>Entrada<a class="headerlink" href="#entrada" title="Permalink to this headline">¶</a></h2>
-<p>Per poder proporcionar informació al programa, podem usar la funció <code class="docutils literal notranslate"><span class="pre">input</span></code>, sempre ens tornarà l’string corresponent a
-la informació que l’usuari ens proporciona.</p>
+<p>Per poder proporcionar informació al programa, podem usar la funció <code class="docutils literal notranslate"><span class="pre">input</span></code>. Aquesta sempre ens tornarà l’string
+corresponent a la informació que l’usuari ens proporciona.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">entrada</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
 <span class="n">entrada</span>
 </pre></div>
 </div>
-<p>Si volem llegir un sencer o un float haurem de realitzar una transformació explícita (<em>casting</em>)</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-<span class="n">enter</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Escriu un enter: &quot;</span><span class="p">))</span>
+<p>Si volem llegir un sencer o un float haurem de realitzar una transformació explícita, aquesta explicació en el mon de
+la programació es coneix com a <em>casting</em>. A continuació podeu observar dos exemples que mostrem com llegim un valor
+enter del teclat i a continuació com ho fem per llegir un nombre en coma flotant:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">enter</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Escriu un enter: &quot;</span><span class="p">))</span>
 <span class="n">enter</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">enter</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">enter</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-<span class="n">decimal</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Escriu un decimal: &quot;</span><span class="p">))</span>
+<p>A continuació veurem la lectura en coma flotant, fixeu-vos en el <em>casting</em>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">decimal</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Escriu un decimal: &quot;</span><span class="p">))</span>
 <span class="n">decimal</span>
 <span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">decimal</span><span class="p">))</span>
 </pre></div>
 </div>
-<p>Si volem llegir un únic caràcter, ho podem fer de la següent manera:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-<span class="kn">import</span> <span class="nn">sys</span>
+<p>En els nostres primers programes començarem fent feina amb informació molt senzilla, per tant ens interessarà llegir
+<em>strings</em> amb un únic valor. Si volem llegir un únic caràcter, ho podem fer de  la següent manera:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
 
 <span class="n">car</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">stdin</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">car</span><span class="p">)</span>
@@ -1025,38 +1063,60 @@ la informació que l’usuari ens proporciona.</p>
 <div class="section" id="sortida">
 <h2>Sortida<a class="headerlink" href="#sortida" title="Permalink to this headline">¶</a></h2>
 <p>Per poder mostar informació per pantalla, farem servir la funció <code class="docutils literal notranslate"><span class="pre">print</span></code>. Aquesta funció pot mostrar qualsevol text
-(<em>string</em>) separat entre comes.</p>
+(<em>string</em>).</p>
 <p>A continuació teniu diversos exemples:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hola mon!&quot;</span><span class="p">)</span>
-
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Aixo es un text&quot;</span> <span class="o">+</span> <span class="s2">&quot; el qual concatenam amb un altre text&quot;</span><span class="p">)</span>
-
-<span class="n">a</span> <span class="o">=</span> <span class="s1">&#39;a&#39;</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span> <span class="o">+</span> <span class="s1">&#39;b&#39;</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;També ho podem fer així &quot;</span> <span class="o">+</span> <span class="n">a</span><span class="p">)</span>
-
-<span class="n">num</span> <span class="o">=</span> <span class="mi">3</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Text concatenat amb un nombre &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">num</span><span class="p">))</span>
-
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Si vull posar cometes dobles en el text (&quot;) puc delimitar el string amb cometes simples&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;En Biel es un &#39;bon&#39; professor&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;En Biel es un &#39;bon&#39; professor?&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hola mon!
-Aixo es un text el qual concatenam amb un altre text
-També ho podem fer així a b
-Text concatenat amb un nombre 3
 Si vull posar cometes dobles en el text (&quot;) puc delimitar el string amb cometes simples
-En Biel es un &#39;bon&#39; professor
+En Biel es un &#39;bon&#39; professor?
 </pre></div>
 </div>
 </div>
+</div>
+<p><em>Strings amb format</em></p>
+<p>Els Strings amb format (també anomenats <em>f-strings</em> ) permeten incloure el valor de les expressions de <code class="docutils literal notranslate"><span class="pre">Python</span></code> dins
+d’un <em>strings</em> prefixant la cadena amb <code class="docutils literal notranslate"><span class="pre">f</span></code> o <code class="docutils literal notranslate"><span class="pre">F</span></code> i escrivint expressions com a <code class="docutils literal notranslate"><span class="pre">{expressió}</span></code>.</p>
+<p>A més podem afegir un especificador de format tot seguit de l’expressió. Això permet tenir un major control sobre com
+es mostra el valor. L’exemple següent arrodoneix un nombre a tres valors decimals.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pi</span> <span class="o">=</span> <span class="mf">3.14159265359</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;El valor aproximat de PI es: </span><span class="si">{</span><span class="n">pi</span><span class="si">:</span><span class="s1">.3f</span><span class="si">}</span><span class="s1">.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>El valor aproximat de PI es: 3.142.
+</pre></div>
+</div>
+</div>
+</div>
+<p>També podem afegir qualsevol altra tipus de variable</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cognom</span> <span class="o">=</span> <span class="s1">&#39;potter&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;El meu mag preferit és Harry </span><span class="si">{</span><span class="n">cognom</span><span class="si">}</span><span class="s1">.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>El meu mag preferit és Harry potter.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition-curiositat admonition">
+<p class="admonition-title">Curiositat</p>
+<p>Python permet formatar la sortida de text de moltes maneres diferents, usuaris avançats podeu consultar el següent
+<a class="reference external" href="https://docs.python.org/3/library/string.html#format-specification-mini-language">enllaç</a></p>
 </div>
 </div>
 </div>
