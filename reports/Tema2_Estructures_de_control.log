@@ -17,29 +17,23 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply['content'])
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-print("Calcul de la suma de l'interval a ,b")
+x = int(input("Introdueix un nombre"))
 
-num_a = int(input("Escriu a "))
-num_b = int(input("Escriu b "))
+if x < 0: # Si el nombre és negatiu
+    print("El programa passa per aquí perquè el nombre és negatiu")
+    x = x * -1
 
-sumatori = 0
-
-for i in range(num_a, num_b+1):
-    sumatori = sumatori + i
-    print(i, sumatori) # Mostram informació intermitja, això no és necessari per solventar el problema
-
-print("El resultado es: " + str(sumatori))
-
+print(f'El valor absolut de x es {x}')
 ------------------
 
 [1;31m---------------------------------------------------------------------------[0m
 [1;31mStdinNotImplementedError[0m                  Traceback (most recent call last)
-[1;32m<ipython-input-10-d9e16007e759>[0m in [0;36m<module>[1;34m[0m
-[0;32m      1[0m [0mprint[0m[1;33m([0m[1;34m"Calcul de la suma de l'interval a ,b"[0m[1;33m)[0m[1;33m[0m[1;33m[0m[0m
-[0;32m      2[0m [1;33m[0m[0m
-[1;32m----> 3[1;33m [0mnum_a[0m [1;33m=[0m [0mint[0m[1;33m([0m[0minput[0m[1;33m([0m[1;34m"Escriu a "[0m[1;33m)[0m[1;33m)[0m[1;33m[0m[1;33m[0m[0m
-[0m[0;32m      4[0m [0mnum_b[0m [1;33m=[0m [0mint[0m[1;33m([0m[0minput[0m[1;33m([0m[1;34m"Escriu b "[0m[1;33m)[0m[1;33m)[0m[1;33m[0m[1;33m[0m[0m
-[0;32m      5[0m [1;33m[0m[0m
+[1;32m<ipython-input-2-1ca28e35ac94>[0m in [0;36m<module>[1;34m[0m
+[1;32m----> 1[1;33m [0mx[0m [1;33m=[0m [0mint[0m[1;33m([0m[0minput[0m[1;33m([0m[1;34m"Introdueix un nombre"[0m[1;33m)[0m[1;33m)[0m[1;33m[0m[1;33m[0m[0m
+[0m[0;32m      2[0m [1;33m[0m[0m
+[0;32m      3[0m [1;32mif[0m [0mx[0m [1;33m<[0m [1;36m0[0m[1;33m:[0m [1;31m# Si el nombre és negatiu[0m[1;33m[0m[1;33m[0m[0m
+[0;32m      4[0m     [0mprint[0m[1;33m([0m[1;34m"El programa passa per aquí perquè el nombre és negatiu"[0m[1;33m)[0m[1;33m[0m[1;33m[0m[0m
+[0;32m      5[0m     [0mx[0m [1;33m=[0m [0mx[0m [1;33m*[0m [1;33m-[0m[1;36m1[0m[1;33m[0m[1;33m[0m[0m
 
 [1;32m~\Anaconda3\envs\book\lib\site-packages\ipykernel\kernelbase.py[0m in [0;36mraw_input[1;34m(self, prompt)[0m
 [0;32m    856[0m         [1;32mif[0m [1;32mnot[0m [0mself[0m[1;33m.[0m[0m_allow_stdin[0m[1;33m:[0m[1;33m[0m[1;33m[0m[0m

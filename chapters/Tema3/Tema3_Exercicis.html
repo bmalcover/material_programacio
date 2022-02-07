@@ -214,7 +214,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../Tema5/Tema5_Exercicis_altres_estructures.html">
-     Exercicis Tema 5
+     Exercicis Tema 5/2
     </a>
    </li>
   </ul>
@@ -387,7 +387,7 @@
 <h2>Seqüències de text<a class="headerlink" href="#sequencies-de-text" title="Permalink to this headline">¶</a></h2>
 <p>Les seqüències de caràcters a què fan referència aquests exercicis són introduïdes per teclat i acabades amb el
 caràcter punt.</p>
-<p>1.Comptar quantes aparicions hi ha de cada vocal.</p>
+<p>1-Fes un programa que serveixi per comptar quantes aparicions hi ha de cada vocal.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="n">Exemples</span> <span class="n">d</span><span class="s1">&#39;execució: Murcielago.</span>
 
     <span class="n">a</span> <span class="o">-&gt;</span> <span class="mi">1</span>
@@ -396,15 +396,16 @@ caràcter punt.</p>
     <span class="n">o</span> <span class="o">-&gt;</span> <span class="mi">1</span>
     <span class="n">u</span> <span class="o">-&gt;</span> <span class="mi">1</span>
 
-    <span class="n">Lo</span> <span class="n">importante</span> <span class="n">es</span> <span class="n">participar</span><span class="o">.</span> <span class="n">a</span> <span class="o">-&gt;</span> <span class="mi">3</span>
-
-    <span class="n">e</span> <span class="o">-&gt;</span> <span class="mi">2</span>
-    <span class="n">i</span> <span class="o">-&gt;</span> <span class="mi">3</span>
-    <span class="n">o</span> <span class="o">-&gt;</span> <span class="mi">2</span>
+    <span class="n">Carla</span> <span class="n">la</span> <span class="n">patata</span><span class="o">.</span>
+    <span class="n">a</span> <span class="o">-&gt;</span> <span class="mi">6</span>
+    <span class="n">e</span> <span class="o">-&gt;</span> <span class="mi">0</span>
+    <span class="n">i</span> <span class="o">-&gt;</span> <span class="mi">0</span>
+    <span class="n">o</span> <span class="o">-&gt;</span> <span class="mi">0</span>
     <span class="n">u</span> <span class="o">-&gt;</span> <span class="mi">0</span>
 </pre></div>
 </div>
-<p>2.Cercar la primera vocal de la seqüència i mostrar per pantalla la següent lletra.</p>
+<p>2-Desenvolupa un programa que serveixi per cercar la primera vocal d’una seqüència de text acabada en punt i mostri
+per pantalla la següent lletra.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Exemples</span><span class="p">:</span>
     <span class="n">Murcielago</span><span class="o">.</span> <span class="n">La</span> <span class="n">següent</span> <span class="n">lletra</span> <span class="n">es</span> <span class="n">la</span> <span class="s1">&#39;r&#39;</span>
     <span class="n">Lo</span> <span class="n">importante</span> <span class="n">es</span> <span class="n">participar</span><span class="o">.</span> <span class="n">La</span> <span class="n">següent</span> <span class="n">lletra</span> <span class="n">es</span> <span class="n">la</span> <span class="s1">&#39; &#39;</span>
@@ -412,42 +413,42 @@ caràcter punt.</p>
     <span class="n">N</span> <span class="n">st</span> <span class="n">scnc</span> <span class="n">n</span> <span class="n">hy</span> <span class="n">vcls</span><span class="o">.</span> <span class="n">En</span> <span class="n">aquesta</span> <span class="n">frase</span> <span class="n">no</span> <span class="n">hi</span> <span class="n">ha</span> <span class="n">vocals</span>
 </pre></div>
 </div>
-<p>3.Comptar el nombre d’espais que apareixen després de la primera t (majúscula o minúscula). Per indicar-ho en un
-programa es fa entre cometes simples com si fos qualsevol altra lletra (espai = ‘ ‘).</p>
+<p>3-Comptar el nombre d’espais que apareixen després de la primera t (majúscula o minúscula). Per indicar el caracter
+espai en un programa es fa especificant-ho entre cometes simples com si fos qualsevol altra lletra (espai = ‘ ‘).</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Exemples</span><span class="p">:</span>
-    <span class="n">Lo</span> <span class="n">importante</span> <span class="n">es</span> <span class="n">participar</span><span class="o">.</span> <span class="mi">2</span> <span class="n">espais</span>
+    <span class="n">El</span> <span class="n">sol</span> <span class="n">ha</span> <span class="n">eixit</span> <span class="n">la</span> <span class="n">radio</span> <span class="n">sona</span> <span class="n">estem</span> <span class="n">vius</span><span class="o">.</span> <span class="mi">8</span> <span class="n">espais</span>
     <span class="n">Un</span> <span class="n">dia</span> <span class="n">que</span> <span class="n">te</span> <span class="n">sobren</span> <span class="n">vitamines</span><span class="o">.</span> <span class="mi">2</span> <span class="n">espais</span>
     <span class="n">Estudiar</span> <span class="n">matematiques</span> <span class="n">es</span> <span class="n">divertit</span><span class="o">.</span> <span class="mi">3</span> <span class="n">espais</span>
-    <span class="n">Supercalifragilisticoespialidoso</span><span class="o">.</span>  <span class="n">Aquesta</span> <span class="n">seqüència</span> <span class="n">no</span> <span class="n">té</span> <span class="n">espais</span>
+    <span class="n">Supercalifragilisticoespialidos</span><span class="o">.</span>  <span class="n">Aquesta</span> <span class="n">seqüència</span> <span class="n">no</span> <span class="n">té</span> <span class="n">espais</span>
 </pre></div>
 </div>
-<p>4.Implementar un programa que llegeixi una seqüència de caràcters acabada en punt i mostri el caràcter més gran.</p>
+<p>4-Implementar un programa que llegeixi una seqüència de caràcters acabada en punt i mostri el caràcter més gran.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Exemple</span><span class="p">:</span>
     <span class="n">puerto</span> <span class="n">rico</span> <span class="n">me</span> <span class="n">lo</span> <span class="n">confirmo</span><span class="o">.</span> <span class="n">El</span> <span class="n">caracter</span> <span class="n">mes</span> <span class="n">gran</span> <span class="n">es</span> <span class="n">la</span> <span class="s1">&#39;u&#39;</span>
 </pre></div>
 </div>
-<p>5.Implementar un programa que llegeixi una seqüència de caràcters acabada en punt i mostri el caràcter més petit.</p>
-<p>6.Implementar un programa que llegeixi una seqüència de caràcters acabada en punt i mostri el nombre de vocals,
+<p>5-Implementar un programa que llegeixi una seqüència de caràcters acabada en punt i mostri el caràcter més petit.</p>
+<p>6-Implementar un programa que llegeixi una seqüència de caràcters acabada en punt i mostri el nombre de vocals,
 consonants i espais.</p>
-<p>7.Implementar un programa que demani una lletra a l’usuari i compti el nombre d’espais que apareixen en una
-seqüència de caràcters fins a trobar la lletra triada.</p>
-<p>8.Realitzar un programa que llegeixi una seqüència de caràcters acabada en ‘.’ i ens digui quantes lletres
+<p>7-Implementar un programa que demani una lletra a l’usuari i compti el nombre d’espais que apareixen en una
+seqüència de caràcters acabada en punt fins a trobar la lletra triada.</p>
+<p>8-Dissenyar i implementar un programa que llegeixi una seqüència de caràcters acabada en ‘.’ i ens digui quantes lletres
 apareixen entre el primer i el segon espai. Si la seqüència no té dos espais, el programa ha de comunicar-ho a l’usuari.</p>
 </div>
 <div class="section" id="sequencies-numeriques">
 <h2>Seqüències numèriques<a class="headerlink" href="#sequencies-numeriques" title="Permalink to this headline">¶</a></h2>
-<p>9.Implementar un programa que demani a l’usuari un número i ens indiqui la successió de fibbonacci fins aquest nombre.
-Si l’usuari introdueix el número 6, el programa mostrarà: 1, 1, 2, 3, 5, 8. <a class="reference external" href="https://ca.wikipedia.org/wiki/Successi%C3%B3_de_Fibonacci">Succesió de Fibonacci</a></p>
-<p>10.Crear un petit joc on l’ordinador genera un nombre aleatori entre 0 i 9, l’usuari ha d’aconseguir endevinar en
-el menor nombre possible d’intents:</p>
+<p>9-Implementar un programa que demani a l’usuari un número <code class="docutils literal notranslate"><span class="pre">n</span></code> i aquest mostri per pantalla els <code class="docutils literal notranslate"><span class="pre">n</span></code> primers termes de la
+successió de Fibonacci. Si l’usuari introdueix el número 6, el programa mostrarà: 1, 1, 2, 3, 5, 8. <a class="reference external" href="https://ca.wikipedia.org/wiki/Successi%C3%B3_de_Fibonacci">Succesió de Fibonacci</a></p>
+<p>10-Crear un petit joc en el qual l’ordinador genera un nombre aleatori entre 0 i 9, l’usuari ha d’aconseguir
+endevinar en el menor nombre possible d’intents:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="n">Exemple</span><span class="p">:</span>
     <span class="n">He</span> <span class="n">pensat</span> <span class="n">un</span> <span class="n">número</span> <span class="k">del</span> <span class="mi">0</span> <span class="n">al</span> <span class="mi">9</span><span class="p">,</span> <span class="n">a</span> <span class="n">veure</span> <span class="n">si</span> <span class="n">l</span><span class="s1">&#39;endevines. 7</span>
-    <span class="n">Incorrecte</span> <span class="mi">4</span>
-    <span class="n">Incorrecte</span> <span class="mi">5</span>
-    <span class="n">Incorrecte</span> <span class="mi">6</span>
-    <span class="n">Incorrecte</span> <span class="mi">3</span>
-    <span class="n">Incorrecte</span> <span class="mi">1</span>
-    <span class="n">Acertaste</span> <span class="n">al</span> <span class="mi">6</span> <span class="n">intento</span><span class="o">.</span>
+    <span class="n">Incorrecte</span><span class="p">,</span> <span class="mi">4</span>
+    <span class="n">Incorrecte</span><span class="p">,</span> <span class="mi">5</span>
+    <span class="n">Incorrecte</span><span class="p">,</span> <span class="mi">6</span>
+    <span class="n">Incorrecte</span><span class="p">,</span> <span class="mi">3</span>
+    <span class="n">Incorrecte</span><span class="p">,</span> <span class="mi">1</span>
+    <span class="n">Has</span> <span class="n">necesitat</span> <span class="mi">6</span> <span class="n">intents</span><span class="p">,</span> <span class="n">el</span> <span class="n">nombre</span> <span class="n">que</span> <span class="n">havia</span> <span class="n">pensat</span> <span class="n">es</span> <span class="n">el</span> <span class="mf">1.</span>
 </pre></div>
 </div>
 <p>Per generar un nombre aleatori entre 0 i 9 hem de fer el següent:</p>
@@ -459,11 +460,11 @@ el menor nombre possible d’intents:</p>
 </div>
 </div>
 </div>
-<p>11.Escriure un programa que rebi un nombre enter <code class="docutils literal notranslate"><span class="pre">n</span></code> i lliuri com a resultat el nombre <code class="docutils literal notranslate"><span class="pre">n</span></code> amb els seus dígits
+<p>11-Escriure un programa que rebi un nombre enter <code class="docutils literal notranslate"><span class="pre">n</span></code> i lliuri com a resultat el nombre <code class="docutils literal notranslate"><span class="pre">n</span></code> amb els seus dígits
 en l’ordre invers.</p>
-<p>12.Escriure un programa en el qual l’usuari introdueixi un nombre i el programa calculi una aproximació al nombre pi
+<p>12-Escriure un programa en el qual l’usuari introdueixi un nombre i el programa calculi una aproximació al nombre pi
 desenvolupant tants termes de la següent successió com el nombre introduït: pi ≈ 4(1 - 1/3 + 1/5 - 1/7 …)</p>
-<p>13.El 2520 és el nombre més petit que es pot dividir per cadascun dels nombres de l’1 al 10 sense cap tipus de
+<p>13-El 2520 és el nombre més petit que es pot dividir per cadascun dels nombres de l’1 al 10 sense cap tipus de
 reste. Quin és el nombre positiu més petit que es pot dividir sense reste per tots els nombres de l’1 al 20?</p>
 </div>
 </div>

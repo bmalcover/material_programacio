@@ -34,6 +34,6 @@ Here is a preview of the cell contents:
 -------------------
 ['import sys', 'print("Introdueix una seqüència de text acabada en punt.")', 'lletra = sys.stdin.read(1)', 'nombre = 0', "while lletra != '.':"]
 ...
-['        nombre = nombre + 1', '        ', '    lletra = sys.stdin.read(1)', '    ', 'print(" Hi ha un total de " + str(nombre) + " lletres a en el texte.")']
+['        nombre = nombre + 1', '        ', '    lletra = sys.stdin.read(1)', '    ', 'print(f\' Hi ha un total de {nombre} lletres "a" en el texte.\')']
 -------------------
 
