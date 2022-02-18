@@ -203,6 +203,26 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../Tema5/Tema5_Classes.html#classe-dels-nombres-complexos">
+     Classe dels nombres complexos
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tema5/Tema5_Classes.html#encapsulacio">
+     Encapsulació
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tema5/Tema5_Classes.html#atributs-i-metodes-de-classe">
+     Atributs i mètodes de classe
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tema5/Tema5_Classes.html#sobrecarrega-d-operadors">
+     Sobrecàrrega d’operadors
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../Tema5/Tema5_Estructures.html">
      Altres maneres d’estructurar les dades
     </a>
@@ -257,6 +277,11 @@
    <li class="toctree-l2">
     <a class="reference internal" href="../Annexes/Entorn_Desenvolupament.html">
      Entorn de desenvolupament
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Annexes/Turtle.html">
+     Turtle
     </a>
    </li>
    <li class="toctree-l2">
@@ -696,13 +721,13 @@ si ha trobat o no l’element. Les dues funcions reben 2 paràmetres, el conjunt
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 4, 11, 18, 21, 27, 33, 37, 41, 49, 53, 59, 60, 66, 74, 79, 82, 85, 91, 94]
-DEBUG: esquerra: 0 dreta: 19 mitj: 9 valor: 49
-DEBUG: esquerra: 10 dreta: 19 mitj: 14 valor: 74
-DEBUG: esquerra: 10 dreta: 13 mitj: 11 valor: 59
-DEBUG: esquerra: 12 dreta: 13 mitj: 12 valor: 60
-DEBUG: esquerra: 13 dreta: 13 mitj: 13 valor: 66
-Wall time: 4.95 ms
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 3, 11, 13, 15, 23, 31, 40, 44, 47, 54, 60, 62, 68, 71, 76, 85, 88, 97, 106]
+DEBUG: esquerra: 0 dreta: 19 mitj: 9 valor: 47
+DEBUG: esquerra: 10 dreta: 19 mitj: 14 valor: 71
+DEBUG: esquerra: 10 dreta: 13 mitj: 11 valor: 60
+DEBUG: esquerra: 12 dreta: 13 mitj: 12 valor: 62
+DEBUG: esquerra: 13 dreta: 13 mitj: 13 valor: 68
+Wall time: 6.34 ms
 </pre></div>
 </div>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
@@ -809,16 +834,16 @@ nombre d’elements de la llista al quadrat.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 4, 9, 9, 6, 9, 8, 9, 8, 1]
-[1, 4, 9, 6, 9, 8, 9, 8, 1, 9]
-[1, 4, 6, 9, 8, 9, 8, 1, 9, 9]
-[1, 4, 6, 8, 9, 8, 1, 9, 9, 9]
-[1, 4, 6, 8, 8, 1, 9, 9, 9, 9]
-[1, 4, 6, 8, 1, 8, 9, 9, 9, 9]
-[1, 4, 6, 1, 8, 8, 9, 9, 9, 9]
-[1, 4, 1, 6, 8, 8, 9, 9, 9, 9]
-[1, 1, 4, 6, 8, 8, 9, 9, 9, 9]
-[1, 1, 4, 6, 8, 8, 9, 9, 9, 9]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 1, 6, 8, 8, 6, 2, 2, 3, 7]
+[1, 1, 6, 8, 6, 2, 2, 3, 7, 8]
+[1, 1, 6, 6, 2, 2, 3, 7, 8, 8]
+[1, 1, 6, 2, 2, 3, 6, 7, 8, 8]
+[1, 1, 2, 2, 3, 6, 6, 7, 8, 8]
+[1, 1, 2, 2, 3, 6, 6, 7, 8, 8]
+[1, 1, 2, 2, 3, 6, 6, 7, 8, 8]
+[1, 1, 2, 2, 3, 6, 6, 7, 8, 8]
+[1, 1, 2, 2, 3, 6, 6, 7, 8, 8]
+[1, 1, 2, 2, 3, 6, 6, 7, 8, 8]
 </pre></div>
 </div>
 </div>
@@ -878,12 +903,15 @@ la llista ja està ordenada podem aturar d’ordenar.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 2, 4, 9, 2, 2, 9, 5, 2, 5]
-[1, 2, 4, 2, 2, 9, 5, 2, 5, 9]
-[1, 2, 2, 2, 4, 5, 2, 5, 9, 9]
-[1, 2, 2, 2, 4, 2, 5, 5, 9, 9]
-[1, 2, 2, 2, 2, 4, 5, 5, 9, 9]
-[1, 2, 2, 2, 2, 4, 5, 5, 9, 9]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 1, 5, 5, 7, 8, 6, 8, 4, 3]
+[1, 1, 5, 5, 7, 6, 8, 4, 3, 8]
+[1, 1, 5, 5, 6, 7, 4, 3, 8, 8]
+[1, 1, 5, 5, 6, 4, 3, 7, 8, 8]
+[1, 1, 5, 5, 4, 3, 6, 7, 8, 8]
+[1, 1, 5, 4, 3, 5, 6, 7, 8, 8]
+[1, 1, 4, 3, 5, 5, 6, 7, 8, 8]
+[1, 1, 3, 4, 5, 5, 6, 7, 8, 8]
+[1, 1, 3, 4, 5, 5, 6, 7, 8, 8]
 </pre></div>
 </div>
 </div>
