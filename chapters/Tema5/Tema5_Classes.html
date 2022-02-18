@@ -203,6 +203,26 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="#classe-dels-nombres-complexos">
+     Classe dels nombres complexos
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="#encapsulacio">
+     Encapsulació
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="#atributs-i-metodes-de-classe">
+     Atributs i mètodes de classe
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="#sobrecarrega-d-operadors">
+     Sobrecàrrega d’operadors
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="Tema5_Estructures.html">
      Altres maneres d’estructurar les dades
     </a>
@@ -214,7 +234,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Tema5_Exercicis_altres_estructures.html">
-     Exercicis Tema 5
+     Exercicis Tema 5/2
     </a>
    </li>
   </ul>
@@ -360,44 +380,51 @@
         </div>
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#classes">
-   Classes
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Classes i Objectes
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#classes">
+     Classes
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#objectes">
+     Objectes
+    </a>
+   </li>
+  </ul>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#objectes">
-   Objectes
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
+ <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#classe-dels-nombres-complexos">
    Classe dels nombres complexos
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
+ <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#encapsulacio">
    Encapsulació
   </a>
   <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#atributs-privats">
      Atributs privats
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#metodes-privats">
      Mètodes privats
     </a>
    </li>
   </ul>
  </li>
- <li class="toc-h2 nav-item toc-entry">
+ <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#atributs-i-metodes-de-classe">
    Atributs i mètodes de classe
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
+ <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#sobrecarrega-d-operadors">
    Sobrecàrrega d’operadors
   </a>
@@ -415,14 +442,14 @@
                 
   <div class="section" id="classes-i-objectes">
 <h1>Classes i Objectes<a class="headerlink" href="#classes-i-objectes" title="Permalink to this headline">¶</a></h1>
-<p>El concepte de tipus de dades estructurats s’amplia amb la incorporació dels conceptes propis de l’orientació a objectes,
-les <strong>classes</strong> i les seves instàncies, els <strong>objectes</strong>.</p>
-<p>Per arribar al concepte de classe primer cal parlar del concepte de <strong>Tipus Abstracte de Dades</strong> (TAD). Un TAD es
-defineix com un model matemàtic compost per una col·lecció d’operacions definides sobre un conjunt de dades.</p>
+<p>El concepte de tipus de dades estructurats s’amplia amb la incorporació dels conceptes propis de l’orientació a
+objectes: les <strong>classes</strong> i les seves instàncies, els <strong>objectes</strong>.</p>
+<p>Per arribar a entendre el concepte de classe primer cal parlar del concepte de <strong>Tipus Abstracte de Dades</strong> (TAD). Un
+TAD es defineix com un model matemàtic compost per una col·lecció d’operacions definides sobre un conjunt de dades.</p>
 <p>Un Tipus Abstracte de Dades es caracteritza per:</p>
 <ul class="simple">
 <li><p>Usa un o més tipus de dades, elementals o no.</p></li>
-<li><p>Defineix un conjunt d’operacions sobre aquestes dades. El que es coneix com a interfície.</p></li>
+<li><p>Defineix un conjunt d’operacions sobre aquestes dades. Aquest conjunt d’operacions és coneix com a interfície.</p></li>
 <li><p>Les operacions de la interfície són les úniques que estan permeses per les dades que hem definit.</p></li>
 <li><p>No existeix cap altre mecanisme d’accés a l’estructura de dades definida.</p></li>
 </ul>
@@ -437,9 +464,10 @@ els valors enfront d’una utilització incorrecta.  Aquesta tècnica es coneix 
 </ul>
 <p>Existeix un tipus especial de mètodes, els mètodes que serveixen per construir els objectes, són els anomenats
 <strong>constructors</strong>. Un constructor té la característica especial que el valor resultat de la seva invocació (crida) és un
-nou objecte instància de la classe. Una altra característica dels constructors és que no són invocats directament
-sinó que són invocats quan es creen noves instàncies de la classe.</p>
-<p>Per il·lustrar els conceptes plantejats, començarem amb la definició de la nostra primera classe:</p>
+nou objecte, una instància de la classe. Una altra característica dels constructors és que no són invocats de manera
+explícita sinó que són invocats quan es creen noves instàncies de la classe.</p>
+<p>Per il·lustrar els conceptes plantejats, començarem amb la definició de la nostra primera classe que serveix per
+guardar informació relativa a una persona:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Persona</span><span class="p">:</span>
@@ -483,8 +511,8 @@ Les variables s’utilitzen <strong>per fer referència</strong> als objectes cr
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;__main__.Persona object at 0x00000299DC9CE9C8&gt;
-&lt;__main__.Persona object at 0x00000299DC9CE988&gt;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;__main__.Persona object at 0x0000024035C7EB48&gt;
+&lt;__main__.Persona object at 0x0000024035C7EB08&gt;
 199
 </pre></div>
 </div>
@@ -495,7 +523,7 @@ del nom de l’objecte.</p>
 <p>Seguint amb l’exemple anterior veurem com mostrar la informació dels atributs d’un objecte.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Edat &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">p1</span><span class="o">.</span><span class="n">edat</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; - Pes: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">p1</span><span class="o">.</span><span class="n">pes</span><span class="p">))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Edat &quot; + str(p1.edat) + &quot; - Pes: &quot; + </span><span class="si">{</span><span class="n">p1</span><span class="o">.</span><span class="n">pes</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Edat &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">p2</span><span class="o">.</span><span class="n">edat</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; - Pes: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">p2</span><span class="o">.</span><span class="n">pes</span><span class="p">))</span>
 
 <span class="n">professor</span> <span class="o">=</span> <span class="n">Persona</span><span class="p">(</span><span class="mi">55</span><span class="p">,</span><span class="mi">32</span><span class="p">,</span> <span class="mi">140</span><span class="p">)</span> <span class="c1"># Cream un nou objecte del tipus persona anomenat professor</span>
@@ -506,7 +534,7 @@ del nom de l’objecte.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Edat 32 - Pes: 72
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Edat &quot; + str(p1.edat) + &quot; - Pes: &quot; + 72
 Edat 41 - Pes: 134
 Edat 55 - Pes: 32
 </pre></div>
@@ -514,8 +542,8 @@ Edat 55 - Pes: 32
 </div>
 </div>
 <p>Hem dit que una de les coses que caracteritza un TAD és la capacitat de definir interfícies, és a dir operacions
-sobre les nostres dades.</p>
-<p>En definirem algunes per a la classe que estem construint i a continuació les implementarem</p>
+sobre les nostres dades. En definirem algunes per a la classe que estem construint i a continuació les implementarem.</p>
+<p>Operacions de la classe Persona:</p>
 <ul class="simple">
 <li><p>Calcular l’IMC (índex de massa corporal).</p></li>
 <li><p>Saber si una persona és major d’edat.</p></li>
@@ -568,12 +596,12 @@ sobre les nostres dades.</p>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">edat</span> <span class="o">==</span> <span class="n">o</span><span class="o">.</span><span class="n">edat</span>
     
     <span class="k">def</span> <span class="nf">imprimir</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Edat &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">edat</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; - Pes: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">pes</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; - Alsada: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">alt</span><span class="p">))</span> 
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Edat </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">edat</span><span class="si">}</span><span class="s1"> - Pes: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">pes</span><span class="si">}</span><span class="s1"> - Alsada: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">alt</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p>I ara veurem com es poden usar:</p>
+<p>I ara veurem com es poden usar en un programa:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Programa principal    </span>
@@ -646,10 +674,11 @@ Per acabar aquest primer contacte amb les classes veurem el mètode <code class=
 </div>
 </div>
 </div>
+</div>
 <div class="section" id="classe-dels-nombres-complexos">
-<h2>Classe dels nombres complexos<a class="headerlink" href="#classe-dels-nombres-complexos" title="Permalink to this headline">¶</a></h2>
-<p>Fins on sabem, els llenguatges de programació no tenen cap tipus elemental que ens permeti treballar amb nombres
-complexos.</p>
+<h1>Classe dels nombres complexos<a class="headerlink" href="#classe-dels-nombres-complexos" title="Permalink to this headline">¶</a></h1>
+<p>Fins on sabem, els llenguatges de programació no tenen cap tipus de dades elemental que ens permeti treballar amb
+nombres complexos.</p>
 <p>Aprofitarem per crear el nostre propi tipus de dades i definir les operacions de:</p>
 <ul class="simple">
 <li><p>suma</p></li>
@@ -692,7 +721,7 @@ complexos.</p>
       
     <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         
-        <span class="k">if</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">imaginaria</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">imaginaria</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
             <span class="k">return</span> <span class="s1">&#39;(&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">real</span><span class="p">)</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">imaginaria</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;i)&#39;</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="k">return</span> <span class="s1">&#39;(&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">real</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;+&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">imaginaria</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;i)&#39;</span>
@@ -731,19 +760,21 @@ mostrar el nombre obtingut per pantalla.</p>
 principal_complexe</em></p>
 </div>
 <div class="section" id="encapsulacio">
-<h2>Encapsulació<a class="headerlink" href="#encapsulacio" title="Permalink to this headline">¶</a></h2>
+<h1>Encapsulació<a class="headerlink" href="#encapsulacio" title="Permalink to this headline">¶</a></h1>
 <p>Com hem comentat al principi del capítol és necessari que en un <strong>TAD</strong> es doni el següent:</p>
 <ul class="simple">
 <li><p>Les operacions de la interfície són les úniques que estan permeses pel tipus exportat.</p></li>
 <li><p>No existeix cap altre mecanisme d’accés a l’estructura de dades definida.</p></li>
 </ul>
-<p>En les dues classes que hem definit fins ara Persona i Complex, aquestes dues restriccions no es compleixen. Veurem
-com podem modificar l’accés als atributs d’una classe.</p>
+<p>En les dues classes que hem definit fins ara Persona i Complex aquestes dues restriccions no es compleixen, podem
+modificar els atributs d’una classe des de qualsevol lloc del nostre programa, incloent-hi el programa principal. A
+continuació aprendrem com podem modificar l’accés als atributs d’una classe perquè els seus valors només es puguin
+canviar dins la mateixa classe.</p>
 <div class="section" id="atributs-privats">
-<h3>Atributs privats<a class="headerlink" href="#atributs-privats" title="Permalink to this headline">¶</a></h3>
-<p>Tot i que està permès pel llenguatge, <strong>no és recomanable declarar els atributs públics</strong>, ja que això permetria un
-possible ús incorrecte d’aquests.</p>
-<p>Seguirem treballant amb la classe dels nombres complexos. Deixem aquí un recordatori:</p>
+<h2>Atributs privats<a class="headerlink" href="#atributs-privats" title="Permalink to this headline">¶</a></h2>
+<p>Tot i que està permès pel llenguatge, <strong>no és recomanable declarar els atributs públics</strong>, és a dir com ho hem fet
+fins ara, ja que això permetria un possible ús incorrecte d’aquests.</p>
+<p>Seguirem treballant amb la classe dels nombres complexos. Deixem aquí un recordatori del que havíem desenvolupat:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Complex</span><span class="p">:</span>
@@ -775,7 +806,7 @@ possible ús incorrecte d’aquests.</p>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">c1</span> <span class="o">=</span> <span class="n">Complex</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
 <span class="n">c2</span> <span class="o">=</span> <span class="n">Complex</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>
 
-<span class="n">c1</span><span class="o">.</span><span class="n">real</span> <span class="o">=</span> <span class="s2">&quot;matematics&quot;</span> <span class="c1"># canviam el tipus d&#39;una variable de enter a string</span>
+<span class="n">c1</span><span class="o">.</span><span class="n">real</span> <span class="o">=</span> <span class="s2">&quot;matematiques&quot;</span> <span class="c1"># canviam el tipus d&#39;una variable de enter a string</span>
 
 <span class="n">c3</span> <span class="o">=</span> <span class="n">c1</span><span class="o">.</span><span class="n">suma</span><span class="p">(</span><span class="n">c2</span><span class="p">)</span> <span class="c1"># aixo dona error ja que no pot sumar un string amb un enter</span>
 </pre></div>
@@ -784,8 +815,8 @@ possible ús incorrecte d’aquests.</p>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">9</span><span class="o">-</span><span class="mi">425</span><span class="n">eca54a18d</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">c1</span><span class="o">.</span><span class="n">real</span> <span class="o">=</span> <span class="s2">&quot;matematics&quot;</span> <span class="c1"># canviam el tipus d&#39;una variable de enter a string</span>
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">9</span><span class="o">-</span><span class="mi">05</span><span class="n">a8625462cb</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">c1</span><span class="o">.</span><span class="n">real</span> <span class="o">=</span> <span class="s2">&quot;matematiques&quot;</span> <span class="c1"># canviam el tipus d&#39;una variable de enter a string</span>
 <span class="g g-Whitespace">      </span><span class="mi">5</span> 
 <span class="ne">----&gt; </span><span class="mi">6</span> <span class="n">c3</span> <span class="o">=</span> <span class="n">c1</span><span class="o">.</span><span class="n">suma</span><span class="p">(</span><span class="n">c2</span><span class="p">)</span> <span class="c1"># aixo dona error ja que no pot sumar un string amb un enter</span>
 
@@ -801,8 +832,8 @@ possible ús incorrecte d’aquests.</p>
 </div>
 </div>
 </div>
-<p>La pregunta que sorgeix és <strong>Com féim un atribut privat?</strong></p>
-<p>A <code class="docutils literal notranslate"><span class="pre">Python</span></code>, per definir que un atribut és privat ho féim posant <code class="docutils literal notranslate"><span class="pre">__</span></code> (doble guió) davant del seu nom.</p>
+<p>La pregunta que sorgeix és: <strong>Com fem un atribut privat?</strong></p>
+<p>A <code class="docutils literal notranslate"><span class="pre">Python</span></code>, per definir que un atribut és privat ho fem posant <code class="docutils literal notranslate"><span class="pre">__</span></code> (doble guió) davant del seu nom.</p>
 <p>Que un atribut sigui privat implica que no podem consultar ni modificar el seu valor fora de l’àmbit de la classe on
 aquest ha estat definit.</p>
 <div class="cell docutils container">
@@ -821,14 +852,13 @@ aquest ha estat definit.</p>
     
     <span class="c1"># Aquests dos mètodes ens permeten modificar els atributs privats (setters)</span>
     <span class="k">def</span> <span class="nf">set_real</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">real</span><span class="p">):</span>
-    
-      <span class="bp">self</span><span class="o">.</span><span class="n">__real</span> <span class="o">=</span> <span class="n">real</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">__real</span> <span class="o">=</span> <span class="n">real</span>
         
     <span class="k">def</span> <span class="nf">set_imaginari</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">imaginaria</span><span class="p">):</span>
-    
+
         <span class="bp">self</span><span class="o">.</span><span class="n">__imaginaria</span> <span class="o">=</span> <span class="n">imaginaria</span>
-    
-    
+
    <span class="c1"># També podem fer mètodes que ens retornen el seu valor (getters)</span>
 
     <span class="k">def</span> <span class="nf">get_imaginari</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -839,29 +869,23 @@ aquest ha estat definit.</p>
     
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__real</span>
 
-    
     <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">__imaginaria</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
             <span class="k">return</span> <span class="s1">&#39;(&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__real</span><span class="p">)</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__imaginaria</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;i)&#39;</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="k">return</span> <span class="s1">&#39;(&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__real</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;+&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__imaginaria</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;i)&#39;</span>
-      
 </pre></div>
 </div>
 </div>
 </div>
+<p>Veiem un exemple d’ús dels mètodes que hem creat per modificar explícitament els atributs i els seus beneficis.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Exemple d&#39;us dels mètodes per modificar explicitament els atributs i els seus beneficis.</span>
-
-<span class="n">c1</span> <span class="o">=</span> <span class="n">Complex</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
-
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">c1</span> <span class="o">=</span> <span class="n">Complex</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
 <span class="n">c2</span> <span class="o">=</span> <span class="n">Complex</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
 
 <span class="n">c2</span><span class="o">.</span><span class="n">set_real</span><span class="p">(</span><span class="mi">33</span><span class="p">)</span>
-
-
 <span class="n">c1</span><span class="o">.</span><span class="n">__real</span> <span class="o">=</span> <span class="s2">&quot;patata&quot;</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Informacio de l&#39;objecte c1: &quot;</span><span class="p">)</span>
@@ -872,31 +896,20 @@ aquest ha estat definit.</p>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">2</span><span class="o">-</span><span class="n">da5f6e748646</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Exemple d&#39;us dels mètodes per modificar explicitament els atributs i els seus beneficis.</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> 
-<span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">c1</span> <span class="o">=</span> <span class="n">Complexe</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> 
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">c2</span> <span class="o">=</span> <span class="n">Complexe</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>
-
-<span class="ne">NameError</span>: name &#39;Complexe&#39; is not defined
-</pre></div>
 </div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>En conclusió: Si volem tenir la capacitat per modificar els valors dels atributs d’una classe, podem construir mètodes
+que els modifiquin i dins aquests fer els controls necessaris per mantenir la coherència d’aquests.</p>
 </div>
-</div>
-<p>Si volem tenir la capacitat per modificar els valors dels atributs d’una classe, podem construir mètodes que els
-modifiquin.</p>
 </div>
 <div class="section" id="metodes-privats">
-<h3>Mètodes privats<a class="headerlink" href="#metodes-privats" title="Permalink to this headline">¶</a></h3>
-<p>A més d’atributs privats també podem tenir mètodes privats.</p>
-<p>La diferència entre els mètodes de la interfície i la resta de mètodes que puguin formar la classe, mètodes necessaris
-per al correcte comportament d’aquesta, és que <strong>els mètodes de la interfície es declaren públics</strong>, mentre que <strong>la
-resta es declaren privats</strong>, de manera que no s’habilita la possibilitat d’accedir-hi des de fora de la
-classe.</p>
+<h2>Mètodes privats<a class="headerlink" href="#metodes-privats" title="Permalink to this headline">¶</a></h2>
+<p>A més d’atributs privats també podem tenir mètodes privats. La diferència entre els mètodes de la interfície (públics) i
+la resta de mètodes que puguin formar la classe, mètodes necessaris per al correcte comportament d’aquesta, és que
+<strong>els mètodes de la interfície es declaren públics</strong>, mentre que <strong>la resta es declaren privats</strong>, de manera que no
+s’habilita la possibilitat d’accedir-hi des de fora de la classe.</p>
+<p>Seguim amb l’exemple de la classe <code class="docutils literal notranslate"><span class="pre">Complex</span></code>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Complex</span><span class="p">:</span>
@@ -911,16 +924,17 @@ classe.</p>
         
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__real</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">__imaginaria</span> <span class="o">==</span> <span class="mi">0</span>
 
-    <span class="c1"># Aquests dos son metodes publics visible tant dins com fora de la classe</span>
+    <span class="c1"># Aquests dos mètodes públics són visibles tant dins com fora de la classe</span>
     <span class="k">def</span> <span class="nf">es_zero</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         
         <span class="k">return</span>  <span class="bp">self</span><span class="o">.</span><span class="n">__igual_a_zero</span><span class="p">()</span>
 
+    <span class="c1"># Un nombre complex te invers si es diferent a 0</span>
+    <span class="k">def</span> <span class="nf">te_invers</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">__igual_a_zero</span><span class="p">()</span>
 
-
-<span class="c1"># Programa principal</span>
+<span class="c1"># Programa principal on cream un nombre i comprovem una propietat</span>
 <span class="n">c1</span> <span class="o">=</span> <span class="n">Complex</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
-
 
 <span class="k">if</span> <span class="ow">not</span> <span class="n">c1</span><span class="o">.</span><span class="n">es_zero</span><span class="p">():</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Es diferent de zero&quot;</span><span class="p">)</span>
@@ -931,13 +945,14 @@ classe.</p>
 </div>
 </div>
 <div class="section" id="atributs-i-metodes-de-classe">
-<h2>Atributs i mètodes de classe<a class="headerlink" href="#atributs-i-metodes-de-classe" title="Permalink to this headline">¶</a></h2>
+<h1>Atributs i mètodes de classe<a class="headerlink" href="#atributs-i-metodes-de-classe" title="Permalink to this headline">¶</a></h1>
 <p><strong>Mètodes de classe</strong></p>
 <p>Alguns cops necessitem definir mètodes (funcions o procediments) dins la nostra classe que no estan directament
 relacionats amb els atributs d’un objecte, sinó que ens serveixen per complementar la funcionalitat de la classe.
-Anomenem aquests mètodes <strong>mètodes de classe o també estàtics</strong> i s’identifiquen amb el decorador <code class="docutils literal notranslate"><span class="pre">&#64;staticmethod</span></code>
+Anomenem aquests mètodes com <strong>mètodes de classe o també estàtics</strong> i s’identifiquen amb el decorador <code class="docutils literal notranslate"><span class="pre">&#64;staticmethod</span></code>
 abans de la definició del mateix mètode. Com són mètodes que no operen amb els objectes de la classe no reben el
 paràmetre <code class="docutils literal notranslate"><span class="pre">self</span></code>.</p>
+<p>Veiem la seva sintaxi:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@staticmethod</span>
 <span class="k">def</span> <span class="nf">metodeestatic</span><span class="p">(</span><span class="n">parametres</span> <span class="n">opcionals</span><span class="p">):</span>
     
@@ -950,11 +965,12 @@ paràmetre <code class="docutils literal notranslate"><span class="pre">self</sp
 <p>Una de les seves màximes utilitats és la d’implementar constructors alternatius.</p>
 <p><strong>Atributs de classe</strong></p>
 <p>Fins ara hem vist que els valors dels atributs d’un objecte són independents dels atributs d’altres objectes de la
-mateixa classe i que podem modificar-los lliurement sense estar preocupats d’afectar a altres objectes.</p>
+mateixa classe i que podem modificar-los lliurement sense estar preocupats que la modificació dels uns pugui afectar
+als valors dels altres objectes.</p>
 <p>Existeixen un tipus d’atributs, coneguts com a <strong>atributs de classe</strong> que actuen d’una manera diferent del que coneixem
 fins ara, no es troben associats a un objecte sinó a la mateixa classe.</p>
 <p>Una altra de les utilitats dels mètodes estàtics és operar amb els atributs associats a la classe, així, si volem usar
-aquests atributs no depenem d’haver prèviament creat un objecte. L’ús d’atributs de classe no és molt comú, però en
+aquests atributs no depenem d’haver creat un objecte prèviament. L’ús d’atributs de classe no és molt comú, però en
 alguna ocasió pot ser de gran utilitat.</p>
 <p>Tornem a l’exemple de la classe persona per veure com funciona:</p>
 <div class="cell docutils container">
@@ -1001,14 +1017,13 @@ alguna ocasió pot ser de gran utilitat.</p>
 <span class="n">creades</span> <span class="o">=</span> <span class="n">Persona</span><span class="o">.</span><span class="n">nombre_persones_creades</span><span class="p">()</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;*Inici, persones creades: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">creades</span><span class="p">))</span>
 
-
 <span class="n">p</span> <span class="o">=</span> <span class="n">Persona</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">72</span><span class="p">,</span> <span class="mi">174</span><span class="p">)</span>
 <span class="n">p2</span><span class="o">=</span> <span class="n">Persona</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">163</span><span class="p">)</span>
 <span class="n">p3</span><span class="o">=</span> <span class="n">Persona</span><span class="o">.</span><span class="n">bebe</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
 
 <span class="c1"># Mostrara el valor 3</span>
 <span class="n">creades</span> <span class="o">=</span> <span class="n">Persona</span><span class="o">.</span><span class="n">nombre_persones_creades</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;*Nombre de persones creades &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">creades</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;*Nombre de persones creades </span><span class="si">{</span><span class="n">creades</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;*Com son? &quot;</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
@@ -1020,18 +1035,19 @@ alguna ocasió pot ser de gran utilitat.</p>
 </div>
 </div>
 <div class="section" id="sobrecarrega-d-operadors">
-<h2>Sobrecàrrega d’operadors<a class="headerlink" href="#sobrecarrega-d-operadors" title="Permalink to this headline">¶</a></h2>
+<h1>Sobrecàrrega d’operadors<a class="headerlink" href="#sobrecarrega-d-operadors" title="Permalink to this headline">¶</a></h1>
 <p>En el tema 2 definíem els <strong>operadors</strong> com a símbols especials que indiquen que cal fer algun tipus de computació.
 Els valors amb els quals actua un operador s’anomenen <strong>operands</strong>.</p>
 <p>Vàrem veure que tenim operadors: aritmètics, de comparació i lògics. Tots aquests operadors es troben definits pels
-tipus de dades del nucli de ‘Python’ (enter, string, llista, float …) . Però si ens fixem bé, el mateix operador es
-comporta de manera diferent amb diferents tipus. Per exemple, l’operador <strong>+</strong> realitzarà una addició aritmètica de
-dos nombres, unirà dues llistes i concatenarà dos <em>strings</em>.</p>
-<p>Aquesta característica de Python que permet que un mateix operador tingui un significat diferent segons el tipus de
+tipus de dades del nucli de <code class="docutils literal notranslate"><span class="pre">Python</span></code>,es a dir, enter, string, llista i float. Si ens fixem bé, el mateix
+operador es comporta de manera diferent amb diferents tipus. Per exemple, l’operador <strong>+</strong> realitzarà una addició
+aritmètica de dos nombres, unirà dues llistes i concatenarà dos <em>strings</em>.</p>
+<p>Aquesta característica de <code class="docutils literal notranslate"><span class="pre">Python</span></code> que permet que un mateix operador tingui un significat diferent segons el tipus de
 dades amb el qual opera es diu <strong>sobrecàrrega d’operadors</strong>.</p>
 <p>Si pensem en les classes que hem construït fins ara, quan volem operar dos objectes o comparar-los construïm mètodes
 que tenen noms que ens ajuden a reconèixer l’operació que volem realitzar, però seria molt més pràctic poder usar
 els operadors que ja coneixem.</p>
+<p>A continuació aprendrem com podem aplicar sobrecarrega d’operadors a les classes que cream.</p>
 <p><strong>Operadors aritmètics</strong></p>
 <p>Considerem la classe següent, que defineix un punt en el sistema de coordenades 2-D.</p>
 <div class="cell docutils container">
@@ -1050,13 +1066,12 @@ els operadors que ja coneixem.</p>
 <span class="n">p2</span> <span class="o">=</span> <span class="n">Punt</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">p1</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">p2</span><span class="p">)</span>
-<span class="n">p3</span> <span class="o">=</span> <span class="n">p1</span> <span class="o">+</span> <span class="n">p2</span>
 </pre></div>
 </div>
 </div>
 </div>
 <p>Per sobrecarregar el signe +, haurem d’implementar el mètode <code class="docutils literal notranslate"><span class="pre">__add</span> <span class="pre">__</span></code> a la nostra classe. Com podem intuir aquest
-mètode és com el constructor de les classes i el mètode <code class="docutils literal notranslate"><span class="pre">__str__</span></code> propi de <code class="docutils literal notranslate"><span class="pre">Python</span></code>.</p>
+mètode és com el constructor de les classes i el mètode <code class="docutils literal notranslate"><span class="pre">__str__</span></code> propis de <code class="docutils literal notranslate"><span class="pre">Python</span></code>.</p>
 <p><code class="docutils literal notranslate"><span class="pre">Python</span></code> no avalua que dins aquest mètode sumem dos objectes d’aquella classe, ja que no coneix el significat de
 sumar. Però el que sí que ens obliga és que aquest sigui un mètode d’objecte és a dir que rep el paràmetre self i
 un objecte de la classe per paràmetre. També és altament recomanable tornar un objecte de la mateixa classe.</p>
@@ -1071,7 +1086,6 @@ un objecte de la classe per paràmetre. També és altament recomanable tornar u
     <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
      
       <span class="k">return</span> <span class="s2">&quot;Punt(&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__x</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;, &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__y</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;)&quot;</span>
-        
 
     <span class="k">def</span> <span class="fm">__add__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">altra</span><span class="p">):</span>
         <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__x</span> <span class="o">+</span> <span class="n">altra</span><span class="o">.</span><span class="n">__x</span>
@@ -1103,7 +1117,7 @@ un objecte de la classe per paràmetre. També és altament recomanable tornar u
 </div>
 <p>De la mateixa manera que hem sobrecarregat l’operador suma també podem sobrecarregar altres operadors. Les funcions
 especials que podem implementar es mostren a continuació. Cal recordar que tota funció ja existent a <code class="docutils literal notranslate"><span class="pre">Python</span></code> i que
-volem sobreescriure, ha de començar i acabar amb doble barra baixa: <code class="docutils literal notranslate"><span class="pre">__</span></code>. Per exemple <code class="docutils literal notranslate"><span class="pre">__add__</span></code> o <code class="docutils literal notranslate"><span class="pre">__sub__</span></code>.</p>
+volem sobreescriure ha de començar i acabar amb doble barra baixa: <code class="docutils literal notranslate"><span class="pre">__</span></code>. Per exemple <code class="docutils literal notranslate"><span class="pre">__add__</span></code> o <code class="docutils literal notranslate"><span class="pre">__sub__</span></code>.</p>
 <p>A continuació trobem una taula amb els diferents operadors que podem sobrecarregar:</p>
 <table class="colwidths-auto table">
 <thead>
@@ -1223,7 +1237,7 @@ usats és la igualtat <code class="docutils literal notranslate"><span class="pr
 </tbody>
 </table>
 <p>En implementar aquests operadors hem de tenir en compte que si n’hem implementat un d’ells, normalment l’usuari
-esperarà que hàgem implementat totes les altres comparacions possibles. I per tant si sobrecarreguem alguns dels
+esperarà que implementem totes les altres comparacions possibles. I per tant si sobrecarreguem alguns dels
 operadors, com a bona pràctica de programació, també haurem de sobrecarregar la resta.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1271,9 +1285,8 @@ True
 </div>
 </div>
 <p>Finalment cal dir que existeixen altres operadors que podríem sobrecarregar per fer més completes les nostres classes,
-però degut les limitacions del curs i l’àmbit en el qual ens trobem (el grau de matemàtiques) són els més
-interessants.</p>
-</div>
+però degut les limitacions del curs i l’àmbit en el qual ens trobem (el grau de matemàtiques) aquests que hem vist són
+els més interessants.</p>
 </div>
 
     <script type="text/x-thebe-config">

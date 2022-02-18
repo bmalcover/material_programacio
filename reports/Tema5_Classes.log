@@ -20,15 +20,15 @@ nbclient.exceptions.CellExecutionError: An error occurred while executing the fo
 c1 = Complex(2,3)
 c2 = Complex(3,4)
 
-c1.real = "matematics" # canviam el tipus d'una variable de enter a string
+c1.real = "matematiques" # canviam el tipus d'una variable de enter a string
 
 c3 = c1.suma(c2) # aixo dona error ja que no pot sumar un string amb un enter
 ------------------
 
 [1;31m---------------------------------------------------------------------------[0m
 [1;31mTypeError[0m                                 Traceback (most recent call last)
-[1;32m<ipython-input-9-425eca54a18d>[0m in [0;36m<module>[1;34m[0m
-[0;32m      4[0m [0mc1[0m[1;33m.[0m[0mreal[0m [1;33m=[0m [1;34m"matematics"[0m [1;31m# canviam el tipus d'una variable de enter a string[0m[1;33m[0m[1;33m[0m[0m
+[1;32m<ipython-input-9-05a8625462cb>[0m in [0;36m<module>[1;34m[0m
+[0;32m      4[0m [0mc1[0m[1;33m.[0m[0mreal[0m [1;33m=[0m [1;34m"matematiques"[0m [1;31m# canviam el tipus d'una variable de enter a string[0m[1;33m[0m[1;33m[0m[0m
 [0;32m      5[0m [1;33m[0m[0m
 [1;32m----> 6[1;33m [0mc3[0m [1;33m=[0m [0mc1[0m[1;33m.[0m[0msuma[0m[1;33m([0m[0mc2[0m[1;33m)[0m [1;31m# aixo dona error ja que no pot sumar un string amb un enter[0m[1;33m[0m[1;33m[0m[0m
 [0m

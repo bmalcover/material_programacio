@@ -203,6 +203,26 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../Tema5/Tema5_Classes.html#classe-dels-nombres-complexos">
+     Classe dels nombres complexos
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tema5/Tema5_Classes.html#encapsulacio">
+     Encapsulació
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tema5/Tema5_Classes.html#atributs-i-metodes-de-classe">
+     Atributs i mètodes de classe
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tema5/Tema5_Classes.html#sobrecarrega-d-operadors">
+     Sobrecàrrega d’operadors
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../Tema5/Tema5_Estructures.html">
      Altres maneres d’estructurar les dades
     </a>
@@ -362,7 +382,7 @@
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#una-passa-mes-enlla-tractament-de-paraules">
-   Una passa més enllà, tractament de paraules
+   Una passa més enllà: tractament de paraules
   </a>
  </li>
 </ul>
@@ -411,11 +431,11 @@
     <span class="n">cercar_lletra</span><span class="p">()</span>
 
 <span class="c1"># Donam resultats</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39; El nombre de parelles  &quot;la&quot; que has escrit és: </span><span class="si">{</span><span class="n">nombre</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39; El nombre de parelles &quot;la&quot; que has escrit és: </span><span class="si">{</span><span class="n">nombre</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="section" id="una-passa-mes-enlla-tractament-de-paraules">
-<h2>Una passa més enllà, tractament de paraules<a class="headerlink" href="#una-passa-mes-enlla-tractament-de-paraules" title="Permalink to this headline">¶</a></h2>
+<h2>Una passa més enllà: tractament de paraules<a class="headerlink" href="#una-passa-mes-enlla-tractament-de-paraules" title="Permalink to this headline">¶</a></h2>
 <p>Dedicarem el final d’aquest tema a resoldre problemes que ens demanen tractar informació a un nivell més alt
 d’abstracció. El primer exercici que realitzarem, anàlogament al tractament de lletres, serà el de <strong>comptar quantes
 paraules hi ha en un text</strong>.</p>
@@ -455,7 +475,7 @@ secció anterior:</p>
     <span class="n">lletra_p</span> <span class="o">=</span> <span class="n">lletra_a</span>
     <span class="n">lletra_a</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">stdin</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;En aquest texte hi ha </span><span class="si">{</span><span class="n">contador</span><span class="si">}</span><span class="s1"> </span><span class="si">{</span><span class="n">paraules</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;En aquest text hi ha </span><span class="si">{</span><span class="n">contador</span><span class="si">}</span><span class="s1"> paraules&#39;</span><span class="p">)</span>
 
 </pre></div>
 </div>
@@ -465,7 +485,7 @@ fer-ho. Tot i això veurem que si ara volem resoldre el següent problema:</p>
 fes un programa que donat una seqüència de text acabada en punt ens calculi el seu import.</em></p>
 <p>El programa anterior seria molt senzill de modificar, seria suficient amb canviar la darrera línia de codi en la qual
 mostrem el resultat a l’usuari:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;El cost d&#39;</span><span class="n">enviar</span> <span class="n">aquest</span> <span class="n">missatge</span> <span class="n">es</span> <span class="n">de</span> <span class="p">{</span><span class="n">contador</span> <span class="o">*</span> <span class="mf">0.01</span><span class="p">}</span><span class="s1">&#39;)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;El cost d</span><span class="se">\&#39;</span><span class="s1">enviar aquest missatge es de </span><span class="si">{</span><span class="n">contador</span> <span class="o">*</span> <span class="mf">0.01</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Però si ara canviem l’enunciat del problema i la companyia telefònica només ens volguessin cobrar les paraules de més

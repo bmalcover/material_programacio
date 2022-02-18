@@ -56,7 +56,7 @@
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Exercicis Tema 5" href="Tema5_Exercicis_altres_estructures.html" />
+    <link rel="next" title="Exercicis Tema 5/2" href="Tema5_Exercicis_altres_estructures.html" />
     <link rel="prev" title="Altres maneres d’estructurar les dades" href="Tema5_Estructures.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -203,6 +203,26 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="Tema5_Classes.html#classe-dels-nombres-complexos">
+     Classe dels nombres complexos
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Tema5_Classes.html#encapsulacio">
+     Encapsulació
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Tema5_Classes.html#atributs-i-metodes-de-classe">
+     Atributs i mètodes de classe
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Tema5_Classes.html#sobrecarrega-d-operadors">
+     Sobrecàrrega d’operadors
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="Tema5_Estructures.html">
      Altres maneres d’estructurar les dades
     </a>
@@ -214,7 +234,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Tema5_Exercicis_altres_estructures.html">
-     Exercicis Tema 5
+     Exercicis Tema 5/2
     </a>
    </li>
   </ul>
@@ -436,7 +456,7 @@
 <h2>Llistes<a class="headerlink" href="#llistes" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="introduccio-a-les-llistes">
 <h3>Introducció a les llistes<a class="headerlink" href="#introduccio-a-les-llistes" title="Permalink to this headline">¶</a></h3>
-<p>1.Donada la següent llista, realitza les operacions que hi ha a continuació i verifica  la seva correctessa després
+<p>1-Donada la següent llista, realitza les operacions que hi ha a continuació i verifica  la seva correctessa després
 de l’execució <code class="docutils literal notranslate"><span class="pre">la_meva_llista</span> <span class="pre">=</span> <span class="pre">[1,2,3,4,5,6,7]</span></code></p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>1. Cambia el primer valor per 33.
 
@@ -455,25 +475,25 @@ de l’execució <code class="docutils literal notranslate"><span class="pre">la
 8. Inserta el valor 10 després del valor 2.
 </pre></div>
 </div>
-<p>2.Crear un programa que guarda en una llista de 10 elements la posició que ocupa cada element, <code class="docutils literal notranslate"><span class="pre">i</span></code> després el mostri per
-pantalla. Es a dir, hem de guardar en l’índex 0, el valor 1 …. en l’índex 9, el valor 10.</p>
-<p>3.Copia el següent codi que crearà una llista amb DNIS, mostra per pantalla aquells que es troben en posicions amb
+<p>2-Crear un programa que guarda en una llista de 10 elements la posició que ocupa cada element, <code class="docutils literal notranslate"><span class="pre">i</span></code> després el mostri per
+pantalla. Es a dir, hem de guardar en l’índex 0, el valor 1 … en l’índex 9, el valor 10.</p>
+<p>3-Copia el següent codi que crearà una llista amb DNIS, mostra per pantalla aquells que es troben en posicions amb
 índex parell <code class="docutils literal notranslate"><span class="pre">dni</span> <span class="pre">=</span> <span class="pre">[43542311,</span> <span class="pre">43542312,43542313,</span> <span class="pre">43542314,</span> <span class="pre">43542315,</span> <span class="pre">43542316]</span></code>.</p>
 </div>
 <div class="section" id="llistes-i-sequencies">
 <h3>Llistes i seqüències<a class="headerlink" href="#llistes-i-sequencies" title="Permalink to this headline">¶</a></h3>
-<p>4.Crear un programa que deixa una seqüència de caràcters acabada en punt, la guarda en una llista i després
+<p>4-Crear un programa que deixa una seqüència de caràcters acabada en punt, la guarda en una llista i després
 mostra la seqüència invertida.</p>
-<p>5.Elimina totes les ocurrències del valor 2 en la següent llista: <code class="docutils literal notranslate"><span class="pre">segona_llista</span> <span class="pre">=</span> <span class="pre">[1,2,2,4,5,2,4,2,2]</span></code></p>
-<p>6.Crear un programa que generi 10 nombres aleatoris en l’interval <code class="docutils literal notranslate"><span class="pre">[0,</span> <span class="pre">100]</span></code> i els guardi en una llista. Posteriorment
+<p>5-Elimina totes les ocurrències del valor 2 en la següent llista: <code class="docutils literal notranslate"><span class="pre">segona_llista</span> <span class="pre">=</span> <span class="pre">[1,2,2,4,5,2,4,2,2]</span></code></p>
+<p>6-Crear un programa que generi 10 nombres aleatoris en l’interval <code class="docutils literal notranslate"><span class="pre">[0,</span> <span class="pre">100]</span></code> i els guardi en una llista. Posteriorment
 ha de crear una nova llista amb els números menors a 50 i mostrar-la per pantalla.</p>
-<p>7.Crear una funció que rebi una llista amb valors numèrics i retorni <strong>una nova</strong> llista on cada posició té la suma
+<p>7-Crear una funció que rebi una llista amb valors numèrics i retorni <strong>una nova</strong> llista on cada posició té la suma
 acumulada dels valors anteriors amb el valor d’aquesta posició.</p>
-<p>8.Crear un programa que llegeix una seqüència acabada en punt i ens digui la freqüència d’aparició de cada vocal. És
+<p>8-Crear un programa que llegeix una seqüència acabada en punt i ens digui la freqüència d’aparició de cada vocal. És
 obligatori l’ús de llistes.</p>
-<p>9.Crear un programa que genera 60 nombres aleatoris en l’interval <code class="docutils literal notranslate"><span class="pre">[0,</span> <span class="pre">100]</span></code> i els guarda en una llista. Posteriorment
+<p>9-Crear un programa que genera 60 nombres aleatoris en l’interval <code class="docutils literal notranslate"><span class="pre">[0,</span> <span class="pre">100]</span></code> i els guarda en una llista. Posteriorment
 heu de generar una nova llista sense duplicats.</p>
-<p>10.Crear un programa que llegeix dues seqüències de la mateixa longitud acabades en punt, i mostra per pantalla el
+<p>10-Crear un programa que llegeix dues seqüències de la mateixa longitud acabades en punt, i mostra per pantalla el
 resultat d’intercalar les dues seqüències. La introducció de les dues seqüències s’ha de fer en una sola línia.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="n">Per</span> <span class="n">exemple</span><span class="p">:</span>
 
@@ -486,18 +506,18 @@ resultat d’intercalar les dues seqüències. La introducció de les dues seqü
 </div>
 <p>Versió més difícil: Realitzar el mateix exercici llegint cada seqüència en diferents línies i permetent que les dues
 seqüències siguin de diferent longitud.</p>
-<p>11.Crear un programa que llegeix una seqüència de paraules acabades en punt. El tractament de cada paraula consisteix
-en emmagatzemarla en un llista i determinar si la paraula és un palíndrom (capicua). Vegeu el següent exemple:</p>
+<p>11-Crear un programa que llegeix una seqüència de paraules acabades en punt. El tractament de cada paraula consisteix
+a emmagatzemar-la en una llista i determinar si la paraula és un palíndrom (capicua). Vegeu el següent exemple:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="n">avio</span> <span class="n">rallar</span><span class="o">.</span>
     <span class="n">avio</span><span class="o">.</span>    <span class="n">no</span> <span class="n">és</span> <span class="n">capicua</span>
     <span class="n">rallar</span><span class="o">.</span> <span class="n">és</span> <span class="n">capicua</span>
 
 </pre></div>
 </div>
-<p>12.Crear un programa que genera dues llistes de longitud 10 amb nombres aleatoris en l’interval 0-20, les mostra i
+<p>12-Crear un programa que genera dues llistes de longitud 10 amb nombres aleatoris en l’interval 0-20, les mostra i
 posteriorment mostra la llista resultant de realitzar l’intersecció entre les dues. <strong>Pista:</strong> l’operand <code class="docutils literal notranslate"><span class="pre">in</span></code> permet
 saber si un valor està en una llista, tornant un booleà.</p>
-<p>13.Crear un programa que guarda en una llista que només conté valors booleans si el nombre en qüestió és primer o
+<p>13-Crear un programa que guarda en una llista que només conté valors booleans si el nombre en qüestió és primer o
 no. Ho ha de calcular pels números del 0 al 100. Finalment hem de veure el següent per pantalla:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="mi">0</span> <span class="o">-&gt;</span> <span class="n">fals</span>
 
@@ -517,16 +537,17 @@ no. Ho ha de calcular pels números del 0 al 100. Finalment hem de veure el seg�
     <span class="o">...</span>
 
     <span class="mi">99</span> <span class="o">-&gt;</span> <span class="n">fals</span>
+
     <span class="mi">100</span> <span class="o">-&gt;</span> <span class="n">fals</span>
 </pre></div>
 </div>
-<p>14.Crear un programa que ens mostri els nombres primers menors a 100 usant el mètode del filtre d’Eratòstenes.
+<p>14-Crear un programa que ens mostri els nombres primers menors a 100 usant el mètode del filtre d’Eratòstenes.
 <a class="reference external" href="https://es.wikipedia.org/wiki/Criba_de_Erat%C3%B3stenes">Explicacio</a></p>
-<p>15.Crear un programa que calculi els <em>n</em> primers valors de la sèrie de
+<p>15-Crear un programa que calculi els <em>n</em> primers valors de la sèrie de
 Fibonacci i els guardi en una llista, després ha de recórrer la llista i imprimir els valors. El valor <em>n</em> ha de
-demanar-se a l’usuari)</p>
-<p>La sèrie de Fibonacci es defineix com <span class="math notranslate nohighlight">\(f(n) = f(n-1) + f(n-2)\)</span>. i els primers dos termes són igual a 1.</p>
-<p>16.Modificar el programa perquè també mostri l’aproximació al nombre auri. El nombre auri es pot aproximar
+demanar-se a l’usuari. La sèrie de Fibonacci es defineix com <span class="math notranslate nohighlight">\(f(n) = f(n-1) + f(n-2)\)</span>. i els primers dos termes són
+igual a 1.</p>
+<p>16-Modificar el programa perquè també mostri l’aproximació al nombre auri. El nombre auri es pot aproximar
 mitjançant la relació de dos nombres consecutius de la sèrie de Fibonacci. El programa ha de fer l’aproximació amb el
 valor <code class="docutils literal notranslate"><span class="pre">n</span></code> i el valor <code class="docutils literal notranslate"><span class="pre">n-1</span></code></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="mi">3</span><span class="o">/</span><span class="mi">2</span> <span class="o">=</span> <span class="mf">1.5</span>
@@ -557,11 +578,13 @@ dels dos. Per exemple, si els valors són 54 i 10, els simplifica a 27 i 5.</p><
 <li><p>Un mètode <strong>es_infinit</strong> que retorni un booleà indicant si el nombre és infinit, és a dir si el divisor és zero.</p></li>
 <li><p>Implementar un mètode <strong>obtenir_quocient</strong>, una funció que ens retorna el quocient del nombre racional.</p></li>
 <li><p>Implementar un mètode <strong>suma</strong>, una funció que rep un nombre racional per paràmetre i retorna un nou número racional
-resultat de sumar el nombre racional amb el que rebem per paràmetre: La suma a / b + c / d, és (a * d + c * b) / (b * d).</p></li>
-<li><p>implementar el mètode <strong>str</strong>, d’aquesta forma al fer print d’una variable de tipus nombre racional ho mostri per
+resultat de sumar el nombre racional amb el qual rebem per paràmetre: La suma a / b + c / d, és (a * d + c * b) / (b *
+d).</p></li>
+<li><p>implementar el mètode <strong>str</strong>, d’aquesta forma al fer <code class="docutils literal notranslate"><span class="pre">print</span></code> d’una variable de tipus nombre racional ho mostri per
 consola.</p></li>
 </ol>
-<p>Les classes que es troben en altres fitxers es poden importar d’igual manera que els subprogrames, tal com hem vist al taller.</p>
+<p>Les classes que es troben en altres fitxers es poden importar d’igual manera que els subprogrames, tal com hem vist al
+taller.</p>
 <p>Un cop realitzada la classe NumeroRacional, heu implementar dos programes.</p>
 <ol class="simple">
 <li><p>Programa que construeix un nombre racional a partir de la lectura de dos valors que l’usuari escriu pel teclat. Si
@@ -569,13 +592,13 @@ el nombre racional no és infinit, sumar el nombre 3/4. Finalment heu de simplif
 pantalla.</p></li>
 <li><p>Realitzar un programa que calculi la següent aproximació al quadrat del nombre pi amb 1000 termes de la
 seqüència. Heu de fer-ho en termes de nombres racionals i mostrar el resultat final per pantalla, en format decimal.
-6 (1/1 + 1/4 + 1/9 + 1/16 + 1/25 … ..)</p></li>
+6 (1/1 + 1/4 + 1/9 + 1/16 + 1/25 …)</p></li>
 </ol>
 <p>En posteriors exercicis ampliarem aquesta classe amb més funcionalitats.</p>
 </div>
 <div class="section" id="classe-punt-3d">
 <h3>Classe punt 3D<a class="headerlink" href="#classe-punt-3d" title="Permalink to this headline">¶</a></h3>
-<p>Crear una classe anomenada Punt que ens permet crear programes amb variables de el tipus punt. Un punt és una
+<p>Crear una classe anomenada Punt que ens permet crear programes amb variables del tipus punt. Un punt és una
 localització en l’espai 3D que s’expressa com 3 valors referents a les coordenades x, i, z. Per exemple (1, 0, 4).</p>
 <p>Abans de començar a programar, recomano que llegiu tots els punts de l’exercici, ja que us pot permetre entendre
 millor la funcionalitat de la classe.</p>
@@ -612,26 +635,26 @@ traspàs febrer té 29 dies.</p></li>
 <li><p>Fer un mètode privat, anomenat <strong>es_any_traspas</strong>, que donat un nombre enter i retorni un booleà indicant si és de
 traspàs o no. Un any és de traspàs si és divisible per 4, però no és de traspàs si és divisible per 100 i no per 400. Per
 exemple 1996 és de traspàs, 2000 si (és divisible per 400) i 2100 no (és divisible per 100 i no per 400).</p></li>
-<li><p>Incorporar un mètode, <strong>es_traspas</strong>, que indiqui si la data està en any de traspàs, s’ha de fer ús de el mètode
+<li><p>Incorporar un mètode, <strong>es_traspas</strong>, que indiqui si la data està en any de traspàs, s’ha de fer ús del mètode
 anterior.</p></li>
 <li><p>Implementar un mètode anomenat <strong>incrementa</strong> que incrementi en un dia la data, tenint en compte que si sobrepassem
-l’últim dia del mes hem d’incrementar el mes, i hem de fer el mateix raonament per a l’últim mes de l’any.</p></li>
+l’últim dia del mes haurem d’incrementar el mes, i hem de fer el mateix raonament per a l’últim mes de l’any.</p></li>
 <li><p>Implementar un mètode de classe anomenat <strong>diferència</strong> que donades dues dates ens digui el nombre de dies entre les
 dues dates (podeu utilitzar aquest mètode per saber quants dies heu viscut ;) ).</p></li>
 </ol>
 </div>
 <div class="section" id="classe-vector">
 <h3>Classe Vector<a class="headerlink" href="#classe-vector" title="Permalink to this headline">¶</a></h3>
-<p>Anem a fer l’exercici classe vector. En aquest cas heu de implementar la classe (definir atributs i mètodes) i
+<p>Anem a fer l’exercici classe vector. En aquest cas heu d’implementar la classe (definir atributs i mètodes) i
 realitzar un programa principal que permeti comprovar el seu correcte funcionament (no cal fer entrada per teclat).</p>
 <p>Per definir un vector 3 dimensional: són necessaris 3 sencers (x, i, z). Recordeu que els atributs han de ser privats.</p>
 <p>Operacions:</p>
 <ol class="simple">
 <li><p>Crear un vector en una posició determinada (constructor).</p></li>
 <li><p>Implementar el mètode <strong>mòdul</strong> que ens retorna el mòdul del vector en format numèric.</p></li>
-<li><p>Mètode suma: mètode de classe que rep dos vectors per paràmetre realitza l’operació <strong>suma</strong>. Es sumen les
+<li><p>Mètode suma: mètode de classe que rep dos vectors per paràmetre i realitza l’operació <strong>suma</strong>. Es sumen les
 components, i ens retorna un nou Vector.</p></li>
-<li><p>Mètode resta: mètode de classe que rep dosectors per paràmetre i realitza l’operació <strong>resta</strong>. Retorna un nou
+<li><p>Mètode resta: mètode de classe que rep dos vectors per paràmetre i realitza l’operació <strong>resta</strong>. Retorna un nou
 vector.</p></li>
 <li><p>Mètode que rep un vector i realitza el seu <strong>producte_escalar</strong> retornant el seu valor numèric.</p></li>
 <li><p>Mètode <strong>mult_escalar</strong> que multiplica les tres components del vector per un escalar rebut per paràmetre.</p></li>
@@ -639,7 +662,7 @@ vector.</p></li>
 <li><p>Mètode anomenat <strong>son_iguals</strong> que rep un vector per paràmetre i retorna una variable booleana si les
 tres components dels vectors son iguals.</p></li>
 <li><p>Mètode <strong>calcular_angle</strong>: calcula l’angle amb un altre vector que rep per paràmetre i retorna valor de l’angle
-entre ells. Link: Angle de dos vectors</p></li>
+entre ells. Link: <a class="reference external" href="https://www.geometriaanalitica.info/como-calcular-el-angulo-entre-dos-vectores-ejemplos-ejercicios-resueltos/">Angle de dos vectors</a></p></li>
 </ol>
 </div>
 <div class="section" id="ampliacio-classe-punt">
@@ -661,7 +684,7 @@ realitza aquest procés i que pugui ser usat per les operacions <strong>suma</st
 <h3>Classe Compte Corrent<a class="headerlink" href="#classe-compte-corrent" title="Permalink to this headline">¶</a></h3>
 <p>En aquest exercici s’ha d’implementar la classe es a dir definir els atributs i implementar els mètodes. També es
 demana realitzar un programa principal on comproveu el seu correcte funcionament. No cal fer entrada per teclat.</p>
-<p>Un compte corrent ha de tenir informació referent a l’saldo i a l’interès aplicat a aquest compte, els dos valors han
+<p>Un compte corrent ha de tenir informació referent al saldo i a l’interès aplicat a aquest compte, els dos valors han
 de permetre guardar xifres decimals. A més s’ens sol·licita poder realitzar les següents operacions:</p>
 <p>El constructor ha de permetre crear un compte corrent amb un saldo inicial i un interès definit per l’usuari. Per
 defecte el saldo ha de ser de 100 € i l’interès del 5%.</p>
@@ -669,12 +692,12 @@ defecte el saldo ha de ser de 100 € i l’interès del 5%.</p>
 <ol class="simple">
 <li><p>Mètode <strong>suma</strong> al que el saldo és incrementat en x €.</p></li>
 <li><p>Mètode <strong>resta</strong> en què el saldo és decrementat en x €, s’ha de tenir en compte que no és possible tenir un saldo
-negatiu. Si en cridar a aquesta operació ens adonam que no és pot aplicar, s’ha de mostrar un  missatge d’error per
+negatiu. Si en cridar a aquesta operació ens adonem que no es pot aplicar, s’ha de mostrar un  missatge d’error per
 pantalla i evidentment no s’ha de l’operació realitzar.</p></li>
 <li><p>Mètode <strong>abonament_interes</strong> que ha d’incrementar el saldo en funció de l’interès que s’aplica al compte.</p></li>
 <li><p>Funció <strong>obtenir_saldo</strong>, que permet conèixer el saldo actual del compte.</p></li>
 <li><p>Mètode <strong>modificar_interes</strong> que modifica l’interès del compte.</p></li>
-<li><p>Una funció transferència que ha de permetre realitzar una transferència de x€ a un altre compte que rebem per
+<li><p>Una funció <strong>transferència</strong> que ha de permetre realitzar una transferència de x€ a un altre compte que rebem per
 paràmetre, sempre que això sigui possible.</p></li>
 </ol>
 </div>
@@ -747,7 +770,7 @@ funcionament de la classe implementada executant aquest codi.</p>
     <div class='prev-next-bottom'>
         
     <a class='left-prev' id="prev-link" href="Tema5_Estructures.html" title="previous page">Altres maneres d’estructurar les dades</a>
-    <a class='right-next' id="next-link" href="Tema5_Exercicis_altres_estructures.html" title="next page">Exercicis Tema 5</a>
+    <a class='right-next' id="next-link" href="Tema5_Exercicis_altres_estructures.html" title="next page">Exercicis Tema 5/2</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
