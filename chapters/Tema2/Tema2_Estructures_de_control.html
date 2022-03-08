@@ -663,6 +663,18 @@ partint del valor de la variable <code class="docutils literal notranslate"><spa
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>El valor inicial de la variable &#39;n&#39; es: 5
+5
+4
+3
+2
+1
+Valor de n = 0
+Som fora del bucle
+</pre></div>
+</div>
+</div>
 </div>
 <p>Un altre exemple de programa que usa bucles indefinits és el càlcul de les taules de multiplicació</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Aquest és un programa pels alumnes de primaria&quot;</span><span class="p">)</span>
@@ -683,7 +695,7 @@ partint del valor de la variable <code class="docutils literal notranslate"><spa
 <div class="section" id="el-bucle-definit">
 <h3>El bucle definit<a class="headerlink" href="#el-bucle-definit" title="Permalink to this headline">¶</a></h3>
 <p>Aquest altre tipus de bucle és més controlat que l’anterior, ja que no finalitza quan una condició es deixa de complir,
-sino que quan el definim també sabem quantes iteracions realitzarà. La instrucció usada en aquest cas és coneix amb el
+sinó que quan el definim també sabem quantes iteracions realitzarà. La instrucció usada en aquest cas es coneix amb el
 nom de <code class="docutils literal notranslate"><span class="pre">for</span></code> i l’explicarem a continuació.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="o">&lt;</span><span class="n">var</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">iterable</span><span class="o">&gt;</span><span class="p">:</span>
     <span class="o">&lt;</span><span class="n">cos</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="o">&gt;</span>
@@ -700,6 +712,16 @@ que usa una tupla:</p>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">):</span>
     <span class="n">s</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">3</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3
+4
+5
+6
+7
+8
 </pre></div>
 </div>
 </div>
@@ -787,13 +809,13 @@ reservada <code class="docutils literal notranslate"><span class="pre">list</spa
 </div>
 <div class="section" id="combinacio-d-estructures-de-control">
 <h2>Combinació d’estructures de control<a class="headerlink" href="#combinacio-d-estructures-de-control" title="Permalink to this headline">¶</a></h2>
-<p>Encara que durant aquesta secció hem vist les diferents estructures de control del fluxe del programa per separat,
+<p>Encara que durant aquesta secció hem vist les diferents estructures de control del flux del programa per separat,
 molts dels nostres programes necessitaran la combinació d’aquests tres esquemes per tal de resoldre els problemes
 que s’ens presentaran.</p>
 <p>A continuació resoldrem dos problemes fent ús de les tres estructures de control descrites en el
 capítol:</p>
 <p><strong>Realitzar un programa que llegeixi dos nombres
-de teclat a i b, on <em>a</em> &lt;= <em>b</em>, i que mostri a l’usuari el sumatori d’<em>a</em> fins <em>b</em> (ambdos inclosos)</strong></p>
+de teclat a i b, on <em>a</em> &lt;= <em>b</em>, i que mostri a l’usuari el sumatori d’<em>a</em> fins <em>b</em> (ambdós inclosos)</strong></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Calcul de la suma de l&#39;interval a ,b&quot;</span><span class="p">)</span>
 
 <span class="n">num_a</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Escriu a &quot;</span><span class="p">))</span>
