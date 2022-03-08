@@ -522,7 +522,13 @@ o un conjunt d’expressions de <code class="docutils literal notranslate"><span
 
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Som fora del bloc condicional&quot;</span><span class="p">)</span>
 <span class="c1"># Donam resultats</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;El valor absolut es: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;El valor absolut es: </span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Som fora del bloc condicional
+El valor absolut es: 12
 </pre></div>
 </div>
 </div>
@@ -578,7 +584,8 @@ que ens digui si un nombre és positiu o negatiu ho podem fer de la següent man
 </pre></div>
 </div>
 <p>Realment el codi de sobre no fa del tot bé la seva feina, ja que quan <code class="docutils literal notranslate"><span class="pre">x</span></code> pren el valor 0, el programa no
-contempla cap cas. Per a poder completar i corregir el notre programa necessitem avaluar una condició més, això ho podem
+contempla cap cas. Per a poder completar i corregir el nostre programa necessitem avaluar una condició més, això ho
+podem
 fer amb la paraula reservada <code class="docutils literal notranslate"><span class="pre">elif</span></code>.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Insereix un nombre: &quot;</span><span class="p">))</span>
 
@@ -651,7 +658,7 @@ partint del valor de la variable <code class="docutils literal notranslate"><spa
     <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
     <span class="n">n</span> <span class="o">=</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">1</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Valor de n = &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">n</span><span class="p">))</span>  
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Valor de n = </span><span class="si">{</span><span class="n">n</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Som fora del bucle&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -665,7 +672,7 @@ partint del valor de la variable <code class="docutils literal notranslate"><spa
 
 <span class="k">while</span> <span class="n">x</span> <span class="o">&lt;=</span> <span class="mi">10</span><span class="p">:</span> <span class="c1"># Esquema iteratiu indefinit</span>
     <span class="n">resultat</span> <span class="o">=</span> <span class="n">taula</span> <span class="o">*</span> <span class="n">x</span>
-    <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">taula</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; x &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; = &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">resultat</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39; </span><span class="si">{</span><span class="n">taula</span><span class="si">}</span><span class="s1"> x </span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s1">  = </span><span class="si">{</span><span class="n">resultat</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
 
     <span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">1</span> <span class="c1"># incrementam la variable que controla el bucle</span>
 
@@ -798,7 +805,7 @@ de teclat a i b, on <em>a</em> &lt;= <em>b</em>, i que mostri a l’usuari el su
     <span class="n">sumatori</span> <span class="o">=</span> <span class="n">sumatori</span> <span class="o">+</span> <span class="n">i</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">sumatori</span><span class="p">)</span> <span class="c1"># Mostram informació intermitja, això no és necessari per solventar el problema</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;El resultat es: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">sumatori</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;El resultat es: </span><span class="si">{</span><span class="n">sumatori</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
 
 </pre></div>
 </div>
@@ -813,10 +820,10 @@ de teclat a i b, on <em>a</em> &lt;= <em>b</em>, i que mostri a l’usuari el su
     <span class="n">calc</span> <span class="o">=</span> <span class="n">calc</span> <span class="o">+</span> <span class="mi">1</span>
 
 <span class="k">if</span> <span class="mi">2</span><span class="o">**</span><span class="n">calc</span> <span class="o">==</span> <span class="n">num</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;La part entera del log es: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">calc</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;La part entera del log es: </span><span class="si">{</span><span class="n">calc</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
     <span class="n">calc</span> <span class="o">=</span> <span class="n">calc</span> <span class="o">-</span> <span class="mi">1</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;La part entera del log es: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">calc</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;La part entera del log es: </span><span class="si">{</span><span class="n">calc</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
