@@ -513,11 +513,11 @@ serveix per imprimir el missatge <em>Hello World!</em> per pantalla. Com és un 
 <h2>Paràmetres<a class="headerlink" href="#parametres" title="Permalink to this headline">¶</a></h2>
 <p>A la definició de les característiques dels subprogrames hem explicat que aquests poden ser parametritzats. La idea
 d’utilitzar paràmetres és la de subministrar informació al subprograma de manera que aquest pugui executar la tasca
-per la qual ha estat dissenyat podent usar informació diferent cada cop que aquest és usat. Podríem fer un símil amb</p>
-<p>La parametrització es duu a terme indicant els diferents valors que és necessari subministrar al subpgrograma com
-una llista d’expressions separades per una coma.</p>
-<p>El següent <strong>procediment</strong> anomenat <code class="docutils literal notranslate"><span class="pre">fruiteria</span></code> rep tres paràmetres anomenats <code class="docutils literal notranslate"><span class="pre">quantitat</span></code>, <code class="docutils literal notranslate"><span class="pre">element</span></code> i <code class="docutils literal notranslate"><span class="pre">preu</span></code>, calcula
-i mostra per pantalla el valor d’una comanda.</p>
+per la qual ha estat dissenyat podent usar informació diferent cada cop que aquest és usat. La parametrització es duu
+a terme indicant els diferents valors que és necessari subministrar al subprograma com una llista d’expressions
+separades per una coma.</p>
+<p>El següent <strong>procediment</strong> anomenat <code class="docutils literal notranslate"><span class="pre">fruiteria</span></code> rep tres paràmetres anomenats <code class="docutils literal notranslate"><span class="pre">quantitat</span></code>, <code class="docutils literal notranslate"><span class="pre">element</span></code> i <code class="docutils literal notranslate"><span class="pre">preu</span></code>,
+calcula i mostra per pantalla el valor d’una comanda.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fruiteria</span><span class="p">(</span><span class="n">quantitat</span><span class="p">,</span> <span class="n">element</span><span class="p">,</span> <span class="n">preu</span><span class="p">):</span>
@@ -544,7 +544,7 @@ tenir en compte el seu ordre.</p>
 </div>
 </div>
 </div>
-<p>Si usam menys o més paràmetres dels necessaris obtindrem errors indicant que falten o sobren paràmetres:</p>
+<p>Si usem menys o més paràmetres dels necessaris obtindrem errors indicant que falten o sobren paràmetres:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fruiteria</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="s2">&quot;prunes&quot;</span><span class="p">)</span>
@@ -607,9 +607,9 @@ inesperats:</p>
 </div>
 <div class="section" id="arguments-especificant-el-seu-nom">
 <h3>Arguments especificant el seu nom<a class="headerlink" href="#arguments-especificant-el-seu-nom" title="Permalink to this headline">¶</a></h3>
-<p>Quan cridem a un subprograma, podem especificar arguments de la forma <nom argument> = <valor>. En aquest cas, cada
-<nom argument> ha de coincidir amb un paràmetre de la definició del subprograma <code class="docutils literal notranslate"><span class="pre">Python</span></code>.</p>
-<p>Si especifiquem els arguments pel seu nom, no és necessari especificar l’ordre.</p>
+<p>Quan cridem a un subprograma, podem especificar arguments de la forma <code class="docutils literal notranslate"><span class="pre">&lt;nom</span> <span class="pre">argument&gt;</span> <span class="pre">=</span> <span class="pre">&lt;valor&gt;</span></code>. En aquest cas, cada
+<nom argument> ha de coincidir amb un paràmetre de la definició del subprograma <code class="docutils literal notranslate"><span class="pre">Python</span></code>. Si especifiquem els
+arguments pel seu nom, no és necessari especificar l’ordre.</p>
 <p>També podem combinar l’especificació d’arguments segons el seu ordre i el seu nom. El que és important saber és que
 primer posarem els arguments de posició i llavors els arguments els quals especificarem el seu nom, un cop hem
 especificat un argument amb el seu nom, no hi pot haver arguments posicionals a la seva dreta.</p>
