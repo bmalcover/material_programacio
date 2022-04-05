@@ -475,6 +475,11 @@ ofereix una àmplia gamma d’operacions que permeten modificar les llistes.</p>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;foo&#39;, &#39;bar&#39;, &#39;baz&#39;, &#39;qux&#39;, &#39;quux&#39;, &#39;corge&#39;]
+</pre></div>
+</div>
+</div>
 </div>
 <div class="section" id="creacio-d-una-llista">
 <h2>Creació d’una llista<a class="headerlink" href="#creacio-d-una-llista" title="Permalink to this headline">¶</a></h2>
@@ -496,12 +501,12 @@ estem treballant ens permeti, o com hem explicat abans no tenir cap element, amb
     <span class="mi">60</span><span class="p">,</span> <span class="mi">61</span><span class="p">,</span> <span class="mi">62</span><span class="p">,</span> <span class="mi">63</span><span class="p">,</span> <span class="mi">64</span><span class="p">,</span> <span class="mi">65</span><span class="p">,</span> <span class="mi">66</span><span class="p">,</span> <span class="mi">67</span><span class="p">,</span> <span class="mi">68</span><span class="p">,</span> <span class="mi">69</span><span class="p">,</span> <span class="mi">70</span><span class="p">,</span> <span class="mi">71</span><span class="p">,</span> <span class="mi">72</span><span class="p">,</span> <span class="mi">73</span><span class="p">,</span> <span class="mi">74</span><span class="p">,</span> <span class="mi">75</span><span class="p">,</span> <span class="mi">76</span><span class="p">,</span> <span class="mi">77</span><span class="p">,</span> <span class="mi">78</span><span class="p">,</span> <span class="mi">79</span><span class="p">,</span>
     <span class="mi">80</span><span class="p">,</span> <span class="mi">81</span><span class="p">,</span> <span class="mi">82</span><span class="p">,</span> <span class="mi">83</span><span class="p">,</span> <span class="mi">84</span><span class="p">,</span> <span class="mi">85</span><span class="p">,</span> <span class="mi">86</span><span class="p">,</span> <span class="mi">87</span><span class="p">,</span> <span class="mi">88</span><span class="p">,</span> <span class="mi">89</span><span class="p">,</span> <span class="mi">90</span><span class="p">,</span> <span class="mi">91</span><span class="p">,</span> <span class="mi">92</span><span class="p">,</span> <span class="mi">93</span><span class="p">,</span> <span class="mi">94</span><span class="p">,</span> <span class="mi">95</span><span class="p">,</span> <span class="mi">96</span><span class="p">,</span> <span class="mi">97</span><span class="p">,</span> <span class="mi">98</span><span class="p">,</span> <span class="mi">99</span><span class="p">]</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;La llista a es:&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;La llista a es: </span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>La llista a es:[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>La llista a es: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99]
 </pre></div>
 </div>
 </div>
@@ -607,7 +612,7 @@ l’’increment’ també pot ser un nombre negatiu. D’aquesta manera, podrem
 <span class="c1"># I els senars del 3 al 9?</span>
 
 <span class="n">senars_3_9</span> <span class="o">=</span> <span class="n">llista</span><span class="p">[::</span><span class="mi">2</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Senars del 3 al 9: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">senars_3_9</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Senars del 3 al 9: </span><span class="si">{</span><span class="n">senars_3_9</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -625,8 +630,8 @@ Senars del 3 al 9: [1, 3, 5, 7, 9]
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>El <em>slicing</em> no realitza copies dels elements que hem selecccionat de les subllistes, si en feim alguna modificació
-aquesta es mantendrà a la llista original.</p>
+<p>El <em>slicing</em> realitza copies dels elements que hem selecccionat de les subllistes, si en feim alguna modificació
+aquesta no es mantendrà a la llista original.</p>
 </div>
 </div>
 </div>
@@ -643,10 +648,10 @@ seleccionarem l’element mitjançant el seu índex.</p>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">llista</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Llista original &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">llista</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Llista original &quot; </span><span class="si">{</span><span class="n">llista</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
 <span class="n">llista</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="mi">33</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Llista modificada a la primera posicio &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">llista</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Llista modificada a la primera posicio </span><span class="si">{</span><span class="n">llista</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
 
 <span class="n">llista</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">55</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">llista</span><span class="p">)</span>
@@ -654,7 +659,7 @@ seleccionarem l’element mitjançant el seu índex.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Llista original [1, 2, 3, 4, 5]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Llista original &quot; [1, 2, 3, 4, 5]
 Llista modificada a la primera posicio [-33, 2, 3, 4, 5]
 [-33, 2, 3, 4, 55]
 </pre></div>
@@ -672,9 +677,6 @@ llistes de la mateixa mida.</p>
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[33, 33, 3, 4, 55]
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
 </div>
@@ -723,9 +725,6 @@ aquest mateix tema en tornarem a parlar.</p>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 2, 3, 5, 5, 6]
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
 </div>
 </div>
 <p>Insert: Mètode que rep un enter i un element. Afegeix l’element a la posició seleccionada de la llista.</p>
@@ -770,9 +769,6 @@ provocarà un error en el nostre codi.</p>
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 2, 3, 4, 5, 6, 7]
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
 </div>
