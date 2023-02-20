@@ -4,10 +4,13 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Dades &#8212; Programacio I</title>
     
-  <link rel="stylesheet" href="../../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -17,117 +20,118 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-  <link rel="stylesheet"
-    href="../../_static/vendor/open-sans_all/1.44.1/index.css">
-  <link rel="stylesheet"
-    href="../../_static/vendor/lato_latin-ext/1.44.1/index.css">
-
-    
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-  <link rel="preload" as="script" href="../../_static/js/index.3da636dd464baa7582d2.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
-    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/togglebutton.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
-    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
-    <script >
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Composició d’instruccions" href="Tema2_Estructures_de_control.html" />
     <link rel="prev" title="Tema 2" href="Tema2_Intro.html" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="None">
+    
 
-
-
+    <!-- Google Analytics -->
+    
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
     
 
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
-<a class="navbar-brand text-wrap" href="../../index.html">
-  
-  <img src="../../_static/logo.png" class="logo" alt="logo">
-  
-  
-  <h1 class="site-logo" id="site-title">Programacio I</h1>
-  
-</a>
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Programacio I</h1>
+      
+    </a>
 </div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form>
-<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
-    <ul class="nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../intro.html">
-   Introducció
-  </a>
- </li>
-</ul>
-<ul class="current nav sidenav_l1">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    Introducció
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../Tema1.html">
    Tema 1
   </a>
  </li>
- <li class="toctree-l1 current active collapsible-parent">
+ <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="Tema2_Intro.html">
    Tema 2
   </a>
-  <ul class="current collapse-ul">
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
      Dades
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="#declaracions-de-variables">
-     Declaracions de variables
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="#operadors-i-operands">
-     Operadors i operands
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="#comentaris-en-el-codi">
-     Comentaris en el codi
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="#entrada-sortida-d-informacio">
-     Entrada / Sortida d’informació
     </a>
    </li>
    <li class="toctree-l2">
@@ -141,28 +145,34 @@
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
- <li class="toctree-l1 collapsible-parent">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../Tema3/Tema3_.html">
    Tema 3
   </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../Tema3/Tema3_Exercicis.html">
      Exercicis del Tema 3
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
- <li class="toctree-l1 collapsible-parent">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../Tema4/Tema4_.html">
    Tema 4
   </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../Tema4/Tema4_Esquemes.html">
      Aplicació dels esquemes bàsics
@@ -184,14 +194,17 @@
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
- <li class="toctree-l1 collapsible-parent">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../Tema5/Tema5.html">
    Tema 5
   </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../Tema5/Tema5_Llistes.html">
      Llistes
@@ -200,26 +213,6 @@
    <li class="toctree-l2">
     <a class="reference internal" href="../Tema5/Tema5_Classes.html">
      Classes i Objectes
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../Tema5/Tema5_Classes.html#classe-dels-nombres-complexos">
-     Classe dels nombres complexos
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../Tema5/Tema5_Classes.html#encapsulacio">
-     Encapsulació
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../Tema5/Tema5_Classes.html#atributs-i-metodes-de-classe">
-     Atributs i mètodes de classe
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../Tema5/Tema5_Classes.html#sobrecarrega-d-operadors">
-     Sobrecàrrega d’operadors
     </a>
    </li>
    <li class="toctree-l2">
@@ -238,42 +231,51 @@
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
- <li class="toctree-l1 collapsible-parent">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../Tema6/Tema6_Fitxers.html">
    Tema 6
   </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../Tema6/Tema6_Exercicis.html">
      Exercicis Tema 6
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
- <li class="toctree-l1 collapsible-parent">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../Tema7/Tema7_Algorismes.html">
    Tema 7
   </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../Tema7/Tema7_Exercicis.html">
      Exercicis Tema 7
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
- <li class="toctree-l1 collapsible-parent">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../Annexes/Annexes.html">
    Annexos
   </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../Annexes/Entorn_Desenvolupament.html">
      Entorn de desenvolupament
@@ -295,101 +297,173 @@
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
 </ul>
 
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="row topbar fixed-top container-xl">
-    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
     </div>
-    <div class="col pl-2 topbar-main">
-        
-        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-            <i class="fas fa-bars"></i>
-            <i class="fas fa-arrow-left"></i>
-            <i class="fas fa-arrow-up"></i>
-        </button>
-        
-        
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/chapters/Tema2/Tema2.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
-</div>
-
-        <!-- Source interaction buttons -->
-
-
-        <!-- Full screen (wrap in <a> to have style consistency -->
-        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-                title="Fullscreen mode"><i
-                    class="fas fa-expand"></i></button></a>
-
-        <!-- Launch buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/chapters/Tema2/Tema2.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="../../_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        
-        
-    </div>
-</div>
-
-    </div>
-
-    <!-- Table of contents -->
-    <div class="d-none d-md-block col-md-2 bd-toc show">
-        
-        <div class="tocsection onthispage pt-5 pb-3">
-            <i class="fas fa-list"></i> Contents
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
         </div>
-        <nav id="bd-toc-nav">
-            <ul class="nav section-nav flex-column">
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/chapters/Tema2/Tema2.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../../_sources/chapters/Tema2/Tema2.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#">
    Dades
   </a>
-  <ul class="nav section-nav flex-column">
+  <ul class="visible nav section-nav flex-column">
    <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#nom-o-identificador">
      Nom o identificador
@@ -411,7 +485,7 @@
   <a class="reference internal nav-link" href="#operadors-i-operands">
    Operadors i operands
   </a>
-  <ul class="nav section-nav flex-column">
+  <ul class="visible nav section-nav flex-column">
    <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#operadors-aritmetics">
      Operadors aritmètics
@@ -448,7 +522,7 @@
   <a class="reference internal nav-link" href="#entrada-sortida-d-informacio">
    Entrada / Sortida d’informació
   </a>
-  <ul class="nav section-nav flex-column">
+  <ul class="visible nav section-nav flex-column">
    <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#entrada">
      Entrada
@@ -463,23 +537,117 @@
  </li>
 </ul>
 
-        </nav>
-        
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Dades</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Dades
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#nom-o-identificador">
+     Nom o identificador
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tipus">
+     Tipus
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#declaracions-de-variables">
+   Declaracions de variables
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#operadors-i-operands">
+   Operadors i operands
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#operadors-aritmetics">
+     Operadors aritmètics
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#operadors-de-comparacio">
+     Operadors de comparació
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#representacio-dels-nombres-en-coma-flotant">
+     Representació dels nombres en coma flotant
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#operadors-logics">
+     Operadors lògics
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#operadors-d-assignacio-augmentada">
+     Operadors d’assignació augmentada
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#comentaris-en-el-codi">
+   Comentaris en el codi
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#entrada-sortida-d-informacio">
+   Entrada / Sortida d’informació
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#entrada">
+     Entrada
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#sortida">
+     Sortida
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
               <div>
                 
-  <div class="section" id="dades">
-<h1>Dades<a class="headerlink" href="#dades" title="Permalink to this headline">¶</a></h1>
+  <section id="dades">
+<h1>Dades<a class="headerlink" href="#dades" title="Permalink to this headline">#</a></h1>
 <p>Les dades que utilitzen els programes es guarden dins la memòria principal mitjançant el
 que anomenem com a <strong>variables</strong>. Com el nom indica, una variable pot canviar de contingut al llarg de l’execució d’un
 programa.</p>
 <p>Tenen tres característiques que les defineixen completament: el seu nom, el seu tipus i el seu valor.</p>
-<div class="section" id="nom-o-identificador">
-<h2>Nom o identificador<a class="headerlink" href="#nom-o-identificador" title="Permalink to this headline">¶</a></h2>
+<section id="nom-o-identificador">
+<h2>Nom o identificador<a class="headerlink" href="#nom-o-identificador" title="Permalink to this headline">#</a></h2>
 <p>És una combinació de caràcters, dígits i el signe de subratllat (<code class="docutils literal notranslate"><span class="pre">_</span></code>) que permeten identificar una variable de
 manera única. Tot nom ha de començar per un caràcter.</p>
 <ul class="simple">
@@ -488,9 +656,7 @@ manera única. Tot nom ha de començar per un caràcter.</p>
 </ul>
 <p>És altament recomanable que els identificadors de les variables comencin amb minúscula i que el seu nom serveixi per
 entrendre el significat de la variable dins el context del programa.</p>
-<p>Hem de pensar que hi ha una sèrie de noms que cada llenguatge de programació utilitza com a part del
-llenguatge i per tant no són vàlids com a nom de variable, es diu que estan reservats i si els usam obtindrem o erros
-o ens poden donar resultats inesperats.</p>
+<p>Hem de pensar que hi ha una sèrie de noms que cada llenguatge de programació utilitza com a part del llenguatge i, per tant, no són vàlids com a nom de variable. Es diu que estan reservats i si els usem obtindrem errors o ens poden donar resultats inesperats.</p>
 <p>A la taula que teniu a continuació els podeu veure:</p>
 <div class="table-responsive">
 <table class="table table-hover">
@@ -556,28 +722,22 @@ o ens poden donar resultats inesperats.</p>
 </tr>
 </tbody>
  </table>
-</div>
-<div class="section" id="tipus">
-<h2>Tipus<a class="headerlink" href="#tipus" title="Permalink to this headline">¶</a></h2>
-<p>El tipus defineix la natura dels valors que pot emmagatzemar una variable. També limita les operacions que es poden fer
-amb elles.</p>
+</section>
+<section id="tipus">
+<h2>Tipus<a class="headerlink" href="#tipus" title="Permalink to this headline">#</a></h2>
+<p>El tipus defineix la natura dels valors que pot emmagatzemar una variable. També limita les operacions que es poden fer amb elles.</p>
 <p>Els tipus de dades elementals són: caràcter, enter, real i booleà:</p>
 <p><strong>Caràcter</strong> permet representar informació referent a caràcters simples i a seqüències de caràcters, es representen
-entre comes, ja siguin simples <code class="docutils literal notranslate"><span class="pre">'</span></code> o dobles <code class="docutils literal notranslate"><span class="pre">&quot;</span></code>. Al món de la programació coneixem una seqüència de caràcters amb el nom
-de <em>String</em> (<em>str</em>). <code class="docutils literal notranslate"><span class="pre">Python</span></code> considera els caràcters com strings de longitud 1.</p>
+entre comes, ja siguin simples <code class="docutils literal notranslate"><span class="pre">'</span></code> o dobles <code class="docutils literal notranslate"><span class="pre">&quot;</span></code>. Al món de la programació coneixem una seqüència de caràcters amb el nom de <em>String</em> (<em>str</em>). <code class="docutils literal notranslate"><span class="pre">Python</span></code> considera els caràcters com strings de longitud 1.</p>
 <ul class="simple">
 <li><p>Exemples de caràcters: ‘a’, ‘b’, ‘\n’.</p></li>
 <li><p>Exemples de <em>String</em>: ‘3’, “llonguet”, “Josep”.</p></li>
 </ul>
-<p><strong>Enter</strong> (<em>int</em>) permet representar valors numèrics enters tant positius com negatius, el valor màxim i mínim
-que podem emprar no està acotat pel llenguatge, dependrà de la memòria disponible en la màquina en la qual executem el
-codi.</p>
+<p><strong>Enter</strong> (<em>int</em>) permet representar valors numèrics enters tant positius com negatius, el valor màxim i mínim que podem emprar no està acotat pel llenguatge, dependrà de la memòria disponible en la màquina en la qual executem el codi.</p>
 <ul class="simple">
 <li><p>Exemples d’enters: -33, 14, 28 o 8545445.</p></li>
 </ul>
-<p><strong>Real</strong> (<em>float</em>): aquest tipus designa un nombre de coma flotant. Aquests valors s’especifiquen separant la part
-entera de la part decimal amb un punt. Opcionalment, es pot afegir el caràcter e o E seguit d’un enter positiu o
-negatiu per especificar el nombre emprant la notació científica.</p>
+<p><strong>Real</strong> (<em>float</em>): aquest tipus designa un nombre de coma flotant. Aquests valors s’especifiquen separant la part entera de la part decimal amb un punt. Opcionalment, es pot afegir el caràcter e o E seguit d’un enter positiu o negatiu per especificar el nombre emprant la notació científica.</p>
 <ul class="simple">
 <li><p>Exemples de nombres reals: -1.2, 3.1416, -0.26989, 4. , 3e7 (3000000.0), 1.6e-4 (0.00016).</p></li>
 </ul>
@@ -585,23 +745,16 @@ negatiu per especificar el nombre emprant la notació científica.</p>
 <ul class="simple">
 <li><p>Exemples de nombres complexos: 2+3j, 33+0j.</p></li>
 </ul>
-<p><strong>Booleà</strong>: ens permet representar valors lògics. Poden tenir únicament dos valors: veritat (<code class="docutils literal notranslate"><span class="pre">True</span></code>) o fals
-(<code class="docutils literal notranslate"><span class="pre">False</span></code>).</p>
+<p><strong>Booleà</strong>: ens permet representar valors lògics. Poden tenir únicament dos valors: veritat (<code class="docutils literal notranslate"><span class="pre">True</span></code>) o fals (<code class="docutils literal notranslate"><span class="pre">False</span></code>).</p>
 <p>El valor màxim i mínim que podem guardar en una variable de tipus enter o real, la llargària
-màxima que podem tenir en un <em>String</em> a <code class="docutils literal notranslate"><span class="pre">Python</span></code> no estan definits tal com passa en altres llenguatges, depenen de la
-màquina on executem el codi. Aquest fet implica que hem de construir els nostres programes amb certa cura, pensant
-que si el volem executar en un altre ordinador amb menys capacitat potser aquest no pot fer-ho.</p>
-</div>
-</div>
-<div class="section" id="declaracions-de-variables">
-<h1>Declaracions de variables<a class="headerlink" href="#declaracions-de-variables" title="Permalink to this headline">¶</a></h1>
-<p>Durant el transcurs del programa, el programador ha d’especificar cada una de les variables que necessitarà.
-L’especificació de cada una d’aquestes variables s’anomena una declaració.</p>
-<p>Normalment, aquestes declaracions es fan a l’inici del programa encara que si és necessari es pot fer en qualsevol
-punt. En fer una declaració és necessari com a mínim: definir el nom i assignar un valor inicial.
-Si no es vol (o no es pot) assignar un valor, a <code class="docutils literal notranslate"><span class="pre">Python</span></code> existeix el valor nul: <strong>None</strong>.</p>
-<p>A continuació teniu la primera mostra de codi en la que declarem una variable de cada un dels diferents tipus de dades
-que hem descrit en la secció anterior:</p>
+màxima que podem tenir en un <em>String</em> a <code class="docutils literal notranslate"><span class="pre">Python</span></code> no estan definits tal com passa en altres llenguatges depenen de la màquina on executem el codi. Aquest fet implica que hem de construir els nostres programes amb certa cura, pensant que si el volem executar en un altre ordinador amb menys capacitat, potser aquest no podrà fer-ho.</p>
+</section>
+</section>
+<section id="declaracions-de-variables">
+<h1>Declaracions de variables<a class="headerlink" href="#declaracions-de-variables" title="Permalink to this headline">#</a></h1>
+<p>Durant el transcurs del programa, el programador ha d’especificar cada una de les variables que necessitarà.  L’especificació de cada una d’aquestes variables s’anomena una declaració.</p>
+<p>Normalment, aquestes declaracions es fan a l’inici del programa encara que si és necessari es pot fer en qualsevol punt. En fer una declaració és necessari com a mínim: definir el nom i assignar un valor inicial. Si no es vol (o no es pot) assignar un valor, a <code class="docutils literal notranslate"><span class="pre">Python</span></code> tenim el valor nul: <strong>None</strong>.</p>
+<p>A continuació teniu la primera mostra de codi en la que declarem una variable de cada un dels diferents tipus de dades que hem descrit en la secció anterior:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">caracter</span> <span class="o">=</span> <span class="s1">&#39;a&#39;</span>
@@ -635,35 +788,28 @@ que hem descrit en la secció anterior:</p>
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="operadors-i-operands">
-<h1>Operadors i operands<a class="headerlink" href="#operadors-i-operands" title="Permalink to this headline">¶</a></h1>
-<p>A <code class="docutils literal notranslate"><span class="pre">Python</span></code>, els <strong>operadors</strong> són símbols especials que indiquen que cal fer algun tipus de computació. Els valors
-amb els quals actua un operador s’anomenen <strong>operands</strong>.</p>
+</section>
+<section id="operadors-i-operands">
+<h1>Operadors i operands<a class="headerlink" href="#operadors-i-operands" title="Permalink to this headline">#</a></h1>
+<p>A <code class="docutils literal notranslate"><span class="pre">Python</span></code>, els <strong>operadors</strong> són símbols especials que indiquen que cal fer algun tipus de computació. Els valors amb els quals actua un operador s’anomenen <strong>operands</strong>.</p>
 <p>Ho entendrem amb un petit exemple:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mf">10.0</span>
 <span class="n">y</span> <span class="o">=</span> <span class="mi">5</span>
 <span class="n">resultat</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
 </pre></div>
 </div>
-<p>En aquest cas, l’operador <strong>+</strong> ens permet sumar els operands <code class="docutils literal notranslate"><span class="pre">x</span></code> i <code class="docutils literal notranslate"><span class="pre">y</span></code> junts i guardar el resultat en la variable
-del mateix nom. Hem de destacar que en aquest codi hem necessitat definir tres variables diferents.</p>
-<p>Un operand pot ser una variable o un literal. Definim els <strong>literals</strong> en un programa com la idea d’expressar un
-valor que no canvia en el codi font, aquests sempre seran d’un dels diferents tipus de dades bàsics que hem descrit
-anteriorment.</p>
-<p>A continuació tenim un altre fragment de codi en el qual combinem diferents operadors, variables i literals de tipus
-enter:</p>
+<p>En aquest cas, l’operador <strong>+</strong> ens permet sumar els operands <code class="docutils literal notranslate"><span class="pre">x</span></code> i <code class="docutils literal notranslate"><span class="pre">y</span></code> junts i guardar el resultat en la variable del mateix nom. Hem de destacar que en aquest codi hem necessitat definir tres variables diferents.</p>
+<p>Un operand pot ser una variable o un literal. Definim els <strong>literals</strong> en un programa com l’expressió d’un valor que no canvia en el codi font. Els literals sempre seran d’un dels tipus de dades bàsics que hem descrit anteriorment.</p>
+<p>A continuació tenim un altre fragment de codi en el qual combinem diferents operadors, variables i literals de tipus enter:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">10</span>
 <span class="n">b</span> <span class="o">=</span> <span class="mi">20</span>
 <span class="n">x</span> <span class="o">=</span> <span class="mi">45</span>
 <span class="n">r</span> <span class="o">=</span> <span class="p">(</span><span class="n">a</span> <span class="o">+</span> <span class="n">b</span> <span class="o">-</span> <span class="mi">5</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="mi">10</span> <span class="o">+</span> <span class="mi">20</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Una seqüència d’operands i operadors, com <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">+</span> <span class="pre">b</span> <span class="pre">-</span> <span class="pre">5</span></code>, s’anomena <strong>expressió</strong>. <code class="docutils literal notranslate"><span class="pre">Python</span></code> admet molts operadors
-diferents per combinar operands de diferents tipus, això ens permetrà crear expressions diferents per
-solucionar els diferents problemes que se’ns presentin.</p>
-<div class="section" id="operadors-aritmetics">
-<h2>Operadors aritmètics<a class="headerlink" href="#operadors-aritmetics" title="Permalink to this headline">¶</a></h2>
+<p>Una seqüència d’operands i operadors, com <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">+</span> <span class="pre">b</span> <span class="pre">-</span> <span class="pre">5</span></code>, s’anomena <strong>expressió</strong>. <code class="docutils literal notranslate"><span class="pre">Python</span></code> admet molts operadors diferents per combinar operands de diferents tipus. Això ens permetrà crear expressions diferents per solucionar els diferents problemes que se’ns presentin.</p>
+<section id="operadors-aritmetics">
+<h2>Operadors aritmètics<a class="headerlink" href="#operadors-aritmetics" title="Permalink to this headline">#</a></h2>
 <p>La taula següent mostra els operadors aritmètics compatibles amb <code class="docutils literal notranslate"><span class="pre">Python</span></code>:</p>
 <div class="table-responsive">
 <table class="table table-hover">
@@ -759,9 +905,9 @@ solucionar els diferents problemes que se’ns presentin.</p>
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="operadors-de-comparacio">
-<h2>Operadors de comparació<a class="headerlink" href="#operadors-de-comparacio" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="operadors-de-comparacio">
+<h2>Operadors de comparació<a class="headerlink" href="#operadors-de-comparacio" title="Permalink to this headline">#</a></h2>
 <p>Els operadors de comparació s’utilitzen normalment en contextos <em>booleans</em> com els que ens serveixen per controlar el
 flux del programa, com veurem un poc més endavant. El resultat d’usar un operador de comparació sempre és del tipus
 <em>booleà</em>.</p>
@@ -863,36 +1009,24 @@ flux del programa, com veurem un poc més endavant. El resultat d’usar un oper
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="representacio-dels-nombres-en-coma-flotant">
-<h2>Representació dels nombres en coma flotant<a class="headerlink" href="#representacio-dels-nombres-en-coma-flotant" title="Permalink to this headline">¶</a></h2>
-<p>Els nombres de coma flotant es representen a l’ordinador com a fraccions en base 2 (fraccions binàries). Per exemple,
-el valor decimal <code class="docutils literal notranslate"><span class="pre">0.125</span></code> es pot representar amb l’expressió: <code class="docutils literal notranslate"><span class="pre">1/10</span> <span class="pre">+</span> <span class="pre">2/100</span> <span class="pre">+</span> <span class="pre">5/1000</span></code> o amb aquesta altra: <code class="docutils literal notranslate"> <span class="pre">0/2</span> <span class="pre">+</span> <span class="pre">0/4</span> <span class="pre">+</span> <span class="pre">1/8</span></code>. L’única diferència entre les dues és que la primera està expressada en base 10 i la segona en base 2.</p>
-<p>El problema que trobem en la representació dels nombres en coma flotant és que la majoria de fraccions decimals no es
-poden representar exactament com a fraccions binàries. Una conseqüència és que, en general, els nombres decimals de coma
-flotant que introduïm en els nostres programes només s’aproximen als nombres binaris de coma flotant que queden
-emmagatzemats a la màquina.</p>
-<p>A la majoria de les màquines actuals, els flotants s’aproximen mitjançant una fracció binària amb el numerador
-utilitzant els primers 53 bits començant pel bit més significatiu i amb el denominador com a potència de dos.
-En el cas d’1/10, la fracció binària és <code class="docutils literal notranslate"><span class="pre">3602879701896397</span> <span class="pre">/</span> <span class="pre">2</span> <span class="pre">**</span> <span class="pre">55</span></code>.</p>
-<p>Quan programem no ens adonem d’aquesta aproximació a causa de la manera com es mostren els valors per pantalla,
-<code class="docutils literal notranslate"><span class="pre">Python</span></code> només imprimeix una aproximació al valor decimal de l’aproximació binària emmagatzemada per la màquina. A la
-majoria de màquines, si Python imprimís el valor decimal veritable de l’aproximació binària emmagatzemada per a <code class="docutils literal notranslate"><span class="pre">0,</span> <span class="pre">1</span></code>, hauria de mostrar: <code class="docutils literal notranslate"><span class="pre">0.1000000000000000055511151231257827021181583404541015625</span></code>.</p>
+</section>
+<section id="representacio-dels-nombres-en-coma-flotant">
+<h2>Representació dels nombres en coma flotant<a class="headerlink" href="#representacio-dels-nombres-en-coma-flotant" title="Permalink to this headline">#</a></h2>
+<p>Els nombres de coma flotant es representen a l’ordinador com a fraccions en base 2 (fraccions binàries). Per exemple, el valor decimal <code class="docutils literal notranslate"><span class="pre">0.125</span></code> es pot representar amb l’expressió: <code class="docutils literal notranslate"><span class="pre">1/10</span> <span class="pre">+</span> <span class="pre">2/100</span> <span class="pre">+</span> <span class="pre">5/1000</span></code> o amb aquesta altra: <code class="docutils literal notranslate"> <span class="pre">0/2</span> <span class="pre">+</span> <span class="pre">0/4</span> <span class="pre">+</span> <span class="pre">1/8</span></code>. L’única diferència entre les dues és que la primera està expressada en base 10 i la segona en base 2.</p>
+<p>El problema que trobem en la representació dels nombres en coma flotant és que la majoria de fraccions decimals no es poden representar exactament com a fraccions binàries. Una conseqüència és que, en general, els nombres decimals de coma flotant que introduïm en els nostres programes només s’aproximen als nombres binaris de coma flotant que queden emmagatzemats a la màquina.</p>
+<p>A la majoria de les màquines actuals, els flotants s’aproximen mitjançant una fracció binària amb el numerador utilitzant els primers 53 bits començant pel bit més significatiu i amb el denominador com a potència de dos. En el cas d’1/10, la fracció binària és <code class="docutils literal notranslate"><span class="pre">3602879701896397</span> <span class="pre">/</span> <span class="pre">2</span> <span class="pre">**</span> <span class="pre">55</span></code>.</p>
+<p>Quan programem no ens adonem d’aquesta aproximació a causa de la manera com es mostren els valors per pantalla, <code class="docutils literal notranslate"><span class="pre">Python</span></code> només imprimeix una aproximació al valor decimal de l’aproximació binària emmagatzemada per la màquina. A la majoria de màquines, si <code class="docutils literal notranslate"><span class="pre">Python</span></code> imprimís el valor decimal veritable de l’aproximació binària emmagatzemada per a <code class="docutils literal notranslate"><span class="pre">0,1</span></code>, hauria de mostrar: <code class="docutils literal notranslate"><span class="pre">0.1000000000000000055511151231257827021181583404541015625</span></code>.</p>
 <div class="admonition-curiositat admonition">
 <p class="admonition-title">Curiositat</p>
-<p>Curiosament, hi ha diversos nombres decimals diferents que comparteixen la mateixa fracció binària aproximada més
-propera. Per exemple, els nombres <code class="docutils literal notranslate"><span class="pre">0,1</span></code> , <code class="docutils literal notranslate"><span class="pre">0,10000000000000001</span></code> i <code class="docutils literal notranslate"><span class="pre">0,</span> <span class="pre">1000000000000000055511151231257827021181583404541015625</span></code>
-són tots aproximats amb <code class="docutils literal notranslate"><span class="pre">3602879701896397</span> <span class="pre">/</span> <span class="pre">2</span> <span class="pre">**</span> <span class="pre">55</span></code></p>
+<p>Curiosament, hi ha diversos nombres decimals diferents que comparteixen la mateixa fracció binària aproximada més propera. Per exemple, els nombres <code class="docutils literal notranslate"><span class="pre">0,1</span></code> , <code class="docutils literal notranslate"><span class="pre">0,10000000000000001</span></code> i <code class="docutils literal notranslate"><span class="pre">0,</span> <span class="pre">1000000000000000055511151231257827021181583404541015625</span></code> són tots aproximats amb <code class="docutils literal notranslate"><span class="pre">3602879701896397</span> <span class="pre">/</span> <span class="pre">2</span> <span class="pre">**</span> <span class="pre">55</span></code></p>
 </div>
 <p><a class="reference external" href="https://docs.python.org/3/tutorial/floatingpoint.html">Per obtenir més informació podeu el següent document</a></p>
-</div>
-<div class="section" id="operadors-logics">
-<h2>Operadors lògics<a class="headerlink" href="#operadors-logics" title="Permalink to this headline">¶</a></h2>
-<p>Els operadors lògics <em>not</em>, <em>or</em> i <em>and</em> modifiquen i uneixen expressions avaluades en un context booleà i ens
-permeten crear condicions més complexes.</p>
+</section>
+<section id="operadors-logics">
+<h2>Operadors lògics<a class="headerlink" href="#operadors-logics" title="Permalink to this headline">#</a></h2>
+<p>Els operadors lògics <em>not</em>, <em>or</em> i <em>and</em> modifiquen i uneixen expressions avaluades en un context booleà i ens permeten crear condicions més complexes.</p>
 <p><strong>Expressions lògiques que inclouen operands booleans</strong></p>
-<p>Com heu vist, algunes expressions de <code class="docutils literal notranslate"><span class="pre">Python</span></code> són, en realitat, de tipus booleà. És a dir, són iguals a un dels
-valors <code class="docutils literal notranslate"><span class="pre">Python</span></code> <code class="docutils literal notranslate"><span class="pre">True</span></code> or <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
+<p>Com heu vist, algunes expressions de <code class="docutils literal notranslate"><span class="pre">Python</span></code> són, en realitat, de tipus booleà. És a dir, són iguals a un dels valors <code class="docutils literal notranslate"><span class="pre">Python</span></code> <code class="docutils literal notranslate"><span class="pre">True</span></code> or <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
 <p>Per exemple:</p>
 <p>A continuació teniu la taula d’operadors:</p>
 <div class="table-responsive">
@@ -921,8 +1055,7 @@ valors <code class="docutils literal notranslate"><span class="pre">Python</span
 </tr>
 </tbody>
 </table>
-<p>Per veure el seu ús, però sobretot el resultat de l’aplicació d’aquests operadors en variables del tipus booleà, a
-continuació teniu un conjunt d’exemples de la seva aplicació:</p>
+<p>Per veure el seu ús, però sobretot el resultat de l’aplicació d’aquests operadors en variables del tipus booleà. A continuació teniu un conjunt d’exemples de la seva aplicació:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">vertader</span> <span class="o">=</span> <span class="kc">True</span>
@@ -992,14 +1125,13 @@ continuació teniu un conjunt d’exemples de la seva aplicació:</p>
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="operadors-d-assignacio-augmentada">
-<h2>Operadors d’assignació augmentada<a class="headerlink" href="#operadors-d-assignacio-augmentada" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="operadors-d-assignacio-augmentada">
+<h2>Operadors d’assignació augmentada<a class="headerlink" href="#operadors-d-assignacio-augmentada" title="Permalink to this headline">#</a></h2>
 <p>Abans hem vist que un signe igual (=) s’utilitza per assignar un valor a una variable.</p>
-<p>És, per descomptat, perfectament viable que el valor de la dreta de l’assignació sigui una expressió que contingui
-altres variables. Si feim l’operació sobre una mateixa variable podem fer el següent:</p>
+<p>És, per descomptat, perfectament viable que el valor de la dreta de l’assignació sigui una expressió que contingui altres variables. Si fem l’operació sobre una mateixa variable, podem fer el següent:</p>
 <p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">&lt;op&gt;=</span> <span class="pre">y</span></code>  és el mateix que fer  <code class="docutils literal notranslate"> <span class="pre">x</span> <span class="pre">=</span> <span class="pre">x</span> <span class="pre">&lt;op&gt;</span> <span class="pre">y</span></code></p>
-<p>Es a dir:</p>
+<p>És a dir:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">4</span>
 <span class="n">y</span> <span class="o">=</span> <span class="mi">5</span>
 
@@ -1010,23 +1142,19 @@ altres variables. Si feim l’operació sobre una mateixa variable podem fer el 
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
 </pre></div>
 </div>
-</div>
-</div>
-<div class="section" id="comentaris-en-el-codi">
-<h1>Comentaris en el codi<a class="headerlink" href="#comentaris-en-el-codi" title="Permalink to this headline">¶</a></h1>
-<p>En el món de la programació, un comentari és una explicació o anotació llegible pel programador en el codi font d’un
-programa d’ordinador. S’escriuen amb el propòsit de facilitar la comprensió del codi font per a futures lectures del
-mateix programador o per altres programadors, són ignorats pels intèrprets.</p>
-<p>Moltes vegades també usarem els comentaris per prevenir l’execució d’una part del codi quan volem avaluar el
-funcionament del nostre propi codi.</p>
+</section>
+</section>
+<section id="comentaris-en-el-codi">
+<h1>Comentaris en el codi<a class="headerlink" href="#comentaris-en-el-codi" title="Permalink to this headline">#</a></h1>
+<p>En el món de la programació, un comentari és una explicació o anotació llegible pel programador en el codi font d’un programa d’ordinador. S’escriuen amb el propòsit de facilitar la comprensió del codi font per a futures lectures del mateix programador o per altres programadors, són ignorats pels intèrprets.</p>
+<p>Moltes vegades també usarem els comentaris per prevenir l’execució d’una part del codi quan volem avaluar el funcionament del nostre propi codi.</p>
 <p>A <code class="docutils literal notranslate"><span class="pre">Python</span></code> els comentaris s’expressen amb el símbol <code class="docutils literal notranslate"><span class="pre">#</span></code>.  A continuació en veurem dos exemples del seu ús:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Això és un comentari que m&#39;ajuda a explicar el bloc de codi</span>
 
 <span class="n">x</span> <span class="o">=</span> <span class="n">y</span> <span class="o">+</span><span class="mi">3</span> <span class="c1"># Aquí també puc posar un comentari per descriure l&#39;expressió</span>
 </pre></div>
 </div>
-<p>És recomanable comentar el codi que realitzem, en particular aquelles parts més rellevants o que presenten
-certa dificultat.</p>
+<p>És recomanable comentar el codi que realitzem, en particular aquelles parts més rellevants o que presenten certa dificultat.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># COMENTARI</span>
@@ -1042,23 +1170,18 @@ certa dificultat.</p>
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="entrada-sortida-d-informacio">
-<h1>Entrada / Sortida d’informació<a class="headerlink" href="#entrada-sortida-d-informacio" title="Permalink to this headline">¶</a></h1>
-<p>L’entrada i la sortida, o E/S ( <em>input/output</em>, I/O) és la comunicació entre un sistema de processament d’informació,
-com un ordinador, i el món exterior, possiblement un humà o un altre sistema. Les entrades són els senyals o dades
-que rep el sistema i les sortides són els senyals o dades enviades des d’aquest.</p>
-<div class="section" id="entrada">
-<h2>Entrada<a class="headerlink" href="#entrada" title="Permalink to this headline">¶</a></h2>
-<p>Per poder proporcionar informació al programa, podem usar la funció <code class="docutils literal notranslate"><span class="pre">input</span></code>. Aquesta sempre ens tornarà l’string
-corresponent a la informació que l’usuari ens proporciona.</p>
+</section>
+<section id="entrada-sortida-d-informacio">
+<h1>Entrada / Sortida d’informació<a class="headerlink" href="#entrada-sortida-d-informacio" title="Permalink to this headline">#</a></h1>
+<p>L’entrada i la sortida, o E/S ( <em>input/output</em>, I/O) és la comunicació entre un sistema de processament d’informació, com un ordinador, i el món exterior, possiblement un humà o un altre sistema. Les entrades són els senyals o dades que rep el sistema i les sortides són els senyals o dades enviades des d’aquest.</p>
+<section id="entrada">
+<h2>Entrada<a class="headerlink" href="#entrada" title="Permalink to this headline">#</a></h2>
+<p>Per poder proporcionar informació al programa, podem usar la funció <code class="docutils literal notranslate"><span class="pre">input</span></code>. Aquesta sempre ens tornarà l’string corresponent a la informació que l’usuari ens proporciona.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">entrada</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
 <span class="n">entrada</span>
 </pre></div>
 </div>
-<p>Si volem llegir un sencer o un float haurem de realitzar una transformació explícita, aquesta explicació en el mon de
-la programació es coneix com a <em>casting</em>. A continuació podeu observar dos exemples que mostrem com llegim un valor
-enter del teclat i a continuació com ho fem per llegir un nombre en coma flotant:</p>
+<p>Si volem llegir un sencer o un float haurem de realitzar una transformació explícita, aquesta explicació en el món de la programació es coneix com a <em>casting</em>. A continuació podeu observar dos exemples que mostrem com llegim un valor enter del teclat i a continuació com ho fem per llegir un nombre en coma flotant:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">enter</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Escriu un enter: &quot;</span><span class="p">))</span>
 <span class="n">enter</span>
 
@@ -1072,19 +1195,17 @@ enter del teclat i a continuació com ho fem per llegir un nombre en coma flotan
 <span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">decimal</span><span class="p">))</span>
 </pre></div>
 </div>
-<p>En els nostres primers programes començarem fent feina amb informació molt senzilla, per tant ens interessarà llegir
-<em>strings</em> amb un únic valor. Si volem llegir un únic caràcter, ho podem fer de  la següent manera:</p>
+<p>En els nostres primers programes començarem fent feina amb informació molt senzilla, per tant ens interessarà llegir <em>strings</em> amb un únic valor. Si volem llegir un únic caràcter, ho podem fer de  la següent manera:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
 
 <span class="n">car</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">stdin</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">car</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="sortida">
-<h2>Sortida<a class="headerlink" href="#sortida" title="Permalink to this headline">¶</a></h2>
-<p>Per poder mostar informació per pantalla, farem servir la funció <code class="docutils literal notranslate"><span class="pre">print</span></code>. Aquesta funció pot mostrar qualsevol text
-(<em>string</em>).</p>
+</section>
+<section id="sortida">
+<h2>Sortida<a class="headerlink" href="#sortida" title="Permalink to this headline">#</a></h2>
+<p>Per poder mostar informació per pantalla, farem servir la funció <code class="docutils literal notranslate"><span class="pre">print</span></code>. Aquesta funció pot mostrar qualsevol text (<em>string</em>).</p>
 <p>A continuació teniu diversos exemples:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1103,10 +1224,8 @@ En Biel es un &#39;bon&#39; professor?
 </div>
 </div>
 <p><em>Strings amb format</em></p>
-<p>Els Strings amb format (també anomenats <em>f-strings</em> ) permeten incloure el valor de les expressions de <code class="docutils literal notranslate"><span class="pre">Python</span></code> dins
-d’un <em>strings</em> prefixant la cadena amb <code class="docutils literal notranslate"><span class="pre">f</span></code> o <code class="docutils literal notranslate"><span class="pre">F</span></code> i escrivint expressions com a <code class="docutils literal notranslate"><span class="pre">{expressió}</span></code>.</p>
-<p>A més podem afegir un especificador de format tot seguit de l’expressió. Això permet tenir un major control sobre com
-es mostra el valor. L’exemple següent arrodoneix un nombre a tres valors decimals.</p>
+<p>Els Strings amb format (també anomenats <em>f-strings</em>) permeten incloure el valor de les expressions de <code class="docutils literal notranslate"><span class="pre">Python</span></code> dins d’un <em>strings</em> prefixant la cadena amb <code class="docutils literal notranslate"><span class="pre">f</span></code> o <code class="docutils literal notranslate"><span class="pre">F</span></code> i escrivint expressions com a <code class="docutils literal notranslate"><span class="pre">{expressió}</span></code>.</p>
+<p>A més podem afegir un especificador de format tot seguit de l’expressió. Això permet tenir un major control sobre com  es mostra el valor. L’exemple següent arrodoneix un nombre a tres valors decimals.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pi</span> <span class="o">=</span> <span class="mf">3.14159265359</span>
@@ -1120,7 +1239,7 @@ es mostra el valor. L’exemple següent arrodoneix un nombre a tres valors deci
 </div>
 </div>
 </div>
-<p>També podem afegir qualsevol altre tipus de variable</p>
+<p>També podem afegir qualsevol altre tipus de variable:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cognom</span> <span class="o">=</span> <span class="s1">&#39;potter&#39;</span>
@@ -1136,11 +1255,10 @@ es mostra el valor. L’exemple següent arrodoneix un nombre a tres valors deci
 </div>
 <div class="admonition-curiositat admonition">
 <p class="admonition-title">Curiositat</p>
-<p>Python permet formatar la sortida de text de moltes maneres diferents, usuaris avançats podeu consultar el següent
-<a class="reference external" href="https://docs.python.org/3/library/string.html#format-specification-mini-language">enllaç</a></p>
+<p>Python permet formatar la sortida de text de moltes maneres diferents, usuaris avançats podeu consultar el següent <a class="reference external" href="https://docs.python.org/3/library/string.html#format-specification-mini-language">enllaç</a></p>
 </div>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -1154,7 +1272,7 @@ es mostra el valor. L’exemple següent arrodoneix un nombre a tres valors deci
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./chapters\Tema2"
         },
         predefinedOutput: true
@@ -1164,36 +1282,48 @@ es mostra el valor. L’exemple següent arrodoneix un nombre a tres valors deci
 
               </div>
               
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="Tema2_Intro.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Tema 2</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="Tema2_Estructures_de_control.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Composició d’instruccions</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
         </div>
     </div>
-    
-    
-    <div class='prev-next-bottom'>
-        
-    <a class='left-prev' id="prev-link" href="Tema2_Intro.html" title="previous page">Tema 2</a>
-    <a class='right-next' id="next-link" href="Tema2_Estructures_de_control.html" title="next page">Composició d’instruccions</a>
-
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Gabriel Moyà Alcover<br/>
+  
+      &copy; Copyright 2021.<br/>
+</p>
+        </footer>
     </div>
-    <footer class="footer mt-5 mt-md-0">
-    <div class="container">
-      <p>
-        
-          By Gabriel Moyà Alcover<br/>
-        
-            &copy; Copyright 2021.<br/>
-      </p>
-    </div>
-  </footer>
-</main>
+    
+</div>
 
 
       </div>
     </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
 
-    
-  <script src="../../_static/js/index.3da636dd464baa7582d2.js"></script>
 
-
-    
   </body>
 </html>

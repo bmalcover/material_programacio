@@ -4,10 +4,13 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Classes i Objectes &#8212; Programacio I</title>
     
-  <link rel="stylesheet" href="../../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -17,117 +20,118 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-  <link rel="stylesheet"
-    href="../../_static/vendor/open-sans_all/1.44.1/index.css">
-  <link rel="stylesheet"
-    href="../../_static/vendor/lato_latin-ext/1.44.1/index.css">
-
-    
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-  <link rel="preload" as="script" href="../../_static/js/index.3da636dd464baa7582d2.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
-    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/togglebutton.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
-    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
-    <script >
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Altres maneres d’estructurar les dades" href="Tema5_Estructures.html" />
     <link rel="prev" title="Llistes" href="Tema5_Llistes.html" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="None">
+    
 
-
-
+    <!-- Google Analytics -->
+    
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
     
 
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
-<a class="navbar-brand text-wrap" href="../../index.html">
-  
-  <img src="../../_static/logo.png" class="logo" alt="logo">
-  
-  
-  <h1 class="site-logo" id="site-title">Programacio I</h1>
-  
-</a>
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Programacio I</h1>
+      
+    </a>
 </div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form>
-<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
-    <ul class="nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../intro.html">
-   Introducció
-  </a>
- </li>
-</ul>
-<ul class="current nav sidenav_l1">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    Introducció
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../Tema1.html">
    Tema 1
   </a>
  </li>
- <li class="toctree-l1 collapsible-parent">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../Tema2/Tema2_Intro.html">
    Tema 2
   </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../Tema2/Tema2.html">
      Dades
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../Tema2/Tema2.html#declaracions-de-variables">
-     Declaracions de variables
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../Tema2/Tema2.html#operadors-i-operands">
-     Operadors i operands
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../Tema2/Tema2.html#comentaris-en-el-codi">
-     Comentaris en el codi
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../Tema2/Tema2.html#entrada-sortida-d-informacio">
-     Entrada / Sortida d’informació
     </a>
    </li>
    <li class="toctree-l2">
@@ -141,28 +145,34 @@
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
- <li class="toctree-l1 collapsible-parent">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../Tema3/Tema3_.html">
    Tema 3
   </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../Tema3/Tema3_Exercicis.html">
      Exercicis del Tema 3
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
- <li class="toctree-l1 collapsible-parent">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../Tema4/Tema4_.html">
    Tema 4
   </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../Tema4/Tema4_Esquemes.html">
      Aplicació dels esquemes bàsics
@@ -184,14 +194,17 @@
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
- <li class="toctree-l1 current active collapsible-parent">
+ <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="Tema5.html">
    Tema 5
   </a>
-  <ul class="current collapse-ul">
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="Tema5_Llistes.html">
      Llistes
@@ -200,26 +213,6 @@
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
      Classes i Objectes
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="#classe-dels-nombres-complexos">
-     Classe dels nombres complexos
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="#encapsulacio">
-     Encapsulació
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="#atributs-i-metodes-de-classe">
-     Atributs i mètodes de classe
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="#sobrecarrega-d-operadors">
-     Sobrecàrrega d’operadors
     </a>
    </li>
    <li class="toctree-l2">
@@ -238,42 +231,51 @@
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
- <li class="toctree-l1 collapsible-parent">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../Tema6/Tema6_Fitxers.html">
    Tema 6
   </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../Tema6/Tema6_Exercicis.html">
      Exercicis Tema 6
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
- <li class="toctree-l1 collapsible-parent">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../Tema7/Tema7_Algorismes.html">
    Tema 7
   </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../Tema7/Tema7_Exercicis.html">
      Exercicis Tema 7
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
- <li class="toctree-l1 collapsible-parent">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../Annexes/Annexes.html">
    Annexos
   </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../Annexes/Entorn_Desenvolupament.html">
      Entorn de desenvolupament
@@ -295,101 +297,173 @@
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
 </ul>
 
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="row topbar fixed-top container-xl">
-    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
     </div>
-    <div class="col pl-2 topbar-main">
-        
-        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-            <i class="fas fa-bars"></i>
-            <i class="fas fa-arrow-left"></i>
-            <i class="fas fa-arrow-up"></i>
-        </button>
-        
-        
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/chapters/Tema5/Tema5_Classes.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
-</div>
-
-        <!-- Source interaction buttons -->
-
-
-        <!-- Full screen (wrap in <a> to have style consistency -->
-        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-                title="Fullscreen mode"><i
-                    class="fas fa-expand"></i></button></a>
-
-        <!-- Launch buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/chapters/Tema5/Tema5_Classes.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="../../_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        
-        
-    </div>
-</div>
-
-    </div>
-
-    <!-- Table of contents -->
-    <div class="d-none d-md-block col-md-2 bd-toc show">
-        
-        <div class="tocsection onthispage pt-5 pb-3">
-            <i class="fas fa-list"></i> Contents
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
         </div>
-        <nav id="bd-toc-nav">
-            <ul class="nav section-nav flex-column">
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/chapters/Tema5/Tema5_Classes.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../../_sources/chapters/Tema5/Tema5_Classes.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#">
    Classes i Objectes
   </a>
-  <ul class="nav section-nav flex-column">
+  <ul class="visible nav section-nav flex-column">
    <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#classes">
      Classes
@@ -411,7 +485,7 @@
   <a class="reference internal nav-link" href="#encapsulacio">
    Encapsulació
   </a>
-  <ul class="nav section-nav flex-column">
+  <ul class="visible nav section-nav flex-column">
    <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#atributs-privats">
      Atributs privats
@@ -436,17 +510,84 @@
  </li>
 </ul>
 
-        </nav>
-        
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Classes i Objectes</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Classes i Objectes
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#classes">
+     Classes
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#objectes">
+     Objectes
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#classe-dels-nombres-complexos">
+   Classe dels nombres complexos
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#encapsulacio">
+   Encapsulació
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#atributs-privats">
+     Atributs privats
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#metodes-privats">
+     Mètodes privats
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#atributs-i-metodes-de-classe">
+   Atributs i mètodes de classe
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sobrecarrega-d-operadors">
+   Sobrecàrrega d’operadors
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
               <div>
                 
-  <div class="section" id="classes-i-objectes">
-<h1>Classes i Objectes<a class="headerlink" href="#classes-i-objectes" title="Permalink to this headline">¶</a></h1>
+  <section id="classes-i-objectes">
+<h1>Classes i Objectes<a class="headerlink" href="#classes-i-objectes" title="Permalink to this headline">#</a></h1>
 <p>El concepte de tipus de dades estructurats s’amplia amb la incorporació dels conceptes propis de l’orientació a
 objectes: les <strong>classes</strong> i les seves instàncies, els <strong>objectes</strong>.</p>
 <p>Per arribar a entendre el concepte de classe primer cal parlar del concepte de <strong>Tipus Abstracte de Dades</strong> (TAD). Un
@@ -460,8 +601,8 @@ TAD es defineix com un model matemàtic compost per una col·lecció d’operaci
 </ul>
 <p>El fet de definir una interfície com a mecanisme d’actuació sobre els valors del Tipus Abstracte de Dades permet protegir
 els valors enfront d’una utilització incorrecta.  Aquesta tècnica es coneix amb el nom d’<strong>encapsulació</strong>.</p>
-<div class="section" id="classes">
-<h2>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h2>
+<section id="classes">
+<h2>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">#</a></h2>
 <p>Una Classe es pot considerar com la implementació d’un Tipus Abstracte de Dades en un llenguatge de programació.</p>
 <ul class="simple">
 <li><p>Quan es parla dels <strong>valors</strong> que es representen amb una classe es parla dels <strong>atributs</strong>.</p></li>
@@ -492,9 +633,9 @@ guardar informació relativa a una persona:</p>
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="objectes">
-<h2>Objectes<a class="headerlink" href="#objectes" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="objectes">
+<h2>Objectes<a class="headerlink" href="#objectes" title="Permalink to this headline">#</a></h2>
 <p>Per poder utilitzar les classes és necessari realitzar una instància, de manera que es construeix un <strong>objecte</strong>.
 Les variables s’utilitzen <strong>per fer referència</strong> als objectes creats.</p>
 <div class="cell docutils container">
@@ -516,8 +657,8 @@ Les variables s’utilitzen <strong>per fer referència</strong> als objectes cr
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;__main__.Persona object at 0x000001E1CE1CBCC8&gt;
-&lt;__main__.Persona object at 0x000001E1CE1CBC88&gt;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;__main__.Persona object at 0x0000014A7663F9A0&gt;
+&lt;__main__.Persona object at 0x0000014A765B9520&gt;
 199
 </pre></div>
 </div>
@@ -678,10 +819,10 @@ Per acabar aquest primer contacte amb les classes veurem el mètode <code class=
 </div>
 </div>
 </div>
-</div>
-</div>
-<div class="section" id="classe-dels-nombres-complexos">
-<h1>Classe dels nombres complexos<a class="headerlink" href="#classe-dels-nombres-complexos" title="Permalink to this headline">¶</a></h1>
+</section>
+</section>
+<section id="classe-dels-nombres-complexos">
+<h1>Classe dels nombres complexos<a class="headerlink" href="#classe-dels-nombres-complexos" title="Permalink to this headline">#</a></h1>
 <p>Fins on sabem, els llenguatges de programació no tenen cap tipus de dades elemental que ens permeti treballar amb
 nombres complexos.</p>
 <p>Aprofitarem per crear el nostre propi tipus de dades i definir les operacions de:</p>
@@ -763,9 +904,9 @@ de l’operació anterior.</p></li>
 mostrar el nombre obtingut per pantalla.</p>
 <p><em>Trobareu la solució d’aquest problema a la carpeta d’exemples de classe a uibdigital, fitxers: complexe i
 principal_complexe</em></p>
-</div>
-<div class="section" id="encapsulacio">
-<h1>Encapsulació<a class="headerlink" href="#encapsulacio" title="Permalink to this headline">¶</a></h1>
+</section>
+<section id="encapsulacio">
+<h1>Encapsulació<a class="headerlink" href="#encapsulacio" title="Permalink to this headline">#</a></h1>
 <p>Com hem comentat al principi del capítol és necessari que en un <strong>TAD</strong> es doni el següent:</p>
 <ul class="simple">
 <li><p>Les operacions de la interfície són les úniques que estan permeses pel tipus exportat.</p></li>
@@ -775,8 +916,8 @@ principal_complexe</em></p>
 modificar els atributs d’una classe des de qualsevol lloc del nostre programa, incloent-hi el programa principal. A
 continuació aprendrem com podem modificar l’accés als atributs d’una classe perquè els seus valors només es puguin
 canviar dins la mateixa classe.</p>
-<div class="section" id="atributs-privats">
-<h2>Atributs privats<a class="headerlink" href="#atributs-privats" title="Permalink to this headline">¶</a></h2>
+<section id="atributs-privats">
+<h2>Atributs privats<a class="headerlink" href="#atributs-privats" title="Permalink to this headline">#</a></h2>
 <p>Tot i que està permès pel llenguatge, <strong>no és recomanable declarar els atributs públics</strong>, és a dir com ho hem fet
 fins ara, ja que això en permetria un possible ús incorrecte.</p>
 <p>Seguirem treballant amb la classe dels nombres complexos. Deixem aquí un recordatori del que havíem desenvolupat:</p>
@@ -820,17 +961,16 @@ fins ara, ja que això en permetria un possible ús incorrecte.</p>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">9</span><span class="o">-</span><span class="mi">05</span><span class="n">a8625462cb</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">9</span><span class="p">],</span> <span class="n">line</span> <span class="mi">6</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">c2</span> <span class="o">=</span> <span class="n">Complex</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>
 <span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">c1</span><span class="o">.</span><span class="n">real</span> <span class="o">=</span> <span class="s2">&quot;matematiques&quot;</span> <span class="c1"># canviam el tipus d&#39;una variable de enter a string</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> 
-<span class="ne">----&gt; </span><span class="mi">6</span> <span class="n">c3</span> <span class="o">=</span> <span class="n">c1</span><span class="o">.</span><span class="n">suma</span><span class="p">(</span><span class="n">c2</span><span class="p">)</span> <span class="c1"># aixo dona error ja que no pot sumar un string amb un enter</span>
+<span class="ne">----&gt; </span><span class="mi">6</span> <span class="n">c3</span> <span class="o">=</span> <span class="n">c1</span><span class="o">.</span><span class="n">suma</span><span class="p">(</span><span class="n">c2</span><span class="p">)</span>
 
-<span class="nn">&lt;ipython-input-8-2a83007db5b8&gt;</span> in <span class="ni">suma</span><span class="nt">(self, o)</span>
-<span class="g g-Whitespace">      </span><span class="mi">8</span>         <span class="c1"># Metode</span>
-<span class="g g-Whitespace">      </span><span class="mi">9</span>     <span class="k">def</span> <span class="nf">suma</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">o</span><span class="p">):</span>
-<span class="ne">---&gt; </span><span class="mi">10</span>         <span class="n">r</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">real</span> <span class="o">+</span> <span class="n">o</span><span class="o">.</span><span class="n">real</span>
-<span class="g g-Whitespace">     </span><span class="mi">11</span>         <span class="n">i</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">imaginaria</span> <span class="o">+</span> <span class="n">o</span><span class="o">.</span><span class="n">imaginaria</span>
-<span class="g g-Whitespace">     </span><span class="mi">12</span>         <span class="k">return</span> <span class="n">Complex</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
+<span class="nn">Cell In[8], line 10,</span> in <span class="ni">Complex.suma</span><span class="nt">(self, o)</span>
+<span class="g g-Whitespace">      </span><span class="mi">9</span> <span class="k">def</span> <span class="nf">suma</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">o</span><span class="p">):</span>    
+<span class="ne">---&gt; </span><span class="mi">10</span>     <span class="n">r</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">real</span> <span class="o">+</span> <span class="n">o</span><span class="o">.</span><span class="n">real</span>
+<span class="g g-Whitespace">     </span><span class="mi">11</span>     <span class="n">i</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">imaginaria</span> <span class="o">+</span> <span class="n">o</span><span class="o">.</span><span class="n">imaginaria</span>
+<span class="g g-Whitespace">     </span><span class="mi">12</span>     <span class="k">return</span> <span class="n">Complex</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
 
 <span class="ne">TypeError</span>: can only concatenate str (not &quot;int&quot;) to str
 </pre></div>
@@ -907,9 +1047,9 @@ aquest ha estat definit.</p>
 <p>En conclusió: Si volem tenir la capacitat per modificar els valors dels atributs d’una classe, podem construir mètodes
 que els modifiquin i dins aquests fer els controls necessaris per mantenir la coherència d’aquests.</p>
 </div>
-</div>
-<div class="section" id="metodes-privats">
-<h2>Mètodes privats<a class="headerlink" href="#metodes-privats" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="metodes-privats">
+<h2>Mètodes privats<a class="headerlink" href="#metodes-privats" title="Permalink to this headline">#</a></h2>
 <p>A més d’atributs privats també podem tenir mètodes privats. La diferència entre els mètodes de la interfície (públics) i
 la resta de mètodes que puguin formar la classe, mètodes necessaris per al correcte comportament d’aquesta, és que
 <strong>els mètodes de la interfície es declaren públics</strong>, mentre que <strong>la resta es declaren privats</strong>, de manera que no
@@ -947,10 +1087,10 @@ s’habilita la possibilitat d’accedir-hi des de fora de la classe.</p>
 </div>
 </div>
 </div>
-</div>
-</div>
-<div class="section" id="atributs-i-metodes-de-classe">
-<h1>Atributs i mètodes de classe<a class="headerlink" href="#atributs-i-metodes-de-classe" title="Permalink to this headline">¶</a></h1>
+</section>
+</section>
+<section id="atributs-i-metodes-de-classe">
+<h1>Atributs i mètodes de classe<a class="headerlink" href="#atributs-i-metodes-de-classe" title="Permalink to this headline">#</a></h1>
 <p><strong>Mètodes de classe</strong></p>
 <p>Alguns cops necessitem definir mètodes (funcions o procediments) dins la nostra classe que no estan directament
 relacionats amb els atributs d’un objecte, sinó que ens serveixen per complementar la funcionalitat de la classe.
@@ -1038,9 +1178,9 @@ alguna ocasió pot ser de gran utilitat.</p>
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="sobrecarrega-d-operadors">
-<h1>Sobrecàrrega d’operadors<a class="headerlink" href="#sobrecarrega-d-operadors" title="Permalink to this headline">¶</a></h1>
+</section>
+<section id="sobrecarrega-d-operadors">
+<h1>Sobrecàrrega d’operadors<a class="headerlink" href="#sobrecarrega-d-operadors" title="Permalink to this headline">#</a></h1>
 <p>En el tema 2 definíem els <strong>operadors</strong> com a símbols especials que indiquen que cal fer algun tipus de computació.
 Els valors amb els quals actua un operador s’anomenen <strong>operands</strong>.</p>
 <p>Vàrem veure que tenim operadors: aritmètics, de comparació i lògics. Tots aquests operadors es troben definits pels
@@ -1292,7 +1432,7 @@ True
 <p>Finalment cal dir que existeixen altres operadors que podríem sobrecarregar per fer més completes les nostres classes,
 però degut les limitacions del curs i l’àmbit en el qual ens trobem (el grau de matemàtiques) aquests que hem vist són
 els més interessants.</p>
-</div>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -1306,7 +1446,7 @@ els més interessants.</p>
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./chapters\Tema5"
         },
         predefinedOutput: true
@@ -1316,36 +1456,48 @@ els més interessants.</p>
 
               </div>
               
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="Tema5_Llistes.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Llistes</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="Tema5_Estructures.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Altres maneres d’estructurar les dades</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
         </div>
     </div>
-    
-    
-    <div class='prev-next-bottom'>
-        
-    <a class='left-prev' id="prev-link" href="Tema5_Llistes.html" title="previous page">Llistes</a>
-    <a class='right-next' id="next-link" href="Tema5_Estructures.html" title="next page">Altres maneres d’estructurar les dades</a>
-
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Gabriel Moyà Alcover<br/>
+  
+      &copy; Copyright 2021.<br/>
+</p>
+        </footer>
     </div>
-    <footer class="footer mt-5 mt-md-0">
-    <div class="container">
-      <p>
-        
-          By Gabriel Moyà Alcover<br/>
-        
-            &copy; Copyright 2021.<br/>
-      </p>
-    </div>
-  </footer>
-</main>
+    
+</div>
 
 
       </div>
     </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
 
-    
-  <script src="../../_static/js/index.3da636dd464baa7582d2.js"></script>
 
-
-    
   </body>
 </html>
