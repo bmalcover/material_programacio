@@ -1,0 +1,926 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Fitxers externs &#8212; Programacio I</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="prev" title="Taula ASCII" href="Taula_ASCII.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Programacio I</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    Introducció
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Tema1.html">
+   Tema 1
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Tema2/Tema2_Intro.html">
+   Tema 2
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tema2/Tema2.html">
+     Dades
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tema2/Tema2_Estructures_de_control.html">
+     Composició d’instruccions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tema2/Tema2_Exercicis.html">
+     Exercicis Tema 2
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Tema3/Tema3_.html">
+   Tema 3
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tema3/Tema3_Exercicis.html">
+     Exercicis del Tema 3
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Tema4/Tema4_.html">
+   Tema 4
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tema4/Tema4_Esquemes.html">
+     Aplicació dels esquemes bàsics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tema4/Tema4_Subprogrames.html">
+     Subprogrames i paràmetres
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tema4/Tema4_Aplicacio_esquemes_subprogrames.html">
+     Esquemes amb subprogrames
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tema4/Tema4_Exercicis_subprogrames.html">
+     Exercicis del Tema 4
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Tema5/Tema5.html">
+   Tema 5
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tema5/Tema5_Llistes.html">
+     Llistes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tema5/Tema5_Classes.html">
+     Classes i Objectes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tema5/Tema5_Estructures.html">
+     Altres maneres d’estructurar les dades
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tema5/Tema5_Exercicis.html">
+     Exercicis Tema 5
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tema5/Tema5_Exercicis_altres_estructures.html">
+     Exercicis Tema 5/2
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Tema6/Tema6_Fitxers.html">
+   Tema 6
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tema6/Tema6_Exercicis.html">
+     Exercicis Tema 6
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Tema7/Tema7_Algorismes.html">
+   Tema 7
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tema7/Tema7_Exercicis.html">
+     Exercicis Tema 7
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="Annexes.html">
+   Annexos
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="Entorn_Desenvolupament.html">
+     Entorn de desenvolupament
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Turtle.html">
+     Turtle
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Taula_ASCII.html">
+     Taula ASCII
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Fitxers externs
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/chapters/Annexes/Fitxers_Externs.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../../_sources/chapters/Annexes/Fitxers_Externs.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#la-clausula-import">
+   La clausula import
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#import-nom">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       import
+      </span>
+      <span class="pre">
+       &lt;nom&gt;
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#from-nom-import-codi">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       from
+      </span>
+      <span class="pre">
+       &lt;nom&gt;
+      </span>
+      <span class="pre">
+       import
+      </span>
+      <span class="pre">
+       &lt;codi&gt;
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#import-nom-as-nom-alternatiu">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       import
+      </span>
+      <span class="pre">
+       &lt;nom&gt;
+      </span>
+      <span class="pre">
+       as
+      </span>
+      <span class="pre">
+       &lt;nom_alternatiu&gt;
+      </span>
+     </code>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#execucio-d-un-modul-com-un-script">
+   Execució d’un modul com un
+   <em>
+    script
+   </em>
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Fitxers externs</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#la-clausula-import">
+   La clausula import
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#import-nom">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       import
+      </span>
+      <span class="pre">
+       &lt;nom&gt;
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#from-nom-import-codi">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       from
+      </span>
+      <span class="pre">
+       &lt;nom&gt;
+      </span>
+      <span class="pre">
+       import
+      </span>
+      <span class="pre">
+       &lt;codi&gt;
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#import-nom-as-nom-alternatiu">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       import
+      </span>
+      <span class="pre">
+       &lt;nom&gt;
+      </span>
+      <span class="pre">
+       as
+      </span>
+      <span class="pre">
+       &lt;nom_alternatiu&gt;
+      </span>
+     </code>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#execucio-d-un-modul-com-un-script">
+   Execució d’un modul com un
+   <em>
+    script
+   </em>
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section id="fitxers-externs">
+<h1>Fitxers externs<a class="headerlink" href="#fitxers-externs" title="Permalink to this headline">#</a></h1>
+<p>Com hem vist en el tema 4, la programació modular es refereix al procés de dividir un programa gran en subtasques o
+mòduls separats, més petits i més manejables. Els mòduls individuals es poden usar com blocs de construcció per crear
+una aplicació més gran. La tècnica de modularització que coneixem fins ara és la creació de subprogrames.</p>
+<p>En aquest taller veurem una segona manera de modularitzar els nostres programes mitjançant l’importació de codi que
+es troba en fitxers diferents del qual tenim el nostre programa principal.</p>
+<p>El codi pot provenir d’altres programes que nosaltres hem fet amb anterioritat o per llibreries de codi ja incloses
+en la distribució de <code class="docutils literal notranslate"><span class="pre">Python</span></code> ( com per exemple la llibreria <em>Math</em> o <em>sys</em>) o d’altres que podem descarregar i
+instal·lar.
+Per usar aquestes dues fonts de codi usarem una paraula reservada que ja coneixem <code class="docutils literal notranslate"><span class="pre">import</span></code> però que potser no entenem.</p>
+<p>Nosaltres ens centrarem en la primera de les fonts de codi, aquelles que ja hem programat amb anterioritat i que es
+troben en un altre fitxer.</p>
+<p>Suposem que tenim el fitxer <em><a class="reference external" href="http://extern.py">extern.py</a></em> que conté el següent codi:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">estring</span> <span class="o">=</span> <span class="s2">&quot;Una variable de mostra&quot;</span>
+
+<span class="k">def</span> <span class="nf">es_primer</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">x</span> <span class="o">%</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">False</span>
+    <span class="k">return</span> <span class="kc">True</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Podem usar el codi definit en el fitxer anomenat <em><a class="reference external" href="http://extern.py">extern.py</a></em> en el nostre fitxer <em><a class="reference external" href="http://main.py">main.py</a></em> de la següent manera:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">extern</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">extern</span><span class="o">.</span><span class="n">estring</span><span class="p">)</span>
+
+<span class="n">extern</span><span class="o">.</span><span class="n">es_primer</span><span class="p">(</span><span class="mi">23</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Una variable de mostra
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<p>En importar un fitxer tal com hem fet abans, ens hem d’assegurar que aquest es trobi en la <em>mateixa carpeta</em> que el
+nostre programa principal. Existeixen altres opcions que ens permeten tenir el codi en altres localitzacions del
+nostre ordinador però això queda fora de l’àmbit d’aquesta assignatura. Per a més informació podeu llegir el següent
+<a class="reference external" href="https://realpython.com/python-modules-packages/#the-module-search-path">enllaç</a>.</p>
+<section id="la-clausula-import">
+<h2>La clausula import<a class="headerlink" href="#la-clausula-import" title="Permalink to this headline">#</a></h2>
+<p>La clausula <code class="docutils literal notranslate"><span class="pre">import</span></code> és flexible i ens permet usar-la de diferents maneres en funció de les necessitats que tinguem en
+cada situació.</p>
+<section id="import-nom">
+<h3><code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">&lt;nom&gt;</span></code><a class="headerlink" href="#import-nom" title="Permalink to this headline">#</a></h3>
+<p>És la manera més senzilla d’importar codi extern, la que acabam d’explicar en l’exemple anterior. El que hem de tenir
+en compte és que quan usam qualsevol peça de codi definida en el fitxer que importam, aquesta roman privada en aquell
+mòdul de la següent manera:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">extern</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">estring</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Una variable de mostra
+</pre></div>
+</div>
+</div>
+</div>
+<p>obtenim un error, ja que al nostre programa principal no existeix cap variable anomenada <code class="docutils literal notranslate"><span class="pre">estring</span></code>. El codi del
+mòdul només és accessible quan té el <nom> com prefix mitjançant un punt, tal com es mostra a l’exemple que trobareu
+a continuació. A més fixau-vos que això en possibilita tenir una variable al programa principal anomenada <code class="docutils literal notranslate"><span class="pre">estring</span></code>
+sense sofrir interferències amb la que hem definit en el fitxer <code class="docutils literal notranslate"><span class="pre">extern</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">extern</span>
+
+<span class="n">estring</span> <span class="o">=</span> <span class="s2">&quot;La variable del programa principal&quot;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">extern</span><span class="o">.</span><span class="n">estring</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">estring</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Una variable de mostra
+La variable del programa principal
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="from-nom-import-codi">
+<h3><code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">&lt;nom&gt;</span> <span class="pre">import</span> <span class="pre">&lt;codi&gt;</span></code><a class="headerlink" href="#from-nom-import-codi" title="Permalink to this headline">#</a></h3>
+<p>Una alternativa a l’importació que hem vist fins ara és aquella que permet importar elements individuals del mòdul
+directament al nostre programa. D’aquesta manera podem importar directament un procediment que es troba al fitxer
+<code class="docutils literal notranslate"><span class="pre">extern</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">extern</span> <span class="kn">import</span> <span class="n">es_primer</span>
+
+<span class="n">es_primer</span><span class="p">(</span><span class="mi">33</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+<p>Degut que estam important el codi al nostre programa principal sense el prefix aquí sí que és possible sobreescriure el
+codi importat, per exemple:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">extern</span> <span class="kn">import</span> <span class="n">estring</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">estring</span><span class="p">)</span>
+<span class="n">estring</span> <span class="o">=</span> <span class="s2">&quot;Ara el sobreescric&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">estring</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Una variable de mostra
+Ara el sobreescric
+</pre></div>
+</div>
+</div>
+</div>
+<p>Fins i tot és possible importar de manera tot el contingut d’un mòdul (fitxer extern) d’un sol cop:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">extern</span> <span class="kn">import</span> <span class="o">*</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Encara que podeu trobar codi que usa aquesta darrera tècnica, no es recomana gens fer-ho, ja que és una font de
+problemes. <a class="reference external" href="https://www.geeksforgeeks.org/why-import-star-in-python-is-a-bad-idea/?ref=rp">Més informació</a>.</p>
+</section>
+<section id="import-nom-as-nom-alternatiu">
+<h3><code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">&lt;nom&gt;</span> <span class="pre">as</span> <span class="pre">&lt;nom_alternatiu&gt;</span></code><a class="headerlink" href="#import-nom-as-nom-alternatiu" title="Permalink to this headline">#</a></h3>
+<p>Aquesta darrera opció no ens serà molt útil per aquest curs però s’utilitza molt quant volem importar llibreries de
+codi externes que tenen noms molt llargs, d’aquesta manera aconseguim un nom alternatiu o pseudònim.</p>
+<p>S’usa de la següent manera:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">extern</span> <span class="k">as</span> <span class="nn">mod_ext</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">mod_ext</span><span class="o">.</span><span class="n">estring</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Una variable de mostra
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="execucio-d-un-modul-com-un-script">
+<h2>Execució d’un modul com un <em>script</em><a class="headerlink" href="#execucio-d-un-modul-com-un-script" title="Permalink to this headline">#</a></h2>
+<p>El fitxer <code class="docutils literal notranslate"><span class="pre">extern</span></code> que hem usat com a font de codi pel nostre programa principal bàsicament és un fitxer <code class="docutils literal notranslate"><span class="pre">Python</span></code> que
+pot ser executat com qualsevol altra programa. El fitxer que hem usat fins ara no té gaire interès, ja que només
+defineix una variable de tipus <em>string</em> i una funció. Ara en feim un altre que a més de definir una variable i un
+subprograma dugui a terme una tasca concreta anomenat <code class="docutils literal notranslate"><span class="pre">feina_externa</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">es_vocal</span><span class="p">(</span><span class="n">lletra</span><span class="p">):</span>
+
+    <span class="k">return</span> <span class="n">lletra</span> <span class="o">==</span> <span class="s1">&#39;a&#39;</span> <span class="ow">or</span> <span class="n">lletra</span> <span class="o">==</span> <span class="s1">&#39;e&#39;</span> <span class="ow">or</span> <span class="n">lletra</span> <span class="o">==</span> <span class="s1">&#39;i&#39;</span> <span class="ow">or</span> <span class="n">lletra</span> <span class="o">==</span> <span class="s1">&#39;o&#39;</span> <span class="ow">or</span> <span class="n">lletra</span> <span class="o">==</span> <span class="s1">&#39;u&#39;</span>
+
+<span class="n">ll</span> <span class="o">=</span> <span class="s1">&#39;e&#39;</span>
+
+<span class="c1"># Anem a mirar si ll és una vocal</span>
+
+<span class="n">esvocal</span> <span class="o">=</span> <span class="n">es_vocal</span><span class="p">(</span><span class="n">ll</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">esvocal</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;La lletra &quot;</span> <span class="o">+</span> <span class="n">ll</span> <span class="o">+</span> <span class="s2">&quot; és una vocal&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;La lletra &quot;</span> <span class="o">+</span> <span class="n">ll</span> <span class="o">+</span> <span class="s2">&quot; no és una vocal&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>La lletra e és una vocal
+</pre></div>
+</div>
+</div>
+</div>
+<p>Si executam aquest fragment de codi el que obtindrem és un missatge per pantalla que indica que <strong>La lletra e és una
+vocal</strong>. Malauradament si importam aquest mòdul veurem que el codi s’executa automàticament:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">feina_externa</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>La lletra e es una vocal
+</pre></div>
+</div>
+</div>
+</div>
+<p>Probablement aquest comportament no sigui el que esperem ni el que necessitem. No és habitual que un mòdul generi
+un missatge a la consola quan s’importa. En <code class="docutils literal notranslate"><span class="pre">Python</span></code> tenim la capacitat de distingir quan es carrega el fitxer com a
+mòdul i quan s’executa com a programa independent.</p>
+<p>Quan executam un fitxer com un programa, <code class="docutils literal notranslate"><span class="pre">Python</span></code> li assigna el nom <em>main</em>. El següent codi permet
+distingir les dues casuístiques:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">):</span>
+</pre></div>
+</div>
+<p>Afegint aquesta línia el nostre fitxer <code class="docutils literal notranslate"><span class="pre">feina_externa</span></code> queda de la següent manera:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">es_vocal</span><span class="p">(</span><span class="n">lletra</span><span class="p">):</span>
+
+    <span class="k">return</span> <span class="n">lletra</span> <span class="o">==</span> <span class="s1">&#39;a&#39;</span> <span class="ow">or</span> <span class="n">lletra</span> <span class="o">==</span> <span class="s1">&#39;e&#39;</span> <span class="ow">or</span> <span class="n">lletra</span> <span class="o">==</span> <span class="s1">&#39;i&#39;</span> <span class="ow">or</span> <span class="n">lletra</span> <span class="o">==</span> <span class="s1">&#39;o&#39;</span> <span class="ow">or</span> <span class="n">lletra</span> <span class="o">==</span> <span class="s1">&#39;u&#39;</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">ll</span> <span class="o">=</span> <span class="s1">&#39;e&#39;</span>
+
+    <span class="c1"># Anem a mirar si ll és una vocal</span>
+    <span class="n">esvocal</span> <span class="o">=</span> <span class="n">es_vocal</span><span class="p">(</span><span class="n">ll</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">esvocal</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;La lletra &quot;</span> <span class="o">+</span> <span class="n">ll</span> <span class="o">+</span> <span class="s2">&quot; es una vocal&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;La lletra &quot;</span> <span class="o">+</span> <span class="n">ll</span> <span class="o">+</span> <span class="s2">&quot; no es una vocal&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>La lletra e es una vocal
+</pre></div>
+</div>
+</div>
+</div>
+<p>Normalment ens interessa usar aquesta característica per poder avaluar el codi que tenim en un mòdul sense necessitat
+d’importar-lo en un altre fitxer, d’això se’n diuen <strong>tests unitaris</strong> i és una bona pràctica de programació.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./chapters\Annexes"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="Taula_ASCII.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Taula ASCII</p>
+        </div>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Gabriel Moyà Alcover<br/>
+  
+      &copy; Copyright 2021.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

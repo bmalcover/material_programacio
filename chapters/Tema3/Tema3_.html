@@ -1,0 +1,728 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Tema 3 &#8212; Programacio I</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Exercicis del Tema 3" href="Tema3_Exercicis.html" />
+    <link rel="prev" title="Exercicis Tema 2" href="../Tema2/Tema2_Exercicis.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Programacio I</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    Introducció
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Tema1.html">
+   Tema 1
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Tema2/Tema2_Intro.html">
+   Tema 2
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tema2/Tema2.html">
+     Dades
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tema2/Tema2_Estructures_de_control.html">
+     Composició d’instruccions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tema2/Tema2_Exercicis.html">
+     Exercicis Tema 2
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="current reference internal" href="#">
+   Tema 3
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Tema3_Exercicis.html">
+     Exercicis del Tema 3
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Tema4/Tema4_.html">
+   Tema 4
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tema4/Tema4_Esquemes.html">
+     Aplicació dels esquemes bàsics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tema4/Tema4_Subprogrames.html">
+     Subprogrames i paràmetres
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tema4/Tema4_Aplicacio_esquemes_subprogrames.html">
+     Esquemes amb subprogrames
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tema4/Tema4_Exercicis_subprogrames.html">
+     Exercicis del Tema 4
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Tema5/Tema5.html">
+   Tema 5
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tema5/Tema5_Llistes.html">
+     Llistes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tema5/Tema5_Classes.html">
+     Classes i Objectes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tema5/Tema5_Estructures.html">
+     Altres maneres d’estructurar les dades
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tema5/Tema5_Exercicis.html">
+     Exercicis Tema 5
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tema5/Tema5_Exercicis_altres_estructures.html">
+     Exercicis Tema 5/2
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Tema6/Tema6_Fitxers.html">
+   Tema 6
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tema6/Tema6_Exercicis.html">
+     Exercicis Tema 6
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Tema7/Tema7_Algorismes.html">
+   Tema 7
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tema7/Tema7_Exercicis.html">
+     Exercicis Tema 7
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Annexes/Annexes.html">
+   Annexos
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Annexes/Entorn_Desenvolupament.html">
+     Entorn de desenvolupament
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Annexes/Turtle.html">
+     Turtle
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Annexes/Taula_ASCII.html">
+     Taula ASCII
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Annexes/Fitxers_Externs.html">
+     Fitxers externs
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/chapters/Tema3/Tema3_.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../../_sources/chapters/Tema3/Tema3_.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#esquemes-algorismics-basics">
+   Esquemes algorísmics bàsics
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#el-concepte-de-sequencia">
+     El concepte de seqüència.
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#esquema-de-recorregut">
+   Esquema de recorregut
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#esquema-general-de-cerca">
+   Esquema general de cerca
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Tema 3</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#esquemes-algorismics-basics">
+   Esquemes algorísmics bàsics
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#el-concepte-de-sequencia">
+     El concepte de seqüència.
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#esquema-de-recorregut">
+   Esquema de recorregut
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#esquema-general-de-cerca">
+   Esquema general de cerca
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="tema-3">
+<h1>Tema 3<a class="headerlink" href="#tema-3" title="Permalink to this headline">#</a></h1>
+<section id="esquemes-algorismics-basics">
+<h2>Esquemes algorísmics bàsics<a class="headerlink" href="#esquemes-algorismics-basics" title="Permalink to this headline">#</a></h2>
+<p>Un cop que disposem de les eines bàsiques necessàries per poder construir els nostres programes, és el moment d’estudiar algorismes que ens permetin solucionar programes amb major complexitat. Durant tot el curs veurem que a partir d’aquestes composicions bàsiques aplicades a seqüències de dades es poden resoldre una ampla varietat de problemes.</p>
+<p>Començarem l’aplicació d’aquests esquemes algorísmics resolent problemes de seqüències de lletres i de nombres, ja que ens permeten aplicar els conceptes teòrics i són senzills de programar.</p>
+<section id="el-concepte-de-sequencia">
+<h3>El concepte de seqüència.<a class="headerlink" href="#el-concepte-de-sequencia" title="Permalink to this headline">#</a></h3>
+<p>S’enten com a seqüència aquell conjunt d’elements que verifica les següents condicions:</p>
+<ul class="simple">
+<li><p>Existeix un primer element al qual es pot accedir.</p></li>
+<li><p>Tots els elements tenen un successor excepte el darrer i amb aquesta relació de succesió es pot accedir a la resta d’elements que formen la seqüència.</p></li>
+<li><p>Existeix un darrer element i aquest element es pot identificar.</p></li>
+</ul>
+<figure class="align-center" id="id1">
+<a class="reference internal image-reference" href="../../_images/sequencia.png"><img alt="Seqüència de text" src="../../_images/sequencia.png" style="width: 500px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 2 </span><span class="caption-text">Exemple de seqüència de text amb els seus elements bàsics.</span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>La primera passa a realitzar quant volem resoldre un problema mitjançant algorismes que tracten seqüències és identificar quin és l’element a tractar: lletres, nombres, booleans, paraules, vídeos… No sempre serà una tasca senzilla i dependrà de l’experiència i de la capacitat d’anàlisi del programador adoptar la solució més convenient al problema a tractar.</p>
+<p>El tractament de les seqüències es realitza començant pel primer element i accedint a la resta amb la relació de successió prèviament definida.</p>
+<p>El concepte de tractament seqüencial ens duu a definir algorismes bàsics:</p>
+<ul class="simple">
+<li><p><strong>Esquema de recorregut</strong> amb el qual es pretén realitzar un determinat tractament per a cada un dels elements de la
+seqüència. En aquest cas el tractament s’acabarà en detectar el final de la seqüència.</p></li>
+<li><p><strong>Esquema de cerca</strong> amb el qual es pretén verificar l’existència d’un element dins la seqüència. Aquest
+tractament pot acabar quan l’element s’ha trobat o quan s’ha arribat al final de la seqüència per què l’element no hi era.</p></li>
+</ul>
+</section>
+</section>
+<section id="esquema-de-recorregut">
+<h2>Esquema de recorregut<a class="headerlink" href="#esquema-de-recorregut" title="Permalink to this headline">#</a></h2>
+<p>El recorregut és el mecanisme que permet aplicar una determinada operació a tots els elements que formen part
+d’una seqüència. És important tenir present sempre el fet que el tractament s’haurà de començar amb el primer element
+i no acabarà fins que s’hagi aplicat al darrer element de la seqüència.  En determinades circumstàncies és possible
+que pel cas del darrer element s’hagi de fer un tractament específic.</p>
+<p>Aquest és l’algorisme general de l’esquema d’un recorregut:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">inicialització</span> 
+<span class="n">situar</span><span class="o">-</span><span class="n">se</span> <span class="n">sobre</span> <span class="n">el</span> <span class="n">primer</span> <span class="n">element</span> 
+
+<span class="n">mentre</span> <span class="n">no</span> <span class="n">final</span><span class="p">:</span>
+        <span class="n">tractar</span> <span class="n">element</span> <span class="n">actual</span>    
+        <span class="n">situar</span><span class="o">-</span><span class="n">se</span> <span class="n">sobre</span> <span class="n">el</span> <span class="n">següent</span> <span class="n">element</span>
+
+<span class="n">tractament</span> <span class="n">de</span> <span class="n">final</span> 
+<span class="n">donar</span> <span class="n">resultat</span>
+</pre></div>
+</div>
+<p>Un exemple d’un recorregut és un programa que compta el nombre d’aparicions de la lletra ‘a’ en un text. Cal
+considerar que el caràcter ‘.’ s’utilitzarà com a darrer element per indicar el final de la seqüència, almenys durant la
+primera part del curs.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Introdueix una seqüència de text acabada en punt.&quot;</span><span class="p">)</span>
+<span class="n">lletra</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">stdin</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">nombre</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="n">lletra</span> <span class="o">!=</span> <span class="s1">&#39;.&#39;</span><span class="p">:</span>
+
+    <span class="k">if</span> <span class="n">lletra</span> <span class="o">==</span> <span class="s1">&#39;a&#39;</span><span class="p">:</span>
+        <span class="n">nombre</span> <span class="o">=</span> <span class="n">nombre</span> <span class="o">+</span> <span class="mi">1</span>
+
+    <span class="n">lletra</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">stdin</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39; Hi ha un total de </span><span class="si">{</span><span class="n">nombre</span><span class="si">}</span><span class="s1"> lletres &quot;a&quot; en el texte.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="esquema-general-de-cerca">
+<h2>Esquema general de cerca<a class="headerlink" href="#esquema-general-de-cerca" title="Permalink to this headline">#</a></h2>
+<p>L’esquema general de cerca és molt semblant al de recorregut, es basa, com aquell, en un bucle per anar tractant els
+successius elements de la seqüència. La principal diferència es troba precisament en la condició d’acabament del
+bucle. L’esquema general de cerca consisteix en les següents operacions:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">inicialització</span> 
+<span class="n">situar</span><span class="o">-</span><span class="n">se</span> <span class="n">sobre</span> <span class="n">el</span> <span class="n">primer</span> <span class="n">element</span> 
+<span class="n">mentre</span> <span class="n">no</span> <span class="n">final</span> <span class="n">i</span> <span class="n">no</span> <span class="n">trobat</span><span class="p">:</span>
+        <span class="n">tractar</span> <span class="n">element</span> <span class="n">actual</span>
+        <span class="n">situar</span><span class="o">-</span><span class="n">se</span> <span class="n">sobre</span> <span class="n">el</span> <span class="n">següent</span> <span class="n">element</span>
+
+<span class="n">tractament</span> <span class="n">de</span> <span class="n">final</span> 
+<span class="n">actuar</span> <span class="n">segons</span> <span class="n">els</span> <span class="n">resultats</span>
+</pre></div>
+</div>
+<p>A continuació veurem un exemple d’un programa que realitza una cerca. Realitzarem un programa que cerqui la primera vocal d’una seqüència de text acabada en punt.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Introdueix un text acabat en punt&quot;</span><span class="p">)</span>
+<span class="n">lletra</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">stdin</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="k">while</span> <span class="n">lletra</span> <span class="o">!=</span> <span class="s1">&#39;.&#39;</span> <span class="ow">and</span> <span class="p">(</span><span class="n">lletra</span> <span class="o">!=</span> <span class="s1">&#39;a&#39;</span> <span class="ow">and</span> <span class="n">lletra</span> <span class="o">!=</span> <span class="s1">&#39;e&#39;</span> <span class="ow">and</span> <span class="n">lletra</span> <span class="o">!=</span> <span class="s1">&#39;i&#39;</span> <span class="ow">and</span> <span class="n">lletra</span> <span class="o">!=</span> <span class="s1">&#39;o&#39;</span> <span class="ow">and</span> <span class="n">lletra</span> <span class="o">!=</span> <span class="s1">&#39;u&#39;</span><span class="p">):</span>
+
+    <span class="n">lletra</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">stdin</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">lletra</span> <span class="o">!=</span><span class="s1">&#39;.&#39;</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;La primera vocal es: </span><span class="si">{</span><span class="n">lletra</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;No he trobat cap vocal&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Encara que el programa funciona de forma correcta, la condició de trobat és un poc llarga, realitzarem una segona versió del mateix programa fent ús d’una variable booleana per poder simplificar les condicions de finalització del bucle. Evidentment, això provoca certs canvis en el nostre programa: El primer valor assignat a la variable <code class="docutils literal notranslate"><span class="pre">lletra</span></code> serà l’espai en blanc, això és degut al fet que l’avaluació del valor de la variable
+<code class="docutils literal notranslate"><span class="pre">lletra</span></code> és dins el bucle i, per tant, necessitem assegurar que entrarem almanco una vegada dins aquest per saber si la primera lletra de la seqüència és vocal o no.</p>
+<p>Vegem el codi:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="n">lletra</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span>
+<span class="n">trobat</span> <span class="o">=</span> <span class="kc">False</span>
+
+<span class="k">while</span> <span class="n">lletra</span> <span class="o">!=</span> <span class="s1">&#39;.&#39;</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">trobat</span><span class="p">:</span>
+
+    <span class="n">lletra</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">stdin</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">lletra</span> <span class="o">==</span> <span class="s1">&#39;a&#39;</span> <span class="ow">or</span> <span class="n">lletra</span> <span class="o">==</span> <span class="s1">&#39;e&#39;</span> <span class="ow">or</span> <span class="n">lletra</span> <span class="o">==</span> <span class="s1">&#39;i&#39;</span> <span class="ow">or</span> <span class="n">lletra</span> <span class="o">==</span> <span class="s1">&#39;o&#39;</span> <span class="ow">or</span> <span class="n">lletra</span> <span class="o">==</span> <span class="s1">&#39;u&#39;</span><span class="p">:</span>
+        <span class="n">trobat</span> <span class="o">=</span> <span class="kc">True</span>
+
+<span class="k">if</span> <span class="n">trobat</span> <span class="o">==</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;La primera vocal és: &quot;</span> <span class="o">+</span> <span class="n">lletra</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;No he trobat cap vocal&quot;</span><span class="p">)</span>
+
+</pre></div>
+</div>
+<p>Si ens aturem a fer una petita reflexió, podrem observar com els dos programes anteriors són dues implementacions diferents <strong>del mateix algorisme</strong>.</p>
+<p>Tant els recorreguts com les cerques són eines molt útils, és important saber com aplicar adequadament aquests dos esquemes. Al llarg dels següents capítols es plantegen nombrosos exemples on, a priori, l’aplicació de cerques i recorreguts pot parèixer estranya, però un examen detallat dels problemes revelarà que quasi sempre es pot interpretar el problema considerant que es tracta de manejar una seqüència d’elements d’un determinat tipus.</p>
+</section>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./chapters\Tema3"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="../Tema2/Tema2_Exercicis.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Exercicis Tema 2</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="Tema3_Exercicis.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Exercicis del Tema 3</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Gabriel Moyà Alcover<br/>
+  
+      &copy; Copyright 2021.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
