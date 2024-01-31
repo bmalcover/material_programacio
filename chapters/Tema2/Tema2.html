@@ -1,48 +1,60 @@
 
+
 <!DOCTYPE html>
 
-<html>
+
+<html lang="en" data-content_root="" >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Dades &#8212; Programacio I</title>
-    
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <link href="../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
-    
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../../_static/togglebutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
@@ -50,61 +62,106 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'chapters/Tema2/Tema2';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Composició d’instruccions" href="Tema2_Estructures_de_control.html" />
     <link rel="prev" title="Tema 2" href="Tema2_Intro.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay overlay-navbar" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<!-- Checkboxes to toggle the in-page toc -->
-<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
-<label class="overlay overlay-pagetoc" for="__page-toc">
-    <div class="visually-hidden">Toggle in-page Table of Contents</div>
-</label>
-<!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
-<div class="header header-item noprint"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-    
-    <div class="container-fluid" id="banner"></div>
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
 
-    
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
 
-    <div class="container-xl">
-      <div class="row">
-          
-<!-- Sidebar -->
-<div class="bd-sidebar noprint" id="site-navigation">
-    <div class="bd-sidebar__content">
-        <div class="bd-sidebar__top"><div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../../index.html">
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
         
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+  
+    
+    
       
-      
-      <img src="../../_static/logo.png" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">Programacio I</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
+    
+    
+    <img src="../../_static/logo.png" class="logo__image only-light" alt="Programacio I - Home"/>
+    <script>document.write(`<img src="../../_static/logo.png" class="logo__image only-dark" alt="Programacio I - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
@@ -114,540 +171,251 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../Tema1.html">
-   Tema 1
-  </a>
- </li>
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="Tema2_Intro.html">
-   Tema 2
-  </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul class="current">
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     Dades
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Tema2_Estructures_de_control.html">
-     Composició d’instruccions
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Tema2_Exercicis.html">
-     Exercicis Tema 2
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../Tema3/Tema3_.html">
-   Tema 3
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../Tema3/Tema3_Exercicis.html">
-     Exercicis del Tema 3
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../Tema4/Tema4_.html">
-   Tema 4
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../Tema4/Tema4_Esquemes.html">
-     Aplicació dels esquemes bàsics
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../Tema4/Tema4_Subprogrames.html">
-     Subprogrames i paràmetres
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../Tema4/Tema4_Aplicacio_esquemes_subprogrames.html">
-     Esquemes amb subprogrames
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../Tema4/Tema4_Exercicis_subprogrames.html">
-     Exercicis del Tema 4
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../Tema5/Tema5.html">
-   Tema 5
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../Tema5/Tema5_Llistes.html">
-     Llistes
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../Tema5/Tema5_Classes.html">
-     Classes i Objectes
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../Tema5/Tema5_Estructures.html">
-     Altres maneres d’estructurar les dades
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../Tema5/Tema5_Exercicis.html">
-     Exercicis Tema 5
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../Tema5/Tema5_Exercicis_altres_estructures.html">
-     Exercicis Tema 5/2
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../Tema6/Tema6_Fitxers.html">
-   Tema 6
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../Tema6/Tema6_Exercicis.html">
-     Exercicis Tema 6
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../Tema7/Tema7_Algorismes.html">
-   Tema 7
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../Tema7/Tema7_Exercicis.html">
-     Exercicis Tema 7
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../Annexes/Annexes.html">
-   Annexos
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
-  <label for="toctree-checkbox-7">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../Annexes/Entorn_Desenvolupament.html">
-     Entorn de desenvolupament
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../Annexes/Turtle.html">
-     Turtle
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../Annexes/Taula_ASCII.html">
-     Taula ASCII
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../Annexes/Fitxers_Externs.html">
-     Fitxers externs
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../Tema1.html">Tema 1</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="Tema2_Intro.html">Tema 2</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Dades</a></li>
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="Tema2_Estructures_de_control.html">Composició d’instruccions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tema2_Exercicis.html">Exercicis Tema 2</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Tema3/Tema3_.html">Tema 3</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Tema3/Tema3_Exercicis.html">Exercicis del Tema 3</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Tema4/Tema4_.html">Tema 4</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Tema4/Tema4_Esquemes.html">Aplicació dels esquemes bàsics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tema4/Tema4_Subprogrames.html">Subprogrames i paràmetres</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tema4/Tema4_Aplicacio_esquemes_subprogrames.html">Esquemes amb subprogrames</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tema4/Tema4_Exercicis_subprogrames.html">Exercicis del Tema 4</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Tema5/Tema5.html">Tema 5</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Tema5/Tema5_Llistes.html">Iterables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tema5/Tema5_Classes.html">Classes i Objectes</a></li>
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Tema5/Tema5_Estructures.html">Tuples</a></li>
+
+
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Tema5/Tema5_Exercicis.html">Exercicis Tema 5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tema5/Tema5_Exercicis_altres_estructures.html">Exercicis Tema 5/2</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Tema6/Tema6_Fitxers.html">Tema 6</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Tema6/Tema6_Exercicis.html">Exercicis Tema 6</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Tema7/Tema7_Algorismes.html">Tema 7</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Tema7/Tema7_Exercicis.html">Exercicis Tema 7</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Annexes/Annexes.html">Annexos</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Annexes/Entorn_Desenvolupament.html">Entorn de desenvolupament</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Annexes/Turtle.html">Turtle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Annexes/Taula_ASCII.html">Taula ASCII</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Annexes/Fitxers_Externs.html">Fitxers externs</a></li>
+</ul>
+</li>
 </ul>
 
     </div>
 </nav></div>
-        <div class="bd-sidebar__bottom">
-             <!-- To handle the deprecated key -->
-            
-            <div class="navbar_extra_footer">
-            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-            </div>
-            
-        </div>
     </div>
-    <div id="rtd-footer-container"></div>
-</div>
-
-
-          
-
-
-          
-<!-- A tiny helper pixel to detect if we've scrolled -->
-<div class="sbt-scroll-pixel-helper"></div>
-<!-- Main content -->
-<div class="col py-0 content-container">
-    
-    <div class="header-article row sticky-top noprint">
-        
-
-
-
-<div class="col py-1 d-flex header-article-main">
-    <div class="header-article__left">
-        
-        <label for="__navigation"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="right"
-title="Toggle navigation"
->
   
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-bars"></i>
-  </span>
-
-</label>
-
-        
-    </div>
-    <div class="header-article__right">
-<div class="menu-dropdown menu-dropdown-launch-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Launch interactive content">
-      <i class="fas fa-rocket"></i>
-  </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/chapters/Tema2/Tema2.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Binder"
->
   
-
-<span class="headerbtn__icon-container">
-  
-    <img src="../../_static/images/logo_binder.svg">
-  </span>
-<span class="headerbtn__text-container">Binder</span>
-</a>
-
-      </li>
-      
-    </ul>
+  <div class="sidebar-primary-items__end sidebar-primary__section">
   </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/chapters/Tema2/Tema2.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
 </div>
+
+
+
 
 <button onclick="toggleFullScreen()"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="bottom"
-title="Fullscreen mode"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   <i class="fas fa-expand"></i>
   </span>
 
 </button>
 
-<div class="menu-dropdown menu-dropdown-download-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Download this page">
-      <i class="fas fa-download"></i>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="../../_sources/chapters/Tema2/Tema2.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Download source file"
->
-  
+`);
+</script>
 
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file"></i>
-  </span>
-<span class="headerbtn__text-container">.ipynb</span>
-</a>
 
-      </li>
-      
-      <li>
-        
-<button onclick="printPdf(this)"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="left"
-title="Print to PDF"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file-pdf"></i>
-  </span>
-<span class="headerbtn__text-container">.pdf</span>
-</button>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
 </label>
-
+</div></div>
+      
     </div>
+  
 </div>
-
-<!-- Table of contents -->
-<div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   Dades
-  </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#nom-o-identificador">
-     Nom o identificador
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#tipus">
-     Tipus
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#declaracions-de-variables">
-   Declaracions de variables
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#operadors-i-operands">
-   Operadors i operands
-  </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#operadors-aritmetics">
-     Operadors aritmètics
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#operadors-de-comparacio">
-     Operadors de comparació
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#representacio-dels-nombres-en-coma-flotant">
-     Representació dels nombres en coma flotant
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#operadors-logics">
-     Operadors lògics
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#operadors-d-assignacio-augmentada">
-     Operadors d’assignació augmentada
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#comentaris-en-el-codi">
-   Comentaris en el codi
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#entrada-sortida-d-informacio">
-   Entrada / Sortida d’informació
-  </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#entrada">
-     Entrada
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#sortida">
-     Sortida
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
-
-    </nav>
 </div>
-    </div>
-    <div class="article row">
-        <div class="col pl-md-3 pl-lg-5 content-container">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Dades</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   Dades
-  </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#nom-o-identificador">
-     Nom o identificador
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#tipus">
-     Tipus
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#declaracions-de-variables">
-   Declaracions de variables
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#operadors-i-operands">
-   Operadors i operands
-  </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#operadors-aritmetics">
-     Operadors aritmètics
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#operadors-de-comparacio">
-     Operadors de comparació
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#representacio-dels-nombres-en-coma-flotant">
-     Representació dels nombres en coma flotant
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#operadors-logics">
-     Operadors lògics
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#operadors-d-assignacio-augmentada">
-     Operadors d’assignació augmentada
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#comentaris-en-el-codi">
-   Comentaris en el codi
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#entrada-sortida-d-informacio">
-   Entrada / Sortida d’informació
-  </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#entrada">
-     Entrada
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#sortida">
-     Sortida
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
+              
+              
 
-                        </nav>
-                    </div>
-                </div>
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Dades</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
             </div>
-            <main id="main-content" role="main">
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Dades</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nom-o-identificador">Nom o identificador</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tipus">Tipus</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#declaracions-de-variables">Declaracions de variables</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#operadors-i-operands">Operadors i operands</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operadors-aritmetics">Operadors aritmètics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operadors-de-comparacio">Operadors de comparació</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#representacio-dels-nombres-en-coma-flotant">Representació dels nombres en coma flotant</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operadors-logics">Operadors lògics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operadors-d-assignacio-augmentada">Operadors d’assignació augmentada</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#comentaris-en-el-codi">Comentaris en el codi</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#entrada-sortida-d-informacio">Entrada / Sortida d’informació</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#entrada">Entrada</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sortida">Sortida</a></li>
+</ul>
+</li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
                 
-              <div>
-                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
   <section id="dades">
-<h1>Dades<a class="headerlink" href="#dades" title="Permalink to this headline">#</a></h1>
+<h1>Dades<a class="headerlink" href="#dades" title="Permalink to this heading">#</a></h1>
 <p>Les dades que utilitzen els programes es guarden dins la memòria principal mitjançant el
 que anomenem com a <strong>variables</strong>. Com el nom indica, una variable pot canviar de contingut al llarg de l’execució d’un
 programa.</p>
 <p>Tenen tres característiques que les defineixen completament: el seu nom, el seu tipus i el seu valor.</p>
 <section id="nom-o-identificador">
-<h2>Nom o identificador<a class="headerlink" href="#nom-o-identificador" title="Permalink to this headline">#</a></h2>
+<h2>Nom o identificador<a class="headerlink" href="#nom-o-identificador" title="Permalink to this heading">#</a></h2>
 <p>És una combinació de caràcters, dígits i el signe de subratllat (<code class="docutils literal notranslate"><span class="pre">_</span></code>) que permeten identificar una variable de
 manera única. Tot nom ha de començar per un caràcter.</p>
 <ul class="simple">
@@ -724,11 +492,16 @@ entrendre el significat de la variable dins el context del programa.</p>
  </table>
 </section>
 <section id="tipus">
-<h2>Tipus<a class="headerlink" href="#tipus" title="Permalink to this headline">#</a></h2>
+<h2>Tipus<a class="headerlink" href="#tipus" title="Permalink to this heading">#</a></h2>
 <p>El tipus defineix la natura dels valors que pot emmagatzemar una variable. També limita les operacions que es poden fer amb elles.</p>
-<p>Els tipus de dades elementals són: caràcter, enter, real i booleà:</p>
-<p><strong>Caràcter</strong> permet representar informació referent a caràcters simples i a seqüències de caràcters, es representen
-entre comes, ja siguin simples <code class="docutils literal notranslate"><span class="pre">'</span></code> o dobles <code class="docutils literal notranslate"><span class="pre">&quot;</span></code>. Al món de la programació coneixem una seqüència de caràcters amb el nom de <em>String</em> (<em>str</em>). <code class="docutils literal notranslate"><span class="pre">Python</span></code> considera els caràcters com strings de longitud 1.</p>
+<p>Els tipus de dades elementals són: <em>String</em>, enter, real i booleà:</p>
+<p><strong>String</strong> permet representar informació textual. Es representen entre comes, ja siguin simples <code class="docutils literal notranslate"><span class="pre">'</span></code> o dobles <code class="docutils literal notranslate"><span class="pre">&quot;</span></code> o triples <code class="docutils literal notranslate"><span class="pre">'''</span></code>. <code class="docutils literal notranslate"><span class="pre">Python</span></code> considera els caràcters com strings de longitud 1.</p>
+<ul class="simple">
+<li><p>Cometes simples: ‘permet incloure cometes “dobles”’.</p></li>
+<li><p>Dobles cometes: “permet incloure cometes ‘simples’”.</p></li>
+<li><p>Triples cometes: ja sigui amb cometes simples ‘’’Triples cometes simples’’’ o dobles “””Triples cometes dobles”””.</p></li>
+</ul>
+<p>Les cadenes definides amb cometes tripes poden incloure diverses línies, tots els espais en blancs inclosos s’incorporen a la cadena de forma literal.</p>
 <ul class="simple">
 <li><p>Exemples de caràcters: ‘a’, ‘b’, ‘\n’.</p></li>
 <li><p>Exemples de <em>String</em>: ‘3’, “llonguet”, “Josep”.</p></li>
@@ -746,12 +519,11 @@ entre comes, ja siguin simples <code class="docutils literal notranslate"><span 
 <li><p>Exemples de nombres complexos: 2+3j, 33+0j.</p></li>
 </ul>
 <p><strong>Booleà</strong>: ens permet representar valors lògics. Poden tenir únicament dos valors: veritat (<code class="docutils literal notranslate"><span class="pre">True</span></code>) o fals (<code class="docutils literal notranslate"><span class="pre">False</span></code>).</p>
-<p>El valor màxim i mínim que podem guardar en una variable de tipus enter o real, la llargària
-màxima que podem tenir en un <em>String</em> a <code class="docutils literal notranslate"><span class="pre">Python</span></code> no estan definits tal com passa en altres llenguatges depenen de la màquina on executem el codi. Aquest fet implica que hem de construir els nostres programes amb certa cura, pensant que si el volem executar en un altre ordinador amb menys capacitat, potser aquest no podrà fer-ho.</p>
+<p>El valor màxim i mínim que podem guardar en una variable de tipus enter o real, la llargària màxima que podem tenir en un <em>String</em> a <code class="docutils literal notranslate"><span class="pre">Python</span></code> no estan definits tal com passa en altres llenguatges depenen de la màquina on executem el codi. Aquest fet implica que hem de construir els nostres programes amb certa cura, pensant que si el volem executar en un altre ordinador amb menys capacitat, potser aquest no podrà fer-ho.</p>
 </section>
 </section>
 <section id="declaracions-de-variables">
-<h1>Declaracions de variables<a class="headerlink" href="#declaracions-de-variables" title="Permalink to this headline">#</a></h1>
+<h1>Declaracions de variables<a class="headerlink" href="#declaracions-de-variables" title="Permalink to this heading">#</a></h1>
 <p>Durant el transcurs del programa, el programador ha d’especificar cada una de les variables que necessitarà.  L’especificació de cada una d’aquestes variables s’anomena una declaració.</p>
 <p>Normalment, aquestes declaracions es fan a l’inici del programa encara que si és necessari es pot fer en qualsevol punt. En fer una declaració és necessari com a mínim: definir el nom i assignar un valor inicial. Si no es vol (o no es pot) assignar un valor, a <code class="docutils literal notranslate"><span class="pre">Python</span></code> tenim el valor nul: <strong>None</strong>.</p>
 <p>A continuació teniu la primera mostra de codi en la que declarem una variable de cada un dels diferents tipus de dades que hem descrit en la secció anterior:</p>
@@ -790,7 +562,7 @@ màxima que podem tenir en un <em>String</em> a <code class="docutils literal no
 </div>
 </section>
 <section id="operadors-i-operands">
-<h1>Operadors i operands<a class="headerlink" href="#operadors-i-operands" title="Permalink to this headline">#</a></h1>
+<h1>Operadors i operands<a class="headerlink" href="#operadors-i-operands" title="Permalink to this heading">#</a></h1>
 <p>A <code class="docutils literal notranslate"><span class="pre">Python</span></code>, els <strong>operadors</strong> són símbols especials que indiquen que cal fer algun tipus de computació. Els valors amb els quals actua un operador s’anomenen <strong>operands</strong>.</p>
 <p>Ho entendrem amb un petit exemple:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mf">10.0</span>
@@ -809,7 +581,7 @@ màxima que podem tenir en un <em>String</em> a <code class="docutils literal no
 </div>
 <p>Una seqüència d’operands i operadors, com <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">+</span> <span class="pre">b</span> <span class="pre">-</span> <span class="pre">5</span></code>, s’anomena <strong>expressió</strong>. <code class="docutils literal notranslate"><span class="pre">Python</span></code> admet molts operadors diferents per combinar operands de diferents tipus. Això ens permetrà crear expressions diferents per solucionar els diferents problemes que se’ns presentin.</p>
 <section id="operadors-aritmetics">
-<h2>Operadors aritmètics<a class="headerlink" href="#operadors-aritmetics" title="Permalink to this headline">#</a></h2>
+<h2>Operadors aritmètics<a class="headerlink" href="#operadors-aritmetics" title="Permalink to this heading">#</a></h2>
 <p>La taula següent mostra els operadors aritmètics compatibles amb <code class="docutils literal notranslate"><span class="pre">Python</span></code>:</p>
 <div class="table-responsive">
 <table class="table table-hover">
@@ -907,7 +679,7 @@ màxima que podem tenir en un <em>String</em> a <code class="docutils literal no
 </div>
 </section>
 <section id="operadors-de-comparacio">
-<h2>Operadors de comparació<a class="headerlink" href="#operadors-de-comparacio" title="Permalink to this headline">#</a></h2>
+<h2>Operadors de comparació<a class="headerlink" href="#operadors-de-comparacio" title="Permalink to this heading">#</a></h2>
 <p>Els operadors de comparació s’utilitzen normalment en contextos <em>booleans</em> com els que ens serveixen per controlar el
 flux del programa, com veurem un poc més endavant. El resultat d’usar un operador de comparació sempre és del tipus
 <em>booleà</em>.</p>
@@ -1011,7 +783,7 @@ flux del programa, com veurem un poc més endavant. El resultat d’usar un oper
 </div>
 </section>
 <section id="representacio-dels-nombres-en-coma-flotant">
-<h2>Representació dels nombres en coma flotant<a class="headerlink" href="#representacio-dels-nombres-en-coma-flotant" title="Permalink to this headline">#</a></h2>
+<h2>Representació dels nombres en coma flotant<a class="headerlink" href="#representacio-dels-nombres-en-coma-flotant" title="Permalink to this heading">#</a></h2>
 <p>Els nombres de coma flotant es representen a l’ordinador com a fraccions en base 2 (fraccions binàries). Per exemple, el valor decimal <code class="docutils literal notranslate"><span class="pre">0.125</span></code> es pot representar amb l’expressió: <code class="docutils literal notranslate"><span class="pre">1/10</span> <span class="pre">+</span> <span class="pre">2/100</span> <span class="pre">+</span> <span class="pre">5/1000</span></code> o amb aquesta altra: <code class="docutils literal notranslate"> <span class="pre">0/2</span> <span class="pre">+</span> <span class="pre">0/4</span> <span class="pre">+</span> <span class="pre">1/8</span></code>. L’única diferència entre les dues és que la primera està expressada en base 10 i la segona en base 2.</p>
 <p>El problema que trobem en la representació dels nombres en coma flotant és que la majoria de fraccions decimals no es poden representar exactament com a fraccions binàries. Una conseqüència és que, en general, els nombres decimals de coma flotant que introduïm en els nostres programes només s’aproximen als nombres binaris de coma flotant que queden emmagatzemats a la màquina.</p>
 <p>A la majoria de les màquines actuals, els flotants s’aproximen mitjançant una fracció binària amb el numerador utilitzant els primers 53 bits començant pel bit més significatiu i amb el denominador com a potència de dos. En el cas d’1/10, la fracció binària és <code class="docutils literal notranslate"><span class="pre">3602879701896397</span> <span class="pre">/</span> <span class="pre">2</span> <span class="pre">**</span> <span class="pre">55</span></code>.</p>
@@ -1023,7 +795,7 @@ flux del programa, com veurem un poc més endavant. El resultat d’usar un oper
 <p><a class="reference external" href="https://docs.python.org/3/tutorial/floatingpoint.html">Per obtenir més informació podeu el següent document</a></p>
 </section>
 <section id="operadors-logics">
-<h2>Operadors lògics<a class="headerlink" href="#operadors-logics" title="Permalink to this headline">#</a></h2>
+<h2>Operadors lògics<a class="headerlink" href="#operadors-logics" title="Permalink to this heading">#</a></h2>
 <p>Els operadors lògics <em>not</em>, <em>or</em> i <em>and</em> modifiquen i uneixen expressions avaluades en un context booleà i ens permeten crear condicions més complexes.</p>
 <p><strong>Expressions lògiques que inclouen operands booleans</strong></p>
 <p>Com heu vist, algunes expressions de <code class="docutils literal notranslate"><span class="pre">Python</span></code> són, en realitat, de tipus booleà. És a dir, són iguals a un dels valors <code class="docutils literal notranslate"><span class="pre">Python</span></code> <code class="docutils literal notranslate"><span class="pre">True</span></code> or <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
@@ -1127,7 +899,7 @@ flux del programa, com veurem un poc més endavant. El resultat d’usar un oper
 </div>
 </section>
 <section id="operadors-d-assignacio-augmentada">
-<h2>Operadors d’assignació augmentada<a class="headerlink" href="#operadors-d-assignacio-augmentada" title="Permalink to this headline">#</a></h2>
+<h2>Operadors d’assignació augmentada<a class="headerlink" href="#operadors-d-assignacio-augmentada" title="Permalink to this heading">#</a></h2>
 <p>Abans hem vist que un signe igual (=) s’utilitza per assignar un valor a una variable.</p>
 <p>És, per descomptat, perfectament viable que el valor de la dreta de l’assignació sigui una expressió que contingui altres variables. Si fem l’operació sobre una mateixa variable, podem fer el següent:</p>
 <p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">&lt;op&gt;=</span> <span class="pre">y</span></code>  és el mateix que fer  <code class="docutils literal notranslate"> <span class="pre">x</span> <span class="pre">=</span> <span class="pre">x</span> <span class="pre">&lt;op&gt;</span> <span class="pre">y</span></code></p>
@@ -1145,7 +917,7 @@ flux del programa, com veurem un poc més endavant. El resultat d’usar un oper
 </section>
 </section>
 <section id="comentaris-en-el-codi">
-<h1>Comentaris en el codi<a class="headerlink" href="#comentaris-en-el-codi" title="Permalink to this headline">#</a></h1>
+<h1>Comentaris en el codi<a class="headerlink" href="#comentaris-en-el-codi" title="Permalink to this heading">#</a></h1>
 <p>En el món de la programació, un comentari és una explicació o anotació llegible pel programador en el codi font d’un programa d’ordinador. S’escriuen amb el propòsit de facilitar la comprensió del codi font per a futures lectures del mateix programador o per altres programadors, són ignorats pels intèrprets.</p>
 <p>Moltes vegades també usarem els comentaris per prevenir l’execució d’una part del codi quan volem avaluar el funcionament del nostre propi codi.</p>
 <p>A <code class="docutils literal notranslate"><span class="pre">Python</span></code> els comentaris s’expressen amb el símbol <code class="docutils literal notranslate"><span class="pre">#</span></code>.  A continuació en veurem dos exemples del seu ús:</p>
@@ -1172,10 +944,10 @@ flux del programa, com veurem un poc més endavant. El resultat d’usar un oper
 </div>
 </section>
 <section id="entrada-sortida-d-informacio">
-<h1>Entrada / Sortida d’informació<a class="headerlink" href="#entrada-sortida-d-informacio" title="Permalink to this headline">#</a></h1>
+<h1>Entrada / Sortida d’informació<a class="headerlink" href="#entrada-sortida-d-informacio" title="Permalink to this heading">#</a></h1>
 <p>L’entrada i la sortida, o E/S ( <em>input/output</em>, I/O) és la comunicació entre un sistema de processament d’informació, com un ordinador, i el món exterior, possiblement un humà o un altre sistema. Les entrades són els senyals o dades que rep el sistema i les sortides són els senyals o dades enviades des d’aquest.</p>
 <section id="entrada">
-<h2>Entrada<a class="headerlink" href="#entrada" title="Permalink to this headline">#</a></h2>
+<h2>Entrada<a class="headerlink" href="#entrada" title="Permalink to this heading">#</a></h2>
 <p>Per poder proporcionar informació al programa, podem usar la funció <code class="docutils literal notranslate"><span class="pre">input</span></code>. Aquesta sempre ens tornarà l’string corresponent a la informació que l’usuari ens proporciona.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">entrada</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
 <span class="n">entrada</span>
@@ -1204,7 +976,7 @@ flux del programa, com veurem un poc més endavant. El resultat d’usar un oper
 </div>
 </section>
 <section id="sortida">
-<h2>Sortida<a class="headerlink" href="#sortida" title="Permalink to this headline">#</a></h2>
+<h2>Sortida<a class="headerlink" href="#sortida" title="Permalink to this heading">#</a></h2>
 <p>Per poder mostar informació per pantalla, farem servir la funció <code class="docutils literal notranslate"><span class="pre">print</span></code>. Aquesta funció pot mostrar qualsevol text (<em>string</em>).</p>
 <p>A continuació teniu diversos exemples:</p>
 <div class="cell docutils container">
@@ -1280,50 +1052,123 @@ En Biel es un &#39;bon&#39; professor?
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
+                </article>
               
-            </main>
-            <footer class="footer-article noprint">
-                
-    <!-- Previous / next buttons -->
-<div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="Tema2_Intro.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Tema 2</p>
-        </div>
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Tema2_Intro.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Tema 2</p>
+      </div>
     </a>
-    <a class='right-next' id="next-link" href="Tema2_Estructures_de_control.html" title="next page">
-    <div class="prev-next-info">
+    <a class="right-next"
+       href="Tema2_Estructures_de_control.html"
+       title="next page">
+      <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title">Composició d’instruccions</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
-            </footer>
-        </div>
-    </div>
-    <div class="footer-content row">
-        <footer class="col footer"><p>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Dades</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nom-o-identificador">Nom o identificador</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tipus">Tipus</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#declaracions-de-variables">Declaracions de variables</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#operadors-i-operands">Operadors i operands</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operadors-aritmetics">Operadors aritmètics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operadors-de-comparacio">Operadors de comparació</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#representacio-dels-nombres-en-coma-flotant">Representació dels nombres en coma flotant</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operadors-logics">Operadors lògics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operadors-d-assignacio-augmentada">Operadors d’assignació augmentada</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#comentaris-en-el-codi">Comentaris en el codi</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#entrada-sortida-d-informacio">Entrada / Sortida d’informació</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#entrada">Entrada</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sortida">Sortida</a></li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
   
-    By Gabriel Moyà Alcover<br/>
-  
-      &copy; Copyright 2021.<br/>
-</p>
-        </footer>
-    </div>
+  <div class="footer-item">
     
+<p class="component-author">
+By Gabriel Moyà Alcover
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2021.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
 </div>
+          </footer>
+        
 
-
-      </div>
+      </main>
     </div>
+  </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
-
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>

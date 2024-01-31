@@ -1,48 +1,60 @@
 
+
 <!DOCTYPE html>
 
-<html>
+
+<html lang="en" data-content_root="" >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Llistes &#8212; Programacio I</title>
-    
+    <title>Iterables &#8212; Programacio I</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <link href="../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
-    
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../../_static/togglebutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
@@ -52,61 +64,106 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'chapters/Tema5/Tema5_Llistes';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Classes i Objectes" href="Tema5_Classes.html" />
     <link rel="prev" title="Tema 5" href="Tema5.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay overlay-navbar" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<!-- Checkboxes to toggle the in-page toc -->
-<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
-<label class="overlay overlay-pagetoc" for="__page-toc">
-    <div class="visually-hidden">Toggle in-page Table of Contents</div>
-</label>
-<!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
-<div class="header header-item noprint"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-    
-    <div class="container-fluid" id="banner"></div>
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
 
-    
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
 
-    <div class="container-xl">
-      <div class="row">
-          
-<!-- Sidebar -->
-<div class="bd-sidebar noprint" id="site-navigation">
-    <div class="bd-sidebar__content">
-        <div class="bd-sidebar__top"><div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../../index.html">
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
         
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+  
+    
+    
       
-      
-      <img src="../../_static/logo.png" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">Programacio I</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
+    
+    
+    <img src="../../_static/logo.png" class="logo__image only-light" alt="Programacio I - Home"/>
+    <script>document.write(`<img src="../../_static/logo.png" class="logo__image only-dark" alt="Programacio I - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
@@ -116,493 +173,264 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../Tema1.html">
-   Tema 1
-  </a>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../Tema2/Tema2_Intro.html">
-   Tema 2
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../Tema2/Tema2.html">
-     Dades
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../Tema2/Tema2_Estructures_de_control.html">
-     Composició d’instruccions
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../Tema2/Tema2_Exercicis.html">
-     Exercicis Tema 2
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../Tema3/Tema3_.html">
-   Tema 3
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../Tema3/Tema3_Exercicis.html">
-     Exercicis del Tema 3
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../Tema4/Tema4_.html">
-   Tema 4
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../Tema4/Tema4_Esquemes.html">
-     Aplicació dels esquemes bàsics
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../Tema4/Tema4_Subprogrames.html">
-     Subprogrames i paràmetres
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../Tema4/Tema4_Aplicacio_esquemes_subprogrames.html">
-     Esquemes amb subprogrames
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../Tema4/Tema4_Exercicis_subprogrames.html">
-     Exercicis del Tema 4
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="Tema5.html">
-   Tema 5
-  </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul class="current">
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     Llistes
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Tema5_Classes.html">
-     Classes i Objectes
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Tema5_Estructures.html">
-     Altres maneres d’estructurar les dades
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Tema5_Exercicis.html">
-     Exercicis Tema 5
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Tema5_Exercicis_altres_estructures.html">
-     Exercicis Tema 5/2
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../Tema6/Tema6_Fitxers.html">
-   Tema 6
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../Tema6/Tema6_Exercicis.html">
-     Exercicis Tema 6
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../Tema7/Tema7_Algorismes.html">
-   Tema 7
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../Tema7/Tema7_Exercicis.html">
-     Exercicis Tema 7
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../Annexes/Annexes.html">
-   Annexos
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
-  <label for="toctree-checkbox-7">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../Annexes/Entorn_Desenvolupament.html">
-     Entorn de desenvolupament
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../Annexes/Turtle.html">
-     Turtle
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../Annexes/Taula_ASCII.html">
-     Taula ASCII
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../Annexes/Fitxers_Externs.html">
-     Fitxers externs
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../Tema1.html">Tema 1</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Tema2/Tema2_Intro.html">Tema 2</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Tema2/Tema2.html">Dades</a></li>
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Tema2/Tema2_Estructures_de_control.html">Composició d’instruccions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tema2/Tema2_Exercicis.html">Exercicis Tema 2</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Tema3/Tema3_.html">Tema 3</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Tema3/Tema3_Exercicis.html">Exercicis del Tema 3</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Tema4/Tema4_.html">Tema 4</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Tema4/Tema4_Esquemes.html">Aplicació dels esquemes bàsics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tema4/Tema4_Subprogrames.html">Subprogrames i paràmetres</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tema4/Tema4_Aplicacio_esquemes_subprogrames.html">Esquemes amb subprogrames</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tema4/Tema4_Exercicis_subprogrames.html">Exercicis del Tema 4</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="Tema5.html">Tema 5</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Iterables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tema5_Classes.html">Classes i Objectes</a></li>
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="Tema5_Estructures.html">Tuples</a></li>
+
+
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="Tema5_Exercicis.html">Exercicis Tema 5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tema5_Exercicis_altres_estructures.html">Exercicis Tema 5/2</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Tema6/Tema6_Fitxers.html">Tema 6</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Tema6/Tema6_Exercicis.html">Exercicis Tema 6</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Tema7/Tema7_Algorismes.html">Tema 7</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Tema7/Tema7_Exercicis.html">Exercicis Tema 7</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Annexes/Annexes.html">Annexos</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Annexes/Entorn_Desenvolupament.html">Entorn de desenvolupament</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Annexes/Turtle.html">Turtle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Annexes/Taula_ASCII.html">Taula ASCII</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Annexes/Fitxers_Externs.html">Fitxers externs</a></li>
+</ul>
+</li>
 </ul>
 
     </div>
 </nav></div>
-        <div class="bd-sidebar__bottom">
-             <!-- To handle the deprecated key -->
-            
-            <div class="navbar_extra_footer">
-            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-            </div>
-            
-        </div>
     </div>
-    <div id="rtd-footer-container"></div>
-</div>
-
-
-          
-
-
-          
-<!-- A tiny helper pixel to detect if we've scrolled -->
-<div class="sbt-scroll-pixel-helper"></div>
-<!-- Main content -->
-<div class="col py-0 content-container">
-    
-    <div class="header-article row sticky-top noprint">
-        
-
-
-
-<div class="col py-1 d-flex header-article-main">
-    <div class="header-article__left">
-        
-        <label for="__navigation"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="right"
-title="Toggle navigation"
->
   
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-bars"></i>
-  </span>
-
-</label>
-
-        
-    </div>
-    <div class="header-article__right">
-<div class="menu-dropdown menu-dropdown-launch-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Launch interactive content">
-      <i class="fas fa-rocket"></i>
-  </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/chapters/Tema5/Tema5_Llistes.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Binder"
->
   
-
-<span class="headerbtn__icon-container">
-  
-    <img src="../../_static/images/logo_binder.svg">
-  </span>
-<span class="headerbtn__text-container">Binder</span>
-</a>
-
-      </li>
-      
-    </ul>
+  <div class="sidebar-primary-items__end sidebar-primary__section">
   </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/chapters/Tema5/Tema5_Llistes.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
 </div>
+
+
+
 
 <button onclick="toggleFullScreen()"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="bottom"
-title="Fullscreen mode"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   <i class="fas fa-expand"></i>
   </span>
 
 </button>
 
-<div class="menu-dropdown menu-dropdown-download-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Download this page">
-      <i class="fas fa-download"></i>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="../../_sources/chapters/Tema5/Tema5_Llistes.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Download source file"
->
-  
+`);
+</script>
 
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file"></i>
-  </span>
-<span class="headerbtn__text-container">.ipynb</span>
-</a>
 
-      </li>
-      
-      <li>
-        
-<button onclick="printPdf(this)"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="left"
-title="Print to PDF"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file-pdf"></i>
-  </span>
-<span class="headerbtn__text-container">.pdf</span>
-</button>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
 </label>
-
+</div></div>
+      
     </div>
+  
 </div>
-
-<!-- Table of contents -->
-<div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#creacio-d-una-llista">
-   Creació d’una llista
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#accedint-als-elements-d-una-llista">
-   Accedint als elements d’una llista
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#slicing">
-     Slicing
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#mutabilitat">
-   Mutabilitat
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#modificacio-d-un-valor">
-     Modificació d’un valor
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#metodes-que-modifiquen-una-llista">
-     Mètodes que modifiquen una llista
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#operadors-i-funcions">
-     Operadors i funcions
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#llistes-com-a-parametres-de-subprogrames">
-     Llistes com a paràmetres de subprogrames
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#iterant-sobre-llistes">
-   Iterant sobre llistes
-  </a>
- </li>
-</ul>
-
-    </nav>
 </div>
-    </div>
-    <div class="article row">
-        <div class="col pl-md-3 pl-lg-5 content-container">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Llistes</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#creacio-d-una-llista">
-   Creació d’una llista
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#accedint-als-elements-d-una-llista">
-   Accedint als elements d’una llista
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#slicing">
-     Slicing
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#mutabilitat">
-   Mutabilitat
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#modificacio-d-un-valor">
-     Modificació d’un valor
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#metodes-que-modifiquen-una-llista">
-     Mètodes que modifiquen una llista
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#operadors-i-funcions">
-     Operadors i funcions
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#llistes-com-a-parametres-de-subprogrames">
-     Llistes com a paràmetres de subprogrames
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#iterant-sobre-llistes">
-   Iterant sobre llistes
-  </a>
- </li>
-</ul>
+              
+              
 
-                        </nav>
-                    </div>
-                </div>
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Iterables</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
             </div>
-            <main id="main-content" role="main">
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#llistes">Llistes</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creacio-d-una-llista">Creació d’una llista</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#accedint-als-elements-d-una-llista">Accedint als elements d’una llista</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#slicing">Slicing</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mutabilitat">Mutabilitat</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#modificacio-d-un-valor">Modificació d’un valor</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#metodes-que-modifiquen-una-llista">Mètodes que modifiquen una llista</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#operadors-i-funcions">Operadors i funcions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#llistes-com-a-parametres-de-subprogrames">Llistes com a paràmetres de subprogrames</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iterant-sobre-llistes">Iterant sobre llistes</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercicis">Exercicis</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
                 
-              <div>
-                
-  <section id="llistes">
-<h1>Llistes<a class="headerlink" href="#llistes" title="Permalink to this headline">#</a></h1>
-<p>Les llistes són probablement la manera d’estructurar dades més útils i versàtils de Python. Una llista és una
-col·lecció d’elements amb les següents propietats:</p>
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="iterables">
+<h1>Iterables<a class="headerlink" href="#iterables" title="Permalink to this heading">#</a></h1>
+<p>A <code class="docutils literal notranslate"><span class="pre">Python</span></code>, un iterable és una estructura que es pot recórrer o iterar mitjançant un bucle. En altres paraules, un iterable és qualsevol objecte de <code class="docutils literal notranslate"><span class="pre">Python</span></code> sobre el qual es pot aplicar un bucle <code class="docutils literal notranslate"><span class="pre">for</span></code> per a iterar a través dels seus elements un per un.</p>
+<p>Durant aquest capítol en veurem les més rellevants:</p>
 <ul class="simple">
-<li><p><strong>Les llistes són ordenades</strong>: Una llista no és només una col·lecció d’objectes. L’ordre en què especifiquem els
-elements quan construïm una llista és una característica innata d’aquesta construcció i es manté durant tota la seva
-vida mentre no apliquem modificacions.</p></li>
-<li><p><strong>Les llistes poden contenir qualsevol mena d’element</strong>: Inclús una col·lecció d’elements de diferents tipus,
-encara que no sigui una opció massa recomanable.</p></li>
-<li><p><strong>Es pot accedir als elements de la llista mitjançant un índex</strong>: Es pot accedir als elements individuals d’una
-llista mitjançant un índex que especificarem entre claudàtors després del nom de la variable. La indexació de la llista
-comença en el valor zero.</p></li>
-<li><p><strong>Les llistes són mutables</strong>: Un cop creada, s’hi poden afegir, eliminar, canviar i moure elements. <code class="docutils literal notranslate"><span class="pre">Python</span></code>
-ofereix una àmplia gamma d’operacions que permeten modificar les llistes.</p></li>
+<li><p>Llistes</p></li>
+<li><p>Strings</p></li>
+<li><p>Tuples</p></li>
+<li><p>Diccionaris</p></li>
+</ul>
+<p>Derivat del coneixement d’aquestes estructures també descobrirem noves capacitats del llenguatge:</p>
+<ul class="simple">
+<li><p><em>List comprehension</em></p></li>
+<li><p>Funcions <em>lambda</em></p></li>
+<li><p>Funcions <em>map</em> i <em>filter</em></p></li>
+<li><p>Funcions generadores de seqüències</p></li>
+</ul>
+<section id="llistes">
+<h2>Llistes<a class="headerlink" href="#llistes" title="Permalink to this heading">#</a></h2>
+<p>Les llistes són probablement la manera d’estructurar dades més útils i versàtils de Python. Una llista és una col·lecció d’elements amb les següents propietats:</p>
+<ul class="simple">
+<li><p><strong>Les llistes són ordenades</strong>: Una llista no és només una col·lecció d’objectes. L’ordre en què especifiquem els elements quan construïm una llista és una característica innata d’aquesta construcció i es manté durant tota la seva vida mentre no apliquem modificacions.</p></li>
+<li><p><strong>Les llistes poden contenir qualsevol mena d’element</strong>: Inclús una col·lecció d’elements de diferents tipus, encara que no sigui una opció massa recomanable.</p></li>
+<li><p><strong>Es pot accedir als elements de la llista mitjançant un índex</strong>: Es pot accedir als elements individuals d’una llista mitjançant un índex que especificarem entre claudàtors després del nom de la variable. La indexació de la llista comença en el valor zero.</p></li>
+<li><p><strong>Les llistes són mutables</strong>: Un cop creada, s’hi poden afegir, eliminar, canviar i moure elements. <code class="docutils literal notranslate"><span class="pre">Python</span></code> ofereix una àmplia gamma d’operacions que permeten modificar les llistes.</p></li>
 </ul>
 <p>Una llista té la següent forma:</p>
 <figure class="align-center" id="id1">
@@ -627,7 +455,7 @@ ofereix una àmplia gamma d’operacions que permeten modificar les llistes.</p>
 </div>
 </div>
 <section id="creacio-d-una-llista">
-<h2>Creació d’una llista<a class="headerlink" href="#creacio-d-una-llista" title="Permalink to this headline">#</a></h2>
+<h3>Creació d’una llista<a class="headerlink" href="#creacio-d-una-llista" title="Permalink to this heading">#</a></h3>
 <p>Una llista buida es pot crear de dues maneres, usant una funció anomenada <code class="docutils literal notranslate"><span class="pre">list</span></code>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ll</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
 </pre></div>
@@ -636,8 +464,7 @@ ofereix una àmplia gamma d’operacions que permeten modificar les llistes.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">llista2</span> <span class="o">=</span> <span class="p">[]</span>
 </pre></div>
 </div>
-<p>Les llistes poden tenir un nombre molt gran, però finit d’elements, tants com la memòria de l’ordinador en el qual
-estem treballant ens permeti, o com hem explicat abans no tenir cap element, amb el que aconseguim una llista buida.</p>
+<p>Les llistes poden tenir un nombre molt gran, però finit d’elements, tants com la memòria de l’ordinador en el qual estem treballant ens permeti, o com hem explicat abans no tenir cap element, amb el que aconseguim una llista buida.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span>  <span class="mi">1</span><span class="p">,</span>  <span class="mi">2</span><span class="p">,</span>  <span class="mi">3</span><span class="p">,</span>  <span class="mi">4</span><span class="p">,</span>  <span class="mi">5</span><span class="p">,</span>  <span class="mi">6</span><span class="p">,</span>  <span class="mi">7</span><span class="p">,</span>  <span class="mi">8</span><span class="p">,</span>  <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span>
@@ -658,11 +485,8 @@ estem treballant ens permeti, o com hem explicat abans no tenir cap element, amb
 </div>
 </section>
 <section id="accedint-als-elements-d-una-llista">
-<h2>Accedint als elements d’una llista<a class="headerlink" href="#accedint-als-elements-d-una-llista" title="Permalink to this headline">#</a></h2>
-<p>Es pot accedir a elements individuals d’una llista especificant la seva posició, també anomenada índex, entre
-claudàtors. Com ja hem comentat a la part introductòria del tema la indexació de llistes comença a l’índex zero, això
-vol dir que el primer element es troba en aquesta posició i el darrer en la posició <span class="math notranslate nohighlight">\(n-1\)</span> on <span class="math notranslate nohighlight">\(n\)</span> és el nombre
-d’elements de la llista.</p>
+<h3>Accedint als elements d’una llista<a class="headerlink" href="#accedint-als-elements-d-una-llista" title="Permalink to this heading">#</a></h3>
+<p>Es pot accedir a elements individuals d’una llista especificant la seva posició, també anomenada índex, entre claudàtors. Com ja hem comentat a la part introductòria del tema la indexació de llistes comença a l’índex zero, això vol dir que el primer element es troba en aquesta posició i el darrer en la posició <span class="math notranslate nohighlight">\(n-1\)</span> on <span class="math notranslate nohighlight">\(n\)</span> és el nombre d’elements de la llista.</p>
 <p>Vegem un petit exemple:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -685,17 +509,13 @@ baz
 </div>
 </div>
 </div>
-<p>Per indexar també es poden usar nombres negatius. El significat d’usar un nombre negatiu és que la indexació es fa
-del final de la llista en lloc del seu principi. D’aquesta manera tenim que:</p>
+<p>Per indexar també es poden usar nombres negatius. El significat d’usar un nombre negatiu és que la indexació es fa del final de la llista en lloc del seu principi. D’aquesta manera tenim que:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ll</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>    <span class="c1"># indexa el darrer element de la llista.</span>
 </pre></div>
 </div>
 <section id="slicing">
-<h3>Slicing<a class="headerlink" href="#slicing" title="Permalink to this headline">#</a></h3>
-<p><code class="docutils literal notranslate"><span class="pre">Python</span></code> també permet una sintaxi d’indexació avançada que permet extreure subllistes d’una llista. Aquesta
-tècnica és coneguda com a <em>slicing</em>. Sigui ‘ll’ una variable que identifica una llista, una expressió de la forma
-<code class="docutils literal notranslate"><span class="pre">ll[inici:final]</span></code> retorna la porció de ‘ll’ que comença en la posició ‘inici’, i acaba en la posició ‘final-1’. És a
-dir, la posició indexada per ‘final’ no és inclosa dins aquesta subllista.</p>
+<h4>Slicing<a class="headerlink" href="#slicing" title="Permalink to this heading">#</a></h4>
+<p><code class="docutils literal notranslate"><span class="pre">Python</span></code> també permet una sintaxi d’indexació avançada que permet extreure subllistes d’una llista. Aquesta tècnica és coneguda com a <em>slicing</em>. Sigui ‘ll’ una variable que identifica una llista, una expressió de la forma <code class="docutils literal notranslate"><span class="pre">ll[inici:final]</span></code> retorna la porció de ‘ll’ que comença en la posició ‘inici’, i acaba en la posició ‘final-1’. És a dir, la posició indexada per ‘final’ no és inclosa dins aquesta subllista.</p>
 <p>En resum, podem fer les següents seleccions:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="p">[</span><span class="n">inici</span><span class="p">:</span><span class="n">final</span><span class="p">]</span>  <span class="c1"># elements de la llista de la posició inici fins la posició final-1.</span>
 <span class="n">a</span><span class="p">[</span><span class="n">inici</span><span class="p">:]</span>       <span class="c1"># elements de la llista de la posició inici fins al final de la llista.</span>
@@ -724,10 +544,8 @@ La meva subllista
 </div>
 </div>
 </div>
-<p>A partir del coneixement bàsic del <em>slicing</em>, podem realitzar seleccions més complexes afegint un darrer paràmetre
-<code class="docutils literal notranslate"><span class="pre">ll[inici:final:increment]</span></code>, aquest paràmetre ‘increment’ indica l’increment dels índexs a l’hora de fer la selecció.
-Si no indiquem cap ‘increment’ el valor per defecte és 1. Com passa amb els índexs ‘inici’ i ‘final’,
-l’’increment’ també pot ser un nombre negatiu. D’aquesta manera, podrem fer les següents seleccions:</p>
+<p>A partir del coneixement bàsic del <em>slicing</em>, podem realitzar seleccions més complexes afegint un darrer paràmetre <code class="docutils literal notranslate"><span class="pre">ll[inici:final:increment]</span></code>, aquest paràmetre ‘increment’ indica l’increment dels índexs a l’hora de fer la selecció.
+Si no indiquem cap ‘increment’ el valor per defecte és 1. Com passa amb els índexs <code class="docutils literal notranslate"><span class="pre">inici</span></code> i <code class="docutils literal notranslate"><span class="pre">final</span></code>, l’<code class="docutils literal notranslate"><span class="pre">increment</span></code> també pot ser un nombre negatiu. D’aquesta manera, podrem fer les següents seleccions:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>    <span class="c1"># tots els elements de la llista en ordre invers</span>
 <span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>   <span class="c1"># els primers dos elements, en ordre invers</span>
 <span class="n">a</span><span class="p">[:</span><span class="o">-</span><span class="mi">3</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>  <span class="c1"># els dos darrers elements, en ordre invers</span>
@@ -775,20 +593,16 @@ Senars del 3 al 9: [1, 3, 5, 7, 9]
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>El <em>slicing</em> realitza copies dels elements que hem selecccionat de les subllistes, si en feim alguna modificació
-aquesta no es mantendrà a la llista original.</p>
+<p>El <em>slicing</em> realitza copies dels elements que hem selecccionat de les subllistes, si en feim alguna modificació aquesta no es mantendrà a la llista original.</p>
 </div>
 </section>
 </section>
 <section id="mutabilitat">
-<h2>Mutabilitat<a class="headerlink" href="#mutabilitat" title="Permalink to this headline">#</a></h2>
-<p>Un cop hem creat una llista, podem afegir, eliminar, canviar i moure elements a voluntat. <code class="docutils literal notranslate"><span class="pre">Python</span></code> ofereix una àmplia
-gamma d’eines que ens permeten modificar-les.</p>
+<h3>Mutabilitat<a class="headerlink" href="#mutabilitat" title="Permalink to this heading">#</a></h3>
+<p>Un cop hem creat una llista, podem afegir, eliminar, canviar i moure elements a voluntat. <code class="docutils literal notranslate"><span class="pre">Python</span></code> ofereix una àmplia gamma d’eines que ens permeten modificar-les.</p>
 <section id="modificacio-d-un-valor">
-<h3>Modificació d’un valor<a class="headerlink" href="#modificacio-d-un-valor" title="Permalink to this headline">#</a></h3>
-<p>Podem modificar o substituir un únic valor d’una llista de manera molt similar a com modifiquem una
-variable. En aquest cas hem d’especificar quin dels valors de la llista volem modificar. Com podem suposar,
-seleccionarem l’element mitjançant el seu índex.</p>
+<h4>Modificació d’un valor<a class="headerlink" href="#modificacio-d-un-valor" title="Permalink to this heading">#</a></h4>
+<p>Podem modificar o substituir un únic valor d’una llista de manera molt similar a com modifiquem una variable. En aquest cas hem d’especificar quin dels valors de la llista volem modificar. Com podem suposar, seleccionarem l’element mitjançant el seu índex.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">llista</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
@@ -811,8 +625,7 @@ Llista modificada a la primera posicio [-33, 2, 3, 4, 5]
 </div>
 </div>
 </div>
-<p>També podem fer seleccions de <em>slices</em> de la llista i assignar-hi múltiples elements en una sola assignació usant
-llistes de la mateixa mida.</p>
+<p>També podem fer seleccions de <em>slices</em> de la llista i assignar-hi múltiples elements en una sola assignació usant llistes de la mateixa mida.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">llista</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">33</span><span class="p">,</span> <span class="mi">33</span><span class="p">]</span>
@@ -828,11 +641,8 @@ llistes de la mateixa mida.</p>
 </div>
 </section>
 <section id="metodes-que-modifiquen-una-llista">
-<h3>Mètodes que modifiquen una llista<a class="headerlink" href="#metodes-que-modifiquen-una-llista" title="Permalink to this headline">#</a></h3>
-<p>Les operacions que tenim a continuació fan feina d’una manera que no havíem vist fins ara sobre cap variable dels
-nostres programes. Aquestes operacions <strong>no són funcions ni subprogrames</strong>, ja que modifiquen la llista sobre la qual
-estan actuant, els coneixem com a <strong>mètodes</strong>. De moment ens és suficient posar-hi nom, però una mica més endavant en
-aquest mateix tema en tornarem a parlar.</p>
+<h4>Mètodes que modifiquen una llista<a class="headerlink" href="#metodes-que-modifiquen-una-llista" title="Permalink to this heading">#</a></h4>
+<p>Les operacions que tenim a continuació fan feina d’una manera que no havíem vist fins ara sobre cap variable dels nostres programes. Aquestes operacions <strong>no són funcions ni subprogrames</strong>, ja que modifiquen la llista sobre la qual estan actuant, els coneixem com a <strong>mètodes</strong>. De moment ens és suficient posar-hi nom, però una mica més endavant en aquest mateix tema en tornarem a parlar.</p>
 <p>Aquests mètodes són:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">append</span></code></p></li>
@@ -842,7 +652,7 @@ aquest mateix tema en tornarem a parlar.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">pop</span></code></p></li>
 </ul>
 <p><strong>Descripció dels mètodes</strong></p>
-<p>Append: Mètode que rep un element per paràmetre i l’afegeix al final de la llista</p>
+<p><strong>Append</strong>: Mètode que rep un element per paràmetre i l’afegeix al final de la llista</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
@@ -858,7 +668,7 @@ aquest mateix tema en tornarem a parlar.</p>
 </div>
 </div>
 </div>
-<p>Extend: Mètode que rep una llista i l’afegeix al final de la llista.</p>
+<p><strong>Extend</strong>: Mètode que rep una llista i l’afegeix al final de la llista.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">])</span>
@@ -872,7 +682,7 @@ aquest mateix tema en tornarem a parlar.</p>
 </div>
 </div>
 </div>
-<p>Insert: Mètode que rep un enter i un element. Afegeix l’element a la posició seleccionada de la llista.</p>
+<p><strong>Insert</strong>: Mètode que rep un enter i un element. Afegeix l’element a la posició seleccionada de la llista.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Del resultat de la operació extend, veiem que no tenim el nombre 4.</span>
@@ -888,8 +698,7 @@ aquest mateix tema en tornarem a parlar.</p>
 </div>
 </div>
 </div>
-<p>Remove: Mètode que rep un element per paràmetre i l’elimina de la llista. Si l’element no existeix aquest mètode
-provocarà un error en el nostre codi.</p>
+<p><strong>Remove</strong>: Mètode que rep un element per paràmetre i l’elimina de la llista. Si l’element no existeix, aquest mètode provocarà un error en el nostre codi.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
@@ -916,9 +725,6 @@ provocarà un error en el nostre codi.</p>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 2, 3, 4, 5, 6, 7]
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -942,9 +748,7 @@ provocarà un error en el nostre codi.</p>
 </div>
 </div>
 </div>
-<p>Pop: Mètode que rep un enter per paràmetre i elimina l’element que està indexat per aquest enter. Si no especifiquem
-cap valor per paràmetre, elimina el darrer element. Si l’index de l’element no existeix, aquest mètode
-provocarà un error en el nostre codi.</p>
+<p><strong>Pop</strong>: Mètode que rep un enter per paràmetre i elimina l’element que està indexat per aquest enter. Si no especifiquem cap valor per paràmetre, elimina el darrer element. Si l’index de l’element no existeix, aquest mètode provocarà un error en el nostre codi.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Tornam a la nostra llista a, anem a usar el metode pop</span>
@@ -963,16 +767,14 @@ provocarà un error en el nostre codi.</p>
 </div>
 </div>
 </div>
-<p>A continuació teniu més informació de cada un dels mètodes anteriors: [documentació Python](<a class="reference external" href="https://docs.python">https://docs.python</a>
-.org/3/tutorial/datastructures.html)</p>
+<p>A continuació teniu més informació de cada un dels mètodes anteriors: <a class="reference external" href="https://docs.python.org/3/tutorial/datastructures.html">documentació Python</a></p>
+</section>
 </section>
 <section id="operadors-i-funcions">
-<h3>Operadors i funcions<a class="headerlink" href="#operadors-i-funcions" title="Permalink to this headline">#</a></h3>
-<p>Python ens proveeix de tota una sèrie d’operacions que ens permeten obtenir informació de les llistes, tenim funcions
-ja programades que ens permetran estalviar molta feina.</p>
+<h3>Operadors i funcions<a class="headerlink" href="#operadors-i-funcions" title="Permalink to this heading">#</a></h3>
+<p>Python ens proveeix de tota una sèrie d’operacions que ens permeten obtenir informació de les llistes, tenim funcions ja programades que ens permetran estalviar molta feina.</p>
 <p><strong>Operadors</strong></p>
-<p>L’operador <code class="docutils literal notranslate"><span class="pre">in</span></code> i el modificador <code class="docutils literal notranslate"><span class="pre">not</span></code> ens permeten saber si un element és o no és a la nostra llista. Aquests dos
-mètodes serveixen, per exemple, per saber si un element és a una llista abans d’eliminar-ho.</p>
+<p>L’operador <code class="docutils literal notranslate"><span class="pre">in</span></code> i el modificador <code class="docutils literal notranslate"><span class="pre">not</span></code> ens permeten saber si un element és o no és a la nostra llista. Aquests dos mètodes serveixen, per exemple, per saber si un element és a una llista abans d’eliminar-ho.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">separadors</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="s1">&#39;,&#39;</span><span class="p">,</span> <span class="s1">&#39;;&#39;</span><span class="p">,</span> <span class="s1">&#39;-&#39;</span><span class="p">]</span>
@@ -1017,7 +819,7 @@ True
 </div>
 </div>
 </div>
-<p><strong>Funcions sobre llistes</strong></p>
+<p><strong>Funcions</strong></p>
 <p>Hi ha tot un seguit de funcions ja definides a Python que ens permeten obtenir informació d’una llista.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">len</span></code>: ens retorna un enter amb la longitud de la llista.</p></li>
@@ -1048,9 +850,7 @@ True
 </div>
 </div>
 <p><strong>Exercici</strong></p>
-<p>Tornem a fer el programa que compta l’aparició de cada vocal, aquest cop en lloc d’usar 5 variables diferents
-usarem una llista de longitud 5 que conté valors enters, on la primera posició ens indica quantes ‘a’ hem trobat,
-la segona quantes ‘e’ i així successivament.</p>
+<p>Tornem a fer el programa que compta l’aparició de cada vocal, aquest cop en lloc d’usar 5 variables diferents usarem una llista de longitud 5 que conté valors enters, on la primera posició ens indica quantes ‘a’ hem trobat, la segona quantes ‘e’ i així successivament.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
@@ -1086,11 +886,9 @@ la segona quantes ‘e’ i així successivament.</p>
 </div>
 </section>
 <section id="llistes-com-a-parametres-de-subprogrames">
-<h3>Llistes com a paràmetres de subprogrames<a class="headerlink" href="#llistes-com-a-parametres-de-subprogrames" title="Permalink to this headline">#</a></h3>
-<p>A causa de aquesta mutabilidad, és a dir, la capacitat de ser modificades en temps d’execució, les llistes passades com
-a paràmetre d’un subprograma tenen un comportament diferent del que tenen les variables que hem emprat fins ara.</p>
-<p>Si passem una llista com a paràmetre d’un subprograma, sigui un procediment o una funció i hi fem qualsevol
-modificació, aquesta es veurà reflectida en la variable de l’àmbit extern que ha estat usada en el pas de paràmetre.</p>
+<h3>Llistes com a paràmetres de subprogrames<a class="headerlink" href="#llistes-com-a-parametres-de-subprogrames" title="Permalink to this heading">#</a></h3>
+<p>A causa de la mutabilitat de les llistes que fins ara hem mostrat, és a dir, la capacitat de ser modificades en temps d’execució, les llistes passades com a paràmetre d’un subprograma tenen un comportament diferent del que tenen les variables que hem emprat fins ara.
+Si passem una llista com a paràmetre d’un subprograma, sigui un procediment o una funció i hi fem qualsevol modificació, aquesta es veurà reflectida en la variable de l’àmbit extern que ha estat usada en el pas de paràmetre.</p>
 <p>Anem a veure un exemple:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1115,12 +913,9 @@ Llista despres de cridar al mètode afegeix_element:  [5]
 </div>
 </div>
 </section>
-</section>
 <section id="iterant-sobre-llistes">
-<h2>Iterant sobre llistes<a class="headerlink" href="#iterant-sobre-llistes" title="Permalink to this headline">#</a></h2>
-<p>Nosaltres ja coneixem l’operació d’iteració, ara que coneixem l’existència de llistes veurem com podem usar
-l’operador <code class="docutils literal notranslate"><span class="pre">for</span></code> per recórrer les llistes de manera automàtica. També com ho podem iterar mitjançant l’accés al seu
-índex:</p>
+<h3>Iterant sobre llistes<a class="headerlink" href="#iterant-sobre-llistes" title="Permalink to this heading">#</a></h3>
+<p>Nosaltres ja coneixem l’operació d’iteració i sabem que les llistes són un tipus de dades iterable. Ara veurem com podem usar l’operador <code class="docutils literal notranslate"><span class="pre">for</span></code> per recórrer les llistes de manera automàtica. També com ho podem iterar mitjançant l’accés al seu índex:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Recorrer una llista obtenint cada un dels seus elements</span>
@@ -1195,8 +990,12 @@ Valldemossa
 </div>
 </div>
 </div>
-<p><strong>Exercici</strong></p>
-<p>Anem a fer una segona versió de l’exercici anterior però eliminant els 5 condicionals</p>
+</section>
+</section>
+<section id="exercicis">
+<h2>Exercicis<a class="headerlink" href="#exercicis" title="Permalink to this heading">#</a></h2>
+<p><strong>Exercici 1</strong></p>
+<p>Anem a fer una segona versió de l’exercici anterior però eliminant els 5 condicionals:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
@@ -1227,9 +1026,8 @@ Valldemossa
 </div>
 </div>
 </div>
-<p><strong>Exercici</strong></p>
-<p>Ara el que vull és modificar el programa anterior per saber quina és la vocal que apareix més cops en una seqüència
-acabada en punt:</p>
+<p><strong>Exercici 2</strong></p>
+<p>Ara el que vull és modificar el programa anterior per saber quina és la vocal que apareix més cops en una seqüència acabada en punt:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
@@ -1272,8 +1070,7 @@ acabada en punt:</p>
 </div>
 </div>
 <p><strong>Exercici</strong></p>
-<p>Per acabar farem un darrer exercici, que uneix el tema anterior amb aquest. Mostrar invertides totes les paraules d’una
-seqüència.</p>
+<p>Per acabar farem un darrer exercici, que uneix el tema anterior amb aquest. Mostrar invertides totes les paraules d’una seqüència.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
@@ -1342,50 +1139,119 @@ seqüència.</p>
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
+                </article>
               
-            </main>
-            <footer class="footer-article noprint">
-                
-    <!-- Previous / next buttons -->
-<div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="Tema5.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Tema 5</p>
-        </div>
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Tema5.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Tema 5</p>
+      </div>
     </a>
-    <a class='right-next' id="next-link" href="Tema5_Classes.html" title="next page">
-    <div class="prev-next-info">
+    <a class="right-next"
+       href="Tema5_Classes.html"
+       title="next page">
+      <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title">Classes i Objectes</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
-            </footer>
-        </div>
-    </div>
-    <div class="footer-content row">
-        <footer class="col footer"><p>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#llistes">Llistes</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creacio-d-una-llista">Creació d’una llista</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#accedint-als-elements-d-una-llista">Accedint als elements d’una llista</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#slicing">Slicing</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mutabilitat">Mutabilitat</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#modificacio-d-un-valor">Modificació d’un valor</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#metodes-que-modifiquen-una-llista">Mètodes que modifiquen una llista</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#operadors-i-funcions">Operadors i funcions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#llistes-com-a-parametres-de-subprogrames">Llistes com a paràmetres de subprogrames</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iterant-sobre-llistes">Iterant sobre llistes</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercicis">Exercicis</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
   
-    By Gabriel Moyà Alcover<br/>
-  
-      &copy; Copyright 2021.<br/>
-</p>
-        </footer>
-    </div>
+  <div class="footer-item">
     
+<p class="component-author">
+By Gabriel Moyà Alcover
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2021.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
 </div>
+          </footer>
+        
 
-
-      </div>
+      </main>
     </div>
+  </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
-
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>
