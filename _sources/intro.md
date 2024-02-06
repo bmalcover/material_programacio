@@ -1,4 +1,4 @@
-Introducció
+Sobre aquests materials
 ============================
 
 En aquest document hi ha el contingut teòric i els exercicis de l'assignatura de Programació I per als estudis de 
@@ -9,6 +9,6 @@ durant les classes teòriques de l'assignatura.
 
 És necessari remarcar que el material es troba en un estat de revisió contínua i que serà amb la vostra ajuda i els 
 vostres comentaris que se'n podrà acabar fent una versió final. Per aquest motiu vull aprofitar per motivar-vos a 
-comentar tots aquells aspectes que penseu que es poden canviar del material que trobareu a continuació i que els farien 
-més útils pels futurs alumnes.  El lector també trobarà altres exemples i l'adjunció de llistats d'exercicis al final de
+comentar tots aquells aspectes que penseu que es poden canviar del material que hi ha a continuació i que els farien 
+més útils pels futurs alumnes.  També trobareu altres exemples i l'adjunció de llistats d'exercicis al final de
 cada capitol. 
