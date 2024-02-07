@@ -1,38 +1,50 @@
-format: jb-article
 root: intro
-sections:
-- file: chapters/Tema1
-- file: chapters/Tema2/Tema2_Intro
-  sections:
-  - file: chapters/Tema2/Tema2
-  - file: chapters/Tema2/Tema2_Estructures_de_control
-  - file: chapters/Tema2/Tema2_Exercicis
-- file: chapters/Tema3/Tema3_
-  sections:
-  - file: chapters/Tema3/Tema3_Exercicis
-- file: chapters/Tema4/Tema4_
-  sections:
-  - file: chapters/Tema4/Tema4_Esquemes
-    title: "Aplicaci\xF3 dels esquemes b\xE0sics"
-  - file: chapters/Tema4/Tema4_Subprogrames
-  - file: chapters/Tema4/Tema4_Aplicacio_esquemes_subprogrames
-    title: Esquemes amb subprogrames
-  - file: chapters/Tema4/Tema4_Exercicis_subprogrames
-- file: chapters/Tema5/Tema5
-  sections:
-  - file: chapters/Tema5/Tema5_Llistes
-  - file: chapters/Tema5/Tema5_Classes
-  - file: chapters/Tema5/Tema5_Estructures
-  - file: chapters/Tema5/Tema5_Exercicis
-  - file: chapters/Tema5/Tema5_Exercicis_altres_estructures
-- file: chapters/Tema6/Tema6_Fitxers
-  sections:
-  - file: chapters/Tema6/Tema6_Exercicis
-- file: chapters/Tema7/Tema7_Algorismes
-  sections:
-  - file: chapters/Tema7/Tema7_Exercicis
-- file: chapters/Annexes/Annexes
-  sections:
+format: jb-book
+defaults:
+  numbered: false
+parts:
+- caption: Introducció
+  chapters:
+  - file: chapters/Tema1
+- caption: Aprenent a programar
+  chapters:
+  - file: chapters/Tema2/Tema2_Intro
+    sections:
+    - file: chapters/Tema2/Tema2
+    - file: chapters/Tema2/Tema2_Estructures_de_control
+    - file: chapters/Tema2/Tema2_Exercicis
+  - file: chapters/Tema3/Tema3_
+    sections:
+    - file: chapters/Tema3/Tema3_Exercicis
+  - file: chapters/Tema4/Tema4_
+    sections:
+    - file: chapters/Tema4/Tema4_Esquemes
+      title: "Aplicaci\xF3 dels esquemes b\xE0sics"
+    - file: chapters/Tema4/Tema4_Subprogrames
+    - file: chapters/Tema4/Tema4_Aplicacio_esquemes_subprogrames
+      title: Esquemes amb subprogrames
+    - file: chapters/Tema4/Tema4_Exercicis_subprogrames
+- caption: Dades estructurades
+  chapters:
+  - file: chapters/Tema5/Tema5
+    sections:
+    - file: chapters/Tema5/Tema5_Llistes
+    - file: chapters/Tema5/Tema5_Exercicis
+  - file: chapters/Tema5/Tema55
+    sections:
+      - file: chapters/Tema5/Tema5_Classes
+      - file: chapters/Tema5/Tema5_Exercicis_altres_estructures
+- caption: Fitxers i Algorismes
+  chapters:
+  - file: chapters/Tema6/Tema6_Fitxers
+    sections:
+    - file: chapters/Tema6/Tema6_Exercicis
+  - file: chapters/Tema7/Tema7_Algorismes
+    sections:
+    - file: chapters/Tema7/Tema7_Exercicis
+- caption: Annexes
+  chapters:
+  #- file: chapters/Annexes/Annexes
   - file: chapters/Annexes/Entorn_Desenvolupament
   - file: chapters/Annexes/Turtle
   - file: chapters/Annexes/Taula_ASCII
