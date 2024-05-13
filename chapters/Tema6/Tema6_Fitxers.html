@@ -383,9 +383,16 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduccio">Introducció</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#que-es-un-fitxer">Què és un fitxer?</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#localitzacio-path">Localització (Path)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#us-de-fitxers-a-python">Us de fitxers a Python</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#us-de-fitxers-de-text-a-python">Us de fitxers de text a Python</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#el-mode-d-un-fitxer">El mode d’un fitxer</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#llegir-i-escriure-en-fitxers-oberts">Llegir i escriure en fitxers oberts</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#serialitzacio">Serialització</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#el-modul-pickle">El mòdul <code class="docutils literal notranslate"><span class="pre">pickle</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#que-es-pot-serialitzar">Què es pot serialitzar?</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -471,8 +478,8 @@ path_absolut = &quot;/path/dogs.txt&quot;
 </pre></div>
 </div>
 </section>
-<section id="us-de-fitxers-a-python">
-<h2>Us de fitxers a Python<a class="headerlink" href="#us-de-fitxers-a-python" title="Permalink to this heading">#</a></h2>
+<section id="us-de-fitxers-de-text-a-python">
+<h2>Us de fitxers de text a Python<a class="headerlink" href="#us-de-fitxers-de-text-a-python" title="Permalink to this heading">#</a></h2>
 <p>Quan vulguem treballar amb un fitxer, el primer que hem de fer és obrir-lo. Això es fa invocant la funció integrada
 <code class="docutils literal notranslate"><span class="pre">open</span></code> que té un únic argument obligatori que és el camí (<em>path</em>) cap al fitxer. <code class="docutils literal notranslate"><span class="pre">open</span></code> <strong>ens retorna un objecte de
 la classe</strong> <em>file</em>.</p>
@@ -628,11 +635,83 @@ Es Leviosa, no leviosa
   
   <span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="n">text</span><span class="p">:</span>
     <span class="n">res</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">element</span><span class="p">)</span>
-    <span class="n">res</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>  
+    <span class="n">res</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
+</section>
+<section id="serialitzacio">
+<h2>Serialització<a class="headerlink" href="#serialitzacio" title="Permalink to this heading">#</a></h2>
+<p>La serialització en el context de la programació orientada a objectes (POO) és un procés que implica la conversió d’objectes d’un llenguatge de programació en una seqüència de bytes de tal manera que pugui ser emmagatzemada en un disc o transmesa a través d’una xarxa. El resultat de serialitzar un objecte és un fitxer no llegible ni interpretable a simple vista per un humà.</p>
+<p>El seu propòsit principal és desar l’estat d’un objecte per tornar-lo a crear quan sigui necessari. El procés invers s’anomena des-serialització.</p>
+<section id="el-modul-pickle">
+<h3>El mòdul <code class="docutils literal notranslate"><span class="pre">pickle</span></code><a class="headerlink" href="#el-modul-pickle" title="Permalink to this heading">#</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">Python</span></code> ens ofereix un mòdul/llibreria anomenat/da <code class="docutils literal notranslate"><span class="pre">pickle</span></code> que ofereix les capacitats de serialitzar i des-serialitzar els diferents objectes dels nostres programes. El format de dades utilitzat per <code class="docutils literal notranslate"><span class="pre">pickle</span></code> és específic de <code class="docutils literal notranslate"><span class="pre">Python</span></code>. Això té l’avantatge que no hi ha restriccions imposades per estàndards externs; tanmateix, significa que les aplicacions que no estiguin escrites en <code class="docutils literal notranslate"><span class="pre">Python</span></code> no seràn capaços de reconstruir els objectes serialitzats.</p>
+<p>Per defecte, el format de dades pickle utilitza una representació binària relativament compacta.</p>
+<div class="admonition-advertencia admonition">
+<p class="admonition-title">Advertència</p>
+<p>El mòdul pickle no és segur. Només deserialitzeu amb pickle  dades en les què confieu. És possible construir dades malicioses amb pickle que executin codi arbitrari durant el procés dʻunpickling. Mai deserialitzeu dades amb pickle que podrien haver vingut duna font no fiable, o que podrien haver estat manipulades.</p>
+</div>
+<section id="que-es-pot-serialitzar">
+<h4>Què es pot serialitzar?<a class="headerlink" href="#que-es-pot-serialitzar" title="Permalink to this heading">#</a></h4>
+<p>Es poden serialitzar els següents tipus:</p>
+<ul class="simple">
+<li><p>constants del llenguatge: <code class="docutils literal notranslate"><span class="pre">None</span></code>, <code class="docutils literal notranslate"><span class="pre">True</span></code>, <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p></li>
+<li><p>Tipus elementals: nombres enters, nombres de coma flotant, nombres complexos.</p></li>
+<li><p>Cadenes de caràcters (<strong>strings</strong>).</p></li>
+<li><p>Tuples, llistes i diccionaris que contenen objectes serialitzables.</p></li>
+<li><p>Funcions. (-)</p></li>
+<li><p>Classes. (-)</p></li>
+<li><p>Instàncies d’aquestes classes.</p></li>
+</ul>
+<p>Per realitzar aquest procés hem de fer les següents pases:</p>
+<ol class="arabic simple">
+<li><p>Crear/Obrir un fitxer en mode binari i d’escriptura: <code class="docutils literal notranslate"><span class="pre">Open(nomfitxer,</span> <span class="pre">'wb')</span></code>.</p></li>
+<li><p>Emprar el mètode <code class="docutils literal notranslate"><span class="pre">pickle.dump(objecte,</span> <span class="pre">nomfitxer)</span></code> de la llibreria <code class="docutils literal notranslate"><span class="pre">pickle</span></code>.</p></li>
+</ol>
+<p>Per desfer aquest procés hem de realitzar les següents pases:</p>
+<ol class="arabic simple">
+<li><p>Crear/Obrir un fitxer en mode binari i de lectura: <code class="docutils literal notranslate"><span class="pre">Open(nomfitxer,</span> <span class="pre">'rb')</span></code>.</p></li>
+<li><p>Emprar el mètode <code class="docutils literal notranslate"><span class="pre">pickle.load(nomfitxer)</span></code> de la llibreria <code class="docutils literal notranslate"><span class="pre">pickle</span></code>.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pickle</span>
+
+<span class="k">def</span> <span class="nf">escriureInfo</span><span class="p">():</span>
+    <span class="c1"># data un poc random que he tret de la darrera serie que he vist</span>
+    <span class="n">Wayne</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;Wayne Jenkins&#39;</span><span class="p">,</span>
+             <span class="s1">&#39;age&#39;</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span> <span class="s1">&#39;pay&#39;</span><span class="p">:</span> <span class="mi">40000</span><span class="p">}</span>
+    <span class="n">Daniel</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;Daniel Hers&#39;</span><span class="p">,</span>
+               <span class="s1">&#39;age&#39;</span><span class="p">:</span> <span class="mi">28</span><span class="p">,</span> <span class="s1">&#39;pay&#39;</span><span class="p">:</span> <span class="mi">10000</span><span class="p">}</span>
+
+    <span class="c1"># database</span>
+    <span class="n">db</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="n">db</span><span class="p">[</span><span class="s1">&#39;Wayne&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">Wayne</span>
+    <span class="n">db</span><span class="p">[</span><span class="s1">&#39;Daniel&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">Daniel</span>
+
+    <span class="c1"># És important el mode amb el que cream el fitxer binari</span>
+    <span class="c1"># w(rite)b(inary)</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;exemple.txt&quot;</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dbfile</span><span class="p">:</span>
+
+        <span class="c1"># source, destination</span>
+        <span class="n">pickle</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">db</span><span class="p">,</span> <span class="n">dbfile</span><span class="p">)</span>
+        <span class="n">dbfile</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">llegirInfo</span><span class="p">():</span>
+    <span class="c1"># d&#39;igual manera hem de llegir en binari</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;exemple.txt&quot;</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dbfile</span><span class="p">:</span>
+        <span class="n">db</span> <span class="o">=</span> <span class="n">pickle</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">dbfile</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">keys</span> <span class="ow">in</span> <span class="n">db</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">keys</span><span class="p">,</span> <span class="s1">&#39;=&gt;&#39;</span><span class="p">,</span> <span class="n">db</span><span class="p">[</span><span class="n">keys</span><span class="p">])</span>
+        <span class="n">dbfile</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
 </section>
 <div class="toctree-wrapper compound">
 </div>
@@ -705,9 +784,16 @@ Es Leviosa, no leviosa
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduccio">Introducció</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#que-es-un-fitxer">Què és un fitxer?</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#localitzacio-path">Localització (Path)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#us-de-fitxers-a-python">Us de fitxers a Python</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#us-de-fitxers-de-text-a-python">Us de fitxers de text a Python</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#el-mode-d-un-fitxer">El mode d’un fitxer</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#llegir-i-escriure-en-fitxers-oberts">Llegir i escriure en fitxers oberts</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#serialitzacio">Serialització</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#el-modul-pickle">El mòdul <code class="docutils literal notranslate"><span class="pre">pickle</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#que-es-pot-serialitzar">Què es pot serialitzar?</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
   </nav></div>
 

@@ -634,17 +634,17 @@ multiplicativa</em>; és a dir, si dues implementacions del mateix algorisme nec
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 3, 7, 11, 17, 19, 26, 33, 38, 39, 46, 54, 63, 67, 70, 78, 83, 88, 95, 100]
-DEBUG: esquerra: 0 dreta: 19 mitj: 9 valor: 39
-DEBUG: esquerra: 10 dreta: 19 mitj: 14 valor: 70
-DEBUG: esquerra: 10 dreta: 13 mitj: 11 valor: 54
-DEBUG: esquerra: 12 dreta: 13 mitj: 12 valor: 63
-DEBUG: esquerra: 13 dreta: 13 mitj: 13 valor: 67
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 4, 7, 12, 18, 19, 22, 26, 33, 37, 38, 42, 43, 44, 46, 47, 48, 54, 57, 64]
+DEBUG: esquerra: 0 dreta: 19 mitj: 9 valor: 37
+DEBUG: esquerra: 10 dreta: 19 mitj: 14 valor: 46
+DEBUG: esquerra: 15 dreta: 19 mitj: 17 valor: 54
+DEBUG: esquerra: 18 dreta: 19 mitj: 18 valor: 57
+DEBUG: esquerra: 19 dreta: 19 mitj: 19 valor: 64
 CPU times: total: 0 ns
 Wall time: 0 ns
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
 </pre></div>
 </div>
 </div>
@@ -749,16 +749,16 @@ nombre d’elements de la llista al quadrat.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 7, 6, 1, 6, 1, 9, 7, 3, 1]
-[1, 6, 1, 6, 1, 7, 7, 3, 1, 9]
-[1, 1, 6, 1, 6, 7, 3, 1, 7, 9]
-[1, 1, 1, 6, 6, 3, 1, 7, 7, 9]
-[1, 1, 1, 6, 3, 1, 6, 7, 7, 9]
-[1, 1, 1, 3, 1, 6, 6, 7, 7, 9]
-[1, 1, 1, 1, 3, 6, 6, 7, 7, 9]
-[1, 1, 1, 1, 3, 6, 6, 7, 7, 9]
-[1, 1, 1, 1, 3, 6, 6, 7, 7, 9]
-[1, 1, 1, 1, 3, 6, 6, 7, 7, 9]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 9, 1, 6, 9, 8, 9, 5, 3, 4]
+[1, 1, 6, 9, 8, 9, 5, 3, 4, 9]
+[1, 1, 6, 8, 9, 5, 3, 4, 9, 9]
+[1, 1, 6, 8, 5, 3, 4, 9, 9, 9]
+[1, 1, 6, 5, 3, 4, 8, 9, 9, 9]
+[1, 1, 5, 3, 4, 6, 8, 9, 9, 9]
+[1, 1, 3, 4, 5, 6, 8, 9, 9, 9]
+[1, 1, 3, 4, 5, 6, 8, 9, 9, 9]
+[1, 1, 3, 4, 5, 6, 8, 9, 9, 9]
+[1, 1, 3, 4, 5, 6, 8, 9, 9, 9]
 </pre></div>
 </div>
 </div>
@@ -818,15 +818,15 @@ la llista ja està ordenada podem aturar d’ordenar.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 6, 9, 5, 4, 9, 4, 2, 4, 2]
-[1, 6, 5, 4, 9, 4, 2, 4, 2, 9]
-[1, 5, 4, 6, 4, 2, 4, 2, 9, 9]
-[1, 4, 5, 4, 2, 4, 2, 6, 9, 9]
-[1, 4, 4, 2, 4, 2, 5, 6, 9, 9]
-[1, 4, 2, 4, 2, 4, 5, 6, 9, 9]
-[1, 2, 4, 2, 4, 4, 5, 6, 9, 9]
-[1, 2, 2, 4, 4, 4, 5, 6, 9, 9]
-[1, 2, 2, 4, 4, 4, 5, 6, 9, 9]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 1, 4, 8, 7, 9, 4, 9, 6, 3]
+[1, 1, 4, 7, 8, 4, 9, 6, 3, 9]
+[1, 1, 4, 7, 4, 8, 6, 3, 9, 9]
+[1, 1, 4, 4, 7, 6, 3, 8, 9, 9]
+[1, 1, 4, 4, 6, 3, 7, 8, 9, 9]
+[1, 1, 4, 4, 3, 6, 7, 8, 9, 9]
+[1, 1, 4, 3, 4, 6, 7, 8, 9, 9]
+[1, 1, 3, 4, 4, 6, 7, 8, 9, 9]
+[1, 1, 3, 4, 4, 6, 7, 8, 9, 9]
 </pre></div>
 </div>
 </div>
