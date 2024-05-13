@@ -490,26 +490,23 @@ la classe</strong> <em>file</em>.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">fitxer</span><span class="o">.</span><span class="n">close</span><span class="p">()</span> <span class="c1"># tancam el fitxer </span>
 </pre></div>
 </div>
-<p><strong>Advertència!!!</strong> Hem d’assegurar-nos que un fitxer obert està tancat correctament.</p>
-<p>És important saber que tancar el fitxer és la nostra responsabilitat com a programadors. En la majoria dels casos, un
-cop finalitzat el programa o en el mètode en el qual s’ha obert el fitxer, aquest es tancarà. No obstant això, no hi
+<div class="admonition-advertencia admonition">
+<p class="admonition-title">Advertència</p>
+<p>Hem d’assegurar-nos que un fitxer obert està tancat correctament.</p>
+</div>
+<p>És important saber que tancar el fitxer és la nostra responsabilitat com a programadors. En la majoria dels casos, un cop finalitzat el programa o en el mètode en el qual s’ha obert el fitxer, aquest es tancarà. No obstant això, no hi
 ha cap garantia que això succeeixi i podem tenir ocupacions de memòria no desitjades.</p>
-<p>Assegurar-nos que el nostre codi es comporta d’una manera ben definida i no es dóna qualsevol comportament no
-desitjat és una bona pràctica de programació.</p>
+<p>Assegurar-nos que el nostre codi es comporta d’una manera ben definida i no es dóna qualsevol comportament no desitjat és una bona pràctica de programació.</p>
 <p>Una de les maneres recomanades d’assegurar que un fitxer es tanca correctament és usant la següent estructura de codi:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;harry_potter.txt&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fitxer</span><span class="p">:</span>
     <span class="c1"># Processament del fitxer</span>
 </pre></div>
 </div>
-<p>La sentència <code class="docutils literal notranslate"><span class="pre">with</span></code> s’encarrega de tancar el fitxer automàticament, fins i tot en casos d’error. És recomanable usar
-el bloc <code class="docutils literal notranslate"><span class="pre">with</span></code> sempre que sigui possible, ja que permet un codi més net i facilita el maneig de qualsevol error
-inesperat.</p>
+<p>La sentència <code class="docutils literal notranslate"><span class="pre">with</span></code> s’encarrega de tancar el fitxer automàticament, fins i tot en casos d’error. És recomanable usar el bloc <code class="docutils literal notranslate"><span class="pre">with</span></code> sempre que sigui possible, ja que permet un codi més net i facilita el maneig de qualsevol error inesperat.</p>
 </section>
 <section id="el-mode-d-un-fitxer">
 <h2>El mode d’un fitxer<a class="headerlink" href="#el-mode-d-un-fitxer" title="Permalink to this heading">#</a></h2>
-<p>A l’hora d’obrir un fitxer també necessitarem usar el segon argument del mètode open: <code class="docutils literal notranslate"><span class="pre">mode</span></code>. Aquest argument és un
-<em>string</em> que pot contenir diverses combinacions de caràcters per representar com volem obrir el fitxer. El valor per
-defecte és <code class="docutils literal notranslate"><span class="pre">r</span></code>, que representa obrir el fitxer en mode de només lectura, tal com hem fet a l’exemple anterior.</p>
+<p>A l’hora d’obrir un fitxer també necessitarem usar el segon argument del mètode open: <code class="docutils literal notranslate"><span class="pre">mode</span></code>. Aquest argument és un <em>string</em> que pot contenir diverses combinacions de caràcters per representar com volem obrir el fitxer. El valor per defecte és <code class="docutils literal notranslate"><span class="pre">r</span></code>, que representa obrir el fitxer en mode de només lectura, tal com hem fet a l’exemple anterior.</p>
 <table class="table table-hover">
 <thead>
 <tr>
@@ -539,8 +536,7 @@ defecte és <code class="docutils literal notranslate"><span class="pre">r</span
 </section>
 <section id="llegir-i-escriure-en-fitxers-oberts">
 <h2>Llegir i escriure en fitxers oberts<a class="headerlink" href="#llegir-i-escriure-en-fitxers-oberts" title="Permalink to this heading">#</a></h2>
-<p>Un cop obert un fitxer, hi podem llegir o escriure informació. Hi ha diversos mètodes de la classe fitxer que es
-poden usar per acomplir aquesta tasca:</p>
+<p>Un cop obert un fitxer, hi podem llegir o escriure informació. Hi ha diversos mètodes de la classe fitxer que es poden usar per acomplir aquesta tasca:</p>
 <table class="table table-hover">
 <thead>
 <tr>
@@ -579,8 +575,7 @@ diversos mètodes útils per escriure en un fitxer:</p>
 </tr>
 <tr>
 <td><code>writelines(seq)</code></td>
-<td>Això escriu la seqüència al fitxer. No s'afegeix cap finalització de línia a cada element de la seqüència. Depèn
-de nosaltres afegir les línies apropiades.</td>
+<td>Això escriu la seqüència al fitxer. No s'afegeix cap finalització de línia a cada element de la seqüència. Depèn de nosaltres afegir les línies apropiades.</td>
 </tr>
 </tbody>
 </table>
