@@ -1,6 +1,6 @@
-# Programacio I
+# Programació I
 
-Materials de l'assignatura de programació I
+Materials de l'assignatura de Programació I
 
 ## Usage
 
