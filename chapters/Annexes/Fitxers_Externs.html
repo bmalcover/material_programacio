@@ -30,7 +30,7 @@
   <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 <link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b76e3c8a" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
@@ -60,6 +60,8 @@
     <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'chapters/Annexes/Fitxers_Externs';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -364,6 +366,7 @@
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#execucio-d-un-modul-com-un-script">Execució d’un modul com un <em>script</em></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#taller">Taller</a></li>
 </ul>
             </nav>
         </div>
@@ -393,7 +396,7 @@ troben en un altre fitxer.</p>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">estring</span> <span class="o">=</span> <span class="s2">&quot;Una variable de mostra&quot;</span>
 
-<span class="k">def</span><span class="w"> </span><span class="nf">es_primer</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">es_primer</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">x</span> <span class="o">%</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
             <span class="k">return</span> <span class="kc">False</span>
@@ -405,7 +408,7 @@ troben en un altre fitxer.</p>
 <p>Podem usar el codi definit en el fitxer anomenat <em><a class="reference external" href="http://extern.py">extern.py</a></em> en el nostre fitxer <em><a class="reference external" href="http://main.py">main.py</a></em> de la següent manera:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">extern</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">extern</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">extern</span><span class="o">.</span><span class="n">estring</span><span class="p">)</span>
 
@@ -417,7 +420,7 @@ troben en un altre fitxer.</p>
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
 <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span><span class="w"> </span><span class="nn">extern</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">extern</span>
 <span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="nb">print</span><span class="p">(</span><span class="n">extern</span><span class="o">.</span><span class="n">estring</span><span class="p">)</span>
 <span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">extern</span><span class="o">.</span><span class="n">es_primer</span><span class="p">(</span><span class="mi">23</span><span class="p">)</span>
 
@@ -441,7 +444,7 @@ en compte és que quan usam qualsevol peça de codi definida en el fitxer que im
 mòdul de la següent manera:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">extern</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">extern</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">estring</span><span class="p">)</span>
 </pre></div>
@@ -451,7 +454,7 @@ mòdul de la següent manera:</p>
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
 <span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">4</span><span class="o">-</span><span class="mi">09551</span><span class="n">f0536b0</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span><span class="w"> </span><span class="nn">extern</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">extern</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span> 
 <span class="ne">----&gt; </span><span class="mi">3</span> <span class="nb">print</span><span class="p">(</span><span class="n">estring</span><span class="p">)</span>
 <span class="g g-Whitespace">      </span><span class="mi">4</span> 
@@ -467,7 +470,7 @@ a continuació. A més fixau-vos que això en possibilita tenir una variable al 
 sense sofrir interferències amb la que hem definit en el fitxer <code class="docutils literal notranslate"><span class="pre">extern</span></code>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">extern</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">extern</span>
 
 <span class="n">estring</span> <span class="o">=</span> <span class="s2">&quot;La variable del programa principal&quot;</span>
 
@@ -491,7 +494,7 @@ directament al nostre programa. D’aquesta manera podem importar directament un
 <code class="docutils literal notranslate"><span class="pre">extern</span></code>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">extern</span><span class="w"> </span><span class="kn">import</span> <span class="n">es_primer</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">extern</span> <span class="kn">import</span> <span class="n">es_primer</span>
 
 <span class="n">es_primer</span><span class="p">(</span><span class="mi">33</span><span class="p">)</span>
 </pre></div>
@@ -507,7 +510,7 @@ directament al nostre programa. D’aquesta manera podem importar directament un
 codi importat, per exemple:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">extern</span><span class="w"> </span><span class="kn">import</span> <span class="n">estring</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">extern</span> <span class="kn">import</span> <span class="n">estring</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">estring</span><span class="p">)</span>
 <span class="n">estring</span> <span class="o">=</span> <span class="s2">&quot;Ara el sobreescric&quot;</span>
@@ -525,7 +528,7 @@ Ara el sobreescric
 <p>Fins i tot és possible importar de manera tot el contingut d’un mòdul (fitxer extern) d’un sol cop:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">extern</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">extern</span> <span class="kn">import</span> <span class="o">*</span>
 </pre></div>
 </div>
 </div>
@@ -540,7 +543,7 @@ codi externes que tenen noms molt llargs, d’aquesta manera aconseguim un nom a
 <p>S’usa de la següent manera:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">extern</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">mod_ext</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">extern</span> <span class="k">as</span> <span class="nn">mod_ext</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">mod_ext</span><span class="o">.</span><span class="n">estring</span><span class="p">)</span>
 </pre></div>
@@ -562,7 +565,7 @@ defineix una variable de tipus <em>string</em> i una funció. Ara en feim un alt
 subprograma dugui a terme una tasca concreta anomenat <code class="docutils literal notranslate"><span class="pre">feina_externa</span></code>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">es_vocal</span><span class="p">(</span><span class="n">lletra</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">es_vocal</span><span class="p">(</span><span class="n">lletra</span><span class="p">):</span>
 
     <span class="k">return</span> <span class="n">lletra</span> <span class="o">==</span> <span class="s1">&#39;a&#39;</span> <span class="ow">or</span> <span class="n">lletra</span> <span class="o">==</span> <span class="s1">&#39;e&#39;</span> <span class="ow">or</span> <span class="n">lletra</span> <span class="o">==</span> <span class="s1">&#39;i&#39;</span> <span class="ow">or</span> <span class="n">lletra</span> <span class="o">==</span> <span class="s1">&#39;o&#39;</span> <span class="ow">or</span> <span class="n">lletra</span> <span class="o">==</span> <span class="s1">&#39;u&#39;</span>
 
@@ -589,7 +592,7 @@ subprograma dugui a terme una tasca concreta anomenat <code class="docutils lite
 vocal</strong>. Malauradament si importam aquest mòdul veurem que el codi s’executa automàticament:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">feina_externa</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">feina_externa</span>
 </pre></div>
 </div>
 </div>
@@ -610,7 +613,7 @@ distingir les dues casuístiques:</p>
 <p>Afegint aquesta línia el nostre fitxer <code class="docutils literal notranslate"><span class="pre">feina_externa</span></code> queda de la següent manera:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">es_vocal</span><span class="p">(</span><span class="n">lletra</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">es_vocal</span><span class="p">(</span><span class="n">lletra</span><span class="p">):</span>
 
     <span class="k">return</span> <span class="n">lletra</span> <span class="o">==</span> <span class="s1">&#39;a&#39;</span> <span class="ow">or</span> <span class="n">lletra</span> <span class="o">==</span> <span class="s1">&#39;e&#39;</span> <span class="ow">or</span> <span class="n">lletra</span> <span class="o">==</span> <span class="s1">&#39;i&#39;</span> <span class="ow">or</span> <span class="n">lletra</span> <span class="o">==</span> <span class="s1">&#39;o&#39;</span> <span class="ow">or</span> <span class="n">lletra</span> <span class="o">==</span> <span class="s1">&#39;u&#39;</span>
 
@@ -630,6 +633,18 @@ distingir les dues casuístiques:</p>
 </div>
 <p>Normalment ens interessa usar aquesta característica per poder avaluar el codi que tenim en un mòdul sense necessitat
 d’importar-lo en un altre fitxer, d’això se’n diuen <strong>tests unitaris</strong> i és una bona pràctica de programació.</p>
+</section>
+<section id="taller">
+<h2>Taller<a class="headerlink" href="#taller" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Usant la funció és_primer, escriure la funció <code class="docutils literal notranslate"><span class="pre">i_esim_primer(i)</span></code> que lliuri l’i-èsim nombre primer.</p></li>
+<li><p>Usant la funció anterior, escriure la funció <code class="docutils literal notranslate"><span class="pre">primers_primers(m)</span></code> que mostri per pantalla els primers m nombres primers.</p></li>
+<li><p>Crear un mòdul (fitxer) anomenat <a class="reference external" href="http://primers.py">primers.py</a> que contingui totes les funcions anteriors. En executar <a class="reference external" href="http://primers.py">primers.py</a> com un programa per si sol, ha de mostrar, com a prova, els vint primers nombres primers. En importar-lo com un mòdul, això no ha de passar.</p></li>
+<li><p>Un primer de Mersenne és un nombre primer de la forma <span class="math notranslate nohighlight">\(np=(2^p)−1\)</span>.
+Una propietat coneguda dels primers de Mersenne és que p ha de ser també un nombre primer.
+Escriviu un programa anomenat <code class="docutils literal notranslate"><span class="pre">mersenne.py</span></code> que pregunti a l’usuari un número <span class="math notranslate nohighlight">\(n\)</span>, i mostri com a sortida els <span class="math notranslate nohighlight">\(n\)</span> primers nombre primers de Mersenne.
+El vostre programa ha d’importar el mòdul primers i utilitzar les funcions que aquest conté.</p></li>
+</ol>
 </section>
 </section>
 
@@ -696,6 +711,7 @@ d’importar-lo en un altre fitxer, d’això se’n diuen <strong>tests unitari
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#execucio-d-un-modul-com-un-script">Execució d’un modul com un <em>script</em></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#taller">Taller</a></li>
 </ul>
   </nav></div>
 

@@ -30,7 +30,7 @@
   <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 <link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b76e3c8a" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
@@ -417,7 +417,7 @@ indicar-se són, en principi, dos: públic i privat.</p></li>
 </ul>
 <p>Cal notar que a <code class="docutils literal notranslate"><span class="pre">Python</span></code> tenim la paraula reservada <code class="docutils literal notranslate"><span class="pre">def</span></code> per determinar que un bloc de codi es correspon a un
 subprograma, sigui un procediment o una funció. L’esquema d’un subprograma és el següent:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="o">&lt;</span><span class="n">nom</span><span class="o">&gt;</span><span class="p">(</span><span class="o">&lt;</span><span class="n">parametre_1</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">parametre_2</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">...</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">parametre_n</span><span class="o">&gt;</span><span class="p">):</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="o">&lt;</span><span class="n">nom</span><span class="o">&gt;</span><span class="p">(</span><span class="o">&lt;</span><span class="n">parametre_1</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">parametre_2</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">...</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">parametre_n</span><span class="o">&gt;</span><span class="p">):</span>
     <span class="o">&lt;</span><span class="n">línies</span> <span class="n">de</span> <span class="n">codi</span><span class="o">&gt;</span>
 </pre></div>
 </div>
@@ -428,7 +428,7 @@ serveix per imprimir el missatge <em>Hello World!</em> per pantalla. Com és un 
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Definició d&#39;un procediment (subprograma)</span>
-<span class="k">def</span><span class="w"> </span><span class="nf">salutacio</span><span class="p">():</span>
+<span class="k">def</span> <span class="nf">salutacio</span><span class="p">():</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello World!&quot;</span><span class="p">)</span>
 
 
@@ -454,7 +454,7 @@ que es consideren necessària per al seu correcte funcionament.</p>
 Calcula i mostra per pantalla el valor d’una comanda.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">fruiteria</span><span class="p">(</span><span class="n">quantitat</span><span class="p">,</span> <span class="n">element</span><span class="p">,</span> <span class="n">preu</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fruiteria</span><span class="p">(</span><span class="n">quantitat</span><span class="p">,</span> <span class="n">element</span><span class="p">,</span> <span class="n">preu</span><span class="p">):</span>
 
     <span class="n">total</span> <span class="o">=</span> <span class="n">quantitat</span> <span class="o">*</span> <span class="n">preu</span>
     <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">quantitat</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span> <span class="o">+</span> <span class="n">element</span> <span class="o">+</span> <span class="s2">&quot; costen: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">total</span><span class="p">))</span>
@@ -584,7 +584,7 @@ converteix en un <strong>valor per defecte</strong> d’aquest paràmetre. Els p
 a predeterminats o opcionals. A continuació tornarem a definir el nostre procediment <code class="docutils literal notranslate"><span class="pre">fruiteria</span></code>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">fruiteria</span><span class="p">(</span><span class="n">quantitat</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">element</span><span class="o">=</span><span class="s2">&quot;pinyes&quot;</span><span class="p">,</span> <span class="n">preu</span><span class="o">=</span><span class="mf">3.25</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fruiteria</span><span class="p">(</span><span class="n">quantitat</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">element</span><span class="o">=</span><span class="s2">&quot;pinyes&quot;</span><span class="p">,</span> <span class="n">preu</span><span class="o">=</span><span class="mf">3.25</span><span class="p">):</span>
 
     <span class="n">total</span> <span class="o">=</span> <span class="n">quantitat</span> <span class="o">*</span> <span class="n">preu</span>
     <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">quantitat</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span> <span class="o">+</span> <span class="n">element</span> <span class="o">+</span> <span class="s2">&quot; costen: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">total</span><span class="p">))</span>
@@ -627,7 +627,7 @@ funció que s’anomena <code class="docutils literal notranslate"><span class="
 enter o decimal. Aquesta funció usa el paràmetre en una expressió i posteriorment retorna el valor calculat.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">m_a_cm</span><span class="p">(</span><span class="n">metres</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">m_a_cm</span><span class="p">(</span><span class="n">metres</span><span class="p">):</span>
 
     <span class="n">centimetres</span> <span class="o">=</span> <span class="n">metres</span> <span class="o">*</span> <span class="mi">100</span>
     <span class="k">return</span> <span class="n">centimetres</span>
@@ -698,7 +698,7 @@ local dins el subprograma <code class="docutils literal notranslate"><span class
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Declaram una funció</span>
-<span class="k">def</span><span class="w"> </span><span class="nf">exemple_1</span><span class="p">():</span>
+<span class="k">def</span> <span class="nf">exemple_1</span><span class="p">():</span>
     <span class="n">variable_1</span> <span class="o">=</span> <span class="mi">33</span>
     
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;El valor de la variable_1 dins el procediment exemple_1 és: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">variable_1</span><span class="p">))</span>
@@ -729,7 +729,7 @@ paràmetres <code class="docutils literal notranslate"><span class="pre">primer_
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Declaram un procediment amb paràmetres i modificam el valor del parametre a dins.</span>
 
-<span class="k">def</span><span class="w"> </span><span class="nf">exemple_2</span><span class="p">(</span><span class="n">primer_parametre</span><span class="p">,</span> <span class="n">segon_parametre</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">exemple_2</span><span class="p">(</span><span class="n">primer_parametre</span><span class="p">,</span> <span class="n">segon_parametre</span><span class="p">):</span>
     
     <span class="n">primer_parametre</span> <span class="o">=</span> <span class="n">primer_parametre</span> <span class="o">+</span> <span class="mi">33</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Valor del primer_parametre dins la funció: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">primer_parametre</span><span class="p">))</span>
@@ -769,7 +769,7 @@ allò que succeeix dins un subprograma queda restringit al seu àmbit i no té c
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Declaram una funció amb paràmetres, modificam el valor del parametre a dins</span>
 <span class="c1"># retornam el resultat. </span>
 
-<span class="k">def</span><span class="w"> </span><span class="nf">exemple_3</span><span class="p">(</span><span class="n">parametre1</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">exemple_3</span><span class="p">(</span><span class="n">parametre1</span><span class="p">):</span>
     
     <span class="n">parametre1</span> <span class="o">=</span> <span class="n">parametre1</span> <span class="o">+</span> <span class="mi">33</span>
     
@@ -811,7 +811,7 @@ reutilització del codi. Quan utilitzam aquesta tècnica, ens hem d’assegurar 
 variables locals.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">procediment_amb_variable_global</span><span class="p">(</span><span class="n">j</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">procediment_amb_variable_global</span><span class="p">(</span><span class="n">j</span><span class="p">):</span>
     <span class="k">global</span> <span class="n">x</span> <span class="c1"># indicam que aquesta variable es la mateixa que la de la linia 8</span>
     <span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">j</span>
     

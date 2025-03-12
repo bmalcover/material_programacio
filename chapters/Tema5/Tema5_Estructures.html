@@ -30,7 +30,7 @@
   <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 <link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b76e3c8a" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
@@ -490,7 +490,7 @@ u
 però si que pot ser molt útil en algunes situacions.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">retorna2</span><span class="p">():</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">retorna2</span><span class="p">():</span>
     <span class="n">a</span> <span class="o">=</span> <span class="mi">3</span>
     <span class="n">b</span> <span class="o">=</span> <span class="mi">4</span>
     <span class="k">return</span> <span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
@@ -808,7 +808,7 @@ deté quan s’esgota la seqüència més curta.</p>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Exemple sumar els elements de dues llistes</span>
 
-<span class="kn">import</span><span class="w"> </span><span class="nn">random</span>
+<span class="kn">import</span> <span class="nn">random</span>
 
 <span class="c1"># Agafam 6 mostres d&#39;una llista que te els elements de 0 a 99</span>
 <span class="n">l3</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">),</span> <span class="mi">6</span><span class="p">)</span> 
@@ -897,7 +897,7 @@ peça de codi executada per la funció lambda.</p></li>
 <code class="docutils literal notranslate"><span class="pre">lambda</span> <span class="pre">argument(s):</span> <span class="pre">expressio</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">divisible2</span><span class="p">(</span><span class="n">num</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">divisible2</span><span class="p">(</span><span class="n">num</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">num</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span>
 
 <span class="c1"># es equivalent a:</span>
@@ -1005,7 +1005,7 @@ emmagatzemen tots els valors de l’iterador en la memòria, els generen sobre l
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Primer exemple</span>
-<span class="k">def</span><span class="w"> </span><span class="nf">generador_simple</span><span class="p">():</span>
+<span class="k">def</span> <span class="nf">generador_simple</span><span class="p">():</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Inici&quot;</span><span class="p">)</span>
     <span class="k">yield</span> <span class="mi">1</span>
     <span class="k">yield</span> <span class="mi">2</span>
@@ -1039,7 +1039,7 @@ emmagatzemen tots els valors de l’iterador en la memòria, els generen sobre l
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Generador en un recorregut usant un for</span>
 
-<span class="k">def</span><span class="w"> </span><span class="nf">generador_quadrats</span><span class="p">(</span><span class="n">maxim</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">generador_quadrats</span><span class="p">(</span><span class="n">maxim</span><span class="p">):</span>
     <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">maxim</span><span class="p">:</span>
         <span class="k">yield</span> <span class="n">i</span><span class="o">*</span><span class="n">i</span>
@@ -1079,7 +1079,7 @@ el bucle hagi acabat, o perquè ja no satisfà una certa condició.</p>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Aquí tenim un exemple que ens permet generar tants elements de la successio de</span>
 <span class="c1"># Fibonacci com necessitem.</span>
-<span class="k">def</span><span class="w"> </span><span class="nf">Fibo</span><span class="p">():</span>
+<span class="k">def</span> <span class="nf">Fibo</span><span class="p">():</span>
     <span class="n">pre1</span> <span class="o">=</span> <span class="mi">1</span>
     <span class="n">pre2</span> <span class="o">=</span> <span class="mi">1</span>
     <span class="n">suma</span> <span class="o">=</span> <span class="mi">1</span>

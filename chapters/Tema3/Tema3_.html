@@ -30,7 +30,7 @@
   <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 <link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b76e3c8a" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
@@ -437,7 +437,7 @@ considerar que el caràcter ‘.’ s’utilitzarà com a darrer element per ind
 primera part del curs)</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Introdueix una seqüència de text acabada en punt.&quot;</span><span class="p">)</span>
 <span class="n">lletra</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">stdin</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">nombre</span> <span class="o">=</span> <span class="mi">0</span>
@@ -465,8 +465,8 @@ primera part del curs)</p>
 <span class="g g-Whitespace">     </span><span class="mi">12</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot; Hi ha un total de &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">nombre</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; lletres a en el texte.&quot;</span><span class="p">)</span>
 
 <span class="nn">File ~\miniconda3\envs\material_programacio\Lib\encodings\cp1252.py:22,</span> in <span class="ni">IncrementalDecoder.decode</span><span class="nt">(self, input, final)</span>
-<span class="g g-Whitespace">     </span><span class="mi">21</span> <span class="k">class</span><span class="w"> </span><span class="nc">IncrementalDecoder</span><span class="p">(</span><span class="n">codecs</span><span class="o">.</span><span class="n">IncrementalDecoder</span><span class="p">):</span>
-<span class="ne">---&gt; </span><span class="mi">22</span>     <span class="k">def</span><span class="w"> </span><span class="nf">decode</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">input</span><span class="p">,</span> <span class="n">final</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+<span class="g g-Whitespace">     </span><span class="mi">21</span> <span class="k">class</span> <span class="nc">IncrementalDecoder</span><span class="p">(</span><span class="n">codecs</span><span class="o">.</span><span class="n">IncrementalDecoder</span><span class="p">):</span>
+<span class="ne">---&gt; </span><span class="mi">22</span>     <span class="k">def</span> <span class="nf">decode</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">input</span><span class="p">,</span> <span class="n">final</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
 <span class="g g-Whitespace">     </span><span class="mi">23</span>         <span class="k">return</span> <span class="n">codecs</span><span class="o">.</span><span class="n">charmap_decode</span><span class="p">(</span><span class="nb">input</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">errors</span><span class="p">,</span><span class="n">decoding_table</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
 
 <span class="ne">KeyboardInterrupt</span>: 
@@ -494,7 +494,7 @@ bucle. L’esquema general de cerca consisteix en les següents operacions:</p>
 vocal d’una seqüència de text acabada en punt.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Introdueix un text acabat en punt&quot;</span><span class="p">)</span>
 <span class="n">lletra</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">stdin</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
@@ -523,7 +523,7 @@ assignat  a la variable <code class="docutils literal notranslate"><span class="
 si la primera lletra de la seqüència és vocal o no.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
 
 <span class="n">lletra</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span>
 <span class="n">trobat</span> <span class="o">=</span> <span class="kc">False</span>

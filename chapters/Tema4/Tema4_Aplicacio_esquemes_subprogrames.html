@@ -30,7 +30,7 @@
   <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 <link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b76e3c8a" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
@@ -375,10 +375,10 @@
 <p>Ara que ja sabem com emprar i definir subprogrames, resoldrem el problema de comptar parelles de lletres
 “la” amb el seu ús. De moment, seguirem amb una nova implementació del mateix algorisme que hem presentat anteriorment:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">sys</span>
 
 <span class="c1"># Definicio del subprograma</span>
-<span class="k">def</span><span class="w"> </span><span class="nf">cercar_lletra</span><span class="p">():</span>
+<span class="k">def</span> <span class="nf">cercar_lletra</span><span class="p">():</span>
     <span class="k">global</span> <span class="n">lletra</span>  <span class="c1"># la variable lletra es global</span>
     <span class="k">while</span> <span class="p">(</span><span class="n">lletra</span> <span class="o">!=</span> <span class="s1">&#39;.&#39;</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">lletra</span> <span class="o">!=</span> <span class="s1">&#39;l&#39;</span><span class="p">):</span>
         <span class="n">lletra</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">stdin</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
@@ -431,7 +431,7 @@ Començarem amb una aproximació sense usar subprogrames que anirem refinant en 
 <p>La seva implementació és la següent:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
 <span class="c1"># Aquest algorisme es un recorregut per parelles</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">sys</span>
 
 <span class="c1"># Valors inicials de les variables</span>
 <span class="n">final</span> <span class="o">=</span> <span class="s1">&#39;.&#39;</span>
@@ -464,7 +464,7 @@ canviaríem el programa anterior per només comptar les paraules de 4 o més lle
 <p>Doncs seguint la lògica del programa anterior i adaptant el codi que ja teníem d’abans. Una possible solució seria la
 següent:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">sys</span>
 
 <span class="n">caracter</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">stdin</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">caracter_previ</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span>
@@ -504,19 +504,19 @@ punt al nivell d’abstracció adequat i veurem que després amb poques modifica
 paraules amb un nombre de lletres igual o major a 4.</p>
 <p>Farem un plantejament basat en seqüències de paraules que estan separades per espais en blanc.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">sys</span>
 <span class="c1"># Donam valors inicials a les variables</span>
 <span class="n">nombre</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="n">lletra</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span> <span class="c1"># La lletra li donam un valor provisional per tenir totes les variables aqui</span>
 <span class="n">final</span> <span class="o">=</span> <span class="s1">&#39;.&#39;</span>
 
-<span class="k">def</span><span class="w"> </span><span class="nf">botar_blancs</span><span class="p">(</span> <span class="p">):</span>
+<span class="k">def</span> <span class="nf">botar_blancs</span><span class="p">(</span> <span class="p">):</span>
     <span class="c1"># procediment que fa una cerca fins la primera lletra que  no sigui espai</span>
     <span class="k">global</span> <span class="n">lletra</span>
     <span class="k">while</span> <span class="n">lletra</span> <span class="o">!=</span> <span class="s1">&#39;.&#39;</span> <span class="ow">and</span> <span class="n">lletra</span> <span class="o">==</span> <span class="s1">&#39; &#39;</span><span class="p">:</span>
         <span class="n">lletra</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">stdin</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 
-<span class="k">def</span><span class="w"> </span><span class="nf">botar_paraula</span><span class="p">(</span> <span class="p">):</span>
+<span class="k">def</span> <span class="nf">botar_paraula</span><span class="p">(</span> <span class="p">):</span>
     <span class="c1"># procediment que fa una cerca fins que troba un espai en blanc ( final paraula)</span>
     <span class="k">global</span> <span class="n">lletra</span>
     <span class="k">while</span> <span class="n">lletra</span> <span class="o">!=</span> <span class="s1">&#39; &#39;</span> <span class="ow">and</span> <span class="n">lletra</span> <span class="o">!=</span> <span class="s1">&#39;.&#39;</span><span class="p">:</span>
@@ -543,20 +543,20 @@ paraules amb un nombre de lletres igual o major a 4.</p>
 <p>Ara que ja tenim l’implementació d’un algorisme que treballa a nivell de paraules, anem a modificar-lo per tenir un
 programa que ens dirà quantes paraules amb 4 o més lletres tenim en una seqüència de caracters acabada en punt.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">sys</span>
 
 <span class="n">nombre</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="n">lletra</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span>
 <span class="n">final</span> <span class="o">=</span> <span class="s1">&#39;.&#39;</span>
 
-<span class="k">def</span><span class="w"> </span><span class="nf">botar_blancs</span><span class="p">(</span> <span class="p">):</span>
+<span class="k">def</span> <span class="nf">botar_blancs</span><span class="p">(</span> <span class="p">):</span>
     <span class="c1"># procediment que fa una cerca fins la primera lletra que  no sigui espai</span>
     <span class="k">global</span> <span class="n">lletra</span>
     <span class="k">while</span> <span class="n">lletra</span> <span class="o">!=</span> <span class="s1">&#39;.&#39;</span> <span class="ow">and</span> <span class="n">lletra</span> <span class="o">==</span> <span class="s1">&#39; &#39;</span><span class="p">:</span>
         <span class="n">lletra</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">stdin</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 
 
-<span class="k">def</span><span class="w"> </span><span class="nf">contar_lletres_paraula</span><span class="p">():</span>
+<span class="k">def</span> <span class="nf">contar_lletres_paraula</span><span class="p">():</span>
     <span class="c1"># procediment que fa una cerca fins que troba un espai en blanc ( final paraula)</span>
     <span class="k">global</span> <span class="n">lletra</span>
     <span class="n">lletres_paraula</span> <span class="o">=</span> <span class="mi">0</span>
@@ -591,20 +591,20 @@ d’abstracció adient podrem resoldre molts problemes amb programes molt simila
 <p>Finalment, deixo una proposta de solució on el recorregut és una mica diferent, enlloc de mirar si hem arribat al punt,
 miram si hem arribat a trobar una paraula de longitut 0.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">sys</span>
 
 <span class="n">nombre</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="n">lletra</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span>
 <span class="n">final</span> <span class="o">=</span> <span class="s1">&#39;.&#39;</span>
 
-<span class="k">def</span><span class="w"> </span><span class="nf">botar_blancs</span><span class="p">(</span> <span class="p">):</span>
+<span class="k">def</span> <span class="nf">botar_blancs</span><span class="p">(</span> <span class="p">):</span>
     <span class="c1"># procediment que fa una cerca fins la primera lletra que  no sigui espai</span>
     <span class="k">global</span> <span class="n">lletra</span>
     <span class="k">while</span> <span class="n">lletra</span> <span class="o">!=</span> <span class="s1">&#39;.&#39;</span> <span class="ow">and</span> <span class="n">lletra</span> <span class="o">==</span> <span class="s1">&#39; &#39;</span><span class="p">:</span>
         <span class="n">lletra</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">stdin</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 
 
-<span class="k">def</span><span class="w"> </span><span class="nf">contar_lletres_paraula</span><span class="p">():</span>
+<span class="k">def</span> <span class="nf">contar_lletres_paraula</span><span class="p">():</span>
     <span class="c1"># procediment que fa una cerca fins que troba un espai en blanc ( final paraula)</span>
     <span class="k">global</span> <span class="n">lletra</span>
     <span class="n">lletres_paraula</span> <span class="o">=</span> <span class="mi">0</span>

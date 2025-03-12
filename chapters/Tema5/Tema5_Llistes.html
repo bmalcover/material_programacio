@@ -30,7 +30,7 @@
   <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 <link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b76e3c8a" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
@@ -831,7 +831,7 @@ usarem una llista de longitud 5 que conté valors enters, on la primera posició
 la segona quantes ‘e’ i així successivament.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
 
 <span class="n">vocals</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>  <span class="c1"># també podria ser llista = [0]*5</span>
 <span class="n">lletra</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">stdin</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
@@ -873,7 +873,7 @@ modificació, aquesta es veurà reflectida en la variable de l’àmbit extern q
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;Mètode que rep una llista i un element i afegeix l&#39;element al final de la llista&quot;</span>
-<span class="k">def</span><span class="w"> </span><span class="nf">afegeix_element</span><span class="p">(</span><span class="n">llista</span><span class="p">,</span> <span class="n">element</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">afegeix_element</span><span class="p">(</span><span class="n">llista</span><span class="p">,</span> <span class="n">element</span><span class="p">):</span>
 
     <span class="n">llista</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">element</span><span class="p">)</span>
 
@@ -977,7 +977,7 @@ Valldemossa
 <p>Anem a fer una segona versió de l’exercici anterior però eliminant els 5 condicionals</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
 
 <span class="n">vocals</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>  <span class="c1"># també podria ser llista = [0]*5</span>
 <span class="n">lletres</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;e&#39;</span><span class="p">,</span> <span class="s1">&#39;i&#39;</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="s1">&#39;u&#39;</span><span class="p">]</span>
@@ -1010,7 +1010,7 @@ Valldemossa
 acabada en punt:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
 
 <span class="n">vocals</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>  <span class="c1"># també podria ser llista = [0]*5</span>
 <span class="n">lletres</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;e&#39;</span><span class="p">,</span> <span class="s1">&#39;i&#39;</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="s1">&#39;u&#39;</span><span class="p">]</span>
@@ -1054,16 +1054,16 @@ acabada en punt:</p>
 seqüència.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
 
-<span class="k">def</span><span class="w"> </span><span class="nf">botar_blancs</span><span class="p">():</span>
+<span class="k">def</span> <span class="nf">botar_blancs</span><span class="p">():</span>
     <span class="k">global</span> <span class="n">lletra</span> <span class="c1"># primer element</span>
 
     <span class="k">while</span> <span class="n">lletra</span> <span class="o">==</span> <span class="s1">&#39; &#39;</span><span class="p">:</span> <span class="c1"># mentre no final</span>
         <span class="n">lletra</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">stdin</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="c1"># seguent element</span>
 
 
-<span class="k">def</span><span class="w"> </span><span class="nf">llegir_paraula</span><span class="p">():</span>
+<span class="k">def</span> <span class="nf">llegir_paraula</span><span class="p">():</span>
     <span class="k">global</span> <span class="n">lletra</span> <span class="c1"># primer element</span>
     <span class="n">paraula</span> <span class="o">=</span> <span class="p">[]</span>
 
@@ -1073,7 +1073,7 @@ seqüència.</p>
 
     <span class="k">return</span> <span class="n">paraula</span>
 
-<span class="k">def</span><span class="w"> </span><span class="nf">imprimir_invertit</span><span class="p">(</span><span class="n">paraula</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">imprimir_invertit</span><span class="p">(</span><span class="n">paraula</span><span class="p">):</span>
 
     <span class="n">darrera_lletra</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">paraula</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span>
     <span class="n">increment</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>

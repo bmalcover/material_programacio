@@ -29,7 +29,7 @@ extern.es_primer(23)
 [1;31m---------------------------------------------------------------------------[0m
 [1;31mModuleNotFoundError[0m                       Traceback (most recent call last)
 Cell [1;32mIn[2], line 1[0m
-[1;32m----> 1[0m [38;5;28;01mimport[39;00m[38;5;250m [39m[38;5;21;01mextern[39;00m
+[1;32m----> 1[0m [38;5;28;01mimport[39;00m [38;5;21;01mextern[39;00m
 [0;32m      3[0m [38;5;28mprint[39m(extern[38;5;241m.[39mestring)
 [0;32m      5[0m extern[38;5;241m.[39mes_primer([38;5;241m23[39m)
 
