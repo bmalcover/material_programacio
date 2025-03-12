@@ -1,74 +1,73 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
+<html lang="en" data-content_root="../../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>8. Disseny algorísmic &#8212; Programacio I</title>
+    <title>Tema 7 &#8212; Programacio I</title>
   
   
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-  
-  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
-
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
   
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
-  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/jquery.js"></script>
-    <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/clipboard.min.js"></script>
-    <script src="../../_static/copybutton.js"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'chapters/Tema7/Tema7_Algorismes';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Exercicis" href="Tema7_Exercicis.html" />
-    <link rel="prev" title="Exercicis" href="../Tema6/Tema6_Exercicis.html" />
+    <link rel="next" title="Exercicis Tema 7" href="Tema7_Exercicis.html" />
+    <link rel="prev" title="Exercicis Tema 6" href="../Tema6/Tema6_Exercicis.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -76,31 +75,16 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
   
   <div id="pst-scroll-pixel-helper"></div>
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>
-    Back to top
-  </button>
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../../search.html"
       method="get">
@@ -108,7 +92,6 @@ const thebe_selector_output = ".output, .cell_output"
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -116,10 +99,15 @@ const thebe_selector_output = ".output, .cell_output"
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
   
-    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
     </header>
   
 
@@ -128,7 +116,8 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -143,6 +132,8 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="sidebar-primary-item">
 
   
+    
+  
 
 <a class="navbar-brand logo" href="../../intro.html">
   
@@ -156,82 +147,72 @@ const thebe_selector_output = ".output, .cell_output"
     
     
     <img src="../../_static/logo.png" class="logo__image only-light" alt="Programacio I - Home"/>
-    <script>document.write(`<img src="../../_static/logo.png" class="logo__image only-dark" alt="Programacio I - Home"/>`);</script>
+    <img src="../../_static/logo.png" class="logo__image only-dark pst-js-only" alt="Programacio I - Home"/>
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="../../intro.html">
-                    Prefaci
+                    Introducció
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Introducció</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../Tema1.html">1. Conceptes bàsics</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Aprenent a programar</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Tema2/Tema2_Intro.html">2. Components del llenguatge</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Tema1.html">Tema 1</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Tema2/Tema2_Intro.html">Tema 2</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../Tema2/Tema2.html">Dades</a></li>
 
 
 
 
 <li class="toctree-l2"><a class="reference internal" href="../Tema2/Tema2_Estructures_de_control.html">Composició d’instruccions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tema2/Tema2_Exercicis.html">Exercicis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tema2/Tema2_Exercicis.html">Exercicis Tema 2</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Tema3/Tema3_.html">3. Esquemes algorísmics bàsics</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Tema3/Tema3_Exercicis.html">Exercicis</a></li>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Tema3/Tema3_.html">Tema 3</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Tema3/Tema3_Exercicis.html">Exercicis del Tema 3</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Tema4/Tema4_.html">4. Organització del codi</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Tema4/Tema4_.html">Tema 4</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../Tema4/Tema4_Esquemes.html">Aplicació dels esquemes bàsics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Tema4/Tema4_Subprogrames.html">Subprogrames i paràmetres</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Tema4/Tema4_Aplicacio_esquemes_subprogrames.html">Esquemes amb subprogrames</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tema4/Tema4_Exercicis_subprogrames.html">Exercicis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tema4/Tema4_Exercicis_subprogrames.html">Exercicis del Tema 4</a></li>
 </ul>
-</li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Dades estructurades</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Tema5/Tema5.html">5. Magatzems de dades</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Tema5/Tema5_Llistes.html">Iterables</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tema5/Tema5_Exercicis.html">Exercicis</a></li>
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Tema5/Tema55.html">6. POO (Programació Orientada a Objectes)</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Tema5/Tema5.html">Tema 5</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Tema5/Tema5_Llistes.html">Llistes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Tema5/Tema5_Classes.html">Classes i Objectes</a></li>
-
-
-
-
-<li class="toctree-l2"><a class="reference internal" href="../Tema5/Tema5_Exercicis_altres_estructures.html">Exercicis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tema5/Tema5_Estructures.html">Altres maneres d’estructurar les dades</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tema5/Tema5_Exercicis.html">Exercicis Tema 5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tema5/Tema5_Exercicis_altres_estructures.html">Exercicis Tema 5/2</a></li>
 </ul>
-</li>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Tema6/Tema6_Fitxers.html">Tema 6</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Tema6/Tema6_Exercicis.html">Exercicis Tema 6</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Fitxers i Algorismes</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Tema6/Tema6_Fitxers.html">7. Fitxers</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Tema6/Tema6_Exercicis.html">Exercicis</a></li>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Tema 7</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="Tema7_Exercicis.html">Exercicis Tema 7</a></li>
 </ul>
-</li>
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">8. Disseny algorísmic</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="Tema7_Exercicis.html">Exercicis</a></li>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Annexes/Annexes.html">Annexos</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Annexes/Entorn_Desenvolupament.html">Entorn de desenvolupament</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Annexes/Taula_ASCII.html">Taula ASCII</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Annexes/Fitxers_Externs.html">Fitxers externs</a></li>
 </ul>
-</li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Annexes</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../Annexes/Entorn_Desenvolupament.html">Entorn de desenvolupament</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Annexes/Turtle.html">Turtle</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Annexes/Taula_ASCII.html">Taula ASCII</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Annexes/Fitxers_Externs.html">Fitxers externs</a></li>
+</details></li>
 </ul>
 
     </div>
@@ -240,14 +221,19 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
 
@@ -256,14 +242,14 @@ const thebe_selector_output = ".output, .cell_output"
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -339,27 +325,19 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</label>
+</button>
 </div></div>
       
     </div>
@@ -370,7 +348,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>8. Disseny algorísmic</h1>
+    <h1>Tema 7</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -380,7 +358,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduccio">Introducció</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#disseny-algorismic">Disseny algorísmic</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#complexitat-computacional">Complexitat Computacional</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#algorismes-de-cerca">Algorismes de cerca</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cerca-sequencial">Cerca seqüencial</a></li>
@@ -407,41 +385,72 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="disseny-algorismic">
-<h1>8. Disseny algorísmic<a class="headerlink" href="#disseny-algorismic" title="Permalink to this heading">#</a></h1>
-<section id="introduccio">
-<h2>Introducció<a class="headerlink" href="#introduccio" title="Permalink to this heading">#</a></h2>
-<p>Hem dedicat tot el curs aprendre a fer programes que funcionin de la manera esperada en tots els casos, que siguin fàcils d’entendre i també de modificar.</p>
-<p>Per altra banda, no ens hem preocupat gens del temps que tarden els nostres programes ni de la qualitat dels nostres algorismes. Un exemple clar són els exercicis del Tema 4 on hem treballat amb seqüències numèriques i la nostra estratègia era la d’usar la força bruta per fer una cerca en tot el rang de valors disponibles.</p>
-<p>En aquest tema realitzarem una introducció al concepte de cost computacional dels algorismes, analitzarem els algorismes de cerca i introduirem els algorismes d’ordenació.</p>
-<p>L’ordenació és una aplicació fonamental en computació. La majoria de les dades produïdes per un programa estan ordenades d’alguna manera, i molts dels còmputs que un programa ha de realitzar són més eficients si les dades sobre els quals operen estan ordenades. Un dels tipus d’operació que més es beneficien de fer feina sobre un conjunt de dades ordenades és la recerca d’una informació.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="tema-7">
+<h1>Tema 7<a class="headerlink" href="#tema-7" title="Link to this heading">#</a></h1>
+<section id="disseny-algorismic">
+<h2>Disseny algorísmic<a class="headerlink" href="#disseny-algorismic" title="Link to this heading">#</a></h2>
+<p>Hem dedicat tot el curs aprendre a fer programes que funcionin de la manera esperada en tots els casos, que siguin
+fàcils d’entendre i també de modificar.</p>
+<p>Per altra banda, no ens hem preocupat gens del temps que tarden els nostres programes ni de la qualitat dels nostres
+algorismes. Un exemple clar són els exercicis del Tema 4 on hem treballat amb seqüències numèriques i la nostra
+estratègia era la d’usar la força bruta per fer una cerca en tot el rang de valors disponibles.</p>
+<p>En aquest tema realitzarem una introducció al concepte de cost computacional dels algorismes, analitzarem els
+algorismes de cerca i introduirem els algorismes d’ordenació.</p>
+<p>L’ordenació és una aplicació fonamental en computació. La majoria de les dades produïdes per un programa estan
+ordenades d’alguna manera, i molts dels còmputs que un programa ha de realitzar són més eficients si les dades sobre
+els quals operen estan ordenades. Un dels tipus d’operació que més es beneficien de fer feina sobre un conjunt de dades
+ordenades és la recerca d’una informació.</p>
 </section>
 <section id="complexitat-computacional">
-<h2>Complexitat Computacional<a class="headerlink" href="#complexitat-computacional" title="Permalink to this heading">#</a></h2>
-<p>A classe hem vist que el mateix problema pot tenir diferents solucions, cada una d’aquestes solucions pot tenir diferent eficiència (rapidesa d’execució). Així, per exemple, un problema tan fàcil com multiplicar dos nombres enters és resolt mitjançant dos algoritmes diferents un a Anglaterra i un altre a la resta d’Europa. Una altra forma molt més curiosa de realitzar la multiplicació dels nombres enters és el mètode rus, un mètode més complex que els anteriors i que requereix realitzar un nombre d’operacions matemàtiques bastant superior, tot i que obté el mateix resultat.</p>
+<h2>Complexitat Computacional<a class="headerlink" href="#complexitat-computacional" title="Link to this heading">#</a></h2>
+<p>A classe hem vist que el mateix problema pot tenir diferents solucions, cada una d’aquestes solucions pot tenir
+diferent eficiència (rapidesa d’execució). Així, per exemple, un problema tan fàcil com multiplicar dos nombres
+enters és resolt mitjançant dos algoritmes diferents un a Anglaterra i un altre a la resta d’Europa. Una altra forma
+molt més curiosa de realitzar la multiplicació dels nombres enters és el mètode rus, un mètode més complex que els anteriors i
+que requereix realitzar un nombre d’operacions matemàtiques bastant superior, tot i que obté el mateix resultat.</p>
 <p><a class="reference external" href="https://es.wikipedia.org/wiki/Multiplicaci%C3%B3n_por_duplicaci%C3%B3n">Més informació de la multiplicació rusa</a></p>
 <p>Quan hem de seleccionar un algorisme per resoldre un problema concret, és important determinar els recursos
-computacionals necessaris: temps de computació i espai d’emmagatzematge en memòria, de moment no ens ocuparem de l’espai d’emmagatzematge. És necessari remarcar que <strong>l’eficiència d’un algoritme no pot mesurar-se en unitats de temps, ja que cada ordinador té característiques pròpies i el temps d’execució del mateix programa en dues màquines diferents pot variar.</strong></p>
+computacionals necessaris: temps de computació i espai d’emmagatzematge en memòria, de moment no ens ocuparem de
+l’espai d’emmagatzematge. És important remarcar que <strong>l’eficiència d’un algoritme no pot mesurar-se en unitats de
+temps, ja que cada ordinador té característiques pròpies i el temps d’execució del mateix programa en dues màquines
+diferents pot variar.</strong></p>
 <p><strong>Principi d’invariància</strong></p>
 <p>Per estudiar la complexitat computacional dels algoritmes es pren per cert el principi d’invariància: <em>dues
 implementacions diferents del mateix algoritme no difereixen en la seva eficiència més que en una constant
 multiplicativa</em>; és a dir, si dues implementacions del mateix algorisme necessiten t(n)<sub>1</sub> i t(n)
 <sub>2</sub> unitats de temps, on <em>n</em> és la mida del vector d’entrada, llavors hi ha un c &gt; 0 tal que t(n)
 <sub>1</sub> &lt; c * t(n)<sub>2</sub>.</p>
-<p>Aquest principi permet concloure que un canvi en la màquina on s’executa un algorisme proporciona una millora d’un factor constant, mentre que les millores que depenen del nombre de dades que processa l’algorisme hauran de ser causades per canvis en el mateix algorisme.</p>
+<p>Aquest principi permet concloure que un canvi en la màquina on s’executa un algorisme proporciona una millora d’un
+factor constant, mentre que les millores que depenen del nombre de dades que processa l’algorisme hauran de ser
+causades per canvis en el mateix algorisme.</p>
 <p><strong>Cost computacional d’un algorisme</strong></p>
-<p>El càlcul de l’eficiència d’un algorisme es basa a comptar el nombre d’operacions elementals que realitza. Per operació elemental s’entén una operació el temps d’execució de la qual és constant. En la següent imatge veiem les funcions dels costs computacionals més usats i el seu increment d’execució en unitats de temps segons l’increment de la mida del conjunt de dades a tractar.</p>
-<p>Funcions de cost:</p>
-<p><img alt="cost" src="../../_images/cost.png" /></p>
+<p>El càlcul de l’eficiència d’un algorisme es basa a comptar el nombre d’operacions elementals que realitza. Per
+operació elemental s’entén una operació el temps d’execució de la qual és constant. En la següent imatge veim les
+funcions dels costs computacionals més usats i el seu increment d’execució en unitats de temps segons l’increment de
+la mida del conjunt de dades a tractar.</p>
+<figure class="align-center" id="id1">
+<a class="reference internal image-reference" href="../../_images/cost.png"><img alt="Imatge costs" src="../../_images/cost.png" style="width: 400px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 4 </span><span class="caption-text">Funcions de cost.</span><a class="headerlink" href="#id1" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
 </section>
 <section id="algorismes-de-cerca">
-<h2>Algorismes de cerca<a class="headerlink" href="#algorismes-de-cerca" title="Permalink to this heading">#</a></h2>
-<p>Nosaltres ja hem treballat els algorismes de cerca, de manera general, un problema de cerca es pot enunciar de la següent manera: <em>donat un conjunt d’elements, determinar si un element es troba en el conjunt o no</em>.</p>
-<p>Fins ara només hem vist un tipus de cerca, però veurem que en tenim certes variacions. L’elecció depèn de la forma en què es troben organitzades les dades: si es troben ordenades, si s’ignora la seva disposició o si es sap que estan generades a l’atzar.</p>
+<h2>Algorismes de cerca<a class="headerlink" href="#algorismes-de-cerca" title="Link to this heading">#</a></h2>
+<p>Nosaltres ja hem treballat els algorismes de cerca, de manera general, un problema de cerca es pot enunciar de la
+següent manera: <em>donat un conjunt d’elements, determinar si un element es troba en el conjunt o no</em>.</p>
+<p>Fins ara només hem vist un tipus de cerca, però veurem que en tenim certes variacions. L’elecció depèn de la forma en
+què es troben organitzades les dades: si es troben ordenades, si s’ignora la seva disposició o si es sap que estan
+generades a l’atzar.</p>
 <section id="cerca-sequencial">
-<h3>Cerca seqüencial<a class="headerlink" href="#cerca-sequencial" title="Permalink to this heading">#</a></h3>
-<p>És l’algorisme de cerca més simple, menys eficient i que menys precondicions requereix: no requereix coneixements sobre el conjunt de recerca ni accés aleatori. Consisteix a comparar cada element del conjunt de recerca amb el valor desitjat fins que aquest sigui trobat o fins que trobem el final de la seqüència. El pitjor dels casos consisteix a haver de comparar amb tots els elements de la seqüència abans de poder dir si l’element és allà o no, direm que el seu cost computacional és lineal, ja que depèn linealment del nombre d’elements del conjunt.</p>
-<p>Suposarem que les dades es troben en una llista, l’algorisme de cerca sobre conjunts que obtenim de lectures del teclat i de fitxers es troben en altres capítols d’aquests apunts.</p>
+<h3>Cerca seqüencial<a class="headerlink" href="#cerca-sequencial" title="Link to this heading">#</a></h3>
+<p>És l’algorisme de cerca més simple, menys eficient i que menys precondicions requereix: no requereix coneixements
+sobre el conjunt de recerca ni accés aleatori. Consisteix a comparar cada element del conjunt de recerca amb el
+valor desitjat fins que aquest sigui trobat o fins que trobem el final de la seqüència. El pitjor dels casos
+consisteix a haver de comparar amb tots els elements de la seqüència abans de poder dir si l’element és allà o no,
+direm que el seu cost computacional és lineal, ja que depèn linealment del nombre d’elements del conjunt.</p>
+<p>Suposarem que les dades es troben en una llista, l’algorisme de cerca sobre conjunts que obtenim de lectures del
+teclat i de fitxers es troben en altres capítols d’aquests apunts.</p>
 <p><strong>Algorisme</strong></p>
 <p>Dades necessàries</p>
 <ul class="simple">
@@ -468,13 +477,14 @@ multiplicativa</em>; és a dir, si dues implementacions del mateix algorisme nec
 </div>
 </section>
 <section id="cerca-binaria-o-dicotomica">
-<h3>Cerca binària o dicotòmica<a class="headerlink" href="#cerca-binaria-o-dicotomica" title="Permalink to this heading">#</a></h3>
+<h3>Cerca binària o dicotòmica<a class="headerlink" href="#cerca-binaria-o-dicotomica" title="Link to this heading">#</a></h3>
 <p>És un mètode molt eficient, però té diversos prerequisits:</p>
 <ul class="simple">
 <li><p>El conjunt de cerca ha d’estar ordenat.</p></li>
 <li><p>Es pot accedir als diversos elements de la seqüència. Accés aleatòri.</p></li>
 </ul>
-<p>Aquest algoritme compara la dada cercada amb l’element central del conjunt. Segons sigui menor o major es prossegueix  la recerca amb el subconjunt anterior o posterior, respectivament a l’element central, i així successivament.</p>
+<p>Aquest algoritme compara la dada cercada amb l’element central del conjunt. Segons sigui menor o major es prossegueix
+la recerca amb el subconjunt anterior o posterior, respectivament a l’element central, i així successivament.</p>
 <p><strong>Algorisme</strong></p>
 <p>Dades necessàries</p>
 <ul class="simple">
@@ -503,9 +513,14 @@ multiplicativa</em>; és a dir, si dues implementacions del mateix algorisme nec
 
 </pre></div>
 </div>
-<p>En el millor cas, la dada és l’element que es troba a la meitat, es realitza 1 iteració. En el cas més desfavorable, el nombre d’iteracions és el menor enter K que verifica 2<sup>K</sup> = mida del conjunt. El seu ordre de complexitat és logarítmic, això implica que quan realitzam una cerca binària només comparam amb el log<inf>2</inf> del nombre d’elements en el conjunt.</p>
-<p>A continuació veureu una taula que compara la cerca binària amb la cerca seqüencial. Es comprova que per a conjunts de dades grans la recerca binària segueix sent eficient mentre que la seqüencial es va degradant. La taula mostra el nombre d’elements a avaluar pels dos algorismes per trobar un element en un conjunt de dades.</p>
-<table class="table">
+<p>En el millor cas, la dada és l’element que es troba a la meitat, es realitza 1 iteració. En el cas més desfavorable,
+el nombre d’iteracions és el menor enter K que verifica 2<sup>K</sup> = mida del conjunt. El seu ordre de complexitat
+és logarítmic, això implica que quan realitzam una cerca binària només comparam amb el log<inf>2</inf> del nombre
+d’elements en el conjunt.</p>
+<p>A continuació veureu una taula que compara la cerca binària amb la cerca seqüencial. Es comprova que per a conjunts
+de dades grans la recerca binària segueix sent eficient mentre que la seqüencial es va degradant. La taula mostra el
+nombre d’elements a avaluar pels dos algorismes per trobar un element en un conjunt de dades.</p>
+<div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Mida del conjunt</p></th>
 <th class="head"><p>Cerca seqüencial</p></th>
@@ -539,18 +554,25 @@ multiplicativa</em>; és a dir, si dues implementacions del mateix algorisme nec
 </tr>
 </tbody>
 </table>
-<p>A continuació teniu una comparació gràfica dels mètodes de cerca lineal (seqüencial) i dicotòmica:</p>
-<p><img alt="linealvsdico" src="../../_images/linealvsdico.jpg" /></p>
+</div>
+<p>A continuació teniu una comparació gràfica dels mètodes de cerca lineal (seqüencial) i dicotòmica.</p>
+<figure class="align-center" id="id2">
+<a class="reference internal image-reference" href="../../_images/linealvsdico.jpg"><img alt="Imatge costs" src="../../_images/linealvsdico.jpg" style="width: 450px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 5 </span><span class="caption-text">Comparació gràfica entre la cerca lineal i la dicotòmica.</span><a class="headerlink" href="#id2" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
 <p>En aquest enllaç teniu una comparació visual dels dos algorismes <a class="reference external" href="https://blog.penjee.com/wp-content/uploads/2015/04/binary-and-linear-search-animations.gif">Aquí</a></p>
 </section>
 <section id="implementacio-de-les-cerques">
-<h3>Implementació de les cerques<a class="headerlink" href="#implementacio-de-les-cerques" title="Permalink to this heading">#</a></h3>
-<p>A continuació teniu la implementació dels dos tipus de cerques en una funció que retorna un valor booleà que defineix si ha trobat o no l’element. Les dues funcions reben 2 paràmetres, el conjunt sobre el qual cercar i el valor a cercar.</p>
+<h3>Implementació de les cerques<a class="headerlink" href="#implementacio-de-les-cerques" title="Link to this heading">#</a></h3>
+<p>A continuació teniu l’implementació dels dos tipus de cerques en una funció que retorna un valor booleà que defineix
+si ha trobat o no l’element. Les dues funcions reben 2 paràmetres, el conjunt sobre el qual cercar i el valor a cercar.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">random</span>
 
-<span class="k">def</span> <span class="nf">generar_llista</span><span class="p">(</span><span class="n">n_elements</span><span class="p">,</span> <span class="n">creixent</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">generar_llista</span><span class="p">(</span><span class="n">n_elements</span><span class="p">,</span> <span class="n">creixent</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
     
     <span class="n">llista</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n_elements</span><span class="p">):</span>
@@ -568,7 +590,7 @@ multiplicativa</em>; és a dir, si dues implementacions del mateix algorisme nec
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">cerca_sequencial</span><span class="p">(</span><span class="n">llista</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">cerca_sequencial</span><span class="p">(</span><span class="n">llista</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
     
     <span class="n">trobat</span> <span class="o">=</span> <span class="kc">False</span>
     <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
@@ -585,7 +607,7 @@ multiplicativa</em>; és a dir, si dues implementacions del mateix algorisme nec
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">cerca_binaria</span><span class="p">(</span><span class="n">llista</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">cerca_binaria</span><span class="p">(</span><span class="n">llista</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
 
     <span class="n">esq</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1"># esq guarda l&#39;index de l&#39;inici del segment</span>
     <span class="n">dret</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">llista</span><span class="p">)</span> <span class="o">-</span><span class="mi">1</span> <span class="c1"># dret guarda l&#39;index del final del segment</span>
@@ -634,17 +656,17 @@ multiplicativa</em>; és a dir, si dues implementacions del mateix algorisme nec
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 4, 7, 12, 18, 19, 22, 26, 33, 37, 38, 42, 43, 44, 46, 47, 48, 54, 57, 64]
-DEBUG: esquerra: 0 dreta: 19 mitj: 9 valor: 37
-DEBUG: esquerra: 10 dreta: 19 mitj: 14 valor: 46
-DEBUG: esquerra: 15 dreta: 19 mitj: 17 valor: 54
-DEBUG: esquerra: 18 dreta: 19 mitj: 18 valor: 57
-DEBUG: esquerra: 19 dreta: 19 mitj: 19 valor: 64
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 8, 12, 14, 16, 22, 23, 30, 37, 39, 48, 53, 55, 60, 68, 74, 83, 89, 94, 100]
+DEBUG: esquerra: 0 dreta: 19 mitj: 9 valor: 39
+DEBUG: esquerra: 10 dreta: 19 mitj: 14 valor: 68
+DEBUG: esquerra: 10 dreta: 13 mitj: 11 valor: 53
+DEBUG: esquerra: 12 dreta: 13 mitj: 12 valor: 55
+DEBUG: esquerra: 13 dreta: 13 mitj: 13 valor: 60
 CPU times: total: 0 ns
 Wall time: 0 ns
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
 </pre></div>
 </div>
 </div>
@@ -677,14 +699,14 @@ Wall time: 0 ns
 </section>
 </section>
 <section id="ordenacio">
-<h2>Ordenació<a class="headerlink" href="#ordenacio" title="Permalink to this heading">#</a></h2>
+<h2>Ordenació<a class="headerlink" href="#ordenacio" title="Link to this heading">#</a></h2>
 <p>L’ordenació és el procés d’organitzar un conjunt de dades en algun ordre o seqüència específica, pot ser creixent o
 decreixent per dades numèriques o l’ordre alfabètic per caràcters o strings. Els algoritmes d’ordenació permuten els
 elements del conjunt de dades fins a aconseguir l’ordre desitjat.</p>
 <p>Per aconseguir el nostre objectiu usarem dues operacions bàsiques: la comparació i l’intercanvi. Existeixen molts
 algorismes d’ordenació amb diferents avantatges i inconvenients. En aquest tema veurem el més bàsic de tots.</p>
 <section id="metode-de-la-bombolla">
-<h3>Mètode de la bombolla<a class="headerlink" href="#metode-de-la-bombolla" title="Permalink to this heading">#</a></h3>
+<h3>Mètode de la bombolla<a class="headerlink" href="#metode-de-la-bombolla" title="Link to this heading">#</a></h3>
 <p>Es basa en recórrer l’estructura de dades (en el nostre cas una llista) un cert nombre de vegades, comparant parells de
 valors que ocupen posicions adjacents (0-1,1-2, …). Si les dues dades que comparam no estan ordenades,
 s’intercanvien. Aquesta operació es repeteix <em>n-1</em>  vegades, sent <em>n</em> la mida del conjunt de dades d’entrada. Al
@@ -716,16 +738,20 @@ nombre d’elements de la llista al quadrat.</p>
 </div>
 </section>
 <section id="explicacio-grafica">
-<h3>Explicació gràfica<a class="headerlink" href="#explicacio-grafica" title="Permalink to this heading">#</a></h3>
-<p><img alt="Drag Racing" src="../../_images/bubble.png" /></p>
-<p>Esquema visual de l’algorisme de la bombolla.</p>
+<h3>Explicació gràfica<a class="headerlink" href="#explicacio-grafica" title="Link to this heading">#</a></h3>
+<figure class="align-center" id="id3">
+<a class="reference internal image-reference" href="../../_images/bubble.png"><img alt="algorisme bombolla" src="../../_images/bubble.png" style="width: 450px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 6 </span><span class="caption-text">Esquema visual de l’algorisme de la bombolla.</span><a class="headerlink" href="#id3" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
 <p><a class="reference external" href="https://www.geeksforgeeks.org/bubble-sort/">Més informació complementaria de l’algorisme</a></p>
 </section>
 <section id="implementacio-de-l-algorisme">
-<h3>Implementació de l’algorisme<a class="headerlink" href="#implementacio-de-l-algorisme" title="Permalink to this heading">#</a></h3>
+<h3>Implementació de l’algorisme<a class="headerlink" href="#implementacio-de-l-algorisme" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">bubbleSort</span><span class="p">(</span><span class="n">llista</span><span class="p">):</span> 
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">bubbleSort</span><span class="p">(</span><span class="n">llista</span><span class="p">):</span> 
     <span class="n">mida</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">llista</span><span class="p">)</span> 
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">mida</span><span class="p">):</span>
         <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">mida</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span> 
@@ -749,23 +775,23 @@ nombre d’elements de la llista al quadrat.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 9, 1, 6, 9, 8, 9, 5, 3, 4]
-[1, 1, 6, 9, 8, 9, 5, 3, 4, 9]
-[1, 1, 6, 8, 9, 5, 3, 4, 9, 9]
-[1, 1, 6, 8, 5, 3, 4, 9, 9, 9]
-[1, 1, 6, 5, 3, 4, 8, 9, 9, 9]
-[1, 1, 5, 3, 4, 6, 8, 9, 9, 9]
-[1, 1, 3, 4, 5, 6, 8, 9, 9, 9]
-[1, 1, 3, 4, 5, 6, 8, 9, 9, 9]
-[1, 1, 3, 4, 5, 6, 8, 9, 9, 9]
-[1, 1, 3, 4, 5, 6, 8, 9, 9, 9]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 5, 2, 7, 8, 1, 1, 7, 1, 2]
+[1, 2, 5, 7, 1, 1, 7, 1, 2, 8]
+[1, 2, 5, 1, 1, 7, 1, 2, 7, 8]
+[1, 2, 1, 1, 5, 1, 2, 7, 7, 8]
+[1, 1, 1, 2, 1, 2, 5, 7, 7, 8]
+[1, 1, 1, 1, 2, 2, 5, 7, 7, 8]
+[1, 1, 1, 1, 2, 2, 5, 7, 7, 8]
+[1, 1, 1, 1, 2, 2, 5, 7, 7, 8]
+[1, 1, 1, 1, 2, 2, 5, 7, 7, 8]
+[1, 1, 1, 1, 2, 2, 5, 7, 7, 8]
 </pre></div>
 </div>
 </div>
 </div>
 </section>
 <section id="millora-de-l-algorisme">
-<h3>Millora de l’algorisme<a class="headerlink" href="#millora-de-l-algorisme" title="Permalink to this heading">#</a></h3>
+<h3>Millora de l’algorisme<a class="headerlink" href="#millora-de-l-algorisme" title="Link to this heading">#</a></h3>
 <p>Hi ha un canvi de l’algorisme que permet evitar realitzar totes les iteracions del bucle exterior, si ens adonam que
 la llista ja està ordenada podem aturar d’ordenar.</p>
 <p>Dades necessàries</p>
@@ -792,7 +818,7 @@ la llista ja està ordenada podem aturar d’ordenar.</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">bubbleSort_curt</span><span class="p">(</span><span class="n">llista</span><span class="p">):</span> 
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">bubbleSort_curt</span><span class="p">(</span><span class="n">llista</span><span class="p">):</span> 
     <span class="n">actualitzat</span> <span class="o">=</span> <span class="kc">True</span>
     <span class="n">mida</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">llista</span><span class="p">)</span> 
     <span class="k">while</span> <span class="n">actualitzat</span><span class="p">:</span> 
@@ -818,22 +844,17 @@ la llista ja està ordenada podem aturar d’ordenar.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 1, 4, 8, 7, 9, 4, 9, 6, 3]
-[1, 1, 4, 7, 8, 4, 9, 6, 3, 9]
-[1, 1, 4, 7, 4, 8, 6, 3, 9, 9]
-[1, 1, 4, 4, 7, 6, 3, 8, 9, 9]
-[1, 1, 4, 4, 6, 3, 7, 8, 9, 9]
-[1, 1, 4, 4, 3, 6, 7, 8, 9, 9]
-[1, 1, 4, 3, 4, 6, 7, 8, 9, 9]
-[1, 1, 3, 4, 4, 6, 7, 8, 9, 9]
-[1, 1, 3, 4, 4, 6, 7, 8, 9, 9]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 3, 1, 1, 6, 2, 3, 3, 3, 9]
+[1, 1, 1, 3, 2, 3, 3, 3, 6, 9]
+[1, 1, 1, 2, 3, 3, 3, 3, 6, 9]
+[1, 1, 1, 2, 3, 3, 3, 3, 6, 9]
 </pre></div>
 </div>
 </div>
 </div>
 </section>
 <section id="altres-algorismes-d-ordenacio">
-<h3>Altres algorismes d’ordenació<a class="headerlink" href="#altres-algorismes-d-ordenacio" title="Permalink to this heading">#</a></h3>
+<h3>Altres algorismes d’ordenació<a class="headerlink" href="#altres-algorismes-d-ordenacio" title="Link to this heading">#</a></h3>
 <p>En aquesta secció hem realitzat una introducció als algorismes d’ordenació i hem vist el funcionament del més bàsic,
 en successives assignatures en veureu d’altres molt més avançats i per tant més complexes però també molt més
 eficients. Alguns dels més coneguts són:</p>
@@ -883,7 +904,7 @@ valor (que se sol anomenar pivot) i l’altra amb els valors més grans que aque
               
               
               
-                <footer class="prev-next-footer">
+                <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
     <a class="left-prev"
@@ -892,7 +913,7 @@ valor (que se sol anomenar pivot) i l’altra amb els valors més grans que aque
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Exercicis</p>
+        <p class="prev-next-title">Exercicis Tema 6</p>
       </div>
     </a>
     <a class="right-next"
@@ -900,7 +921,7 @@ valor (que se sol anomenar pivot) i l’altra amb els valors més grans que aque
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Exercicis</p>
+        <p class="prev-next-title">Exercicis Tema 7</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -911,7 +932,8 @@ valor (que se sol anomenar pivot) i l’altra amb els valors més grans que aque
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -920,7 +942,7 @@ valor (que se sol anomenar pivot) i l’altra amb els valors més grans que aque
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduccio">Introducció</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#disseny-algorismic">Disseny algorísmic</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#complexitat-computacional">Complexitat Computacional</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#algorismes-de-cerca">Algorismes de cerca</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cerca-sequencial">Cerca seqüencial</a></li>
@@ -960,7 +982,7 @@ By Gabriel Moyà Alcover
 
   <p class="copyright">
     
-      © Copyright 2023.
+      © Copyright 2021.
       <br/>
     
   </p>
@@ -984,8 +1006,8 @@ By Gabriel Moyà Alcover
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+  <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
   </footer>

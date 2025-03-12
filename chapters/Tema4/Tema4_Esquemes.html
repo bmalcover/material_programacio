@@ -1,74 +1,73 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
+<html lang="en" data-content_root="../../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Aplicació dels esquemes bàsics per a la resolució de problemes més complexos &#8212; Programacio I</title>
+    <title>Aplicació dels esquemes bàsics per a la resolució de problemes més complexes &#8212; Programacio I</title>
   
   
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-  
-  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
-
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
   
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
-  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/jquery.js"></script>
-    <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/clipboard.min.js"></script>
-    <script src="../../_static/copybutton.js"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'chapters/Tema4/Tema4_Esquemes';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Subprogrames i paràmetres" href="Tema4_Subprogrames.html" />
-    <link rel="prev" title="4. Organització del codi" href="Tema4_.html" />
+    <link rel="prev" title="Tema 4" href="Tema4_.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -76,31 +75,16 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
   
   <div id="pst-scroll-pixel-helper"></div>
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>
-    Back to top
-  </button>
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../../search.html"
       method="get">
@@ -108,7 +92,6 @@ const thebe_selector_output = ".output, .cell_output"
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -116,10 +99,15 @@ const thebe_selector_output = ".output, .cell_output"
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
   
-    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
     </header>
   
 
@@ -128,7 +116,8 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -143,6 +132,8 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="sidebar-primary-item">
 
   
+    
+  
 
 <a class="navbar-brand logo" href="../../intro.html">
   
@@ -156,82 +147,72 @@ const thebe_selector_output = ".output, .cell_output"
     
     
     <img src="../../_static/logo.png" class="logo__image only-light" alt="Programacio I - Home"/>
-    <script>document.write(`<img src="../../_static/logo.png" class="logo__image only-dark" alt="Programacio I - Home"/>`);</script>
+    <img src="../../_static/logo.png" class="logo__image only-dark pst-js-only" alt="Programacio I - Home"/>
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="../../intro.html">
-                    Prefaci
+                    Introducció
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Introducció</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../Tema1.html">1. Conceptes bàsics</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Aprenent a programar</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Tema2/Tema2_Intro.html">2. Components del llenguatge</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Tema1.html">Tema 1</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Tema2/Tema2_Intro.html">Tema 2</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../Tema2/Tema2.html">Dades</a></li>
 
 
 
 
 <li class="toctree-l2"><a class="reference internal" href="../Tema2/Tema2_Estructures_de_control.html">Composició d’instruccions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tema2/Tema2_Exercicis.html">Exercicis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tema2/Tema2_Exercicis.html">Exercicis Tema 2</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Tema3/Tema3_.html">3. Esquemes algorísmics bàsics</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Tema3/Tema3_Exercicis.html">Exercicis</a></li>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Tema3/Tema3_.html">Tema 3</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Tema3/Tema3_Exercicis.html">Exercicis del Tema 3</a></li>
 </ul>
-</li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="Tema4_.html">4. Organització del codi</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="Tema4_.html">Tema 4</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Aplicació dels esquemes bàsics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Tema4_Subprogrames.html">Subprogrames i paràmetres</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Tema4_Aplicacio_esquemes_subprogrames.html">Esquemes amb subprogrames</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Tema4_Exercicis_subprogrames.html">Exercicis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tema4_Exercicis_subprogrames.html">Exercicis del Tema 4</a></li>
 </ul>
-</li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Dades estructurades</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Tema5/Tema5.html">5. Magatzems de dades</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Tema5/Tema5_Llistes.html">Iterables</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tema5/Tema5_Exercicis.html">Exercicis</a></li>
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Tema5/Tema55.html">6. POO (Programació Orientada a Objectes)</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Tema5/Tema5.html">Tema 5</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Tema5/Tema5_Llistes.html">Llistes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Tema5/Tema5_Classes.html">Classes i Objectes</a></li>
-
-
-
-
-<li class="toctree-l2"><a class="reference internal" href="../Tema5/Tema5_Exercicis_altres_estructures.html">Exercicis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tema5/Tema5_Estructures.html">Altres maneres d’estructurar les dades</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tema5/Tema5_Exercicis.html">Exercicis Tema 5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tema5/Tema5_Exercicis_altres_estructures.html">Exercicis Tema 5/2</a></li>
 </ul>
-</li>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Tema6/Tema6_Fitxers.html">Tema 6</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Tema6/Tema6_Exercicis.html">Exercicis Tema 6</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Fitxers i Algorismes</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Tema6/Tema6_Fitxers.html">7. Fitxers</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Tema6/Tema6_Exercicis.html">Exercicis</a></li>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Tema7/Tema7_Algorismes.html">Tema 7</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Tema7/Tema7_Exercicis.html">Exercicis Tema 7</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Tema7/Tema7_Algorismes.html">8. Disseny algorísmic</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Tema7/Tema7_Exercicis.html">Exercicis</a></li>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Annexes/Annexes.html">Annexos</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Annexes/Entorn_Desenvolupament.html">Entorn de desenvolupament</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Annexes/Taula_ASCII.html">Taula ASCII</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Annexes/Fitxers_Externs.html">Fitxers externs</a></li>
 </ul>
-</li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Annexes</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../Annexes/Entorn_Desenvolupament.html">Entorn de desenvolupament</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Annexes/Turtle.html">Turtle</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Annexes/Taula_ASCII.html">Taula ASCII</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Annexes/Fitxers_Externs.html">Fitxers externs</a></li>
+</details></li>
 </ul>
 
     </div>
@@ -240,14 +221,19 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
 
@@ -256,14 +242,14 @@ const thebe_selector_output = ".output, .cell_output"
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -339,27 +325,19 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</label>
+</button>
 </div></div>
       
     </div>
@@ -370,7 +348,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Aplicació dels esquemes bàsics per a la resolució de problemes més complexos</h1>
+    <h1>Aplicació dels esquemes bàsics per a la resolució de problemes més complexes</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -393,21 +371,22 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="aplicacio-dels-esquemes-basics-per-a-la-resolucio-de-problemes-mes-complexos">
-<h1>Aplicació dels esquemes bàsics per a la resolució de problemes més complexos<a class="headerlink" href="#aplicacio-dels-esquemes-basics-per-a-la-resolucio-de-problemes-mes-complexos" title="Permalink to this heading">#</a></h1>
-<p>Començarem el capítol proposant un problema prou conegut que consisteix a comptar lletres. En concret, en aquest tema
-passarem de caràcters individuals i començarem a comptar grups de lletres. Proposarem diverses maneres de resoldre el
-mateix problema tot argumentant els pros i els contres de cada una.</p>
-<p>El problema amb el qual treballarem és el següent:  <strong>Donada una seqüència de text acabada en punt, es desitja saber
-quantes parelles <em>la</em> s’hi poden trobar.</strong> El fet d’haver de comptar totes les parelles requereix, per força,
-recórrer tota la seqüència. Així doncs s’haurà d’adaptar l’esquema de recorregut definit en el capítol anterior.</p>
+  <section id="aplicacio-dels-esquemes-basics-per-a-la-resolucio-de-problemes-mes-complexes">
+<h1>Aplicació dels esquemes bàsics per a la resolució de problemes més complexes<a class="headerlink" href="#aplicacio-dels-esquemes-basics-per-a-la-resolucio-de-problemes-mes-complexes" title="Link to this heading">#</a></h1>
+<p>Començarem el capítol proposant un problema prou conegut que consisteix a comptar lletres, en concret aquest tema
+passarem de caràcters individuals i començarem a comptar grups de lletres.
+Proposarem diverses maneres de resoldre el mateix problema tot argumentant els pros i els contres de cada una.</p>
+<p><strong>Es desitja saber quantes parelles <em>la</em> s’hi poden trobar.</strong></p>
+<p>El fet d’haver de comptar totes les parelles requereix, per força, recórrer tota la seqüència. Així doncs s’haurà
+d’adaptar l’esquema de recorregut.</p>
 <p>Una primera implementació d’una solució per aquest problema seria la següent:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
 
 <span class="n">fiSequencia</span> <span class="o">=</span> <span class="s1">&#39;.&#39;</span>
 <span class="n">nombre</span> <span class="o">=</span> <span class="mi">0</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Escriu un text acabat en &quot;</span><span class="si">{</span><span class="n">fiSequencia</span><span class="si">}</span><span class="s1">&quot; i comptaré les parelles &quot;la&quot; que hi escriuràs&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Escriu un text acabat en &#39;&quot;</span> <span class="o">+</span> <span class="n">fiSequencia</span> <span class="o">+</span> <span class="s2">&quot;&#39; i comptaré les parelles &#39;la&#39; que hi escriuràs&quot;</span><span class="p">)</span>
 
 <span class="n">lletra</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">stdin</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># Situar-se sobre el primer element</span>
 
@@ -421,20 +400,21 @@ recórrer tota la seqüència. Així doncs s’haurà d’adaptar l’esquema de
     <span class="c1"># Situar-se sobre el següent element</span>
     <span class="n">lletra</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">stdin</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 
+
 <span class="c1"># Donar resultats</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;El nombre de parelles &quot;la&quot; que has escrit és </span><span class="si">{</span><span class="n">nombre</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;El nombre de parelles &#39;la&#39; que has escrit és: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">nombre</span><span class="p">))</span>
 
 </pre></div>
 </div>
 <p>Encara que aquest programa implementa l’algorisme d’un recorregut, no funciona de manera correcta. Si
 l’usuari introdueix una seqüència que contengui la subseqüència <code class="docutils literal notranslate"><span class="pre">lla</span></code> el programa llegirà la segona lletra <code class="docutils literal notranslate"><span class="pre">l</span></code>
 en el segon condicional i ja no la contarà com a part d’una parella de <code class="docutils literal notranslate"><span class="pre">la</span></code>. Bàsicament el que succeeix en el
-programa anterior és que en certes ocasions llegim més lletres del que toca en una sola iteració d’un bucle i això
+programa anterior és que en certes ocasions llegim més lletres del que toca i això
 provoca el seu mal funcionament.</p>
 <p>Una possible solució que ens permet arreglar el programa sense haver de fer massa modificacions al codi anterior
 seria la que tenim a continuació:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-<span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
 
 <span class="n">fiSequencia</span> <span class="o">=</span> <span class="s1">&#39;.&#39;</span>
 <span class="n">nombre</span> <span class="o">=</span> <span class="mi">0</span>
@@ -457,31 +437,31 @@ seria la que tenim a continuació:</p>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;El nombre de parelles &#39;la&#39; que has escrit és: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">nombre</span><span class="p">))</span>
 </pre></div>
 </div>
-<p>El problema que presenta aquesta solució és que a més de ser poc generalitzable, un petit canvi al plantejament
+<p>El problema que presenta aquesta solució es que a més de ser poc generalitzable, un petit canvi al plantejament
 del problema ens farà fer molts de canvis al nostre codi, i pot ser difícil d’entendre per una persona diferent a la
 que l’ha programat.</p>
 <section id="abstraccio-de-la-solucio-al-problema">
-<h2>Abstracció de la solució al problema<a class="headerlink" href="#abstraccio-de-la-solucio-al-problema" title="Permalink to this heading">#</a></h2>
-<p>En aquesta primera etapa en el camí a aprender a realitzar una bona programació, els
-aspectes als que s’ha de donar més importància són als de la <strong>correctesa</strong>, la <strong>claredat</strong> i la <strong>facilitat de modificació</strong>
-dels nostres algorismes i dels programes que s’en deriven.</p>
-<p>Els aspectes de fiabilitat: totes les comprovacions necessàries per evitar errors de l’usuari a l’utilitzar el
-programa i d’eficiència entesa com la velocitat d’execució i la gestió del consum de memòria són tòpics que cauen fora de
-l’àmbit d’aquest capítol. En aquest moment es tracta de parlar de la <strong>claredat</strong> dels algorismes.</p>
+<h2>Abstracció de la solució al problema<a class="headerlink" href="#abstraccio-de-la-solucio-al-problema" title="Link to this heading">#</a></h2>
+<p>En aquesta primera etapa en el camí cap fer una correcta programació, <strong>els aspectes als que s’ha de donar més
+importància són als de la correctesa, la claredat i la facilitat de modificació</strong> dels nostres algorismes i dels
+programes que s’en deriven.</p>
+<p>Els aspectes de fiabilitat (totes les comprovacions necessàries per evitar errors de l’usuari al utilitzar el
+programa) i d’eficiència (velocitat d’execució i estalvi de memòria) són tòpics avançats que cauen fora de l’àmbit
+d’aquest capítol. En aquest moment es tracta de parlar de la <strong>claredat</strong> dels algorismes.</p>
 <p>Si es pretén que l’algorisme resultant sigui clar, s’ha d’intentar treballar en el mateix nivell d’abstracció que es
-planteja a l’enunciat: “… quantes parelles …” per tant hem d’assumir que aquesta no és la idea que hi havia en els
-dos algorismes que hem vist al principi del capítol.</p>
+planteja a l’enunciat: “… quantes parelles …” i això no és la idea que hi havia en els dos algorismes que hem
+vist al principi del capítol.</p>
 <p>El plantejament de l’algorisme identificava com l’element del tractament seqüencial el caràcter, un element no del
-tot adequat per resoldre el problema. En canvi, a l’enunciat es parla de parelles de
-caràcters. És necessari, doncs, treballar en l’àmbit de parelles i no de caràcters. Per això s’ha de recórrer la
-seqüència per parelles i a cada una d’aquestes parelles se l’ha de comparar amb la parella de referència: “la”.</p>
-<p>L’algorisme general necessita dues variables, una per cada lletra de la parella, aquest té la següent forma:</p>
+tot adequat per resoldre el problema com s’ha pogut comprovar. En canvi, a l’enunciat es parla de parelles de
+caràcters. És necessari, doncs, treballar a nivell de parelles i no de caràcters. Per això s’ha de recórrer la
+seqüència per parelles i a cada una d’aquestes parelles se l’ha de comparar amb “la”.</p>
+<p>L’algorisme general necessita dues variables, una per cada lletra de la parella i seria de la següent forma:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">inicialitzacions</span> <span class="n">de</span> <span class="n">les</span> <span class="n">variables</span> <span class="n">necessàries</span><span class="p">:</span> <span class="n">lletra</span><span class="p">,</span> <span class="n">lletrap</span><span class="p">,</span> <span class="n">nombre</span>
 
 <span class="n">llegir_primera_parella</span>
 
-<span class="k">while</span> <span class="n">no</span>  <span class="n">final</span><span class="p">:</span> <span class="c1"># es a dir mentre no analitzem la darrera_parella:</span>
-    <span class="n">tractar_parella_actual</span><span class="p">:</span> <span class="n">si</span> <span class="n">la</span> <span class="n">parella</span> <span class="n">es</span> <span class="s2">&quot;la&quot;</span> <span class="n">augmentar</span> <span class="n">el</span> <span class="n">contador</span> <span class="n">de</span> <span class="n">nombre</span>
+<span class="k">while</span> <span class="n">no</span>  <span class="n">final</span><span class="p">:</span> <span class="c1"># es a dir -&gt; darrera_parella:</span>
+    <span class="n">tractar_parella_actual</span> <span class="p">(</span><span class="n">si</span> <span class="n">la</span> <span class="n">parella</span> <span class="n">es</span> <span class="s2">&quot;la&quot;</span> <span class="n">augmentar</span> <span class="n">el</span> <span class="n">contador</span> <span class="n">de</span> <span class="n">nombre</span><span class="p">)</span>
     <span class="n">llegir_següent_parella</span>
 
 <span class="n">mostrar_resultats</span>
@@ -489,11 +469,11 @@ seqüència per parelles i a cada una d’aquestes parelles se l’ha de compara
 </div>
 <p>El codi <code class="docutils literal notranslate"><span class="pre">Python</span></code> que resulta d’implementar l’anterior algorisme és el següent:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-<span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
 
 <span class="n">fiSequencia</span> <span class="o">=</span> <span class="s1">&#39;.&#39;</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Escriu un text acabat en &#39;&quot;</span> <span class="o">+</span> <span class="n">fiSequencia</span> <span class="o">+</span> <span class="s2">&quot;&#39; i comptare les parelles &#39;la&#39; que hi escriuras&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Escriu un text acabat en &#39;&quot;</span> <span class="o">+</span> <span class="n">fiSequencia</span> <span class="o">+</span> <span class="s2">&quot;&#39; i comptare les parelles &#39;la&#39; que hi escriuràs&quot;</span><span class="p">)</span>
 
 <span class="n">nombre</span> <span class="o">=</span> <span class="mi">0</span>
 
@@ -502,29 +482,28 @@ seqüència per parelles i a cada una d’aquestes parelles se l’ha de compara
 <span class="n">lletra</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">stdin</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 
 <span class="k">while</span> <span class="n">lletra</span> <span class="o">!=</span> <span class="n">fiSequencia</span><span class="p">:</span>  <span class="c1"># mentre no final</span>
-    <span class="k">if</span> <span class="n">lletrap</span> <span class="o">==</span> <span class="s1">&#39;l&#39;</span><span class="ow">and</span> <span class="n">lletra</span> <span class="o">==</span> <span class="s1">&#39;a&#39;</span><span class="p">:</span>  <span class="c1"># tractam la parella actual</span>
+    <span class="k">if</span> <span class="n">lletrap</span> <span class="o">==</span> <span class="s1">&#39;l&#39;</span><span class="ow">and</span> <span class="n">lletra</span> <span class="o">==</span> <span class="s1">&#39;a&#39;</span><span class="p">:</span>  <span class="c1"># Tractam la parella actual</span>
         <span class="n">nombre</span> <span class="o">=</span> <span class="n">nombre</span> <span class="o">+</span> <span class="mi">1</span>
 
     <span class="c1"># Seguent parella</span>
     <span class="n">lletrap</span> <span class="o">=</span> <span class="n">lletra</span>  <span class="c1"># la lletra previa es l&#39;actual</span>
-    <span class="n">lletra</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">stdin</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># l&#39;actual es la seguent de la sequencia</span>
+    <span class="n">lletra</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">stdin</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># la actual es la seguent de la sequencia</span>
 
 <span class="c1"># Proporcionam els resultats</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;El nombre de parelles &#39;la&#39; que has escrit és: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">nombre</span><span class="p">))</span>
 </pre></div>
 </div>
 <p>Un dels aspectes que cal destacar de l’anterior programa és que només tracta un element de la seqüència (una parella) a
-cada iteració del bucle i això implica que no és possible botar cap de les parelles de paraules existents.</p>
+cada iteració del bucle i això implica que no és possible botar cap de les parelles de paraules.</p>
 </section>
 <section id="combinacio-desquemes-basics">
-<h2>Combinació d’esquemes bàsics<a class="headerlink" href="#combinacio-desquemes-basics" title="Permalink to this heading">#</a></h2>
-<p>Així com en el Capítol 2 hem aprés que podem combinar diferents estructures de control en el mateix programa,
+<h2>Combinació d’esquemes bàsics<a class="headerlink" href="#combinacio-desquemes-basics" title="Link to this heading">#</a></h2>
+<p>Així com en el Capítol 2 vàrem aprendre que podiem combinar diferents estructures de control en el mateix programa,
 podem fer el mateix amb els esquemes bàsics. Podríem resoldre el problema utilitzant un esquema de cerca
 dins el recorregut.</p>
-<p>Si l’únic que ens interessa és trobar les parelles “la”, llavors podem afrontar el nostre problema com una cerca de
-cada una de les ‘l’ i  després mirar el què hi ha al darrera, aquest plantejament combina els recorreguts i les
-cerques. Cal destacar el fet que es planteja l’algorisme com un recorregut de valors ‘l’.</p>
-<p>L’algorisme que es despren de l’explicació anterior és el següent:</p>
+<p>Si el que interessa és únicament les parelles “la”, llavors es pot anar cercant cada una de les ‘l’ i després mirar el
+què hi ha al darrera. Aquest plantejament combina els recorreguts i les cerques. Cal destacar el fet que es planteja
+l’algorisme com un recorregut de valors ‘l’.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">inicialització</span> <span class="n">de</span> <span class="n">les</span> <span class="n">variables</span> <span class="n">necessàries</span><span class="p">:</span> <span class="n">lletra</span><span class="p">,</span> <span class="n">nombre</span>
 
 <span class="n">llegir</span> <span class="n">la</span> <span class="n">primera</span> <span class="n">lletra</span>
@@ -540,9 +519,9 @@ cerques. Cal destacar el fet que es planteja l’algorisme com un recorregut de 
 <span class="n">mostrar_resultats</span>
 </pre></div>
 </div>
-<p>El codi <code class="docutils literal notranslate"><span class="pre">Python</span></code> que resulta d’implementar l’algorisme és el següent:</p>
+<p>El codi <code class="docutils literal notranslate"><span class="pre">Python</span></code> que resulta d’implementar l’anterior algorisme és el següent:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-<span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
 
 
 <span class="n">nombre</span> <span class="o">=</span> <span class="mi">0</span>
@@ -550,7 +529,7 @@ cerques. Cal destacar el fet que es planteja l’algorisme com un recorregut de 
 <span class="n">primeraLletra</span> <span class="o">=</span> <span class="s1">&#39;l&#39;</span>
 <span class="n">segonaLletra</span> <span class="o">=</span> <span class="s1">&#39;a&#39;</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Escriu un text acabat en &quot;</span><span class="si">{</span><span class="n">fiSequencia</span><span class="si">}</span><span class="s1">&quot;&#39;</span> <span class="n">i</span> <span class="n">comptare</span> <span class="n">les</span> <span class="n">parelles</span> <span class="s2">&quot;</span><span class="si">{primeraLletra}{segonaLletra}</span><span class="s2"> que escriuras)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Escriu un text acabat en &#39;&quot;</span> <span class="o">+</span> <span class="n">fiSequencia</span> <span class="o">+</span> <span class="s2">&quot;&#39; i comptaré les parelles </span><span class="se">\&quot;</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="n">primeraLletra</span><span class="o">+</span><span class="n">segonaLletra</span><span class="o">+</span> <span class="s2">&quot;</span><span class="se">\&quot;</span><span class="s2"> que escriuràs&quot;</span><span class="p">)</span>
 
 <span class="c1"># Cercar la primera aparició de la primera lletra</span>
 <span class="n">lletra</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">stdin</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
@@ -570,18 +549,19 @@ cerques. Cal destacar el fet que es planteja l’algorisme com un recorregut de 
         <span class="n">lletra</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">stdin</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 
 <span class="c1">#Donam resultats</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;El nombre de parelles &quot;</span><span class="si">{</span><span class="n">primeraLletra</span><span class="si">}{</span><span class="n">segonaLletra</span><span class="si">}</span><span class="s1">&quot; que has escrit es: </span><span class="si">{</span><span class="n">nombre</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;El nombre de parelles  </span><span class="se">\&quot;</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="n">primeraLletra</span> <span class="o">+</span> <span class="n">segonaLletra</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\&quot;</span><span class="s2"> que has escrit es: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">nombre</span><span class="p">))</span>
 </pre></div>
 </div>
-<p>En el cas de l’exercici anterior es veu que cercar_l es pot considerar per si mateix com un programa independent. Tot
-i ser molt curt, l’algorisme general s’entén molt més que no introduint directament el codi de la cerca. La feina que
-realitza aquest tros de codi queda molt més clara.</p>
-<p>Per altra banda, s’ha de tenir present que les operacions de cercar la següent primera lletra són idèntiques i que per
-tant hauria de ser possible definir un sol tros de programa que resolgui ambdós casos. Realitzant aquest canvi, es
-resoldrien molts dels problemes que ja s’han comentat al final de l’apartat anterior.</p>
-<p>És per motius de <strong>claredat i de reusabilitat del codi</strong> que es defineixen subprogrames, a vegades també
-s’anomenen subrutines. Aquests, per si mateixos són programes complets, amb les seves declaracions i les seves
-instruccions, però a més a més, tenen la propietat poder-se utilitzar dins d’altres programes.</p>
+<p>En el cas de l’exercici anterior es veu que cercar_l es pot considerar per sí mateix com un programa independent. Tot
+i ser molt curt, l’algorisme general s’entén molt més que no introduint directament la cerca. El concepte del que es
+vol fer queda molt més clar.</p>
+<p>També s’ha de tenir present que les operacions de cercar la següent primera lletra són idèntiques i que per tant
+hauria de ser possible definir un sol troç de programa que resolgui ambdós casos, amb aquesta situació es resoldrien
+molts dels problemes que ja s’han comentat al final de l’apartat anterior.</p>
+<p>Es per motius de <strong>claredat i de reusabilitat del codi</strong> que es defineixen subprogrames, a vegades també
+s’anomenen subrutines.</p>
+<p>Aquests, per sí mateixos són programes complets, amb les seves declaracions i les seves instruccions, però a més a més,
+tenen la propietat poder-se utilitzar dins d’altres programes.</p>
 <p>L’explicació de com es construeixen els subprogrames i les seves característiques es troba en la següent secció.</p>
 </section>
 </section>
@@ -613,7 +593,7 @@ instruccions, però a més a més, tenen la propietat poder-se utilitzar dins d�
               
               
               
-                <footer class="prev-next-footer">
+                <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
     <a class="left-prev"
@@ -622,7 +602,7 @@ instruccions, però a més a més, tenen la propietat poder-se utilitzar dins d�
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">4. Organització del codi</p>
+        <p class="prev-next-title">Tema 4</p>
       </div>
     </a>
     <a class="right-next"
@@ -641,7 +621,8 @@ instruccions, però a més a més, tenen la propietat poder-se utilitzar dins d�
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -676,7 +657,7 @@ By Gabriel Moyà Alcover
 
   <p class="copyright">
     
-      © Copyright 2023.
+      © Copyright 2021.
       <br/>
     
   </p>
@@ -700,8 +681,8 @@ By Gabriel Moyà Alcover
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+  <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
   </footer>
