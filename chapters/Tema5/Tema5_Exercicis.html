@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -195,6 +195,7 @@
 </details></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="Tema5.html">Tema 5</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="Tema5_Llistes.html">Llistes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tema5_Strings.html">Strings</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Tema5_Classes.html">Classes i Objectes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Tema5_Estructures.html">Altres maneres d’estructurar les dades</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Exercicis Tema 5</a></li>
@@ -365,6 +366,7 @@
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#llistes-i-sequencies">Llistes i seqüències</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#strings">Strings</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#orientacio-a-objecte">Orientació a objecte</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#classe-numeroracional">Classe NumeroRacional</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#classe-punt-3d">Classe punt 3D</a></li>
@@ -411,26 +413,19 @@ de l’execució <code class="docutils literal notranslate"><span class="pre">la
 8. Inserta el valor 10 després del valor 2.
 </pre></div>
 </div>
-<p>2.Crear un programa que guarda en una llista de 10 elements la posició que ocupa cada element, <code class="docutils literal notranslate"><span class="pre">i</span></code> després el mostri per
-pantalla. Es a dir, hem de guardar en l’índex 0, el valor 1 …. en l’índex 9, el valor 10.</p>
+<p>2.Crear un programa que guarda en una llista de 10 elements la posició que ocupa cada element i després el mostri per pantalla. Es a dir, hem de guardar a l’índex 0, el valor 1 fins arribar a l’índex 9, el valor 10.</p>
 <p>3.Copia el següent codi que crearà una llista amb DNIS, mostra per pantalla aquells que es troben en posicions amb
 índex parell <code class="docutils literal notranslate"><span class="pre">dni</span> <span class="pre">=</span> <span class="pre">[43542311,</span> <span class="pre">43542312,43542313,</span> <span class="pre">43542314,</span> <span class="pre">43542315,</span> <span class="pre">43542316]</span></code>.</p>
 </section>
 <section id="llistes-i-sequencies">
 <h3>Llistes i seqüències<a class="headerlink" href="#llistes-i-sequencies" title="Link to this heading">#</a></h3>
-<p>4.Crear un programa que deixa una seqüència de caràcters acabada en punt, la guarda en una llista i després
-mostra la seqüència invertida.</p>
-<p>5.Elimina totes les ocurrències del valor 2 en la següent llista: <code class="docutils literal notranslate"><span class="pre">segona_llista</span> <span class="pre">=</span> <span class="pre">[1,2,2,4,5,2,4,2,2]</span></code></p>
-<p>6.Crear un programa que generi 10 nombres aleatoris en l’interval <code class="docutils literal notranslate"><span class="pre">[0,</span> <span class="pre">100]</span></code> i els guardi en una llista. Posteriorment
-ha de crear una nova llista amb els números menors a 50 i mostrar-la per pantalla.</p>
-<p>7.Crear una funció que rebi una llista amb valors numèrics i retorni <strong>una nova</strong> llista on cada posició té la suma
-acumulada dels valors anteriors amb el valor d’aquesta posició.</p>
-<p>8.Crear un programa que llegeix una seqüència acabada en punt i ens digui la freqüència d’aparició de cada vocal. És
-obligatori l’ús de llistes.</p>
-<p>9.Crear un programa que genera 60 nombres aleatoris en l’interval <code class="docutils literal notranslate"><span class="pre">[0,</span> <span class="pre">100]</span></code> i els guarda en una llista. Posteriorment
-heu de generar una nova llista sense duplicats.</p>
-<p>10.Crear un programa que llegeix dues seqüències de la mateixa longitud acabades en punt, i mostra per pantalla el
-resultat d’intercalar les dues seqüències. La introducció de les dues seqüències s’ha de fer en una sola línia.</p>
+<p>4.Crear un programa que llegeig una seqüència de caràcters acabada en punt, la guarda en una llista i després mostra la seqüència invertida.</p>
+<p>5.Elimina totes les ocurrències del valor 2 en la següent llista: <code class="docutils literal notranslate"><span class="pre">segona_llista</span> <span class="pre">=</span> <span class="pre">[1,2,2,4,5,2,4,2,2]</span></code>. Volem modificar la llista anomenada <code class="docutils literal notranslate"><span class="pre">segona_llista</span></code> no crear-ne una de nova.</p>
+<p>6.Crear un programa que generi 10 nombres aleatoris en l’interval <code class="docutils literal notranslate"><span class="pre">[0,</span> <span class="pre">100]</span></code> i els guardi en una llista. Posteriorment ha de crear una nova llista amb els números menors a 50 i mostrar-la per pantalla.</p>
+<p>7.Crear una funció que rebi una llista amb valors numèrics i retorni <strong>una nova</strong> llista on cada posició té la suma acumulada dels valors anteriors amb el valor d’aquesta posició.</p>
+<p>8.Crear un programa que llegeix una seqüència acabada en punt i ens digui la freqüència d’aparició de cada vocal. És obligatori l’ús de llistes.</p>
+<p>9.Crear un programa que genera 60 nombres aleatoris en l’interval <code class="docutils literal notranslate"><span class="pre">[0,</span> <span class="pre">100]</span></code> i els guarda en una llista. Posteriorment heu de generar una <strong>nova llista</strong> sense duplicats.</p>
+<p>10.Crear un programa que llegeix dues seqüències de la mateixa longitud acabades en punt, i mostra per pantalla el resultat d’intercalar les dues seqüències. La introducció de les dues seqüències s’ha de fer en una sola línia.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="n">Per</span> <span class="n">exemple</span><span class="p">:</span>
 
     <span class="n">hola</span> <span class="n">cargol</span> <span class="n">de</span> <span class="n">mar</span><span class="o">.</span><span class="n">adeu</span> <span class="n">juanito</span><span class="o">.</span>
@@ -440,19 +435,15 @@ resultat d’intercalar les dues seqüències. La introducció de les dues seqü
     <span class="n">haodliao</span> <span class="n">sc</span> <span class="n">ajruaacnoiltao</span>
 </pre></div>
 </div>
-<p>Versió més difícil: Realitzar el mateix exercici llegint cada seqüència en diferents línies i permetent que les dues
-seqüències siguin de diferent longitud.</p>
-<p>11.Crear un programa que llegeix una seqüència de paraules acabades en punt. El tractament de cada paraula consisteix
-en emmagatzemarla en un llista i determinar si la paraula és un palíndrom (capicua). Vegeu el següent exemple:</p>
+<p>Versió més difícil: Realitzar el mateix exercici llegint cada seqüència en diferents línies i permetent que les dues seqüències siguin de diferent longitud.</p>
+<p>11.Crear un programa que llegeix una seqüència de paraules acabades en punt. El tractament de cada paraula consisteix a emmagatzemar-la en una llista i determinar si la paraula és un palíndrom (capicua). Vegeu el següent exemple:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="n">avio</span> <span class="n">rallar</span><span class="o">.</span>
     <span class="n">avio</span><span class="o">.</span>    <span class="n">no</span> <span class="n">és</span> <span class="n">capicua</span>
     <span class="n">rallar</span><span class="o">.</span> <span class="n">és</span> <span class="n">capicua</span>
 
 </pre></div>
 </div>
-<p>12.Crear un programa que genera dues llistes de longitud 10 amb nombres aleatoris en l’interval 0-20, les mostra i
-posteriorment mostra la llista resultant de realitzar l’intersecció entre les dues. <strong>Pista:</strong> l’operand <code class="docutils literal notranslate"><span class="pre">in</span></code> permet
-saber si un valor està en una llista, tornant un booleà.</p>
+<p>12.Crear un programa que genera dues llistes de longitud 10 amb nombres aleatoris en l’interval 0-20, les mostra i posteriorment mostra la llista resultant de realitzar l’intersecció entre les dues. <strong>Recordatori:</strong> l’operand <code class="docutils literal notranslate"><span class="pre">in</span></code> permet saber si un valor està en una llista, tornant un booleà.</p>
 <p>13.Crear un programa que guarda en una llista que només conté valors booleans si el nombre en qüestió és primer o
 no. Ho ha de calcular pels números del 0 al 100. Finalment hem de veure el següent per pantalla:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="mi">0</span> <span class="o">-&gt;</span> <span class="n">fals</span>
@@ -482,9 +473,7 @@ no. Ho ha de calcular pels números del 0 al 100. Finalment hem de veure el seg�
 Fibonacci i els guardi en una llista, després ha de recórrer la llista i imprimir els valors. El valor <em>n</em> ha de
 demanar-se a l’usuari)</p>
 <p>La sèrie de Fibonacci es defineix com <span class="math notranslate nohighlight">\(f(n) = f(n-1) + f(n-2)\)</span>. i els primers dos termes són igual a 1.</p>
-<p>16.Modificar el programa perquè també mostri l’aproximació al nombre auri. El nombre auri es pot aproximar
-mitjançant la relació de dos nombres consecutius de la sèrie de Fibonacci. El programa ha de fer l’aproximació amb el
-valor <code class="docutils literal notranslate"><span class="pre">n</span></code> i el valor <code class="docutils literal notranslate"><span class="pre">n-1</span></code></p>
+<p>16.Modificar el programa perquè també mostri l’aproximació al nombre auri. El nombre auri es pot aproximar mitjançant la relació de dos nombres consecutius de la sèrie de Fibonacci. El programa ha de fer l’aproximació amb el valor <code class="docutils literal notranslate"><span class="pre">n</span></code> i el valor <code class="docutils literal notranslate"><span class="pre">n-1</span></code>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="mi">3</span><span class="o">/</span><span class="mi">2</span> <span class="o">=</span> <span class="mf">1.5</span>
     <span class="mi">5</span><span class="o">/</span><span class="mi">3</span> <span class="o">=</span> <span class="mf">1.66666</span>
     <span class="mi">8</span><span class="o">/</span><span class="mi">5</span> <span class="o">=</span> <span class="mf">1.6</span>
@@ -495,6 +484,17 @@ valor <code class="docutils literal notranslate"><span class="pre">n</span></cod
 </pre></div>
 </div>
 </section>
+</section>
+<section id="strings">
+<h2>Strings<a class="headerlink" href="#strings" title="Link to this heading">#</a></h2>
+<p>Aquests exercicis están dissenyats per practicar només amb <em>Strings</em>. Podeu emprar tots els mètodes existents.</p>
+<p>17.Donat un <em>String</em> llegit per teclat, elimina tots els caràcters excepte els nombres enters.
+Exemple: <code class="docutils literal notranslate"><span class="pre">str1</span> <span class="pre">=</span> <span class="pre">&quot;Tinc</span> <span class="pre">25</span> <span class="pre">anys</span> <span class="pre">i</span> <span class="pre">10</span> <span class="pre">mesos&quot;</span></code> llavors <code class="docutils literal notranslate"><span class="pre">str</span> <span class="pre">=</span> <span class="pre">&quot;2510</span></code></p>
+<p>18.Donats dos <em>Strings</em>, <code class="docutils literal notranslate"><span class="pre">s1</span></code> i <code class="docutils literal notranslate"><span class="pre">s2</span></code>. Escriu un programa per crear un nou <em>String</em> anomenat s3 que és el resultat d’inserir <code class="docutils literal notranslate"><span class="pre">s2</span></code> al mig de <em>s1</em>. Si la longitut de s1 és senar, la part més llarga quedarà al principi.</p>
+<p>Exemple: <code class="docutils literal notranslate"><span class="pre">s1</span> <span class="pre">=</span> <span class="pre">&quot;joan&quot;</span></code> i <code class="docutils literal notranslate"><span class="pre">s2=patata</span></code> llavors <code class="docutils literal notranslate"><span class="pre">s3=jopatataan</span></code>.</p>
+<p>19.Escriu una funció anomenada <code class="docutils literal notranslate"><span class="pre">digits</span></code> que rep un <em>String</em>, <code class="docutils literal notranslate"><span class="pre">s1</span></code>, que retorna la suma dels dígits que apareixen a <code class="docutils literal notranslate"><span class="pre">s1</span></code>, ignorant tots els altres caràcters. Recorda que en aquests exercicis només pots emprar mètodes relacionats amb <em>Strings</em>.</p>
+<p>20.Escriu un programa per trobar paraules que contenen lletres de l’alfabet i números (ambdues coses) a partir d’un <em>String</em> d’entrada.</p>
+<p>Exemple: <code class="docutils literal notranslate"><span class="pre">str1</span> <span class="pre">=</span> <span class="pre">&quot;Emma25</span> <span class="pre">is</span> <span class="pre">50scientist</span> <span class="pre">and</span> <span class="pre">AI</span> <span class="pre">Expert&quot;</span></code>  llavors ha de mostrar <code class="docutils literal notranslate"><span class="pre">Emma25</span></code> i <code class="docutils literal notranslate"><span class="pre">50scientist</span></code>.</p>
 </section>
 <section id="orientacio-a-objecte">
 <h2>Orientació a objecte<a class="headerlink" href="#orientacio-a-objecte" title="Link to this heading">#</a></h2>
@@ -744,6 +744,7 @@ funcionament de la classe implementada executant aquest codi.</p>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#llistes-i-sequencies">Llistes i seqüències</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#strings">Strings</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#orientacio-a-objecte">Orientació a objecte</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#classe-numeroracional">Classe NumeroRacional</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#classe-punt-3d">Classe punt 3D</a></li>

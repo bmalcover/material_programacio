@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -193,6 +193,7 @@
 </details></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="Tema5.html">Tema 5</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="Tema5_Llistes.html">Llistes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tema5_Strings.html">Strings</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Tema5_Classes.html">Classes i Objectes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Tema5_Estructures.html">Altres maneres d’estructurar les dades</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Tema5_Exercicis.html">Exercicis Tema 5</a></li>
@@ -375,28 +376,17 @@
 <section id="altres-estructures">
 <h2>Altres estructures<a class="headerlink" href="#altres-estructures" title="Link to this heading">#</a></h2>
 <ol class="arabic simple">
-<li><p>Obtenir una llista amb el quadrat dels 5 primers nombres naturals.</p></li>
-<li><p>Tenim una llista que té un conjunt de distàncies en metres (la podeu crear a mà) Transformar-la en una que
-té les distàncies en iardes: 1 iarda = 0,9144 metres.</p></li>
-<li><p>Fer un programa que ens diu el nombre d’aparicions de cada vocal en una seqüència acabada en punt, aquest cop heu
-d’usar un diccionari.</p></li>
-<li><p>Crear una funció generadora que rebi el valor d’inici i l’increment com a paràmetre i ens proporcioni valors
-successius a partir del valor inicial. Llavors, crear una llista de 10 nombres que comenci en el valor -5 i els
-següents nombres s’obtinguin d’incrementar l’anterior en 10 unitats. Finalment, crear una nova llista, amb aquells que
+<li><p>Obtenir una llista amb el quadrat dels 5 primers nombres naturals. Aquest exercici s’ha de realitzar usant <em>list comprehension</em>.</p></li>
+<li><p>Tenim una llista que té un conjunt de distàncies en metres (la podeu crear a mà dins el codi). Transformar-la en una que té les distàncies en iardes: 1 iarda = 0,9144 metres. Aquest exercici s’ha de realitzar usant <em>list comprehension</em>.</p></li>
+<li><p>Fer un programa que ens diu el nombre d’aparicions de cada vocal en una seqüència acabada en punt; Aquest cop en lloc d’una llista heu d’usar un diccionari. Aquest exercici no es pot solucionar amb _list comprehension.</p></li>
+<li><p>Crear una funció generadora que rebi el valor d’inici i l’increment com a paràmetre i ens proporcioni valors successius a partir del valor inicial. Llavors, crear una llista de 10 nombres que comenci en el valor -5 i els següents nombres s’obtinguin d’incrementar l’anterior en 10 unitats. Finalment, crear una nova llista, amb aquells que
 són positius.</p></li>
-<li><p>Generar una llista que contengui els primers 11 valors d’una successió que té com a terme inicial el valor 1 i els
-termes successius s’obtenen sumant un nombre aleatori entre 1 i 4 al terme previ. Crear la llista d’aquells que són parells.
-Heu d’usar una funció generadora.</p></li>
-<li><p>Implementar la vostra pròpia funció map anomenada <code class="docutils literal notranslate"><span class="pre">mimap</span></code>. Aquesta funció rep una funció lambda per paràmetre i
-l’aplica als elements d’una llista que també rep per paràmetre.. Posau un exemple d’ús.</p></li>
-<li><p>Eliminar els noms buits de la següent llista: <code class="docutils literal notranslate"><span class="pre">noms</span> <span class="pre">=</span> <span class="pre">[&quot;&quot;,</span> <span class="pre">&quot;jose&quot;,</span> <span class="pre">&quot;juana&quot;,</span> <span class="pre">&quot;lluis&quot;</span> <span class="pre">,</span> <span class="pre">&quot;encarnacio&quot;,</span> <span class="pre">&quot;&quot;,</span> <span class="pre">&quot;pepa&quot;]</span></code>
-<em>Ajuda</em>: També podem aplicar la funció <em>len</em> als <em>strings</em>, un <em>string</em> buit té longitud 0.</p></li>
+<li><p>Generar una llista que contengui els primers 11 valors d’una successió que té com a terme inicial el valor 1 i els termes successius s’obtenen sumant un nombre aleatori entre 1 i 4 al terme previ. Crear la llista d’aquells que són parells. Heu d’usar una funció generadora.</p></li>
+<li><p>Implementar la vostra pròpia funció <code class="docutils literal notranslate"><span class="pre">map</span></code> anomenada <code class="docutils literal notranslate"><span class="pre">mimap</span></code>. Aquesta funció rep una funció lambda per paràmetre i l’aplica als elements d’una llista que també rep per paràmetre. Posau un exemple d’ús.</p></li>
+<li><p>Eliminar els noms buits de la següent llista: <code class="docutils literal notranslate"><span class="pre">noms</span> <span class="pre">=</span> <span class="pre">[&quot;&quot;,</span> <span class="pre">&quot;jose&quot;,</span> <span class="pre">&quot;juana&quot;,</span> <span class="pre">&quot;lluis&quot;</span> <span class="pre">,</span> <span class="pre">&quot;encarnacio&quot;,</span> <span class="pre">&quot;&quot;,</span> <span class="pre">&quot;pepa&quot;]</span></code>.<em>Ajuda</em>: Un <em>string</em> buit té longitud 0.</p></li>
 <li><p>A partir de la llista de l’exercici anterior, volem obtenir una nova llista on concatenem els noms amb els següents
 <code class="docutils literal notranslate"><span class="pre">cognoms</span> <span class="pre">=</span> <span class="pre">[&quot;stark&quot;,</span> <span class="pre">&quot;targaryen&quot;,</span> <span class="pre">&quot;baratheon&quot;,</span> <span class="pre">&quot;martell&quot;,</span> <span class="pre">&quot;lannister&quot;]</span></code></p></li>
-<li><p>Aquest algorisme hauria de fer la següent feina: donades dues llistes de nombres de la mateixa longitud, determina
-quina d’elles té més valors més alts comparant-los un a un. Aquest programa no funciona correctament. Heu
-d’indicar un cas en què falli, i escriure una nova versió corregida. La nova versió no pot emprar bucles,
-només <em>list comprehensions</em> i funcions lambda.</p></li>
+<li><p>Aquest algorisme hauria de fer la següent feina: donades dues llistes de nombres de la mateixa longitud, determina quina d’elles té més valors més alts comparant-los un a un. Aquest programa no funciona correctament. Heu d’indicar un cas en què falli, i escriure una nova versió corregida. La nova versió no pot emprar bucles, només <em>list comprehensions</em> i funcions lambda.</p></li>
 </ol>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>countA = 0
 countB = 0
