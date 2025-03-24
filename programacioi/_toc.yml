@@ -1,50 +1,39 @@
-# Table of contents
-# Learn more at https://jupyterbook.org/customize/toc.html
-- file: intro
+format: jb-article
+root: intro
+sections:
 - file: chapters/Tema1
-
 - file: chapters/Tema2/Tema2_Intro
   sections:
-    - file: chapters/Tema2/Tema2
-    - file: chapters/Tema2/Tema2_Estructures_de_control
-    - file: chapters/Tema2/Tema2_Exercicis
-
+  - file: chapters/Tema2/Tema2
+  - file: chapters/Tema2/Tema2_Estructures_de_control
+  - file: chapters/Tema2/Tema2_Exercicis
 - file: chapters/Tema3/Tema3_
   sections:
-    - file: chapters/Tema3/Tema3_Exercicis
-
-
+  - file: chapters/Tema3/Tema3_Exercicis
 - file: chapters/Tema4/Tema4_
   sections:
-    - file: chapters/Tema4/Tema4_Esquemes
-      title: Aplicació dels esquemes bàsics
-    - file: chapters/Tema4/Tema4_Subprogrames
-    - file: chapters/Tema4/Tema4_Aplicacio_esquemes_subprogrames
-      title: Esquemes amb subprogrames
-    - file: chapters/Tema4/Tema4_Exercicis_subprogrames
-
+  - file: chapters/Tema4/Tema4_Esquemes
+    title: "Aplicaci\xF3 dels esquemes b\xE0sics"
+  - file: chapters/Tema4/Tema4_Subprogrames
+  - file: chapters/Tema4/Tema4_Aplicacio_esquemes_subprogrames
+    title: Esquemes amb subprogrames
+  - file: chapters/Tema4/Tema4_Exercicis_subprogrames
 - file: chapters/Tema5/Tema5
   sections:
-    - file: chapters/Tema5/Tema5_Llistes
-    - file: chapters/Tema5/Tema5_Classes
-    - file: chapters/Tema5/Tema5_Estructures
-    - file: chapters/Tema5/Tema5_Exercicis
-    - file: chapters/Tema5/Tema5_Exercicis_altres_estructures
-
-- file:  chapters/Tema6/Tema6_Fitxers
+  - file: chapters/Tema5/Tema5_Llistes
+  - file: chapters/Tema5/Tema5_Strings
+  - file: chapters/Tema5/Tema5_Classes
+  - file: chapters/Tema5/Tema5_Estructures
+  - file: chapters/Tema5/Tema5_Exercicis
+  - file: chapters/Tema5/Tema5_Exercicis_altres_estructures
+- file: chapters/Tema6/Tema6_Fitxers
   sections:
-    - file: chapters/Tema6/Tema6_Exercicis
-
-- file:  chapters/Tema7/Tema7_Algorismes
+  - file: chapters/Tema6/Tema6_Exercicis
+- file: chapters/Tema7/Tema7_Algorismes
   sections:
-    - file: chapters/Tema7/Tema7_Exercicis
-
+  - file: chapters/Tema7/Tema7_Exercicis
 - file: chapters/Annexes/Annexes
   sections:
-    - file: chapters/Annexes/Entorn_Desenvolupament
-    - file: chapters/Annexes/Taula_ASCII
-    - file: chapters/Annexes/Fitxers_Externs
-
-
-
-
+  - file: chapters/Annexes/Entorn_Desenvolupament
+  - file: chapters/Annexes/Taula_ASCII
+  - file: chapters/Annexes/Fitxers_Externs
