@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Classe Conjunt &#8212; Programacio I</title>
+    <title>POO &#8212; Programacio I</title>
   
   
   
@@ -199,9 +199,7 @@
 <li class="toctree-l2"><a class="reference internal" href="Tema5_Classes.html">Classes i Objectes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Tema5_Estructures.html">Altres maneres d’estructurar les dades</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Tema5_Exercicis.html">Exercicis Tema 5</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Classe Conjunt</a></li>
-
-
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">POO</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Tema5_Exercicis_altres_estructures.html">Exercicis Tema 5/2</a></li>
 </ul>
 </details></li>
@@ -354,7 +352,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Classe Conjunt</h1>
+    <h1>POO</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -364,24 +362,23 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Classe Conjunt</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercici">Exercici</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#classe-conjunt">Classe Conjunt</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercici">Exercici</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#classe-interval">Classe Interval</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Exercici</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#classe-interval">Classe Interval</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Exercici</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#classe-rutagpx">Classe RutaGpx</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercicis">Exercicis</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">1</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">2</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#classe-rutagpx">Classe RutaGpx</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercicis">Exercicis</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">1</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">2</a></li>
 </ul>
 </li>
 </ul>
-
+</li>
+</ul>
             </nav>
         </div>
     </div>
@@ -392,8 +389,10 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="classe-conjunt">
-<h1>Classe Conjunt<a class="headerlink" href="#classe-conjunt" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="poo">
+<h1>POO<a class="headerlink" href="#poo" title="Link to this heading">#</a></h1>
+<section id="classe-conjunt">
+<h2>Classe Conjunt<a class="headerlink" href="#classe-conjunt" title="Link to this heading">#</a></h2>
 <p>Aquesta classe té un únic atribut: una llista.</p>
 <p>El constructor crea una llista buida.
 Mètodes (interficie):</p>
@@ -410,12 +409,12 @@ Mètodes (interficie):</p>
 <li><p><strong>sobreescriptura</strong> <em>String</em> : retorna un string amb els elements del conjunt.</p></li>
 </ul>
 <section id="exercici">
-<h2>Exercici<a class="headerlink" href="#exercici" title="Link to this heading">#</a></h2>
+<h3>Exercici<a class="headerlink" href="#exercici" title="Link to this heading">#</a></h3>
 <p>Fer un programa que ens digui quines lletres tenen en comú 2 seqüències de lletres llegides del teclat i acabades en punt, els espais no.</p>
 </section>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="classe-interval">
-<h1>Classe Interval<a class="headerlink" href="#classe-interval" title="Link to this heading">#</a></h1>
+<section id="classe-interval">
+<h2>Classe Interval<a class="headerlink" href="#classe-interval" title="Link to this heading">#</a></h2>
 <p>Es demana implementar una clase coneguda amb el nom d’Interval (Interval tancat). Els objectes d’aquesta classe guarden dos valors: límit inferior de l’interval i el límit superior de l’interval.</p>
 <p>Un exemple d’operació que es pot fer amb aquesta classe és: siguin dos nombres p i q que es troben en els intervals p = [a,b] i q = [c,d]. El resultat de la suma es trobarà en el nou interval [s, t] on s=a+c i t=b+d. Per aquesta classe
 a més de la suma tenim les següents operacions que s’han d’implementar:</p>
@@ -432,15 +431,15 @@ Si l’exponent és 0 o menor a 0 llavors modifica l’objecte referenciat per s
 <li><p>Sobreescriu l’operador String d’aquesta classe.</p></li>
 </ul>
 <section id="id1">
-<h2>Exercici<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<h3>Exercici<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
 <p>Un cop implementada aquesta classe, fes un programa que calculi el volum d’una esfera. Sigui r  un nombre que hem de llegir de teclat. El radi, R, de l’esfera té una certa incertesa i es troba dins l’interval un 10% més petit o un 10%
 més gran de r. El resultat ha de ser un Interval que mostrem per pantalla.</p>
 <p>Utilitzarem la següent formula: <span class="math notranslate nohighlight">\(V = (4/3)𝜋R^3\)</span></p>
 <p>La constant pi és al paquet <em>Math</em></p>
 </section>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="classe-rutagpx">
-<h1>Classe RutaGpx<a class="headerlink" href="#classe-rutagpx" title="Link to this heading">#</a></h1>
+<section id="classe-rutagpx">
+<h2>Classe RutaGpx<a class="headerlink" href="#classe-rutagpx" title="Link to this heading">#</a></h2>
 <p>Discworld és un món pla sostingut per quatre elefants que, al seu torn, es recolzen a la closca de Gran A’Tuin, la tortuga estel·lar. El mag Rincewind ens demana que l’ajudem programant una classe per guardar les seves rutes preferides.
 Aquesta classe anomenada RutaGpx ha de permetre guardar un conjunt ordenat de punts de la forma <code class="docutils literal notranslate"><span class="pre">p=(x,</span> <span class="pre">y,</span> <span class="pre">z)</span></code> que indiquen un camí dins el mon.
 Els constructors d’aquesta classe reben el nom de la ruta, un string amb valor per defecte “Df”.</p>
@@ -454,17 +453,18 @@ Els constructors d’aquesta classe reben el nom de la ruta, un string amb valor
 <li><p>Realitzar una funció <strong>intersecció</strong> que rep una ruta per paràmetre i retorna <code class="docutils literal notranslate"><span class="pre">True</span></code> si existeix alguna intersecció amb la ruta referenciada per <code class="docutils literal notranslate"><span class="pre">self</span></code> i <code class="docutils literal notranslate"><span class="pre">False</span></code> en cas contrari. En el nostre context direm que dues rutes intersequen si tenen algun punt en comú.</p></li>
 </ol>
 <section id="exercicis">
-<h2>Exercicis<a class="headerlink" href="#exercicis" title="Link to this heading">#</a></h2>
+<h3>Exercicis<a class="headerlink" href="#exercicis" title="Link to this heading">#</a></h3>
 <section id="id2">
-<h3>1<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
+<h4>1<a class="headerlink" href="#id2" title="Link to this heading">#</a></h4>
 <p>Realitzar un programa que crea les següents rutes, emprant els mètodes desenvolupats:</p>
 <p>lluc = [ (1, 1, 0), (2, 2, 139), (3, 3, 278), (4, 4, 417), (5, 5, 556), (6, 6, 695), (7, 7, 834), (8, 8, 973), (9, 9, 1112), (10, 10, 1250) ]</p>
 <p>caimari = [ (11, 11, 1300), (10, 13, 1156), (9, 14, 1011), (8, 16, 867), (7, 17, 722), (6, 19, 578), (5, 20, 433), (4, 22, 289), (3, 23, 144), (1, 25, 0) ]</p>
 <p>Després ha de mostrar la longitud de la ruta anomenada lluc, concatenar les dues rutes (lluc va primer) i mira si la ruta lluc interseca amb la nova ruta creada.</p>
 </section>
 <section id="id3">
-<h3>2<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
+<h4>2<a class="headerlink" href="#id3" title="Link to this heading">#</a></h4>
 <p>Modifica la classe anterior per a que existeixi un mètode que ens permeti saber quantes rutes hem creat.</p>
+</section>
 </section>
 </section>
 </section>
@@ -534,24 +534,23 @@ Els constructors d’aquesta classe reben el nom de la ruta, un string amb valor
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Classe Conjunt</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercici">Exercici</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#classe-conjunt">Classe Conjunt</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercici">Exercici</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#classe-interval">Classe Interval</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Exercici</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#classe-interval">Classe Interval</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Exercici</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#classe-rutagpx">Classe RutaGpx</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercicis">Exercicis</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">1</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">2</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#classe-rutagpx">Classe RutaGpx</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercicis">Exercicis</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">1</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">2</a></li>
 </ul>
 </li>
 </ul>
-
+</li>
+</ul>
   </nav></div>
 
 </div></div>
