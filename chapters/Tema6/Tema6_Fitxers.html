@@ -366,6 +366,11 @@
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#us-de-fitxers-a-python">Us de fitxers a Python</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#el-mode-d-un-fitxer">El mode d’un fitxer</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#llegir-i-escriure-en-fitxers-oberts">Llegir i escriure en fitxers oberts</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduccio-a-la-serialitzacio-d-objectes">Introducció a la serialització d’objectes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#que-es-la-serialitzacio">Què és la serialització?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exemple-senzill-amb-pickle">Exemple senzill amb <code class="docutils literal notranslate"><span class="pre">pickle</span></code></a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -614,6 +619,45 @@ Es Leviosa, no leviosa
 </div>
 </div>
 </section>
+<section id="introduccio-a-la-serialitzacio-d-objectes">
+<h2>Introducció a la serialització d’objectes<a class="headerlink" href="#introduccio-a-la-serialitzacio-d-objectes" title="Link to this heading">#</a></h2>
+<p>Quan programem, sovint necessitem <strong>guardar informació</strong> perquè es pugui reutilitzar més endavant. Per exemple, podem voler:</p>
+<ul class="simple">
+<li><p>Guardar la partida d’un joc.</p></li>
+<li><p>Desar una llista de tasques.</p></li>
+<li><p>Emmagatzemar dades d’un formulari per carregar-les després.</p></li>
+</ul>
+<p>Per fer això, hem de <strong>guardar els objectes de Python en un fitxer</strong>, però els fitxers només entenen <strong>text</strong> o <strong>bytes</strong>, no objectes directament. Aquí és on entra la <strong>serialització</strong>.</p>
+</section>
+<section id="que-es-la-serialitzacio">
+<h2>Què és la serialització?<a class="headerlink" href="#que-es-la-serialitzacio" title="Link to this heading">#</a></h2>
+<p><strong>Serialitzar</strong> vol dir convertir un objecte de Python (com una llista, un diccionari o una instància d’una classe) en un format que es pugui guardar en un fitxer (normalment bytes).</p>
+<p>Així, més endavant, podem <strong>deserialitzar</strong> aquest contingut i reconstruir l’objecte original.</p>
+<p>A Python existeix el mòdul <code class="docutils literal notranslate"><span class="pre">pickle</span></code> que té dues operacions:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">dump</span></code>: permet guardar un objecte en un fitxer ja obert.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">load</span></code>: permet carregar un objecte d’un fitxer ja obert.</p></li>
+</ul>
+<section id="exemple-senzill-amb-pickle">
+<h3>Exemple senzill amb <code class="docutils literal notranslate"><span class="pre">pickle</span></code><a class="headerlink" href="#exemple-senzill-amb-pickle" title="Link to this heading">#</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pickle</span>
+
+<span class="c1"># Dades que volem guardar</span>
+<span class="n">dades</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;nom&quot;</span><span class="p">:</span> <span class="s2">&quot;Anna&quot;</span><span class="p">,</span> <span class="s2">&quot;edat&quot;</span><span class="p">:</span> <span class="mi">21</span><span class="p">,</span> <span class="s2">&quot;aficions&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;música&quot;</span><span class="p">,</span> <span class="s2">&quot;excursions&quot;</span><span class="p">]}</span>
+
+<span class="c1"># Serialització: guardar al fitxer</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;dades.pkl&quot;</span><span class="p">,</span> <span class="s2">&quot;wb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fitxer</span><span class="p">:</span>
+    <span class="n">pickle</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">dades</span><span class="p">,</span> <span class="n">fitxer</span><span class="p">)</span>
+
+<span class="c1"># Deserialització: carregar del fitxer</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;dades.pkl&quot;</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fitxer</span><span class="p">:</span>
+    <span class="n">dades_carregades</span> <span class="o">=</span> <span class="n">pickle</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">fitxer</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">dades_carregades</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
 <div class="toctree-wrapper compound">
 </div>
 </section>
@@ -689,6 +733,11 @@ Es Leviosa, no leviosa
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#us-de-fitxers-a-python">Us de fitxers a Python</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#el-mode-d-un-fitxer">El mode d’un fitxer</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#llegir-i-escriure-en-fitxers-oberts">Llegir i escriure en fitxers oberts</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduccio-a-la-serialitzacio-d-objectes">Introducció a la serialització d’objectes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#que-es-la-serialitzacio">Què és la serialització?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exemple-senzill-amb-pickle">Exemple senzill amb <code class="docutils literal notranslate"><span class="pre">pickle</span></code></a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
