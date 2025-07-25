@@ -9,6 +9,8 @@ sections:
   - file: chapters/Tema2/Tema2_Exercicis
 - file: chapters/Tema3/Tema3_
   sections:
+  - file: chapters/Tema3/Tema3_Sequencies_sequencies
+  - file: chapters/Tema3/Tema3_sequencies_complexes
   - file: chapters/Tema3/Tema3_Exercicis
 - file: chapters/Tema4/Tema4_
   sections:
