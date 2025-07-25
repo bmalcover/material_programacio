@@ -1,0 +1,734 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Esquemes algorísmics bàsics aplicats a problemes més complexes &#8212; Programacio I</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b76e3c8a" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'chapters/Tema3/Tema3_sequencies_complexes';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Exercicis del Tema 3" href="Tema3_Exercicis.html" />
+    <link rel="prev" title="Seqüències de seqüències" href="Tema3_Sequencies_sequencies.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo.png" class="logo__image only-light" alt="Programacio I - Home"/>
+    <img src="../../_static/logo.png" class="logo__image only-dark pst-js-only" alt="Programacio I - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    Introducció
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Tema1.html">Tema 1</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Tema2/Tema2_Intro.html">Tema 2</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Tema2/Tema2.html">Dades</a></li>
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Tema2/Tema2_Estructures_de_control.html">Composició d’instruccions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tema2/Tema2_Exercicis.html">Exercicis Tema 2</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="Tema3_.html">Tema 3</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Tema3_Sequencies_sequencies.html">Seqüències de seqüències</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Esquemes algorísmics bàsics aplicats a problemes més complexes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tema3_Exercicis.html">Exercicis del Tema 3</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Tema4/Tema4_.html">Tema 4</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Tema4/Tema4_Esquemes.html">Aplicació dels esquemes bàsics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tema4/Tema4_Subprogrames.html">Tema 4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tema4/Tema4_Aplicacio_esquemes_subprogrames.html">Esquemes amb subprogrames</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tema4/Tema4_Exercicis_subprogrames.html">Exercicis del Tema 4</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Tema5/Tema5.html">Tema 5</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Tema5/Tema5_Llistes.html">Llistes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tema5/Tema5_Strings.html">Strings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tema5/Tema5_Classes.html">Classes i Objectes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tema5/Tema5_Estructures.html">Altres maneres d’estructurar les dades</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tema5/Tema5_Exercicis.html">Exercicis Tema 5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tema5/Tema5_POO.html">Exercicis Consolidació POO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tema5/Tema5_Exercicis_altres_estructures.html">Exercicis Tema 5/2</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Tema6/Tema6_Fitxers.html">Tema 6</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Tema6/Tema6_Exercicis.html">Exercicis Tema 6</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Tema7/Tema7_Algorismes.html">Tema 7</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Tema7/Tema7_Exercicis.html">Exercicis Tema 7</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Annexes/Annexes.html">Annexos</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Annexes/Entorn_Desenvolupament.html">Entorn de desenvolupament</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Annexes/Taula_ASCII.html">Taula ASCII</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Annexes/Fitxers_Externs.html">Fitxers externs</a></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/chapters/Tema3/Tema3_sequencies_complexes.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Esquemes algorísmics bàsics aplicats a problemes més complexes</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#adaptacio-de-l-algorisme-al-problema-que-es-vol-resoldre">Adaptació de l’algorisme al problema que és vol resoldre</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#finestres">Finestres</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercici">Exercici</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="esquemes-algorismics-basics-aplicats-a-problemes-mes-complexes">
+<h1>Esquemes algorísmics bàsics aplicats a problemes més complexes<a class="headerlink" href="#esquemes-algorismics-basics-aplicats-a-problemes-mes-complexes" title="Link to this heading">#</a></h1>
+<p>TODO; És una merda!!!
+En la primera part del capítol hem tractat de resoldre problemes  mitjançant l’aplicació d’algorismes de cerca i recorregut. En aquesta segona part complicarem una mica més afegint múltiples elements a tenir en comp</p>
+<section id="adaptacio-de-l-algorisme-al-problema-que-es-vol-resoldre">
+<h2>Adaptació de l’algorisme al problema que és vol resoldre<a class="headerlink" href="#adaptacio-de-l-algorisme-al-problema-que-es-vol-resoldre" title="Link to this heading">#</a></h2>
+<p>Començarem el capítol proposant un problema prou conegut que consisteix a comptar nombres, en concret aquest tema
+passarem de nombres individuals i començarem a comptar grups. Proposarem diverses maneres de resoldre el mateix problema tot argumentant els pros i els contres de cada una.</p>
+<p><strong>Es desitja saber quantes parelles dels digits 1 i 2 seguits s’hi poden trobar.</strong></p>
+<p>El fet d’haver de comptar totes les parelles requereix, per força, recórrer tota la seqüència. Així doncs s’haurà
+d’adaptar l’esquema de recorregut. Una primera implementació d’una solució per aquest problema seria la següent:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+<span class="n">fiSequencia</span> <span class="o">=</span> <span class="s1">&#39;-1&#39;</span>
+<span class="n">quantitat</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Escriu un text acabat en </span><span class="si">{</span><span class="n">fiSequencia</span><span class="si">}</span><span class="s2"> i comptaré les parelles de &#39;1&#39; seguit de &#39;2&#39; que hi escriuràs&quot;</span><span class="p">)</span>
+
+<span class="n">nombre</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;introdueix un nombre: &quot;</span><span class="p">))</span>  <span class="c1"># Situar-se sobre el primer element</span>
+
+<span class="k">while</span> <span class="n">lletra</span> <span class="o">!=</span> <span class="n">fiSequencia</span><span class="p">:</span>  <span class="c1"># Mentre no final</span>
+
+    <span class="k">if</span> <span class="n">nombre</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>  <span class="c1"># Tractar l&#39;element en curs</span>
+        <span class="n">nombre</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;introdueix un nombre: &quot;</span><span class="p">))</span>
+        <span class="k">if</span> <span class="n">nombre</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+            <span class="n">quantitat</span> <span class="o">=</span> <span class="n">quantitat</span> <span class="o">+</span> <span class="mi">1</span>
+
+    <span class="c1"># Situar-se sobre el següent element</span>
+    <span class="n">nombre</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;introdueix un nombre: &quot;</span><span class="p">))</span>
+
+
+<span class="c1"># Donar resultats</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;El nombre cops que has escrit 1 seguit de dos és: </span><span class="si">{</span><span class="n">quantitat</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+</pre></div>
+</div>
+<p>Encara que aquest programa implementa l’algorisme d’un recorregut, no funciona de manera correcta. Si
+l’usuari introdueix una seqüència que contengui la subseqüència <span class="math notranslate nohighlight">\(112\)</span> el programa llegirà el segon nombre <span class="math notranslate nohighlight">\(1\)</span>
+en el segon condicional i ja no la contarà com a part d’una parella de <span class="math notranslate nohighlight">\(12\)</span>. Bàsicament el que succeeix en el
+programa anterior és que en certes ocasions llegim més nombres del que toca en una sola iteració i això
+provoca el seu mal funcionament.</p>
+<p>Una possible solució que ens permet arreglar el programa sense haver de fer massa modificacions al codi anterior
+seria la que tenim a continuació:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">fiSequencia</span> <span class="o">=</span> <span class="s1">&#39;-1&#39;</span>
+<span class="n">quantitat</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Escriu un text acabat en </span><span class="si">{</span><span class="n">fiSequencia</span><span class="si">}</span><span class="s2"> i comptaré les parelles de &#39;1&#39; seguit de &#39;2&#39; que hi escriuràs&quot;</span><span class="p">)</span>
+
+<span class="n">nombre</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;introdueix un nombre: &quot;</span><span class="p">))</span>  <span class="c1"># Situar-se sobre el primer element</span>
+
+<span class="k">while</span> <span class="n">nombre</span> <span class="o">!=</span> <span class="n">fiSequencia</span><span class="p">:</span>  <span class="c1"># Mentre no final</span>
+    
+    <span class="k">if</span> <span class="n">nombre</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>  <span class="c1"># Tractar l&#39;element en curs</span>
+        <span class="n">nombre</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;introdueix un nombre: &quot;</span><span class="p">))</span>
+        <span class="k">if</span> <span class="n">nombre</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+            <span class="n">quantitat</span> <span class="o">=</span> <span class="n">quantitat</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="c1"># Situar-se sobre el següent element</span>
+        <span class="n">nombre</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;introdueix un nombre: &quot;</span><span class="p">))</span>
+
+<span class="c1"># Donar resultats</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;El nombre cops que has escrit 1 seguit de dos és: </span><span class="si">{</span><span class="n">quantitat</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>El problema que presenta aquesta solució es que a més de ser poc generalitzable, un petit canvi al plantejament
+del problema ens farà fer molts de canvis al nostre codi, i pot ser difícil d’entendre per una persona diferent a la
+que l’ha programat.</p>
+<p>En aquesta primera etapa en el camí cap fer una correcta programació, <strong>els aspectes als que s’ha de donar més
+importància són als de la correctesa, la claredat i la facilitat de modificació</strong> dels nostres algorismes i dels
+programes que s’en deriven.</p>
+<p>Els aspectes de fiabilitat (totes les comprovacions necessàries per evitar errors de l’usuari al utilitzar el
+programa) i d’eficiència (velocitat d’execució i estalvi de memòria) són tòpics avançats que cauen fora de l’àmbit
+d’aquest capítol. En aquest moment es tracta de parlar de la <strong>claredat</strong> dels algorismes.</p>
+<p>Si es pretén que l’algorisme resultant sigui clar, s’ha d’intentar treballar en el mateix nivell d’abstracció que es
+planteja a l’enunciat: “… quantes parelles …” i això no és la idea que hi havia en els dos algorismes que hem
+vist al principi del capítol.</p>
+<p>El plantejament de l’algorisme identificava com l’element del tractament seqüencial el nombre, un element no del
+tot adequat per resoldre el problema com s’ha pogut comprovar. En canvi, a l’enunciat es parla de parelles de
+nombres. És necessari, doncs, treballar a nivell de parelles i no de nombres. Per això s’ha de recórrer la
+seqüència per parelles i a cada una d’aquestes parelles se l’ha de comparar amb “1”.</p>
+</section>
+<section id="finestres">
+<h2>Finestres<a class="headerlink" href="#finestres" title="Link to this heading">#</a></h2>
+<p>Realitzarem una aproximació al problema emprant el concepte de <strong>finestra</strong> que es defineix com el conjunt d’elements just a l’esquerra de l’element actual que hem de mantenir durant el tractament de la seqüència.</p>
+<p>Seguint amb el problema que ens ocupa; <strong>En una seqüència numèrica acabada amb el valor -1, és desitja saber quantes parelles dels digits 1 i 2 seguits s’hi poden trobar.</strong> El primer que ens hem de plantejar és quina informació es necessita mantenir de la part ja tractada. En aquest cas és suficient saber el nombre anterior, per tant la finestra és limita a un sol valor. Anem a plantejar l’algorisme que ens permet resoldre aquest problema:</p>
+<p>L’algorisme general necessita dues variables, una per cada lletra de la parella i seria de la següent forma:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">inicialitzacions</span> <span class="n">de</span> <span class="n">les</span> <span class="n">variables</span> <span class="n">necessàries</span><span class="p">:</span> <span class="n">nombre</span><span class="p">,</span> <span class="n">nombre_anterior</span><span class="p">,</span> <span class="n">quantitat</span>
+
+<span class="n">llegir_primera_parella</span>
+
+<span class="k">while</span> <span class="n">no</span>  <span class="n">final</span><span class="p">:</span> <span class="c1"># es a dir -&gt; darrera_parella:</span>
+    <span class="n">tractar_parella_actual</span>
+    <span class="n">llegir_següent_parella</span>
+
+<span class="n">mostrar_resultats</span>
+</pre></div>
+</div>
+<p>El codi <code class="docutils literal notranslate"><span class="pre">Python</span></code> que resulta d’implementar l’anterior algorisme és el següent:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fiSequencia</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+<span class="n">quantitat</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Escriu un conjunt de nombres acabat en </span><span class="si">{</span><span class="n">fiSequencia</span><span class="si">}</span><span class="s2"> i comptaré les parelles de &#39;1&#39; seguit de &#39;2&#39; que hi escriuràs&quot;</span><span class="p">)</span>
+
+<span class="c1"># Ens situam sobre la primera parella</span>
+<span class="n">nombre_anterior</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span> <span class="c1"># fixau-vos amb el valor inicial</span>
+<span class="n">nombre</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;introdueix un nombre: &quot;</span><span class="p">))</span>
+
+<span class="k">while</span> <span class="n">nombre</span> <span class="o">!=</span> <span class="n">fiSequencia</span><span class="p">:</span>  <span class="c1"># mentre no final</span>
+    <span class="k">if</span> <span class="n">nombre_anterior</span> <span class="o">==</span> <span class="mi">1</span> <span class="ow">and</span> <span class="n">nombre</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>  <span class="c1"># Tractam la parella actual</span>
+        <span class="n">quantitat</span> <span class="o">=</span> <span class="n">quantitat</span> <span class="o">+</span> <span class="mi">1</span>
+
+    <span class="c1"># Seguent parella</span>
+    <span class="n">nombre_anterior</span> <span class="o">=</span> <span class="n">nombre</span>  <span class="c1"># el nombre previ és l&#39;actual</span>
+    <span class="n">nombre</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;introdueix un nombre: &quot;</span><span class="p">))</span>  <span class="c1"># l&#39;actual es el següent de la seqüència</span>
+
+<span class="c1"># Proporcionam els resultats</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;El nombre de parelles 1, 2 que has escrit és: </span><span class="si">{</span><span class="n">quantitat</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Escriu un conjunt de nombres acabat en -1 i comptaré les parelles de &#39;1&#39; seguit de &#39;2&#39; que hi escriuràs
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">StdinNotImplementedError</span><span class="g g-Whitespace">                  </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">8</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="c1"># Ens situam sobre la primera parella</span>
+<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="n">nombre_anterior</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span> <span class="c1"># fixau-vos amb el valor inicial</span>
+<span class="ne">----&gt; </span><span class="mi">8</span> <span class="n">nombre</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;introdueix un nombre: &quot;</span><span class="p">))</span>
+<span class="g g-Whitespace">     </span><span class="mi">10</span> <span class="k">while</span> <span class="n">nombre</span> <span class="o">!=</span> <span class="n">fiSequencia</span><span class="p">:</span>  <span class="c1"># mentre no final</span>
+<span class="g g-Whitespace">     </span><span class="mi">11</span>     <span class="k">if</span> <span class="n">nombre_anterior</span> <span class="o">==</span> <span class="mi">1</span> <span class="ow">and</span> <span class="n">nombre</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>  <span class="c1"># Tractam la parella actual</span>
+
+<span class="nn">File ~\miniconda3\envs\material_programacio\Lib\site-packages\ipykernel\kernelbase.py:1281,</span> in <span class="ni">Kernel.raw_input</span><span class="nt">(self, prompt)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1279</span> <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_allow_stdin</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1280</span>     <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;raw_input was called, but this frontend does not support input requests.&quot;</span>
+<span class="ne">-&gt; </span><span class="mi">1281</span>     <span class="k">raise</span> <span class="n">StdinNotImplementedError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1282</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_input_request</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1283</span>     <span class="nb">str</span><span class="p">(</span><span class="n">prompt</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1284</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_parent_ident</span><span class="p">[</span><span class="s2">&quot;shell&quot;</span><span class="p">],</span>
+<span class="g g-Whitespace">   </span><span class="mi">1285</span>     <span class="bp">self</span><span class="o">.</span><span class="n">get_parent</span><span class="p">(</span><span class="s2">&quot;shell&quot;</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1286</span>     <span class="n">password</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1287</span> <span class="p">)</span>
+
+<span class="ne">StdinNotImplementedError</span>: raw_input was called, but this frontend does not support input requests.
+</pre></div>
+</div>
+</div>
+</div>
+<p>Un dels aspectes que cal destacar de l’anterior programa és que només tracta un element de la seqüència (una parella) a
+cada iteració del bucle i això implica que no és possible botar cap de les parelles de paraules.</p>
+<p>Anem a estudiar un segon problema que té el següent enunciat:</p>
+<p><strong>Donada una seqüència de nombres naturals amb almenys dos elements, fer un programa que conti el nombre de pic locals que hi ha en aquesta seqüència. Un pic local es localitza en una terna de nombres tals que el nombre central és més gran de manera estricte que els seus veïns a esquerra i dreta.</strong></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Entrada</p></th>
+<th class="head"><p>Sortida</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>2 3  -1</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-odd"><td><p>2 3 1   -1</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-even"><td><p>2 3 1 5 -1</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>2 3 1 4 1 2 -1</p></td>
+<td><p>2</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Quants d’elements hem de tenir actualitzats? Quantes variables té la finestra?</p>
+<p>L’algorisme per resoldre aquest problema és el següent:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">inicialitzacions</span> <span class="n">de</span> <span class="n">les</span> <span class="n">variables</span> <span class="n">necessàries</span><span class="p">:</span> <span class="n">nombre</span><span class="p">,</span> <span class="n">nombre_anterior</span><span class="p">,</span> <span class="n">nombre_aanterior</span><span class="p">,</span> <span class="n">quantitat</span>
+
+<span class="n">llegir_primera_terna</span>
+
+<span class="k">while</span> <span class="n">no</span>  <span class="n">final</span><span class="p">:</span>
+    <span class="n">tractar_terna_actual</span>
+    <span class="n">llegir_següent_terna</span>
+
+<span class="n">mostrar_resultats</span>
+</pre></div>
+</div>
+<p>Com a l’enunciat s’especifica que la seqüència té almanco 2 nombres aprofitarem aquesta avinentessa per inicialitzar les variables corresponents. El bucle tracta a partir del possible tercer element de la seqüència, s’ha de comprovar si  aquest existeix o no.</p>
+<p>El codi <code class="docutils literal notranslate"><span class="pre">Python</span></code> quedaría de la següent manera:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fiSequencia</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+<span class="n">quantitat</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Escriu un conjunt de nombres acabat en </span><span class="si">{</span><span class="n">fiSequencia</span><span class="si">}</span><span class="s2"> i comptaré el nombre de màxims locals que hi apareixen&quot;</span><span class="p">)</span>
+
+<span class="c1"># Ens situam sobre la primera parella</span>
+
+<span class="n">nombre_anterior</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;introdueix un nombre: &quot;</span><span class="p">))</span> <span class="c1"># fixau-vos amb el valor inicial</span>
+<span class="n">nombre</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;introdueix un nombre: &quot;</span><span class="p">))</span>
+
+<span class="n">nombre_aanterior</span> <span class="o">=</span> <span class="n">nombre_anterior</span>
+
+<span class="k">while</span> <span class="n">nombre</span> <span class="o">!=</span> <span class="n">fiSequencia</span><span class="p">:</span>  <span class="c1"># mentre no final</span>
+    <span class="k">if</span> <span class="n">nombre_aanterior</span> <span class="o">&lt;</span> <span class="n">nombre_anterior</span> <span class="ow">and</span> <span class="n">nombre_anterior</span> <span class="o">&lt;</span> <span class="n">nombre</span><span class="p">:</span>  <span class="c1"># Tractam la terna actual</span>
+        <span class="n">quantitat</span> <span class="o">=</span> <span class="n">quantitat</span> <span class="o">+</span> <span class="mi">1</span>
+
+    <span class="c1"># Seguent terna</span>
+    <span class="n">nombre_aanterior</span> <span class="o">=</span> <span class="n">nombre_anterior</span>
+    <span class="n">nombre_anterior</span> <span class="o">=</span> <span class="n">nombre</span>  <span class="c1"># la lletra previa es l&#39;actual</span>
+    <span class="n">nombre</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;introdueix un nombre: &quot;</span><span class="p">))</span>  <span class="c1"># la actual es la seguent de la sequencia</span>
+
+<span class="c1"># Proporcionam els resultats</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;El nombre de màxims locals que has escrit és: </span><span class="si">{</span><span class="n">quantitat</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="exercici">
+<h3>Exercici<a class="headerlink" href="#exercici" title="Link to this heading">#</a></h3>
+<p>Si la seqüència pot ser buida, és a dir, pot no tenir cap element com s’hauria de resoldre aquest problema?</p>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./chapters\Tema3"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Tema3_Sequencies_sequencies.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Seqüències de seqüències</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="Tema3_Exercicis.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Exercicis del Tema 3</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#adaptacio-de-l-algorisme-al-problema-que-es-vol-resoldre">Adaptació de l’algorisme al problema que és vol resoldre</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#finestres">Finestres</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercici">Exercici</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Gabriel Moyà Alcover
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2021.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

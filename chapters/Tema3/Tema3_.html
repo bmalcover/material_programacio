@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -60,10 +60,12 @@
     <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'chapters/Tema3/Tema3_';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Exercicis del Tema 3" href="Tema3_Exercicis.html" />
+    <link rel="next" title="Seqüències de seqüències" href="Tema3_Sequencies_sequencies.html" />
     <link rel="prev" title="Exercicis Tema 2" href="../Tema2/Tema2_Exercicis.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -181,21 +183,25 @@
 </ul>
 </details></li>
 <li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Tema 3</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="Tema3_Sequencies_sequencies.html">Seqüències de seqüències</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tema3_sequencies_complexes.html">Esquemes algorísmics bàsics aplicats a problemes més complexes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Tema3_Exercicis.html">Exercicis del Tema 3</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../Tema4/Tema4_.html">Tema 4</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../Tema4/Tema4_Esquemes.html">Aplicació dels esquemes bàsics</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tema4/Tema4_Subprogrames.html">Subprogrames i paràmetres</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tema4/Tema4_Subprogrames.html">Tema 4</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Tema4/Tema4_Aplicacio_esquemes_subprogrames.html">Esquemes amb subprogrames</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Tema4/Tema4_Exercicis_subprogrames.html">Exercicis del Tema 4</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../Tema5/Tema5.html">Tema 5</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../Tema5/Tema5_Llistes.html">Llistes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tema5/Tema5_Strings.html">Strings</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Tema5/Tema5_Classes.html">Classes i Objectes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Tema5/Tema5_Estructures.html">Altres maneres d’estructurar les dades</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Tema5/Tema5_Exercicis.html">Exercicis Tema 5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tema5/Tema5_POO.html">Exercicis Consolidació POO</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Tema5/Tema5_Exercicis_altres_estructures.html">Exercicis Tema 5/2</a></li>
 </ul>
 </details></li>
@@ -359,11 +365,23 @@
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#esquemes-algorismics-basics">Esquemes algorísmics bàsics</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#el-concepte-de-sequencia">El concepte de seqüència.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#el-concepte-de-sequencia">El concepte de seqüència.</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#exemple-1-maxim-d-una-sequencia-no-buida">Exemple 1: màxim d’una seqüència no buida</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#exemple-2">Exemple 2:</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#esquema-de-recorregut">Esquema de recorregut</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#esquema-general-de-cerca">Esquema general de cerca</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#esquema-general-de-cerca">Esquema general de cerca</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exemple-3">Exemple 3:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exemple-4">Exemple 4:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#esquema-mixt">Esquema mixt</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#exemple-5">Exemple 5</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -384,7 +402,7 @@ d’estudiar algorismes que ens permetin solucionar programes amb major complexi
 partir d’aquestes composicions bàsiques, aplicades a seqüències de dades, es poden resoldre una ampla varietat de
 problemes.</p>
 <p>Començarem l’aplicació d’aquests esquemes algorísmics resolent problemes de seqüències de lletres i de nombres, ja que
-ens permeten aplicar els conceptes teòrics en i són senzills de programar</p>
+ens permeten aplicar els conceptes teòrics en i són senzills de programar.</p>
 <section id="el-concepte-de-sequencia">
 <h3>El concepte de seqüència.<a class="headerlink" href="#el-concepte-de-sequencia" title="Link to this heading">#</a></h3>
 <p>S’enten com a seqüència aquell conjunt d’elements que verifiquen les següents condicions:</p>
@@ -400,11 +418,85 @@ d’elements que formen la seqüència.</p></li>
 <p><span class="caption-number">Fig. 2 </span><span class="caption-text">Exemple de seqüència de text. <em>R.Mas i P.Palmer</em>.</span><a class="headerlink" href="#id1" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
-<p>La primera passa a realitzar quant volem resoldre un problema mitjançant algorismes que tracten seqüències és
-identificar quin és l’element a tractar: lletres, nombres, booleans, paraules, vídeos… No sempre serà una tasca
-senzilla i dependrà de l’experiència i de la capacitat d’anàlisi del programador adoptar la solució més convenient.</p>
-<p>El tractament de les seqüències es realitza començant pel primer element i accedint a la resta amb la relació de
-successió.</p>
+<p>La primera passa a realitzar quant volem resoldre un problema mitjançant algorismes que tracten seqüències és identificar quin és l’element a tractar: lletres, nombres, booleans, paraules, vídeos… No sempre serà una tasca senzilla i dependrà de l’experiència i de la capacitat d’anàlisi del programador adoptar la solució més convenient.</p>
+<p>El tractament de les seqüències es realitza començant pel primer element i accedint a la resta amb la relació de successió. Això <strong>no</strong> vol dir que calgui emmagatzemar tots els elements: només cal mantenir <strong>la informació necessària</strong> per a resoldre la tasca. És molt important determinar quina informació (valors) necessitem i, sobretot, entendre per qu´e els necessitem i com els mantenim.</p>
+<p>Els problemes que cauen en aquesta categoría es poden resumir en el següent enunciat: <em>Donada una seqüència, realitzar una tasca sobre <strong>tots</strong> els seus elements</em>;</p>
+<p>Les seqüències les tractarem amb un bucle on:</p>
+<ul class="simple">
+<li><p>A cada iteració, tractarem un nou element. Aquest element és clau, i l’anomenarem <strong>element actual</strong>.</p></li>
+<li><p>Tot el que estigui a l’esquerra d’aquest element, serà a la part tractada de la seqüència.</p></li>
+<li><p>Tot el que estigui a la dreta d’aquest element, serà a la part per tractar de la seqüència.</p></li>
+</ul>
+<section id="exemple-1-maxim-d-una-sequencia-no-buida">
+<h4>Exemple 1: màxim d’una seqüència no buida<a class="headerlink" href="#exemple-1-maxim-d-una-sequencia-no-buida" title="Link to this heading">#</a></h4>
+<p>Donada una seqüència de nombres naturals <strong>no buida</strong>, acabada amb el valor -1, mostrar per pantalla el seu valor màxim.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Entrada</p></th>
+<th class="head"><p>Sortida</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>5 -1</p></td>
+<td><p>5</p></td>
+</tr>
+<tr class="row-odd"><td><p>10 2 5 9 1  -1</p></td>
+<td><p>10</p></td>
+</tr>
+<tr class="row-even"><td><p>1 40 30 5 1 -1</p></td>
+<td><p>40</p></td>
+</tr>
+<tr class="row-odd"><td><p>11 11 10 11 -1</p></td>
+<td><p>11</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Analitzarem les diferents parts d’aquest problema:</p>
+<p><strong>Quina informació cal mantenir?</strong> Una variable anomenada <code class="docutils literal notranslate"><span class="pre">maxim</span></code> amb el màxim de la part tractada. Si som capaços de mantenir aquesta variable amb el significat <em>màxim de la
+part tractada</em> en totes i cadascuna de les iteracions, quan la part tractada inclogui tota la seqüència, aquest valor <code class="docutils literal notranslate"><span class="pre">maxim</span></code> serà <em>màxim de tota la seqüència</em>, que serà allò que he d’escriure</p>
+<p><strong>Com actualitzar la variable <code class="docutils literal notranslate"><span class="pre">maxim</span></code>?</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">actual</span> <span class="o">&gt;</span> <span class="nb">max</span><span class="p">:</span>
+    <span class="nb">max</span> <span class="o">=</span> <span class="n">actual</span><span class="p">;</span>
+</pre></div>
+</div>
+<p><strong>Com detectar el final de la seqüència?</strong> Detectarem el final de la seqüència en trobar el valor -1.</p>
+<p><strong>Com inicialitzar la variable <code class="docutils literal notranslate"><span class="pre">maxim</span></code>?</strong> Tenim dues opcions:</p>
+<ul class="simple">
+<li><p>Si la seqüència no és buida, el valor del màxim serà el primer valor de la seqüència.</p></li>
+<li><p>Si la seqüència pot ser buida, llavors el valor inicial serà un valor que mai pugui ser el màxim, en aquest cas podria ser -1.</p></li>
+</ul>
+</section>
+<section id="exemple-2">
+<h4>Exemple 2:<a class="headerlink" href="#exemple-2" title="Link to this heading">#</a></h4>
+<p>Donada una seqüència no buida de naturals acabada en -1, escriure quantes vegades un nombre és igual a la suma de tots els que estan a la seva esquerra.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Entrada</p></th>
+<th class="head"><p>Sortida</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0 0 1 1 3 2 7 2 -1</p></td>
+<td><p>3</p></td>
+</tr>
+<tr class="row-odd"><td><p>2 -1</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-even"><td><p>2 3 1 4 -1</p></td>
+<td><p>0</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Hem de respondre a:</p>
+<ol class="arabic simple">
+<li><p>Quina informació necessito mantenir de la part tractada?</p></li>
+<li><p>Actualització d’aquesta informació?</p></li>
+<li><p>Com detecto el final de la seqüència?</p></li>
+<li><p>Inicialització?</p></li>
+</ol>
+<p>Si canviem les condicions de l’entrada i la seqüència podria ser buida, que hem de canviar?</p>
 <p>El concepte de tractament seqüencial ens duu a definir algorismes bàsics:</p>
 <ul class="simple">
 <li><p><strong>Esquema de recorregut</strong> on es pretén realitzar un determinat tractament per a cada un dels elements de la
@@ -412,6 +504,7 @@ seqüència. En aquest cas el tractament s’acabarà en detectar el final de la
 <li><p><strong>Esquema de cerca</strong> on es pretén verificar l’existència d’un element dins la seqüència. Aquest
 tractament pot acabar quan l’element s’ha trobat o quan s’ha arribat al final de la seqüència per què l’element no hi era.</p></li>
 </ul>
+</section>
 </section>
 </section>
 <section id="esquema-de-recorregut">
@@ -432,48 +525,12 @@ que pel cas del darrer element s’hagi de fer un tractament específic.</p>
 <span class="n">donar</span> <span class="n">resultat</span>
 </pre></div>
 </div>
-<p>Un exemple d’un recorregut és un programa que compta el nombre d’aparicions de la lletra <code class="docutils literal notranslate"><span class="pre">a</span></code> en un text. Cal
-considerar que el caràcter ‘.’ s’utilitzarà com a darrer element per indicar el final de la seqüència (durant la
-primera part del curs)</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Introdueix una seqüència de text acabada en punt.&quot;</span><span class="p">)</span>
-<span class="n">lletra</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">stdin</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">nombre</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="k">while</span> <span class="n">lletra</span> <span class="o">!=</span> <span class="s1">&#39;.&#39;</span><span class="p">:</span>
-    
-    <span class="k">if</span> <span class="n">lletra</span> <span class="o">==</span> <span class="s1">&#39;a&#39;</span><span class="p">:</span>
-        <span class="n">nombre</span> <span class="o">=</span> <span class="n">nombre</span> <span class="o">+</span> <span class="mi">1</span>
-        
-    <span class="n">lletra</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">stdin</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-    
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot; Hi ha un total de &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">nombre</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; lletres a en el texte.&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Introdueix una seqüència de text acabada en punt.
-</pre></div>
-</div>
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">10</span>
-<span class="g g-Whitespace">      </span><span class="mi">7</span>     <span class="k">if</span> <span class="n">lletra</span> <span class="o">==</span> <span class="s1">&#39;a&#39;</span><span class="p">:</span>
-<span class="g g-Whitespace">      </span><span class="mi">8</span>         <span class="n">nombre</span> <span class="o">=</span> <span class="n">nombre</span> <span class="o">+</span> <span class="mi">1</span>
-<span class="ne">---&gt; </span><span class="mi">10</span>     <span class="n">lletra</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">stdin</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">12</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot; Hi ha un total de &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">nombre</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; lletres a en el texte.&quot;</span><span class="p">)</span>
-
-<span class="nn">File ~\miniconda3\envs\material_programacio\Lib\encodings\cp1252.py:22,</span> in <span class="ni">IncrementalDecoder.decode</span><span class="nt">(self, input, final)</span>
-<span class="g g-Whitespace">     </span><span class="mi">21</span> <span class="k">class</span> <span class="nc">IncrementalDecoder</span><span class="p">(</span><span class="n">codecs</span><span class="o">.</span><span class="n">IncrementalDecoder</span><span class="p">):</span>
-<span class="ne">---&gt; </span><span class="mi">22</span>     <span class="k">def</span> <span class="nf">decode</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">input</span><span class="p">,</span> <span class="n">final</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
-<span class="g g-Whitespace">     </span><span class="mi">23</span>         <span class="k">return</span> <span class="n">codecs</span><span class="o">.</span><span class="n">charmap_decode</span><span class="p">(</span><span class="nb">input</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">errors</span><span class="p">,</span><span class="n">decoding_table</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
-
-<span class="ne">KeyboardInterrupt</span>: 
-</pre></div>
-</div>
-</div>
-</div>
+<p>Alguns exemples de problemes que es resolen amb aquest esquema són:</p>
+<ul class="simple">
+<li><p>Mostrar el màxim d’una seqüència numérica.</p></li>
+<li><p>Comptar quants nombres senars hi ha.</p></li>
+<li><p>Comptar quants nombres són el doble de l’anterior.</p></li>
+</ul>
 </section>
 <section id="esquema-general-de-cerca">
 <h2>Esquema general de cerca<a class="headerlink" href="#esquema-general-de-cerca" title="Link to this heading">#</a></h2>
@@ -490,66 +547,55 @@ bucle. L’esquema general de cerca consisteix en les següents operacions:</p>
 <span class="n">actuar</span> <span class="n">segons</span> <span class="n">els</span> <span class="n">resultats</span>
 </pre></div>
 </div>
-<p>A continuació veurem un exemple d’un programa que realitza una cerca. Realitzarem un programa que cerqui la primera
-vocal d’una seqüència de text acabada en punt.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Introdueix un text acabat en punt&quot;</span><span class="p">)</span>
-<span class="n">lletra</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">stdin</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-
-<span class="k">while</span> <span class="n">lletra</span> <span class="o">!=</span> <span class="s1">&#39;.&#39;</span> <span class="ow">and</span> <span class="p">(</span><span class="n">lletra</span> <span class="o">!=</span> <span class="s1">&#39;a&#39;</span> <span class="ow">and</span> <span class="n">lletra</span> <span class="o">!=</span> <span class="s1">&#39;e&#39;</span> <span class="ow">and</span> <span class="n">lletra</span> <span class="o">!=</span> <span class="s1">&#39;i&#39;</span> <span class="ow">and</span> <span class="n">lletra</span> <span class="o">!=</span> <span class="s1">&#39;o&#39;</span> <span class="ow">and</span> <span class="n">lletra</span> <span class="o">!=</span> <span class="s1">&#39;u&#39;</span><span class="p">):</span>
-
-    <span class="n">lletra</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">stdin</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-
-<span class="k">if</span> <span class="n">lletra</span> <span class="o">!=</span><span class="s1">&#39;.&#39;</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;La primera vocal es: &quot;</span> <span class="o">+</span> <span class="n">lletra</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;No he trobat cap vocal&quot;</span><span class="p">)</span>
-</pre></div>
+<p>Alguns exemples de problemes que es resolen amb aquest esquema són:</p>
+<ul class="simple">
+<li><p>Saber si hi ha algun nombre parell en una seqüència numérica.</p></li>
+<li><p>Saber si una paraula es troba en una seqüència de text.</p></li>
+</ul>
+<section id="exemple-3">
+<h3>Exemple 3:<a class="headerlink" href="#exemple-3" title="Link to this heading">#</a></h3>
+<p>Donada una seqüència de naturals acabada en el nombre -1, escriure SI, si conté algun nombre parell o NO en cas contrari.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Entrada</p></th>
+<th class="head"><p>Sortida</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>3 5 11 -1</p></td>
+<td><p>NO</p></td>
+</tr>
+<tr class="row-odd"><td><p>2 5 7 9  -1</p></td>
+<td><p>Si</p></td>
+</tr>
+<tr class="row-even"><td><p>5 2 7 9 -1</p></td>
+<td><p>Si</p></td>
+</tr>
+</tbody>
+</table>
 </div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Introdueix un texte acabat en punt
-</pre></div>
-</div>
-</div>
-</div>
-<p>La condició de trobat és un poc llarga, realitzarem una segona versió del mateix programa fent ús d’una variable
-booleana per poder simplificar les condicions. Això provoca certs canvis en el nostre programa. El primer valor
-assignat  a la variable <code class="docutils literal notranslate"><span class="pre">lletra</span></code> és l’espai en blanc, això és degut a que l’avaluació del valor de la variable
-<code class="docutils literal notranslate"><span class="pre">lletra</span></code> es dins el bucle i per tant necessitam assegurar que entrarem almanco una vegada dins aquest per saber
-si la primera lletra de la seqüència és vocal o no.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
-
-<span class="n">lletra</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span>
-<span class="n">trobat</span> <span class="o">=</span> <span class="kc">False</span>
-
-<span class="k">while</span> <span class="n">lletra</span> <span class="o">!=</span> <span class="s1">&#39;.&#39;</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">trobat</span><span class="p">:</span>
-
-    <span class="n">lletra</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">stdin</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-  
-    <span class="k">if</span> <span class="n">lletra</span> <span class="o">==</span> <span class="s1">&#39;a&#39;</span> <span class="ow">or</span> <span class="n">lletra</span> <span class="o">==</span> <span class="s1">&#39;e&#39;</span> <span class="ow">or</span> <span class="n">lletra</span> <span class="o">==</span> <span class="s1">&#39;i&#39;</span> <span class="ow">or</span> <span class="n">lletra</span> <span class="o">==</span> <span class="s1">&#39;o&#39;</span> <span class="ow">or</span> <span class="n">lletra</span> <span class="o">==</span> <span class="s1">&#39;u&#39;</span><span class="p">:</span>
-        <span class="n">trobat</span> <span class="o">=</span> <span class="kc">True</span>
-    
-<span class="k">if</span> <span class="n">trobat</span> <span class="o">==</span> <span class="kc">True</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;La primera vocal és: &quot;</span> <span class="o">+</span> <span class="n">lletra</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>  
-    <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;No he trobat cap vocal&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>Si ens aturem a fer una petita reflexió, podrem observar com els dos programes anteriors són dues implementacions
-diferents <strong>del mateix algorisme</strong>.</p>
-<p>Tant els recorreguts com les cerques són eines molt útils, és important saber com aplicar adequadament aquests dos
-esquemes.</p>
-<p>Al llarg dels següents capítols es plantegen nombrosos exemples on, a priori, l’aplicació de cerques i recorreguts
-pot parèixer estranya, però un examen detallat dels problemes revelarà que quasi sempre es pot interpretar el
-problema considerant que es tracta de manejar una seqüència d’elements d’un determinat tipus.</p>
+<p>Hem de respondre a:</p>
+<ol class="arabic simple">
+<li><p>Quina informació necessito mantenir de la part tractada?</p></li>
+<li><p>Actualització d’aquesta informació?</p></li>
+<li><p>Com ha de ser la condició de final del bucle?</p></li>
+<li><p>Inicialització?</p></li>
+</ol>
+</section>
+<section id="exemple-4">
+<h3>Exemple 4:<a class="headerlink" href="#exemple-4" title="Link to this heading">#</a></h3>
+<p>Donat un nombre enter <span class="math notranslate nohighlight">\(0 ≤ d ≤ 9\)</span> i un enter <span class="math notranslate nohighlight">\(n\)</span> estrictament positiu, escriure SI, si <span class="math notranslate nohighlight">\(d\)</span> és un dígit de <span class="math notranslate nohighlight">\(n\)</span>, o NO en cas contrari.</p>
+</section>
+<section id="esquema-mixt">
+<h3>Esquema mixt<a class="headerlink" href="#esquema-mixt" title="Link to this heading">#</a></h3>
+<p>POSAR TEXT</p>
+<section id="exemple-5">
+<h4>Exemple 5<a class="headerlink" href="#exemple-5" title="Link to this heading">#</a></h4>
+<p>Donat un sencer <span class="math notranslate nohighlight">\(p\)</span> i una seqüència no buida de sencers que es troben en ordre ascendent acabada amb el nombre -1, escriure la seqüència amb el nombre <span class="math notranslate nohighlight">\(p\)</span> a la posició adequada perquè tota la sortida estigui ordenada.</p>
+<p>Per resoldre aquest problema hem de realitzar una combinació dels dos algorismes:
+En primer lloc, cal cercar posició adequada per a <span class="math notranslate nohighlight">\(p\)</span> mentre s’escriuen els que van davant. En segon lloc, cal escriure <span class="math notranslate nohighlight">\(p\)</span>. Finalment, realitzarem un recorregut on escriurem tots els nombres que falten per tractar.</p>
+</section>
+</section>
 </section>
 <div class="toctree-wrapper compound">
 </div>
@@ -595,11 +641,11 @@ problema considerant que es tracta de manejar una seqüència d’elements d’u
       </div>
     </a>
     <a class="right-next"
-       href="Tema3_Exercicis.html"
+       href="Tema3_Sequencies_sequencies.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Exercicis del Tema 3</p>
+        <p class="prev-next-title">Seqüències de seqüències</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -621,11 +667,23 @@ problema considerant que es tracta de manejar una seqüència d’elements d’u
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#esquemes-algorismics-basics">Esquemes algorísmics bàsics</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#el-concepte-de-sequencia">El concepte de seqüència.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#el-concepte-de-sequencia">El concepte de seqüència.</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#exemple-1-maxim-d-una-sequencia-no-buida">Exemple 1: màxim d’una seqüència no buida</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#exemple-2">Exemple 2:</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#esquema-de-recorregut">Esquema de recorregut</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#esquema-general-de-cerca">Esquema general de cerca</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#esquema-general-de-cerca">Esquema general de cerca</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exemple-3">Exemple 3:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exemple-4">Exemple 4:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#esquema-mixt">Esquema mixt</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#exemple-5">Exemple 5</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
   </nav></div>
 

@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -60,11 +60,13 @@
     <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'chapters/Tema3/Tema3_Exercicis';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Tema 4" href="../Tema4/Tema4_.html" />
-    <link rel="prev" title="Tema 3" href="Tema3_.html" />
+    <link rel="prev" title="Esquemes algorísmics bàsics aplicats a problemes més complexes" href="Tema3_sequencies_complexes.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -181,21 +183,25 @@
 </ul>
 </details></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="Tema3_.html">Tema 3</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Tema3_Sequencies_sequencies.html">Seqüències de seqüències</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tema3_sequencies_complexes.html">Esquemes algorísmics bàsics aplicats a problemes més complexes</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Exercicis del Tema 3</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../Tema4/Tema4_.html">Tema 4</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../Tema4/Tema4_Esquemes.html">Aplicació dels esquemes bàsics</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tema4/Tema4_Subprogrames.html">Subprogrames i paràmetres</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tema4/Tema4_Subprogrames.html">Tema 4</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Tema4/Tema4_Aplicacio_esquemes_subprogrames.html">Esquemes amb subprogrames</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Tema4/Tema4_Exercicis_subprogrames.html">Exercicis del Tema 4</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../Tema5/Tema5.html">Tema 5</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../Tema5/Tema5_Llistes.html">Llistes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tema5/Tema5_Strings.html">Strings</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Tema5/Tema5_Classes.html">Classes i Objectes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Tema5/Tema5_Estructures.html">Altres maneres d’estructurar les dades</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Tema5/Tema5_Exercicis.html">Exercicis Tema 5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tema5/Tema5_POO.html">Exercicis Consolidació POO</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Tema5/Tema5_Exercicis_altres_estructures.html">Exercicis Tema 5/2</a></li>
 </ul>
 </details></li>
@@ -358,8 +364,7 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sequencies-de-text">Seqüències de text</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sequencies-numeriques">Seqüències numèriques</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sequencies-de-sequencies">Seqüències de seqüències</a></li>
 </ul>
             </nav>
         </div>
@@ -373,62 +378,16 @@
                   
   <section id="exercicis-del-tema-3">
 <h1>Exercicis del Tema 3<a class="headerlink" href="#exercicis-del-tema-3" title="Link to this heading">#</a></h1>
-<section id="sequencies-de-text">
-<h2>Seqüències de text<a class="headerlink" href="#sequencies-de-text" title="Link to this heading">#</a></h2>
-<p>Les seqüències de caràcters a què fan referència aquests exercicis són introduïdes per teclat i acabades amb el
-caràcter punt.</p>
-<p>1.Comptar quantes aparicions hi ha de cada vocal.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="n">Exemples</span> <span class="n">d</span><span class="s1">&#39;execució: Murcielago.</span>
-
-    <span class="n">a</span> <span class="o">-&gt;</span> <span class="mi">1</span>
-    <span class="n">e</span> <span class="o">-&gt;</span> <span class="mi">1</span>
-    <span class="n">i</span> <span class="o">-&gt;</span> <span class="mi">1</span>
-    <span class="n">o</span> <span class="o">-&gt;</span> <span class="mi">1</span>
-    <span class="n">u</span> <span class="o">-&gt;</span> <span class="mi">1</span>
-
-    <span class="n">Lo</span> <span class="n">importante</span> <span class="n">es</span> <span class="n">participar</span><span class="o">.</span> <span class="n">a</span> <span class="o">-&gt;</span> <span class="mi">3</span>
-
-    <span class="n">e</span> <span class="o">-&gt;</span> <span class="mi">2</span>
-    <span class="n">i</span> <span class="o">-&gt;</span> <span class="mi">3</span>
-    <span class="n">o</span> <span class="o">-&gt;</span> <span class="mi">2</span>
-    <span class="n">u</span> <span class="o">-&gt;</span> <span class="mi">0</span>
-</pre></div>
-</div>
-<p>2.Cercar la primera vocal de la seqüència i mostrar per pantalla la següent lletra.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Exemples</span><span class="p">:</span>
-    <span class="n">Murcielago</span><span class="o">.</span> <span class="n">La</span> <span class="n">següent</span> <span class="n">lletra</span> <span class="n">es</span> <span class="n">la</span> <span class="s1">&#39;r&#39;</span>
-    <span class="n">Lo</span> <span class="n">importante</span> <span class="n">es</span> <span class="n">participar</span><span class="o">.</span> <span class="n">La</span> <span class="n">següent</span> <span class="n">lletra</span> <span class="n">es</span> <span class="n">la</span> <span class="s1">&#39; &#39;</span>
-    <span class="n">Hay</span> <span class="n">mas</span> <span class="n">felicidad</span> <span class="n">en</span> <span class="n">dar</span> <span class="n">que</span> <span class="n">en</span> <span class="n">recibir</span><span class="o">.</span> <span class="n">La</span> <span class="n">següent</span> <span class="n">lletra</span> <span class="n">es</span> <span class="n">la</span> <span class="s1">&#39;y&#39;</span>
-    <span class="n">N</span> <span class="n">st</span> <span class="n">scnc</span> <span class="n">n</span> <span class="n">hy</span> <span class="n">vcls</span><span class="o">.</span> <span class="n">En</span> <span class="n">aquesta</span> <span class="n">frase</span> <span class="n">no</span> <span class="n">hi</span> <span class="n">ha</span> <span class="n">vocals</span>
-</pre></div>
-</div>
-<p>3.Comptar el nombre d’espais que apareixen després de la primera t (majúscula o minúscula). Per indicar-ho en un
-programa es fa entre cometes simples com si fos qualsevol altra lletra (espai = ‘ ‘).</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Exemples</span><span class="p">:</span>
-    <span class="n">Lo</span> <span class="n">importante</span> <span class="n">es</span> <span class="n">participar</span><span class="o">.</span> <span class="mi">2</span> <span class="n">espais</span>
-    <span class="n">Un</span> <span class="n">dia</span> <span class="n">que</span> <span class="n">te</span> <span class="n">sobren</span> <span class="n">vitamines</span><span class="o">.</span> <span class="mi">2</span> <span class="n">espais</span>
-    <span class="n">Estudiar</span> <span class="n">matematiques</span> <span class="n">es</span> <span class="n">divertit</span><span class="o">.</span> <span class="mi">3</span> <span class="n">espais</span>
-    <span class="n">Supercalifragilisticoespialidoso</span><span class="o">.</span>  <span class="n">Aquesta</span> <span class="n">seqüència</span> <span class="n">no</span> <span class="n">té</span> <span class="n">espais</span>
-</pre></div>
-</div>
-<p>4.Implementar un programa que llegeixi una seqüència de caràcters acabada en punt i mostri el caràcter més gran.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Exemple</span><span class="p">:</span>
-    <span class="n">puerto</span> <span class="n">rico</span> <span class="n">me</span> <span class="n">lo</span> <span class="n">confirmo</span><span class="o">.</span> <span class="n">El</span> <span class="n">caracter</span> <span class="n">mes</span> <span class="n">gran</span> <span class="n">es</span> <span class="n">la</span> <span class="s1">&#39;u&#39;</span>
-</pre></div>
-</div>
-<p>5.Implementar un programa que llegeixi una seqüència de caràcters acabada en punt i mostri el caràcter més petit.</p>
-<p>6.Implementar un programa que llegeixi una seqüència de caràcters acabada en punt i mostri el nombre de vocals,
-consonants i espais.</p>
-<p>7.Implementar un programa que demani una lletra a l’usuari i compti el nombre d’espais que apareixen en una
-seqüència de caràcters fins a trobar la lletra triada.</p>
-<p>8.Realitzar un programa que llegeixi una seqüència de caràcters acabada en ‘.’ i ens digui quantes lletres
-apareixen entre el primer i el segon espai. Si la seqüència no té dos espais, el programa ha de comunicar-ho a l’usuari.</p>
-</section>
-<section id="sequencies-numeriques">
-<h2>Seqüències numèriques<a class="headerlink" href="#sequencies-numeriques" title="Link to this heading">#</a></h2>
-<p>9.Implementar un programa que demani a l’usuari un número i ens indiqui la successió de fibbonacci fins aquest nombre.
+<p>1.Donada una seqüència d’enters positius acabada amb el nombre -1, mostrar per pantalla quin és el valor mínim.</p>
+<p>2.Donada una seqüència de paraules acabades amb la paraula de longitud 0. Indica quantes tenen longitud parella i quantes tenen longitud senar.</p>
+<p>3.Implementar un programa que demani un nombre a l’usuari i compti el nombre de valors superiors a 10 que apareixen en una seqüència de nombres enters fins a trobar el nombre triat.</p>
+<p>4.Escriviu un programa que compti el nombre de parelles ascendents consecutives en una seqüència no buida d’enters positius acabada en 0.</p>
+<p>5.Fer un programa que mostri per pantalla la diferència màxima entre un element i el següent en una seqüència d’enters.</p>
+<p>6.Calcular la longitud de la seqüència més llarga de repeticions consecutives de la mateixa paraula.</p>
+<p>7.Esbrinar si una seqüència d’enters és ascendent.</p>
+<p>8.Implementar un programa que demani a l’usuari un número <span class="math notranslate nohighlight">\(i\)</span> ens indiqui la successió de fibbonacci fins aquest nombre.
 Si l’usuari introdueix el número 6, el programa mostrarà: 1, 1, 2, 3, 5, 8. <a class="reference external" href="https://ca.wikipedia.org/wiki/Successi%C3%B3_de_Fibonacci">Succesió de Fibonacci</a></p>
-<p>10.Crear un petit joc on l’ordinador genera un nombre aleatori entre 0 i 9, l’usuari ha d’aconseguir endevinar en
+<p>9.Crear un petit joc on l’ordinador genera un nombre aleatori entre 0 i 9, l’usuari ha d’aconseguir endevinar en
 el menor nombre possible d’intents:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="n">Exemple</span><span class="p">:</span>
     <span class="n">He</span> <span class="n">pensat</span> <span class="n">un</span> <span class="n">número</span> <span class="k">del</span> <span class="mi">0</span> <span class="n">al</span> <span class="mi">9</span><span class="p">,</span> <span class="n">a</span> <span class="n">veure</span> <span class="n">si</span> <span class="n">l</span><span class="s1">&#39;endevines. 7</span>
@@ -441,20 +400,33 @@ el menor nombre possible d’intents:</p>
 </pre></div>
 </div>
 <p>Per generar un nombre aleatori entre 0 i 9 hem de fer el següent:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
 <span class="n">aleatori</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-</div>
-<p>11.Escriure un programa que rebi un nombre enter <code class="docutils literal notranslate"><span class="pre">n</span></code> i lliuri com a resultat el nombre <code class="docutils literal notranslate"><span class="pre">n</span></code> amb els seus dígits
-en l’ordre invers.</p>
-<p>12.Escriure un programa en el qual l’usuari introdueixi un nombre i el programa calculi una aproximació al nombre pi
-desenvolupant tants termes de la següent successió com el nombre introduït: pi ≈ 4(1 - 1/3 + 1/5 - 1/7 …)</p>
-<p>13.El 2520 és el nombre més petit que es pot dividir per cadascun dels nombres de l’1 al 10 sense cap tipus de
-reste. Quin és el nombre positiu més petit que es pot dividir sense reste per tots els nombres de l’1 al 20?</p>
+<p>10.Escriure un programa que rebi un nombre enter <span class="math notranslate nohighlight">\(n\)</span> i lliuri com a resultat el nombre <span class="math notranslate nohighlight">\(n\)</span> amb els seus dígits en l’ordre invers.</p>
+<p>11.Donat un nombre natural <span class="math notranslate nohighlight">\(n\)</span>, escriure SI si els seus dígits són creixents de esquerra a dreta o NO en cas contrari.</p>
+<p>12.Donada una seqüència d’enters no buida, dir quina és la longitud màxima de les seves planes. Una plana és una subseqüència del mateix element.</p>
+<p>13.Escriure un programa en el qual l’usuari introdueixi un nombre i el programa calculi una aproximació al nombre pi
+desenvolupant tants termes de la següent successió com el nombre introduït: <span class="math notranslate nohighlight">\(pi ≈ 4(1 - 1/3 + 1/5 - 1/7 ...)\)</span>.</p>
+<p>14.Realitza un programa que genera 50 nombres aleatoris amb valors entre el 0 i el 10 i ens mostra quantes vegades
+tenim 2 nombres consecutius que son iguals. També volem saber quins han estat aquests nombres.</p>
+<p>14b.Fes una variant del programa anterior que  mostra les vegades on el nombre previ és múltiple del nombre actual i
+quines són aquestes parelles.</p>
+<p>15.Els nombres primers bessons són aquelles parelles de nombres primers que difereixen en 2. És a dir, dos nombres <span class="math notranslate nohighlight">\(p\)</span> i <span class="math notranslate nohighlight">\(q\)</span>
+(amb <span class="math notranslate nohighlight">\(p\)</span> &lt; <span class="math notranslate nohighlight">\(q\)</span>) són primers bessons si <span class="math notranslate nohighlight">\(q = p + 2\)</span>. Excepte pel cas del 2 i el 3. Quins són els primers bessons majors al
+valor 150? Solució: (179, 181) Quants primers bessons hi ha entre 100 i 1000? Solució: 27 Quins són?</p>
+<section id="sequencies-de-sequencies">
+<h2>Seqüències de seqüències<a class="headerlink" href="#sequencies-de-sequencies" title="Link to this heading">#</a></h2>
+<p>1.Donades diverses seqüències d’enters (que no contenen el nombre 0), cadascuna acabada en zero, calcular el màxim de cada seqüència i la suma dels màxims.
+2.Donades diverses seqüències d’enters (que no contenen el nombre 0), cadascuna acabada en zero. Comprovar si alguna de les seqüències suma més de 50.</p>
+<p>3.Donades diverses seqüències d’enters (que no contenen el nombre 0). Indica quina és la primera seqüència que conté un número que acaba en 3. Indicau “No n’hi ha” si no n’apareix cap.</p>
+<p>4.Donades diverses seqüències d’enters (que no contenen el nombre 0). Compta quantes seqüències contenen un múltiple de 10.</p>
+<p>5.El 2520 és el nombre més petit que es pot dividir per cadascun dels nombres de l’1 al 10 sense cap tipus de reste. Quin és el nombre positiu més petit que es pot dividir sense reste per tots els nombres de l’1 al 20?</p>
+<p>6.En el rang (0, 2223). Quants nombres tenen almanco dues vegades seguides el nombre 2. Per exemple: 22, 221 …</p>
+<p>7.Quants nombres de cinc dígits comencen per 4, acaben en 5 i les seves xifres sumen 18?</p>
+<p>8.Realitza un programa que genera 100 nombres aleatoris amb valors entre el 100 i el 1000. Ha de mostrar aquells que
+tenen les seves xifres en ordre estrictament decreixent.</p>
 </section>
 </section>
 
@@ -489,12 +461,12 @@ reste. Quin és el nombre positiu més petit que es pot dividir sense reste per 
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="Tema3_.html"
+       href="Tema3_sequencies_complexes.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Tema 3</p>
+        <p class="prev-next-title">Esquemes algorísmics bàsics aplicats a problemes més complexes</p>
       </div>
     </a>
     <a class="right-next"
@@ -523,8 +495,7 @@ reste. Quin és el nombre positiu més petit que es pot dividir sense reste per 
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sequencies-de-text">Seqüències de text</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sequencies-numeriques">Seqüències numèriques</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sequencies-de-sequencies">Seqüències de seqüències</a></li>
 </ul>
   </nav></div>
 
