@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Tema 4 &#8212; Programacio I</title>
+    <title>Subprogrames i paràmetres &#8212; Programacio I</title>
   
   
   
@@ -63,8 +63,8 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'chapters/Tema4/Tema4_Subprogrames';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Resolució de problemes amb esquemes bàsics i subprogrames" href="Tema4_Aplicacio_esquemes_subprogrames.html" />
-    <link rel="prev" title="Aplicació dels esquemes bàsics per a la resolució de problemes més complexes" href="Tema4_Esquemes.html" />
+    <link rel="next" title="Exercicis del Tema 4" href="Tema4_Exercicis_subprogrames.html" />
+    <link rel="prev" title="Tema 4" href="Tema4_Intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -181,15 +181,13 @@
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../Tema3/Tema3_.html">Tema 3</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Tema3/Tema3_sequencies_complexes.html">Aplicació dels esquemes bàsics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Tema3/Tema3_Sequencies_sequencies.html">Seqüències de seqüències</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tema3/Tema3_sequencies_complexes.html">Esquemes algorísmics bàsics aplicats a problemes més complexes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Tema3/Tema3_Exercicis.html">Exercicis del Tema 3</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="Tema4_.html">Tema 4</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="Tema4_Esquemes.html">Aplicació dels esquemes bàsics</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Tema 4</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Tema4_Aplicacio_esquemes_subprogrames.html">Esquemes amb subprogrames</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="Tema4_Intro.html">Tema 4</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Subprogrames i paràmetres</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Tema4_Exercicis_subprogrames.html">Exercicis del Tema 4</a></li>
 </ul>
 </details></li>
@@ -352,7 +350,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Tema 4</h1>
+    <h1>Subprogrames i paràmetres</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -362,25 +360,22 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#subprogrames-i-parametres">Subprogrames i paràmetres</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#subprogrames">Subprogrames</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#parametres">Paràmetres</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#arguments-especificant-el-seu-nom">Arguments especificant el seu nom</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#valor-per-defecte-en-els-parametres">Valor per defecte en els paràmetres</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#subprogrames">Subprogrames</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#parametres">Paràmetres</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#arguments-especificant-el-seu-nom">Arguments especificant el seu nom</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#valor-per-defecte-en-els-parametres">Valor per defecte en els paràmetres</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#funcions">Funcions</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#valor-de-retorn-dels-procediments">Valor de retorn dels procediments</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#funcions">Funcions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#valor-de-retorn-dels-procediments">Valor de retorn dels procediments</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ambit-de-les-variables">Àmbit de les variables</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#ambit-local">Àmbit local</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#ambit-global">Àmbit global</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ambit-de-les-variables">Àmbit de les variables</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ambit-local">Àmbit local</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ambit-global">Àmbit global</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercicis-de-repas">Exercicis de repàs:</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercicis-de-repas">Exercicis de repàs:</a></li>
 </ul>
             </nav>
         </div>
@@ -392,67 +387,8 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="tema-4">
-<h1>Tema 4<a class="headerlink" href="#tema-4" title="Link to this heading">#</a></h1>
-<p>L’aplicació dels conceptes introduïts al capítol 3 permet resoldre problemes aparentment complicats sense gaire
-dificultat. Qualsevol problema que impliqui el tractament d’una seqüència, encara que no de forma evident, és
-resoluble amb els mètodes de cerca i recorregut.</p>
-<p>Anem a resoldre el següent problema: **<strong>Donades diverses seqüències de nombres enters positius, cadascuna acabada amb el nombre -1, digueu el número de la primera línia que contingui algun nombre primer. Si no n’hi ha cap que compleixi aquesta condició, escriviu “No n’existeix cap”.</strong></p>
-<p>A partir de l’experiència TODO</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;introdueix el nombre de seqüències que vols tractar, et diré quina és la primera línia que conté un element senar&quot;</span><span class="p">))</span>
-
-<span class="n">trobat</span> <span class="o">=</span> <span class="kc">False</span> <span class="c1"># noteu el canvi, ja que si trobem a una seqüència ja no hem de cercar més</span>
-<span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
-
-<span class="k">while</span> <span class="ow">not</span> <span class="n">trobat</span> <span class="ow">and</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">:</span> <span class="c1"># mentre no final;  # mentre no final; següent element</span>
-    <span class="c1"># Tractar element actual (tota la seqüència)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&gt; seqüència </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-    <span class="n">nombre</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;introdueix un nombre enter positiu&quot;</span><span class="p">))</span> <span class="c1"># primer element</span>
-    
-    <span class="n">posicio</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="k">while</span> <span class="ow">not</span> <span class="n">trobat</span> <span class="ow">and</span> <span class="n">nombre</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span> <span class="c1"># no final</span>
-
-        <span class="k">if</span> <span class="n">nombre</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span> <span class="c1">#tractar element actual (un element d&#39;una seqüència)</span>
-            <span class="n">trobat</span> <span class="o">=</span> <span class="kc">True</span>
-
-        <span class="n">nombre</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;introdueix un nombre enter positiu&quot;</span><span class="p">))</span> <span class="c1"># següent element</span>
-    <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
-
-<span class="k">if</span> <span class="n">trobat</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;La primera línia amb un nombre senar és </span><span class="si">{</span><span class="n">posicio</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;No n&#39;existeix cap&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">StdinNotImplementedError</span><span class="g g-Whitespace">                  </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">n</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;introdueix el nombre de seqüències que vols tractar, et diré quina és la primera línia que conté un element senar&quot;</span><span class="p">))</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">trobat</span> <span class="o">=</span> <span class="kc">False</span> <span class="c1"># noteu el canvi, ja que si trobem a una seqüència ja no hem de cercar més</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
-
-<span class="nn">File ~\miniconda3\envs\material_programacio\Lib\site-packages\ipykernel\kernelbase.py:1281,</span> in <span class="ni">Kernel.raw_input</span><span class="nt">(self, prompt)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1279</span> <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_allow_stdin</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1280</span>     <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;raw_input was called, but this frontend does not support input requests.&quot;</span>
-<span class="ne">-&gt; </span><span class="mi">1281</span>     <span class="k">raise</span> <span class="n">StdinNotImplementedError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1282</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_input_request</span><span class="p">(</span>
-<span class="g g-Whitespace">   </span><span class="mi">1283</span>     <span class="nb">str</span><span class="p">(</span><span class="n">prompt</span><span class="p">),</span>
-<span class="g g-Whitespace">   </span><span class="mi">1284</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_parent_ident</span><span class="p">[</span><span class="s2">&quot;shell&quot;</span><span class="p">],</span>
-<span class="g g-Whitespace">   </span><span class="mi">1285</span>     <span class="bp">self</span><span class="o">.</span><span class="n">get_parent</span><span class="p">(</span><span class="s2">&quot;shell&quot;</span><span class="p">),</span>
-<span class="g g-Whitespace">   </span><span class="mi">1286</span>     <span class="n">password</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1287</span> <span class="p">)</span>
-
-<span class="ne">StdinNotImplementedError</span>: raw_input was called, but this frontend does not support input requests.
-</pre></div>
-</div>
-</div>
-</div>
-<section id="subprogrames-i-parametres">
-<h2>Subprogrames i paràmetres<a class="headerlink" href="#subprogrames-i-parametres" title="Link to this heading">#</a></h2>
+  <section id="subprogrames-i-parametres">
+<h1>Subprogrames i paràmetres<a class="headerlink" href="#subprogrames-i-parametres" title="Link to this heading">#</a></h1>
 <p>Els subprogrames per si mateixos són programes complets, amb les seves declaracions i les seves instruccions pròpies,
 però a més a més, tenen la propietat de poder-se utilitzar dins d’altres programes.</p>
 <p>El fet de dividir el codi per resoldre un problema en subprogrames es coneix amb el nom de modularització. Hi ha
@@ -468,7 +404,7 @@ l’aplicació o en futurs programes, això elimina la necessitat de duplicar el
 <p><strong>Abast</strong>: els mòduls normalment defineixen un espai pels identificadors, això ajuda a evitar col·lisions entre
 identificadors en diferents àrees d’un programa.</p>
 <section id="subprogrames">
-<h3>Subprogrames<a class="headerlink" href="#subprogrames" title="Link to this heading">#</a></h3>
+<h2>Subprogrames<a class="headerlink" href="#subprogrames" title="Link to this heading">#</a></h2>
 <p>Un subprograma es defineix per quatre aspectes:</p>
 <ul class="simple">
 <li><p>El <strong>nom</strong> del subprograma: és la manera de poder identificar cada un dels subprogrames.</p></li>
@@ -511,7 +447,7 @@ serveix per imprimir el missatge <em>Hello World!</em> per pantalla. Com és un 
 </div>
 </section>
 <section id="parametres">
-<h3>Paràmetres<a class="headerlink" href="#parametres" title="Link to this heading">#</a></h3>
+<h2>Paràmetres<a class="headerlink" href="#parametres" title="Link to this heading">#</a></h2>
 <p>A la definició de les característiques dels subprogrames hem explicat que aquests poden ser parametritzats. El sentit
 d’utilitzar paràmetres és subministrar informació al subprograma de manera que aquest pugui executar la tasca per la
 qual ha estat dissenyat. El que es fa és indicar com una llista d’expressions separades per comes tota la informació
@@ -554,7 +490,7 @@ tenir en compte l’ordre i el nombre d’aquests paràmetres.</p>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">18</span><span class="o">-</span><span class="n">c547e8b8e45b</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">fruiteria</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="s2">&quot;prunes&quot;</span><span class="p">)</span>
 
 <span class="ne">TypeError</span>: fruiteria() missing 1 required positional argument: &#39;preu&#39;
@@ -604,7 +540,7 @@ tenir en compte l’ordre i el nombre d’aquests paràmetres.</p>
 </div>
 </div>
 <section id="arguments-especificant-el-seu-nom">
-<h4>Arguments especificant el seu nom<a class="headerlink" href="#arguments-especificant-el-seu-nom" title="Link to this heading">#</a></h4>
+<h3>Arguments especificant el seu nom<a class="headerlink" href="#arguments-especificant-el-seu-nom" title="Link to this heading">#</a></h3>
 <p>Quan cridem a un subprograma, podem especificar arguments de la forma <nom argument> = <valor>. En aquest cas, cada
 <nom argument> ha de coincidir amb un paràmetre de la definició del subprograma <code class="docutils literal notranslate"><span class="pre">Python</span></code>.</p>
 <p>Si especificam els arguments pel seu nom no és necessari especificar l’ordre.</p>
@@ -644,7 +580,7 @@ especificat un argument amb els seu nom, no hi pot haver arguments posicionals a
 </div>
 </section>
 <section id="valor-per-defecte-en-els-parametres">
-<h4>Valor per defecte en els paràmetres<a class="headerlink" href="#valor-per-defecte-en-els-parametres" title="Link to this heading">#</a></h4>
+<h3>Valor per defecte en els paràmetres<a class="headerlink" href="#valor-per-defecte-en-els-parametres" title="Link to this heading">#</a></h3>
 <p>Si un paràmetre en una <strong>definició</strong> d’un subprograma <code class="docutils literal notranslate"><span class="pre">Python</span></code> té la forma <nom> = <valor>, llavors <valor> es
 converteix en un <strong>valor per defecte</strong> d’aquest paràmetre. Els paràmetres definits d’aquesta manera es coneixen com
 a predeterminats o opcionals. A continuació tornarem a definir el nostre procediment <code class="docutils literal notranslate"><span class="pre">fruiteria</span></code>:</p>
@@ -687,7 +623,7 @@ a predeterminats o opcionals. A continuació tornarem a definir el nostre proced
 </section>
 </section>
 <section id="funcions">
-<h3>Funcions<a class="headerlink" href="#funcions" title="Link to this heading">#</a></h3>
+<h2>Funcions<a class="headerlink" href="#funcions" title="Link to this heading">#</a></h2>
 <p>A continuació veurem com s’implementa una <strong>funció</strong> que transforma una quantitat de metres a centimetres. Aquesta
 funció que s’anomena <code class="docutils literal notranslate"><span class="pre">m_a_cm</span></code> rep un paràmetre anomenat <code class="docutils literal notranslate"><span class="pre">m</span></code> el qual esperem que contengui un nombre sigui
 enter o decimal. Aquesta funció usa el paràmetre en una expressió i posteriorment retorna el valor calculat.</p>
@@ -726,7 +662,7 @@ El valor de b es: 3
 </div>
 </div>
 <section id="valor-de-retorn-dels-procediments">
-<h4>Valor de retorn dels procediments<a class="headerlink" href="#valor-de-retorn-dels-procediments" title="Link to this heading">#</a></h4>
+<h3>Valor de retorn dels procediments<a class="headerlink" href="#valor-de-retorn-dels-procediments" title="Link to this heading">#</a></h3>
 <p>Com acabam de comentar allò que diferència un procediment d’una funció és que aquesta segona té una clàusula
 <code class="docutils literal notranslate"><span class="pre">return</span></code> que s’encarrega d’explicitar el valor que retorna la funció. Tot i això que hem comentat, a
 <code class="docutils literal notranslate"><span class="pre">Python</span></code> els procediments també tenen un valor de retorn, aquest és el valor especial <code class="docutils literal notranslate"><span class="pre">None</span></code> i és sempre el mateix.</p>
@@ -749,11 +685,11 @@ El valor que retornen els procediments a Python es: None
 </section>
 </section>
 <section id="ambit-de-les-variables">
-<h3>Àmbit de les variables<a class="headerlink" href="#ambit-de-les-variables" title="Link to this heading">#</a></h3>
+<h2>Àmbit de les variables<a class="headerlink" href="#ambit-de-les-variables" title="Link to this heading">#</a></h2>
 <p>Així com hem definit l’àmbit dels subprogrames com el context des del qual aquests es poden invocar. Anàlogament podem
 definir l’àmbit de les variables com el context en el qual es poden usar.</p>
 <section id="ambit-local">
-<h4>Àmbit local<a class="headerlink" href="#ambit-local" title="Link to this heading">#</a></h4>
+<h3>Àmbit local<a class="headerlink" href="#ambit-local" title="Link to this heading">#</a></h3>
 <p>Les variables declarades dins d’un subprograma, només poden ser utilitzades per ell, fora de l’àmbit del
 subprograma aquestes no són visibles, d’aquesta característica en diem que les variables tenen un <strong>àmbit
 local</strong>.</p>
@@ -863,7 +799,7 @@ tipus de dades que anomenarem com a <strong>tipus mutables</strong>. L’altre t
 <strong>pas de paràmetres per referència</strong>.</p>
 </section>
 <section id="ambit-global">
-<h4>Àmbit global<a class="headerlink" href="#ambit-global" title="Link to this heading">#</a></h4>
+<h3>Àmbit global<a class="headerlink" href="#ambit-global" title="Link to this heading">#</a></h3>
 <p>L’ús de variables locals és la manera aconsellada de procedir en la gran majoria de programes, ja que facilita la
 comprensió del codi (només ens hem de preocupar d’entendre allò que hi ha dins el subprograma) i ens assegura que
 sempre que els paràmetres tinguin els mateixos valors, el subprograma sempre respondrà de la mateixa manera.</p>
@@ -901,14 +837,13 @@ Valor de x despres de cridar al procediment: 36
 </section>
 </section>
 <section id="exercicis-de-repas">
-<h3>Exercicis de repàs:<a class="headerlink" href="#exercicis-de-repas" title="Link to this heading">#</a></h3>
+<h2>Exercicis de repàs:<a class="headerlink" href="#exercicis-de-repas" title="Link to this heading">#</a></h2>
 <p>A resoldre amb l’ús de subprogrames:</p>
 <ol class="arabic simple">
 <li><p>Funció anomenada <em>es_primer</em> que retorna el valor <code class="docutils literal notranslate"><span class="pre">True</span></code> si el valor que rep per parametre és un nombre primer.</p></li>
 <li><p>Procediment anomenat <em>els_divisors_primers</em> que imprimeix els divisors que són primers del nombre que ha rebut per paràmetre.</p></li>
 <li><p>Programa que ens compta el nombre de vegades que apareix la parella ‘la’ en un texte acabat en <code class="docutils literal notranslate"><span class="pre">enter</span></code>.</p></li>
 </ol>
-</section>
 </section>
 </section>
 
@@ -943,20 +878,20 @@ Valor de x despres de cridar al procediment: 36
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="Tema4_Esquemes.html"
+       href="Tema4_Intro.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Aplicació dels esquemes bàsics per a la resolució de problemes més complexes</p>
+        <p class="prev-next-title">Tema 4</p>
       </div>
     </a>
     <a class="right-next"
-       href="Tema4_Aplicacio_esquemes_subprogrames.html"
+       href="Tema4_Exercicis_subprogrames.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Resolució de problemes amb esquemes bàsics i subprogrames</p>
+        <p class="prev-next-title">Exercicis del Tema 4</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -977,25 +912,22 @@ Valor de x despres de cridar al procediment: 36
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#subprogrames-i-parametres">Subprogrames i paràmetres</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#subprogrames">Subprogrames</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#parametres">Paràmetres</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#arguments-especificant-el-seu-nom">Arguments especificant el seu nom</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#valor-per-defecte-en-els-parametres">Valor per defecte en els paràmetres</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#subprogrames">Subprogrames</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#parametres">Paràmetres</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#arguments-especificant-el-seu-nom">Arguments especificant el seu nom</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#valor-per-defecte-en-els-parametres">Valor per defecte en els paràmetres</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#funcions">Funcions</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#valor-de-retorn-dels-procediments">Valor de retorn dels procediments</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#funcions">Funcions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#valor-de-retorn-dels-procediments">Valor de retorn dels procediments</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ambit-de-les-variables">Àmbit de les variables</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#ambit-local">Àmbit local</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#ambit-global">Àmbit global</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ambit-de-les-variables">Àmbit de les variables</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ambit-local">Àmbit local</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ambit-global">Àmbit global</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercicis-de-repas">Exercicis de repàs:</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercicis-de-repas">Exercicis de repàs:</a></li>
 </ul>
   </nav></div>
 

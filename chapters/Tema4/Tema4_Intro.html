@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Annexos &#8212; Programacio I</title>
+    <title>Tema 4 &#8212; Programacio I</title>
   
   
   
@@ -60,13 +60,11 @@
     <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'chapters/Annexes/Annexes';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'chapters/Tema4/Tema4_Intro';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Entorn de desenvolupament" href="Entorn_Desenvolupament.html" />
-    <link rel="prev" title="Exercicis Tema 7" href="../Tema7/Tema7_Exercicis.html" />
+    <link rel="next" title="Subprogrames i paràmetres" href="Tema4_Subprogrames.html" />
+    <link rel="prev" title="Exercicis del Tema 3" href="../Tema3/Tema3_Exercicis.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -188,9 +186,9 @@
 <li class="toctree-l2"><a class="reference internal" href="../Tema3/Tema3_Exercicis.html">Exercicis del Tema 3</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Tema4/Tema4_Intro.html">Tema 4</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Tema4/Tema4_Subprogrames.html">Subprogrames i paràmetres</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tema4/Tema4_Exercicis_subprogrames.html">Exercicis del Tema 4</a></li>
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Tema 4</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="Tema4_Subprogrames.html">Subprogrames i paràmetres</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tema4_Exercicis_subprogrames.html">Exercicis del Tema 4</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../Tema5/Tema5.html">Tema 5</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -211,10 +209,10 @@
 <li class="toctree-l2"><a class="reference internal" href="../Tema7/Tema7_Exercicis.html">Exercicis Tema 7</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Annexos</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="Entorn_Desenvolupament.html">Entorn de desenvolupament</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Taula_ASCII.html">Taula ASCII</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Fitxers_Externs.html">Fitxers externs</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Annexes/Annexes.html">Annexos</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Annexes/Entorn_Desenvolupament.html">Entorn de desenvolupament</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Annexes/Taula_ASCII.html">Taula ASCII</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Annexes/Fitxers_Externs.html">Fitxers externs</a></li>
 </ul>
 </details></li>
 </ul>
@@ -276,7 +274,7 @@
       
       
       
-      <li><a href="../../_sources/chapters/Annexes/Annexes.ipynb" target="_blank"
+      <li><a href="../../_sources/chapters/Tema4/Tema4_Intro.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -339,7 +337,9 @@
 <button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
 </button>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -350,11 +350,19 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Annexos</h1>
+    <h1>Tema 4</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#subprogrames">Subprogrames</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -364,9 +372,66 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="annexos">
-<h1>Annexos<a class="headerlink" href="#annexos" title="Link to this heading">#</a></h1>
-<p>En aquesta secció trobareu material addicional al temari que pot ser del vostre interès.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="tema-4">
+<h1>Tema 4<a class="headerlink" href="#tema-4" title="Link to this heading">#</a></h1>
+<section id="subprogrames">
+<h2>Subprogrames<a class="headerlink" href="#subprogrames" title="Link to this heading">#</a></h2>
+<p>L’aplicació dels conceptes introduïts al capítol 3 permet resoldre problemes aparentment complicats sense gaire dificultat. Qualsevol problema que impliqui el tractament d’una seqüència, encara que no de forma evident, és resoluble amb els mètodes de cerca i recorregut.</p>
+<p>Resoldrem el següent problema: <strong>Donades diverses seqüències de nombres enters positius, cadascuna acabada amb el nombre -1, digueu el número de la primera línia que contingui algun nombre primer. Si no n’hi ha cap que compleixi aquesta condició, escriviu “No n’existeix cap”.</strong></p>
+<p>A partir de l’experiència TODO</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;introdueix el nombre de seqüències que vols tractar, et diré quina és la primera línia que conté un element senar&quot;</span><span class="p">))</span>
+
+<span class="n">trobat</span> <span class="o">=</span> <span class="kc">False</span> <span class="c1"># noteu el canvi, ja que si trobem a una seqüència ja no hem de cercar més</span>
+<span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">while</span> <span class="ow">not</span> <span class="n">trobat</span> <span class="ow">and</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">:</span> <span class="c1"># mentre no final;  # mentre no final; següent element</span>
+    <span class="c1"># Tractar element actual (tota la seqüència)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&gt; seqüència </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">nombre</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;introdueix un nombre enter positiu&quot;</span><span class="p">))</span> <span class="c1"># primer element</span>
+    
+    <span class="n">posicio</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">while</span> <span class="ow">not</span> <span class="n">trobat</span> <span class="ow">and</span> <span class="n">nombre</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span> <span class="c1"># no final</span>
+
+        <span class="k">if</span> <span class="n">nombre</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span> <span class="c1">#tractar element actual (un element d&#39;una seqüència)</span>
+            <span class="n">trobat</span> <span class="o">=</span> <span class="kc">True</span>
+
+        <span class="n">nombre</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;introdueix un nombre enter positiu&quot;</span><span class="p">))</span> <span class="c1"># següent element</span>
+    <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="k">if</span> <span class="n">trobat</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;La primera línia amb un nombre senar és </span><span class="si">{</span><span class="n">posicio</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;No n&#39;existeix cap&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">StdinNotImplementedError</span><span class="g g-Whitespace">                  </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">n</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;introdueix el nombre de seqüències que vols tractar, et diré quina és la primera línia que conté un element senar&quot;</span><span class="p">))</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">trobat</span> <span class="o">=</span> <span class="kc">False</span> <span class="c1"># noteu el canvi, ja que si trobem a una seqüència ja no hem de cercar més</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="nn">File ~\miniconda3\envs\material_programacio\Lib\site-packages\ipykernel\kernelbase.py:1281,</span> in <span class="ni">Kernel.raw_input</span><span class="nt">(self, prompt)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1279</span> <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_allow_stdin</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1280</span>     <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;raw_input was called, but this frontend does not support input requests.&quot;</span>
+<span class="ne">-&gt; </span><span class="mi">1281</span>     <span class="k">raise</span> <span class="n">StdinNotImplementedError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1282</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_input_request</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1283</span>     <span class="nb">str</span><span class="p">(</span><span class="n">prompt</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1284</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_parent_ident</span><span class="p">[</span><span class="s2">&quot;shell&quot;</span><span class="p">],</span>
+<span class="g g-Whitespace">   </span><span class="mi">1285</span>     <span class="bp">self</span><span class="o">.</span><span class="n">get_parent</span><span class="p">(</span><span class="s2">&quot;shell&quot;</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1286</span>     <span class="n">password</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1287</span> <span class="p">)</span>
+
+<span class="ne">StdinNotImplementedError</span>: raw_input was called, but this frontend does not support input requests.
+</pre></div>
+</div>
+</div>
+</div>
+</section>
 <div class="toctree-wrapper compound">
 </div>
 </section>
@@ -384,7 +449,7 @@
         },
         kernelOptions: {
             name: "python3",
-            path: "./chapters\Annexes"
+            path: "./chapters\Tema4"
         },
         predefinedOutput: true
     }
@@ -402,20 +467,20 @@
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../Tema7/Tema7_Exercicis.html"
+       href="../Tema3/Tema3_Exercicis.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Exercicis Tema 7</p>
+        <p class="prev-next-title">Exercicis del Tema 3</p>
       </div>
     </a>
     <a class="right-next"
-       href="Entorn_Desenvolupament.html"
+       href="Tema4_Subprogrames.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Entorn de desenvolupament</p>
+        <p class="prev-next-title">Subprogrames i paràmetres</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -425,6 +490,22 @@
             </div>
             
             
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#subprogrames">Subprogrames</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
