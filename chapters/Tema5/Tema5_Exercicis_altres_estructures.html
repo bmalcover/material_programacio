@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Exercicis Tema 5/2 &#8212; Programacio I</title>
+    <title>Exercicis Tema 5 &#8212; Programacio I</title>
   
   
   
@@ -60,11 +60,13 @@
     <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'chapters/Tema5/Tema5_Exercicis_altres_estructures';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Tema 6" href="../Tema6/Tema6_Fitxers.html" />
-    <link rel="prev" title="Exercicis Tema 5" href="Tema5_Exercicis.html" />
+    <link rel="prev" title="Exercicis Consolidació POO" href="Tema5_POO.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -181,23 +183,24 @@
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../Tema3/Tema3_.html">Tema 3</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Tema3/Tema3_sequencies_complexes.html">Aplicació dels esquemes bàsics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tema3/Tema3_Sequencies_sequencies.html">Seqüències de seqüències</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Tema3/Tema3_Exercicis.html">Exercicis del Tema 3</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Tema4/Tema4_.html">Tema 4</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Tema4/Tema4_Esquemes.html">Aplicació dels esquemes bàsics</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Tema4/Tema4_Intro.html">Tema 4</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../Tema4/Tema4_Subprogrames.html">Subprogrames i paràmetres</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tema4/Tema4_Aplicacio_esquemes_subprogrames.html">Esquemes amb subprogrames</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Tema4/Tema4_Exercicis_subprogrames.html">Exercicis del Tema 4</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="Tema5.html">Tema 5</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="Tema5_Llistes.html">Llistes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Tema5_Strings.html">Strings</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Tema5_Classes.html">Classes i Objectes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Tema5_Estructures.html">Altres maneres d’estructurar les dades</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Tema5_Exercicis.html">Exercicis Tema 5</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Exercicis Tema 5/2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tema5_Classes.html">Classes i Objectes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tema5_POO.html">Exercicis Consolidació POO</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Exercicis Tema 5</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../Tema6/Tema6_Fitxers.html">Tema 6</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -349,7 +352,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Exercicis Tema 5/2</h1>
+    <h1>Exercicis Tema 5</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -359,7 +362,14 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#altres-estructures">Altres estructures</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#programacio-orientada-a-objecte">Programació orientada a objecte</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#classe-numeroracional">Classe NumeroRacional</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#classe-punt-3d">Classe punt 3D</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#classe-data">Classe Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#classe-vector">Classe Vector</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ampliacio-classe-punt">Ampliació Classe Punt</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -371,43 +381,124 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="exercicis-tema-5-2">
-<h1>Exercicis Tema 5/2<a class="headerlink" href="#exercicis-tema-5-2" title="Link to this heading">#</a></h1>
-<section id="altres-estructures">
-<h2>Altres estructures<a class="headerlink" href="#altres-estructures" title="Link to this heading">#</a></h2>
+  <section id="exercicis-tema-5">
+<h1>Exercicis Tema 5<a class="headerlink" href="#exercicis-tema-5" title="Link to this heading">#</a></h1>
+<section id="programacio-orientada-a-objecte">
+<h2>Programació orientada a objecte<a class="headerlink" href="#programacio-orientada-a-objecte" title="Link to this heading">#</a></h2>
+<section id="classe-numeroracional">
+<h3>Classe NumeroRacional<a class="headerlink" href="#classe-numeroracional" title="Link to this heading">#</a></h3>
+<p>Crear una classe anomenada NumeroRacional que ens permet crear programes amb variables de tipus nombre racional. Un
+nombre racional és un nombre que s’expressa com el quocient de 2 nombres sencers, p.e. 5/2.</p>
+<p>Abans de començar a programar, recomano que llegiu tots els punts de l’exercici, ja que us pot permetre entendre
+millor la funcionalitat de la classe.</p>
+<p>Aquesta classe, té dos atributs, un dividend i un divisor.</p>
 <ol class="arabic simple">
-<li><p>Obtenir una llista amb el quadrat dels 5 primers nombres naturals. Aquest exercici s’ha de realitzar usant <em>list comprehension</em>.</p></li>
-<li><p>Tenim una llista que té un conjunt de distàncies en metres (la podeu crear a mà dins el codi). Transformar-la en una que té les distàncies en iardes: 1 iarda = 0,9144 metres. Aquest exercici s’ha de realitzar usant <em>list comprehension</em>.</p></li>
-<li><p>Fer un programa que ens diu el nombre d’aparicions de cada vocal en una seqüència acabada en punt; Aquest cop en lloc d’una llista heu d’usar un diccionari. Aquest exercici no es pot solucionar amb _list comprehension.</p></li>
-<li><p>Crear una funció generadora que rebi el valor d’inici i l’increment com a paràmetre i ens proporcioni valors successius a partir del valor inicial. Llavors, crear una llista de 10 nombres que comenci en el valor -5 i els següents nombres s’obtinguin d’incrementar l’anterior en 10 unitats. Finalment, crear una nova llista, amb aquells que
-són positius.</p></li>
-<li><p>Generar una llista que contengui els primers 11 valors d’una successió que té com a terme inicial el valor 1 i els termes successius s’obtenen sumant un nombre aleatori entre 1 i 4 al terme previ. Crear la llista d’aquells que són parells. Heu d’usar una funció generadora.</p></li>
-<li><p>Implementar la vostra pròpia funció <code class="docutils literal notranslate"><span class="pre">map</span></code> anomenada <code class="docutils literal notranslate"><span class="pre">mimap</span></code>. Aquesta funció rep una funció lambda per paràmetre i l’aplica als elements d’una llista que també rep per paràmetre. Posau un exemple d’ús.</p></li>
-<li><p>Eliminar els noms buits de la següent llista: <code class="docutils literal notranslate"><span class="pre">noms</span> <span class="pre">=</span> <span class="pre">[&quot;&quot;,</span> <span class="pre">&quot;jose&quot;,</span> <span class="pre">&quot;juana&quot;,</span> <span class="pre">&quot;lluis&quot;</span> <span class="pre">,</span> <span class="pre">&quot;encarnacio&quot;,</span> <span class="pre">&quot;&quot;,</span> <span class="pre">&quot;pepa&quot;]</span></code>.<em>Ajuda</em>: Un <em>string</em> buit té longitud 0.</p></li>
-<li><p>A partir de la llista de l’exercici anterior, volem obtenir una nova llista on concatenem els noms amb els següents
-<code class="docutils literal notranslate"><span class="pre">cognoms</span> <span class="pre">=</span> <span class="pre">[&quot;stark&quot;,</span> <span class="pre">&quot;targaryen&quot;,</span> <span class="pre">&quot;baratheon&quot;,</span> <span class="pre">&quot;martell&quot;,</span> <span class="pre">&quot;lannister&quot;]</span></code></p></li>
-<li><p>Aquest algorisme hauria de fer la següent feina: donades dues llistes de nombres de la mateixa longitud, determina quina d’elles té més valors més alts comparant-los un a un. Aquest programa no funciona correctament. Heu d’indicar un cas en què falli, i escriure una nova versió corregida. La nova versió no pot emprar bucles, només <em>list comprehensions</em> i funcions lambda.</p></li>
+<li><p>Implementar el constructor, que rep els valors que tindran el dividend i el divisor.</p></li>
+<li><p>El mètode <strong>simplificar_quocient</strong>, un procediment que no rep paràmetres i divideix el dividend i el divisor pel <em>mcd</em>
+dels dos. Per exemple, si els valors són 54 i 10, els simplifica a 27 i 5.</p></li>
+<li><p>Un mètode <strong>es_infinit</strong> que retorni un booleà indicant si el nombre és infinit, és a dir si el divisor és zero.</p></li>
+<li><p>Implementar un mètode <strong>obtenir_quocient</strong>, una funció que ens retorna el quocient del nombre racional.</p></li>
+<li><p>Implementar un mètode <strong>suma</strong>, una funció que rep un nombre racional per paràmetre i retorna un nou número racional
+resultat de sumar el nombre racional amb el que rebem per paràmetre: La suma a / b + c / d, és (a * d + c * b) / (b * d).</p></li>
+<li><p>implementar el mètode <strong>str</strong>, d’aquesta forma al fer print d’una variable de tipus nombre racional ho mostri per
+consola.</p></li>
 </ol>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>countA = 0
-countB = 0
-for i in range(0, len(A)+ len(B)):
-    vA = A[i]
-    vB = B[i]
-    if vA &gt; vB:
-        countA = countA + 1
-    else:
-        countB = countB + 1
-
-print(A gana &#39; + str(countA) + &#39;, B gana &#39; + str(countB)+ &#39;:&#39;)
-
-if countA &gt; countB:
-   print (‘Gana A&#39;)
-if countB &lt; countA:
-   print(&#39;Gana B&#39;)
-else:
-   print (&#39;Empate’)
-</pre></div>
-</div>
+<p>Les classes que es troben en altres fitxers es poden importar d’igual manera que els subprogrames, tal com hem vist al taller.</p>
+<p>Un cop realitzada la classe NumeroRacional, heu implementar dos programes.</p>
+<ol class="arabic simple">
+<li><p>Programa que construeix un nombre racional a partir de la lectura de dos valors que l’usuari escriu pel teclat. Si
+el nombre racional no és infinit, sumar el nombre 3/4. Finalment heu de simplificar el nombre resultant i mostrar per
+pantalla.</p></li>
+<li><p>Realitzar un programa que calculi la següent aproximació al quadrat del nombre pi amb 1000 termes de la
+seqüència. Heu de fer-ho en termes de nombres racionals i mostrar el resultat final per pantalla, en format decimal.
+<span class="math notranslate nohighlight">\(6 (1/1 + 1/4 + 1/9 + 1/16 + 1/25 ... ..)\)</span></p></li>
+</ol>
+<p>En posteriors exercicis ampliarem aquesta classe amb més funcionalitats.</p>
+</section>
+<section id="classe-punt-3d">
+<h3>Classe punt 3D<a class="headerlink" href="#classe-punt-3d" title="Link to this heading">#</a></h3>
+<p>Crear una classe anomenada Punt que ens permet crear programes amb variables de el tipus punt. Un punt és una
+localització en l’espai 3D que s’expressa com 3 valors referents a les coordenades x, i, z. Per exemple (1, 0, 4).</p>
+<p>Abans de començar a programar, recomano que llegiu tots els punts de l’exercici, ja que us pot permetre entendre
+millor la funcionalitat de la classe.</p>
+<p>Quants atributs ha de tenir aquesta classe?</p>
+<ol class="arabic simple">
+<li><p>El constructor rep un valor per a cada atribut.</p></li>
+<li><p>implementar un mètode <strong>origen</strong>, que retorna <code class="docutils literal notranslate"><span class="pre">True</span></code> si el punt es troba en l’origen de coordenades i <code class="docutils literal notranslate"><span class="pre">False</span></code> en cas
+contrari.</p></li>
+<li><p>implementar un mètode <strong>distancia</strong> que rep un punt per paràmetre i ens retorna la distància entre el nostre punt,
+<code class="docutils literal notranslate"><span class="pre">self</span></code> , i el punt rebut per paràmetre.</p></li>
+<li><p>implementar el mètode <strong>str</strong>.</p></li>
+</ol>
+<p>Implementar un programa principal que generi dos punts de manera aleatòria, les coordenades es poden generar entre
+els valors [-10, 10], mostreu els valors dels dos punts per pantalla. Comproveu que la distància del primer punt al
+segon és la mateixa que la distància del segon punt al primer, mostrar per pantalla.</p>
+<p>En posteriors exercicis ampliarem aquesta classe amb més funcionalitats.</p>
+<p>A continuació tenim tres exercicis dissenyats per practicar l’implementació de classes, en concret els conceptes
+d’encapsulació i mètodes de classe. No tenen cap programa principal associat però s’espera que a mesura que
+implementeu els diferents mètodes els proveu per assegurar-ne un correcte funcionament.</p>
+</section>
+<section id="classe-data">
+<h3>Classe Data<a class="headerlink" href="#classe-data" title="Link to this heading">#</a></h3>
+<p>Crear un tipus de dades data, mitjançant la implementació d’una classe que guardarà el dia, mes (com un nombre) i any.</p>
+<ol class="arabic simple">
+<li><p>Té un constructor que rep: dia, mes i any.</p></li>
+<li><p>Implementar un mètode de classe, <strong>son_iguals</strong>, que rep dues dates i retorna un booleà indicant si aquestes són
+iguals.</p></li>
+<li><p>Implementar un mètode de classe, <strong>es_major</strong>, que rep dues dates i retorna un booleà indicant si la primera és
+més gran que la segona.</p></li>
+<li><p>Implementar un mètode de classe, <strong>es_menor</strong>, que rep dues dates i retorna un booleà indicant si la primera és
+menor que la segona.</p></li>
+<li><p>Fer un mètode, <strong>dies_mes</strong>, que donat un mes i un any retorna el nombre de dies del mes. Cal recordar que els anys de
+traspàs febrer té 29 dies.</p></li>
+<li><p>Fer un mètode privat, anomenat <strong>es_any_traspas</strong>, que donat un nombre enter i retorni un booleà indicant si és de
+traspàs o no. Un any és de traspàs si és divisible per 4, però no és de traspàs si és divisible per 100 i no per 400. Per
+exemple 1996 és de traspàs, 2000 si (és divisible per 400) i 2100 no (és divisible per 100 i no per 400).</p></li>
+<li><p>Incorporar un mètode, <strong>es_traspas</strong>, que indiqui si la data està en any de traspàs, s’ha de fer ús de el mètode
+anterior.</p></li>
+<li><p>Implementar un mètode anomenat <strong>incrementa</strong> que incrementi en un dia la data, tenint en compte que si sobrepassem
+l’últim dia del mes hem d’incrementar el mes, i hem de fer el mateix raonament per a l’últim mes de l’any.</p></li>
+<li><p>Implementar un mètode de classe anomenat <strong>diferència</strong> que donades dues dates ens digui el nombre de dies entre les
+dues dates (podeu utilitzar aquest mètode per saber quants dies heu viscut ;) ).</p></li>
+</ol>
+</section>
+<section id="classe-vector">
+<h3>Classe Vector<a class="headerlink" href="#classe-vector" title="Link to this heading">#</a></h3>
+<p>Anem a fer l’exercici classe vector. En aquest cas heu de implementar la classe (definir atributs i mètodes) i
+realitzar un programa principal que permeti comprovar el seu correcte funcionament (no cal fer entrada per teclat).</p>
+<p>Per definir un vector 3 dimensional: són necessaris 3 sencers (x, i, z). Recordeu que els atributs han de ser privats.</p>
+<p>Operacions:</p>
+<ol class="arabic simple">
+<li><p>Crear un vector en una posició determinada (constructor).</p></li>
+<li><p>Implementar el mètode <strong>mòdul</strong> que ens retorna el mòdul del vector en format numèric.</p></li>
+<li><p>Mètode suma: mètode de classe que rep dos vectors per paràmetre realitza l’operació <strong>suma</strong>. Es sumen les
+components, i ens retorna un nou Vector.</p></li>
+<li><p>Mètode resta: mètode de classe que rep dosectors per paràmetre i realitza l’operació <strong>resta</strong>. Retorna un nou
+vector.</p></li>
+<li><p>Mètode que rep un vector i realitza el seu <strong>producte_escalar</strong> retornant el seu valor numèric.</p></li>
+<li><p>Mètode <strong>mult_escalar</strong> que multiplica les tres components del vector per un escalar rebut per paràmetre.</p></li>
+<li><p>Mètode <strong>str</strong> que retorna un string que conté les tres components del vector.</p></li>
+<li><p>Mètode anomenat <strong>son_iguals</strong> que rep un vector per paràmetre i retorna una variable booleana si les
+tres components dels vectors son iguals.</p></li>
+<li><p>Mètode <strong>calcular_angle</strong>: calcula l’angle amb un altre vector que rep per paràmetre i retorna valor de l’angle
+entre ells. Link: Angle de dos vectors</p></li>
+</ol>
+</section>
+<section id="ampliacio-classe-punt">
+<h3>Ampliació Classe Punt<a class="headerlink" href="#ampliacio-classe-punt" title="Link to this heading">#</a></h3>
+<p>Modificar la classe Punt realitzada anteriorment. En primer lloc, heu de transformar els atributs en atributs privats
+i afegir les següents operacions. Com veureu aquestes necessiten de les operacions de vectors, per tant també necessitem fer el import de la classe Vector a la classe punt:</p>
+<ol class="arabic simple">
+<li><p>Implementar l’operació <strong>resta</strong>, aquest és un mètode de classe que retorna el Vector resultat de la resta de dos
+punts.</p></li>
+<li><p>Implementar l’operació <strong>suma</strong>, a un punt li suma un Vector rebut per paràmetre. Retorna un nou punt.</p></li>
+<li><p>Operació <strong>suma_escalar</strong>, rep un vector i un enter per paràmetre. Suma el Vector que es multiplica per l’escalar
+rebut i retorna un nou Punt: <span class="math notranslate nohighlight">\(P\)</span> = <span class="math notranslate nohighlight">\(P + a ·\vec{v}\)</span></p></li>
+</ol>
+<p>Com podeu observar ens cal fer l’operació suma entre un punt i un vector en dos mètodes diferents. Per poder
+reutilitzar el codi entre aquests dos mètodes es demana que implementar un mètode privat anomenat <strong>suma_interna</strong> que
+realitza aquest procés i que pugui ser usat per les operacions <strong>suma</strong> i <strong>suma_escalar</strong>.</p>
+</section>
 </section>
 </section>
 
@@ -442,12 +533,12 @@ else:
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="Tema5_Exercicis.html"
+       href="Tema5_POO.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Exercicis Tema 5</p>
+        <p class="prev-next-title">Exercicis Consolidació POO</p>
       </div>
     </a>
     <a class="right-next"
@@ -476,7 +567,14 @@ else:
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#altres-estructures">Altres estructures</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#programacio-orientada-a-objecte">Programació orientada a objecte</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#classe-numeroracional">Classe NumeroRacional</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#classe-punt-3d">Classe punt 3D</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#classe-data">Classe Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#classe-vector">Classe Vector</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ampliacio-classe-punt">Ampliació Classe Punt</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 

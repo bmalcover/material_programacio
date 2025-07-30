@@ -194,11 +194,11 @@
 <li class="toctree-l1 has-children"><a class="reference internal" href="../Tema5/Tema5.html">Tema 5</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../Tema5/Tema5_Llistes.html">Llistes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Tema5/Tema5_Strings.html">Strings</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tema5/Tema5_Classes.html">Classes i Objectes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Tema5/Tema5_Estructures.html">Altres maneres d’estructurar les dades</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Tema5/Tema5_Exercicis.html">Exercicis Tema 5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tema5/Tema5_Classes.html">Classes i Objectes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Tema5/Tema5_POO.html">Exercicis Consolidació POO</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tema5/Tema5_Exercicis_altres_estructures.html">Exercicis Tema 5/2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tema5/Tema5_Exercicis_altres_estructures.html">Exercicis Tema 5</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../Tema6/Tema6_Fitxers.html">Tema 6</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -373,9 +373,9 @@
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ambit-de-les-variables">Àmbit de les variables</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ambit-local">Àmbit local</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ambit-global">Àmbit global</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tornem-al-principi">Tornem al principi</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercicis-de-repas">Exercicis de repàs:</a></li>
 </ul>
             </nav>
         </div>
@@ -835,15 +835,51 @@ Valor de x despres de cridar al procediment: 36
 <p>Ens hem de fixar que aquest procediment no es pot usar en cap altre programa si no existeix una variable anomenada
 <code class="docutils literal notranslate"><span class="pre">x</span></code> amb tipus numèric en un àmbit exterior al del subprograma.</p>
 </section>
+<section id="tornem-al-principi">
+<h3>Tornem al principi<a class="headerlink" href="#tornem-al-principi" title="Link to this heading">#</a></h3>
+<p>Anem a veure com és el codi per resoldre el problema plantejat a l’inici d’aquest capítol:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">es_primer</span><span class="p">(</span><span class="n">nombre</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    :param nombre: Un nombre enter positiu</span>
+<span class="sd">    :return: un booleà indicant si nombre és primer o no</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">nombre</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">False</span>
+    <span class="n">idx</span> <span class="o">=</span> <span class="n">nombre</span> <span class="o">//</span> <span class="mi">2</span>
+
+    <span class="k">while</span> <span class="n">idx</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="ow">and</span> <span class="n">nombre</span> <span class="o">%</span> <span class="n">idx</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">idx</span> <span class="o">=</span> <span class="n">idx</span> <span class="o">-</span> <span class="mi">1</span>
+        
+    <span class="k">return</span> <span class="n">idx</span> <span class="o">!=</span> <span class="mi">1</span>
+
+<span class="n">n</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;introdueix el nombre de seqüències que vols tractar, et diré quina és la primera línia que conté un nombre primer&quot;</span><span class="p">))</span>
+
+<span class="n">trobat</span> <span class="o">=</span> <span class="kc">False</span> <span class="c1"># noteu el canvi, ja que si trobem a una seqüència ja no hem de cercar més</span>
+<span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">while</span> <span class="ow">not</span> <span class="n">trobat</span> <span class="ow">and</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">:</span> <span class="c1"># mentre no final;  # mentre no final; següent element</span>
+    <span class="c1"># Tractar element actual (tota la seqüència)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&gt; seqüència </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">nombre</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;introdueix un nombre enter positiu&quot;</span><span class="p">))</span> <span class="c1"># primer element</span>
+    
+    <span class="n">posicio</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">while</span> <span class="ow">not</span> <span class="n">trobat</span> <span class="ow">and</span> <span class="n">nombre</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span> <span class="c1"># no final</span>
+        <span class="k">if</span> <span class="n">es_primer</span><span class="p">(</span><span class="n">nombre</span><span class="p">):</span> <span class="c1">#tractar element actual (un element d&#39;una seqüència)</span>
+            <span class="n">trobat</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="n">nombre</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;introdueix un nombre enter positiu&quot;</span><span class="p">))</span> <span class="c1"># següent element</span>
+    <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="k">if</span> <span class="n">trobat</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;La primera línia amb un nombre senar és </span><span class="si">{</span><span class="n">posicio</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;No n&#39;existeix cap&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
 </section>
-<section id="exercicis-de-repas">
-<h2>Exercicis de repàs:<a class="headerlink" href="#exercicis-de-repas" title="Link to this heading">#</a></h2>
-<p>A resoldre amb l’ús de subprogrames:</p>
-<ol class="arabic simple">
-<li><p>Funció anomenada <em>es_primer</em> que retorna el valor <code class="docutils literal notranslate"><span class="pre">True</span></code> si el valor que rep per parametre és un nombre primer.</p></li>
-<li><p>Procediment anomenat <em>els_divisors_primers</em> que imprimeix els divisors que són primers del nombre que ha rebut per paràmetre.</p></li>
-<li><p>Programa que ens compta el nombre de vegades que apareix la parella ‘la’ en un texte acabat en <code class="docutils literal notranslate"><span class="pre">enter</span></code>.</p></li>
-</ol>
 </section>
 </section>
 
@@ -925,9 +961,9 @@ Valor de x despres de cridar al procediment: 36
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ambit-de-les-variables">Àmbit de les variables</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ambit-local">Àmbit local</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ambit-global">Àmbit global</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tornem-al-principi">Tornem al principi</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercicis-de-repas">Exercicis de repàs:</a></li>
 </ul>
   </nav></div>
 

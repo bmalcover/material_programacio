@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -64,7 +64,7 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Exercicis Tema 5" href="Tema5_Exercicis.html" />
-    <link rel="prev" title="Classes i Objectes" href="Tema5_Classes.html" />
+    <link rel="prev" title="Strings" href="Tema5_Strings.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -181,22 +181,24 @@
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../Tema3/Tema3_.html">Tema 3</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Tema3/Tema3_sequencies_complexes.html">Aplicació dels esquemes bàsics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tema3/Tema3_Sequencies_sequencies.html">Seqüències de seqüències</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Tema3/Tema3_Exercicis.html">Exercicis del Tema 3</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Tema4/Tema4_.html">Tema 4</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Tema4/Tema4_Esquemes.html">Aplicació dels esquemes bàsics</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Tema4/Tema4_Intro.html">Tema 4</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../Tema4/Tema4_Subprogrames.html">Subprogrames i paràmetres</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tema4/Tema4_Aplicacio_esquemes_subprogrames.html">Esquemes amb subprogrames</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Tema4/Tema4_Exercicis_subprogrames.html">Exercicis del Tema 4</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="Tema5.html">Tema 5</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="Tema5_Llistes.html">Llistes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Tema5_Classes.html">Classes i Objectes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tema5_Strings.html">Strings</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Altres maneres d’estructurar les dades</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Tema5_Exercicis.html">Exercicis Tema 5</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Tema5_Exercicis_altres_estructures.html">Exercicis Tema 5/2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tema5_Classes.html">Classes i Objectes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tema5_POO.html">Exercicis Consolidació POO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tema5_Exercicis_altres_estructures.html">Exercicis Tema 5</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../Tema6/Tema6_Fitxers.html">Tema 6</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -374,7 +376,7 @@
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#filter">Filter</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#yield">Yield</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#funcions-generadores">Funcions generadores</a></li>
 </ul>
             </nav>
         </div>
@@ -996,11 +998,11 @@ sol paràmetre iterable</p>
 </div>
 </section>
 </section>
-<section id="yield">
-<h2>Yield<a class="headerlink" href="#yield" title="Link to this heading">#</a></h2>
-<p>Els generadors són un tipus d’iterador els elements dels quals només podem usar una vegada. Els generadors no
-emmagatzemen tots els valors de l’iterador en la memòria, els generen sobre la marxa:</p>
-<p><code class="docutils literal notranslate"><span class="pre">yield</span></code> és una paraula clau que s’utilitza com a <code class="docutils literal notranslate"><span class="pre">return</span></code> d’una funció, excepte que la funció retornarà un generador.</p>
+<section id="funcions-generadores">
+<h2>Funcions generadores<a class="headerlink" href="#funcions-generadores" title="Link to this heading">#</a></h2>
+<p>Els generadors són una manera especial de definir iteradors en <code class="docutils literal notranslate"><span class="pre">Python</span></code>. A diferència de les llistes o altres col·leccions, els generadors no emmagatzemen tots els valors en memòria alhora, sinó que els produeixen un a un quan se’ls demana (això es coneix com a <em>avaluació mandrosa</em> o <em>lazy evaluation</em>). Aquesta característica els fa molt útils quan es treballa amb seqüències llargues o potencialment infinites, ja que estalvien memòria i poden ser més eficients.</p>
+<p>Per crear un generador, s’utilitza la paraula clau <code class="docutils literal notranslate"><span class="pre">yield</span></code> dins d’una funció. Aquesta funciona de manera semblant a <code class="docutils literal notranslate"><span class="pre">return</span></code>, però en comptes de finalitzar l’execució de la funció, <code class="docutils literal notranslate"><span class="pre">yield</span></code> pausa la funció i retorna temporalment un valor. La propera vegada que s’itera sobre el generador, la funció reprèn l’execució just després del <code class="docutils literal notranslate"><span class="pre">yield</span></code>, mantenint l’estat anterior.</p>
+<p>Així, una funció amb <code class="docutils literal notranslate"><span class="pre">yield</span></code> no retorna un valor únic, sinó un objecte generador que pot produir múltiples valors al llarg del temps mitjançant un bucle <code class="docutils literal notranslate"><span class="pre">for</span></code> o crides successives a <code class="docutils literal notranslate"><span class="pre">next()</span></code>.</p>
 <p>Vegem un exemple en codi:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1138,13 +1140,6 @@ el bucle hagi acabat, o perquè ja no satisfà una certa condició.</p>
 </div>
 </div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">101</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-</div>
 </section>
 </section>
 
@@ -1179,12 +1174,12 @@ el bucle hagi acabat, o perquè ja no satisfà una certa condició.</p>
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="Tema5_Classes.html"
+       href="Tema5_Strings.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Classes i Objectes</p>
+        <p class="prev-next-title">Strings</p>
       </div>
     </a>
     <a class="right-next"
@@ -1229,7 +1224,7 @@ el bucle hagi acabat, o perquè ja no satisfà una certa condició.</p>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#filter">Filter</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#yield">Yield</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#funcions-generadores">Funcions generadores</a></li>
 </ul>
   </nav></div>
 
