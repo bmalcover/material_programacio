@@ -22,9 +22,9 @@ sections:
   sections:
   - file: chapters/Tema5/Tema5_Llistes
   - file: chapters/Tema5/Tema5_Strings
-  - file: chapters/Tema5/Tema5_Classes
   - file: chapters/Tema5/Tema5_Estructures
   - file: chapters/Tema5/Tema5_Exercicis
+  - file: chapters/Tema5/Tema5_Classes
   - file: chapters/Tema5/Tema5_POO
   - file: chapters/Tema5/Tema5_Exercicis_altres_estructures
 - file: chapters/Tema6/Tema6_Fitxers
