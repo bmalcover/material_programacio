@@ -460,7 +460,7 @@ seqüència per parelles i a cada una d’aquestes parelles se l’ha de compara
 <section id="finestres">
 <h2>Finestres<a class="headerlink" href="#finestres" title="Link to this heading">#</a></h2>
 <p>Realitzarem una aproximació al problema emprant el concepte de <strong>finestra</strong> que es defineix com el conjunt d’elements just a l’esquerra de l’element actual que hem de mantenir durant el tractament de la seqüència.</p>
-<p>Seguint amb el problema que ens ocupa; <strong>En una seqüència numèrica acabada amb el valor -1, és desitja saber quantes parelles dels digits 1 i 2 seguits s’hi poden trobar.</strong> El primer que ens hem de plantejar és quina informació es necessita mantenir de la part ja tractada. En aquest cas és suficient saber el nombre anterior, per tant la finestra és limita a un sol valor. Anem a plantejar l’algorisme que ens permet resoldre aquest problema:</p>
+<p>Seguint amb el problema que ens ocupa; <strong>En una seqüència numèrica acabada amb el valor -1, és desitja saber quantes parelles dels digits 1 i 2 seguits s’hi poden trobar.</strong> El primer que ens hem de plantejar és quina informació es necessita mantenir de la part ja tractada. En aquest cas és suficient saber el nombre anterior, per tant, la finestra es limita a un sol valor. Plantejarem l’algorisme que ens permet resoldre aquest problema:</p>
 <p>L’algorisme general necessita dues variables, una per cada lletra de la parella i seria de la següent forma:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">inicialitzacions</span> <span class="n">de</span> <span class="n">les</span> <span class="n">variables</span> <span class="n">necessàries</span><span class="p">:</span> <span class="n">nombre</span><span class="p">,</span> <span class="n">nombre_anterior</span><span class="p">,</span> <span class="n">quantitat</span>
 
@@ -474,9 +474,7 @@ seqüència per parelles i a cada una d’aquestes parelles se l’ha de compara
 </pre></div>
 </div>
 <p>El codi <code class="docutils literal notranslate"><span class="pre">Python</span></code> que resulta d’implementar l’anterior algorisme és el següent:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fiSequencia</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">fiSequencia</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
 <span class="n">quantitat</span> <span class="o">=</span> <span class="mi">0</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Escriu un conjunt de nombres acabat en </span><span class="si">{</span><span class="n">fiSequencia</span><span class="si">}</span><span class="s2"> i comptaré les parelles de &#39;1&#39; seguit de &#39;2&#39; que hi escriuràs&quot;</span><span class="p">)</span>
@@ -491,44 +489,14 @@ seqüència per parelles i a cada una d’aquestes parelles se l’ha de compara
 
     <span class="c1"># Seguent parella</span>
     <span class="n">nombre_anterior</span> <span class="o">=</span> <span class="n">nombre</span>  <span class="c1"># el nombre previ és l&#39;actual</span>
-    <span class="n">nombre</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;introdueix un nombre: &quot;</span><span class="p">))</span>  <span class="c1"># l&#39;actual es el següent de la seqüència</span>
+    <span class="n">nombre</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;introdueix un nombre: &quot;</span><span class="p">))</span>  <span class="c1"># l&#39;actual és el següent de la seqüència</span>
 
 <span class="c1"># Proporcionam els resultats</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;El nombre de parelles 1, 2 que has escrit és: </span><span class="si">{</span><span class="n">quantitat</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Escriu un conjunt de nombres acabat en -1 i comptaré les parelles de &#39;1&#39; seguit de &#39;2&#39; que hi escriuràs
-</pre></div>
-</div>
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">StdinNotImplementedError</span><span class="g g-Whitespace">                  </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">8</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="c1"># Ens situam sobre la primera parella</span>
-<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="n">nombre_anterior</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span> <span class="c1"># fixau-vos amb el valor inicial</span>
-<span class="ne">----&gt; </span><span class="mi">8</span> <span class="n">nombre</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;introdueix un nombre: &quot;</span><span class="p">))</span>
-<span class="g g-Whitespace">     </span><span class="mi">10</span> <span class="k">while</span> <span class="n">nombre</span> <span class="o">!=</span> <span class="n">fiSequencia</span><span class="p">:</span>  <span class="c1"># mentre no final</span>
-<span class="g g-Whitespace">     </span><span class="mi">11</span>     <span class="k">if</span> <span class="n">nombre_anterior</span> <span class="o">==</span> <span class="mi">1</span> <span class="ow">and</span> <span class="n">nombre</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>  <span class="c1"># Tractam la parella actual</span>
 
-<span class="nn">File ~\miniconda3\envs\material_programacio\Lib\site-packages\ipykernel\kernelbase.py:1281,</span> in <span class="ni">Kernel.raw_input</span><span class="nt">(self, prompt)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1279</span> <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_allow_stdin</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1280</span>     <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;raw_input was called, but this frontend does not support input requests.&quot;</span>
-<span class="ne">-&gt; </span><span class="mi">1281</span>     <span class="k">raise</span> <span class="n">StdinNotImplementedError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1282</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_input_request</span><span class="p">(</span>
-<span class="g g-Whitespace">   </span><span class="mi">1283</span>     <span class="nb">str</span><span class="p">(</span><span class="n">prompt</span><span class="p">),</span>
-<span class="g g-Whitespace">   </span><span class="mi">1284</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_parent_ident</span><span class="p">[</span><span class="s2">&quot;shell&quot;</span><span class="p">],</span>
-<span class="g g-Whitespace">   </span><span class="mi">1285</span>     <span class="bp">self</span><span class="o">.</span><span class="n">get_parent</span><span class="p">(</span><span class="s2">&quot;shell&quot;</span><span class="p">),</span>
-<span class="g g-Whitespace">   </span><span class="mi">1286</span>     <span class="n">password</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1287</span> <span class="p">)</span>
-
-<span class="ne">StdinNotImplementedError</span>: raw_input was called, but this frontend does not support input requests.
 </pre></div>
 </div>
-</div>
-</div>
-<p>Un dels aspectes que cal destacar de l’anterior programa és que només tracta un element de la seqüència (una parella) a
-cada iteració del bucle i això implica que no és possible botar cap de les parelles de paraules.</p>
+<p>Un dels aspectes que cal destacar de l’anterior programa és que només tracta un element de la seqüència (una parella) a cada iteració del bucle i això implica que no és possible botar cap de les parelles de paraules.</p>
 <p>Anem a estudiar un segon problema que té el següent enunciat:</p>
 <p><strong>Donada una seqüència de nombres naturals amb almenys dos elements, fer un programa que conti el nombre de pic locals que hi ha en aquesta seqüència. Un pic local es localitza en una terna de nombres tals que el nombre central és més gran de manera estricte que els seus veïns a esquerra i dreta.</strong></p>
 <div class="pst-scrollable-table-container"><table class="table">
@@ -566,11 +534,9 @@ cada iteració del bucle i això implica que no és possible botar cap de les pa
 <span class="n">mostrar_resultats</span>
 </pre></div>
 </div>
-<p>Com a l’enunciat s’especifica que la seqüència té almanco 2 nombres aprofitarem aquesta avinentessa per inicialitzar les variables corresponents. El bucle tracta a partir del possible tercer element de la seqüència, s’ha de comprovar si  aquest existeix o no.</p>
+<p>Com a l’enunciat s’especifica que la seqüència té almanco 2 nombres aprofitarem aquesta avinentessa per inicialitzar les variables corresponents. El bucle tracta a partir del possible tercer element de la seqüència, s’ha de comprovar si aquest existeix o no.</p>
 <p>El codi <code class="docutils literal notranslate"><span class="pre">Python</span></code> quedaría de la següent manera:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fiSequencia</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">fiSequencia</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
 <span class="n">quantitat</span> <span class="o">=</span> <span class="mi">0</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Escriu un conjunt de nombres acabat en </span><span class="si">{</span><span class="n">fiSequencia</span><span class="si">}</span><span class="s2"> i comptaré el nombre de màxims locals que hi apareixen&quot;</span><span class="p">)</span>
@@ -588,14 +554,12 @@ cada iteració del bucle i això implica que no és possible botar cap de les pa
 
     <span class="c1"># Seguent terna</span>
     <span class="n">nombre_aanterior</span> <span class="o">=</span> <span class="n">nombre_anterior</span>
-    <span class="n">nombre_anterior</span> <span class="o">=</span> <span class="n">nombre</span>  <span class="c1"># la lletra previa es l&#39;actual</span>
-    <span class="n">nombre</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;introdueix un nombre: &quot;</span><span class="p">))</span>  <span class="c1"># la actual es la seguent de la sequencia</span>
+    <span class="n">nombre_anterior</span> <span class="o">=</span> <span class="n">nombre</span>  <span class="c1"># la previa és l&#39;actual</span>
+    <span class="n">nombre</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;introdueix un nombre: &quot;</span><span class="p">))</span>  <span class="c1"># la actual és la següent de la sequencia</span>
 
 <span class="c1"># Proporcionam els resultats</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;El nombre de màxims locals que has escrit és: </span><span class="si">{</span><span class="n">quantitat</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
-</div>
-</div>
 </div>
 <section id="exercici">
 <h3>Exercici<a class="headerlink" href="#exercici" title="Link to this heading">#</a></h3>
