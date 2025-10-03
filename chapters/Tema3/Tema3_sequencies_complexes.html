@@ -367,6 +367,7 @@
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercici">Exercici</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#un-enfocament-basat-en-algorismes-mixts">Un enfocament basat en algorismes mixts</a></li>
 </ul>
             </nav>
         </div>
@@ -389,14 +390,14 @@ passarem de nombres individuals i començarem a comptar grups. Proposarem divers
 <p>El fet d’haver de comptar totes les parelles requereix, per força, recórrer tota la seqüència. Així doncs s’haurà
 d’adaptar l’esquema de recorregut. Una primera implementació d’una solució per aquest problema seria la següent:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-<span class="n">fiSequencia</span> <span class="o">=</span> <span class="s1">&#39;-1&#39;</span>
+<span class="n">fiSequencia</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
 <span class="n">quantitat</span> <span class="o">=</span> <span class="mi">0</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Escriu un text acabat en </span><span class="si">{</span><span class="n">fiSequencia</span><span class="si">}</span><span class="s2"> i comptaré les parelles de &#39;1&#39; seguit de &#39;2&#39; que hi escriuràs&quot;</span><span class="p">)</span>
 
 <span class="n">nombre</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;introdueix un nombre: &quot;</span><span class="p">))</span>  <span class="c1"># Situar-se sobre el primer element</span>
 
-<span class="k">while</span> <span class="n">lletra</span> <span class="o">!=</span> <span class="n">fiSequencia</span><span class="p">:</span>  <span class="c1"># Mentre no final</span>
+<span class="k">while</span> <span class="n">nombre</span> <span class="o">!=</span> <span class="n">fiSequencia</span><span class="p">:</span>  <span class="c1"># Mentre no final</span>
 
     <span class="k">if</span> <span class="n">nombre</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>  <span class="c1"># Tractar l&#39;element en curs</span>
         <span class="n">nombre</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;introdueix un nombre: &quot;</span><span class="p">))</span>
@@ -419,7 +420,7 @@ programa anterior és que en certes ocasions llegim més nombres del que toca en
 provoca el seu mal funcionament.</p>
 <p>Una possible solució que ens permet arreglar el programa sense haver de fer massa modificacions al codi anterior
 seria la que tenim a continuació:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">fiSequencia</span> <span class="o">=</span> <span class="s1">&#39;-1&#39;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">fiSequencia</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
 <span class="n">quantitat</span> <span class="o">=</span> <span class="mi">0</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Escriu un text acabat en </span><span class="si">{</span><span class="n">fiSequencia</span><span class="si">}</span><span class="s2"> i comptaré les parelles de &#39;1&#39; seguit de &#39;2&#39; que hi escriuràs&quot;</span><span class="p">)</span>
@@ -566,6 +567,47 @@ seqüència per parelles i a cada una d’aquestes parelles se l’ha de compara
 <p>Si la seqüència pot ser buida, és a dir, pot no tenir cap element com s’hauria de resoldre aquest problema?</p>
 </section>
 </section>
+<section id="un-enfocament-basat-en-algorismes-mixts">
+<h2>Un enfocament basat en algorismes mixts<a class="headerlink" href="#un-enfocament-basat-en-algorismes-mixts" title="Link to this heading">#</a></h2>
+<p>Una altra manera de resoldre el problema de trobar el nombre <code class="docutils literal notranslate"><span class="pre">1</span></code> seguit del nombre <code class="docutils literal notranslate"><span class="pre">2</span></code> en una seqüència de nombres, és mitjançant la combinació d’algorismes de cerca i recorregut. La idea seria la següent: cercar el nombre 1 i mirar el que hi ha a continuació.</p>
+<p>L’algorisme seria el següent:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">quantitat</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">situar</span><span class="o">-</span><span class="n">se</span> <span class="n">sobre</span> <span class="n">el</span> <span class="n">primer</span> <span class="n">element</span>
+<span class="n">cercar</span> <span class="n">el</span> <span class="n">nombre</span> <span class="mi">1</span>
+<span class="n">mentre</span> <span class="n">no</span> <span class="n">final</span><span class="p">:</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="n">llegir</span> <span class="n">el</span> <span class="n">següent</span> <span class="n">nombre</span>
+    <span class="n">si</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="n">quantitat</span> <span class="o">=</span> <span class="n">quantitat</span> <span class="o">+</span> <span class="mi">1</span>
+
+    <span class="n">cercar</span> <span class="n">el</span> <span class="n">nombre</span> <span class="mi">1</span>
+</pre></div>
+</div>
+<p>La seva implementació és la següent:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;introdueix un nombre &quot;</span><span class="p">))</span>
+<span class="n">trobat</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="n">quantitat</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="c1">#CERCAR 1</span>
+<span class="k">while</span> <span class="n">n</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">trobat</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">trobat</span> <span class="o">=</span> <span class="kc">True</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">n</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;introdueix un nombre &quot;</span><span class="p">))</span>
+<span class="k">while</span> <span class="n">n</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;introdueix un nombre &quot;</span><span class="p">))</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="n">quantitat</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="c1"># CERCAR 1</span>
+    <span class="n">trobat</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="k">while</span> <span class="n">n</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">trobat</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">trobat</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">n</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;introdueix un nombre &quot;</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">quantitat</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -638,6 +680,7 @@ seqüència per parelles i a cada una d’aquestes parelles se l’ha de compara
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercici">Exercici</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#un-enfocament-basat-en-algorismes-mixts">Un enfocament basat en algorismes mixts</a></li>
 </ul>
   </nav></div>
 
