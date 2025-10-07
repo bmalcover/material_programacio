@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -391,20 +391,18 @@
 </ol>
 <p>Tenim diferents exemples de problemes que es poden resoldre amb aquests esquemes</p>
 <ul class="simple">
-<li><p>Donades diverses seqüències d’enters, compteu la quantitat mitjana de nombres primers per seqüència (seqüències tracta-totes, elements tracta-tots).</p></li>
-<li><p>Donades diverses seqüències de caràcters, comproveu si una de les seqüències conté la combinació de caràcters “hola” un nombre parell de vegades (seqüència de cerca, elements tracta-tots).</p></li>
+<li><p>Donades diverses seqüències d’enters, compteu la quantitat mitjana de nombres primers per seqüència (tractar totes les seqüències, tractar tots els elements).</p></li>
+<li><p>Donades diverses seqüències de caràcters, comproveu si una de les seqüències conté la combinació de caràcters “hola” un nombre parell de vegades (seqüència de cerca, tractar tots els elements).</p></li>
 <li><p>Donades diverses seqüències d’enters, descobriu quina és la primera seqüència que conté un nombre primer (seqüència de cerca,
 element de cerca).</p></li>
-<li><p>Donades diverses seqüències d’enters, indiqueu la primera posició de cada seqüència que conté un nombre primer (seqüències tracta-totes, element de cerca).</p></li>
+<li><p>Donades diverses seqüències d’enters, indiqueu la primera posició de cada seqüència que conté un nombre primer (tractar totes les seqüències, element de cerca).</p></li>
 </ul>
 <section id="recorregut-amb-recorreguts">
 <h2>Recorregut amb recorreguts<a class="headerlink" href="#recorregut-amb-recorreguts" title="Link to this heading">#</a></h2>
 <p>Un exemple d’aquesta estructura sería el següent enunciat: <strong>Donades diverses seqüències de nombres enters positius acabades amb el nombre -1, comptar la mitjana de nombres parells que hi ha a cada seqüència</strong>.</p>
-<p>Veiem que per resoldre aquest problema necessitarem tenir 2 bucles anidats; Un recorregut dins un recorregut. El bucle exterior serveix per iterar les seqüències i l’interior per iterar dins cada seqüència.</p>
+<p>Veiem que per resoldre aquest problema necessitarem tenir 2 bucles niats; Un recorregut dins un recorregut. El bucle exterior serveix per iterar les seqüències i l’interior per iterar dins cada seqüència.</p>
 <p>El codi <code class="docutils literal notranslate"><span class="pre">Python</span></code> per resoldre aquest problema és el següent:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;introdueix el nombre de seqüències que vols tractar, contaré la mitjana de nombres parells per seqüència&quot;</span><span class="p">))</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;introdueix el nombre de seqüències que vols tractar, contaré la mitjana de nombres parells per seqüència&quot;</span><span class="p">))</span>
 
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span> <span class="c1"># mentre no final; següent element</span>
     <span class="c1"># Tractar element actual (tota la seqüència)</span>
@@ -424,40 +422,12 @@ element de cerca).</p></li>
  
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">StdinNotImplementedError</span><span class="g g-Whitespace">                  </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">n</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;introdueix el nombre de seqüències que vols tractar, contaré la mitjana de nombres parells per seqüència&quot;</span><span class="p">))</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span> <span class="c1"># mentre no final; següent element</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span>     <span class="c1"># Tractar element actual (tota la seqüència)</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span>     <span class="n">nombre</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;introdueix un nombre enter positiu&quot;</span><span class="p">))</span> <span class="c1"># primer element</span>
-
-<span class="nn">File ~\miniconda3\envs\material_programacio\Lib\site-packages\ipykernel\kernelbase.py:1281,</span> in <span class="ni">Kernel.raw_input</span><span class="nt">(self, prompt)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1279</span> <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_allow_stdin</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1280</span>     <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;raw_input was called, but this frontend does not support input requests.&quot;</span>
-<span class="ne">-&gt; </span><span class="mi">1281</span>     <span class="k">raise</span> <span class="n">StdinNotImplementedError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1282</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_input_request</span><span class="p">(</span>
-<span class="g g-Whitespace">   </span><span class="mi">1283</span>     <span class="nb">str</span><span class="p">(</span><span class="n">prompt</span><span class="p">),</span>
-<span class="g g-Whitespace">   </span><span class="mi">1284</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_parent_ident</span><span class="p">[</span><span class="s2">&quot;shell&quot;</span><span class="p">],</span>
-<span class="g g-Whitespace">   </span><span class="mi">1285</span>     <span class="bp">self</span><span class="o">.</span><span class="n">get_parent</span><span class="p">(</span><span class="s2">&quot;shell&quot;</span><span class="p">),</span>
-<span class="g g-Whitespace">   </span><span class="mi">1286</span>     <span class="n">password</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1287</span> <span class="p">)</span>
-
-<span class="ne">StdinNotImplementedError</span>: raw_input was called, but this frontend does not support input requests.
-</pre></div>
-</div>
-</div>
-</div>
 </section>
 <section id="cerca-amb-recorreguts">
 <h2>Cerca amb recorreguts<a class="headerlink" href="#cerca-amb-recorreguts" title="Link to this heading">#</a></h2>
 <p>Un exemple d’aquesta estructura sería el següent enunciat: <strong>Donades diverses seqüències de nombres enters positius acabades amb el nombre -1,  indiqueu el número de la primera línia en què la suma dels elements sigui parella. Si no n’hi ha cap que compleixi aquesta condició, escriviu “No es compleix”.</strong></p>
 <p>El codi <code class="docutils literal notranslate"><span class="pre">Python</span></code> per resoldre aquest problema és el següent:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;introdueix el nombre de seqüències que vols tractar, cercaré la primera amb suma parella d&#39;elements&quot;</span><span class="p">))</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;introdueix el nombre de seqüències que vols tractar, cercaré la primera amb suma parella d&#39;elements&quot;</span><span class="p">))</span>
 <span class="n">trobat</span> <span class="o">=</span> <span class="kc">False</span>
 <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
 
@@ -482,16 +452,12 @@ element de cerca).</p></li>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;No es compleix&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-</div>
 </section>
 <section id="recorregut-amb-cerques">
 <h2>Recorregut amb cerques<a class="headerlink" href="#recorregut-amb-cerques" title="Link to this heading">#</a></h2>
 <p>Un exemple d’aquesta estructura sería el següent enunciat: <strong>Donades diverses seqüències de nombres enters positius acabades amb el nombre -1, indicar la primera posició de cada una on hi ha un nombre parell en cada seqüència</strong>.</p>
 <p>Un codi <code class="docutils literal notranslate"><span class="pre">Python</span></code> per resoldre aquest problema podría ser el següent:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;introdueix el nombre de seqüències que vols tractar, et diré on es troba el primer nombre primer a cada seqüència&quot;</span><span class="p">))</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;introdueix el nombre de seqüències que vols tractar, et diré on es troba el primer nombre primer a cada seqüència&quot;</span><span class="p">))</span>
 
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span> <span class="c1"># mentre no final; següent element</span>
     <span class="c1"># Tractar element actual (tota la seqüència)</span>
@@ -512,8 +478,6 @@ element de cerca).</p></li>
         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Aquesta seqüència no té nombres parells&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-</div>
 <p>Quin resultat tendriem amb la següent entrada?</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">2</span>
 <span class="n">seq1</span> <span class="o">=</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span> <span class="o">-</span><span class="mi">1</span>
@@ -522,9 +486,7 @@ element de cerca).</p></li>
 </div>
 <p>Tal com està programat, obtindrem resultats no dessitjats, ja que en trobar un nombre parell l’anàlisi de la seqüència s’interromp. Això fa que quedin valors sense processar, que es tracten com si formessin part d’una nova seqüència.</p>
 <p>En conclusió podem dir que <strong>sempre és necessari consumir tots els elements de cada seqüència abans de passar a la següent</strong>. El codi que resol aquest problema de forma correcta és el següent:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;introdueix el nombre de seqüències que vols tractar, et diré on es troba el primer nombre primer a cada seqüència&quot;</span><span class="p">))</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;introdueix el nombre de seqüències que vols tractar, et diré on es troba el primer nombre primer a cada seqüència&quot;</span><span class="p">))</span>
 
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span> <span class="c1"># mentre no final; següent element</span>
     <span class="c1"># Tractar element actual (tota la seqüència)</span>
@@ -545,16 +507,12 @@ element de cerca).</p></li>
         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Aquesta seqüència no té nombres parells&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-</div>
 </section>
 <section id="cerca-amb-cerques">
 <h2>Cerca amb cerques<a class="headerlink" href="#cerca-amb-cerques" title="Link to this heading">#</a></h2>
 <p>Un exemple d’aquesta estructura sería el següent enunciat: <strong>Donades diverses seqüències de nombres enters positius, cadascuna acabada amb el nombre -1, digueu el número de la primera línia que contingui algun element senar. Si no n’hi ha cap que compleixi aquesta condició, escriviu “No n’existeix cap”.</strong></p>
 <p>El codi <code class="docutils literal notranslate"><span class="pre">Python</span></code> per resoldre aquest problema és el següent:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;introdueix el nombre de seqüències que vols tractar, et diré quina és la primera línia que conté un element senar&quot;</span><span class="p">))</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;introdueix el nombre de seqüències que vols tractar, et diré quina és la primera línia que conté un element senar&quot;</span><span class="p">))</span>
 
 <span class="n">trobat</span> <span class="o">=</span> <span class="kc">False</span> <span class="c1"># noteu el canvi, ja que si trobem a una seqüència ja no hem de cercar més</span>
 <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
@@ -578,8 +536,6 @@ element de cerca).</p></li>
 <span class="k">else</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;No n&#39;existeix cap&quot;</span><span class="p">)</span>
 </pre></div>
-</div>
-</div>
 </div>
 </section>
 <section id="conclusions">
