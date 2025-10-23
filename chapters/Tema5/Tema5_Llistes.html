@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -827,43 +827,6 @@ True
 </div>
 </div>
 </div>
-<p><strong>Exercici</strong></p>
-<p>Tornem a fer el programa que compta l’aparició de cada vocal, aquest cop en lloc d’usar 5 variables diferents
-usarem una llista de longitud 5 que conté valors enters, on la primera posició ens indica quantes ‘a’ hem trobat,
-la segona quantes ‘e’ i així successivament.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
-
-<span class="n">vocals</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>  <span class="c1"># també podria ser llista = [0]*5</span>
-<span class="n">lletra</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">stdin</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-
-<span class="k">while</span> <span class="n">lletra</span> <span class="o">!=</span> <span class="s1">&#39;.&#39;</span><span class="p">:</span>
-    
-    <span class="k">if</span> <span class="n">lletra</span> <span class="o">==</span> <span class="s1">&#39;a&#39;</span><span class="p">:</span>
-        <span class="n">vocals</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">vocals</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span>
-    <span class="k">if</span> <span class="n">lletra</span> <span class="o">==</span> <span class="s1">&#39;e&#39;</span><span class="p">:</span>
-        <span class="n">vocals</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">vocals</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span>
-    <span class="k">if</span> <span class="n">lletra</span> <span class="o">==</span> <span class="s1">&#39;i&#39;</span><span class="p">:</span>
-        <span class="n">vocals</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">vocals</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span>
-    <span class="k">if</span> <span class="n">lletra</span> <span class="o">==</span> <span class="s1">&#39;o&#39;</span><span class="p">:</span>
-        <span class="n">vocals</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="n">vocals</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span>
-    <span class="k">if</span> <span class="n">lletra</span> <span class="o">==</span> <span class="s1">&#39;u&#39;</span><span class="p">:</span>
-        <span class="n">vocals</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="n">vocals</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span>
-
-
-    <span class="n">lletra</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">stdin</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-
-<span class="c1">#Donam resultats</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hi ha: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">vocals</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">+</span> <span class="s2">&quot; lletres </span><span class="se">\&#39;</span><span class="s2">a</span><span class="se">\&#39;</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hi ha: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">vocals</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="o">+</span> <span class="s2">&quot; lletres </span><span class="se">\&#39;</span><span class="s2">e</span><span class="se">\&#39;</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hi ha: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">vocals</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span> <span class="o">+</span> <span class="s2">&quot; lletres </span><span class="se">\&#39;</span><span class="s2">i</span><span class="se">\&#39;</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hi ha: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">vocals</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span> <span class="o">+</span> <span class="s2">&quot; lletres </span><span class="se">\&#39;</span><span class="s2">o</span><span class="se">\&#39;</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hi ha: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">vocals</span><span class="p">[</span><span class="mi">4</span><span class="p">])</span> <span class="o">+</span> <span class="s2">&quot; lletres </span><span class="se">\&#39;</span><span class="s2">u</span><span class="se">\&#39;</span><span class="s2">&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
 </section>
 <section id="llistes-com-a-parametres-de-subprogrames">
 <h3>Llistes com a paràmetres de subprogrames<a class="headerlink" href="#llistes-com-a-parametres-de-subprogrames" title="Link to this heading">#</a></h3>
@@ -893,6 +856,61 @@ Llista despres de cridar al mètode afegeix_element:  [5]
 </pre></div>
 </div>
 </div>
+</div>
+<p><strong>Exercici</strong></p>
+<p>Fes un programa que llegeix nombres del teclat fins que l’usuari realitza l’entrada de longitud 0. Has de ficar cada element en una llista i després crear una función anomenada <code class="docutils literal notranslate"><span class="pre">escalat</span></code> que rep una llista per paràmetre i estandaritza cada element, és a dir resta la mitjana i dividideix per la desviació típica.</p>
+<p>Fórmula de la mitjana:</p>
+<p><span class="math notranslate nohighlight">\(\bar{x} = \frac{1}{n} \sum_{i=1}^{n} x_i\)</span></p>
+<p>Fórmula de la desviació típica:</p>
+<p><span class="math notranslate nohighlight">\(s = \sqrt{\frac{1}{n - 1} \sum_{i=1}^{n} (x_i - \bar{x})^2}\)</span></p>
+<p>Solució al problema:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
+<span class="k">def</span> <span class="nf">escalat</span><span class="p">(</span><span class="n">llista</span><span class="p">):</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">suma</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="c1"># 1. Calcular la mitjana</span>
+    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">llista</span><span class="p">:</span>
+        <span class="n">suma</span> <span class="o">=</span> <span class="n">suma</span> <span class="o">+</span> <span class="n">x</span>
+        <span class="n">n</span> <span class="o">=</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">[]</span>  <span class="c1"># llista buida</span>
+
+    <span class="n">mitjana</span> <span class="o">=</span> <span class="n">suma</span> <span class="o">/</span> <span class="n">n</span>
+
+    <span class="c1"># 2. Calcular la suma dels quadrats de les diferències</span>
+    <span class="n">suma_quadrats</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">llista</span><span class="p">:</span>
+        <span class="n">difer</span> <span class="o">=</span> <span class="n">x</span> <span class="o">-</span> <span class="n">mitjana</span>
+        <span class="n">suma_quadrats</span> <span class="o">+=</span> <span class="n">difer</span> <span class="o">*</span> <span class="n">difer</span>
+
+    <span class="c1"># 3. Calcular desviació típica (mostra)</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">desviacio</span> <span class="o">=</span> <span class="mi">1</span>  <span class="c1"># per evitar dividir per 0</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">desviacio</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">suma_quadrats</span> <span class="o">/</span> <span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">))</span>
+
+    <span class="c1"># 4. Crear llista estandarditzada</span>
+    <span class="n">estandar</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">llista</span><span class="p">:</span>
+        <span class="n">estandar</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">x</span> <span class="o">-</span> <span class="n">mitjana</span><span class="p">)</span> <span class="o">/</span> <span class="n">desviacio</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">estandar</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="c1"># Programa per llegir nombres fins a entrada buida</span>
+    <span class="n">valors</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">entrada</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Introdueix un nombre (enter per acabar): &quot;</span><span class="p">)</span>
+    <span class="k">while</span> <span class="n">entrada</span> <span class="o">!=</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>  <span class="c1"># també len(entrada) == 0</span>
+        <span class="c1"># Convertim a float i afegim a la llista</span>
+        <span class="n">valors</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">entrada</span><span class="p">))</span>
+        <span class="n">entrada</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Introdueix un nombre (enter per acabar): &quot;</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Llista original:&quot;</span><span class="p">,</span> <span class="n">valors</span><span class="p">)</span>
+
+    <span class="c1"># Estandarditzar la llista</span>
+    <span class="n">llista_estandar</span> <span class="o">=</span> <span class="n">escalat</span><span class="p">(</span><span class="n">valors</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Llista estandaritzada:&quot;</span><span class="p">,</span> <span class="n">llista_estandar</span><span class="p">)</span>
+</pre></div>
 </div>
 </section>
 </section>
@@ -976,129 +994,99 @@ Valldemossa
 </div>
 </div>
 <p><strong>Exercici</strong></p>
-<p>Anem a fer una segona versió de l’exercici anterior però eliminant els 5 condicionals</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
+<p>Donada una llista que conté nombres enters positius, negatius i el nombre 0 ordenats de menor a major. Volem trobar el segment més gran la suma del qual és 0.</p>
+<p>Algorisme:</p>
+<ol class="arabic simple">
+<li><p>Tenim dos indexos <code class="docutils literal notranslate"><span class="pre">left</span></code> i <code class="docutils literal notranslate"><span class="pre">right</span></code> que són els extrems del segment candidat.</p></li>
+<li><p>Tenim la variable <code class="docutils literal notranslate"><span class="pre">sumA</span></code> que és la suma dels elements dins del segment <code class="docutils literal notranslate"><span class="pre">[left,</span> <span class="pre">right]</span></code>.</p></li>
+<li><p>Mentre la suma no sigui zero:</p>
+<ul class="simple">
+<li><p>Si la suma és positiva, eliminem l’últim element (right -= 1).</p></li>
+<li><p>Si la suma és negativa, eliminem el primer element (left += 1).</p></li>
+</ul>
+</li>
+<li><p>Quan la suma arriba a zero, <code class="docutils literal notranslate"><span class="pre">[left,</span> <span class="pre">right]</span></code> és el segment més llarg amb suma 0.</p></li>
+<li><p>Si <code class="docutils literal notranslate"><span class="pre">left</span></code> &gt; <code class="docutils literal notranslate"><span class="pre">right</span></code> llavors no existeix cap segment amb suma zero.</p></li>
+</ol>
+<p>Implementació:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">sum_llista</span><span class="p">(</span><span class="n">l</span><span class="p">):</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">l</span><span class="p">:</span>
+        <span class="n">s</span> <span class="o">+=</span> <span class="n">x</span>
+    <span class="k">return</span> <span class="n">s</span>
+<span class="k">def</span> <span class="nf">largest_null_segment</span><span class="p">(</span><span class="n">ll</span><span class="p">):</span>
+    <span class="n">left</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">right</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">ll</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
+    <span class="n">sumA</span> <span class="o">=</span> <span class="n">sum_llista</span><span class="p">(</span><span class="n">ll</span><span class="p">)</span>
 
-<span class="n">vocals</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>  <span class="c1"># també podria ser llista = [0]*5</span>
-<span class="n">lletres</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;e&#39;</span><span class="p">,</span> <span class="s1">&#39;i&#39;</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="s1">&#39;u&#39;</span><span class="p">]</span>
-<span class="n">longitud</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">lletres</span><span class="p">)</span>
+    <span class="k">while</span> <span class="n">sumA</span> <span class="o">!=</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">left</span> <span class="o">&lt;=</span> <span class="n">right</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">sumA</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">sumA</span> <span class="o">-=</span> <span class="n">ll</span><span class="p">[</span><span class="n">right</span><span class="p">]</span>
+            <span class="n">right</span> <span class="o">-=</span> <span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">sumA</span> <span class="o">-=</span> <span class="n">ll</span><span class="p">[</span><span class="n">left</span><span class="p">]</span>
+            <span class="n">left</span> <span class="o">+=</span> <span class="mi">1</span>
 
-<span class="n">lletra</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">stdin</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="c1"># primer element</span>
+    <span class="k">if</span> <span class="n">left</span> <span class="o">&gt;</span> <span class="n">right</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">[]</span>  <span class="c1"># no hi ha segment amb suma 0</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">ll</span><span class="p">[</span><span class="n">left</span><span class="p">:</span><span class="n">right</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span>
 
-<span class="c1"># mentre no final</span>
-<span class="k">while</span> <span class="n">lletra</span> <span class="o">!=</span> <span class="s1">&#39;.&#39;</span><span class="p">:</span>
+<span class="c1"># Exemple</span>
+<span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">9</span><span class="p">,</span> <span class="o">-</span><span class="mi">7</span><span class="p">,</span> <span class="o">-</span><span class="mi">6</span><span class="p">,</span> <span class="o">-</span><span class="mi">4</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
+<span class="n">segment</span> <span class="o">=</span> <span class="n">largest_null_segment</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
 
-    <span class="c1"># Cerca dins la llista de lletres</span>
-    <span class="n">idx</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="k">while</span> <span class="n">idx</span> <span class="o">&lt;</span> <span class="n">longitud</span> <span class="ow">and</span> <span class="n">lletra</span> <span class="o">!=</span> <span class="n">lletres</span><span class="p">[</span><span class="n">idx</span><span class="p">]:</span>
-        <span class="n">idx</span> <span class="o">=</span> <span class="n">idx</span> <span class="o">+</span> <span class="mi">1</span>
-
-    <span class="k">if</span> <span class="n">idx</span> <span class="o">&lt;</span> <span class="n">longitud</span><span class="p">:</span>
-        <span class="n">vocals</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span> <span class="o">=</span> <span class="n">vocals</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span>
-
-    <span class="n">lletra</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">stdin</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-
-<span class="c1"># Donam resultats</span>
-<span class="k">for</span> <span class="n">jdx</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">longitud</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hi ha: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">vocals</span><span class="p">[</span><span class="n">jdx</span><span class="p">])</span> <span class="o">+</span> <span class="s2">&quot; lletres &quot;</span> <span class="o">+</span> <span class="n">lletres</span><span class="p">[</span><span class="n">jdx</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;El segment original és </span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;El segment que suma 0 més gran és: </span><span class="si">{</span><span class="n">segment</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
-</div>
-</div>
 </div>
 <p><strong>Exercici</strong></p>
-<p>Ara el que vull és modificar el programa anterior per saber quina és la vocal que apareix més cops en una seqüència
-acabada en punt:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
+<p>Suposem que un polinomi està donat com una llista de <code class="docutils literal notranslate"><span class="pre">coeficients</span></code>, començant del coeficient del grau més alt. Fes una funció anomenada <code class="docutils literal notranslate"><span class="pre">Horner</span></code> que avalua el seu valor en un punt <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
+<p>L’esquema de Horner és el següent. Donat un polinomi general:</p>
+<p><span class="math notranslate nohighlight">\(P(x) = a_n x^n + a_{n-1} x^{n-1} + \dots + a_1 x + a_0\)</span></p>
+<ul class="simple">
+<li><p>Aquest és l’esquema de Horner:</p></li>
+</ul>
+<p><span class="math notranslate nohighlight">\(P(x) = (\dots((a_n x + a_{n-1}) x + a_{n-2}) x + \dots + a_1) x + a_0\)</span></p>
+<ul class="simple">
+<li><p>La seva forma recurrent amb <span class="math notranslate nohighlight">\(b_i\)</span> és:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align*}
+b_n &amp;= a_n \\
+b_{n-1} &amp;= b_n x + a_{n-1} \\
+b_{n-2} &amp;= b_{n-1} x + a_{n-2} \\
+&amp;\ \ \vdots \\
+b_0 &amp;= b_1 x + a_0
+\end{align*}\end{split}\]</div>
+<p>Finalment
+<span class="math notranslate nohighlight">\(P(x) = b_0\)</span></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">horner</span><span class="p">(</span><span class="n">coeficients</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Avalua un polinomi en x seguint l&#39;esquema de Horner.</span>
+<span class="sd">    Arguments:</span>
+<span class="sd">    coefs -- llista de coeficients [a_n, a_{n-1}, ..., a_0]</span>
+<span class="sd">    x     -- valor on s&#39;avalua el polinomi</span>
 
-<span class="n">vocals</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>  <span class="c1"># també podria ser llista = [0]*5</span>
-<span class="n">lletres</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;e&#39;</span><span class="p">,</span> <span class="s1">&#39;i&#39;</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="s1">&#39;u&#39;</span><span class="p">]</span>
-<span class="n">longitud</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">lletres</span><span class="p">)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">resultat</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">coef</span> <span class="ow">in</span> <span class="n">coeficients</span><span class="p">:</span>
+        <span class="n">resultat</span> <span class="o">=</span> <span class="n">resultat</span> <span class="o">*</span> <span class="n">x</span> <span class="o">+</span> <span class="n">coef</span>
+    <span class="k">return</span> <span class="n">resultat</span>
 
-<span class="n">lletra</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">stdin</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 
-<span class="c1"># Recorregut fins al final de la seqüència</span>
-<span class="k">while</span> <span class="n">lletra</span> <span class="o">!=</span> <span class="s1">&#39;.&#39;</span><span class="p">:</span>
-
-    <span class="n">idx</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="k">while</span> <span class="n">idx</span> <span class="o">&lt;</span> <span class="n">longitud</span> <span class="ow">and</span> <span class="n">lletra</span> <span class="o">!=</span> <span class="n">lletres</span><span class="p">[</span><span class="n">idx</span><span class="p">]:</span>
-        <span class="n">idx</span> <span class="o">=</span> <span class="n">idx</span> <span class="o">+</span> <span class="mi">1</span>
-
-    <span class="k">if</span> <span class="n">idx</span> <span class="o">&lt;</span> <span class="n">longitud</span><span class="p">:</span>
-        <span class="n">vocals</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span> <span class="o">=</span> <span class="n">vocals</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span>
-
-    <span class="n">lletra</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">stdin</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-
-<span class="c1"># Fare una cerca manual del valor mes gran en la llista</span>
-<span class="n">idx</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">mes_gran</span> <span class="o">=</span> <span class="n">vocals</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span>  <span class="c1"># posicio indexada per 0</span>
-<span class="n">index_major</span> <span class="o">=</span> <span class="n">idx</span>  <span class="c1"># També necessitem saber quina es la vocal</span>
-
-<span class="k">while</span> <span class="n">idx</span> <span class="o">&lt;</span> <span class="n">longitud</span><span class="p">:</span>  <span class="c1"># mentre no final</span>
-    <span class="c1"># Tractament de l&#39;element actual</span>
-    <span class="k">if</span> <span class="n">vocals</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">mes_gran</span><span class="p">:</span>
-        <span class="n">mes_gran</span> <span class="o">=</span> <span class="n">vocals</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span>
-        <span class="n">index_major</span> <span class="o">=</span> <span class="n">idx</span>
-
-    <span class="n">idx</span> <span class="o">=</span> <span class="n">idx</span> <span class="o">+</span> <span class="mi">1</span>  <span class="c1"># Seguent element</span>
-
-<span class="c1"># Donar resultats</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;La vocal que apareix més cops és: &quot;</span> <span class="o">+</span> <span class="n">lletres</span><span class="p">[</span><span class="n">index_major</span><span class="p">]</span> <span class="o">+</span><span class="s2">&quot; amb &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">vocals</span><span class="p">[</span><span class="n">index_major</span><span class="p">])</span> <span class="o">+</span> <span class="s2">&quot; aparicions&quot;</span><span class="p">)</span>
+<span class="c1"># Exemple:</span>
+<span class="c1"># P(x) = 2x^3 - 6x^2 + 2x - 1</span>
+<span class="n">coeficients</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">6</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;P(3) =&quot;</span><span class="p">,</span> <span class="n">horner</span><span class="p">(</span><span class="n">coeficients</span><span class="p">,</span> <span class="n">x</span><span class="p">))</span>
 </pre></div>
-</div>
-</div>
 </div>
 <p><strong>Exercici</strong></p>
-<p>Per acabar farem un darrer exercici, que uneix el tema anterior amb aquest. Mostrar invertides totes les paraules d’una
-seqüència.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
-
-<span class="k">def</span> <span class="nf">botar_blancs</span><span class="p">():</span>
-    <span class="k">global</span> <span class="n">lletra</span> <span class="c1"># primer element</span>
-
-    <span class="k">while</span> <span class="n">lletra</span> <span class="o">==</span> <span class="s1">&#39; &#39;</span><span class="p">:</span> <span class="c1"># mentre no final</span>
-        <span class="n">lletra</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">stdin</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="c1"># seguent element</span>
-
-
-<span class="k">def</span> <span class="nf">llegir_paraula</span><span class="p">():</span>
-    <span class="k">global</span> <span class="n">lletra</span> <span class="c1"># primer element</span>
-    <span class="n">paraula</span> <span class="o">=</span> <span class="p">[]</span>
-
-    <span class="k">while</span> <span class="n">lletra</span> <span class="o">!=</span> <span class="s1">&#39; &#39;</span> <span class="ow">and</span> <span class="n">lletra</span> <span class="o">!=</span> <span class="s1">&#39;.&#39;</span><span class="p">:</span> <span class="c1"># mentre no final</span>
-        <span class="n">paraula</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">lletra</span><span class="p">)</span> <span class="c1"># tractar element atual</span>
-        <span class="n">lletra</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">stdin</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="c1"># seguent element</span>
-
-    <span class="k">return</span> <span class="n">paraula</span>
-
-<span class="k">def</span> <span class="nf">imprimir_invertit</span><span class="p">(</span><span class="n">paraula</span><span class="p">):</span>
-
-    <span class="n">darrera_lletra</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">paraula</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span>
-    <span class="n">increment</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
-
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span> <span class="n">darrera_lletra</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">increment</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">paraula</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
-
-<span class="n">lletra</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">stdin</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">botar_blancs</span><span class="p">()</span> <span class="c1"># primer element</span>
-
-<span class="k">while</span> <span class="n">lletra</span> <span class="o">!=</span> <span class="s1">&#39;.&#39;</span><span class="p">:</span> <span class="c1"># mentre no final</span>
-    <span class="c1">#tractar element actual</span>
-    <span class="n">paraula</span> <span class="o">=</span> <span class="n">llegir_paraula</span><span class="p">()</span>
-    <span class="n">imprimir_invertit</span><span class="p">(</span><span class="n">paraula</span><span class="p">)</span>
-    
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
-    
-    <span class="c1"># situar-se sobre el seguent element</span>
-    <span class="n">botar_blancs</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-</div>
+<p>Vull saber quina és la vocal que apareix més cops en una seqüència
+acabada en punt</p>
+<p><strong>Exercici</strong></p>
+<p>Per acabar farem un darrer exercici que consisteix en mostrar invertides totes les paraules d’una seqüència.</p>
 </section>
 </section>
 
