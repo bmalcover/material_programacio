@@ -375,6 +375,12 @@
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#iterant-sobre-llistes">Iterant sobre llistes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matrius">Matrius</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#construccio-explicita">Construcció explícita</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#construccio-amb-bucles-niats">Construcció amb bucles niats</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#recorrer-una-matriu">Recórrer una matriu</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -1088,6 +1094,110 @@ acabada en punt</p>
 <p><strong>Exercici</strong></p>
 <p>Per acabar farem un darrer exercici que consisteix en mostrar invertides totes les paraules d’una seqüència.</p>
 </section>
+<section id="matrius">
+<h2>Matrius<a class="headerlink" href="#matrius" title="Link to this heading">#</a></h2>
+<p>En Python, no existeix un tipus de dada específic per a representar matrius com si passa amb altres llenguatges de tercera generació. Una manera natural de treballar amb matrius és utilitzar llistes de llistes, on cada subllista representa una fila.</p>
+<section id="construccio-explicita">
+<h3>Construcció explícita<a class="headerlink" href="#construccio-explicita" title="Link to this heading">#</a></h3>
+<p>Podem definir una matriu de manera directa escrivint les llistes de cada fila dins d’una altra llista.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Matriu 3x3 definida explícitament</span>
+<span class="n">m</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
+<span class="p">]</span>
+
+</pre></div>
+</div>
+<p>Podem accedir als elements d’una matriu tal com ho faríem amb una llista, però l’accés als elements individuals requereix l’ús de dos índexs. Tal com es pot observar en el següent exemple.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+<span class="nb">print</span><span class="p">(</span><span class="n">m</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>      <span class="c1"># Primera fila</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">m</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">])</span>   <span class="c1"># Element de la primera fila i segona columna</span>
+</pre></div>
+</div>
+<p>Les files poden tenir longituds diferents, però si volem representar una matriu matemàtica, totes haurien de tenir el mateix nombre de columnes, això no és una cosa que es pugui controlar a l’hora de construir la matriu sino que és necessari comprovar-ho <em>manualment</em>.</p>
+</section>
+<section id="construccio-amb-bucles-niats">
+<h3>Construcció amb bucles niats<a class="headerlink" href="#construccio-amb-bucles-niats" title="Link to this heading">#</a></h3>
+<p>També podem construir una matriu dinàmicament utilitzant bucles. Per exemple, per crear una matriu de zeros de mida <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">×</span> <span class="pre">m</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">3</span>   <span class="c1"># nombre de files</span>
+<span class="n">m</span> <span class="o">=</span> <span class="mi">4</span>   <span class="c1"># nombre de columnes</span>
+
+<span class="n">a2</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="n">fila</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">m</span><span class="p">):</span>
+        <span class="n">fila</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">a2</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">fila</span><span class="p">)</span>
+
+</pre></div>
+</div>
+<p>És molt important crear cada fila de manera independent, en cas contrari es crearien múltiples referències a la mateixa fila i pot produir errors inesperats. El següent codi il·lustra aquest error:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">3</span>   <span class="c1"># nombre de files</span>
+<span class="n">m</span> <span class="o">=</span> <span class="mi">4</span>   <span class="c1"># nombre de columnes</span>
+
+<span class="n">aerror</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">fila</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">m</span><span class="p">):</span> <span class="c1"># Cream una fila que conté el valor 0</span>
+    <span class="n">fila</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span> <span class="c1"># Afegim tantes files com és necessari</span>
+    <span class="n">aerror</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">fila</span><span class="p">)</span>
+
+<span class="n">aerror</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">3</span> <span class="c1"># Estam modificant totes les files no només la que té índex 1</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">aerror</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="recorrer-una-matriu">
+<h3>Recórrer una matriu<a class="headerlink" href="#recorrer-una-matriu" title="Link to this heading">#</a></h3>
+<p>Per processar tots els elements d’una matriu també hem d’usar dos bucles niats:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">)):</span>          <span class="c1"># recorrem les files</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">])):</span>   <span class="c1"># recorrem les columnes</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;A[</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">][</span><span class="si">{</span><span class="n">j</span><span class="si">}</span><span class="s2">] = </span><span class="si">{</span><span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Exercici</strong></p>
+<p>Donades dues matrius <code class="docutils literal notranslate"><span class="pre">a</span></code> i <code class="docutils literal notranslate"><span class="pre">b</span></code> fes el seu sumatori. Abans de sumar dues matrius, cal comprovar que tenen les mateixes dimensions. És a dir, el mateix nombre de files i columnes.</p>
+<p>Solució</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
+<span class="p">]</span>
+<span class="n">b</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+<span class="p">]</span>
+
+<span class="c1"># Comprovació de compatibilitat, suposam que totes les files tendràn la mateixa extensió</span>
+<span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">b</span><span class="p">)</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">b</span><span class="p">[</span><span class="mi">0</span><span class="p">]):</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+    <span class="n">m</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+
+    <span class="c1"># Construïm la matriu resultat amb zeros</span>
+    <span class="n">S</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="n">fila</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">m</span><span class="p">):</span>
+            <span class="n">fila</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+        <span class="n">S</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">fila</span><span class="p">)</span>
+
+    <span class="c1"># Fem la suma element a element</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">m</span><span class="p">):</span>
+            <span class="n">S</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">+</span> <span class="n">B</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Resultat de la suma:&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">S</span><span class="p">)</span>
+
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Error: les matrius no tenen la mateixa mida i no es poden sumar.&quot;</span><span class="p">)</span>
+
+</pre></div>
+</div>
+</section>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -1168,6 +1278,12 @@ acabada en punt</p>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#iterant-sobre-llistes">Iterant sobre llistes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matrius">Matrius</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#construccio-explicita">Construcció explícita</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#construccio-amb-bucles-niats">Construcció amb bucles niats</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#recorrer-una-matriu">Recórrer una matriu</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
